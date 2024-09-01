@@ -45,7 +45,7 @@ class ExecutionNode(BaseModel):
     id: str
     instruction: str
     node_type: NodeType
-    retrieval_query: Optional[str] = None
+    # retrieval_query: Optional[str] = None
     upstream_node_ids: List[str] = Field(default_factory=list)
 
 class ExecutionGraph(BaseModel):
@@ -91,8 +91,20 @@ def construct_execution_graph(question: str) -> GraphResponse:
         return None
 
 def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any], top_k: int, retriever: DocumentRetriever, dataset: str, client: Any, few_shot: List[Dict[str, Any]], upstream_results: List[Tuple[str, str]]) -> Tuple[str, List[str], List[float]]:
+    # TODO think about how we can use the global query into line 101 
+    # Retrieval query writing step
+    prompt_user = f'Instruction: {instruction}\n'
+    prompt_user += "To answer this questin, we executed the folloing upstream task first:\n"
+    for node, result in upstream_results:
+        prompt_user += f"This is the upstream task {node} And the result is {result}\n"
+    messages = ChatPromptTemplate.from_messages([
+        SystemMessage("You help write a retrieval query to gather relevant information for the reasoning task.  Return the query directly. Do not say 'Sure, here\'s a query'"),
+        HumanMessage(prompt_user),
+    ]).format_prompt()
+
+    retrieval_query_current_step = client.invoke(messages.to_messages()).content
     # Retrieval step
-    doc_ids, scores = retriever.rank_docs(query, top_k=top_k)
+    doc_ids, scores = retriever.rank_docs(retrieval_query_current_step, top_k=top_k)
     
     if dataset in ['hotpotqa']:
         retrieved_passages = []
@@ -104,12 +116,10 @@ def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any
     else:
         raise NotImplementedError(f'Dataset {dataset} not implemented')
 
-    # Reasoning step
+    # Reasoning step based on 
     prompt_user = f'Instruction: {instruction}\n'
     prompt_user += "Relevant information:\n"
-    for question, result in upstream_results:
-        prompt_user += f"Question: {question}\nActual: {result}\n"
-    prompt_user += "Retrieved relevant Passages:\n"
+
     for passage in retrieved_passages:
         prompt_user += f'{passage}\n\n'
     prompt_user += "Reasoned Output:"
@@ -126,9 +136,9 @@ def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any
         return '', retrieved_passages, scores
 
 def reason_step(instruction: str, client: Any, upstream_results: List[Tuple[str, str]]) -> str:
-    prompt_user = f'Instruction: {instruction}\n\nUpstream Results:\n'
-    for expected, actual in upstream_results:
-        prompt_user += f"Expected: {expected}\nActual: {actual}\n\n"
+    prompt_user = f'Instruction: {instruction}\n\n To answer this questin, we executed the folloing upstream task first:\n'
+    for node, result in upstream_results:
+        prompt_user += f"This is the upstream task {node} And the result is {result}\n"
     prompt_user += "Reasoned Output:"
 
     messages = ChatPromptTemplate.from_messages([
@@ -171,11 +181,11 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
         for up_id in node.upstream_node_ids:
             up_node = next(n for n in graph_response.graph.nodes if n.id == up_id)
             up_result = execute_node(up_node)
-            upstream_results.append((up_node.instruction, up_result))
+            upstream_results.append((up_node, up_result))
 
         if node.node_type == NodeType.retrievalandreasoning:
             result, passages, scores = retrieve_and_reason_step(
-                query=node.retrieval_query or node.instruction,
+                query=query,
                 instruction=node.instruction,
                 corpus=corpus,
                 top_k=args.top_k,
