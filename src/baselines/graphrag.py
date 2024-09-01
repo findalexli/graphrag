@@ -92,6 +92,7 @@ def construct_execution_graph(question: str) -> GraphResponse:
 
 def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any], top_k: int, retriever: DocumentRetriever, dataset: str, client: Any, few_shot: List[Dict[str, Any]], upstream_results: List[Tuple[str, str]]) -> Tuple[str, List[str], List[float]]:
     # TODO think about how we can use the global query into line 101 
+    # TODO Instruction should have explicit placeholder for the upstream results, please print the instruction
     # Retrieval query writing step
     prompt_user = f'Instruction: {instruction}\n'
     prompt_user += "To answer this questin, we executed the folloing upstream task first:\n"
