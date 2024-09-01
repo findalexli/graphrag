@@ -450,7 +450,7 @@ if __name__ == '__main__':
         futures = [executor.submit(process_sample, idx, sample, args, corpus, retriever, client, processed_ids) for idx, sample in enumerate(data)]
 
         for future in tqdm(concurrent.futures.as_completed(futures), total=len(data), desc='Parallel IRCoT'):
-            idx, recall, retrieved_passages, thoughts, it = future.result()
+            idx, recall, retrieved_passages, thoughts, it =- future.result()
 
             # print metrics
             for k in k_list:
