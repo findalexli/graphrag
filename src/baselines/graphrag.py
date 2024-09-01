@@ -47,7 +47,6 @@ class ExecutionNode(BaseModel):
     node_type: NodeType
     retrieval_query: Optional[str] = None
     upstream_node_ids: List[str] = Field(default_factory=list)
-    expected_output: str
 
 class ExecutionGraph(BaseModel):
     nodes: List[ExecutionNode]
@@ -106,12 +105,13 @@ def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any
         raise NotImplementedError(f'Dataset {dataset} not implemented')
 
     # Reasoning step
-    prompt_user = f'Instruction: {instruction}\n\nRetrieved Information:\n'
+    prompt_user = f'Instruction: {instruction}\n'
+    prompt_user += "Relevant information:\n"
+    for question, result in upstream_results:
+        prompt_user += f"Question: {question}\nActual: {result}\n"
+    prompt_user += "Retrieved relevant Passages:\n"
     for passage in retrieved_passages:
         prompt_user += f'{passage}\n\n'
-    prompt_user += "Upstream Results:\n"
-    for expected, actual in upstream_results:
-        prompt_user += f"Expected: {expected}\nActual: {actual}\n\n"
     prompt_user += "Reasoned Output:"
 
     messages = ChatPromptTemplate.from_messages([
@@ -171,7 +171,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
         for up_id in node.upstream_node_ids:
             up_node = next(n for n in graph_response.graph.nodes if n.id == up_id)
             up_result = execute_node(up_node)
-            upstream_results.append((up_node.expected_output, up_result))
+            upstream_results.append((up_node.instruction, up_result))
 
         if node.node_type == NodeType.retrievalandreasoning:
             result, passages, scores = retrieve_and_reason_step(
@@ -202,6 +202,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
 
         thoughts.append(result)
         node_outputs[node.id] = result
+        print(f"Node {node} output: {result}")
         return result
 
     final_node = next(n for n in graph_response.graph.nodes if n.id == graph_response.graph.final_node_id)
