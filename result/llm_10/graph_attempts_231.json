@@ -1,0 +1,178 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Eddie Irvine is and what role he played for the Jaguar R2 team.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the nationality of Eddie Irvine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph starts with identifying Eddie Irvine's role related to the Jaguar R2 team to ensure relevance. The subsequent step is to retrieve his nationality, which completes the answer to the question posed."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which team the Jaguar R2 driver, Eddie Irvine, was part of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Eddie Irvine's nationality.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile the information to determine Eddie Irvine's nationality.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task begins by identifying the affiliation of Eddie Irvine with the Jaguar R2, which provides context to verify his identity as a Formula 1 driver. Next, specific information about Eddie Irvine's nationality is retrieved. Finally, the gathered information is compiled to provide the answer to his nationality."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the teams and drivers of the Jaguar R2 in Formula 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify if Eddie Irvine was a driver for the Jaguar R2 team.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the nationality of Eddie Irvine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Confirm that Eddie Irvine drove the Jaguar R2 and ascertain his nationality.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins with retrieving information about the Jaguar R2 and its drivers (Node 1). Then, using this information, we determine if Eddie Irvine was indeed one of the drivers for Jaguar R2 (Node 2). Simultaneously, we independently retrieve the nationality of Eddie Irvine (Node 3). Finally, we synthesize this information to confirm that Eddie Irvine drove the Jaguar R2 and resolve his nationality (Node 4), providing the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the Jaguar R2 Formula 1 team and its drivers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve biographical information about Eddie Irvine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the Nationality of Eddie Irvine from his biographical information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Confirm from the list of Jaguar R2 drivers that Eddie Irvine was indeed a driver for the team.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by retrieving data about the Jaguar R2 team to verify team membership and gather relevant information. Simultaneously, Eddie Irvine's biographical data is retrieved to extract his nationality. By confirming his role within the Jaguar R2 team and directly retrieving his nationality, we can answer the question accurately."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Eddie Irvine is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify what the Jaguar R2 is and its relation to Eddie Irvine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the nationality of Eddie Irvine based on available biographical information.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Confirm that Eddie Irvine was a driver for the Jaguar R2 car.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine information to confirm Eddie Irvine's nationality as the Jaguar R2 driver.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by gathering foundational information about Eddie Irvine to understand who he is, followed by information about the Jaguar R2 and its drivers. Subsequent steps involve determining Eddie Irvine\u2019s nationality from biographical data and verifying his connection to the Jaguar R2 as a driver. The final node synthesizes the retrieved and reasoned data to confidently answer the original question."
+    }
+]

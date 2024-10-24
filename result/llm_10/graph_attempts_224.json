@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the number of schools in Ateneo de Davao University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the number of schools in University of Rochester.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of schools retrieved for Ateneo de Davao University and University of Rochester to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with two parallel retrieval nodes: one to gather the number of schools at Ateneo de Davao University and the other for University of Rochester. These are independent retrievals as each university requires separate sources of information. Once both pieces of information are retrieved, a reasoning node compares the number of schools at the two universities to ascertain which one has more. The reasoning node synthesizes this information to provide the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the number of schools at Ateneo de Davao University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the number of schools at University of Rochester.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of schools at Ateneo de Davao University and University of Rochester to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task involves retrieving specific quantitative information about two universities and then comparing these values. The graph consists of two retrieval nodes that gather the number of schools for each university independently. The final reasoning node compares the numbers to determine which university has more schools."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of schools under Ateneo de Davao University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of schools under University of Rochester.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of schools between Ateneo de Davao University and University of Rochester to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into three nodes. Nodes 1 and 2 are parallel retrieval and reasoning nodes, where each retrieves data on the number of schools for Ateneo de Davao University and University of Rochester respectively. Node 3 is a reasoning node that compares the data retrieved in nodes 1 and 2 to determine which university has more schools. This approach allows us to handle the question in a structured way, ensuring accurate retrieval and comparison."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of schools Ateneo de Davao University has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of schools University of Rochester has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the numbers retrieved in nodes 1 and 2 to determine which university has more schools.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by retrieving information about the number of schools for both Ateneo de Davao University and University of Rochester independently. Once these numbers are retrieved, the final step involves comparing these numbers to determine which university has more schools."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of schools within Ateneo de Davao University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of schools within University of Rochester.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Count the number of schools in the list retrieved for Ateneo de Davao University.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Count the number of schools in the list retrieved for University of Rochester.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the number of schools between Ateneo de Davao University and University of Rochester to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task requires comparing the number of schools between two universities. The first two nodes retrieve the necessary data about each university's schools. The next nodes (3 and 4) process this data by counting the number of schools for each university. The final node (5) compares these counts to answer the original question."
+    }
+]

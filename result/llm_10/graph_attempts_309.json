@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out who is known as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the signature soccer move associated with 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out who first used the soccer move associated with 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task of answering the question into three steps. First, it identifies who 'O Fen\u00f4meno' refers to (Node 1). Then it determines which soccer move is associated with this player (Node 2). Finally, it finds the first player reported to have used this move (Node 3). Each step depends on the results from the previous nodes, creating a sequence necessary for answering the complete question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the player known as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the specific soccer move popularized by the player known as 'O Fen\u00f4meno'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the original player who first used this soccer move.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with retrieving information about the player known as 'O Fen\u00f4meno', followed by identifying the soccer move they popularized. The final step involves finding out which player first used the soccer move, as this answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "0",
+                    "instruction": "Identify the player known as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about this player's known soccer moves and contributions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "0"
+                    ]
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine if this player is credited with popularizing any specific soccer move.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Research which player first used the specific soccer move credited to the player known as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "0",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by identifying the player known as 'O Fen\u00f4meno', who is Ronaldo Naz\u00e1rio. The next step is retrieving information about Ronaldo's contributions, specifically focusing on soccer moves. Once we confirm which move he popularized, the final step is to find out which player originally used this soccer move."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the player known as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research common soccer moves associated with this player and find the most popular move he is known for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Investigate the historical origins of this soccer move and identify the first player reported to have used it.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying the player known as 'O Fen\u00f4meno', which is a nickname that refers to Ronaldo Naz\u00e1rio. Once the player is identified, the next step is to research the iconic soccer moves that Ronaldo is known for, such as the 'Elastico.' The final step is to trace the origins of this move to determine the first player who was reported to have used it, thus answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the player known as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the soccer move popularized by the player identified as 'O Fen\u00f4meno'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the first player reported to have used the soccer move identified in the previous step.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by determining the identity of the player nicknamed 'O Fen\u00f4meno', which is Ronaldo Naz\u00e1rio. Once identified, the next step is to find out which soccer move he popularized. Finally, the graph identifies the first player reported to have used this move, thus providing a complete answer to the question."
+    }
+]

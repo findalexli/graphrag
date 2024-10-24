@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "r1",
+                    "instruction": "Retrieve the taxonomy and species count for the genus Cassiope.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "r2",
+                    "instruction": "Retrieve the taxonomy and species count for the genus Deutzia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "r3",
+                    "instruction": "Compare the species counts obtained for Cassiope and Deutzia.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "r1",
+                        "r2"
+                    ]
+                }
+            ],
+            "root_node_id": "r1",
+            "final_node_id": "r3"
+        },
+        "explanation": "The execution graph is constructed to efficiently address the multi-hop question regarding which genus, Cassiope or Deutzia, has more species by first retrieving the relevant taxonomic data for each genus separately. This data acquisition serves as a foundation for the final reasoning step, where the two species counts are compared to deduce which genus is more speciose. The modular approach ensures that information for each genus is independently retrieved and subsequently integrated in the final step to produce the comparative result."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the scientific classification of Cassiope.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the scientific classification of Deutzia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the number of species within the genus Cassiope.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the number of species within the genus Deutzia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the number of species in Cassiope and Deutzia to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The question compares the number of species between two plant genera: Cassiope and Deutzia. The graph begins with identifying the genera and retrieving relevant details about them. Parallel nodes (1 and 2) gather classification information for each genus independently. Nodes 3 and 4 focus specifically on retrieving the number of species associated with each genus. Finally, node 5 synthesizes the information by comparing the numbers to provide an answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of species in the genus Cassiope.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of species in the genus Deutzia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of species retrieved for Cassiope and Deutzia to determine which has more species.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of two retrieval nodes and one reasoning node. The first node retrieves the number of species for the genus Cassiope, and the second node retrieves the number of species for the genus Deutzia. Once both pieces of data are retrieved, the reasoning node compares the numbers to determine which genus has more species."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the number of species in the genus Cassiope.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the number of species in the genus Deutzia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of species found for Cassiope and Deutzia to determine which genus has more species.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving the number of species in each genus, Cassiope and Deutzia, as separate nodes since these are independent tasks. These are retrieval and reasoning steps because they involve obtaining data and making sure it aligns with what is defined as species count for those genuses. The final reasoning node compares the two numbers to determine which genus has more species."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of species for the genus Cassiope.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of species for the genus Deutzia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of species retrieved for Cassiope and Deutzia to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first gather key information about the number of species within each genus: Cassiope and Deutzia. Once these retrieval and reasoning nodes execute independently, the final reasoning node compares the species counts to answer the original question."
+    }
+]

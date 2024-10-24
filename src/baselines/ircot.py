@@ -51,7 +51,7 @@ class BM25Retriever(DocumentRetriever):
 
 
 class DPRRetriever(DocumentRetriever):
-    def __init__(self, model_name: str, faiss_index: str, corpus, device='cuda'):
+    def __init__(self, model_name: str, faiss_index: str, corpus, device='cpu'):
         """
 
         :param model_name:

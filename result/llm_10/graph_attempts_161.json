@@ -1,0 +1,216 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Will Durant's professional background and works.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Margaret Mitchell's professional background and works.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze Will Durant's background to determine if he was a philosophical writer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze Margaret Mitchell's background to determine if she was a philosophical writer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize findings about both Will Durant and Margaret Mitchell to answer if both were philosophical writers.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by retrieving the professional backgrounds and works of Will Durant and Margaret Mitchell (nodes 1 and 2). These retrieval steps are independent and can occur in parallel. The results are then analyzed separately to determine if each was a philosophical writer (nodes 3 and 4). Finally, these analyses are synthesized to answer the question of whether both were philosophical writers."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out if Will Durant was a philosophical writer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out if Margaret Mitchell was a philosophical writer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize information from the previous steps to determine if both Will Durant and Margaret Mitchell were philosophical writers.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine if both Will Durant and Margaret Mitchell were philosophical writers, we first check each individual's contributions to ascertain if their works qualify as philosophical writings. Nodes 1 and 2 perform these searches independently. Node 3 then synthesizes their findings to provide the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the main subject of Will Durant's writings and his background.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the main subject of Margaret Mitchell's writings and her background.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze Will Durant's background to assess if he can be classified as a philosophical writer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze Margaret Mitchell's background to assess if she can be classified as a philosophical writer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the analyses to conclude whether both Will Durant and Margaret Mitchell were philosophical writers.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is designed to evaluate the philosophical contributions of Will Durant and Margaret Mitchell. First, it involves retrieving information about their writings and backgrounds. Then it includes reasoning steps to assess whether each can be considered a philosophical writer. Finally, the results are synthesized to answer the question about both authors."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on whether Will Durant was a philosophical writer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on whether Margaret Mitchell was a philosophical writer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Will Durant is considered a philosophical writer based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Margaret Mitchell is considered a philosophical writer based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the analyses to determine if both Will Durant and Margaret Mitchell are considered philosophical writers.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the question into two parallel retrieval tasks: one for each author involved in the query. The goal is to ascertain whether each author is individually recognized as a philosophical writer. \n\nFirst, separate retrieval and reasoning steps are created for Will Durant (Node 1) and Margaret Mitchell (Node 2) to gather the needed information regarding their philosophical writing credentials. After gathering this information, individual reasoning steps (Nodes 3 and 4) analyze whether the evidence supports the claim for each author being a philosophical writer.\n\nFinally, Node 5 integrates the findings from both individual analyses to conclude if both authors qualify as philosophical writers, thus answering the initial question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Will Durant is and his work or fields of contribution.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine if Will Durant is considered a philosophical writer. Look for any known associations with philosophy in his work or influence.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify who Margaret Mitchell is and her work or fields of contribution.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Margaret Mitchell is considered a philosophical writer. Look for any known associations with philosophy in her work or influence.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the information about Will Durant and Margaret Mitchell to determine if both are considered philosophical writers.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by retrieving biographical and professional details about Will Durant and Margaret Mitchell separately (nodes 1 and 3). Each individual\u2019s association with philosophy is then verified in subsequent steps (nodes 2 and 4). Finally, the result of whether both are considered philosophical writers is synthesized into the final reasoning step (node 5), which finds common ground between the two based on their contributions to the field."
+    }
+]

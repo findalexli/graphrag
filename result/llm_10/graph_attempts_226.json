@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British presenter of the game show 'Viking: The Ultimate Obstacle Course'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which sport the identified presenter was an Olympic participant in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins with identifying the British presenter of the game show, followed by finding out the Olympic sport they participated in. This structure ensures that all necessary information is gathered and synthesized in a logical order."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British presenter of the game show 'Viking: The Ultimate Obstacle Course'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the Olympic sport the identified presenter participated in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the question into two main steps. First, we need to identify the British presenter of the specified game show. Once we have this information, the next step is determining the sport the presenter participated in during the Olympics. Each step relies on gathering relevant information, ensuring that the final answer addresses the original query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the TV show 'Viking: The Ultimate Obstacle Course'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who was the British presenter of 'Viking: The Ultimate Obstacle Course'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the career of the identified British presenter, focusing on Olympic participation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the sport in which the British presenter participated in the Olympics.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is designed to first gather details about the show in general to identify the relevant presenter, in this case, the British presenter who was also an Olympian. Once the presenter is identified, the next step determines the specific Olympic sport they participated in, synthesizing this information to answer the original query about their sport-specific Olympic involvement."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the game show 'Viking: The Ultimate Obstacle Course' and gather information on who the British presenter was.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the Olympic participation history of the identified British presenter.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the sport in which the presenter participated during the Olympics.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph decomposes the question into steps. First, it requires identifying the British presenter of the game show, which involves accessing known records about 'Viking: The Ultimate Obstacle Course'. After identifying the presenter, the next step is to retrieve information regarding their history as an Olympic participant, which directly leads to understanding in which sport they competed."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of the British presenter of 'Viking: The Ultimate Obstacle Course.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the Olympic sport in which the identified British presenter participated.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts by identifying the British presenter of 'Viking: The Ultimate Obstacle Course,' because that is the required piece of information needed to find out the related Olympic sport. Once the presenter is identified, the next step is to determine what Olympic sport they participated in. The answer to the original question is derived by completing these two steps."
+    }
+]

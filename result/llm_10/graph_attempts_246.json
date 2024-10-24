@@ -1,0 +1,125 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British-Irish heiress associated with the 'Optimist In Black' studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve biographical data about the identified individual, focusing on birth information.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract and verify the birth date of the identified individual from the biographical data.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying a specific person involved with 'Optimist In Black' and determining their birthday. The graph first identifies the heiress linked to the album, retrieves detailed biographical information, then extracts the birthdate."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British-Irish heiress who worked on the 'Optimist In Black' studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve and confirm the birthday of the identified person.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the task into two main steps: first, identifying the British-Irish heiress involved with the album 'Optimist In Black', and second, retrieving the birthday of this heiress. This structure ensures that we first accurately identify the heiress in question before proceeding to find the specific detail of her birthday."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British-Irish heiress who worked on the 'Optimist In Black' studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the birth date of the identified British-Irish heiress.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The question involves two main steps: identifying the specific British-Irish heiress linked to the 'Optimist In Black' album and then determining her birthday. The process begins with retrieving the identity of the person related to the album in question. Once the correct individual is identified, the next step is to retrieve and reason out her birthday, leading to the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British-Irish heiress who worked on the 'Optimist In Black' studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the date of birth of the heiress identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task requires identifying the British-Irish heiress associated with the album 'Optimist In Black', followed by retrieving her birthday. This is a two-step process: first, find out the identity of the heiress, and then retrieve her date of birth using this information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British-Irish heiress who worked on the 'Optimist In Black' studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the birthday of the identified British-Irish heiress from step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The first step is to identify the British-Irish heiress involved with the 'Optimist In Black' album. Once her identity is confirmed, the second step retrieves her birthday. These steps are arranged sequentially, with each relying on the outcome of the previous, thus forming a direct retrieval and reasoning path to answer the question."
+    }
+]

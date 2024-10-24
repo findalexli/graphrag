@@ -1,0 +1,156 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the song 'I Love You' by Chris Write to gather initial details such as release date, album, or any notable information that might help in finding covers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for artists or bands who have covered the song 'I Love You' originally by Chris Write.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Reason with the collected data to verify each cover found, ensuring they are indeed distinct versions of the original song by Chris Write.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by retrieving details about the song 'I Love You' by Chris Write, which is crucial for identifying characteristics that help identify covers. The next step involves searching for artists who have covered this song. Finally, a reasoning step verifies the covers to ensure they are related to Chris Write's version of the song, eliminating potential confusion with songs of similar names by different artists."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the song 'I Love You' by Chris Write and find its details.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of artists or bands who have covered the song 'I Love You' by Chris Write.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile and verify the list of artists or bands who covered the song, ensuring accuracy and completeness.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To find out who covered the song 'I Love You' by Chris Write, the graph begins by identifying the song and its details, ensuring the correct entity is being referenced (Node 1). Once the song is correctly identified, the graph retrieves information on who covered the song (Node 2). Finally, it compiles and verifies the list of artists or bands to guarantee the answer's accuracy, making sure it is up-to-date and complete (Node 3). This logical sequence ensures thorough coverage and checks to avoid overlooking any relevant covers."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find information about the song 'I Love You' by Chris Write, including its original release details.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify artists or bands who have covered the song 'I Love You' by Chris Write.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is to identify who covered a specific song. The execution starts with locating full details about the song 'I Love You' by Chris Write, since background details and potential release notes may aid in narrowing down possible covers (Node 1). Once the original song's information is gathered, the next step is to search for artists or performances that have created cover versions of this song (Node 2). The graph uses retrieval and reasoning nodes to both gather and interpret necessary information to find cover artists."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the song 'I Love You' by Chris Write.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find artists who have covered songs.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Search for cover versions of the song 'I Love You' by Chris Write.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "List the artists who have covered 'I Love You' by Chris Write.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task of finding who covered the song 'I Love You' by Chris Write into several steps. First, we establish the existence of the song by identifying it. Then, we gather background information on artists who generally cover songs to understand typical sources. In parallel, we directly search for cover versions of this specific song using the song information and generic cover artist information. From these gathered data points, we can compile and reason to list the artists who have covered the song."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the original song 'I Love You' by Chris Write and gather any covers made by other artists.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for artists who have covered 'I Love You' by Chris Write.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile a list of artists who have covered the song 'I Love You' by Chris Write.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying the original song by Chris Write to ensure clarity on which song's covers we are investigating. Next, it involves retrieving information about artists who have covered the song. Finally, it compiles this information into a list to answer the question."
+    }
+]

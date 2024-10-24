@@ -1,0 +1,125 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the book 'Love and Poison'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the English alternative rock band that 'Love and Poison' is the official biography of.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the formation city of the identified English alternative rock band.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task of identifying the city where the band, which is the subject of 'Love and Poison', was formed. It begins by retrieving information about the book to identify which band it covers. Then, it retrieves the city where this band was formed, resulting in the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the band associated with the biography 'Love and Poison'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research the formation city of the identified band.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task involves two main steps. The first step is to determine which band the biography 'Love and Poison' is about; this is a retrieval task that can include reasoning to ensure the correct band is identified, given that the title might be ambiguous. Once the band is identified (step 1), the second step is to find information about the city where the band was formed, which also involves a retrieval process that follows naturally from identifying the band. The result from this final node gives the required answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which English alternative rock band is the subject of the biography 'Love and Poison'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the city in which the identified band was formed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins by identifying the English alternative rock band that is the subject of the biography 'Love and Poison'. Once we know the band, the next step is to retrieve information about the city where the band was originally formed. This graph uses two nodes because the answer requires first identifying the band before knowing the city it was formed in."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Search for information on 'Love and Poison' and identify the English alternative rock band it is associated with.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for the city where the identified band was formed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts with retrieving information about 'Love and Poison' to identify the associated band. Once the band is identified, the next step is to search for the city where the band was formed. These steps ensure that we address both components of the question: identifying the band and then determining the formation city."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the English alternative rock band associated with the official biography titled 'Love and Poison'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out in which city the band identified in step 1 was formed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins with retrieving the English alternative rock band that the official biography 'Love and Poison' is associated with (step 1). Once the band is identified, step 2 retrieves the city where the band was formed. These steps ensure the question is answered by first determining the band, then using that information to find the city of formation."
+    }
+]

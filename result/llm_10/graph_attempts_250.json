@@ -1,0 +1,189 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2005 horror film featuring Donnie Wahlberg with a second installment.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the name of the second installment of the identified film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the soundtrack list of the identified film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the band from the soundtrack list of the film who had a song featured.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph focuses on first identifying the 2005 horror film starring Donnie Wahlberg that is part of a series. The second step retrieves the specific second installment's details. The following node retrieves the soundtrack list for this film, and the final node identifies the band from this list."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2005 horror film that starred Donnie Wahlberg.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the second installment of the identified horror film series from 2005 starring Donnie Wahlberg.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the soundtrack list for the identified second installment film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the band associated with each song in the soundtrack list of the second installment.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Find the specific band that had a song featured in the second installment of the 2005 horror film.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To answer the question, we start by identifying the horror film from 2005 starring Donnie Wahlberg, which provides the context needed to find its second installment. Then, we gather the soundtrack list for this specific installment, find all the bands associated with the songs, and finally determine which band's song was featured in that film."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the second installment of a horror film series released in 2005 starring Donnie Wahlberg.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which song was featured in the identified horror film installment.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the band that performed the song featured in the horror film installment.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The given question is dissected into three main nodes: Firstly, ascertain the specific film from 2005 featuring Donnie Wahlberg, which is a retrieval task to focus on the proper installment. Secondly, retrieve the details about songs featured in that specific film. Lastly, determine the band associated with one of those songs, completing the question's requirements."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2005 horror film sequel starring Donnie Wahlberg.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of songs featured in the film identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify and name the band associated with the songs retrieved in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is designed to first identify the specific horror film sequel from 2005 that starred Donnie Wahlberg. Once the film is identified, the next step is to retrieve information about the songs featured in that film. Finally, the task concludes by determining the band or bands associated with those songs to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2005 horror film starring Donnie Wahlberg.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the second installment of the identified film series.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve songs featured in the second film of the series.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the band associated with each featured song in the film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task by first identifying the 2005 horror film starring Donnie Wahlberg, which involves retrieval of relevant films. Next, it determines the second installment of that film series, followed by retrieving the song list from this specific installment. Finally, the graph identifies which band performed each of these songs, providing the answer."
+    }
+]

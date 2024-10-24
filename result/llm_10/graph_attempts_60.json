@@ -1,0 +1,133 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2007 Irish romantic musical film that has a musical based on it.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Once the film is identified, find out if a musical based on this film exists.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the premiere year of the musical based on the identified film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine the premiere year of a musical based on a specific film. We begin by identifying the film in question, then verify the existence of a musical adaptation, and finally locate the premiere year of that musical."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of the 2007 Irish romantic musical film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find information about whether there is a musical based on the identified film and if so, determine its premiere year.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task begins with identifying the film's name, which appears to be key information. Once the film is identified (Step 1), the next step (Step 2) is to explore the existence of a musical adaptation and determine the year it premiered, directly addressing the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2007 Irish romantic musical film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about a musical based on the identified 2007 Irish romantic musical film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the premiere year of the musical from the information retrieved in Step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying a specific film first, which is described as an 'Irish romantic musical film from 2007'. Once identified, the next step is to look for a musical that is based on this film. Finally, the task is to extract the premiere year of the identified musical."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of the 2007 Irish romantic musical film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the premiere year for the musical based on the film identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the question into two main steps. The first step is to retrieve the name of the 2007 Irish romantic musical film. Once we have this information, the second step is to find out when the musical adaptation of this film premiered. This sequential flow ensures that the film identified is the basis for locating the relevant information about the musical's premiere year."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2007 Irish romantic musical film that has a musical adaptation of the same name.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the premiere year of the musical based on the film identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two main steps. First, we need to ascertain which 2007 Irish romantic musical film has a stage musical adaptation (step 1). Once the film is identified, the next step is to find out the year the stage musical premiered (step 2). This sequential approach ensures that we first clearly establish the link between the film and the musical adaptation before retrieving the specific premiere year."
+    }
+]

@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the comic series that features the character Nick Fury.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the comic series that features the character Baron von Strucker.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the common comic series that involves both Nick Fury and Baron von Strucker from the results of nodes 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying comic series associated with each character separately. The first node retrieves and reasons about which comic series involve Nick Fury. The second node performs a similar function for Baron von Strucker. The final node synthesizes the information from the first two nodes to find the common series that includes both characters."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify comic series that feature Nick Fury as a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify comic series that feature Baron von Strucker as a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the overlap between the comic series identified in nodes 1 and 2 to find common series featuring both Nick Fury and Baron von Strucker.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the comic series in which each of the characters, Nick Fury and Baron von Strucker, appear separately. Then, it determines the common comic series from these two sets, thus identifying the series that feature both characters."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the affiliations or organizations associated with Nick Fury as a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the affiliations or organizations associated with Baron von Strucker as a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify comic series that involve Nick Fury based on his affiliations or organizations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify comic series that involve Baron von Strucker based on his affiliations or organizations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Find common comic series that involve both Nick Fury and Baron von Strucker.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by identifying the affiliations or organizations linked to Nick Fury and Baron von Strucker, as these are key elements associated with their appearances in comic series (nodes 1 and 2). Once these affiliations are determined, the next step is to find which comic series involve these characters based on their affiliations (nodes 3 and 4). Finally, the reasoning step (node 5) identifies the comic series that involve both characters by finding the intersection of the results from nodes 3 and 4."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify comic series involving the character Nick Fury.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify comic series involving the character Baron von Strucker.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the intersection of comic series from node 1 and node 2 to identify comic series involving both Nick Fury and Baron von Strucker.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying any comic series that features both Nick Fury and Baron von Strucker. The graph begins by separately retrieving series involving each character, which allows us to build a list of comics each of them appears in. The final reasoning step involves comparing these lists to find comic series that include both characters, thus answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the comic series that feature Nick Fury as a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the comic series that feature Baron von Strucker as a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the common comic series that include both Nick Fury and Baron von Strucker from the results of nodes 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by separately identifying comic series that involve each of the two characters: Nick Fury and Baron von Strucker. Once these two lists of series are retrieved, a reasoning step combines the information to find commonalities, resulting in a list of comic series that include both characters. The final node synthesizes this information to answer the original question."
+    }
+]

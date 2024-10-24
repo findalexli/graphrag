@@ -1,0 +1,245 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on Thinking Fellers Union Local 282's active years.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on The Smiths' active years.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Thinking Fellers Union Local 282 was active in 1986 from their active years data.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify that The Smiths' lead singer is Morrissey and determine their active years.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if The Smiths, with lead singer Morrissey, were active in 1986 from their active years data.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Combine the results to determine if both Thinking Fellers Union Local 282 and The Smiths were active in 1986.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The graph breaks down the task into two main retrieval steps: gathering information on the active years of both Thinking Fellers Union Local 282 and The Smiths. After verifying Morrissey is the lead singer of The Smiths, the reasoning steps determine whether each band was active in 1986, followed by a final step to synthesize these results."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out the active years of the band Thinking Fellers Union Local 282.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out the active years of the band The Smiths.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Thinking Fellers Union Local 282 was active in 1986 based on their active years.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if The Smiths were active in 1986 based on their active years and if Morrissey was their lead singer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Conclude whether both Thinking Fellers Union Local 282 and The Smiths were active in 1986.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph breaks down the task into discovering the active years of both bands and verifying Morrissey's role, before reasoning whether both bands were active in 1986. The reasoning steps take the retrieved information to answer the question fully."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the active years of the band Thinking Fellers Union Local 282.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the active years of the band The Smiths and confirm Morrissey was the lead singer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if both Thinking Fellers Union Local 282 and The Smiths were active in 1986.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph comprises three steps: two retrieval and reasoning steps to gather information on the active years of the bands Thinking Fellers Union Local 282 and The Smiths, and a reasoning step to determine if both were active in 1986."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the active years of Thinking Fellers Union Local 282.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the active years of The Smiths along with confirmation that their lead singer was Morrissey.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine whether Thinking Fellers Union Local 282 was active in 1986.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine whether The Smiths were active in 1986 and led by Morrissey.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the information to determine if both bands were active in 1986.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by retrieving the active years of both bands and confirms the lead singer of The Smiths. It then separately analyzes whether each band was active in 1986 by evaluating the active years against the target year. Finally, it combines the results to conclude whether both bands were active during that year."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the active years of the band 'Thinking Fellers Union Local 282'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the active years of the band 'The Smiths'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify that Morrissey was the lead singer of 'The Smiths'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 'Thinking Fellers Union Local 282' was active in 1986 based on their active years.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if 'The Smiths' were active in 1986 based on their active years.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Confirm that the band 'The Smiths' referred to in the question is the same band that had Morrissey as their lead singer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "7",
+                    "instruction": "Combine results to determine if both 'Thinking Fellers Union Local 282' and 'The Smiths', with Morrissey as lead singer, were active in 1986.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5",
+                        "6"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "7"
+        },
+        "explanation": "The execution graph breaks down the problem by separately retrieving the active years of each band. It verifies Morrissey's role as the lead singer of The Smiths to ensure the correct band is identified. The reasoning nodes determine if each band was active in 1986, and the final node combines these conclusions to answer the original question."
+    }
+]

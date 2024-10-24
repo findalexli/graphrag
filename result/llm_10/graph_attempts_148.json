@@ -1,0 +1,200 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine what 'The Zou' refers to in the context of college football.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which college or university is nicknamed 'The Zou'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the college or university where Henry Josey played football.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify if the nickname 'The Zou' matches the institution where Henry Josey played.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To find out what 'The Zou' refers to, we first need to identify the common nickname usage within college football. Then, retrieve information about where Henry Josey played football. We create a reasoning step to verify if the college he played for is the one known as 'The Zou'. This ensures the answer is correct by confirming both the nickname and Josey's association with that institution."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what 'The Zou' refers to in college football contexts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which university Henry Josey played college football for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Correlate the information about 'The Zou' with the university Henry Josey attended to find the common name for 'The Zou'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task requires understanding the nickname 'The Zou' in the context of college football and identifying the university Henry Josey played for. Node 1 retrieves and reasons about the general meaning of 'The Zou' in college football, while Node 2 focuses on the college team or university Henry Josey was part of. The final node synthesizes both pieces of information to deduce the commonly known name for 'The Zou'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the full name or common name for 'The Zou' in the context of college football stadiums or teams.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which college Henry Josey played football for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Match the college identified with the full name or common name of 'The Zou'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Conclude what 'The Zou' is most commonly known as based on Henry Josey's college football team and the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task requires determining what 'The Zou' refers to in the context of Henry Josey playing college football. The graph starts by retrieving information about 'The Zou' (Node 1) and finding out which college team Josey played for (Node 2). Once these pieces of information are retrieved and reasoned through, they are combined (Node 3) to determine the common name associated with 'The Zou' in this context. The final node (Node 4) synthesizes all gathered information to provide the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what 'The Zou' refers to in the context of college football.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Henry Josey's college football career.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the college team or stadium associated with 'The Zou'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the college or university for which Henry Josey played based on his college football career information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the locations identified for 'The Zou' and Henry Josey's college to confirm they match.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph for understanding what 'The Zou' is known for involves first identifying what 'The Zou' specifically refers to in college football and retrieving information about Henry Josey's college football tenure. By reasoning about the meaning of 'The Zou', potentially drawing on broader contextual knowledge of college football nicknames, and pinpointing Henry Josey's college football history, we then confirm whether 'The Zou' corresponds to the same institution where Josey played."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what 'The Zou' refers to in the context of college football stadiums or teams.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Look up Henry Josey, specifically focusing on details of his college football career.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the name of the college or university associated with the stadium known as 'The Zou'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the college where Henry Josey played football from his career details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if the college associated with 'The Zou' is the same as the one where Henry Josey played.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph begins by identifying what 'The Zou' refers to, which will often be a nickname for a college football stadium. Parallelly, information about Henry Josey's college football career is retrieved. These two retrieval paths are then reasoned over to extract the college names. Finally, the two results are compared to confirm that 'The Zou' is indeed where Henry Josey played, thereby answering the original question."
+    }
+]

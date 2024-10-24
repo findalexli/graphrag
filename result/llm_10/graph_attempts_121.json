@@ -1,0 +1,175 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Jamaican cricketer who made his debut in the 2000 ICC KnockOut Trophy.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "What is the dominant hand of the Jamaican cricketer in terms of batting?",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "What is the role (e.g., batsman, bowler) of the Jamaican cricketer known for being right-handed?",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the information about the cricketer's batting hand and role to determine his identity as a right-handed batsman or bowler.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To answer the question about the Jamaican cricketer from the 2000 ICC KnockOut Trophy, we first retrieve the identity of the cricketer who debuted in that event. Then, we determine his batting hand (right or left). Simultaneously, we ascertain his primary role, whether he's a batsman or a bowler. Finally, we synthesize this information to determine his exact skill, as the question asks specifically if he is a right-handed batsman or bowler."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Jamaican cricketer who made his debut in the 2000 ICC KnockOut Trophy.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the cricketing style (batting and bowling) of the identified Jamaican cricketer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the cricketer's batting orientation (right-handed or left-handed) from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to identify and determine the specific batting orientation of the Jamaican cricketer who debuted in the 2000 ICC KnockOut Trophy. The graph first identifies the cricketer (node 1), then gathers detailed information about his cricketing style (node 2), and finally extracts the relevant batting interaction (node 3)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Jamaican cricketers who participated in the 2000 ICC KnockOut Trophy.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the debut players among the identified Jamaican cricketers from the 2000 ICC KnockOut Trophy.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out the playing style or specialization (batsman, bowler, etc.) of the debut Jamaican cricketer who is right-handed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into identifying all Jamaican cricketers who participated in the 2000 ICC KnockOut Trophy, then narrows down to find the debut players from this group, and finally retrieves the cricketer's playing style to answer the question about the right-handed specialization."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine who the Jamaican cricketer is that debuted in the 2000 ICC KnockOut Trophy.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find detailed information about the Jamaican cricketer identified, focusing on his batting and bowling style.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract from the found information the specific batting style of the Jamaican cricketer. Answer the query: Is he a right-handed batsman?",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine the batting style of a Jamaican cricketer who debuted in the 2000 ICC KnockOut Trophy. This involves first identifying the cricketer, then gathering detailed information about his playing style, and finally extracting the answer related to his batting style."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Jamaican cricketer who debuted in the 2000 ICC KnockOut Trophy.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the batting style of the identified Jamaican cricketer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the bowling style of the identified Jamaican cricketer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the correct 'right-handed' skill of the cricketer, whether it's batting or bowling, from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph starts with identifying the Jamaican cricketer who made his debut in the 2000 ICC KnockOut Trophy. Then, there are two retrieval nodes in parallel: one to find the batting style and the other to find the bowling style of the cricketer. The final reasoning node determines whether the cricketer is a right-handed batsman, bowler, or both, based on the information gathered from the previous nodes."
+    }
+]

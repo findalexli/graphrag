@@ -1,0 +1,198 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine which countries have eleven administrative divisions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find a list of the countries that competed in the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which sports or events the Falkland Islands competed in during the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check the results of the events that the Falkland Islands participated in to find if they won against any country.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Match the countries the Falkland Islands beat in 2010 Commonwealth Games with countries having eleven administrative divisions to find a common match.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by identifying countries with eleven administrative divisions (Node 1) since this is a crucial criteria to filter countries. Separately, it retrieves information about countries that competed in the 2010 Commonwealth Games (Node 2) and specific events the Falkland Islands participated in (Node 3). It then checks which countries the Falkland Islands won against in those events (Node 4). The final reasoning step (Node 5) involves matching these results against the countries with eleven divisions to find the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the sports in which the Falkland Islands participated in the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of countries or teams that the Falkland Islands faced in the 2010 Commonwealth Games across all sports.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the opponents the Falkland Islands defeated in any of their events.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve a list of countries that have eleven administrative divisions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify any country from the list in Node 3 that also appears in the list from Node 4.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by determining the sports events the Falkland Islands participated in during the 2010 Commonwealth Games and the teams they played against. Parallelly, it retrieves countries with eleven administrative divisions. By cross-referencing the list of defeated opponents with the administrative division information, it identifies the country that matches the criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify events where the Falkland Islands participated in the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List countries the Falkland Islands beat in each event they participated in during the 2010 Commonwealth Games.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the administrative division structure of each country the Falkland Islands beat in 2010.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which of these countries has eleven administrative divisions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is broken down into logical steps. First, we need to identify events and results involving the Falkland Islands in the 2010 Commonwealth Games. Then, check the administrative divisions of the countries they beat to find the one with eleven divisions."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify countries that participated in the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List matches or events where the Falkland Islands participated in the 2010 Commonwealth Games and determine if they won any of these events.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check the administrative divisions of each country that the Falkland Islands beat in any event at the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which of the countries identified in the previous step has eleven administrative divisions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To determine which country the Falkland Islands beat at the 2010 Commonwealth Games that has eleven administrative divisions, we first identify all participating countries. Next, we examine the specific matches or events to find where the Falkland Islands secured a victory. Then, we review the administrative divisions of the countries they beat to check if any have eleven divisions. Finally, we identify which of these matches the criterion of having eleven administrative divisions."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify countries with eleven administrative divisions that participated in the 2010 Commonwealth Games.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List all the countries the Falkland Islands competed against in the 2010 Commonwealth Games and determine which matches they won.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Match the list of countries with eleven administrative divisions against the list of countries the Falkland Islands beat in 2010 Commonwealth Games.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is structured to identify the correct country in a logical sequence. First, it retrieves information about countries with eleven administrative divisions and their participation in the 2010 Commonwealth Games. Simultaneously, it gathers data on whom the Falkland Islands competed against and defeated. Finally, the reasoning node combines this information to find the intersection: a country that both participated, was defeated by the Falkland Islands, and has eleven administrative divisions."
+    }
+]

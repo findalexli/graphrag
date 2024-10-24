@@ -1,0 +1,324 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve the number of species in the genus Quesnelia.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the number of species in the genus Honeysuckle (Lonicera).",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Compare the number of species retrieved for Quesnelia with the number of species retrieved for Honeysuckle (Lonicera) to determine which genus has more species.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "To answer the question about which genus has more species, the graph first retrieves the number of species in each genus\u2014Quesnelia and Honeysuckle (Lonicera). These retrievals are independent and hence executed in parallel. The final node then takes the results from these retrieval nodes and performs a comparison to decide which genus has a greater number of species."
+            },
+            "recall": 0.6666666666666666,
+            "retrieved_passages": [
+                "Quesnelia violacea\nQuesnelia violacea is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia strobilispica\nQuesnelia strobilispica is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia quesneliana\nQuesnelia quesneliana is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia marmorata\nQuesnelia marmorata is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia dubia\nQuesnelia dubia is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia edmundoi\nQuesnelia edmundoi is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia testudo\nQuesnelia testudo (tess-too'do) is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+                "Lonicera caprifolium\nLonicera caprifolium, the Italian woodbine, perfoliate honeysuckle, goat-leaf honeysuckle, Italian honeysuckle, or perfoliate woodbine, is a species of perennial flowering plants in the genus \"Lonicera\" of the Caprifoliaceae family. It is native to parts of Europe, and naturalised in South East Britain and northeastern North America. It can readily be distinguished from Europe's most common species, \"Lonicera periclymenum\", by its topmost leaves which are perfoliate as the Latin name suggests (that is, the stem appears to grow through the centre of the leaf). It is a vigorous, deciduous climber growing up to 8 metres. It bears masses of very fragrant, cream-coloured flowers, tinged with pink, appearing in midsummer.",
+                "Honeysuckle\nHoneysuckles (\"Lonicera\", ; syn. \"Caprifolium\" Mill.) are arching shrubs or twining bines in the family Caprifoliaceae, native to the Northern Hemisphere. Approximately 180 species of honeysuckle have been identified. About 100 of these species can be found in China and approximately 20 native species have been identified in Europe, 20 in India, and 20 in North America. Widely known species include \"Lonicera periclymenum\" (honeysuckle or woodbine), \"Lonicera japonica\" (Japanese honeysuckle, white honeysuckle, or Chinese honeysuckle) and \"Lonicera sempervirens\" (coral honeysuckle, trumpet honeysuckle, or woodbine honeysuckle). Hummingbirds are attracted to the flowers on some of these plants, especially \"L. sempervirens\" and \"L. ciliosa\" (orange honeysuckle). Honeysuckle derives its name from the edible sweet nectar obtainable from its tubular flowers. The name \"Lonicera\" stems from Adam Lonicer, a Renaissance botanist.",
+                "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe. By far the highest species diversity is in China, where 50 species occur.",
+                "Lophodermium\nLophodermium is a genus of fungi within the family Rhytismataceae. The genus contains 145 species and has a global distribution. Species of this genus are usually observed producing zone lines, conidiomata and ascomata on dead fallen leaves, but at least some are known to colonize living leaves. In many cases they then live inside the colonized leaf as a symptomless endobiont, where they are regarded as detritivores utilising dead plant matter. In a few cases they may kill all or part of the leaf prematurely, and there is a substantial literature dealing with those species as plant pathogens. The genus infects many different plant families but with a notable concentration in the family Pinaceae; many \"Lophodermium\" species are restricted to a single host genus (or even species), but some, particularly those infecting grasses, may infect several genera. Some are economically important plant pathogens, such as those that cause needlecast disease in European Black Pine, Scots Pine and Red Pine in forestry and christmas tree plantations. In these species, notably \"L. pinastri\" and \"L. seditiosum\", the fungal spores disperse and infect the pine needles in late summer, which turn brown by the following spring and then fall off.",
+                "Megalurus\nMegalurus is a genus of passerine bird in the family Locustellidae. The genus was once placed in the Old World warbler \"wastebin\" family Sylviidae. The genus contains six species also known as the typical grassbirds. The genus is distributed from northern China and Japan, to India in the west, and Australia in the south, with most species being located wholly or partly in the tropics. The genus is also sometimes considered to include the genus \"Bowdleria\", which holds the fernbirds of New Zealand. The most widespread species, the tawny grassbird, ranges from the Philippines to southern New South Wales, whereas the Fly River grassbird is restricted to swampland in the southern part of New Guinea. The natural habitat of the typical grassbirds is, as the name suggests, wet grasslands, swamps and other marshlands. Some species exist away from water in tall grasslands, heathlands, and forest clearings. Some species have adapted to the margins of rice fields and gardens.",
+                "Zea perennis\nZea perennis, the perennial teosinte, is a true grass species in the genus \"Zea\" and a teosinte. It is one of the two perennial species in the genus \"Zea\". The other perennial, \"Z. diploperennis,\" is the sister taxon of \"Z. perennis\". Those two species also form a clade with \"Z. luxurians\". Together, the three species make up the \"Luxuriantes\" section in the genus \"Zea\". \"Z. perennis\" is the sole tetraploid in the genus and fertile hybrids with diploid \"Zea\" species are rare. Ribosomal ITS evidence suggested introgression between \"Z. perennis\" and \"Z. mays\" that must have come from either crossing the ploidy barrier or been from the diploid ancestral pool. \"Z. perennis\" is generally considered to be an autotetraploid from some ancestral population of \"Z. diploperennis\".",
+                "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+                "Cryptanthus sinuosus\nCryptanthus sinuosus is a species in the genus Cryptanthus. This plant is endemic to the Brazilian state of Rio de Janeiro where it lives in coastal rain forests and sandy coastal plains."
+            ],
+            "thoughts": [
+                "The genus Quesnelia contains 22 known species.",
+                "There are approximately 180 species of honeysuckle in the genus Lonicera.",
+                "The genus Lonicera (Honeysuckle) has more species than the genus Quesnelia. With approximately 180 species, Lonicera has a significantly higher number of species compared to the 22 known species of Quesnelia."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve the current number of species classified under the genus Quesnelia.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the current number of species classified under the genus Honeysuckle.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Compare the numbers obtained for Quesnelia and Honeysuckle to determine which genus has more species.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph begins by retrieving the number of species for each genus separately. These are parallel retrieval tasks as they are independent of each other. Once both numbers are retrieved, they can be compared in a reasoning step to determine which genus has more species. The final answer relies on the output of the reasoning node, which synthesizes the information from both retrieval nodes."
+            },
+            "recall": 0.6666666666666666,
+            "retrieved_passages": [
+                "Quesnelia violacea\nQuesnelia violacea is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia strobilispica\nQuesnelia strobilispica is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia quesneliana\nQuesnelia quesneliana is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia marmorata\nQuesnelia marmorata is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia dubia\nQuesnelia dubia is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia edmundoi\nQuesnelia edmundoi is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia testudo\nQuesnelia testudo (tess-too'do) is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+                "Honeysuckle\nHoneysuckles (\"Lonicera\", ; syn. \"Caprifolium\" Mill.) are arching shrubs or twining bines in the family Caprifoliaceae, native to the Northern Hemisphere. Approximately 180 species of honeysuckle have been identified. About 100 of these species can be found in China and approximately 20 native species have been identified in Europe, 20 in India, and 20 in North America. Widely known species include \"Lonicera periclymenum\" (honeysuckle or woodbine), \"Lonicera japonica\" (Japanese honeysuckle, white honeysuckle, or Chinese honeysuckle) and \"Lonicera sempervirens\" (coral honeysuckle, trumpet honeysuckle, or woodbine honeysuckle). Hummingbirds are attracted to the flowers on some of these plants, especially \"L. sempervirens\" and \"L. ciliosa\" (orange honeysuckle). Honeysuckle derives its name from the edible sweet nectar obtainable from its tubular flowers. The name \"Lonicera\" stems from Adam Lonicer, a Renaissance botanist.",
+                "Lonicera caprifolium\nLonicera caprifolium, the Italian woodbine, perfoliate honeysuckle, goat-leaf honeysuckle, Italian honeysuckle, or perfoliate woodbine, is a species of perennial flowering plants in the genus \"Lonicera\" of the Caprifoliaceae family. It is native to parts of Europe, and naturalised in South East Britain and northeastern North America. It can readily be distinguished from Europe's most common species, \"Lonicera periclymenum\", by its topmost leaves which are perfoliate as the Latin name suggests (that is, the stem appears to grow through the centre of the leaf). It is a vigorous, deciduous climber growing up to 8 metres. It bears masses of very fragrant, cream-coloured flowers, tinged with pink, appearing in midsummer.",
+                "Coast horned lizard\nThe coast horned lizard (\"Phrynosoma coronatum\") is a species of phrynosomatid lizard which can be found in Baja California Sur. The old classification included all three current species \"P. blainvillii\", \"P. cerroense\", and \"P. coronatum\" as a single species (\"P. coronatum\") ranging from Baja California north to California's Sacramento Valley. It was previously considered to be a widely divergent species with over 6 subspecies in their relatively small range but is now classified as three distinct species. As a defense the lizard can shoot high pressure streams of blood out of its eyes if threatened.",
+                "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+                "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+                "Aceria clianthi\nAceria clianthi is a species of mite belonging to the family Eriophyidae. It is found only in New Zealand. It is notable for being host specific to threatened plants of the genus \"Clianthus\". It is classified by Buckley \"et al.\" as \"nationally critical\" under the New Zealand Threat Classification System. They stated \"\"Aceria clianthi\" (Eriophyidae), has been recorded only from kakabeak (\"Clianthus\" spp.) in cultivation and once on \"Lotus cornalatus\" [\"Lotus corniculatus\"] (Fabaceae), an introduced plant growing near kakabeak (Martin 2009). It is given the same threat classification as kakabeak (de Lange et al. 2009).\" Heenan had earlier stated that \"the two species [of \"Clianthus\"] are considered to be threatened, with \"C.\u00a0maximus\" having a rank of vulnerable, whereas \"C.\u00a0puniceus\" is critically endangered\", but the conservation status of \"C.\u00a0maximus\" was subsequently found to be more serious. These threat classifications for \"Clianthus\" apply to plants in the wild, but the species are widely cultivated. \"Aceria clianthi\" occurs on both plants in the wild and in cultivation.",
+                "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+            ],
+            "thoughts": [
+                "The current number of species classified under the genus Quesnelia is 22.",
+                "The current number of species classified under the genus Honeysuckle is approximately 180.",
+                "Based on the numbers obtained, it is clear that the genus Honeysuckle has more species than the genus Quesnelia. With approximately 180 species, Honeysuckle significantly surpasses the 22 species classified under Quesnelia. Therefore, Honeysuckle has a much larger number of species compared to Quesnelia."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information on the number of species within the genus Quesnelia.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information on the number of species within the genus Honeysuckle.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Compare the number of species between Quesnelia and Honeysuckle to determine which has more species.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph starts with two independent retrieval nodes to gather the number of species in each genus, Quesnelia and Honeysuckle. Once both pieces of information are retrieved, the reasoning node compares these numbers to determine which genus has more species. This logical breakdown ensures each specific piece of information is retrieved before performing the comparison needed to answer the question."
+            },
+            "recall": 0.3333333333333333,
+            "retrieved_passages": [
+                "Quesnelia violacea\nQuesnelia violacea is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia strobilispica\nQuesnelia strobilispica is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia quesneliana\nQuesnelia quesneliana is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia marmorata\nQuesnelia marmorata is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia dubia\nQuesnelia dubia is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia edmundoi\nQuesnelia edmundoi is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia testudo\nQuesnelia testudo (tess-too'do) is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+                "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+                "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+                "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+                "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+                "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+                "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+                "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+                "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+            ],
+            "thoughts": [
+                "The genus Quesnelia contains 22 known species, all of which are endemic to eastern Brazil. Some of the species within this genus include Quesnelia violacea, Quesnelia strobilispica, Quesnelia quesneliana, Quesnelia marmorata, Quesnelia dubia, Quesnelia edmundoi, and Quesnelia testudo.",
+                "The information provided does not contain details about the number of species within the genus Honeysuckle.",
+                "Based on the information provided, the genus Quesnelia contains 22 known species. However, there is no information available about the number of species within the genus Honeysuckle. Therefore, we cannot determine which genus has more species without additional information about the number of species within Honeysuckle."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve the number of species in the genus Quesnelia.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the number of species in the genus Honeysuckle (Lonicera).",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Compare the number of species in Quesnelia and Honeysuckle to determine which genus has more species.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph begins with two independent retrieval nodes to gather the number of species in each genus, Quesnelia and Honeysuckle. These steps are performed in parallel as they do not depend on each other. The retrieved data is then fed into a reasoning node that compares the two numbers to determine which genus has more species."
+            },
+            "recall": 0.6666666666666666,
+            "retrieved_passages": [
+                "Quesnelia violacea\nQuesnelia violacea is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia strobilispica\nQuesnelia strobilispica is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia quesneliana\nQuesnelia quesneliana is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia marmorata\nQuesnelia marmorata is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia dubia\nQuesnelia dubia is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia edmundoi\nQuesnelia edmundoi is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia testudo\nQuesnelia testudo (tess-too'do) is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+                "Lonicera caprifolium\nLonicera caprifolium, the Italian woodbine, perfoliate honeysuckle, goat-leaf honeysuckle, Italian honeysuckle, or perfoliate woodbine, is a species of perennial flowering plants in the genus \"Lonicera\" of the Caprifoliaceae family. It is native to parts of Europe, and naturalised in South East Britain and northeastern North America. It can readily be distinguished from Europe's most common species, \"Lonicera periclymenum\", by its topmost leaves which are perfoliate as the Latin name suggests (that is, the stem appears to grow through the centre of the leaf). It is a vigorous, deciduous climber growing up to 8 metres. It bears masses of very fragrant, cream-coloured flowers, tinged with pink, appearing in midsummer.",
+                "Honeysuckle\nHoneysuckles (\"Lonicera\", ; syn. \"Caprifolium\" Mill.) are arching shrubs or twining bines in the family Caprifoliaceae, native to the Northern Hemisphere. Approximately 180 species of honeysuckle have been identified. About 100 of these species can be found in China and approximately 20 native species have been identified in Europe, 20 in India, and 20 in North America. Widely known species include \"Lonicera periclymenum\" (honeysuckle or woodbine), \"Lonicera japonica\" (Japanese honeysuckle, white honeysuckle, or Chinese honeysuckle) and \"Lonicera sempervirens\" (coral honeysuckle, trumpet honeysuckle, or woodbine honeysuckle). Hummingbirds are attracted to the flowers on some of these plants, especially \"L. sempervirens\" and \"L. ciliosa\" (orange honeysuckle). Honeysuckle derives its name from the edible sweet nectar obtainable from its tubular flowers. The name \"Lonicera\" stems from Adam Lonicer, a Renaissance botanist.",
+                "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe. By far the highest species diversity is in China, where 50 species occur.",
+                "Lophodermium\nLophodermium is a genus of fungi within the family Rhytismataceae. The genus contains 145 species and has a global distribution. Species of this genus are usually observed producing zone lines, conidiomata and ascomata on dead fallen leaves, but at least some are known to colonize living leaves. In many cases they then live inside the colonized leaf as a symptomless endobiont, where they are regarded as detritivores utilising dead plant matter. In a few cases they may kill all or part of the leaf prematurely, and there is a substantial literature dealing with those species as plant pathogens. The genus infects many different plant families but with a notable concentration in the family Pinaceae; many \"Lophodermium\" species are restricted to a single host genus (or even species), but some, particularly those infecting grasses, may infect several genera. Some are economically important plant pathogens, such as those that cause needlecast disease in European Black Pine, Scots Pine and Red Pine in forestry and christmas tree plantations. In these species, notably \"L. pinastri\" and \"L. seditiosum\", the fungal spores disperse and infect the pine needles in late summer, which turn brown by the following spring and then fall off.",
+                "Megalurus\nMegalurus is a genus of passerine bird in the family Locustellidae. The genus was once placed in the Old World warbler \"wastebin\" family Sylviidae. The genus contains six species also known as the typical grassbirds. The genus is distributed from northern China and Japan, to India in the west, and Australia in the south, with most species being located wholly or partly in the tropics. The genus is also sometimes considered to include the genus \"Bowdleria\", which holds the fernbirds of New Zealand. The most widespread species, the tawny grassbird, ranges from the Philippines to southern New South Wales, whereas the Fly River grassbird is restricted to swampland in the southern part of New Guinea. The natural habitat of the typical grassbirds is, as the name suggests, wet grasslands, swamps and other marshlands. Some species exist away from water in tall grasslands, heathlands, and forest clearings. Some species have adapted to the margins of rice fields and gardens.",
+                "Zea perennis\nZea perennis, the perennial teosinte, is a true grass species in the genus \"Zea\" and a teosinte. It is one of the two perennial species in the genus \"Zea\". The other perennial, \"Z. diploperennis,\" is the sister taxon of \"Z. perennis\". Those two species also form a clade with \"Z. luxurians\". Together, the three species make up the \"Luxuriantes\" section in the genus \"Zea\". \"Z. perennis\" is the sole tetraploid in the genus and fertile hybrids with diploid \"Zea\" species are rare. Ribosomal ITS evidence suggested introgression between \"Z. perennis\" and \"Z. mays\" that must have come from either crossing the ploidy barrier or been from the diploid ancestral pool. \"Z. perennis\" is generally considered to be an autotetraploid from some ancestral population of \"Z. diploperennis\".",
+                "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+                "Cryptanthus sinuosus\nCryptanthus sinuosus is a species in the genus Cryptanthus. This plant is endemic to the Brazilian state of Rio de Janeiro where it lives in coastal rain forests and sandy coastal plains."
+            ],
+            "thoughts": [
+                "The genus Quesnelia contains 22 known species.",
+                "There are approximately 180 species of honeysuckle in the genus Lonicera.",
+                "Based on the information provided, the genus Lonicera (Honeysuckle) has more species with approximately 180 known species, compared to the genus Quesnelia which has 22 known species. Therefore, Honeysuckle has a significantly higher number of species compared to Quesnelia."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve the number of species in the genus Quesnelia.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the number of species in the Honeysuckle genus (Lonicera).",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Compare the number of species in Quesnelia with the number in the Honeysuckle genus.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine which genus, Quesnelia or Honeysuckle, has more species based on the previous comparison.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "To determine which of the two genera, Quesnelia or Honeysuckle (Lonicera), has more species, the execution graph begins by retrieving the number of species in each genus. The first two nodes operate in parallel and gather data regarding the species count for Quesnelia and Lonicera from relevant biological or taxonomic databases. Once the data is retrieved, the reasoning node compares these numbers to determine which genus has more species. The final node synthesizes the comparison to provide the answer."
+            },
+            "recall": 0.6666666666666666,
+            "retrieved_passages": [
+                "Quesnelia violacea\nQuesnelia violacea is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia strobilispica\nQuesnelia strobilispica is a species in the genus \"Quesnelia\". This species is endemic to Brazil.",
+                "Quesnelia quesneliana\nQuesnelia quesneliana is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia marmorata\nQuesnelia marmorata is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia dubia\nQuesnelia dubia is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia edmundoi\nQuesnelia edmundoi is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia testudo\nQuesnelia testudo (tess-too'do) is a species of bromeliad in the genus \"Quesnelia\".",
+                "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+                "Lonicera caprifolium\nLonicera caprifolium, the Italian woodbine, perfoliate honeysuckle, goat-leaf honeysuckle, Italian honeysuckle, or perfoliate woodbine, is a species of perennial flowering plants in the genus \"Lonicera\" of the Caprifoliaceae family. It is native to parts of Europe, and naturalised in South East Britain and northeastern North America. It can readily be distinguished from Europe's most common species, \"Lonicera periclymenum\", by its topmost leaves which are perfoliate as the Latin name suggests (that is, the stem appears to grow through the centre of the leaf). It is a vigorous, deciduous climber growing up to 8 metres. It bears masses of very fragrant, cream-coloured flowers, tinged with pink, appearing in midsummer.",
+                "Honeysuckle\nHoneysuckles (\"Lonicera\", ; syn. \"Caprifolium\" Mill.) are arching shrubs or twining bines in the family Caprifoliaceae, native to the Northern Hemisphere. Approximately 180 species of honeysuckle have been identified. About 100 of these species can be found in China and approximately 20 native species have been identified in Europe, 20 in India, and 20 in North America. Widely known species include \"Lonicera periclymenum\" (honeysuckle or woodbine), \"Lonicera japonica\" (Japanese honeysuckle, white honeysuckle, or Chinese honeysuckle) and \"Lonicera sempervirens\" (coral honeysuckle, trumpet honeysuckle, or woodbine honeysuckle). Hummingbirds are attracted to the flowers on some of these plants, especially \"L. sempervirens\" and \"L. ciliosa\" (orange honeysuckle). Honeysuckle derives its name from the edible sweet nectar obtainable from its tubular flowers. The name \"Lonicera\" stems from Adam Lonicer, a Renaissance botanist.",
+                "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe. By far the highest species diversity is in China, where 50 species occur.",
+                "Lophodermium\nLophodermium is a genus of fungi within the family Rhytismataceae. The genus contains 145 species and has a global distribution. Species of this genus are usually observed producing zone lines, conidiomata and ascomata on dead fallen leaves, but at least some are known to colonize living leaves. In many cases they then live inside the colonized leaf as a symptomless endobiont, where they are regarded as detritivores utilising dead plant matter. In a few cases they may kill all or part of the leaf prematurely, and there is a substantial literature dealing with those species as plant pathogens. The genus infects many different plant families but with a notable concentration in the family Pinaceae; many \"Lophodermium\" species are restricted to a single host genus (or even species), but some, particularly those infecting grasses, may infect several genera. Some are economically important plant pathogens, such as those that cause needlecast disease in European Black Pine, Scots Pine and Red Pine in forestry and christmas tree plantations. In these species, notably \"L. pinastri\" and \"L. seditiosum\", the fungal spores disperse and infect the pine needles in late summer, which turn brown by the following spring and then fall off.",
+                "Megalurus\nMegalurus is a genus of passerine bird in the family Locustellidae. The genus was once placed in the Old World warbler \"wastebin\" family Sylviidae. The genus contains six species also known as the typical grassbirds. The genus is distributed from northern China and Japan, to India in the west, and Australia in the south, with most species being located wholly or partly in the tropics. The genus is also sometimes considered to include the genus \"Bowdleria\", which holds the fernbirds of New Zealand. The most widespread species, the tawny grassbird, ranges from the Philippines to southern New South Wales, whereas the Fly River grassbird is restricted to swampland in the southern part of New Guinea. The natural habitat of the typical grassbirds is, as the name suggests, wet grasslands, swamps and other marshlands. Some species exist away from water in tall grasslands, heathlands, and forest clearings. Some species have adapted to the margins of rice fields and gardens.",
+                "Zea perennis\nZea perennis, the perennial teosinte, is a true grass species in the genus \"Zea\" and a teosinte. It is one of the two perennial species in the genus \"Zea\". The other perennial, \"Z. diploperennis,\" is the sister taxon of \"Z. perennis\". Those two species also form a clade with \"Z. luxurians\". Together, the three species make up the \"Luxuriantes\" section in the genus \"Zea\". \"Z. perennis\" is the sole tetraploid in the genus and fertile hybrids with diploid \"Zea\" species are rare. Ribosomal ITS evidence suggested introgression between \"Z. perennis\" and \"Z. mays\" that must have come from either crossing the ploidy barrier or been from the diploid ancestral pool. \"Z. perennis\" is generally considered to be an autotetraploid from some ancestral population of \"Z. diploperennis\".",
+                "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+                "Cryptanthus sinuosus\nCryptanthus sinuosus is a species in the genus Cryptanthus. This plant is endemic to the Brazilian state of Rio de Janeiro where it lives in coastal rain forests and sandy coastal plains."
+            ],
+            "thoughts": [
+                "The genus Quesnelia contains 22 known species.",
+                "The Honeysuckle genus (Lonicera) contains approximately 180 species.",
+                "The genus Quesnelia contains 22 known species, while the Honeysuckle genus (Lonicera) contains approximately 180 species. Therefore, the Honeysuckle genus has a significantly larger number of species compared to Quesnelia.",
+                "The genus Honeysuckle (Lonicera) has more species compared to the genus Quesnelia."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of species in the genus Quesnelia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of species in the genus Honeysuckle (Lonicera).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of species retrieved for Quesnelia with the number of species retrieved for Honeysuckle (Lonicera) to determine which genus has more species.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer the question about which genus has more species, the graph first retrieves the number of species in each genus\u2014Quesnelia and Honeysuckle (Lonicera). These retrievals are independent and hence executed in parallel. The final node then takes the results from these retrieval nodes and performs a comparison to decide which genus has a greater number of species."
+    },
+    "best_recall": 0.6666666666666666
+}

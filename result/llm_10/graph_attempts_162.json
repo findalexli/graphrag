@@ -1,0 +1,220 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the geographic location of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the general direction and distance considered 'southeast' from Jacabamba.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify mountains that lie southeast of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "For each identified mountain, determine which mountain range it belongs to.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Verify which of the identified mountain ranges extend through multiple countries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task into several steps, starting with identifying Jacabamba's location. This helps set the reference point for finding what lies southeast. By determining what 'southeast' means geographically from Jacabamba, locations can be narrowed down for retrieval of specific mountains in that direction. Once potential mountains are identified, the graph finds which ranges these mountains belong to, and then verifies which of these ranges extend through multiple countries, thereby answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the mountain that lies southeast of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the location of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify in which mountain range the identified mountain is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "List mountain ranges that extend through multiple countries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if the mountain range from node 3 extends through multiple countries.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "2",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is broken down as follows: \n\nNode 1 searches for a mountain that lies southeast of Jacabamba. Node 2 establishes the location of Jacabamba, which is essential to perform spatial analysis in Node 1. Node 3 then determines in which mountain range the identified mountain is located.\n\nNode 4 identifies mountain ranges that extend through multiple countries, providing criteria for Node 5. Finally, Node 5 synthesizes the information from nodes 3 and 4, checking if the mountain range from Node 3 fits the characteristics identified in Node 4."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the geographical location of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which mountains are located southeast of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "For each mountain located southeast of Jacabamba, identify the mountain range they belong to.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Among the identified mountain ranges, determine which extend through multiple countries.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To determine the mountain range that extends through multiple countries and hosts a mountain southeast of Jacabamba, we begin by identifying Jacabamba's location. Then, we search for mountains southeast of this point. Next, we ascertain which mountain ranges include these mountains. Finally, we check which of these mountain ranges extend through multiple countries, providing our answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the coordinates or location of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of mountains located southeast of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the mountain ranges for the mountains identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Filter the mountain ranges identified in step 3 to find those that extend through multiple countries.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts with identifying Jacabamba's location, which is crucial for determining the valid Southeast direction. Then, it retrieves a list of mountains situated southeast of Jacabamba. The focus shifts to determining the mountain ranges to which these identified mountains belong. Finally, the task consolidates by filtering out mountain ranges that cross multiple countries, which aligns with the original question's requirement."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the characteristics and location of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find mountains located southeast of Jacabamba.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the mountain range for each mountain identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify which of these mountain ranges extend through multiple countries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the mountain range that has a mountain southeast of Jacabamba and extends through multiple countries.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by determining the location of Jacabamba (Node 1) to find mountains southeast of it (Node 2). It then identifies the mountain range of each of these mountains (Node 3) and checks which of these ranges extend through multiple countries (Node 4). Finally, it deduces the correct mountain range that satisfies both conditions by integrating information from Nodes 3 and 4 (Node 5)."
+    }
+]

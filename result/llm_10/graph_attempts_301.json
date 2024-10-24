@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the drug lord known as 'The King of Cocaine'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Jack Carlton Reed's criminal activities and partnerships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the time period (20th century) during which Jack Carlton Reed was active with his drug activities.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find any known associations or partnerships between 'The King of Cocaine' and Jack Carlton Reed, focusing on the 20th century.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Answer: Identify the drug lord with the reputation as 'The King of Cocaine' who partnered with Jack Carlton Reed to provide drugs to the United States in the 20th century.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the question into steps involving retrieval and reasoning tasks. The first step identifies the drug lord known as 'The King of Cocaine', likely Pablo Escobar. In parallel, the second and third steps gather information about Jack Carlton Reed's activities and timeline, focusing on his partnerships during the 20th century. The fourth node synthesizes this information to establish if there was a partnership between Escobar and Reed. Finally, the last node consolidates this understanding to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the cartel drug lord known as 'The King of Cocaine'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Jack Carlton Reed's partnerships with drug lords to provide drugs to the United States in the 20th century.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify that the identified drug lord from Node 1 partnered with Jack Carlton Reed.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer the question, the execution graph first retrieves information on who 'The King of Cocaine' is, identifying the drug lord's identity. Simultaneously, it gathers data on Jack Carlton Reed's known drug partnerships to find potential connections. Finally, the graph synthesizes this information to confirm that the drug lord identified as 'The King of Cocaine' was indeed partnering with Reed, thus providing the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the drug lord known as 'The King of Cocaine'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify who partnered with Jack Carlton Reed to provide drugs to the United States in the 20th century.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the common individual from information about the 'The King of Cocaine' and the partner of Jack Carlton Reed to answer the question.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is divided into multiple steps: \n1. First, retrieve information to identify the drug lord known as 'The King of Cocaine', commonly known as Pablo Escobar.\n2. Concurrently, another retrieval step is required to determine who partnered with Jack Carlton Reed in drug trafficking activities.\n3. Finally, use reasoning to find the common individual from the results of the earlier retrieval steps, which will provide the answer to the original question, expected to be Pablo Escobar."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the cartel drug lord known as 'The King of Cocaine.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify Jack Carlton Reed and his known partners in drug trafficking in the 20th century.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if 'The King of Cocaine' and Jack Carlton Reed were partners in drug trafficking to the United States.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by separately retrieving information about the infamous drug lord known as 'The King of Cocaine' and Jack Carlton Reed's partnerships. The first node identifies that 'The King of Cocaine' is Pablo Escobar, based on his notorious reputation. The second node retrieves details about Jack Carlton Reed's known associations in drug trafficking during the specified period. Finally, a reasoning node checks for any partnership between Pablo Escobar and Jack Carlton Reed regarding drug trafficking activities in the 20th century, specifically focusing on operations involving the United States. This step synthesizes the information to confirm the connection sought by the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the drug lord known as 'The King of Cocaine'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine any partnerships 'The King of Cocaine' had with other individuals, specifically named Jack Carlton Reed, for drug distribution in the United States.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if 'The King of Cocaine' had a partnership with Jack Carlton Reed for providing drugs to the United States.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The first step is to identify the drug lord known as 'The King of Cocaine', which is a well-known nickname for a specific drug lord. Once identified, the next step is to check historical records or sources to determine if this individual partnered with Jack Carlton Reed specifically for drug distribution activities in the United States. Finally, reasoning is required to confirm any link or partnership between the two individuals for the specified purpose."
+    }
+]

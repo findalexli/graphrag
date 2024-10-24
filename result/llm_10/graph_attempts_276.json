@@ -1,0 +1,125 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Stoke City football player who endorses the Nike Mercurial Vapor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the national team for the Stoke City football player identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two main steps. The first step is to retrieve the name of the Stoke City football player who endorses the Nike Mercurial Vapor. This endorsement information would typically be found in sports sponsorship and endorsement reports or announcements. Once that player's name is known, the second step is to look up which national team he represents, which can be found on sports databases or official national team listings. Both steps involve retrieval and reasoning to connect the endorsement and national team information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Stoke City football players endorse the Nike Mercurial Vapor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each player identified in step 1, determine their national team affiliations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is to find the national team of a Stoke City player who endorses the Nike Mercurial Vapor. The graph consists of two nodes: the first node retrieves and reasons about Stoke City players who endorse Nike Mercurial Vapor boots, and the second node retrieves and reasons about the national teams of those players."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Stoke City football players endorse the Nike Mercurial Vapor boots.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For the identified player(s), determine their national teams.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the process into two main steps: first, identifying the Stoke City player associated with the Nike Mercurial Vapor; and second, retrieving the national team associated with that player. This sequence allows us to accurately find the relevant information by first determining the player's identity and then using that context to ascertain their national team affiliation."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the Stoke City football player who endorses the Nike Mercurial Vapor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the national team that the player from Node 1 represents.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph breaks down the original question into two primary steps. The first step is to identify the Stoke City football player who endorses the Nike Mercurial Vapor. Once we know who this player is, the second step is to retrieve information about which national team he plays for."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Nike Mercurial Vapor endorsers who play for Stoke City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the national teams of current Stoke City football players endorsing Nike Mercurial Vapor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Consolidate information to find which national team the Nike Mercurial Vapor endorser from Stoke City plays for.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "First, we must identify any football players who endorse the Nike Mercurial Vapor while playing for Stoke City. Once these players are identified, we then need to determine their respective national teams. The final step is to compile this information and pinpoint which national team is represented by the player in question."
+    }
+]

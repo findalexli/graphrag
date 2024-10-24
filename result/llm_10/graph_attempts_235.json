@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the genus classification of Weberocereus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the genus classification of Conospermum.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the retrieved genus classification of Weberocereus with that of Conospermum to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine if two plants, Weberocereus and Conospermum, belong to the same genus. To do this, the execution graph first retrieves the genus classification for each plant separately (Node 1 and Node 2). Once this information is gathered, the reasoning node (Node 3) compares the genus classifications to determine if they are the same. The graph allows for parallel retrieval of classification information for each plant."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "node1",
+                    "instruction": "Retrieve taxonomic classification for Weberocereus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node2",
+                    "instruction": "Retrieve taxonomic classification for Conospermum.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node3",
+                    "instruction": "Determine the genus of Weberocereus based on its taxonomic classification.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node1"
+                    ]
+                },
+                {
+                    "id": "node4",
+                    "instruction": "Determine the genus of Conospermum based on its taxonomic classification.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node2"
+                    ]
+                },
+                {
+                    "id": "node5",
+                    "instruction": "Compare the genus of Weberocereus and Conospermum to see if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node3",
+                        "node4"
+                    ]
+                }
+            ],
+            "root_node_id": "node1",
+            "final_node_id": "node5"
+        },
+        "explanation": "The question requires understanding the taxonomic classification of both Weberocereus and Conospermum to determine whether they belong to the same genus. The process begins by independently retrieving the classification for each plant (nodes 1 and 2). Following retrieval, reasoning is applied to extract the genus for each plant (nodes 3 and 4). Finally, the genuses are compared to see if they match, providing the answer to the question (node 5)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the taxonomic classification for Weberocereus, focusing on its genus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the taxonomic classification for Conospermum, focusing on its genus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the genus of Weberocereus and Conospermum to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into the retrieval of taxonomic classifications for both Weberocereus and Conospermum. By focusing on extracting the genus of each, we can then proceed to a reasoning step where these genera are compared to establish if they are the same. This approach optimally answers the question by first gathering necessary background data before performing the analysis."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the genus of Weberocereus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the genus of Conospermum.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the results from nodes 1 and 2 to determine if Weberocereus and Conospermum are part of the same genus.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine if Weberocereus and Conospermum belong to the same genus. The execution graph is structured to first retrieve the genus classification for each of the entities (Weberocereus and Conospermum). Since genus classification is a basic categorization in biological taxonomy, each is retrieved independently and does not depend on the other. Once both genuses are retrieved, a reasoning node compares these results to determine if they are the same. The final node synthesizes this information to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve genus classification for Weberocereus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve genus classification for Conospermum.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the genus classifications of Weberocereus and Conospermum to determine if they belong to the same genus.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This execution graph breaks the question into two retrieval nodes that independently gather genus classification data for Weberocereus and Conospermum. The results are then compared in a reasoning node to determine if both belong to the same genus, producing the final answer to the question."
+    }
+]

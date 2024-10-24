@@ -1,0 +1,173 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the movie 'Domestic Disturbance'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which actors from 'Domestic Disturbance' have voice roles in 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "For the identified actor(s) from 'Domestic Disturbance', find the character they voiced in 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine which character was voiced by an actor from the movie 'Domestic Disturbance' in the movie 'Monsters, Inc.'. The graph begins by identifying the actors in 'Domestic Disturbance'. Next, it checks which of these actors have voice roles in 'Monsters, Inc.'. Finally, it retrieves the specific character they voiced, providing the answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the cast list for the movie 'Domestic Disturbance'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the actors in 'Domestic Disturbance'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the characters voiced by the identified actors in 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find out which of the actors from 'Domestic Disturbance' voiced a character in 'Monsters, Inc.' and determine the character they voiced.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task by first retrieving the cast list of 'Domestic Disturbance', then identifying the actors involved. In parallel or subsequently, the next step is to determine which characters these actors might have voiced in 'Monsters, Inc.'. The final reasoning node determines the specific connection between the movies, identifying which actor played in both and which character they voiced."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the list of actors who starred in the movie 'Domestic Disturbance'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which of these actors also voiced a character in 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find which character was voiced by the actor identified from 'Domestic Disturbance' in 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The process begins by identifying all actors from 'Domestic Disturbance'. Next, we determine which actor from this list also voiced a character in 'Monsters, Inc.'. Finally, we identify the specific character they voiced in 'Monsters, Inc.' to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the movie 'Domestic Disturbance'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Check which of these actors voiced a character in 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the character voiced by the actor from 'Monsters, Inc.'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying an actor from 'Domestic Disturbance' who has also voiced a character in 'Monsters, Inc.'. First, we retrieve the list of actors in 'Domestic Disturbance'. Next, we cross-reference these actors with the voice cast of 'Monsters, Inc.' to find the common individual. Finally, we ascertain which character this actor voiced in 'Monsters, Inc.'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the movie 'Domestic Disturbance'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified actor in 'Domestic Disturbance', determine which one voiced a character in 'Monsters, Inc.'",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the characters from 'Monsters, Inc.' that were voiced by each actor from 'Domestic Disturbance' who was also involved in 'Monsters, Inc.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Synthesize information to determine which character from 'Monsters, Inc.' was voiced by an actor from 'Domestic Disturbance'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph outlines a retrieval and reasoning process beginning with finding the cast of 'Domestic Disturbance'. Then, based on that information, it checks if any cast member participated in 'Monsters, Inc.'. To identify the specific character, it retrieves details about roles in 'Monsters, Inc.'. Finally, it concludes by linking the identified actor to their character role."
+    }
+]

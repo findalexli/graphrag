@@ -1,0 +1,209 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify films released in 2016.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which 2016 films feature Townsend Coleman as a voice actor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the film(s) from 2016 that feature Townsend Coleman as a voice actor.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find the director of the identified film from 2016 that features Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Find the writer of the identified film from 2016 that features Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Combine information to determine who directed and wrote the 2016 film featuring the voice of Townsend Coleman.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The graph first identifies all films released in 2016. It then narrows down to those featuring Townsend Coleman as a voice actor. From there, it retrieves information on the director and writer of the specific film, which is combined to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify films from 2016 that feature the voice of Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the director of the film identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the writer of the film identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the director and writer information of the film to answer the question.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by identifying films from 2016 featuring Townsend Coleman's voice, then retrieves the director and writer for the specific film. Finally, it combines the information to provide a comprehensive answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 2016 film featuring the voice of Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the director of the identified film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the writer of the identified film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the information about the director and writer of the film.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To determine the director and writer of a 2016 film featuring Townsend Coleman's voice, the process begins by identifying the specific film (Node 1). Following identification, two parallel steps involve retrieving the director (Node 2) and the writer (Node 3) of that film. Finally, the information from both retrievals is combined to provide the answer (Node 4)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve all films from 2016 that feature the voice of Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the film(s) from the retrieved list where Townsend Coleman provided voice work.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the director of the identified film(s).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the writer of the identified film(s).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the information to provide the director and writer of the 2016 film featuring Townsend Coleman's voice.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by retrieving all films from 2016 featuring Townsend Coleman's voice. Once identified, it retrieves the director and writer of the film separately, followed by synthesizing the information to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the film released in 2016 featuring the voice of Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the film identified in Node 1, focusing on who directed and wrote it.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins by identifying the specific film from 2016 that features the voice of Townsend Coleman. Once the film is identified, the next step is to retrieve details about its director and writer. The process ensures all necessary information is collected to respond to the original question."
+    }
+]

@@ -1,0 +1,148 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the musician known as 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the screen debut film of Billie Holiday.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the question into two main steps. First, identify who 'Lady Day' is, which is Billie Holiday. Then, retrieve information on her screen debut film."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the musician who is nicknamed 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the screen debut film of the musician identified as 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task involves two main steps. First, we need to identify the musician known as 'Lady Day', which requires retrieval of information related to nicknames of musicians. Once identified, we proceed to find the screen debut film of that musician. The answer is obtained through a second retrieval that depends on the result of the first step."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the real name of the musician nicknamed 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the screen debut film of Billie Holiday.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The question requires identifying the musician known as 'Lady Day', which is Billie Holiday. Once this connection is made, the next step is to retrieve information about Billie Holiday's screen debut. Each step logically follows from the previous one, ensuring sequential reasoning and retrieval."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who is nicknamed 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of musicians called 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which musician's screen debut is being asked about. Cross-reference 'Lady Day' with musicians who have film credits.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Research the film credits of Billie Holiday, identified as 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify the first film credit for Billie Holiday.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task begins by identifying who the nickname 'Lady Day' refers to, which historical records and common knowledge attributes to Billie Holiday, a renowned jazz singer. Simultaneously, we retrieve a list of musicians who might share this nickname as an additional validation step. The results are used to focus the search on Billie Holiday's filmography. Finally, by examining Billie Holiday's film credits, we determine which film was her screen debut."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the musician whose nickname is 'Lady Day'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Billie Holiday's film roles.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which film was Billie Holiday's screen debut from the retrieved film roles.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question by first identifying 'Lady Day' as Billie Holiday. It then retrieves information about her film roles, allowing the final reasoning step to determine her screen debut film."
+    }
+]

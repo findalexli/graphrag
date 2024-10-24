@@ -1,0 +1,336 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the biographies of the identified actors from Marcus Welby, M.D., focusing on their spouses.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Extract the name of the actor's spouse from their biographies.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Find the name of the actor's spouse who married an actor from Marcus Welby, M.D.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph starts by identifying the main actors from the show 'Marcus Welby, M.D.'. Then, it retrieves the biographies of these actors to find information about their spouses. The reasoning step extracts the names of the spouses from these biographies. Finally, the graph concludes by selecting the name of the spouse married to an actor from 'Marcus Welby, M.D.'."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Marcus Welby, M.D.\nMarcus Welby, M.D. was an American medical drama television program that aired Tuesdays at 10:00\u201311:00 p.m. (EST) on ABC from September 23, 1969 to July 29, 1976. It starred Robert Young as the title character, a family practitioner with a kind bedside manner, who was on a first name basis with many of his patients (and who also made house-calls), James Brolin, as Steve Kiley, M.D, a younger doctor who played Welby's partner, and Elena Verdugo, who played Welby and Kiley's dedicated and loving nurse and office manager, Consuelo Lopez. \"Marcus Welby, M.D.\", was produced by David Victor and David J. O'Connell. The pilot, \"A Matter of Humanities\", had aired as an \"ABC Movie of the Week\" on March 26, 1969.",
+                "Donald Mantooth\nDonald \"Don\" Mantooth (born June 20, 1952) is an American actor best known for his roles in movies such as \"Earthquake\", \"Uncommon Valor\", \"The California Kid\", and \"The Seekers\", and TV series such as \"Marcus Welby, M.D.\", \"Emergency!\", \"Columbo\", and \"Knight Rider\". He is the younger brother of Randolph Mantooth.",
+                "Robert Young (actor)\nRobert George Young (February 22, 1907 \u2013 July 21, 1998) was an American television, film, and radio actor, best known for his leading roles as Jim Anderson, the father character in \"Father Knows Best\" (CBS, then NBC, then CBS again), and the physician Marcus Welby in \"Marcus Welby, M.D.\" (ABC).",
+                "John Nolan (American actor)\nJohn F. Nolan (April 30, 1933, in New York City, New York - April 7, 2000 in Hollywood, California) was an American actor. He was married to Nancy Nolan from around 1981 till his death. He had a recurring role as the bartender in the TV show \"Quincy, M.E.\" for all its episodes. He also lent his talents to at least 23 other television shows and films including \"Adam-12\", \"Marcus Welby, M.D.\" and the 1970 film \"Airport\".",
+                "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+                "The Other Martin Loring\n\"The Other Martin Loring\" is a 1973 episode of \"Marcus Welby, M.D.\", an American medical drama that aired on ABC. It tells the story of a middle-aged man facing several health issues, which seem to stem from his repression of his homosexuality. The episode aired on February 20, 1973, and was met with concern and protests from LGBT rights activists for its equating of homosexuality and illness.",
+                "Qnet\nQNet Ltd, formerly known as QuestNet, GoldQuest, and QI Limited, is a Hong Kong-based multi-level marketing (MLM) company owned by the QI Group. The company sells a variety of products including energy, weight management, nutrition, personal care, home care, and fashion accessories etc. on an e-commerce platform. QNet was founded in Hong Kong by Vijay Eswaran in 1998 along with QN Europe and other companies. Since it was first introduced in 1998, Qnet (doing business at the time as Questnet) promoted gold and silver coins with an MLM system. But the coin collection business was touted as a money game and declared illegal in some countries. A few years later Questnet came up with a new name, Qnet and offered various other products via the MLM system. It promotes its products on its website using claims \"that would not pass official muster in much of the world.\" Despite claiming to be an e-commerce based business, an ordinary retail customer can make a purchase of a product from the website only if they have a referrer ID of an independent representative of QNet. Unlike other e-commerce websites; purchases without this ID are not allowed. Qnet used websites/servers viz., www.qnetindia.in, www.qnetindia.net, www.qnet.net, www.questnet.net, to conduct its business which were blocked by Indian Computer emergency response team (CERT) following a court order. Other websites like portal.qnetindia.net, are being investigated by the government and further action on the websites have been promised after details are gathered.",
+                "Buildabazaar\nBuildabazaar.com is an e-commerce Saas platform built by Infibeam with operations in India and Middle East. The technology infrastructure of infibeam.com was extended as an e-commerce platform and launched as buildabazaar in 2011. It is a self-service platform where users can create an e-commerce store, upload their product catalog, customize their site and sell their products. Buildabazaar is offered as a SaaS platform for creating online retailing websites and travel booking sites.",
+                "Grooby Productions\nGrooby Productions is a company founded in 1996 and based in Los Angeles, California, that produces transgender online adult entertainment. It established itself as one of the pioneer companies of online adult transgender entertainment with its website Shemale Yum, \"the first transsexual pay site with original content\". The company owns a number of transsexual adult websites, produces its own DVD line, and has other interests in forums, blogs and social networking in the transsexual niche genre including the Transgender Erotica Awards.",
+                "James Brolin\nJames Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas. He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.",
+                "Randolph Mantooth\nRandolph Mantooth (born Randy DeRoy Mantooth, September 19, 1945), is an American actor who has worked in television, documentaries, theater, and film for more than 40 years. A graduate of the American Academy of Dramatic Arts, he was discovered in New York by a Universal Studios talent agent while performing the lead in the play \"Philadelphia, Here I Come\". After signing with Universal and moving to California, he slowly built up his resume with work on such dramatic series as \"Adam-12\" (1968), \"Marcus Welby, M.D.\" (1969), \"McCloud\" (1970) and \"Alias Smith and Jones\" (1971).",
+                "Young adult fiction\nYoung adult fiction or young adult literature (YA) is fiction published for readers in their youth. The age range for young adult fiction is subjective. Some sources claim it ranges from ages 12\u201318, while authors and readers of \"young teen novels\" often define it as written for those aged 15 to the early 20s. The terms young adult novel, juvenile novel, teenage fiction, young adult book, etc., refer to the works in this category.",
+                "Ley Sinde\nLey Sinde, or the Sinde Law, is a provision in Spain's Sustainable Economy Act designed to address internet copyright infringements. The bill passed the final legislative hurdle and was made law Friday December 30, 2011. The law created a new intellectual property commission designed to review requests from copyright holders about websites that they claim infringe upon their copyright. The commission has the authority to determine whether to take action against the website or content intermediaries such as the internet service provider (ISP) or hosting provider. The commission's ruling is evaluated by a judge, with the goal of completing the entire review process within 10 days. The law has a provision that also requires content intermediaries to respond more quickly than under previous law: websites determined to be in violation of copyright law must be taken down within 48 hours. Finally, the law has a significant impact on individual privacy rights: it allows impacted parties to seek the identity of those they believe to have infringed on their copyright. This clause reversed precedent set by a 2008 European Court of Justice\u2019s ruling in Promusicae v. Telef\u00f3nica barring IP holders from demanding the identity of copyright infringers from ISPs. There was strong international pressure, predominantly from the United States, for the creation of this legislation while it was strongly opposed by bloggers, journalists and tech professionals in Spain. Deputy Prime Minister Soraya S\u00e1enz de Santamar\u00eda said that the aim of the law was \"to safeguard intellectual property, boost our culture industries and protect the rights of owners, creators and others in the face of the lucrative plundering of illegal downloading sites.\"",
+                "Quanta Magazine\nQuanta Magazine is an editorially independent online publication of the Simons Foundation covering developments in mathematics, theoretical physics, theoretical computer science and the basic life sciences. The articles in the magazine are freely available to read online. Several publications like \"Scientific American\", \"Wired\", and \"The Atlantic\", as well as international science publications like \"Spektrum der Wissenschaft\", have reprinted articles from \"Quanta Magazine\". \"Undark Magazine\" described \"Quanta Magazine\" as \"highly regarded for its masterful coverage of complex topics in science and math.\" The science news aggregator \"RealClearScience\" ranked \"Quanta Magazine\" No. 2 on its list of \"The Top 10 Websites for Science in 2016.\" Initially launched as \"Simons Science News\" in October 2012, it was renamed to its current title in July 2013. The founding editor-in-chief is Thomas Lin. \"Quanta's\" editorial team includes John Rennie (editor), Michael Moyer, Natalie Wolchover, Kevin Hartnett, Olena Shmahalo, Lucy Reading-Ikkanda and Jeanette Kazmierczak. On 2 May 2017 \"Quanta\" introduced a complete redesign and rebranding of its website.",
+                "Martin Starger\nMartin Starger (born May 8, 1932) is an American entertainment entrepreneur. )He led ABC Entertainment (a wing of the American Broadcasting Company) during its boom period in the 1970s, pioneering the creation of television shows such as \"ABC Movie of the Week\", \"Marcus Welby, M.D.\" and \"Happy Days\". He also pushed the limits of television broadcast presiding over pioneering miniseries and specials such as \"Roots\" and \"Rich Man, Poor Man\". He made his way into films as the executive producer of Robert Altman's 1975 film \"Nashville\" before becoming tied to the film production department of Lew Grade's ITC Entertainment starting with Stanley Donen's 1978 film \"Movie Movie\". Working with Grade, Starger became the president of Associated Film Distribution, the distributor of ITC's films which tied him to the production of films both successful (\"Autumn Sonata\", \"The Muppet Movie\", \"On Golden Pond\", \"Sophie's Choice\") as well as the bombs that destroyed the company (\"Raise the Titanic!\", \"Saturn 3\"). After the fall of AFD, Starger continued to produce films such as Peter Bogdanovich's 1985 film \"Mask\"."
+            ],
+            "thoughts": [
+                "The main actors in the TV show Marcus Welby, M.D. are Robert Young as Marcus Welby, M.D., James Brolin as Steve Kiley, M.D., and Elena Verdugo as Consuelo Lopez.",
+                "Robert Young, who played the title character in Marcus Welby, M.D., was married to Elizabeth Henderson from 1933 until her death in 1994. He then married his second wife, Betty Lou Gleason, in 1995.\n\nJames Brolin, who played Steve Kiley, M.D. in the show, is married to singer/actress Barbra Streisand.",
+                "The actor's spouse mentioned in the biography is Betty Lou Gleason.",
+                "The actor's spouse who married an actor from Marcus Welby, M.D. is Betty Lou Gleason."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the main actors who starred in the TV show Marcus Welby, M.D.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve personal life details of the actors identified in Node 1, focusing on their marital status and spouse information.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify which of the spouses of the actors from Node 2 is famous or noteworthy, if any. This may include cross-referencing their involvement in the entertainment industry or public life.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task is to find someone who married a man starring in a specific TV show, 'Marcus Welby, M.D.'. The graph starts by retrieving actors from the TV show (Node 1). The next step is to gather information about the personal lives of these actors, specifically their marriage details (Node 2). Finally, the graph determines which actor is married to someone significant enough to be the person referred to in the question (Node 3). The execution is designed to focus on narrowing down the possibilities by initially identifying all potential candidates and then filtering according to marital information."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Marcus Welby, M.D.\nMarcus Welby, M.D. was an American medical drama television program that aired Tuesdays at 10:00\u201311:00 p.m. (EST) on ABC from September 23, 1969 to July 29, 1976. It starred Robert Young as the title character, a family practitioner with a kind bedside manner, who was on a first name basis with many of his patients (and who also made house-calls), James Brolin, as Steve Kiley, M.D, a younger doctor who played Welby's partner, and Elena Verdugo, who played Welby and Kiley's dedicated and loving nurse and office manager, Consuelo Lopez. \"Marcus Welby, M.D.\", was produced by David Victor and David J. O'Connell. The pilot, \"A Matter of Humanities\", had aired as an \"ABC Movie of the Week\" on March 26, 1969.",
+                "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+                "John Nolan (American actor)\nJohn F. Nolan (April 30, 1933, in New York City, New York - April 7, 2000 in Hollywood, California) was an American actor. He was married to Nancy Nolan from around 1981 till his death. He had a recurring role as the bartender in the TV show \"Quincy, M.E.\" for all its episodes. He also lent his talents to at least 23 other television shows and films including \"Adam-12\", \"Marcus Welby, M.D.\" and the 1970 film \"Airport\".",
+                "Donald Mantooth\nDonald \"Don\" Mantooth (born June 20, 1952) is an American actor best known for his roles in movies such as \"Earthquake\", \"Uncommon Valor\", \"The California Kid\", and \"The Seekers\", and TV series such as \"Marcus Welby, M.D.\", \"Emergency!\", \"Columbo\", and \"Knight Rider\". He is the younger brother of Randolph Mantooth.",
+                "Robert Young (actor)\nRobert George Young (February 22, 1907 \u2013 July 21, 1998) was an American television, film, and radio actor, best known for his leading roles as Jim Anderson, the father character in \"Father Knows Best\" (CBS, then NBC, then CBS again), and the physician Marcus Welby in \"Marcus Welby, M.D.\" (ABC).",
+                "James Brolin\nJames Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas. He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.",
+                "The Other Martin Loring\n\"The Other Martin Loring\" is a 1973 episode of \"Marcus Welby, M.D.\", an American medical drama that aired on ABC. It tells the story of a middle-aged man facing several health issues, which seem to stem from his repression of his homosexuality. The episode aired on February 20, 1973, and was met with concern and protests from LGBT rights activists for its equating of homosexuality and illness.",
+                "Randolph Mantooth\nRandolph Mantooth (born Randy DeRoy Mantooth, September 19, 1945), is an American actor who has worked in television, documentaries, theater, and film for more than 40 years. A graduate of the American Academy of Dramatic Arts, he was discovered in New York by a Universal Studios talent agent while performing the lead in the play \"Philadelphia, Here I Come\". After signing with Universal and moving to California, he slowly built up his resume with work on such dramatic series as \"Adam-12\" (1968), \"Marcus Welby, M.D.\" (1969), \"McCloud\" (1970) and \"Alias Smith and Jones\" (1971).",
+                "Crazy for You (TV series)\nCrazy for You is a primetime soap opera shown on ABS-CBN. It is the first television series about overseas Filipino workers (OFWs), followed by 2012 soap \"Kung Ako'y Iiwan Mo\" on the same network. It premiered simultaneously on ABS-CBN (Philippines) and The Filipino Channel on September 11, 2006, the first world launch in Philippine TV history. The show ended on December 29, 2006, three days before New Year's Day 2007.",
+                "Aimee Carrero\nAimee Carrero (born July 15, 1988) is an American actress. She is known for her role as Angie on the Cartoon Network live-action series \"Level Up\". Since 2014, she has starred as Sofia Rodriguez on the Freeform sitcom \"Young & Hungry\", and provides the voice of Princess Elena on the Disney Channel animated series \"Elena of Avalor\".",
+                "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+                "Lawrence A. Gordon\nLawrence A. Gordon is the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland\u2019s Robert H. Smith School of Business. He is also an Affiliate Professor in the University of Maryland Institute for Advanced Computer Studies. Dr. Gordon earned his Ph.D. in Managerial Economics from Rensselaer Polytechnic Institute. An internationally known scholar in the areas of managerial accounting (often called management accounting) and cybersecurity economics, Dr. Gordon's research focuses on such issues as economic aspects of information security (including cybersecurity or computer security), corporate performance measures, cost management systems, and capital investments. He is the author of approximately 100 articles, published in such journals as The Accounting Review, ACM Transactions on Information and System Security, Communications of the ACM, Journal of Financial and Quantitative Analysis, Journal of Computer Security, MIS Quarterly, Accounting, Organizations and Society, and the Journal of Accounting and Public Policy. Dr. Gordon's current research emphasizes the importance of applying concepts from economics and managerial accounting to an information-based economy. Dr. Gordon is the co-creator (with Martin P. Loeb) of the Gordon-Loeb Model, which provides a mathematical economic model for deriving an organization's optimal investment level in cyber/information security. The Gordon-Loeb Model has been featured in The Wall Street Journal and The Financial Times. For a 3-minute video that provides a non-mathematical overview of the Model, go to: https://www.youtube.com/watch?v=cd8dT0FuqQ4. Dr. Gordon also is the author of several books, including Managerial Accounting: Concepts and Empirical Evidence, Managing Cybersecurity Resources: A Cost-Benefit Analysis and Improving Capital Budgeting: A Decision Support System Approach. In addition, he is the Editor-in-Chief of the Journal of Accounting and Public Policy and serves on the editorial boards of several other journals. Dr. Gordon's research has over 6,400 citations in Google Scholar.",
+                "Wild Palms\nWild Palms is a five-hour mini-series which was produced by Greengrass Productions and first aired in May 1993 on the ABC network in the United States. The sci-fi drama, announced as an \"event series\", deals with the dangers of politically motivated abuse of mass media technology, virtual realities in particular. It was based on a comic strip written by Bruce Wagner and illustrated by Julian Allen first published in 1990 in \"Details\" magazine. Wagner, who also wrote the screenplay, served as executive producer together with Oliver Stone. The series stars James Belushi, Dana Delany, Robert Loggia, Kim Cattrall, David Warner, and Angie Dickinson. The episodes were directed by Kathryn Bigelow, Keith Gordon, Peter Hewitt and Phil Joanou.",
+                "Anna Pavlova (film)\nAnna Pavlova, also known as A Woman for All Time, is a 1983 biographical drama film depicting the life of the Russian ballet dancer Anna Pavlova, written and directed by Emil Loteanu and starring Galina Belyayeva, James Fox and Sergey Shakurov. It depicts Pavlova's passion for art and her collaboration with the reformers of ballet including Michel Fokine, Vaslav Nijinsky and Sergei Diaghilev."
+            ],
+            "thoughts": [
+                "The main actors who starred in the TV show Marcus Welby, M.D. are Robert Young as Marcus Welby, James Brolin as Steve Kiley, M.D., and Elena Verdugo as Consuelo Lopez.",
+                "Robert Young, who played the title character in \"Marcus Welby, M.D.\", was married to Elizabeth Henderson from 1933 until her death in 1994. He then remarried to Betty Lou Gleason in 1995 until his own death in 1998.\n\nJames Brolin, who played Dr. Steve Kiley in \"Marcus Welby, M.D.\", is married to singer/actress Barbra Streisand.\n\nAimee Carrero, known for her roles in \"Young & Hungry\" and \"Elena of Avalor\", is married to actor Tim Rock.\n\nThere is no available information on the marital status or spouse of Lawrence A. Gordon, the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland.\n\nNo information is available on the marital status or spouse of the other individuals mentioned in Node 1.",
+                "Barbra Streisand, the spouse of James Brolin, is famous and noteworthy as a singer and actress. Elizabeth Henderson, the first wife of Robert Young, is not widely known in the entertainment industry. Aimee Carrero's husband, Tim Rock, does not appear to be as famous or noteworthy as his wife. There is no available information on the marital status or spouse of Lawrence A. Gordon, and no information is available on the marital status or spouse of the other individuals mentioned in Node 1."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify actors who starred in the TV show Marcus Welby, M.D.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "For each actor identified in Step 1, check their marital history to find if any are currently or were previously married.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Compile a list of spouses from the marital history found in Step 2, identifying those who are married to or were married to any actor from Marcus Welby, M.D.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Present the name(s) of the person who married a man who starred in Marcus Welby, M.D.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The task requires understanding who was married to the actors from the TV show 'Marcus Welby, M.D.'. The process begins by identifying the main cast of the show in Step 1. Step 2 involves retrieving and examining the marital history of these actors. Step 3 compiles the names of the spouses of these actors. Finally, Step 4 presents the answer to the given question by listing those who married a man from the cast."
+            },
+            "recall": 0.4444444444444444,
+            "retrieved_passages": [
+                "Donald Mantooth\nDonald \"Don\" Mantooth (born June 20, 1952) is an American actor best known for his roles in movies such as \"Earthquake\", \"Uncommon Valor\", \"The California Kid\", and \"The Seekers\", and TV series such as \"Marcus Welby, M.D.\", \"Emergency!\", \"Columbo\", and \"Knight Rider\". He is the younger brother of Randolph Mantooth.",
+                "Marcus Welby, M.D.\nMarcus Welby, M.D. was an American medical drama television program that aired Tuesdays at 10:00\u201311:00 p.m. (EST) on ABC from September 23, 1969 to July 29, 1976. It starred Robert Young as the title character, a family practitioner with a kind bedside manner, who was on a first name basis with many of his patients (and who also made house-calls), James Brolin, as Steve Kiley, M.D, a younger doctor who played Welby's partner, and Elena Verdugo, who played Welby and Kiley's dedicated and loving nurse and office manager, Consuelo Lopez. \"Marcus Welby, M.D.\", was produced by David Victor and David J. O'Connell. The pilot, \"A Matter of Humanities\", had aired as an \"ABC Movie of the Week\" on March 26, 1969.",
+                "Randolph Mantooth\nRandolph Mantooth (born Randy DeRoy Mantooth, September 19, 1945), is an American actor who has worked in television, documentaries, theater, and film for more than 40 years. A graduate of the American Academy of Dramatic Arts, he was discovered in New York by a Universal Studios talent agent while performing the lead in the play \"Philadelphia, Here I Come\". After signing with Universal and moving to California, he slowly built up his resume with work on such dramatic series as \"Adam-12\" (1968), \"Marcus Welby, M.D.\" (1969), \"McCloud\" (1970) and \"Alias Smith and Jones\" (1971).",
+                "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+                "Robert Young (actor)\nRobert George Young (February 22, 1907 \u2013 July 21, 1998) was an American television, film, and radio actor, best known for his leading roles as Jim Anderson, the father character in \"Father Knows Best\" (CBS, then NBC, then CBS again), and the physician Marcus Welby in \"Marcus Welby, M.D.\" (ABC).",
+                "John Nolan (American actor)\nJohn F. Nolan (April 30, 1933, in New York City, New York - April 7, 2000 in Hollywood, California) was an American actor. He was married to Nancy Nolan from around 1981 till his death. He had a recurring role as the bartender in the TV show \"Quincy, M.E.\" for all its episodes. He also lent his talents to at least 23 other television shows and films including \"Adam-12\", \"Marcus Welby, M.D.\" and the 1970 film \"Airport\".",
+                "Donald Sutherland\nDonald McNichol Sutherland, {'1': \", '2': \", '3': \", '4': \"} (born 17 July 1935) is a Canadian actor whose film career spans more than five decades.",
+                "John Gorton\nSir John Grey Gorton {'1': \", '2': \", '3': \", '4': \"} (9 September 1911 \u2013 19 May 2002) was the 19th Prime Minister of Australia and long serving minister in the governments of Sir Robert Menzies, Harold Holt, Sir John McEwen and Sir William McMahon.",
+                "The Other Martin Loring\n\"The Other Martin Loring\" is a 1973 episode of \"Marcus Welby, M.D.\", an American medical drama that aired on ABC. It tells the story of a middle-aged man facing several health issues, which seem to stem from his repression of his homosexuality. The episode aired on February 20, 1973, and was met with concern and protests from LGBT rights activists for its equating of homosexuality and illness.",
+                "BMW xDrive\nBMW xDrive is the marketing name for the all-wheel drive system found on the BMW X1, X3, X4, X5, and X6 crossover sport activity vehicles. It is also optional on the 1 Series (2012\u2013present), 2 series (2015-present), 3 Series (2000\u2013present), 4 Series (2014), 5 Series (2005\u2013present), 6 Series (2012\u2013present), and 7 Series (2010\u2013present).",
+                "Timothy Williamson\nTimothy Williamson, {'1': \", '2': \", '3': \", '4': \"} (born 6 August 1955) is a British philosopher whose main research interests are in philosophical logic, philosophy of language, epistemology and metaphysics.",
+                "Thomas J. Lawson\nGeneral Thomas James Lawson {'1': \", '2': \", '3': \", '4': \"} (born 2 November 1957) is a retired Royal Canadian Air Force general. Lawson was Chief of the Defence Staff of the Canadian Armed Forces from October 2012 to July 2015. He previously served as Deputy Commander of the North American Aerospace Defence Command.",
+                "James Daughton\nJames Daughton (born June 27, 1950) is a film and television actor who is best known for his role as Gregg Marmalard in \"National Lampoon's Animal House\" (1978). Daughton's portrayal of Gregg Marmalard has become iconic in American popular culture as a quintessential brown nosing, snobbish, phony, WASP. Raised in San Diego, Daughton had roles early in his career on \"Marcus Welby, MD\", \"Room 222\", \"Planet of the Apes (TV Series)\" (as Mikal in the episode \"The Tyrant\"),\"Happy Days\" (as the man who challenges Fonzie to water ski over the shark), and the 1972 western \"The Revengers\" (as William Holden's son). He also appeared in the 1982 film \"The Beach Girls\", in which he was noted primarily for stripping naked and running into the sea. His other film appearances include \"Malibu Beach\" (1978), \"Swim Team\" (1979), \"Blind Date\" (1984), \"Spies Like Us\" (1985), \"Girlfriend from Hell\" (1989) and \"Sorority Boys\" (2002)."
+            ],
+            "thoughts": [
+                "The actors who starred in the TV show Marcus Welby, M.D. include:\n1. Robert Young as Marcus Welby, M.D.\n2. James Brolin as Steve Kiley, M.D.\n3. Elena Verdugo as Consuelo Lopez\n4. Donald Mantooth\n5. John Nolan\n6. Randolph Mantooth",
+                "Donald Mantooth - There is no information available about his marital history.\n\nRandolph Mantooth - There is no information available about his marital history.\n\nMarcus Welby, M.D. - There is no information available about the marital history of the actors involved in the show.\n\nDonald Sutherland - Donald Sutherland has been married three times. He was first married to Lois Hardwick from 1959 to 1966, then to Shirley Douglas from 1966 to 1970, and is currently married to Francine Racette since 1972.\n\nJohn Gorton - There is no information available about his marital history.\n\nBMW xDrive - This is a product and not a person, so there is no marital history to check.\n\nTimothy Williamson - There is no information available about his marital history.\n\nThomas J. Lawson - There is no information available about his marital history.",
+                "The only actor from Marcus Welby, M.D. with available marital history is Donald Sutherland. He has been married three times, to Lois Hardwick, Shirley Douglas, and currently to Francine Racette.",
+                "The person who married a man who starred in Marcus Welby, M.D. is Donald Sutherland. He has been married to Lois Hardwick, Shirley Douglas, and currently to Francine Racette."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the spouses of each of the identified actors from Marcus Welby, M.D.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Check if any spouses are married to a man who starred in Marcus Welby, M.D.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task involves identifying actors from \"Marcus Welby, M.D.\" and then finding who they were married to. The graph starts by retrieving the main actors from the TV show. Then, it gathers information about the spouses of these actors. Finally, it analyzes this information to answer the question of who among these spouses was married to a man who starred in \"Marcus Welby, M.D.\"."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Marcus Welby, M.D.\nMarcus Welby, M.D. was an American medical drama television program that aired Tuesdays at 10:00\u201311:00 p.m. (EST) on ABC from September 23, 1969 to July 29, 1976. It starred Robert Young as the title character, a family practitioner with a kind bedside manner, who was on a first name basis with many of his patients (and who also made house-calls), James Brolin, as Steve Kiley, M.D, a younger doctor who played Welby's partner, and Elena Verdugo, who played Welby and Kiley's dedicated and loving nurse and office manager, Consuelo Lopez. \"Marcus Welby, M.D.\", was produced by David Victor and David J. O'Connell. The pilot, \"A Matter of Humanities\", had aired as an \"ABC Movie of the Week\" on March 26, 1969.",
+                "Robert Young (actor)\nRobert George Young (February 22, 1907 \u2013 July 21, 1998) was an American television, film, and radio actor, best known for his leading roles as Jim Anderson, the father character in \"Father Knows Best\" (CBS, then NBC, then CBS again), and the physician Marcus Welby in \"Marcus Welby, M.D.\" (ABC).",
+                "John Nolan (American actor)\nJohn F. Nolan (April 30, 1933, in New York City, New York - April 7, 2000 in Hollywood, California) was an American actor. He was married to Nancy Nolan from around 1981 till his death. He had a recurring role as the bartender in the TV show \"Quincy, M.E.\" for all its episodes. He also lent his talents to at least 23 other television shows and films including \"Adam-12\", \"Marcus Welby, M.D.\" and the 1970 film \"Airport\".",
+                "Donald Mantooth\nDonald \"Don\" Mantooth (born June 20, 1952) is an American actor best known for his roles in movies such as \"Earthquake\", \"Uncommon Valor\", \"The California Kid\", and \"The Seekers\", and TV series such as \"Marcus Welby, M.D.\", \"Emergency!\", \"Columbo\", and \"Knight Rider\". He is the younger brother of Randolph Mantooth.",
+                "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+                "The Other Martin Loring\n\"The Other Martin Loring\" is a 1973 episode of \"Marcus Welby, M.D.\", an American medical drama that aired on ABC. It tells the story of a middle-aged man facing several health issues, which seem to stem from his repression of his homosexuality. The episode aired on February 20, 1973, and was met with concern and protests from LGBT rights activists for its equating of homosexuality and illness.",
+                "Randolph Mantooth\nRandolph Mantooth (born Randy DeRoy Mantooth, September 19, 1945), is an American actor who has worked in television, documentaries, theater, and film for more than 40 years. A graduate of the American Academy of Dramatic Arts, he was discovered in New York by a Universal Studios talent agent while performing the lead in the play \"Philadelphia, Here I Come\". After signing with Universal and moving to California, he slowly built up his resume with work on such dramatic series as \"Adam-12\" (1968), \"Marcus Welby, M.D.\" (1969), \"McCloud\" (1970) and \"Alias Smith and Jones\" (1971).",
+                "James Brolin\nJames Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas. He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.",
+                "Martin Starger\nMartin Starger (born May 8, 1932) is an American entertainment entrepreneur. )He led ABC Entertainment (a wing of the American Broadcasting Company) during its boom period in the 1970s, pioneering the creation of television shows such as \"ABC Movie of the Week\", \"Marcus Welby, M.D.\" and \"Happy Days\". He also pushed the limits of television broadcast presiding over pioneering miniseries and specials such as \"Roots\" and \"Rich Man, Poor Man\". He made his way into films as the executive producer of Robert Altman's 1975 film \"Nashville\" before becoming tied to the film production department of Lew Grade's ITC Entertainment starting with Stanley Donen's 1978 film \"Movie Movie\". Working with Grade, Starger became the president of Associated Film Distribution, the distributor of ITC's films which tied him to the production of films both successful (\"Autumn Sonata\", \"The Muppet Movie\", \"On Golden Pond\", \"Sophie's Choice\") as well as the bombs that destroyed the company (\"Raise the Titanic!\", \"Saturn 3\"). After the fall of AFD, Starger continued to produce films such as Peter Bogdanovich's 1985 film \"Mask\"."
+            ],
+            "thoughts": [
+                "The main actors in the TV show Marcus Welby, M.D. are Robert Young as Marcus Welby, M.D., James Brolin as Steve Kiley, M.D., and Elena Verdugo as Consuelo Lopez.",
+                "Robert Young was married to Elizabeth Henderson from 1933 until his death in 1998.\n\nJohn Nolan was married to Nancy Nolan from around 1981 until his death in 2000.\n\nDonald Mantooth's spouse information is not provided.\n\nRandolph Mantooth's spouse information is not provided.\n\nJames Brolin is married to singer/actress Barbra Streisand.",
+                "Based on the information provided, it appears that none of the spouses are married to a man who starred in Marcus Welby, M.D."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve a list of people each actor from Marcus Welby, M.D. married.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine which of the people identified in the previous step is a man who was married to someone.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify who married the man found in the previous node.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The graph starts by identifying the actors who starred in the show Marcus Welby, M.D. Then, it retrieves information about the spouses of these actors. The next step is to determine which actor is a man and identifies who is their spouse. Finally, it finds who is married to this man, thus answering the question."
+            },
+            "recall": 0.4444444444444444,
+            "retrieved_passages": [
+                "Robert Young (actor)\nRobert George Young (February 22, 1907 \u2013 July 21, 1998) was an American television, film, and radio actor, best known for his leading roles as Jim Anderson, the father character in \"Father Knows Best\" (CBS, then NBC, then CBS again), and the physician Marcus Welby in \"Marcus Welby, M.D.\" (ABC).",
+                "Marcus Welby, M.D.\nMarcus Welby, M.D. was an American medical drama television program that aired Tuesdays at 10:00\u201311:00 p.m. (EST) on ABC from September 23, 1969 to July 29, 1976. It starred Robert Young as the title character, a family practitioner with a kind bedside manner, who was on a first name basis with many of his patients (and who also made house-calls), James Brolin, as Steve Kiley, M.D, a younger doctor who played Welby's partner, and Elena Verdugo, who played Welby and Kiley's dedicated and loving nurse and office manager, Consuelo Lopez. \"Marcus Welby, M.D.\", was produced by David Victor and David J. O'Connell. The pilot, \"A Matter of Humanities\", had aired as an \"ABC Movie of the Week\" on March 26, 1969.",
+                "John Nolan (American actor)\nJohn F. Nolan (April 30, 1933, in New York City, New York - April 7, 2000 in Hollywood, California) was an American actor. He was married to Nancy Nolan from around 1981 till his death. He had a recurring role as the bartender in the TV show \"Quincy, M.E.\" for all its episodes. He also lent his talents to at least 23 other television shows and films including \"Adam-12\", \"Marcus Welby, M.D.\" and the 1970 film \"Airport\".",
+                "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+                "Donald Mantooth\nDonald \"Don\" Mantooth (born June 20, 1952) is an American actor best known for his roles in movies such as \"Earthquake\", \"Uncommon Valor\", \"The California Kid\", and \"The Seekers\", and TV series such as \"Marcus Welby, M.D.\", \"Emergency!\", \"Columbo\", and \"Knight Rider\". He is the younger brother of Randolph Mantooth.",
+                "The Other Martin Loring\n\"The Other Martin Loring\" is a 1973 episode of \"Marcus Welby, M.D.\", an American medical drama that aired on ABC. It tells the story of a middle-aged man facing several health issues, which seem to stem from his repression of his homosexuality. The episode aired on February 20, 1973, and was met with concern and protests from LGBT rights activists for its equating of homosexuality and illness.",
+                "Randolph Mantooth\nRandolph Mantooth (born Randy DeRoy Mantooth, September 19, 1945), is an American actor who has worked in television, documentaries, theater, and film for more than 40 years. A graduate of the American Academy of Dramatic Arts, he was discovered in New York by a Universal Studios talent agent while performing the lead in the play \"Philadelphia, Here I Come\". After signing with Universal and moving to California, he slowly built up his resume with work on such dramatic series as \"Adam-12\" (1968), \"Marcus Welby, M.D.\" (1969), \"McCloud\" (1970) and \"Alias Smith and Jones\" (1971).",
+                "Martin Starger\nMartin Starger (born May 8, 1932) is an American entertainment entrepreneur. )He led ABC Entertainment (a wing of the American Broadcasting Company) during its boom period in the 1970s, pioneering the creation of television shows such as \"ABC Movie of the Week\", \"Marcus Welby, M.D.\" and \"Happy Days\". He also pushed the limits of television broadcast presiding over pioneering miniseries and specials such as \"Roots\" and \"Rich Man, Poor Man\". He made his way into films as the executive producer of Robert Altman's 1975 film \"Nashville\" before becoming tied to the film production department of Lew Grade's ITC Entertainment starting with Stanley Donen's 1978 film \"Movie Movie\". Working with Grade, Starger became the president of Associated Film Distribution, the distributor of ITC's films which tied him to the production of films both successful (\"Autumn Sonata\", \"The Muppet Movie\", \"On Golden Pond\", \"Sophie's Choice\") as well as the bombs that destroyed the company (\"Raise the Titanic!\", \"Saturn 3\"). After the fall of AFD, Starger continued to produce films such as Peter Bogdanovich's 1985 film \"Mask\"."
+            ],
+            "thoughts": [
+                "The main actors in the TV show Marcus Welby, M.D. are Robert Young as Marcus Welby, M.D., James Brolin as Steve Kiley, M.D., and Elena Verdugo as Consuelo Lopez.",
+                "Robert Young, who played Marcus Welby, M.D., was married to Elizabeth Henderson from 1933 until his death in 1998.",
+                "Based on the information from the upstream tasks, the man who was married is Robert Young, who played Marcus Welby, M.D. He was married to Elizabeth Henderson from 1933 until his death in 1998.",
+                "The man found in the previous node, Robert Young, was married to Elizabeth Henderson."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the biographies of the identified actors from Marcus Welby, M.D., focusing on their spouses.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the name of the actor's spouse from their biographies.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find the name of the actor's spouse who married an actor from Marcus Welby, M.D.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by identifying the main actors from the show 'Marcus Welby, M.D.'. Then, it retrieves the biographies of these actors to find information about their spouses. The reasoning step extracts the names of the spouses from these biographies. Finally, the graph concludes by selecting the name of the spouse married to an actor from 'Marcus Welby, M.D.'."
+    },
+    "best_recall": 0.8333333333333334
+}

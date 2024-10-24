@@ -1,0 +1,157 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British supersonic land vehicle whose goal is to match or exceed 1000 mph and achieve a new world land speed record.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who the Chief Aerodynamicist is for the vehicle identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the birthdate of the Chief Aerodynamicist identified in Step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the question into three main steps. First, it identifies the specific vehicle project aiming to achieve the speed record. This establishes the context. Next, it retrieves the name of the Chief Aerodynamicist for this project. Finally, it finds the birthdate of this individual, which directly answers the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British supersonic land vehicle whose goal is to match or exceed 1000 mph.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who is the Chief Aerodynamicist for the vehicle identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the birthdate of the Chief Aerodynamicist identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into steps that first identify the vehicle of interest based on its goal of exceeding 1000 mph. Then, we determine who the Chief Aerodynamicist is for that vehicle. Lastly, we retrieve the birthdate of the identified individual."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British supersonic land vehicle designed to match or exceed 1000 mph.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the Chief Aerodynamicist of the identified vehicle project.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the birth date of the identified Chief Aerodynamicist.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question is broken down into three main steps: identifying the vehicle project, determining the Chief Aerodynamicist of that project, and finding the birth date of the identified person. Each step builds upon information obtained from the previous one, creating a logical sequence leading to the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British supersonic land vehicle whose goal is to match or exceed 1000 mph.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who is the Chief Aerodynamicist for the identified supersonic land vehicle.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve biographical information to determine the birth date of the identified Chief Aerodynamicist.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the British supersonic land vehicle aiming for a speed of 1000 mph, which is crucial to narrowing down the specific context. Once the vehicle is identified, the next step is to find out who holds the position of Chief Aerodynamicist. Finally, the retrieval of personal biographical information about this individual provides the birth date, answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British supersonic land vehicle that aims to achieve a land speed record of 1000 mph or more.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the name of the Chief Aerodynamicist for the identified British supersonic land vehicle.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the birth year of the Chief Aerodynamicist identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the specific British land vehicle aiming to achieve a new world land speed record exceeding 1000 mph, which is most likely a high-profile project like the Bloodhound SSC. The second step involves retrieving the name of its Chief Aerodynamicist, as this person's birth date is the final target. The third and final step is to find the birth date of the identified person. This step-by-step approach ensures that correct and relevant information is linked logically to resolve the query."
+    }
+]

@@ -1,0 +1,239 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the event 'gunfight at the O.K. Corral' and its historical context.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the participants in the gunfight at the O.K. Corral and any related legal proceedings.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the date of the gunfight at the O.K. Corral.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify who John Henry Holliday is and confirm his involvement in the gunfight at the O.K. Corral.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Research Thomas Fitch and confirm his legal defense of John Henry Holliday after the gunfight at the O.K. Corral.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Synthesize information to confirm when Thomas Fitch defended John Henry Holliday in relation to the date of the gunfight at the O.K. Corral.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The question involves understanding a historical event and its participants, making it necessary to retrieve specific historical data about the gunfight at the O.K. Corral, the individuals involved, and the legal proceedings that followed. The graph breaks down the task into retrieving foundational knowledge about the event and its participants, confirming the details of Thomas Fitch's legal defense of John Henry Holliday, and determining the timeframe in which this defense took place relative to the event date. This structured approach allows us to answer when Thomas Fitch defended John Henry Holliday."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who John Henry Holliday was and find information regarding his involvement in the gunfight at the O.K. Corral including the names of other possible defendants in the trial.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the gunfight at the O.K. Corral, including the date it occurred.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify the defense involvement of Thomas Fitch or any other notable figures in the legal defense after the O.K. Corral gunfight, and confirm his specific defense role for John Henry Holliday.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Based on the information about John Henry Holliday and the gunfight at the O.K. Corral, determine when Thomas Fitch defended him.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question requires identifying the date when Thomas Fitch defended John Henry Holliday, which ties back to the timing of the gunfight at the O.K. Corral and subsequent legal proceedings. The graph first splits the task into understanding who was involved and when the event occurred, with steps to verify Thomas Fitch's involvement in the defense. Finally, it synthesizes this information to determine the timing of the defense."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the event known as the gunfight at the O.K. Corral.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find when the gunfight at the O.K. Corral took place.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify John Henry Holliday's involvement in the gunfight at the O.K. Corral.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find information about Thomas Fitch's role in defending John Henry Holliday.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize the information about the date of the gunfight and Thomas Fitch\u2019s defense of John Henry Holliday.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by pinpointing the historical event of the gunfight at the O.K. Corral. It then determines the date on which this event occurred, as this information is crucial to answering the question about when Thomas Fitch defended John Henry Holliday. Additionally, it verifies Thomas Fitch's role and John Henry Holliday's involvement in the historical context of the gunfight. Finally, it consolidates these findings to deduce the time frame during which Thomas Fitch defended Holliday."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the event: gunfight at the O.K. Corral",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve details about John Henry Holliday's involvement in the gunfight at the O.K. Corral",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about Thomas Fitch defending John Henry Holliday",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the date of the gunfight at the O.K. Corral",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify when Thomas Fitch defended John Henry Holliday",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Affirm if the defense by Thomas Fitch was directly related to accusations from the gunfight at the O.K. Corral",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                },
+                {
+                    "id": "7",
+                    "instruction": "Combine the date of the gunfight and confirmation of Thomas Fitch's defense related to it.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "6"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "7"
+        },
+        "explanation": "The graph breaks down the question by first identifying the key event, which is the gunfight at the O.K. Corral, and establishing the timeline and people involved. It retrieves relevant information about John Henry Holliday's involvement in the event and Thomas Fitch's defense role. By synthesizing information on when Thomas Fitch defended Holliday and confirming it was connected to the accusations from the gunfight, we establish the timeline necessary to answer when the event took place in historical context."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Thomas Fitch and John Henry Holliday's relationship, specifically in the context of legal defense.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the gunfight at the O.K. Corral, including the date it occurred.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the event where Thomas Fitch defended John Henry Holliday, and cross-reference it with the gunfight at the O.K. Corral to confirm that it pertains to the aftermath of the gunfight.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the information to determine the date of the gunfight at the O.K. Corral, as this is when the legal charges would have been relevant.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph starts by retrieving detailed information about the key individuals involved\u2014Thomas Fitch and John Henry Holliday\u2014and their legal relationship. It simultaneously retrieves data about the gunfight at the O.K. Corral, focusing on the date. The reasoning step confirms that the charges Thomas Fitch defended John Henry Holliday against are indeed linked to the aftermath of the O.K. Corral event. Once confirmed, the date of the gunfight provides the answer to the question."
+    }
+]

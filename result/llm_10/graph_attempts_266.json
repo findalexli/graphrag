@@ -1,0 +1,177 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Eric Plakun is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine Eric Plakun's association with psychiatry or psychiatric work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify public radio networks based in New York.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find any public radio network where Eric Plakun has discussed or criticized his psychiatric work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To answer the question, we need to first understand who Eric Plakun is and his connection to psychiatry (Node 1 and Node 2). Simultaneously, we gather information on public radio networks based in New York (Node 3). The final step (Node 4) is to find out which of these networks allowed Eric Plakun to publicly criticize his psychiatric work, bringing together the information about him and the networks."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify public radio networks based in New York.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Investigate if any New York public radio network has aired a segment or show featuring Eric Plakun discussing his psychiatric work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract specific details on how Eric Plakun discussed his psychiatric work in the context of a public radio segment or show.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying public radio networks in New York to lay the groundwork for finding the specific network. It then narrows down to find any network that featured Eric Plakun discussing his psychiatric work. Lastly, it extracts detailed information on how he discussed it on the radio, thus answering the initial question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify public radio networks operating in New York.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find instances where Eric Plakun has publicly criticized his own psychiatric work or related subject matter.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Match the instances of Eric Plakun critiquing his work with the public radio networks identified in New York to find any overlaps.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine which public radio network in New York allowed Eric Plakun to dis his psychiatric work, we first need to identify the public radio networks in New York. Simultaneously, we need to find instances of Eric Plakun publicly criticizing his psychiatric work. By reasoning through the collected data, we can then deduce if any New York public radio network hosted these instances."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Eric Plakun is and his professional background.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which public radio networks operate in New York.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Search for any public radio programs or broadcasts involving Eric Plakun discussing his psychiatric work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze to find out if any of these broadcasts were on a New York public radio network and which one allowed him to speak critically of his work.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question asks which New York public radio network allowed Eric Plakun to discuss his psychiatric work critically. The first step is to understand who Eric Plakun is to confirm his involvement in psychiatric work. Simultaneously, identify public radio networks in New York. This sets up the context for identification. Then, seek instances of his engagement with these radio networks, focusing on any critical discussion about his work. Finally, synthesize this information to identify the specific network involved."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Eric Plakun to understand who he is and what his work in psychiatry might involve.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research public radio networks in New York that might feature discussions about psychiatric work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find instances or recordings where Eric Plakun discusses or criticizes ('dis') his psychiatric work on any platform.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if any identified public radio networks in New York have hosted these discussions or criticisms by Eric Plakun.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by understanding who Eric Plakun is to know what his psychiatric work might involve. In parallel, it searches for public radio networks in New York. The next step retrieves occurrences where Plakun discusses or criticizes his work, followed by checking these occurrences against public radio networks to find a match."
+    }
+]

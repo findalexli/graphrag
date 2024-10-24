@@ -1,0 +1,256 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the silent film 'Through the Glass Window'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the subsidiary relationship between Viacom and Paramount Pictures.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the release year of the film 'Through the Glass Window' from the information retrieved.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify that Paramount Pictures, a subsidiary of Viacom, produced the film 'Through the Glass Window'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the verified production details with the release year to answer the original question.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is designed to first retrieve details about the silent film 'Through the Glass Window' and the relationship between Viacom and Paramount Pictures. This modular approach ensures we have separated the verification of Paramount as a Viacom subsidiary from identifying the release year of the film. We then perform reasoning to ensure that Paramount Pictures, as a Viacom subsidiary, did indeed produce the film before combining this information to provide the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the owner of Paramount Pictures to verify it's a subsidiary of Viacom.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the list of films produced by Paramount Pictures, specifically focusing on silent films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the film 'Through the Glass Window', including its release year.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify that Paramount Pictures produced 'Through the Glass Window'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Confirm Viacom's ownership of Paramount Pictures during the time 'Through the Glass Window' was produced.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Synthesize the information to determine the year 'Through the Glass Window' was made by Paramount Pictures, confirming it is a Viacom subsidiary production.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph breaks down the original question into several steps: first, it verifies the ownership of Paramount Pictures by Viacom (Node 1). Then, it tracks down the particulars of the film 'Through the Glass Window', what silent films were produced (Node 2), and its production details including year (Node 3). The graph then ensures Paramount Pictures produced the film (Node 4) and was a Viacom subsidiary during its production (Node 5). Finally, it synthesizes this information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find information about Viacom's subsidiaries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify that Paramount Pictures is a subsidiary of Viacom.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the list of films made by Paramount Pictures.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Look up the film 'Through the Glass Window' to determine its production studio.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Confirm 'Through the Glass Window' was made by Paramount Pictures.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Find the release year of the silent film 'Through the Glass Window'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                },
+                {
+                    "id": "7",
+                    "instruction": "Ensure 'Through the Glass Window' is a silent film and identify its release year.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5",
+                        "6"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "7"
+        },
+        "explanation": "The execution graph starts by retrieving information about Viacom's subsidiaries to confirm that Paramount Pictures is indeed part of Viacom. Then, it identifies and confirms that 'Through the Glass Window' was made by Paramount, which involves checking both Paramount's filmography and specific details about the film. Finally, the process determines if 'Through the Glass Window' is a silent film and retrieves its release year, providing the full context needed for the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the subsidiary company and the type of film mentioned in the question.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for historical records or databases that list films produced by Paramount Pictures.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Search for information about the film 'Through the Glass Window' to find specific details about its production.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find details about silent films produced by Paramount Pictures in historical archives.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the year 'Through the Glass Window' was released by correlating information from the search results.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the multi-hop retrieval and reasoning task by first identifying the key components of the question, namely Paramount Pictures and the silent film 'Through the Glass Window'. It then branches into separate retrieval steps to gather information from film production records and specific details about the film. Finally, it combines these threads to deduce the release year of the film, completing the reasoning process to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the silent film 'Through the Glass Window'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify the production company of 'Through the Glass Window'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the release year for 'Through the Glass Window'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 'Through the Glass Window' was produced by Paramount Pictures.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "If 'Through the Glass Window' was produced by Paramount Pictures, output its release year.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph is structured to first identify the silent film 'Through the Glass Window' to gather relevant details. Node 2 verifies the production company, ensuring it's relevant to Paramount Pictures, a subsidiary of Viacom. Node 3 retrieves the release year of the film. Node 4 confirms the film's production by Paramount Pictures, and Node 5 outputs the final answer regarding the release year contingent upon verification done in Node 4."
+    }
+]

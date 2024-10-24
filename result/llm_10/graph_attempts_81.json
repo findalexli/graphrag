@@ -1,0 +1,185 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about La Yesca Dam, including its inauguration details and date.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of Mexican Presidents along with their terms in office from 2000 to 2020.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which President was in office at the time of La Yesca Dam's inauguration by comparing the inauguration date with the terms of the Presidents.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the President from the timeframe 2006-2012 specifically.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Confirm that the President identified as being in office at the inauguration of La Yesca Dam is the same as the President from the 2006-2012 timeframe.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is designed to identify the Mexican politician who inaugurated La Yesca Dam and served as President from 2006 to 2012. The graph begins by retrieving information on the dam's inauguration and the list of Mexican Presidents. The reasoning nodes determine which President inaugurated the dam, matches them to the 2006-2012 timeframe, and ensures they are the same individual."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the inauguration of La Yesca Dam, including the date and the person who inaugurated it.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the President of Mexico from 2006 to 2012.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if the person who inaugurated La Yesca Dam was the President of Mexico during the period 2006-2012.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first gather specific information about the La Yesca Dam inauguration and identify key details of the Mexican presidency between 2006-2012. The first node retrieves details about the inauguration itself, including who performed the ceremony. The second node separately identifies the President of Mexico during the given years. The final node synthesizes information from both retrieval nodes to confirm if the person who inaugurated the La Yesca Dam was indeed the President during the specified timeframe."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the years during which the President of Mexico served from 2006 to 2012.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who was the President of Mexico from 2006-2012.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information on the inauguration of the La Yesca Dam, including the involved political figures.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if the President from 2006-2012 inaugurated the La Yesca Dam.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The process involves initially establishing which President served from 2006 to 2012 by determining the officeholder during that period. This is followed by retrieving specific data about the inauguration of La Yesca Dam and the political figures involved in the event. Finally, the reasoning step verifies if the President who served from 2006 to 2012 indeed inaugurated the dam, synthesizing the information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the president of Mexico during 2006-2012.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who inaugurated the La Yesca Dam.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if the president of Mexico during 2006-2012 was the one who inaugurated the La Yesca Dam.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into identifying the Mexican president during the specified term and finding who inaugurated the dam. The reasoning step checks if both pieces of information point to the same person."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine which Mexican politician served as President from 2006 to 2012.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the inauguration details for La Yesca Dam, including the politician involved.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if the politician who inaugurated La Yesca Dam is the same as the President identified in node 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Compile the final answer based on the information about the presidency term and inauguration details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is designed to first identify who served as the Mexican President from 2006-2012. Parallelly, we retrieve details on who inaugurated La Yesca Dam. The results of these retrievals are verified in a reasoning step to confirm if the same politician is involved in both aspects, finalizing the answer with this confirmation."
+    }
+]

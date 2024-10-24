@@ -1,0 +1,156 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the religious cartoonist known for creating short gospel tracts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the list of short gospel tracts created by this cartoonist.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of these tracts served as the basis for 'Dark Dungeons'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the religious cartoonist known for creating short gospel tracts (Node 1). Once the cartoonist is identified, Node 2 retrieves the list of their gospel tracts. Finally, Node 3 determines which specific tract is the basis for the movie 'Dark Dungeons', synthesizing all the information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the religious cartoonist known for creating gospel tracts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List well-known short gospel tracts created by the identified cartoonist.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the listed tracts is associated with 'Dark Dungeons'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into identifying the creator of gospel tracts, listing his well-known tracts, and then identifying which of those is directly referenced by 'Dark Dungeons'. This sequential approach ensures we retrieve the necessary background information before determining the specific tract related to 'Dark Dungeons'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the religious cartoonist who created Dark Dungeons.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the short gospel tracts created by the identified religious cartoonist.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of these short gospel tracts Dark Dungeons is based on.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph for answering the question involves identifying the creator of Dark Dungeons first, then retrieving information about all short gospel tracts created by that creator, and finally determining which specific tract serves as the basis for Dark Dungeons."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify any religious cartoonists known for creating gospel tracts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Among the identified cartoonists, retrieve information on the specific gospel tracts each has created.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of these gospel tracts is known as the source material for the work 'Dark Dungeons'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into identifying religious cartoonists known for gospel tracts, retrieving the specific tracts they created, and then determining which tract 'Dark Dungeons' is based on. This approach ensures that the system gathers comprehensive information before deducing the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the themes, characters, or plot of 'Dark Dungeons' to understand its connection or adaptation from another work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on any known works by religious cartoonists, focusing on works that are known as short gospel tracts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Cross-reference the themes or synopsis of 'Dark Dungeons' with the plots or themes of short gospel tracts from known religious cartoonists to find a match.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by gathering information on 'Dark Dungeons' to understand the underlying themes or storyline, which will be crucial in identifying its source material. Concurrently, another node is designated to retrieve a list or database of short gospel tracts by religious cartoonists, which might include title, themes, or summaries. The reasoning step involves comparing the details of 'Dark Dungeons' to the retrieved list of gospel tracts to identify the specific work it is based on. The final node synthesizes this information to answer the original question."
+    }
+]

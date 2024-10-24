@@ -1,0 +1,160 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the abbeys that were founded in 598.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which abbey Clarembald was a monk at.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Cross-reference the list of abbeys founded in 598 with the abbey that Clarembald was associated with to identify the correct abbey.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying abbeys founded in the year 598 as one line of retrieval (Node 1). Independently, it retrieves information on which abbey Clarembald was a monk at (Node 2). These two initial steps are independent and can run in parallel. The final step (Node 3) cross-references the results from the previous steps to determine which abbey, that Clarembald was associated with, matches the date criterion, thereby providing the final answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Clarembald, including the abbey he was associated with.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of abbeys founded in 598 and their historical records.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the abbey associated with Clarembald from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Match Clarembald's abbey to those founded in 598 to find which one he was a monk at.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To answer the question 'What abbey, founded in 598, was Clarembald a monk at?', the execution graph follows these steps:\n\n1. First, we retrieve information about Clarembald to find out which abbey he was associated with (Node 1).\n2. Simultaneously, we gather information on abbeys that were founded in the year 598 (Node 2).\n3. Next, we reason about the specific abbey linked with Clarembald (Node 3) using the detailed information retrieved in the first step.\n4. Finally, by correlating the abbey linked to Clarembald and those established in 598, we identify the abbey he was a monk at (Node 4). This reasoning step synthesizes all the required information to arrive at the correct answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the abbey founded in 598.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List the positions Clarembald held and the places he was associated with.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which abbey Clarembald was a monk at by cross-referencing the retrievals of the abbey founded in 598 and locations associated with Clarembald.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two initial retrieval and reasoning tasks: identifying the abbey founded in 598, and gathering information about Clarembald's positions and locations he was associated with. These nodes provide the necessary context and details required to perform the reasoning step, where the information is synthesized to determine the specific abbey where Clarembald was a monk."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify abbeys founded in the year 598.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve historical information about Clarembald, focusing on his monastic affiliations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the abbeys founded in 598 Clarembald was associated with as a monk.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task needs retrieval of abbeys founded in 598 and historical details about Clarembald's monastic affiliations. These tasks can occur in parallel. The final reasoning step combines this information to answer which of those abbeys he was a monk at."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify abbeys founded in 598.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Clarembald and identify the abbey where he was a monk.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the intersection of abbeys from nodes 1 and 2 to determine which abbey fits both criteria.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two retrieval nodes. Node 1 identifies abbeys founded in 598, while Node 2 retrieves information about Clarembald to find the abbey where he was a monk. The reasoning node (Node 3) determines the intersection of results from Nodes 1 and 2, identifying the abbey founded in 598 where Clarembald was a monk."
+    }
+]

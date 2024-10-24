@@ -1,0 +1,198 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the sports team Jack J. Stephans coached from 1979 to 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the location or city of the sports team identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "To find the city where Jack J. Stephans coached from 1979 to 1980, we first need to identify which team he coached during that time. Once the team is identified, we can directly determine the city where the team is based, which answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the sports teams Jack J. Stephans coached.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the coaching duration and the cities associated with each team coached by Jack J. Stephans.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "From the list of coaching durations, identify the city associated with the years 1979 to 1980.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with identifying the sports teams coached by Jack J. Stephans, followed by retrieving the durations and relevant cities associated with his coaching tenure for each team. The final step focuses on pinpointing the city during the specific years 1979 to 1980."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the key phrase or entity to look up: Jack J. Stephans and his coaching career from 1979 to 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Gather biographical data on Jack J. Stephans, focusing on his coaching career timeline.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the specific team or organization Jack J. Stephans coached in the years 1979 to 1980 based on the gathered career timeline.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Research the location or city of the team or organization identified for the years 1979 to 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by identifying the central focus of the query\u2014Jack J. Stephans' coaching career within the specified years. The process involves retrieving and reasoning through biographical and career timeline data to pinpoint the exact team or organization he coached during 1979-1980. Lastly, the graph concludes by retrieving information about the location of the identified team during those years, which ultimately provides the answer to the city in question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the list of teams or institutions where Jack J. Stephans has coached.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the team or institution Jack J. Stephans was coaching in 1979.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the team or institution Jack J. Stephans was coaching in 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the city where the 1979 coaching team or institution is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the city where the 1980 coaching team or institution is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Confirm that the city in 1979 is the same as the city in 1980. If they are different, find a resolution on the correct city for the 1979-1980 period.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph begins by retrieving a list of teams or institutions where Jack J. Stephans coached. It then narrows this information down to the years 1979 and 1980 separately to identify the specific teams or institutions. Following this, the locations (cities) of these teams or institutions are identified. Finally, the graph ensures that the cities for both years are the same or resolves any discrepancies to provide a conclusive answer regarding the city where Jack J. Stephans coached from 1979 to 1980."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Jack J. Stephans was.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the coaching history of Jack J. Stephans.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "From the coaching history, extract the position held by Jack J. Stephans from 1979 to 1980.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Based on the position held from 1979 to 1980, find the team or organization associated with that position.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the location or city where this team or organization was based during 1979 to 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by identifying Jack J. Stephans and retrieves his coaching history to determine his role between 1979-1980. It then finds the team associated with that role and retrieves the city where the team was based."
+    }
+]

@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the rapper whose debut album was titled 'Thug Misses'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the total worldwide record sales for the identified rapper.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is decomposed into two primary steps. The first step involves retrieving the identity of the rapper who released the debut album titled 'Thug Misses'. Once the rapper is identified, the second step is to retrieve and sum up the total worldwide record sales for this rapper, which answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the rapper whose debut album was titled 'Thug Misses'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on record sales for the identified rapper.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Summarize the total number of records sold worldwide by the rapper identified in step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the multi-hop question into three nodes. The first node identifies the rapper associated with the debut album 'Thug Misses'. The second node retrieves data on this rapper's record sales. Finally, the third node synthesizes the information from the second node to answer the question about worldwide record sales."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the rapper whose debut album was titled 'Thug Misses'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the total number of records sold worldwide by the identified rapper.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph begins by identifying the rapper associated with the debut album \"Thug Misses\", which is necessary to focus the search for record sales data. Once the rapper is identified, the second step involves retrieving the total number of records they have sold worldwide. This graph follows a linear set of dependencies where each step builds directly on the results of the prior retrieval and reasoning effort."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the rapper whose debut album was titled 'Thug Misses'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the worldwide sales figures for the rapper identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize the information to answer how many records the rapper has sold worldwide.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the rapper associated with the debut album 'Thug Misses'. Once identified, the graph proceeds to retrieve sales data specific to that artist. Finally, the retrieved sales information is used to answer the question about worldwide record sales."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the rapper who released the debut album 'Thug Misses'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the total number of records sold worldwide by the identified rapper.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile the information to determine the total number of records sold worldwide by the rapper whose debut album was 'Thug Misses'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying the rapper first, which means fetching the correct artist associated with the album 'Thug Misses'. Once the artist is identified (Khia), the next step is to retrieve data on her worldwide record sales, if available. Finally, this information is compiled to answer the question."
+    }
+]

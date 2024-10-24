@@ -1,0 +1,163 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Indian Carnatic vocalist who collaborated with classical pianist Anil Srinivasan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find magazine rankings or lists featuring this vocalist, specifically checking for 'Game Changers under 35'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which magazine published the list that included the vocalist.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying the Carnatic vocalist who collaborated with Anil Srinivasan (Node 1). This involves retrieving and reasoning about information regarding their collaborations. With this information, Node 2 retrieves data about magazine rankings or lists including this vocalist, focusing on 'Game Changers under 35'. Node 3 then reasons through this information to identify the specific magazine that featured the vocalist in its rankings."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find Indian Carnatic vocalists who have collaborated with classical pianist Anil Srinivasan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify notable works or achievements of the vocalists found in the previous step.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out if any of these vocalists have been recognized as game changers or achieved notable rankings by magazines or organizations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the magazine that ranked one of the vocalists among 35 Game Changers under 35.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins by identifying Indian Carnatic vocalists who've collaborated with Anil Srinivasan. It then looks into their major achievements to see if any align with being recognized as a game changer. Finally, it identifies the magazine responsible for ranking the vocalist among '35 Game Changers under 35.' This sequence ensures accurate retrieval of collaborative and recognition-related data to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Indian Carnatic vocalist who collaborated with classical pianist Anil Srinivasan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which magazines have a list or ranking called \"35 Game Changers under 35.\"",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of these magazines ranked the identified Indian Carnatic vocalist among \"35 Game Changers under 35.\"",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine which magazine ranked the Indian Carnatic vocalist, first identify the vocalist who collaborated with Anil Srinivasan. Concurrently, find out which magazines publish lists called '35 Game Changers under 35.' Finally, cross-reference the identified vocalist with these lists to find which magazine included them."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Indian Carnatic vocalist who collaborated with classical pianist Anil Srinivasan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which magazine has a feature or list called '35 Game Changers under 35'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the vocalist identified in step 1 is ranked among '35 Game Changers under 35' by the magazine identified in step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Provide the name of the magazine that ranked the vocalist among '35 Game Changers under 35'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task is broken down into identifying the key individuals involved (the vocalist), identifying relevant magazines with a specific feature, and cross-referencing these to see if there is a match. Finally, the answer is synthesized based on these findings."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Indian Carnatic vocalist who has collaborated with classical pianist Anil Srinivasan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which magazine ranked this vocalist among the 35 Game Changers under 35.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two main steps:\n\n1. **Node 1** retrieves and reasons to identify the Indian Carnatic vocalist who collaborated with Anil Srinivasan. This establishes who we're specifically asking about.\n\n2. **Node 2** then retrieves and reasons to determine which magazine ranked this identified vocalist among 35 Game Changers under 35. This step uses the information acquired in the first node to find the specific magazine.\n\nThe graph is straightforward and linear because each step logically follows from the previous one to ultimately answer the question."
+    }
+]

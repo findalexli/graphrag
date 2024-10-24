@@ -1,0 +1,214 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out what the Church of the Guanche People is and retrieve its founding city.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the island where the founding city of the Church of the Guanche People is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the population of the island identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve information about the larger area that includes the island from step 2 and find out which is its most populated island.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the island from step 2 with the most populated island in the larger area to check if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Determine the larger area that contains the island that has the founding city of the Church of the Guanche People and verify if it is the most populated island in that area.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph breaks down the question into steps that first identify the founding city of the Church of the Guanche People. Then, it identifies the island where this city is located and retrieves its population. Meanwhile, it gathers information on the larger area containing this island to identify its most populated island. The reasoning step then assesses if the identified island is the most populated to provide the correct larger area in the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the larger area associated with the Church of the Guanche People.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the most populated island in the identified larger area.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the city where the Church of the Guanche People was founded.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine the city where the Church of the Guanche People was founded, but more importantly, link this to a larger area that has a most populated island. The graph starts by identifying the region or group of islands the Guanche People are associated with. Secondly, it determines which island within this region is the most populated. Lastly, it identifies the city where the church was founded, ensuring this city is within the context of the most populated island in the identified area."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the larger area associated with the Church of the Guanche People.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the most populated island in this larger area.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the city on the most populated island in this larger area where the Church of the Guanche People was founded.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Summarize the larger area by confirming the island and city where the Church of the Guanche People was established relative to the entire area.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the query into steps that start by identifying the larger geographical area associated with the Church of the Guanche People, likely the Canary Islands given the context. Then, it determines which specific island within this area is the most populated, as population data is crucial here. Following this, it identifies the specific city on that island where the Church was founded. Lastly, the graph ends with summarizing all previous findings to ensure the response directly addresses the original multi-element question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the larger area that includes islands with significant populations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the most populated island within the identified larger area.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the city where the Church of the Guanche People was founded.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check if the city identified is located on the most populated island identified.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Confirm the larger area if the city where the Church of the Guanche People was founded matches the identified island.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task is to find the larger area, typically a collection of islands, which includes the city where the Church of the Guanche People was founded, specifically focusing on the most populated island of that area. The process involves identifying significant island groups, determining their most populated islands, and then associating the city with these islands. The task reaches completion with the verification that the church's city lies on the identified populated island, confirming the larger area's identity."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the island that has the largest population in the Canary Islands.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the city on this most populated island where the Church of the Guanche People was founded.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify that the Canary Islands is the larger area that includes the identified island.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Integrate the identification of the island and its larger area to confirm the answer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph divides the question into steps that first identify the most populated island in the Canary Islands and confirm it belongs to that larger area. Then, it finds the city on this island where the Church of the Guanche People was founded. Finally, it synthesizes this information to form the complete answer."
+    }
+]

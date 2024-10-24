@@ -1,0 +1,213 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Flynn Rider is in the context of entertainment media.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the media or production where Flynn Rider is a character.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the voice actor of Flynn Rider in the identified media.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve background information on the identified American actor and singer, including birthdate.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Verify if the actor was born on September 29, 1980.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by identifying Flynn Rider in entertainment media, determining the media where the character appears, and finding out who voiced Flynn Rider. Then, it gathers background information about the actor, checks the birthdate, and verifies if it matches the given date."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the character Flynn Rider from the movie Tangled.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine who voiced the character Flynn Rider in the movie Tangled.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve a list of American actors and singers born on September 29, 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Match the actor who voiced Flynn Rider with the list of actors and singers born on September 29, 1980 to find the common individual.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks the task into four main nodes. The task starts by identifying Flynn Rider as a character from the movie 'Tangled'. Next, we retrieve the information about the voice actor of Flynn Rider. In parallel, we determine which actors and singers were born on September 29, 1980. Finally, we find the actor who matches both criteria, answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the character Flynn Rider from media and determine which media he appears in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the actor who voices Flynn Rider in the identified media.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the identified actor, focusing on their birthdate and verifying if they match the birthdate of September 29, 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check if the identified actor is also a singer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize the information to confirm the American actor and singer born on September 29, 1980, who voices Flynn Rider.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by identifying the media where Flynn Rider appears and determining who voices him. It then retrieves additional details about the actor, specifically checking his birthdate to ensure it matches September 29, 1980, and confirms if he is also a singer. The final node synthesizes this information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the role of Flynn Rider in media and the work (e.g., movie, TV show) it is associated with.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the actor who voiced Flynn Rider in the identified work.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve biographical information about the actor identified as voicing Flynn Rider, focusing on birth data.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if the actor identified was born on September 29, 1980, and if they are also recognized as a singer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph identifies Flynn Rider's association with media, retrieves the actor who provided the voice, checks the actor's birthdate and singing career, and finally confirms if he matches the criteria given (born on September 29, 1980 and being a singer)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the character Flynn Rider and the movie or series in which they appear.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who voiced Flynn Rider.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the American actor and singer born on September 29, 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify if the actor and singer from step 3 is the same person as the one who voiced Flynn Rider in step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task into determining the movie character and who voiced them, while also retrieving birth information for verification. The reasoning step then cross-verifies the actor's identity with the birth date provided."
+    }
+]

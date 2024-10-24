@@ -1,0 +1,134 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the conference in which the Tennessee Volunteers football team plays.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the headquarters city of the conference identified in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the information from nodes 1 and 2 to determine the city associated with the Tennessee Volunteers' conference.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the conference to which the Tennessee Volunteers belong. Once this information is retrieved, the next step is to find the headquarters city of that conference. Finally, the information from both steps is combined to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the conference in which the Tennessee Volunteers football team plays.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the city where the headquarters of the identified conference is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task begins by determining the conference the Tennessee Volunteers football team is a member of. Once the conference is identified, the next step is to find out the city where the headquarters of this conference is located, as the question is asking for the location associated with the conference the team is a part of."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which conference the Tennessee Volunteers football team is a member of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the city where the headquarters of the conference identified in step 1 is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task requires identifying the city where the Tennessee Volunteers' conference headquarters is located. First, we determine which conference they belong to. Then, we find the city of that conference's headquarters for the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the Tennessee Volunteers football team, including the conference they play in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "From the information retrieved, identify the name of the conference the Tennessee Volunteers football team is a member of.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the identified conference to determine its headquarters' city or principal city associated with the conference.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into steps: First, gather details about the Tennessee Volunteers football team and identify its conference membership. Second, use that information to identify the associated city of the conference, which is its headquarters or principal city."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the conference in which the Tennessee Volunteers football team participates.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the headquarters city of the conference identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "To determine the city associated with the conference of the Tennessee Volunteers football team, we first identify the conference in which they play. After obtaining this information, we look up the headquarters city of that conference to answer the question fully."
+    }
+]

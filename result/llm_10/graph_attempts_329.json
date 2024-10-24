@@ -1,0 +1,190 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of professions Edward Dmytryk was involved in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of professions Otto Preminger was involved in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the lists of professions of Edward Dmytryk and Otto Preminger to determine who had more scope of profession.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with two retrieval steps, one for each person, to gather their respective professions. The reasoning step involves comparing these lists to determine who had a broader scope in their professional career."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the list of professions held by Edward Dmytryk.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the list of professions held by Otto Preminger.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify unique professions from the list of professions held by Edward Dmytryk.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify unique professions from the list of professions held by Otto Preminger.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the number of unique professions between Edward Dmytryk and Otto Preminger to determine who has a broader scope of profession.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "5",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the question into steps of retrieving and processing information about the professions of both individuals. The process involves first retrieving a list of professions for each person, then determining the distinct number of professions they each engaged in, and finally comparing these numbers to determine who had a broader professional scope."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on the professional scope of Edward Dmytryk, including the range of occupations and contributions to different fields.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on the professional scope of Otto Preminger, including the range of occupations and contributions to different fields.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the professional scopes of Edward Dmytryk and Otto Preminger based on the gathered information, considering the variety and impact of their work.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into three steps. The first two nodes independently retrieve information about the professional scope of Edward Dmytryk and Otto Preminger, respectively. Both nodes are retrieval and reasoning types because they require interpreting the data to understand the breadth of each individual's professional work. The final node involves reasoning to compare the findings from the first two nodes, synthesizing the information to assess who has a broader professional scope."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of professions or roles associated with Edward Dmytryk.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of professions or roles associated with Otto Preminger.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the scope of professions or roles between Edward Dmytryk and Otto Preminger by analyzing the lists of professions retrieved.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first independently gather the necessary information regarding the professional scope of both Edward Dmytryk and Otto Preminger. This involves retrieving relevant details about their professions or roles. Once this information is retrieved, a reasoning step follows to compare and determine which individual has a broader scope of professional engagements. This ensures that we base the comparison on comprehensive data for each individual."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the professions of Edward Dmytryk and Otto Preminger.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve comprehensive information about the professions and scope of Edward Dmytryk.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve comprehensive information about the professions and scope of Otto Preminger.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze the information to determine the scope of Edward Dmytryk's professions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Analyze the information to determine the scope of Otto Preminger's professions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Compare the scope of professions between Edward Dmytryk and Otto Preminger to determine who has a broader scope.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph begins with identifying the professions of both individuals to ensure a clear understanding of what needs to be explored (Node 1). It then involves two parallel steps (Node 2 and Node 3) to retrieve detailed information about each individual's professions and their scope. Once this information is gathered, it is separately analyzed to understand the breadth and impact of each person's professional activities (Node 4 and Node 5). Finally, the results from these analyses are used in conjunction to compare the professional scope of Edward Dmytryk and Otto Preminger, leading to a conclusion about who has a broader scope (Node 6)."
+    }
+]

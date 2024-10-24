@@ -1,0 +1,307 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the writer of the comic book 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "List comic books written by the identified writer of 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Filter the list of comic books to find another comic book (different from 'Crossed') written by the same writer.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph represents the steps needed to identify another comic book written by the same writer as 'Crossed'. First, we find out who wrote 'Crossed'. Next, we list other works by this writer. Finally, we filter to find another comic book by the same writer. The answer is synthesized from this filtered list."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "Crossed (comics)\nCrossed is a comic book written by Garth Ennis and drawn by Jacen Burrows for the first ten issues, and published by Avatar Press. Following volumes \"Crossed: Family Values\", \"Crossed 3D\", and \"Crossed: Psychopath\" were written by David Lapham. A new series, \"Crossed: Badlands\" is written and drawn by rotating creative teams. The franchise has also spawned two webcomics: \"Crossed: Wish You Were Here\", which ran from 2012\u20132014, and \"Crossed: Dead or Alive\", which began syndication in November 2014.",
+                "Star Crossed (comics)\nStar Crossed, is a three-issue comic book mini-series published in 1997 under the short-lived DC Comics imprint, Helix. Written and illustrated by Matt Howarth, \"Star Crossed\" recounts the surrealist tale of a deep-space romance between a genetically engineered \u00fcber-woman and a sentient asteroid. Consistent with the performance of other Helix titles, \"Star Crossed\" failed to appeal to a broad readership and the poor sales figures which accompanied its publication coincided with a general downturn in the American comic book industry.",
+                "Garth Ennis\nGarth Ennis (born 16 January 1970) is a Northern Irish-born naturalized American comics writer, best known for the Vertigo series \"Preacher\" with artist Steve Dillon and his successful nine-year run on Marvel Comics' Punisher franchise. He has collaborated with artists such as Dillon and Glenn Fabry on \"Preacher\", John McCrea on \"Hitman\", and Carlos Ezquerra on both \"Preacher\" and \"Hitman\".",
+                "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+                "Glenn Greenberg\nGlenn Greenberg (b. in New York City) is an American comic book and fiction writer. At the beginning of his career, he became a regular Marvel Comics writer, penning stories for \"The Spectacular Spider-Man\", \"The Rampaging Hulk\", \"The Silver Surfer\", and \"Dracula\". He has also written articles for comic book magazines such as \"Back Issue!\".",
+                "Will Jacobs\nWill Jacobs (born 1955) is an American comics and humor writer. He was a coauthor with Gerard Jones on \"The Beaver Papers\", \"The Comic Book Heroes\", and the comic book \"The Trouble with Girls\" (1987\u20131993). He was a contributor to \"National Lampoon magazine\" and various DC Comics. Jacobs left professional writing in the 1990s to start a used and antiquarian book service, Avalon Books. He co-wrote with Jones \"The Comic Book Heroes\", a book dedicated to the history of the American comic book industry from the Silver Age to the present.",
+                "Snapper Carr\nLucas \"Snapper\" Carr is a fictional character appearing in American comic books published by DC Comics. The character, whose fictional nickname is almost always used by other characters in favor of his given name, was created by Gardner Fox (writer) and Mike Sekowsky (penciller), and made his first appearance in \"The Brave and the Bold\" in February 1960. From 1960 to 1969, Snapper Carr appeared as a supporting character to the Justice League of America, a superhero team. The character occasionally appeared in comics featuring the Justice League from 1969 to 1989, when the \"Invasion!\" limited-series comic book gave him superpowers. He was associated with a new superhero team, The Blasters, in various comics until 1993, when he lost his powers and became a main character in the \"Hourman\" comic book. After the cancellation of \"Hourman\" in April 2001, he became a main character in the \"Young Justice\" comic book beginning in December 2001. \"Young Justice\" was cancelled in May 2003, and he became associated with the governmental organization Checkmate, a role revealed when the character played a small but important role in the 2007-2008 limited series comic book \"52 Aftermath: The Four Horsemen\". The character made major appearances in \"Final Crisis: Resist\" in December 2008 and \"Justice League of America 80-Page Giant\" in November 2009.",
+                "Kick-Ass (character)\nKick-Ass (real name David \"Dave\" Lizewski) is a title character and the protagonist of the \"Kick-Ass\" series, published by Marvel Comics under the company\u2019s imprint Icon Comics. The character was created by artist John Romita, Jr. and writer Mark Millar. Prior to the series, Dave Lizewski is a high school student and comic book fan whose dreams inspire him to become a real life superhero, going by the name \"Kick-Ass\", with no superpowers or training of any kind. He is portrayed by Aaron Taylor-Johnson in the feature film adaptations \"Kick-Ass\" and \"Kick-Ass 2\".",
+                "Teen Titans\nThe Teen Titans, also known as the New Teen Titans and the Titans, are a fictional superhero team appearing in American comic books published by DC Comics, often in an eponymous monthly series. As the group's name suggests, its members are teenage superheroes, many of whom have acted as sidekicks to DC's premiere superheroes in the Justice League. First appearing in 1964 in \"The Brave and the Bold\" #54, the team was founded by Kid Flash (Wally West), Robin (Dick Grayson), and Aqualad (Garth), with the team adopting the name Teen Titans in issue 60 following the addition of Wonder Girl (Donna Troy) to its ranks.",
+                "Comic book convention\nA comic book convention or comic con is an event with a primary focus on comic books and comic book culture, in which comic book fans gather to meet creators, experts, and each other. Commonly, comic conventions are multi-day events hosted at convention centers, hotels, or college campuses. They feature a wide variety of activities and panels, with a larger number of attendees participating in cosplay than most other types of fan conventions. Comic book conventions are also used as a vehicle for industry, in which publishers, distributors, and retailers represent their comic-related releases. Comic book conventions may be considered derivatives of science-fiction conventions, which began in the late 1930s.",
+                "Comic book\nA comic book or comicbook, also called comic magazine or simply comic, is a publication that consists of comic art in the form of sequential juxtaposed panels that represent individual scenes. Panels are often accompanied by brief descriptive prose and written narrative, usually dialog contained in word balloons emblematic of the comics art form. Although comics has some origins in 18th century Japan and 1830s Europe, comic books were first popularized in the United States during the 1930s. The first modern comic book, \"Famous Funnies\", was released in the United States in 1933 and was a reprinting of earlier newspaper humor comic strips, which had established many of the story-telling devices used in comics. The term \"comic book\" derives from American comic books once being a compilation of comic strips of a humorous tone; however, this practice was replaced by featuring stories of all genres, usually not humorous in tone.",
+                "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+                "List of accolades received by Brokeback Mountain\n\"Brokeback Mountain\" is a 2005 American epic romantic drama film directed by Ang Lee. Based on the short story of the same name by author Annie Proulx, the story was adapted by Larry McMurtry and Diana Ossana. The film depicts the complex emotional and sexual relationship between two men, Ennis Del Mar and Jack Twist (played by Heath Ledger and Jake Gyllenhaal, respectively) in the American West between 1963 and 1983. Michelle Williams, Anne Hathaway, Linda Cardellini, Randy Quaid, Anna Faris, and Kate Mara feature in supporting roles."
+            ],
+            "thoughts": [
+                "The writer of the comic book 'Crossed' is Garth Ennis.",
+                "Comic books written by Garth Ennis include:\n1. Preacher\n2. Hitman\n3. The Punisher\n\nThese are some of the notable comic book series written by Garth Ennis, in addition to his work on Crossed.",
+                "Based on the list of comic books written by Garth Ennis, another comic book written by the same writer is \"Preacher.\""
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the writer of the comic book 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify other comic books written by the same writer.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Select a comic book from the list obtained in step 2 as an answer to the question.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph begins by identifying the writer of the comic book 'Crossed'. Once the writer is identified, the next step is to retrieve a list of other comic books written by this writer. Finally, a single comic book from the retrieved list is selected to answer the original question. Each step relies on the completion of the previous one, forming a logical sequence."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "Crossed (comics)\nCrossed is a comic book written by Garth Ennis and drawn by Jacen Burrows for the first ten issues, and published by Avatar Press. Following volumes \"Crossed: Family Values\", \"Crossed 3D\", and \"Crossed: Psychopath\" were written by David Lapham. A new series, \"Crossed: Badlands\" is written and drawn by rotating creative teams. The franchise has also spawned two webcomics: \"Crossed: Wish You Were Here\", which ran from 2012\u20132014, and \"Crossed: Dead or Alive\", which began syndication in November 2014.",
+                "Star Crossed (comics)\nStar Crossed, is a three-issue comic book mini-series published in 1997 under the short-lived DC Comics imprint, Helix. Written and illustrated by Matt Howarth, \"Star Crossed\" recounts the surrealist tale of a deep-space romance between a genetically engineered \u00fcber-woman and a sentient asteroid. Consistent with the performance of other Helix titles, \"Star Crossed\" failed to appeal to a broad readership and the poor sales figures which accompanied its publication coincided with a general downturn in the American comic book industry.",
+                "Garth Ennis\nGarth Ennis (born 16 January 1970) is a Northern Irish-born naturalized American comics writer, best known for the Vertigo series \"Preacher\" with artist Steve Dillon and his successful nine-year run on Marvel Comics' Punisher franchise. He has collaborated with artists such as Dillon and Glenn Fabry on \"Preacher\", John McCrea on \"Hitman\", and Carlos Ezquerra on both \"Preacher\" and \"Hitman\".",
+                "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+                "Glenn Greenberg\nGlenn Greenberg (b. in New York City) is an American comic book and fiction writer. At the beginning of his career, he became a regular Marvel Comics writer, penning stories for \"The Spectacular Spider-Man\", \"The Rampaging Hulk\", \"The Silver Surfer\", and \"Dracula\". He has also written articles for comic book magazines such as \"Back Issue!\".",
+                "Will Jacobs\nWill Jacobs (born 1955) is an American comics and humor writer. He was a coauthor with Gerard Jones on \"The Beaver Papers\", \"The Comic Book Heroes\", and the comic book \"The Trouble with Girls\" (1987\u20131993). He was a contributor to \"National Lampoon magazine\" and various DC Comics. Jacobs left professional writing in the 1990s to start a used and antiquarian book service, Avalon Books. He co-wrote with Jones \"The Comic Book Heroes\", a book dedicated to the history of the American comic book industry from the Silver Age to the present.",
+                "Snapper Carr\nLucas \"Snapper\" Carr is a fictional character appearing in American comic books published by DC Comics. The character, whose fictional nickname is almost always used by other characters in favor of his given name, was created by Gardner Fox (writer) and Mike Sekowsky (penciller), and made his first appearance in \"The Brave and the Bold\" in February 1960. From 1960 to 1969, Snapper Carr appeared as a supporting character to the Justice League of America, a superhero team. The character occasionally appeared in comics featuring the Justice League from 1969 to 1989, when the \"Invasion!\" limited-series comic book gave him superpowers. He was associated with a new superhero team, The Blasters, in various comics until 1993, when he lost his powers and became a main character in the \"Hourman\" comic book. After the cancellation of \"Hourman\" in April 2001, he became a main character in the \"Young Justice\" comic book beginning in December 2001. \"Young Justice\" was cancelled in May 2003, and he became associated with the governmental organization Checkmate, a role revealed when the character played a small but important role in the 2007-2008 limited series comic book \"52 Aftermath: The Four Horsemen\". The character made major appearances in \"Final Crisis: Resist\" in December 2008 and \"Justice League of America 80-Page Giant\" in November 2009.",
+                "Kick-Ass (character)\nKick-Ass (real name David \"Dave\" Lizewski) is a title character and the protagonist of the \"Kick-Ass\" series, published by Marvel Comics under the company\u2019s imprint Icon Comics. The character was created by artist John Romita, Jr. and writer Mark Millar. Prior to the series, Dave Lizewski is a high school student and comic book fan whose dreams inspire him to become a real life superhero, going by the name \"Kick-Ass\", with no superpowers or training of any kind. He is portrayed by Aaron Taylor-Johnson in the feature film adaptations \"Kick-Ass\" and \"Kick-Ass 2\".",
+                "Teen Titans\nThe Teen Titans, also known as the New Teen Titans and the Titans, are a fictional superhero team appearing in American comic books published by DC Comics, often in an eponymous monthly series. As the group's name suggests, its members are teenage superheroes, many of whom have acted as sidekicks to DC's premiere superheroes in the Justice League. First appearing in 1964 in \"The Brave and the Bold\" #54, the team was founded by Kid Flash (Wally West), Robin (Dick Grayson), and Aqualad (Garth), with the team adopting the name Teen Titans in issue 60 following the addition of Wonder Girl (Donna Troy) to its ranks.",
+                "Comic book convention\nA comic book convention or comic con is an event with a primary focus on comic books and comic book culture, in which comic book fans gather to meet creators, experts, and each other. Commonly, comic conventions are multi-day events hosted at convention centers, hotels, or college campuses. They feature a wide variety of activities and panels, with a larger number of attendees participating in cosplay than most other types of fan conventions. Comic book conventions are also used as a vehicle for industry, in which publishers, distributors, and retailers represent their comic-related releases. Comic book conventions may be considered derivatives of science-fiction conventions, which began in the late 1930s.",
+                "Comic book\nA comic book or comicbook, also called comic magazine or simply comic, is a publication that consists of comic art in the form of sequential juxtaposed panels that represent individual scenes. Panels are often accompanied by brief descriptive prose and written narrative, usually dialog contained in word balloons emblematic of the comics art form. Although comics has some origins in 18th century Japan and 1830s Europe, comic books were first popularized in the United States during the 1930s. The first modern comic book, \"Famous Funnies\", was released in the United States in 1933 and was a reprinting of earlier newspaper humor comic strips, which had established many of the story-telling devices used in comics. The term \"comic book\" derives from American comic books once being a compilation of comic strips of a humorous tone; however, this practice was replaced by featuring stories of all genres, usually not humorous in tone.",
+                "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+                "The Jane Austen Book Club (film)\nThe Jane Austen Book Club is a 2007 American romantic drama film written and directed by Robin Swicord. The screenplay, adapted from the 2004 novel of the same name by Karen Joy Fowler, focuses on a book club formed specifically to discuss the six novels written by Jane Austen. As they delve into Austen's literature, the club members find themselves dealing with life experiences that parallel the themes of the books they are reading."
+            ],
+            "thoughts": [
+                "The writer of the comic book 'Crossed' is Garth Ennis.",
+                "Other comic books written by Garth Ennis include \"Preacher\" and \"The Punisher\".",
+                "I would select \"Preacher\" as the comic book from the list obtained in step 2."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the writer of the comic book 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve a list of comic books written by the identified writer.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Filter the list to find another comic book besides 'Crossed' written by the same writer.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph starts by identifying the writer of the comic book 'Crossed'. Once the writer is known, the next step is to retrieve a list of all comic books written by this writer. Finally, the list is filtered to find another comic book, different from 'Crossed', that the same writer has written."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "Crossed (comics)\nCrossed is a comic book written by Garth Ennis and drawn by Jacen Burrows for the first ten issues, and published by Avatar Press. Following volumes \"Crossed: Family Values\", \"Crossed 3D\", and \"Crossed: Psychopath\" were written by David Lapham. A new series, \"Crossed: Badlands\" is written and drawn by rotating creative teams. The franchise has also spawned two webcomics: \"Crossed: Wish You Were Here\", which ran from 2012\u20132014, and \"Crossed: Dead or Alive\", which began syndication in November 2014.",
+                "Star Crossed (comics)\nStar Crossed, is a three-issue comic book mini-series published in 1997 under the short-lived DC Comics imprint, Helix. Written and illustrated by Matt Howarth, \"Star Crossed\" recounts the surrealist tale of a deep-space romance between a genetically engineered \u00fcber-woman and a sentient asteroid. Consistent with the performance of other Helix titles, \"Star Crossed\" failed to appeal to a broad readership and the poor sales figures which accompanied its publication coincided with a general downturn in the American comic book industry.",
+                "Garth Ennis\nGarth Ennis (born 16 January 1970) is a Northern Irish-born naturalized American comics writer, best known for the Vertigo series \"Preacher\" with artist Steve Dillon and his successful nine-year run on Marvel Comics' Punisher franchise. He has collaborated with artists such as Dillon and Glenn Fabry on \"Preacher\", John McCrea on \"Hitman\", and Carlos Ezquerra on both \"Preacher\" and \"Hitman\".",
+                "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+                "Glenn Greenberg\nGlenn Greenberg (b. in New York City) is an American comic book and fiction writer. At the beginning of his career, he became a regular Marvel Comics writer, penning stories for \"The Spectacular Spider-Man\", \"The Rampaging Hulk\", \"The Silver Surfer\", and \"Dracula\". He has also written articles for comic book magazines such as \"Back Issue!\".",
+                "Will Jacobs\nWill Jacobs (born 1955) is an American comics and humor writer. He was a coauthor with Gerard Jones on \"The Beaver Papers\", \"The Comic Book Heroes\", and the comic book \"The Trouble with Girls\" (1987\u20131993). He was a contributor to \"National Lampoon magazine\" and various DC Comics. Jacobs left professional writing in the 1990s to start a used and antiquarian book service, Avalon Books. He co-wrote with Jones \"The Comic Book Heroes\", a book dedicated to the history of the American comic book industry from the Silver Age to the present.",
+                "Comic book\nA comic book or comicbook, also called comic magazine or simply comic, is a publication that consists of comic art in the form of sequential juxtaposed panels that represent individual scenes. Panels are often accompanied by brief descriptive prose and written narrative, usually dialog contained in word balloons emblematic of the comics art form. Although comics has some origins in 18th century Japan and 1830s Europe, comic books were first popularized in the United States during the 1930s. The first modern comic book, \"Famous Funnies\", was released in the United States in 1933 and was a reprinting of earlier newspaper humor comic strips, which had established many of the story-telling devices used in comics. The term \"comic book\" derives from American comic books once being a compilation of comic strips of a humorous tone; however, this practice was replaced by featuring stories of all genres, usually not humorous in tone.",
+                "Teen Titans\nThe Teen Titans, also known as the New Teen Titans and the Titans, are a fictional superhero team appearing in American comic books published by DC Comics, often in an eponymous monthly series. As the group's name suggests, its members are teenage superheroes, many of whom have acted as sidekicks to DC's premiere superheroes in the Justice League. First appearing in 1964 in \"The Brave and the Bold\" #54, the team was founded by Kid Flash (Wally West), Robin (Dick Grayson), and Aqualad (Garth), with the team adopting the name Teen Titans in issue 60 following the addition of Wonder Girl (Donna Troy) to its ranks.",
+                "Comic book convention\nA comic book convention or comic con is an event with a primary focus on comic books and comic book culture, in which comic book fans gather to meet creators, experts, and each other. Commonly, comic conventions are multi-day events hosted at convention centers, hotels, or college campuses. They feature a wide variety of activities and panels, with a larger number of attendees participating in cosplay than most other types of fan conventions. Comic book conventions are also used as a vehicle for industry, in which publishers, distributors, and retailers represent their comic-related releases. Comic book conventions may be considered derivatives of science-fiction conventions, which began in the late 1930s.",
+                "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\"."
+            ],
+            "thoughts": [
+                "The writer of the comic book 'Crossed' is Garth Ennis.",
+                "Comic books written by Garth Ennis include:\n- Crossed\n- Preacher\n- The Punisher\n- Hitman\n\nThese are just a few examples of the comic books written by Garth Ennis.",
+                "Based on the list provided, another comic book written by Garth Ennis besides 'Crossed' is 'Preacher'."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the writer of the comic book 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find other comic books written by the identified writer of 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Select a comic book from the list of those written by the same writer as 'Crossed'.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph starts by identifying the writer of the comic book 'Crossed' as it is crucial to connect this information to other works written by the same person. Once the writer is identified, we proceed to gather a list of other comic books written by this writer. Finally, we select a comic book from this list, completing the task of identifying another work by the same writer who wrote 'Crossed'."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "Crossed (comics)\nCrossed is a comic book written by Garth Ennis and drawn by Jacen Burrows for the first ten issues, and published by Avatar Press. Following volumes \"Crossed: Family Values\", \"Crossed 3D\", and \"Crossed: Psychopath\" were written by David Lapham. A new series, \"Crossed: Badlands\" is written and drawn by rotating creative teams. The franchise has also spawned two webcomics: \"Crossed: Wish You Were Here\", which ran from 2012\u20132014, and \"Crossed: Dead or Alive\", which began syndication in November 2014.",
+                "Star Crossed (comics)\nStar Crossed, is a three-issue comic book mini-series published in 1997 under the short-lived DC Comics imprint, Helix. Written and illustrated by Matt Howarth, \"Star Crossed\" recounts the surrealist tale of a deep-space romance between a genetically engineered \u00fcber-woman and a sentient asteroid. Consistent with the performance of other Helix titles, \"Star Crossed\" failed to appeal to a broad readership and the poor sales figures which accompanied its publication coincided with a general downturn in the American comic book industry.",
+                "Garth Ennis\nGarth Ennis (born 16 January 1970) is a Northern Irish-born naturalized American comics writer, best known for the Vertigo series \"Preacher\" with artist Steve Dillon and his successful nine-year run on Marvel Comics' Punisher franchise. He has collaborated with artists such as Dillon and Glenn Fabry on \"Preacher\", John McCrea on \"Hitman\", and Carlos Ezquerra on both \"Preacher\" and \"Hitman\".",
+                "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+                "Will Jacobs\nWill Jacobs (born 1955) is an American comics and humor writer. He was a coauthor with Gerard Jones on \"The Beaver Papers\", \"The Comic Book Heroes\", and the comic book \"The Trouble with Girls\" (1987\u20131993). He was a contributor to \"National Lampoon magazine\" and various DC Comics. Jacobs left professional writing in the 1990s to start a used and antiquarian book service, Avalon Books. He co-wrote with Jones \"The Comic Book Heroes\", a book dedicated to the history of the American comic book industry from the Silver Age to the present.",
+                "Glenn Greenberg\nGlenn Greenberg (b. in New York City) is an American comic book and fiction writer. At the beginning of his career, he became a regular Marvel Comics writer, penning stories for \"The Spectacular Spider-Man\", \"The Rampaging Hulk\", \"The Silver Surfer\", and \"Dracula\". He has also written articles for comic book magazines such as \"Back Issue!\".",
+                "Teen Titans\nThe Teen Titans, also known as the New Teen Titans and the Titans, are a fictional superhero team appearing in American comic books published by DC Comics, often in an eponymous monthly series. As the group's name suggests, its members are teenage superheroes, many of whom have acted as sidekicks to DC's premiere superheroes in the Justice League. First appearing in 1964 in \"The Brave and the Bold\" #54, the team was founded by Kid Flash (Wally West), Robin (Dick Grayson), and Aqualad (Garth), with the team adopting the name Teen Titans in issue 60 following the addition of Wonder Girl (Donna Troy) to its ranks.",
+                "Comic book convention\nA comic book convention or comic con is an event with a primary focus on comic books and comic book culture, in which comic book fans gather to meet creators, experts, and each other. Commonly, comic conventions are multi-day events hosted at convention centers, hotels, or college campuses. They feature a wide variety of activities and panels, with a larger number of attendees participating in cosplay than most other types of fan conventions. Comic book conventions are also used as a vehicle for industry, in which publishers, distributors, and retailers represent their comic-related releases. Comic book conventions may be considered derivatives of science-fiction conventions, which began in the late 1930s.",
+                "Comic book\nA comic book or comicbook, also called comic magazine or simply comic, is a publication that consists of comic art in the form of sequential juxtaposed panels that represent individual scenes. Panels are often accompanied by brief descriptive prose and written narrative, usually dialog contained in word balloons emblematic of the comics art form. Although comics has some origins in 18th century Japan and 1830s Europe, comic books were first popularized in the United States during the 1930s. The first modern comic book, \"Famous Funnies\", was released in the United States in 1933 and was a reprinting of earlier newspaper humor comic strips, which had established many of the story-telling devices used in comics. The term \"comic book\" derives from American comic books once being a compilation of comic strips of a humorous tone; however, this practice was replaced by featuring stories of all genres, usually not humorous in tone.",
+                "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+                "Metropolis Collectibles\nMetropolis Collectibles is a famous rare comic book dealer of vintage American comics, primarily known for its large collection of comic books originally published in the 1930s, 1940s, 1950s, 1960s and 1970s. Metropolis was founded in 1984 by Stephen Fishler, and merged companies in 1999 with Vincent Zurzolo, Jr., of Vincent's Collectibles.; Zurzolo said that as he found he could not compete with Fishler's business, merging the two made sense. The company is located on Broadway in New York City, and the comic book showroom allows viewings by appointment only. Over the years, Metropolis Collectibles has grown from being a comic-book mail-order company to maintaining a major online retail presence. In addition to being comic book buyers and comic book sellers, Metropolis also gives comic book appraisals and provides comic book valuation services of rare, old out-of-print comics. Metropolis Collectibles has obtained a variety of notable classic comic book collections over the years, or \"pedigrees\", including the Crowley Collection, the Allentown Pedigree, the D-Copy Collection, and the Northford Collection. In August 2014, the company was able to purchase a near-mint copy of \"Action Comics #1\" (CGC 9.0) for $3.2 million in an auction on eBay.",
+                "The Jane Austen Book Club (film)\nThe Jane Austen Book Club is a 2007 American romantic drama film written and directed by Robin Swicord. The screenplay, adapted from the 2004 novel of the same name by Karen Joy Fowler, focuses on a book club formed specifically to discuss the six novels written by Jane Austen. As they delve into Austen's literature, the club members find themselves dealing with life experiences that parallel the themes of the books they are reading.",
+                "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\"."
+            ],
+            "thoughts": [
+                "The writer of the comic book 'Crossed' is Garth Ennis.",
+                "Other comic books written by Garth Ennis include \"Preacher\" and \"The Punisher\". These are both well-known series in the comic book world and have garnered critical acclaim. Additionally, Ennis has collaborated with artists such as Steve Dillon, Glenn Fabry, John McCrea, and Carlos Ezquerra on these projects.",
+                "Based on the information provided, we can select \"Preacher\" as a comic book written by the same writer as \"Crossed\"."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about the writer(s) of the comic book series 'Crossed'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify other comic book series written by the same writer(s) identified in node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine which of the comic book series identified in node 2 were also written by this writer.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph is designed to first retrieve the writer(s) of the 'Crossed' comic book series. Once the writer(s) are identified, the next step is to find other comic book series they have written. Finally, we reason through the list of those comic books to determine which ones were also penned by this specific writer."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Crossed (comics)\nCrossed is a comic book written by Garth Ennis and drawn by Jacen Burrows for the first ten issues, and published by Avatar Press. Following volumes \"Crossed: Family Values\", \"Crossed 3D\", and \"Crossed: Psychopath\" were written by David Lapham. A new series, \"Crossed: Badlands\" is written and drawn by rotating creative teams. The franchise has also spawned two webcomics: \"Crossed: Wish You Were Here\", which ran from 2012\u20132014, and \"Crossed: Dead or Alive\", which began syndication in November 2014.",
+                "Garth Ennis\nGarth Ennis (born 16 January 1970) is a Northern Irish-born naturalized American comics writer, best known for the Vertigo series \"Preacher\" with artist Steve Dillon and his successful nine-year run on Marvel Comics' Punisher franchise. He has collaborated with artists such as Dillon and Glenn Fabry on \"Preacher\", John McCrea on \"Hitman\", and Carlos Ezquerra on both \"Preacher\" and \"Hitman\".",
+                "Nick Fury (2017 comic book)\nNick Fury is a 2017 ongoing comic book series published by Marvel Comics. The series is written by James Dale Robinson and primarily drawn by ACO. It is the first series to feature Nick Fury Jr. as its main character.",
+                "Star Crossed (comics)\nStar Crossed, is a three-issue comic book mini-series published in 1997 under the short-lived DC Comics imprint, Helix. Written and illustrated by Matt Howarth, \"Star Crossed\" recounts the surrealist tale of a deep-space romance between a genetically engineered \u00fcber-woman and a sentient asteroid. Consistent with the performance of other Helix titles, \"Star Crossed\" failed to appeal to a broad readership and the poor sales figures which accompanied its publication coincided with a general downturn in the American comic book industry.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Comic book convention\nA comic book convention or comic con is an event with a primary focus on comic books and comic book culture, in which comic book fans gather to meet creators, experts, and each other. Commonly, comic conventions are multi-day events hosted at convention centers, hotels, or college campuses. They feature a wide variety of activities and panels, with a larger number of attendees participating in cosplay than most other types of fan conventions. Comic book conventions are also used as a vehicle for industry, in which publishers, distributors, and retailers represent their comic-related releases. Comic book conventions may be considered derivatives of science-fiction conventions, which began in the late 1930s.",
+                "Teen Titans Go!\nTeen Titans Go! is a comic book series that was published by DC Comics. It is based on the 2003 animated TV series \"Teen Titans\", which is itself loosely based on the team that starred in the popular 1980s comic \"The New Teen Titans\". The series was written by J. Torres with Todd Nauck and Larry Stucker as the regular illustrators. The series focuses on Robin, Raven, Starfire, Beast Boy, and Cyborg who are the main cast members of the TV series.",
+                "Rosita Espinosa\nRosita Espinosa is a fictional character from the comic book series \"The Walking Dead\" and is portrayed by Christian Serratos in the American television series of the same name. She accompanies Eugene Porter and Abraham Ford on a mission to Washington, D.C. In the comic book series, she joins Rick Grimes' group after they leave Hershel Greene's farm and go to DC. Eventually Eugene is revealed to have lied but they continue onto Washington anyway, since he was still convinced the city would offer greater chance of survival, and they eventually find the Alexandria Safe-Zone. Though she and Abraham continue their relationship she eventually breaks up with him when he cheats on her with Holly and moves in with Eugene, eventually starting a relationship with him, but forgives Abraham after he is killed by Dwight. Rosita also takes part in the war against the Saviors led by Negan it's conclusion of which sees the 4 communities uniting forces. Two years later Rosita and Eugene are married but their relationship is strained. Rosita is revealed to be pregnant, but Eugene is not the father. She is ultimately killed by Alpha, leader of the Whisperers, along with 11 other key members of all 4 communities.",
+                "Serenity (comics)\nSeveral comic book stories have been released under the Serenity title, set in the fictional universe created for Joss Whedon's \"Firefly\" television series and \"Serenity\" film, and which are considered canon. As of 2014, eight \"Serenity\" stories have been published. Written by Joss Whedon and Brett Matthews, and illustrated by Will Conrad, the first miniseries, \"Those Left Behind\", was created as a bridge between the events of the series and film. \"Those Left Behind\" was popular: the first issue was the highest-selling comic published by Dark Horse Comics since the release of \"Buffy Season 8\" in 2007, while the trade paperback is still one of the highest ranking items by sale quantity from that company. In early 2008, a second miniseries was released. Titled \"Better Days\", it was set before \"Those Left Behind\", with the storyline based around a heist that went in the characters' favor. In addition to the miniseries, a one-shot comic written by Jim Krueger and titled \"The Other Half\" was released in the August 2008 issue of \"Dark Horse Presents\".",
+                "L'Orignal, Ontario\nL'Orignal is a village and former municipality, now part of Champlain Township in eastern Ontario, Canada. It likely took its name from its location on the Ottawa River once known as Pointe \u00e0 l'Orignal (French for \"Moose Point\"), where moose crossed the river.",
+                "Crossed (The Walking Dead)\n\"Crossed\" is the seventh episode of the fifth season and 58th episode overall of the post-apocalyptic horror television series \"The Walking Dead\", which aired on AMC on November 23, 2014. It was written by Seth Hoffman and directed by Billy Gierhart. In the episode, Michonne and Carl Grimes stay at the barricaded Church with Gabriel Stokes as Rick Grimes and the others go on a rescue mission for Beth Greene and Carol Peletier in Atlanta. The episode received generally positive reviews, though most noted the set up for the mid-season finale. This is the first episode to feature all credited series regulars for the fifth season.",
+                "Alison Joseph\nAlison Joseph (born 1958) is an English crime writer based in London where she was born and raised. She studied French and Philosophy at Leeds University, and started her career as a documentary director, making programmes for Channel 4. The first in her crime series, featuring detective nun Sister Agnes, was published in 1993. She has also written for radio, including adaptations of Georges Simenon\u2019s \"Maigret\". She was Chair of the Crime Writers Association from 2013 to 2015.",
+                "Issa Rae\nJo-Issa \"Issa\" Rae Diop (born January 12, 1985) is an American actress, writer, director, producer and web series creator. She is best known as the creator of the YouTube web series \"Awkward Black Girl\". Since the premiere of \"Awkward Black Girl\", Rae has developed her own YouTube platform where she features various content created by people of color. Rae's shows have garnered over 20 million views and over 260,000 subscribers on YouTube.",
+                "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2."
+            ],
+            "thoughts": [
+                "The comic book series \"Crossed\" was written by Garth Ennis and drawn by Jacen Burrows for the first ten issues, and later volumes were written by David Lapham. The franchise has also spawned two webcomics: \"Crossed: Wish You Were Here\" and \"Crossed: Dead or Alive\".",
+                "Other comic book series written by Garth Ennis include \"Preacher\" and \"The Punisher\".",
+                "The comic book series \"Preacher\" and \"The Punisher\" were also written by Garth Ennis."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the writer(s) of the comic book series 'Crossed'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify other comic book series written by the same writer(s) identified in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the comic book series identified in node 2 were also written by this writer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first retrieve the writer(s) of the 'Crossed' comic book series. Once the writer(s) are identified, the next step is to find other comic book series they have written. Finally, we reason through the list of those comic books to determine which ones were also penned by this specific writer."
+    },
+    "best_recall": 0.9444444444444444
+}

@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Danger Mouse produced U2 album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine exclusive release locations or platforms for the identified album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph first focuses on identifying the specific U2 album produced by Danger Mouse. Once the album is identified, the next step is to find information regarding exclusive release locations or platforms for that album. This step-by-step approach ensures that the right context (the specific album) is established before checking release details."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the U2 album produced by Danger Mouse.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the name of the U2 album produced by Danger Mouse.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the release details of the identified U2 album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the exclusive release location of the U2 album.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by retrieving general information about the U2 album produced by Danger Mouse. Once we have this information, we identify the specific name of the album. \n\nNext, we retrieve detailed release information for this album. Finally, we determine the specific location or platform where this album was exclusively released, concluding the desired information retrieval and reasoning process necessary to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Danger Mouse-produced U2 album is being referred to.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the release details of the identified U2 album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the specific location or platform where the Danger Mouse-produced U2 album was exclusively released from the release details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the specific U2 album produced by Danger Mouse, as U2 may have multiple albums. Once this album is identified, the graph progresses to retrieving detailed information about the release of this album. Finally, it concludes by deducing the specific location or platform where this album was exclusively released, using the information obtained from the previous step."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "node1",
+                    "instruction": "Identify the U2 album produced by Danger Mouse.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node2",
+                    "instruction": "Determine the exclusive release location or platform for the identified U2 album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "node1"
+                    ]
+                }
+            ],
+            "root_node_id": "node1",
+            "final_node_id": "node2"
+        },
+        "explanation": "The execution graph is designed to first retrieve information about which album U2 had produced by Danger Mouse. Once the specific album is identified, the next step is to find where it was exclusively released, completing the sequence needed to answer the initial question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify all U2 albums produced by Danger Mouse.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the exclusive release locations for the U2 album(s) identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts by retrieving and identifying all U2 albums produced by Danger Mouse. Then, it proceeds to find information about the exclusive release locations for these specific albums."
+    }
+]

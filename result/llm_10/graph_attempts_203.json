@@ -1,0 +1,176 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the title of the Eminem album where a singer featured on 'Unapologetic' contributed vocals.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve albums by Eminem and their collaborators.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about singers featured in the album 'Unapologetic'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify common singers between Eminem's collaborators and the artists featured on 'Unapologetic'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine which Eminem albums these common singers contributed to.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task is to find an Eminem album that features a singer who was also on the album 'Unapologetic'. First, retrieve data on Eminem's albums and his collaborators. Then, find out which artists sang on 'Unapologetic'. By intersecting these data sets, identify the common artist(s) and determine which Eminem album they contributed vocals to."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the singer who has an album titled 'Unapologetic'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find Eminem albums that include vocals from the identified singer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the question into two main tasks. First, it identifies which singer released an album called 'Unapologetic'. Then, it finds which Eminem albums feature vocals by this singer. The process involves retrieval of key information about albums and singers, followed by reasoning to connect this information to Eminem's discography."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify albums by Eminem.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the singer who released \"Unapologetic\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check which of Eminem's albums feature vocals from the identified singer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "3",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires finding a connection between Eminem's albums and a specific singer. First, we identify all Eminem's albums and determine the singer with an album titled \"Unapologetic,\" who is Rihanna. We then check which album by Eminem includes vocals from Rihanna, who is known for her album \"Unapologetic.\""
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the singer who released the album 'Unapologetic'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the albums by Eminem.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find other albums or songs by the singer identified in Node 1 that might include collaborations or vocals on other artists' albums.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify if any of the albums from Node 2 has credits for vocals from the singer identified in Node 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task into identifying key pieces of information from the provided data. Node 1 establishes who the singer of 'Unapologetic' is. Node 2 gathers a list of Eminem's albums. Node 3 explores other works by the identified singer to look for connections or collaborations. Node 4, the reasoning node, synthesizes these pieces by cross-referencing the albums from Node 2 with the collaborations found in Node 3 to identify any Eminem album credits that feature the singer from Node 1."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve Eminem's discography with details on guest vocalists for each album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the guest vocalists who participated in any of Eminem's albums.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which singers have a discography and find if any have an album titled 'Unapologetic'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the singer from Eminem's albums who released 'Unapologetic' and determine the specific Eminem album that included this singer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by retrieving Eminem's albums and identifying the guest vocalists (Node 1). We then focus on identifying these vocalists (Node 2) to check against those who have released an album called 'Unapologetic' (Node 3). The final reasoning step (Node 4) cross-references this information to provide the specific album of Eminem that included the singer with the 'Unapologetic' album."
+    }
+]

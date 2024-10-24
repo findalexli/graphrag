@@ -1,0 +1,303 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine which of these locations is closed.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Find mixed martial arts events that have taken place in closed hotels and casinos identified in the previous step.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The process starts with identifying the hotels and casinos on the Boardwalk in Atlantic City that were owned by Trump Entertainment Resorts. Next, I determine which ones of these are closed. Finally, I identify any mixed martial arts events held at those specific closed venues."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "Trump World's Fair\nTrump World's Fair at Trump Plaza was a hotel and casino in Atlantic City, New Jersey that occupied 280 feet of the Atlantic City boardwalk and was 21 floors in height. It had 500 guest rooms. It opened on April 14, 1981 as the Playboy Hotel and Casino, then changed its name in 1984 to Atlantis Hotel and Casino.",
+                "Trump Plaza Hotel and Casino\nTrump Plaza is a closed hotel and casino on the Boardwalk in Atlantic City, New Jersey, owned by Trump Entertainment Resorts. Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+                "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+                "Golden Nugget Atlantic City\nGolden Nugget Atlantic City is a hotel, casino, and marina located in Atlantic City, New Jersey. Opened in 1985 as Trump's Castle, it was renamed Trump Marina in 1997. Landry's, Inc. purchased the casino from Trump Entertainment Resorts in February 2011, and the sale was approved in late May. Landry's took control of the property on May 23, 2011.",
+                "The Atlantic Club Casino Hotel\nThe Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital. It was the city's first and only \"locals casino\". The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM. largely as a result of dwindling casino visitors to Atlantic City due to increased competition in neighboring states. A third of Atlantic City's boardwalk casinos closed the same year, the others being Revel, Trump Plaza, and Showboat. Redevelopment proposals include a water park.",
+                "UFC 50\nUFC 50: The War of '04 was a mixed martial arts event held by the Ultimate Fighting Championship on October 22, 2004, at the Trump Plaza in Atlantic City, New Jersey. The event was broadcast live on pay-per-view in the United States, and later released on DVD.",
+                "Dunes Hotel and Casino (Atlantic City)\nThe Dunes Hotel and Casino (Atlantic City) was a proposed hotel and casino that was to be built in Atlantic City, New Jersey in the late 1970s. It was initially proposed to consist of 504 hotel rooms and a 34,500 square foot casino located at Albany Avenue on the Boardwalk. It was to be the southern most hotel/casino on the Boardwalk, adjacent to the Golden Nugget Hotel & Casino. Due to financial and legal difficulties, the hotel was never completed and a casino license was never issued.",
+                "Sahara Boardwalk Hotel and Casino\nThe Sahara Boardwalk Hotel and Casino was a proposed hotel and casino that was to be built in the late 1970s and early 1980s in Atlantic City, New Jersey. The site of the proposed project was located at Albany Avenue and the Boardwalk, between the original Golden Nugget Hotel and Casino and the proposed Dunes Hotel and Casino (Atlantic City) project. However, because of financial and legal difficulties, construction of the hotel/casino was never completed and the site was sold in 1982.",
+                "TEN Atlantic City\nTEN (formerly Revel Casino Hotel Atlantic City) is a closed resort, hotel and casino in Atlantic City, New Jersey, United States. It is the northernmost casino on the Atlantic City Boardwalk, located on 20 acre of land, adjacent to the Showboat Hotel. Revel opened on April 2, 2012, and after declaring Chapter 11 bankruptcy for the second time, closed on September 2, 2014. Revel was the third of four Atlantic City casinos to close in 2014. It was supposed to open in June 2017 but it didn\u2019t.",
+                "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+                "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located."
+            ],
+            "thoughts": [
+                "The hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts are Trump Plaza Hotel and Casino, Trump World's Fair, and Trump Marina. These properties were part of the Trump Entertainment Resorts portfolio before the company filed for bankruptcy and were subsequently sold to other owners.",
+                "The closed location is Trump Plaza Hotel and Casino in Atlantic City, New Jersey.",
+                "UFC 50: The War of '04 was a mixed martial arts event held at the Trump Plaza in Atlantic City, New Jersey. This event took place in a closed hotel and casino, as the Trump Plaza Hotel and Casino ceased operations on September 16, 2014."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify locations owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve a list of mixed martial arts events that took place in Atlantic City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "From the list of Trump-owned locations, identify which are hotels and casinos that might have been closed at some point.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Correlate the list of hotels and casinos owned by Trump that might be closed with locations where the MMA events in Atlantic City took place.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "To answer the question, we first need to identify locations owned by Trump Entertainment Resorts in Atlantic City, particularly those that are both hotels and casinos, and may have been closed (Node 1). Simultaneously, we retrieve a list of all mixed martial arts events that occurred in Atlantic City (Node 2). Next, we filter the Trump-owned properties to include only those that are hotels and casinos and could have been closed at some time (Node 3). Finally, we match the MMA events with the Trump-owned locations to determine if any event took place at one of these closed hotels and casinos (Node 4). The result from Node 4 will provide the answer to the question."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "Trump Plaza Hotel and Casino\nTrump Plaza is a closed hotel and casino on the Boardwalk in Atlantic City, New Jersey, owned by Trump Entertainment Resorts. Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+                "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+                "Golden Nugget Atlantic City\nGolden Nugget Atlantic City is a hotel, casino, and marina located in Atlantic City, New Jersey. Opened in 1985 as Trump's Castle, it was renamed Trump Marina in 1997. Landry's, Inc. purchased the casino from Trump Entertainment Resorts in February 2011, and the sale was approved in late May. Landry's took control of the property on May 23, 2011.",
+                "Trump World's Fair\nTrump World's Fair at Trump Plaza was a hotel and casino in Atlantic City, New Jersey that occupied 280 feet of the Atlantic City boardwalk and was 21 floors in height. It had 500 guest rooms. It opened on April 14, 1981 as the Playboy Hotel and Casino, then changed its name in 1984 to Atlantis Hotel and Casino.",
+                "The Atlantic Club Casino Hotel\nThe Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital. It was the city's first and only \"locals casino\". The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM. largely as a result of dwindling casino visitors to Atlantic City due to increased competition in neighboring states. A third of Atlantic City's boardwalk casinos closed the same year, the others being Revel, Trump Plaza, and Showboat. Redevelopment proposals include a water park.",
+                "Caesars Atlantic City\nCaesars Atlantic City is a luxury hotel, casino, and spa resort in Atlantic City, New Jersey. Like Caesars Palace in Las Vegas, it has an ancient Roman and ancient Greek theme. Atlantic City's second casino, it opened in 1979 as the Caesars Boardwalk Regency. The 124720 sqft . casino has over 3,400 slot machines, and is one of the largest in Atlantic City. The resort has experienced much expansion and renovation in the past decade, including a new hotel tower, a new parking garage, and a new shopping center, Playground Pier. Known to many that visit Atlantic City as the present day \"Hub\" of the boardwalk.",
+                "Dunes Hotel and Casino (Atlantic City)\nThe Dunes Hotel and Casino (Atlantic City) was a proposed hotel and casino that was to be built in Atlantic City, New Jersey in the late 1970s. It was initially proposed to consist of 504 hotel rooms and a 34,500 square foot casino located at Albany Avenue on the Boardwalk. It was to be the southern most hotel/casino on the Boardwalk, adjacent to the Golden Nugget Hotel & Casino. Due to financial and legal difficulties, the hotel was never completed and a casino license was never issued.",
+                "TEN Atlantic City\nTEN (formerly Revel Casino Hotel Atlantic City) is a closed resort, hotel and casino in Atlantic City, New Jersey, United States. It is the northernmost casino on the Atlantic City Boardwalk, located on 20 acre of land, adjacent to the Showboat Hotel. Revel opened on April 2, 2012, and after declaring Chapter 11 bankruptcy for the second time, closed on September 2, 2014. Revel was the third of four Atlantic City casinos to close in 2014. It was supposed to open in June 2017 but it didn\u2019t.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+            ],
+            "thoughts": [
+                "Unfortunately, there is no specific information provided about mixed martial arts events that took place in Atlantic City.",
+                "The locations owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City are Trump Plaza Hotel and Casino, Trump World's Fair at Trump Plaza, and the now shuttered Trump Taj Mahal hotel and casino. Additionally, the Golden Nugget Atlantic City was previously owned by Trump Entertainment Resorts before being purchased by Landry's, Inc. in 2011.",
+                "The Trump Plaza Hotel and Casino, Trump World's Fair at Trump Plaza, and the Trump Taj Mahal hotel and casino are all locations that have been closed at some point.",
+                "Based on the information provided, it is not possible to correlate the list of hotels and casinos owned by Trump that might be closed with locations where the MMA events in Atlantic City took place, as there is no specific information available about the MMA events in Atlantic City. However, it is known that the Trump Plaza Hotel and Casino, Trump World's Fair at Trump Plaza, and the Trump Taj Mahal hotel and casino are all locations that have been closed at some point."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find closed hotels and casinos owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about events, specifically mixed martial arts, hosted at these closed venues.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify which of these events was a mixed martial arts event.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph begins with identifying relevant closed hotel and casino properties owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City. The next step is to gather information about any events, focusing on mixed martial arts, that were hosted in these locations. The final step isolates the specific event that matches the criteria of being a mixed martial arts event."
+            },
+            "recall": 0.3888888888888889,
+            "retrieved_passages": [
+                "Trump World's Fair\nTrump World's Fair at Trump Plaza was a hotel and casino in Atlantic City, New Jersey that occupied 280 feet of the Atlantic City boardwalk and was 21 floors in height. It had 500 guest rooms. It opened on April 14, 1981 as the Playboy Hotel and Casino, then changed its name in 1984 to Atlantis Hotel and Casino.",
+                "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+                "Trump Plaza Hotel and Casino\nTrump Plaza is a closed hotel and casino on the Boardwalk in Atlantic City, New Jersey, owned by Trump Entertainment Resorts. Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+                "The Atlantic Club Casino Hotel\nThe Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital. It was the city's first and only \"locals casino\". The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM. largely as a result of dwindling casino visitors to Atlantic City due to increased competition in neighboring states. A third of Atlantic City's boardwalk casinos closed the same year, the others being Revel, Trump Plaza, and Showboat. Redevelopment proposals include a water park.",
+                "Golden Nugget Atlantic City\nGolden Nugget Atlantic City is a hotel, casino, and marina located in Atlantic City, New Jersey. Opened in 1985 as Trump's Castle, it was renamed Trump Marina in 1997. Landry's, Inc. purchased the casino from Trump Entertainment Resorts in February 2011, and the sale was approved in late May. Landry's took control of the property on May 23, 2011.",
+                "TEN Atlantic City\nTEN (formerly Revel Casino Hotel Atlantic City) is a closed resort, hotel and casino in Atlantic City, New Jersey, United States. It is the northernmost casino on the Atlantic City Boardwalk, located on 20 acre of land, adjacent to the Showboat Hotel. Revel opened on April 2, 2012, and after declaring Chapter 11 bankruptcy for the second time, closed on September 2, 2014. Revel was the third of four Atlantic City casinos to close in 2014. It was supposed to open in June 2017 but it didn\u2019t.",
+                "Dunes Hotel and Casino (Atlantic City)\nThe Dunes Hotel and Casino (Atlantic City) was a proposed hotel and casino that was to be built in Atlantic City, New Jersey in the late 1970s. It was initially proposed to consist of 504 hotel rooms and a 34,500 square foot casino located at Albany Avenue on the Boardwalk. It was to be the southern most hotel/casino on the Boardwalk, adjacent to the Golden Nugget Hotel & Casino. Due to financial and legal difficulties, the hotel was never completed and a casino license was never issued.",
+                "Sahara Boardwalk Hotel and Casino\nThe Sahara Boardwalk Hotel and Casino was a proposed hotel and casino that was to be built in the late 1970s and early 1980s in Atlantic City, New Jersey. The site of the proposed project was located at Albany Avenue and the Boardwalk, between the original Golden Nugget Hotel and Casino and the proposed Dunes Hotel and Casino (Atlantic City) project. However, because of financial and legal difficulties, construction of the hotel/casino was never completed and the site was sold in 1982.",
+                "Caesars Atlantic City\nCaesars Atlantic City is a luxury hotel, casino, and spa resort in Atlantic City, New Jersey. Like Caesars Palace in Las Vegas, it has an ancient Roman and ancient Greek theme. Atlantic City's second casino, it opened in 1979 as the Caesars Boardwalk Regency. The 124720 sqft . casino has over 3,400 slot machines, and is one of the largest in Atlantic City. The resort has experienced much expansion and renovation in the past decade, including a new hotel tower, a new parking garage, and a new shopping center, Playground Pier. Known to many that visit Atlantic City as the present day \"Hub\" of the boardwalk."
+            ],
+            "thoughts": [
+                "Closed hotels and casinos owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City include:\n\n1. Trump Plaza Hotel and Casino - closed on September 16, 2014\n2. Trump World's Fair at Trump Plaza - closed\n3. Trump Marina (formerly Trump's Castle) - sold to Landry's, Inc. in 2011\n4. Trump Taj Mahal - closed\n5. The Atlantic Club Casino Hotel - closed on January 13, 2014\n6. TEN Atlantic City (formerly Revel Casino Hotel) - closed on September 2, 2014\n\nAdditionally, the Dunes Hotel and Casino, a proposed project, was never completed and a casino license was never issued.",
+                "Unfortunately, there is no specific information available about mixed martial arts events hosted at the closed venues mentioned. It is possible that these venues may have hosted such events in the past, but without specific details, it is difficult to provide information about them.",
+                "Without specific information about the events at the mentioned venues, it is not possible to identify which event was a mixed martial arts event."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve historical events or MMA events held at the identified location(s).",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Filter the events to find those that were 'closed' to some extent, such as private events, limited audiences, or other restrictions.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task requires finding an MMA event held at a specific location, owned by Trump Entertainment Resorts. The graph starts by identifying potential locations (Node 1), then retrieves events related to those locations (Node 2). Finally, it filters these events to find any that were held in a 'closed' manner (Node 3), corresponding to the question's requirements."
+            },
+            "recall": 0.7222222222222222,
+            "retrieved_passages": [
+                "Trump World's Fair\nTrump World's Fair at Trump Plaza was a hotel and casino in Atlantic City, New Jersey that occupied 280 feet of the Atlantic City boardwalk and was 21 floors in height. It had 500 guest rooms. It opened on April 14, 1981 as the Playboy Hotel and Casino, then changed its name in 1984 to Atlantis Hotel and Casino.",
+                "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+                "Trump Plaza Hotel and Casino\nTrump Plaza is a closed hotel and casino on the Boardwalk in Atlantic City, New Jersey, owned by Trump Entertainment Resorts. Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+                "Golden Nugget Atlantic City\nGolden Nugget Atlantic City is a hotel, casino, and marina located in Atlantic City, New Jersey. Opened in 1985 as Trump's Castle, it was renamed Trump Marina in 1997. Landry's, Inc. purchased the casino from Trump Entertainment Resorts in February 2011, and the sale was approved in late May. Landry's took control of the property on May 23, 2011.",
+                "The Atlantic Club Casino Hotel\nThe Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital. It was the city's first and only \"locals casino\". The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM. largely as a result of dwindling casino visitors to Atlantic City due to increased competition in neighboring states. A third of Atlantic City's boardwalk casinos closed the same year, the others being Revel, Trump Plaza, and Showboat. Redevelopment proposals include a water park.",
+                "UFC 50\nUFC 50: The War of '04 was a mixed martial arts event held by the Ultimate Fighting Championship on October 22, 2004, at the Trump Plaza in Atlantic City, New Jersey. The event was broadcast live on pay-per-view in the United States, and later released on DVD.",
+                "Dunes Hotel and Casino (Atlantic City)\nThe Dunes Hotel and Casino (Atlantic City) was a proposed hotel and casino that was to be built in Atlantic City, New Jersey in the late 1970s. It was initially proposed to consist of 504 hotel rooms and a 34,500 square foot casino located at Albany Avenue on the Boardwalk. It was to be the southern most hotel/casino on the Boardwalk, adjacent to the Golden Nugget Hotel & Casino. Due to financial and legal difficulties, the hotel was never completed and a casino license was never issued.",
+                "Sahara Boardwalk Hotel and Casino\nThe Sahara Boardwalk Hotel and Casino was a proposed hotel and casino that was to be built in the late 1970s and early 1980s in Atlantic City, New Jersey. The site of the proposed project was located at Albany Avenue and the Boardwalk, between the original Golden Nugget Hotel and Casino and the proposed Dunes Hotel and Casino (Atlantic City) project. However, because of financial and legal difficulties, construction of the hotel/casino was never completed and the site was sold in 1982.",
+                "TEN Atlantic City\nTEN (formerly Revel Casino Hotel Atlantic City) is a closed resort, hotel and casino in Atlantic City, New Jersey, United States. It is the northernmost casino on the Atlantic City Boardwalk, located on 20 acre of land, adjacent to the Showboat Hotel. Revel opened on April 2, 2012, and after declaring Chapter 11 bankruptcy for the second time, closed on September 2, 2014. Revel was the third of four Atlantic City casinos to close in 2014. It was supposed to open in June 2017 but it didn\u2019t.",
+                "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+                "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form."
+            ],
+            "thoughts": [
+                "The hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts are Trump Plaza Hotel and Casino, Trump World's Fair, and Trump Marina. These properties were owned and operated by Trump Entertainment Resorts, Inc. before they were closed.",
+                "1. Trump Plaza Hotel and Casino in Atlantic City, New Jersey hosted the UFC 50: The War of '04 mixed martial arts event on October 22, 2004.\n\n2. Trump Tower in New York City was the location of a meeting on June 9, 2016, between senior members of Donald Trump's presidential campaign and Russian lawyer Natalia Veselnitskaya, among others.",
+                "1. UFC 50: The War of '04 mixed martial arts event at Trump Plaza Hotel and Casino in Atlantic City, New Jersey - This event was closed to the public and limited to ticket holders only.\n\n2. Meeting at Trump Tower in New York City on June 9, 2016 - This event was closed to the public and limited to specific individuals involved in the meeting."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify any notable hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "List mixed martial arts events that have been held in Atlantic City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Filter the list of mixed martial arts events to find those that took place at a property identified as a hotel and casino owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph starts by identifying the properties owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City. Parallel to this, it retrieves a list of mixed martial arts events held in Atlantic City. The final step is to match these events with the identified property to find the specific event held at the location described in the query."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Trump Plaza Hotel and Casino\nTrump Plaza is a closed hotel and casino on the Boardwalk in Atlantic City, New Jersey, owned by Trump Entertainment Resorts. Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+                "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+                "The Atlantic Club Casino Hotel\nThe Atlantic Club Casino Hotel, formerly known as Golden Nugget, Bally's Grand, Atlantic City Hilton and ACH, is a closed casino and hotel located at the southern end of the boardwalk in Atlantic City, New Jersey, owned and operated by Colony Capital. It was the city's first and only \"locals casino\". The Atlantic Club permanently closed on January 13, 2014, at 12:01 AM. largely as a result of dwindling casino visitors to Atlantic City due to increased competition in neighboring states. A third of Atlantic City's boardwalk casinos closed the same year, the others being Revel, Trump Plaza, and Showboat. Redevelopment proposals include a water park.",
+                "Golden Nugget Atlantic City\nGolden Nugget Atlantic City is a hotel, casino, and marina located in Atlantic City, New Jersey. Opened in 1985 as Trump's Castle, it was renamed Trump Marina in 1997. Landry's, Inc. purchased the casino from Trump Entertainment Resorts in February 2011, and the sale was approved in late May. Landry's took control of the property on May 23, 2011.",
+                "Trump World's Fair\nTrump World's Fair at Trump Plaza was a hotel and casino in Atlantic City, New Jersey that occupied 280 feet of the Atlantic City boardwalk and was 21 floors in height. It had 500 guest rooms. It opened on April 14, 1981 as the Playboy Hotel and Casino, then changed its name in 1984 to Atlantis Hotel and Casino.",
+                "TEN Atlantic City\nTEN (formerly Revel Casino Hotel Atlantic City) is a closed resort, hotel and casino in Atlantic City, New Jersey, United States. It is the northernmost casino on the Atlantic City Boardwalk, located on 20 acre of land, adjacent to the Showboat Hotel. Revel opened on April 2, 2012, and after declaring Chapter 11 bankruptcy for the second time, closed on September 2, 2014. Revel was the third of four Atlantic City casinos to close in 2014. It was supposed to open in June 2017 but it didn\u2019t.",
+                "Steve Wynn\nStephen Alan Wynn (\"n\u00e9\" Weinberg; born January 27, 1942) is an American real estate businessman and art collector. He is known for his involvement in the American luxury casino and hotel industry. Early in his career he oversaw the construction and operation of several notable Las Vegas and Atlantic City hotels, including the Golden Nugget, the Golden Nugget Atlantic City, The Mirage, Treasure Island, the Bellagio, and Beau Rivage in Mississippi, and he played a pivotal role in the resurgence and expansion of the Las Vegas Strip in the 1990s. In 2000, Wynn sold his company Mirage Resorts to MGM Grand Inc., resulting in the formation of MGM Mirage (now MGM Resorts International). Wynn afterwards took his company Wynn Resorts public in an initial public offering, and he remains Wynn Resorts' CEO and Chairman of the Board. He is a member of the Republican Party. Wynn is the finance chair of the Republican National Committee (RNC) since 2017.",
+                "Mirage Resorts\nMirage Resorts (formerly Golden Nugget Companies) was an American company that owned and operated hotel-casinos. It was acquired by MGM Grand, Inc. in 2000, forming MGM Mirage (now MGM Resorts International).",
+                "UFC 50\nUFC 50: The War of '04 was a mixed martial arts event held by the Ultimate Fighting Championship on October 22, 2004, at the Trump Plaza in Atlantic City, New Jersey. The event was broadcast live on pay-per-view in the United States, and later released on DVD.",
+                "Wallid Ismail\nWallid Farid Ismail (born February 23, 1968) is a Brazilian mixed martial artist and promoter. Ismail holds a black belt in Brazilian jiu-jitsu (BJJ) under Carlson Gracie, and is an IVC mixed martial arts world champion and BJJ Champion. In mixed martial arts, Ismail also competed for the UFC, and PRIDE, and most of wins in the sport came by way of submission.",
+                "Matt Thornton (martial artist)\nMatt Thornton (born March 25, 1969) is a martial arts athlete, trainer, and founder of Straight Blast Gym International, an association of over 35 gyms worldwide engaged in training athletes in Brazilian jiu-jitsu, boxing and mixed martial arts.",
+                "M-1 Global\nM-1 Global (Mixfight-1) or MMA-1 (Mixed martial arts-1) is a mixed martial arts promotion based in St. Petersburg, Russia which organizes between 10 and 20 competitions per year. The public faces of M-1 Global are President, Vadim Finkelstein and part-owner Fedor Emelianenko.",
+                "John Kavanagh (martial artist)\nJohn Raymond Kavanagh (born January 18, 1977) is an Irish martial arts coach, brazilian jiu-jitsu practitioner and former professional mixed martial artist. His students include fighters such as Conor McGregor and Gunnar Nelson.",
+                "Anderson Silva\nAnderson da Silva (] ; born April 14, 1975) is a Brazilian mixed martial artist and former UFC Middleweight Champion. Silva holds the longest title streak in UFC history, which ended in 2013 after 2,457 days, with 16 consecutive wins and 10 title defenses. He has 13 post-fight bonuses, the second most in UFC history. UFC president Dana White and several mixed-martial-arts publications have called Silva the greatest mixed martial artist of all time. He is currently ranked the #6 contender in official UFC middleweight rankings.",
+                "Ant\u00f4nio Silva (fighter)\nAnt\u00f4nio Carlos Silva (born September 14, 1979) is a Brazilian mixed martial artist who formerly competed in the heavyweight division of the UFC. He is a former EliteXC Heavyweight Champion, a former Cage Rage World Heavyweight Champion and a former Cage Warriors Super Heavyweight Champion. He has also competed for K-1 Hero's, BodogFIGHT, Strikeforce and World Victory Road. Known for being one of the five men (along with Tsuyoshi Kohsaka, Fabr\u00edcio Werdum, Dan Henderson, and Matt Mitrione) to defeat Fedor Emelianenko in mixed martial arts competition.",
+                "Milton Vieira\nMilton Vieira (born October 10, 1978) is a Brazilian mixed martial artist currently competing as a Featherweight. Vieira is widely credited as the inventor of the anaconda choke. Vieira is a Brazilian jiu-jitsu black belt under Murilo Bustamante and competed in several top grappling competitions including Grapplers Quest and appeared at the 2007 ADCC World Championship and also the 2009 ADCC World Championship. In mixed martial arts, he has competed for the UFC, PRIDE, Strikeforce, DEEP, M-1 Global, and Shooto. He is stated to be the inventor of the anaconda choke from his days in Luta Livre."
+            ],
+            "thoughts": [
+                "Notable hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts include Trump Plaza Hotel and Casino, Trump World's Fair, and the now shuttered Trump Taj Mahal. Additionally, the Golden Nugget Atlantic City was previously owned by Trump Entertainment Resorts before being purchased by Landry's, Inc. Other notable hotels and casinos in the area include the Atlantic Club Casino Hotel, TEN Atlantic City, and properties associated with Steve Wynn and Mirage Resorts.",
+                "1. UFC 50: The War of '04 - October 22, 2004 at Trump Plaza\n2. M-1 Global - Multiple events held in Atlantic City\n3. Various fighters such as Wallid Ismail, Matt Thornton, John Kavanagh, Anderson Silva, Ant\u00f4nio Silva, and Milton Vieira have competed in Atlantic City in events such as UFC, PRIDE, Strikeforce, and more.",
+                "Based on the upstream tasks, the filtered list of mixed martial arts events that took place at a property owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City includes:\n\n1. UFC 50: The War of '04 - October 22, 2004 at Trump Plaza"
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify any notable hotels and casinos on the Boardwalk in Atlantic City owned by Trump Entertainment Resorts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List mixed martial arts events that have been held in Atlantic City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Filter the list of mixed martial arts events to find those that took place at a property identified as a hotel and casino owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the properties owned by Trump Entertainment Resorts on the Boardwalk in Atlantic City. Parallel to this, it retrieves a list of mixed martial arts events held in Atlantic City. The final step is to match these events with the identified property to find the specific event held at the location described in the query."
+    },
+    "best_recall": 0.8333333333333334
+}

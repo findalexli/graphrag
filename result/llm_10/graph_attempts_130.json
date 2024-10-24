@@ -1,0 +1,201 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out if Eddie Jemison was part of the television series 'IZombie'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the premiere date of the television series 'IZombie'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Confirm whether Eddie Jemison had a role in 'IZombie'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the confirmation of Eddie Jemison's role with the premiere date of 'IZombie'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph starts by retrieving and confirming if Eddie Jemison had a role in 'IZombie' and in parallel retrieves the premiere date of the series. Then it combines the confirmation of Eddie Jemison's role with the retrieved premiere date to provide the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Eddie Jemison's roles in television series.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the television series 'IZombie' from Eddie Jemison's roles.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve detailed information about the television series 'IZombie', including its premiere date.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the premiere date of 'IZombie' from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine information to confirm Eddie Jemison's role in 'IZombie' and present the premiere date of the series.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts with retrieving information about Eddie Jemison's roles in television series (Node 1). Then, it identifies the specific role in 'IZombie' (Node 2) separately from retrieving information about the series itself, including its premiere date (Node 3). The premiere date is extracted from this data (Node 4). Finally, all information is combined to confirm Jemison's role in 'IZombie' and present the series' premiere date (Node 5)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the complete list of roles Eddie Jemison has played in TV series.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "From the list of roles, check if Eddie Jemison played a role in the series 'IZombie'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the television series 'IZombie', specifically its premiere date.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify Eddie Jemison's role in 'IZombie' and identify the premiere date of the show.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph first checks for Eddie Jemison's roles in TV series to confirm his participation in 'IZombie'. In parallel, the graph retrieves general information about the series, including its premiere date. The final step synthesizes this information to validate his role and pinpoint the premiere date of 'IZombie'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find information about Eddie Jemison's roles in television series, focusing on 'IZombie'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the premiere date of the television series 'IZombie'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify that Eddie Jemison had a role in 'IZombie' from the retrieved data.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the information from nodes 2 and 3 to provide the premiere date of 'IZombie' confirming Eddie Jemison was part of it.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by retrieving data about Eddie Jemison's roles in TV series, specifically searching for 'IZombie'. Simultaneously, it retrieves the premiere date of 'IZombie'. Once the retrieval steps are complete, it verifies Jemison's participation in 'IZombie' before synthesizing the premiere date associated with his role."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine which television series Eddie Jemison appeared in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the premiere date of the television series 'IZombie'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if 'IZombie' is one of the television series identified in Eddie Jemison's filmography.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Provide the premiere date of 'IZombie' if it matches with Eddie Jemison's filmography.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is designed to first retrieve Eddie Jemison's filmography to verify if he appeared in 'IZombie'. Simultaneously, it retrieves the premiere date of 'IZombie'. The reasoning step checks the intersection of Jemison's roles with 'IZombie', and finally, if he indeed had a role, it confirms the premiere date as the answer."
+    }
+]

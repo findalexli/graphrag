@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify large-scale, low strength fortification units of Germany that were disbanded in 1919.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the names of these units, focusing on the fortification unit.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Research the historical figure or concept after whom this fortification unit was named.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The first step is to identify German fortification units relevant to the query, focusing on those disbanded in 1919. Once identified, the next step determines the specific unit with the characteristics outlined, clarifying its name. In the final step, historical research reveals the entity that inspired the unit's name, providing the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the fortification unit of Germany that was disbanded in 1919.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the historical context and background of the identified fortification unit.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify who the fortification unit was named after.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying the specific fortification unit of Germany that was disbanded in 1919. Once identified, historical details and significance are gathered to provide context, including when and why it was established and disbanded. Following this, the graph focuses on determining who the unit was named after, thus answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Germany's large-scale, low strength fortification unit that was disbanded in 1919.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Once the unit is identified, find out after whom the unit was named.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is to find the name of the German fortification unit that was disbanded in 1919 and then determine who it was named after. First, retrieve and identify the unit, which based on historical context is likely to be the Siegfried Line or a similar entity. Then, a subsequent retrieval step is required to ascertain the origin of the name, typically a historical or mythological figure."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the name of Germany's large-scale, low strength fortification unit disbanded in 1919.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research who the unit from step 1 was named after.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins by identifying the name of the German fortification unit, as knowing the exact name is crucial to further search for who it was named after. Once the name is determined, the next step is to find out who this unit was named after, effectively providing the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Germany's large-scale, low strength fortification unit disbanded in 1919.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the name of the fortification unit identified in step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out who the fortification unit, identified in step 2, was named after.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question by first identifying which German fortification unit matches the description of being disbanded in 1919. Then, it clarifies the name of this unit before finally determining who the unit was named after. Each step is built on information gathered in the previous steps, leading logically to the final answer."
+    }
+]

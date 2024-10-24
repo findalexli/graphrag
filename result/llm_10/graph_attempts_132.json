@@ -1,0 +1,160 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find which NHL team drafted Kaspars Astasenko in 1999.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find which team won the Stanley Cup in the 2003-04 NHL season.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the team that drafted Kaspars Astasenko in 1999 is the same as the team that won the Stanley Cup in 2003-04.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Conclude which team both drafted Kaspars Astasenko in 1999 and won the Stanley Cup in 2003-04, based on the previous results.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is structured to first independently determine which team drafted Kaspars Astasenko in 1999 and which team won the Stanley Cup in 2003-04. Once these independent pieces of information are retrieved, a reasoning node checks if the team that drafted Astasenko also won the Stanley Cup in the specified season. Finally, a concluding reasoning step synthesizes this information to directly answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find which NHL team drafted Kaspars Astasenko in 1999.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the NHL team that won the Stanley Cup in the 2003-04 season.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the team that drafted Kaspars Astasenko in 1999 is the same team that won the Stanley Cup in the 2003-04 season.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with two independent retrieval tasks: identifying the NHL team that drafted Kaspars Astasenko in 1999, and identifying the team that won the Stanley Cup in the 2003-04 season. Once these pieces of information are retrieved, a reasoning step compares the two teams to determine if they are the same."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find which NHL team drafted Kaspars Astasenko in 1999.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which NHL team won the Stanley Cup in the 2003-04 season.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the team that drafted Kaspars Astasenko in 1999 is the same team that won the Stanley Cup in 2003-04.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into two distinct information retrieval tasks: identifying the NHL team that drafted Kaspars Astasenko in 1999, and finding out which team won the Stanley Cup in the 2003-04 season. The final reasoning node checks if the same team appears in both findings to provide an answer to the original complex query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find which NHL team drafted Kaspars Astasenko in 1999.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find which NHL team won the Stanley Cup in the 2003-04 season.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the team that drafted Kaspars Astasenko in 1999 also won the Stanley Cup in the 2003-04 season.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is divided into two main retrieval steps: one to find which NHL team drafted Kaspars Astasenko in 1999, and another to find which team won the Stanley Cup in the 2003-04 season. The final reasoning step compares the outcomes of these two retrieval tasks to determine if the same team fulfills both criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the NHL team that drafted Kaspars Astasenko in 1999.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which NHL team won the Stanley Cup in the 2003-04 season.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the team that drafted Kaspars Astasenko in 1999 is the same as the team that won the Stanley Cup in 2003-04.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into distinct nodes. The first node retrieves information about which team drafted Kaspars Astasenko. The second node retrieves information about the NHL team that won the Stanley Cup in 2003-04. The third node reasons whether the same team is responsible for both actions, providing the answer to the original question by synthesizing the information obtained from the first two nodes."
+    }
+]

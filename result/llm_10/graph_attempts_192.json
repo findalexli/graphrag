@@ -1,0 +1,125 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the album on which the song 'The Fixer' appears.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the producer of the album found in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph first retrieves which album 'The Fixer' appears on. Once we have the album name, the second step involves retrieving the producer of that specific album. This sequence ensures that each step logically follows the previous one to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which band or artist performed the song 'The Fixer'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which album includes the song 'The Fixer'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify who produced the album that includes 'The Fixer'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The process begins with identifying the performer of the song 'The Fixer', as this will guide us to the correct album. Once the album is identified, the next step is to determine the producer of that specific album, leading us to the final answer. Each step relies on the information gathered from the previous, ensuring logical flow and use of retrieval and reasoning."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the album which features the song 'The Fixer'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the producer(s) of the identified album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "To find out who produced the album featuring the song 'The Fixer', we start by identifying which album contains the song. Once we have the name of the album, we can then find out who produced it."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the album on which the song 'The Fixer' appears.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the producer(s) of the identified album from Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The question requires finding the producer of the album containing the song 'The Fixer'. The process involves first identifying the album associated with the song (Node 1). Once the album is identified, we retrieve information regarding its producer(s) (Node 2). This sequence ensures that we correctly identify the album before seeking details about its production."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out which album the song 'The Fixer' is from.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the producer of the album that 'The Fixer' is from.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into two steps: first, identifying the album that contains the song 'The Fixer', and second, retrieving information about who produced that album. Each step depends on the completion of the previous one, creating a sequential flow between finding the album and identifying the producer."
+    }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve size information about the Griffon Bruxellois breed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve size information about the English Mastiff breed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the size of Griffon Bruxellois to English Mastiff using the retrieved data.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine which dog is bigger, we first retrieve size information for both breeds. Then, we compare the sizes using this data."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find size data for the Griffon Bruxellois breed, including typical weight and height ranges.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find size data for the English Mastiff breed, including typical weight and height ranges.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the size data obtained for Griffon Bruxellois and English Mastiff to determine which breed is larger based on weight and height.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two retrieval steps to gather size data for both dog breeds independently. Then, a reasoning step compares the gathered data to determine which breed is larger. The comparison node synthesizes the information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve average size (height and weight) for Griffon Bruxellois.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve average size (height and weight) for English Mastiff.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the average height and weight of Griffon Bruxellois and English Mastiff to determine which is bigger.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine which dog, Griffon Bruxellois or English Mastiff, is bigger, the graph first retrieves average size data for each breed separately. Once the relevant data about their sizes is retrieved, a reasoning step compares their sizes to provide the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the size (height, weight) of the Griffon Bruxellois dog breed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the size (height, weight) of the English Mastiff dog breed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the size information of the Griffon Bruxellois to the English Mastiff to determine which breed is bigger.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks the task into steps to determine the sizes of each dog breed individually and compare them to conclude which breed is bigger. The process starts by retrieving size-related information for both the Griffon Bruxellois and the English Mastiff independently, and then uses reasoning to compare these details and determine the larger breed."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the size of Griffon Bruxellois.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the size of English Mastiff.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the size information of Griffon Bruxellois and English Mastiff to determine which is bigger.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into two main retrieval nodes, each tasked with gathering size information on the Griffon Bruxellois and English Mastiff. Once the information is retrieved, the final reasoning node compares the sizes to determine which dog breed is bigger."
+    }
+]

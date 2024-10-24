@@ -1,0 +1,216 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the location for 111 Murray Street.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the location for 220 Central Park South.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the location of 111 Murray Street is in Manhattan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check if the location of 220 Central Park South is in Manhattan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if both 111 Murray Street and 220 Central Park South are located in Manhattan based on the previous checks.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task into retrieving the locations of both addresses and then reasoning about their relation to Manhattan. Nodes 1 and 2 retrieve locations for both addresses in parallel. Nodes 3 and 4 check if these addresses are in Manhattan separately. Finally, Node 5 synthesizes these findings to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the location of 111 Murray Street.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the location of 220 Central Park South.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if 111 Murray Street is located in Manhattan based on retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 220 Central Park South is located in Manhattan based on retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Analyze results to conclude if both 111 Murray Street and 220 Central Park South are in Manhattan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task of determining if both addresses are located in Manhattan. The retrieval nodes (1 and 2) gather location data for the two addresses. Reasoning nodes (3 and 4) then ascertain whether each specific address is in Manhattan based on the retrieved locations. Finally, node 5 synthesizes the results to answer the main question of whether both are located in Manhattan."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the location of 111 Murray Street.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the location of 220 Central Park South.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if 111 Murray Street is in Manhattan using the retrieved location.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 220 Central Park South is in Manhattan using the retrieved location.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Conclude whether both addresses are located in Manhattan based on previous determinations.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task into retrieving locations for both addresses and then reasoning if each is in Manhattan. Finally, it concludes if both are in Manhattan based on the results."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the location of 111 Murray Street.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the location of 220 Central Park South.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if 111 Murray Street is located in Manhattan based on its location information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 220 Central Park South is located in Manhattan based on its location information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to determine if both addresses are located in Manhattan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task into several steps. First, we need to retrieve the location information for each address separately (nodes 1 and 2). Once we have the location data, we reason independently to verify if each address is in Manhattan (nodes 3 and 4). Finally, the final node (5) combines the results of these evaluations to answer whether both addresses are in Manhattan."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Verify the location of 111 Murray Street.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify the location of 220 Central Park South.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if both addresses, 111 Murray Street and 220 Central Park South, are located in Manhattan based on retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph for this task involves two retrieval steps to independently verify the locations of each address. These two steps can be executed in parallel since they are independent. Once the locations are retrieved, a reasoning step follows to synthesize the information and determine if both addresses are in Manhattan."
+    }
+]

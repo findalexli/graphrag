@@ -1,0 +1,204 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Ali Eren Bal\u0131kel is and gather information about his restaurant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find a list of famous figures who visited Ali Eren Bal\u0131kel's restaurant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify any English actor from the list of famous figures found in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Gather information about the identified English actor, focusing on their awards and achievements.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine what the English actor won three consecutive times based on the information gathered in step 4.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by identifying Ali Eren Bal\u0131kel and his restaurant to establish context and potential sources of information. It then retrieves the list of famous figures who visited, identifying any English actors among them. Once an actor is identified, it gathers detailed information about their awards and achievements to determine what they won three consecutive times. The final node synthesizes this information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the restaurant started by Ali Eren Bal\u0131kel and list any famous figures who visited.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the famous figures from the list who visited the restaurant and determine their professions or notable achievements.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out if there is an English actor among the famous figures identified and determine their notable achievements.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check if the English actor has won any consecutive awards and specify what those awards are.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by retrieving information about the restaurant started by Ali Eren Bal\u0131kel, specifically focusing on famous figures. Once these figures are identified, the next step is to gather more details about their professions or achievements. We then highlight if any of these figures are English actors and determine their notable achievements. The final step involves searching for the specific consecutive awards won by the English actor, which provides the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find information about Ali Eren Bal\u0131kel starting a restaurant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify famous figures who visited the restaurant started by Ali Eren Bal\u0131kel.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve a list of English actors who won three consecutive awards in any category.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the English actor from the famous figures who visited the restaurant and determine the specific award they won three consecutive times.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins with identifying information about Ali Eren Bal\u0131kel's restaurant (Node 1), followed by identifying the famous figures who visited (Node 2). In parallel, a general search for English actors who have won three consecutive awards is performed (Node 3). Finally, the reasoning step (Node 4) synthesizes the retrieved data to determine which English actor, among the visitors, won a specific award three times consecutively."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the restaurant started by Ali Eren Bal\u0131kel and gather a list of famous figures it hosted.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "From the list of famous figures, identify the English actor who was hosted at the restaurant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the English actor's notable achievements to identify any awards won three consecutive times.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is structured to first identify the restaurant and the list of famous figures it hosted. Once the list is obtained, the focus shifts to identifying specifically the English actor mentioned in the question. Finally, the graph seeks to find this actor's noteworthy achievements, focusing on any awards won three consecutive times, to answer the original query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the restaurant started by Ali Eren Bal\u0131kel.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about famous figures hosted by Ali Eren Bal\u0131kel's restaurant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the English actors among the famous figures hosted by the restaurant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if any identified English actor won three consecutive awards.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Check which specific award was won consecutively by the English actor, if applicable.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task of identifying the award won consecutively by an English actor hosted at Ali Eren Bal\u0131kel's restaurant. It begins by identifying the relevant restaurant, retrieves the list of hosted figures, filters for English actors, checks for any actor winning three consecutive awards, and finally identifies the particular award, if applicable."
+    }
+]

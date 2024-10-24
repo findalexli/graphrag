@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify plays written by Evgeny Schwartz.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify plays directed by Benno Besson.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the intersection of plays identified in nodes 1 and 2 to determine which play was both written by Evgeny Schwartz and directed by Benno Besson.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task involves identifying a common play associated with two different individuals: Evgeny Schwartz as the writer and Benno Besson as the director. The process is broken into two independent retrieval steps: one for works by Schwartz and another for works directed by Besson. The final reasoning step synthesizes the information to find the common play."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve a list of plays written by Evgeny Schwartz.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about plays directed by Benno Besson.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the common play title(s) found in the lists from Nodes 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph first gathers all plays written by Evgeny Schwartz and those directed by Benno Besson. The reasoning step then finds the intersection of these two lists to determine which play fits both criteria, i.e., being written by Schwartz and directed by Besson."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify plays written by Evgeny Schwartz.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify plays directed by Benno Besson.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the common play from the lists of plays written by Evgeny Schwartz and directed by Benno Besson.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine the play written by Evgeny Schwartz and directed by Benno Besson, the task is broken down into two primary retrieval tasks followed by a reasoning step. The first step identifies all plays written by Evgeny Schwartz. The second step identifies all plays that have been directed by Benno Besson. The final step then involves reasoning to find the intersection between these two sets of plays, yielding the play that satisfies both conditions."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify plays written by Evgeny Schwartz",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify plays directed by Benno Besson",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find common plays between those written by Evgeny Schwartz and directed by Benno Besson",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires finding a common element between two sets: plays by Evgeny Schwartz and plays directed by Benno Besson. The execution graph starts with two retrieval tasks (Node 1 and Node 2) to get the lists of plays associated with each individual. Node 3 is a reasoning task that identifies the intersection of these two sets to find the play that meets both criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify plays written by Evgeny Schwartz.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify plays directed by Benno Besson.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the common play that appears in both the list of plays written by Evgeny Schwartz and the list of plays directed by Benno Besson.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the original question into two retrieval tasks: (1) retrieving plays authored by Evgeny Schwartz, and (2) retrieving plays directed by Benno Besson. The final reasoning step involves comparing the two lists to determine the common play that fits both criteria."
+    }
+]

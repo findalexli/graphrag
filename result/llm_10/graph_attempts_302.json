@@ -1,0 +1,155 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify key information about North American Aviation, specifically its history and the products it developed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for a list of aircraft developed or manufactured by North American Aviation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "From the list of aircraft developed by North American Aviation, identify which ones were used as single-engined training aircraft.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Verify the use and specifications of the identified single-engined training aircraft to ensure it matches the context of use as a training aircraft.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph involves initial retrieval of general information about North American Aviation, followed by identifying specific aircraft developed by the company. Further reasoning is applied to isolate single-engined training aircraft, and verification ensures it is commonly acknowledged and fits the necessary specifications for a training aircraft."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the noteworthy aircraft created by North American Aviation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Filter the identified aircraft to find the single-engined training aircraft.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks the task into two main parts: first, retrieving all aircraft created by North American Aviation, and second, filtering this list to identify which one is a single-engined training aircraft. By structuring the graph this way, we ensure that we first gather all potentially relevant data before narrowing it down to the specific aircraft of interest."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify historical aircraft manufacturers, particularly focusing on North American Aviation's contributions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of single-engined training aircraft developed by North American Aviation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the retrieved list to identify which aircraft is a training model and ensure it is specifically a single-engined design.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by retrieving historical data on aircraft manufacturers to narrow down contributions by North American Aviation (Node 1). Then, it focuses on obtaining a list of single-engined training aircraft developed by North American Aviation (Node 2). Finally, the reasoning step identifies the specific aircraft from this list, confirming that it meets both criteria of being single-engined and used as a training aircraft (Node 3)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about North American Aviation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify aircraft created by North American Aviation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Filter the list of aircraft to identify single-engined training aircraft.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which single-engined training aircraft was created by North American Aviation.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by retrieving information about North American Aviation to understand the company's range of created aircraft. This involves identifying all aircraft associated with the company. Next, it filters this list to focus specifically on single-engined training aircraft. Finally, it determines the specific aircraft that matches the criteria (created by North American Aviation and being a single-engined training aircraft)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the list of single-engined training aircraft created by North American Aviation.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the specific model of the single-engined training aircraft created by North American Aviation from the identified list.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two nodes. The first node retrieves information about single-engined training aircraft developed by North American Aviation. The second node reasons through the retrieved data to identify the specific model in question. This two-step approach ensures comprehensive coverage and precise identification of the correct aircraft model."
+    }
+]

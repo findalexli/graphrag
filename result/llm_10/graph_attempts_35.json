@@ -1,0 +1,133 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the Disney ride that includes a scene with the song 'Chim Chim Cher-ee' from 'Mary Poppins'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the debut year of the Disney ride identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task involves identifying the specific Disney ride that features the song 'Chim Chim Cher-ee' from 'Mary Poppins'. Once the ride is identified, it is necessary to find the year it debuted. The execution graph is designed to first focus on retrieving the specific ride and then move on to finding and displaying the debut year, based on the information retrieved in the first step."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Disney ride where the scene from 'Mary Poppins' featuring the song 'Chim Chim Cher-ee' can be heard.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the debut year of the identified Disney ride.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task requires determining the debut year of a Disney ride where a scene from 'Mary Poppins', featuring the song 'Chim Chim Cher-ee', is included. The execution graph involves first identifying the specific Disney ride and then finding out the year it debuted. These steps are sequenced because the year can only be known after identifying the ride."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Disney ride where the scene from 'Mary Poppins' with the song 'Chim Chim Cher-ee' is featured.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the name of the Disney ride identified in the previous step.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the debut year of the Disney ride identified in the previous step.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is broken down into identifying the specific Disney ride that features a 'Mary Poppins' scene with the song 'Chim Chim Cher-ee', retrieving the ride's name, and then determining the year it debuted."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Disney ride where the song \"Chim Chim Cher-ee\" from \"Mary Poppins\" can be heard.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the debut year of the identified Disney ride.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph is designed to first identify the specific Disney ride where the song \"Chim Chim Cher-ee\" is featured. Once the ride is known, the second step is to determine the year that particular ride debuted. This sequence ensures that we are targeting the correct ride to then find its debut year, providing an accurate answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the movie or Disney production associated with the song 'Chim Chim Cher-ee'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which Disney ride features a scene from 'Mary Poppins' that includes the song 'Chim Chim Cher-ee'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the debut year of the Disney ride that features the 'Mary Poppins' scene.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to answer the question by first identifying the association of the song 'Chim Chim Cher-ee' with 'Mary Poppins'. Then, it retrieves the specific Disney ride that features a scene from 'Mary Poppins'. Finally, it finds the debut year of that Disney ride to complete the multi-hop retrieval and reasoning task."
+    }
+]

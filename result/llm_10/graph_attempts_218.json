@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Rock Nominees Ltd, including the services they offer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about ISS A/S (Integrated Service Solutions), including the services they offer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify common services between Rock Nominees Ltd and ISS A/S based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying shared services between two companies. First, retrieve each company's services separately. Then, compare these services to find commonalities. The graph is organized to first gather services from both companies and then perform an intersection analysis on the retrieved data."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the services offered by Rock Nominees Ltd.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the services offered by ISS A/S (Integrated Service Solutions).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the services common to both Rock Nominees Ltd and ISS A/S by comparing the lists of services offered by each company.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two parallel retrieval tasks: identifying the services provided by Rock Nominees Ltd and ISS A/S respectively. These tasks run independently because they focus on gathering information specific to each company. The outputs of these retrieval tasks are then fed into a reasoning task, which compares the two sets of retrieved services to identify any commonalities. This final reasoning node provides the answer to which services are shared by both companies."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of services offered by Rock Nominees Ltd.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of services offered by ISS A/S (Integrated Service Solutions).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the lists of services from Rock Nominees Ltd and ISS A/S to identify common services.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This execution graph first retrieves the services offered by Rock Nominees Ltd and ISS A/S independently and then compares the two lists to determine which services are shared between the two companies."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve a list of services offered by Rock Nominees Ltd.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of services offered by ISS A/S (Integrated Service Solutions).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the common services between the services offered by Rock Nominees Ltd and ISS A/S.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving services offered by each company, Rock Nominees Ltd and ISS A/S, in parallel (Nodes 1 and 2). After obtaining the lists of services, Node 3 combines this information to identify common services provided by both companies. This structure allows the query to efficiently gather and process information to arrive at the desired comparison."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the services offered by Rock Nominees Ltd.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the services offered by ISS A/S (Integrated Service Solutions).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify common services between Rock Nominees Ltd and ISS A/S by comparing their service offerings.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with retrieving service information for each company in separate steps (nodes 1 and 2) since they represent independent retrieval tasks. After gathering this information, the final step (node 3) involves a reasoning process that compares the lists of services from nodes 1 and 2 to determine which services are common to both companies."
+    }
+]

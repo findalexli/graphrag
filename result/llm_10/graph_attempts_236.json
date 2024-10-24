@@ -1,0 +1,156 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the main cast members of the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birth dates of the cast members of the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which, if any, of the cast members were born on April 20, 1949.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by retrieving the main cast members of the movie 'Hush'. Then, it retrieves the birth dates of these cast members. Finally, it compares these dates to find which cast member was born on April 20, 1949."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the cast list of the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birth dates for each actor in the cast list.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which actor from the cast list was born on April 20, 1949.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving the cast of 'Hush', which is essential to identifying potential candidates for the birth date match. The next step is to find the birth dates of each actor to compare against the desired birth date, April 20, 1949. The final step involves reasoning to select the correct actor whose birth date matches the given date based on previously retrieved data."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the main stars of the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the birthdates of each star identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which star from the list has a birthdate of April 20, 1949.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving the main stars of the movie 'Hush'. Next, it retrieves the birthdates of these stars. Finally, it identifies which star has the specific birthdate of April 20, 1949."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of stars from the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birthdates of each star from the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the retrieved stars from 'Hush' has the birthdate April 20, 1949.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into three nodes: first, retrieving the list of stars from the movie 'Hush'. Next, it retrieves the birthdates of each of these stars. These two steps run in parallel since they are independent. In the final step, the graph processes the retrieved information to find which star was born on April 20, 1949, thus answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify all stars of the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birthdates for each identified star of the movie 'Hush'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which star among the identified ones was born on April 20, 1949.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph for the given question involves multiple steps to accurately find the answer. First, we need to retrieve the list of stars from the movie 'Hush' (Node 1). Once we have this information, we need to retrieve the birthdates of each of these stars to have the necessary data to compare against the specified date (Node 2). Finally, we use this data to determine which star was born on April 20, 1949, completing the task (Node 3). The reasoning step relies on the information gathered in previous nodes to make this determination."
+    }
+]

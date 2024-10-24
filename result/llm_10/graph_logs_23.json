@@ -1,0 +1,457 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify notable works of Bailee Madison.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Filter the notable works of Bailee Madison to find a 2011 American Romantic comedy film.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve the director of the 2011 American Romantic comedy films Bailee Madison is known for.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Retrieve the writer(s) of the 2011 American Romantic comedy films Bailee Madison is known for.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Verify if Dennis Dugan directed the identified film.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "6",
+                            "instruction": "Identify the film that matches being a 2011 American Romantic comedy directed by Dennis Dugan.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "5"
+                            ]
+                        },
+                        {
+                            "id": "7",
+                            "instruction": "Find all writers of the directed film from 2011 to identify who worked with Allan Loeb.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "4",
+                                "6"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "7"
+                },
+                "explanation": "The execution graph is structured to identify Bailee Madison's notable works, specifically focusing on a 2011 American Romantic comedy film. After determining the film based on director Dennis Dugan, nodes gather and cross-reference information about writers to determine who co-wrote with Allan Loeb."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Just Go with It\nJust Go with It is a 2011 American romantic comedy film directed by Dennis Dugan, written by Allan Loeb and Timothy Dowling and starring Adam Sandler (who also co-produced), Jennifer Aniston, Nicole Kidman, Nick Swardson and Brooklyn Decker. The film is based on the 1969 film \"Cactus Flower\" which was adapted from an earlier Broadway stage play written by Abe Burrows, which in turn was based upon the French play \"Fleur de cactus\".",
+                "Bailee Madison\nBailee Madison (born October 15, 1999) is an American actress. She is known for her role as May Belle Aarons, the younger sister of Jess Aarons in \"Bridge to Terabithia\" (2007) and Maryalice in Merry Christmas Drake & Josh. She is also known for playing Maxine, Alex and Justin's brother Max turned into a girl in \"Wizards of Waverly Place\" She is also known as the younger version of Snow White in the ABC fantasy drama \"Once Upon a Time\" and as Grace Russell on the Hallmark Channel series \"Good Witch\". Other notable works of hers include the horror film \"Don't Be Afraid of the Dark\", Maggie in \"Just Go with It\" and Harper Simmons in \"Parental Guidance\".",
+                "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+                "Hwang In-ho\nHwang In-ho is a South Korean film director and screenwriter. He wrote and directed the horror-romantic comedy \"Spellbound\" (2011) and the crime thriller \"Monster\" (2014).",
+                "Sexual Life\nSexual Life is a 2005 comedy-drama, independent film written and directed by Ken Kwapis, who would go on to chronicle modern romantic life in the better-known \"He's Just Not That Into You\" in 2009. Produced by Ken Aguado and distributed by Showtime Independent Films. Cast members include Azura Skye, Carla Gallo, Anne Heche, Elizabeth Banks, Tom Everett Scott, and Steven Weber.",
+                "Spellbound (2011 film)\nSpellbound (; lit. \"Chilling Romance\") is a 2011 South Korean horror romantic comedy film, starring Son Ye-jin and Lee Min-ki. It is about a magician who falls in love with a woman who can see ghosts. It was written and directed by Hwang In-ho which also marks his directorial debut.",
+                "The Abduction Club\nThe Abduction Club is a British romantic comedy-drama adventure film released in 2002; it was directed by Stefan Schwartz. Based loosely on real events, the plot centres on a group of outlaws who abduct women in order to marry them. It was written by Richard Crawford and Bill Britten (the British director and writer, not the American comedian)",
+                "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Exit Strategy (film)\nExit Strategy is a 2012 American independent romantic comedy film directed by Michael Whitton and starring Jameel Saleem, Kimelia Weathers, Quincy \"QDeezy\" Harris, with cameo appearances by L.A. radio host Big Boy and stand-up comedian Kevin Hart. Saleem plays a man whose main goal is to not get the girl, but to lose her\u2014thus marketed as a self-described \"un-romantic comedy.\" The film originated as a seven-part web series that had been running since 2007.",
+                "Don't Be Afraid of the Dark (2010 film)\nDon't Be Afraid of the Dark is a 2010 dark fantasy horror film written by Matthew Robbins and Guillermo del Toro and directed by comic book artist Troy Nixey. An international co-production between the United States, Australia, and Mexico, it was filmed at the Drusilla Mansion in Mount Macedon, Victoria and Melbourne, Australia. The film stars Katie Holmes, Guy Pearce, and Bailee Madison, as a family moving into a 19th-century Rhode Island mansion, where the withdrawn daughter (Madison) begins to witness malevolent creatures that emerge from a sealed ash pit in the basement of the house. It is a remake of the 1973 ABC made-for-television horror film of the same name.",
+                "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+                "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+                "Rana Dasgupta\nRana Dasgupta (born 5 November 1971 in Canterbury, England) is a British Indian novelist and essayist. He grew up in Cambridge, England, and studied at Balliol College, Oxford, the Conservatoire Darius Milhaud in Aix-en-Provence, and, as a Fulbright Scholar, the University of Wisconsin\u2013Madison. He has lived in Delhi, India, since 2001. In 2010 \"The Daily Telegraph\" called him one of Britain's best novelists under 40. In 2014 \"Le Monde\" named him one of 70 people who are making the world of tomorrow. Among the prizes won by Dasgupta's works are the Commonwealth Prize and the Ryszard Kapu\u015bci\u0144ski Award.",
+                "Riptide (book series)\nRiptide is a series of short story anthologies published by Dirt Pie Press, based within the University of Exeter. The founding editors are Ginny Baily and Sally Flint. The journal includes submissions from writers that are both previously published and unpublished. Notable authors whose work has appeared in previous editions include Michael Morpurgo, Helen Dunmore, and Philip Hensher.",
+                "Cynthia Mort\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.",
+                "University of Wisconsin\u2013Madison\nThe University of Wisconsin\u2013Madison (also known as University of Wisconsin, Wisconsin, UW, or regionally as UW\u2013Madison, or simply Madison) is a public research university in Madison, Wisconsin, United States. Founded when Wisconsin achieved statehood in 1848, UW\u2013Madison is the official state university of Wisconsin, and the flagship campus of the University of Wisconsin System. It was the first public university established in Wisconsin and remains the oldest and largest public university in the state. It became a land-grant institution in 1866. The 933 acre main campus includes four National Historic Landmarks."
+            ],
+            "thoughts": [
+                "Notable works of Bailee Madison include her role as May Belle Aarons in \"Bridge to Terabithia\" (2007), Maryalice in \"Merry Christmas Drake & Josh\", Maxine in \"Wizards of Waverly Place\", the horror film \"Don't Be Afraid of the Dark\", Maggie in \"Just Go with It\", Harper Simmons in \"Parental Guidance\", and her portrayal of the younger version of Snow White in the ABC fantasy drama \"Once Upon a Time\". She is also known for her role as Grace Russell on the Hallmark Channel series \"Good Witch\".",
+                "The 2011 American Romantic comedy film in Bailee Madison's notable works is \"Just Go with It\".",
+                "Bailee Madison is known for the 2011 American romantic comedy film \"Just Go with It,\" which was directed by Dennis Dugan and written by Allan Loeb and Timothy Dowling.",
+                "The director of the 2011 American romantic comedy film \"Just Go with It,\" which Bailee Madison is known for, is Dennis Dugan.",
+                "Yes, Dennis Dugan directed the film \"Just Go with It.\"",
+                "The film that matches the description of being a 2011 American Romantic comedy directed by Dennis Dugan is \"Just Go with It.\"",
+                "The writers who worked with Allan Loeb on the 2011 film \"Just Go with It\" are Timothy Dowling."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify notable works of Bailee Madison.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "From the notable works identified, find the 2011 American romantic comedy films.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Look up the director of the 2011 American romantic comedy films identified.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Filter the films directed by Dennis Dugan.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Retrieve the writers of the filtered films.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "4"
+                            ]
+                        },
+                        {
+                            "id": "6",
+                            "instruction": "Identify any writer aside from Allan Loeb for the films directed by Dennis Dugan and part of Bailee Madison's notable works.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "5"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "6"
+                },
+                "explanation": "The graph begins by searching for Bailee Madison's notable works, then identifies films from 2011 in the romantic comedy genre. It identifies directors of these films to filter the ones directed by Dennis Dugan. For these films, the writers are retrieved, and the process identifies the co-writer alongside Allan Loeb to answer the question."
+            },
+            "recall": 0.6666666666666666,
+            "retrieved_passages": [
+                "Grown Ups 2\nGrown Ups 2 is a 2013 American comedy film directed by Dennis Dugan and co-produced by Adam Sandler, who also starred in the film. It is the sequel to the 2010 film \"Grown Ups\". The film co-stars Kevin James, Chris Rock, David Spade, Nick Swardson, and Salma Hayek. The film is produced by Adam Sandler's production company Happy Madison Productions and distributed by Sony Pictures Releasing. The film was released on July 12, 2013. The film grossed roughly $247 million on an $80 million budget. Like the first film, it was widely panned by critics. It was nominated for nine Razzies at the 2014 Golden Raspberry Awards.",
+                "You Don't Mess with the Zohan\nYou Don't Mess with the Zohan is a 2008 American political satire comedy film directed by Dennis Dugan and produced by Adam Sandler, who also starred in the film. It was the fourth film that included a collaboration of Sandler as actor and Dugan as director. The film revolves around Zohan Dvir (Hebrew: \u05d6\u05d5\u05d4\u05df \u05d3\u05d1\u05d9\u05e8\u200e \u200e ), an Israeli counterterrorist army commando who fakes his own death in order to pursue his dream of becoming a hairstylist in New York City. The story was written by Adam Sandler, Judd Apatow, and Robert Smigel. It was released on June 6, 2008 in the US and on August 15, 2008 in the UK. The film grossed $201 million worldwide from a $90 million budget.",
+                "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+                "Jack and Jill (2011 film)\nJack and Jill is a 2011 American comedy film directed by Dennis Dugan, written by Steve Koren and Adam Sandler, and starring Sandler, Katie Holmes, and Al Pacino. The film was released on November 11, 2011 by Columbia Pictures.",
+                "The Benchwarmers\nThe Benchwarmers is a 2006 American sports-comedy film directed by Dennis Dugan. It stars Rob Schneider, David Spade, and Jon Heder. It is produced by Revolution Studios and Happy Madison Productions and is distributed by Columbia Pictures.",
+                "Happy Gilmore\nHappy Gilmore is a 1996 American sports comedy film directed by Dennis Dugan with music by Mark Mothersbaugh and produced by Robert Simonds. It stars Adam Sandler as the title character, an unsuccessful ice hockey player who discovers a newfound talent for golf. The screenplay was written by Sandler and Tim Herlihy. The film was released in cinemas on February 16, 1996 by Universal Pictures. \"Happy Gilmore\" was a commercial success, earning $41.2 million on a $12 million budget. This film was the first of multiple collaborations between Sandler and Dugan. The film won an MTV Movie Award for \"Best Fight\" for Adam Sandler versus Bob Barker.",
+                "Just Go with It\nJust Go with It is a 2011 American romantic comedy film directed by Dennis Dugan, written by Allan Loeb and Timothy Dowling and starring Adam Sandler (who also co-produced), Jennifer Aniston, Nicole Kidman, Nick Swardson and Brooklyn Decker. The film is based on the 1969 film \"Cactus Flower\" which was adapted from an earlier Broadway stage play written by Abe Burrows, which in turn was based upon the French play \"Fleur de cactus\".",
+                "The Expendables (2010 film)\nThe Expendables is a 2010 American ensemble action film written by David Callaham and Sylvester Stallone, and directed by Stallone, who also starred in the lead role. The film co-stars Jason Statham, Jet Li, Dolph Lundgren, Randy Couture, Terry Crews, Steve Austin and Mickey Rourke. The film was released in the United States on August 13, 2010. It is the first installment in \"The Expendables\" film series. This was Dolph Lundgren's first theatrically released film since 1995's \"Johnny Mnemonic\", and Steve Austin's last theatrical release film until 2013's \"Grown Ups 2\".",
+                "Bailee Madison\nBailee Madison (born October 15, 1999) is an American actress. She is known for her role as May Belle Aarons, the younger sister of Jess Aarons in \"Bridge to Terabithia\" (2007) and Maryalice in Merry Christmas Drake & Josh. She is also known for playing Maxine, Alex and Justin's brother Max turned into a girl in \"Wizards of Waverly Place\" She is also known as the younger version of Snow White in the ABC fantasy drama \"Once Upon a Time\" and as Grace Russell on the Hallmark Channel series \"Good Witch\". Other notable works of hers include the horror film \"Don't Be Afraid of the Dark\", Maggie in \"Just Go with It\" and Harper Simmons in \"Parental Guidance\".",
+                "Hwang In-ho\nHwang In-ho is a South Korean film director and screenwriter. He wrote and directed the horror-romantic comedy \"Spellbound\" (2011) and the crime thriller \"Monster\" (2014).",
+                "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+                "Paul Feig\nPaul Samuel Feig ( ; born September 17, 1962) is an American actor, film director, producer, and screenwriter. He is best known for directing the 2011 film \"Bridesmaids\", featuring Kristen Wiig and Melissa McCarthy and the 2016 film \"Ghostbusters\" also starring Wiig and McCarthy. Feig also directed the comedy films \"The Heat\" (2013) starring McCarthy and Sandra Bullock, and \"Spy\" (2015) which stars McCarthy, Jason Statham, and Jude Law.",
+                "The Abduction Club\nThe Abduction Club is a British romantic comedy-drama adventure film released in 2002; it was directed by Stefan Schwartz. Based loosely on real events, the plot centres on a group of outlaws who abduct women in order to marry them. It was written by Richard Crawford and Bill Britten (the British director and writer, not the American comedian)",
+                "Don't Be Afraid of the Dark (2010 film)\nDon't Be Afraid of the Dark is a 2010 dark fantasy horror film written by Matthew Robbins and Guillermo del Toro and directed by comic book artist Troy Nixey. An international co-production between the United States, Australia, and Mexico, it was filmed at the Drusilla Mansion in Mount Macedon, Victoria and Melbourne, Australia. The film stars Katie Holmes, Guy Pearce, and Bailee Madison, as a family moving into a 19th-century Rhode Island mansion, where the withdrawn daughter (Madison) begins to witness malevolent creatures that emerge from a sealed ash pit in the basement of the house. It is a remake of the 1973 ABC made-for-television horror film of the same name.",
+                "Fifty Shades (film series)\nFifty Shades is an American film series that consists of three erotic romantic drama films, based on the \" Fifty Shades\" trilogy by English author E. L. James. It is distributed by Universal Studios and stars Dakota Johnson and Jamie Dornan as the lead roles Anastasia Steele and Christian Grey, respectively. Sam Taylor-Johnson directed the first film and initially she was slated to be the director of the sequels as well, however subsequently the second and third films were directed by James Foley.",
+                "Spellbound (2011 film)\nSpellbound (; lit. \"Chilling Romance\") is a 2011 South Korean horror romantic comedy film, starring Son Ye-jin and Lee Min-ki. It is about a magician who falls in love with a woman who can see ghosts. It was written and directed by Hwang In-ho which also marks his directorial debut.",
+                "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+                "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+                "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+                "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+                "Rana Dasgupta\nRana Dasgupta (born 5 November 1971 in Canterbury, England) is a British Indian novelist and essayist. He grew up in Cambridge, England, and studied at Balliol College, Oxford, the Conservatoire Darius Milhaud in Aix-en-Provence, and, as a Fulbright Scholar, the University of Wisconsin\u2013Madison. He has lived in Delhi, India, since 2001. In 2010 \"The Daily Telegraph\" called him one of Britain's best novelists under 40. In 2014 \"Le Monde\" named him one of 70 people who are making the world of tomorrow. Among the prizes won by Dasgupta's works are the Commonwealth Prize and the Ryszard Kapu\u015bci\u0144ski Award.",
+                "Riptide (book series)\nRiptide is a series of short story anthologies published by Dirt Pie Press, based within the University of Exeter. The founding editors are Ginny Baily and Sally Flint. The journal includes submissions from writers that are both previously published and unpublished. Notable authors whose work has appeared in previous editions include Michael Morpurgo, Helen Dunmore, and Philip Hensher.",
+                "Cynthia Mort\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.",
+                "University of Wisconsin\u2013Madison\nThe University of Wisconsin\u2013Madison (also known as University of Wisconsin, Wisconsin, UW, or regionally as UW\u2013Madison, or simply Madison) is a public research university in Madison, Wisconsin, United States. Founded when Wisconsin achieved statehood in 1848, UW\u2013Madison is the official state university of Wisconsin, and the flagship campus of the University of Wisconsin System. It was the first public university established in Wisconsin and remains the oldest and largest public university in the state. It became a land-grant institution in 1866. The 933 acre main campus includes four National Historic Landmarks."
+            ],
+            "thoughts": [
+                "Notable works of Bailee Madison include her role as May Belle Aarons in \"Bridge to Terabithia\" (2007), Maryalice in \"Merry Christmas Drake & Josh\", Maxine in \"Wizards of Waverly Place\", the horror film \"Don't Be Afraid of the Dark\", Maggie in \"Just Go with It\", Harper Simmons in \"Parental Guidance\", and her role as the younger version of Snow White in the ABC fantasy drama \"Once Upon a Time\". She is also known for her role as Grace Russell on the Hallmark Channel series \"Good Witch\".",
+                "The 2011 American romantic comedy films are not mentioned in the notable works identified.",
+                "The director of the 2011 American romantic comedy film \"Trust\" is Hal Hartley.",
+                "The films directed by Dennis Dugan are:\n\n1. Problem Child (1990)\n2. Happy Gilmore (1996)\n3. Big Daddy (1999)\n4. Saving Silverman (2001)\n5. National Security (2003)\n6. The Benchwarmers (2006)\n7. I Now Pronounce You Chuck & Larry (2007)\n8. You Don't Mess with the Zohan (2008)\n9. Grown Ups (2010)\n10. Just Go with It (2011)\n11. Jack and Jill (2011)\n12. Grown Ups 2 (2013)",
+                "- Grown Ups 2: Written by Adam Sandler and Fred Wolf\n- You Don't Mess with the Zohan: Written by Adam Sandler, Judd Apatow, and Robert Smigel\n- Big Daddy: Written by Adam Sandler and Steve Franks\n- Jack and Jill: Written by Steve Koren and Adam Sandler\n- The Benchwarmers: Written by Allen Covert and Nick Swardson\n- Happy Gilmore: Written by Adam Sandler and Tim Herlihy\n- Just Go with It: Written by Allan Loeb and Timothy Dowling\n- The Expendables: Written by David Callaham and Sylvester Stallone",
+                "The writer aside from Allan Loeb for the films directed by Dennis Dugan and part of Bailee Madison's notable works is Adam Sandler."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve the list of notable works of Bailee Madison.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "From Bailee Madison's notable works, identify the 2011 American Romantic comedy film.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve information about the 2011 American Romantic comedy film, including director and writers.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the writer alongside Allan Loeb for the film directed by Dennis Dugan.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph breaks down the task into steps that sequentially extract and synthesize information necessary to answer the question. It begins with retrieving Bailee Madison's notable works, filters down to the specific 2011 film, retrieves detailed information about the movie, and finally identifies the co-writer along with Allan Loeb."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "Just Go with It\nJust Go with It is a 2011 American romantic comedy film directed by Dennis Dugan, written by Allan Loeb and Timothy Dowling and starring Adam Sandler (who also co-produced), Jennifer Aniston, Nicole Kidman, Nick Swardson and Brooklyn Decker. The film is based on the 1969 film \"Cactus Flower\" which was adapted from an earlier Broadway stage play written by Abe Burrows, which in turn was based upon the French play \"Fleur de cactus\".",
+                "Spellbound (2011 film)\nSpellbound (; lit. \"Chilling Romance\") is a 2011 South Korean horror romantic comedy film, starring Son Ye-jin and Lee Min-ki. It is about a magician who falls in love with a woman who can see ghosts. It was written and directed by Hwang In-ho which also marks his directorial debut.",
+                "Hwang In-ho\nHwang In-ho is a South Korean film director and screenwriter. He wrote and directed the horror-romantic comedy \"Spellbound\" (2011) and the crime thriller \"Monster\" (2014).",
+                "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+                "Sexual Life\nSexual Life is a 2005 comedy-drama, independent film written and directed by Ken Kwapis, who would go on to chronicle modern romantic life in the better-known \"He's Just Not That Into You\" in 2009. Produced by Ken Aguado and distributed by Showtime Independent Films. Cast members include Azura Skye, Carla Gallo, Anne Heche, Elizabeth Banks, Tom Everett Scott, and Steven Weber.",
+                "About Time (2013 film)\nAbout Time is a 2013 British romantic comedy-drama film about a young man with the special ability to time travel who tries to change his past in order to improve his future. The film was written and directed by Richard Curtis, and stars Domhnall Gleeson, Rachel McAdams and Bill Nighy. It was released in the United Kingdom on 4 September 2013.",
+                "The Abduction Club\nThe Abduction Club is a British romantic comedy-drama adventure film released in 2002; it was directed by Stefan Schwartz. Based loosely on real events, the plot centres on a group of outlaws who abduct women in order to marry them. It was written by Richard Crawford and Bill Britten (the British director and writer, not the American comedian)",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed. Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material. The two started work on a debut album in June 2012. The result of those sessions, \"Device\", was released on April 9, 2013. The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown. The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+                "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+                "Arthur Roberts (editor)\nArthur Roberts July 17, 1890 \u2013 February 5, 1961), also known as Arthur E. Roberts, was an American film editor who edited over 100 films during his almost 30 year career. He began ending towards the end of the silent era of the film industry, his first film being 1927's \"The College Hero\", directed by Walter Lang. His last film was Republic's \"Lay That Rifle Down\" in 1955, after which he spent a brief period as the editor for the television series, \"Lassie\", before retiring in 1956. During his career he would work with many famous directors, including Frank Capra (on several films, including \"The Donovan Affair\"), Lowell Sherman (on \"The Royal Bed\"), William Seiter (on several films, including \"Way Back Home\"), Edward Cline (on \"Cracked Nuts\"), George Cukor (\"A Bill of Divorcement\"), Dorothy Arzner (the first female member of the DGA, on \"Christopher Strong\"), Anthony Mann (\"Strangers in the Night\"), George Archainbaud (\"Girls of the Big House\"), Fritz Lang (\"House by the River\"),",
+                "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+                "Short Bus (album)\nShort Bus is the debut album by American industrial rock band Filter. It was released in 1995 and has sold over one million copies in the United States. It is best known for their hit song \"Hey Man Nice Shot\". Richard Patrick said in an interview that Trent Reznor had told him he should make his own record while he went off to work on \"The Downward Spiral\". Patrick, while still retaining the industrial element in the music, chose to focus on the guitars, which he felt was something missing when he played with Nine Inch Nails. He also chose not to go with the standard industrial rock look which he felt would set them apart.",
+                "Chuffilly-Roche\nArthur Rimbaud, French poet, lived for a while in Roche, where his family had a farm. He wrote several works there, notably \"Une saison en enfer\" (\"A Season in Hell\") and \"Le bateau ivre\" (\"The Drunken Boat\").",
+                "Yameen\nYameen is a hiphop producer from Philadelphia, PA. His most recent work, \"Come On & Go Off\" was released on September 2nd, 2014 on Rumble Pack Records. His music can be heard weekly on the Activision videogames podcast, One of Swords where he is also occasionally a guest commentator."
+            ],
+            "thoughts": [
+                "Bailee Madison is an actress known for her work in film and television. Some of her notable works include \"Bridge to Terabithia\", \"Just Go with It\", \"Brothers\", \"The Strangers: Prey at Night\", and \"Good Witch\".",
+                "The 2011 American Romantic comedy film from Bailee Madison's notable works is \"Just Go with It\".",
+                "The 2011 American romantic comedy film \"Just Go with It\" was directed by Dennis Dugan and written by Allan Loeb and Timothy Dowling.",
+                "The writer alongside Allan Loeb for the film \"Just Go with It\" directed by Dennis Dugan is Timothy Dowling."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find the notable works of Bailee Madison that include a 2011 American Romantic comedy film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the 2011 American Romantic comedy film from Bailee Madison's works.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve the director and writers of the identified 2011 film and confirm if Dennis Dugan directed it and Allan Loeb wrote it.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Find the co-writer(s) of the 2011 American Romantic comedy film alongside Allan Loeb.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The graph begins by identifying a 2011 American Romantic comedy film in Bailee Madison's body of work, as this is key to answering the question. The subsequent steps confirm the film's director and writer(s), ensuring Dennis Dugan and Allan Loeb's involvement before identifying the co-writer, which is the final piece of the information needed to answer the original question."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "Just Go with It\nJust Go with It is a 2011 American romantic comedy film directed by Dennis Dugan, written by Allan Loeb and Timothy Dowling and starring Adam Sandler (who also co-produced), Jennifer Aniston, Nicole Kidman, Nick Swardson and Brooklyn Decker. The film is based on the 1969 film \"Cactus Flower\" which was adapted from an earlier Broadway stage play written by Abe Burrows, which in turn was based upon the French play \"Fleur de cactus\".",
+                "The Space Between Us (film)\nThe Space Between Us is a 2017 American romantic science fiction film directed by Peter Chelsom and written by Allan Loeb, from a story by Stewart Schill, Richard Barton Lewis and Loeb. The film stars Gary Oldman, Asa Butterfield, Britt Robertson, and Carla Gugino, and follows a teenage boy, born on Mars, who travels to Earth.",
+                "Jack and Jill (2011 film)\nJack and Jill is a 2011 American comedy film directed by Dennis Dugan, written by Steve Koren and Adam Sandler, and starring Sandler, Katie Holmes, and Al Pacino. The film was released on November 11, 2011 by Columbia Pictures.",
+                "You Don't Mess with the Zohan\nYou Don't Mess with the Zohan is a 2008 American political satire comedy film directed by Dennis Dugan and produced by Adam Sandler, who also starred in the film. It was the fourth film that included a collaboration of Sandler as actor and Dugan as director. The film revolves around Zohan Dvir (Hebrew: \u05d6\u05d5\u05d4\u05df \u05d3\u05d1\u05d9\u05e8\u200e \u200e ), an Israeli counterterrorist army commando who fakes his own death in order to pursue his dream of becoming a hairstylist in New York City. The story was written by Adam Sandler, Judd Apatow, and Robert Smigel. It was released on June 6, 2008 in the US and on August 15, 2008 in the UK. The film grossed $201 million worldwide from a $90 million budget.",
+                "The Benchwarmers\nThe Benchwarmers is a 2006 American sports-comedy film directed by Dennis Dugan. It stars Rob Schneider, David Spade, and Jon Heder. It is produced by Revolution Studios and Happy Madison Productions and is distributed by Columbia Pictures.",
+                "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+                "The Dilemma\nThe Dilemma is a 2011 American comedy-drama film directed by Ron Howard, written by Allan Loeb and starring Vince Vaughn and Kevin James. The film follows savvy businessman Ronny (Vaughn) and genius engineer Nick (James) who are best friends and partners in an auto design firm. They are pursuing a project to make their firm famous. Ronny sees Nick's wife Geneva (Winona Ryder) kissing another man (Channing Tatum). Ronny seeks out answers and has to figure out how to tell Nick about what he saw while working with him to complete their critical presentation.",
+                "Happy Gilmore\nHappy Gilmore is a 1996 American sports comedy film directed by Dennis Dugan with music by Mark Mothersbaugh and produced by Robert Simonds. It stars Adam Sandler as the title character, an unsuccessful ice hockey player who discovers a newfound talent for golf. The screenplay was written by Sandler and Tim Herlihy. The film was released in cinemas on February 16, 1996 by Universal Pictures. \"Happy Gilmore\" was a commercial success, earning $41.2 million on a $12 million budget. This film was the first of multiple collaborations between Sandler and Dugan. The film won an MTV Movie Award for \"Best Fight\" for Adam Sandler versus Bob Barker.",
+                "Sleepless in Seattle\nSleepless in Seattle is a 1993 American romantic comedy-drama film directed and co-written by Nora Ephron, based on a story by Jeff Arch. It stars Tom Hanks and Meg Ryan, alongside a supporting cast featuring Bill Pullman, Ross Malinger, Rob Reiner, Rosie O'Donnell, Gaby Hoffmann, Victor Garber, and Rita Wilson. The film was a critical and commercial success, grossing over $220 million worldwide.",
+                "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+                "Sexual Life\nSexual Life is a 2005 comedy-drama, independent film written and directed by Ken Kwapis, who would go on to chronicle modern romantic life in the better-known \"He's Just Not That Into You\" in 2009. Produced by Ken Aguado and distributed by Showtime Independent Films. Cast members include Azura Skye, Carla Gallo, Anne Heche, Elizabeth Banks, Tom Everett Scott, and Steven Weber.",
+                "Stuart Charno\nStuart Charno (born September 29, 1956) is an American actor. He has been a stand-up comic and has starred in film and on television. His first role was in the 1981 horror film \"Friday the 13th Part 2\". Other notable appearances of his include the 1985 comedy film \"Just One of the Guys\" (as Harold \"Reptile\" Sherpico) and the 1986 film \"Modern Girls\", in which he appeared with \"Just One of the Guys\" co-star Clayton Rohner. Charno has made guest appearances on various television shows including \"M*A*S*H\", \"The X-Files\", \"Chicago Hope\", \"Team Knight Rider\", and \"Profiler\". He also received story credits on three episodes of \"\" (\"\", \"\" and \"\").",
+                "Easy Come, Easy Go (1967 film)\nEasy Come, Easy Go is a 1967 American musical film comedy starring Elvis Presley. Hal Wallis produced the film for Paramount Pictures, and it was his final movie for Elvis Presley. The film co-starred Dodie Marshall, Pat Harrington, Jr., Pat Priest, Elsa Lanchester and Frank McHugh. (It was McHugh's last feature film.) The movie reached #50 on the \"Variety\" magazine national box office list in 1967.",
+                "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+                "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+                "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+                "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+                "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+                "The Five Obstructions\nThe Five Obstructions is a 2003 Danish documentary film directed by Lars von Trier and J\u00f8rgen Leth. The film is conceived as a documentary, but incorporates lengthy sections of experimental films produced by the filmmakers. The premise is that von Trier has created a challenge for his friend and mentor, J\u00f8rgen Leth, another renowned filmmaker. von Trier's favorite film is Leth's \"The Perfect Human\" (1967), and von Trier gives Leth the task of remaking \"The Perfect Human\" five times, each time with a different \"obstruction\" (or obstacle) imposed by von Trier.",
+                "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+                "Don I. Wortman\nDon I. Wortman is a retired U.S. federal government administrator who served 27 years in senior-level executive positions in many federal government agencies. He was Acting Commissioner of the Social Security Administration (SSA) from December 13, 1977 to October 4, 1978. In early 1977, while working at the Department of Health, Education and Welfare (HEW)\u2014precursor to the Department of Health and Human Services\u2014he was Chairman of the task force for implementing the reorganization of HEW. This reorganization included the merging of the Medicare and Medicaid programs into a new agency; this agency was named the Health Care Financing Administration (and renamed the Centers for Medicare and Medicaid Services in June 2001). He became the first Administrator of the Health Care Financing Administration. On two occasions\u20146 months in 1975 and the first 3 months of 1977\u2014he was Acting Administrator of the Social and Rehabilitation Services, the agency which, at that time, administered the Medicaid program and the Aid to Families with Dependent Children program."
+            ],
+            "thoughts": [
+                "One of the notable works of Bailee Madison is the 2011 American romantic comedy film \"Just Go with It,\" in which she played the role of Maggie.",
+                "The 2011 American romantic comedy film from Bailee Madison's works is \"Just Go with It.\"",
+                "The identified 2011 film \"Just Go with It\" was directed by Dennis Dugan and written by Allan Loeb and Timothy Dowling. Therefore, Dennis Dugan did direct the film, but Allan Loeb did not write it.",
+                "The co-writer of the 2011 American Romantic comedy film \"Just Go with It\" alongside Allan Loeb is Timothy Dowling."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify notable works of Bailee Madison that include a 2011 American Romantic comedy film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the title of the 2011 American Romantic comedy film directed by Dennis Dugan.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Find the writers of the film identified in step 2 to determine who wrote the film alongside Allan Loeb.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph breaks down the question into manageable retrieval and reasoning steps. First, identify Bailee Madison's notable works to find the relevant 2011 film. Then, confirm that the film was directed by Dennis Dugan to ensure the correct title is used. Finally, retrieve the list of writers for the film to identify who worked on the screenplay alongside Allan Loeb."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Jack and Jill (2011 film)\nJack and Jill is a 2011 American comedy film directed by Dennis Dugan, written by Steve Koren and Adam Sandler, and starring Sandler, Katie Holmes, and Al Pacino. The film was released on November 11, 2011 by Columbia Pictures.",
+                "Just Go with It\nJust Go with It is a 2011 American romantic comedy film directed by Dennis Dugan, written by Allan Loeb and Timothy Dowling and starring Adam Sandler (who also co-produced), Jennifer Aniston, Nicole Kidman, Nick Swardson and Brooklyn Decker. The film is based on the 1969 film \"Cactus Flower\" which was adapted from an earlier Broadway stage play written by Abe Burrows, which in turn was based upon the French play \"Fleur de cactus\".",
+                "Bailee Madison\nBailee Madison (born October 15, 1999) is an American actress. She is known for her role as May Belle Aarons, the younger sister of Jess Aarons in \"Bridge to Terabithia\" (2007) and Maryalice in Merry Christmas Drake & Josh. She is also known for playing Maxine, Alex and Justin's brother Max turned into a girl in \"Wizards of Waverly Place\" She is also known as the younger version of Snow White in the ABC fantasy drama \"Once Upon a Time\" and as Grace Russell on the Hallmark Channel series \"Good Witch\". Other notable works of hers include the horror film \"Don't Be Afraid of the Dark\", Maggie in \"Just Go with It\" and Harper Simmons in \"Parental Guidance\".",
+                "The Benchwarmers\nThe Benchwarmers is a 2006 American sports-comedy film directed by Dennis Dugan. It stars Rob Schneider, David Spade, and Jon Heder. It is produced by Revolution Studios and Happy Madison Productions and is distributed by Columbia Pictures.",
+                "Happy Gilmore\nHappy Gilmore is a 1996 American sports comedy film directed by Dennis Dugan with music by Mark Mothersbaugh and produced by Robert Simonds. It stars Adam Sandler as the title character, an unsuccessful ice hockey player who discovers a newfound talent for golf. The screenplay was written by Sandler and Tim Herlihy. The film was released in cinemas on February 16, 1996 by Universal Pictures. \"Happy Gilmore\" was a commercial success, earning $41.2 million on a $12 million budget. This film was the first of multiple collaborations between Sandler and Dugan. The film won an MTV Movie Award for \"Best Fight\" for Adam Sandler versus Bob Barker.",
+                "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+                "You Don't Mess with the Zohan\nYou Don't Mess with the Zohan is a 2008 American political satire comedy film directed by Dennis Dugan and produced by Adam Sandler, who also starred in the film. It was the fourth film that included a collaboration of Sandler as actor and Dugan as director. The film revolves around Zohan Dvir (Hebrew: \u05d6\u05d5\u05d4\u05df \u05d3\u05d1\u05d9\u05e8\u200e \u200e ), an Israeli counterterrorist army commando who fakes his own death in order to pursue his dream of becoming a hairstylist in New York City. The story was written by Adam Sandler, Judd Apatow, and Robert Smigel. It was released on June 6, 2008 in the US and on August 15, 2008 in the UK. The film grossed $201 million worldwide from a $90 million budget.",
+                "Grown Ups 2\nGrown Ups 2 is a 2013 American comedy film directed by Dennis Dugan and co-produced by Adam Sandler, who also starred in the film. It is the sequel to the 2010 film \"Grown Ups\". The film co-stars Kevin James, Chris Rock, David Spade, Nick Swardson, and Salma Hayek. The film is produced by Adam Sandler's production company Happy Madison Productions and distributed by Sony Pictures Releasing. The film was released on July 12, 2013. The film grossed roughly $247 million on an $80 million budget. Like the first film, it was widely panned by critics. It was nominated for nine Razzies at the 2014 Golden Raspberry Awards.",
+                "The Space Between Us (film)\nThe Space Between Us is a 2017 American romantic science fiction film directed by Peter Chelsom and written by Allan Loeb, from a story by Stewart Schill, Richard Barton Lewis and Loeb. The film stars Gary Oldman, Asa Butterfield, Britt Robertson, and Carla Gugino, and follows a teenage boy, born on Mars, who travels to Earth.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Don't Be Afraid of the Dark (2010 film)\nDon't Be Afraid of the Dark is a 2010 dark fantasy horror film written by Matthew Robbins and Guillermo del Toro and directed by comic book artist Troy Nixey. An international co-production between the United States, Australia, and Mexico, it was filmed at the Drusilla Mansion in Mount Macedon, Victoria and Melbourne, Australia. The film stars Katie Holmes, Guy Pearce, and Bailee Madison, as a family moving into a 19th-century Rhode Island mansion, where the withdrawn daughter (Madison) begins to witness malevolent creatures that emerge from a sealed ash pit in the basement of the house. It is a remake of the 1973 ABC made-for-television horror film of the same name.",
+                "Hwang In-ho\nHwang In-ho is a South Korean film director and screenwriter. He wrote and directed the horror-romantic comedy \"Spellbound\" (2011) and the crime thriller \"Monster\" (2014).",
+                "Spellbound (2011 film)\nSpellbound (; lit. \"Chilling Romance\") is a 2011 South Korean horror romantic comedy film, starring Son Ye-jin and Lee Min-ki. It is about a magician who falls in love with a woman who can see ghosts. It was written and directed by Hwang In-ho which also marks his directorial debut.",
+                "The Dilemma\nThe Dilemma is a 2011 American comedy-drama film directed by Ron Howard, written by Allan Loeb and starring Vince Vaughn and Kevin James. The film follows savvy businessman Ronny (Vaughn) and genius engineer Nick (James) who are best friends and partners in an auto design firm. They are pursuing a project to make their firm famous. Ronny sees Nick's wife Geneva (Winona Ryder) kissing another man (Channing Tatum). Ronny seeks out answers and has to figure out how to tell Nick about what he saw while working with him to complete their critical presentation.",
+                "The Con Artist\nThe Con Artist is a 2010 romantic comedy film directed by Risa Bramon Garcia and written by Michael Melski and Collin Friesen, starring Rossif Sutherland, Rebecca Romijn, Sarah Roemer and Donald Sutherland. The film was released straight-to-DVD on June 14, 2011.",
+                "Cynthia Mort\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.",
+                "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+                "Boggle\nBoggle is a word game designed by Allan Turoff and originally distributed by Parker Brothers. The game is played using a plastic grid of lettered dice, in which players attempt to find words in sequences of adjacent letters.",
+                "Go! (Common song)\n\"Go!\" is the third single from the Common album \"Be\". It is produced by Kanye West, who also performs backing vocals for the track alongside John Mayer. The track's percussion is handled by Num Amuntehu, while its scratches are provided by A-Trak. Its beat contains a sample from \"Old Smokey\" by Linda Lewis. Its lyrics deal with sexual fantasies.",
+                "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+                "Monster a Go-Go\nMonster a Go-Go! is a 1965 American science-fiction horror film directed by Bill Rebane and Herschell Gordon Lewis (who remained uncredited in association with this film). The film is considered to be one of the worst films ever made.",
+                "Notorious (soundtrack)\nNotorious: Music from and Inspired by the Original Motion Picture is the official soundtrack to the 2009 biopic film \"Notorious\" based on the life and death of rapper The Notorious B.I.G.. It features mostly his previously heard songs, inclusively the ones harder to find such as \"Party and Bullshit\" and \"One More Chance (Remix)\". It includes two original songs \"Brooklyn Go Hard\" by Jay-Z and a tribute to the rapper by Jadakiss and widow Faith Evans called \"Letter to B.I.G.\", as well as three unreleased demos by him and a song with Christopher \"CJ\" Wallace, Jr., his son. s of March 2009 , the album sold roughly 124,490 copies. \"Notorious Thugs\", \"Notorious B.I.G.\", \"One More Chance (Remix)\", \"Brooklyn Go Hard\", \"Kick in the Door\", \"What's Beef\", \"The World Is Filled...\", \"One More Chance / The Legacy Remix\" and \"Love No Ho\" do not feature in the movie, but are included on the album."
+            ],
+            "thoughts": [
+                "Notable works of Bailee Madison that include a 2011 American romantic comedy film are \"Just Go with It\" and \"The Con Artist\".",
+                "Just Go with It",
+                "The writers of the films alongside Allan Loeb are:\n- Timothy Dowling for \"Just Go with It\"\n- Stewart Schill, Richard Barton Lewis, and Allan Loeb for \"The Space Between Us\"\n- No additional writers for \"The Dilemma\""
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify notable works of Bailee Madison.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Filter the notable works of Bailee Madison to find a 2011 American Romantic comedy film.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the director of the 2011 American Romantic comedy films Bailee Madison is known for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the writer(s) of the 2011 American Romantic comedy films Bailee Madison is known for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Verify if Dennis Dugan directed the identified film.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Identify the film that matches being a 2011 American Romantic comedy directed by Dennis Dugan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                },
+                {
+                    "id": "7",
+                    "instruction": "Find all writers of the directed film from 2011 to identify who worked with Allan Loeb.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "6"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "7"
+        },
+        "explanation": "The execution graph is structured to identify Bailee Madison's notable works, specifically focusing on a 2011 American Romantic comedy film. After determining the film based on director Dennis Dugan, nodes gather and cross-reference information about writers to determine who co-wrote with Allan Loeb."
+    },
+    "best_recall": 0.9444444444444444
+}

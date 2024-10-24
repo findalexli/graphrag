@@ -1,0 +1,199 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the creator's team-mate Juan Mata.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the footballers featured in the magazine, specifically looking for Riyad Mahrez and Juan Mata among them.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which former Manchester United players could have launched a magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference the possible magazine creators with the team-mate found to see if there is a connection.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Verify that the magazine featuring Snoop Dogg, Riyad Mahrez, and the creator's team-mate Juan Mata was launched by the former Manchester United player identified.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph first identifies the possible creators by retrieving information about Juan Mata's current team and recent Manchester United players. It then retrieves information about the magazine's featured individuals to confirm their inclusion. These retrieval nodes are followed by reasoning steps to cross-reference and confirm the identity of the former player who launched the magazine."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify any celebrity magazines that have featured Snoop Dogg, Riyad Mahrez, and Juan Mata.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which of these magazines was launched by a former Manchester United player.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify former Manchester United players who have launched magazines.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Match the magazines launched by former Manchester United players to the magazine identified in step 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by identifying magazines that have featured the specified individuals. It then narrows down which magazine was launched by a former Manchester United player. Simultaneously, it checks which former Manchester United players have launched magazines. The reasoning step then synthesizes this information to produce the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the celebrity magazine that has featured Snoop Dogg, Riyad Mahrez, and Juan Mata.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the creator of the magazine identified in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out the relation of the creator identified in node 2 with Manchester United, especially if he is a former player.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into steps to identify the magazine based on the celebrities it featured. Once the magazine is identified, we will find out who its creator is. Finally, we determine the creator's association with Manchester United, confirming if he is the former player in question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which celebrity magazine has featured Snoop Dogg, Riyad Mahrez, and Juan Mata.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the name of the creator's team associated with Juan Mata.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which team Juan Mata plays for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify former Manchester United players.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify the magazine launched by the former Manchester United player from the known magazine and player candidates.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Match Juan Mata's team to this creator's team and verify if it's a former or current association with Manchester United.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task into two main parallel tracks: identifying the magazine and its connection to Snoop Dogg, Riyad Mahrez, and Juan Mata, and identifying potential former Manchester United players who might have launched a magazine. Node 1 searches broadly for the magazine name. Nodes 2 and 3 establish which football team Juan Mata is associated with to ensure the context of 'creator'. Node 4 gathers a list of former Manchester United players for reference. Nodes 5 and 6 synthesize this information: Node 5 by matching identified magazines with the potential former players, and Node 6 by verifying any discrepancies or confirmations needed around Juan Mata's association with Manchester United."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of the celebrity magazine that has featured Snoop Dogg, Riyad Mahrez, and Juan Mata.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the creator of the magazine identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out if the creator identified in step 2 is a former Manchester United player.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into 3 main steps. First, we need to retrieve the name of the celebrity magazine that has featured the mentioned celebrities. Once we have the magazine's name, the next step is to find out the creator of this magazine. Finally, we verify if the creator is a former Manchester United player, which answers the original question."
+    }
+]

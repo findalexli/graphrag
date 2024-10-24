@@ -311,80 +311,90 @@ def reason_step(instruction: str, client: Any, upstream_results: List[Tuple[str,
 #     with open(f'output/graph_attempts_{idx}.json', 'w') as f:
 #         json.dump([response.dict() for response in all_graph_responses], f, indent=4)
 
-#     # 使用第一个有效的响应作为最优规划
-#     best_graph_response = all_graph_responses[0]
+#     # 遍历每个生成的图，执行并评估
+#     best_recall_score = -1
+#     best_result = None
+    
+#     for graph_response in all_graph_responses:
+#         retrieved_passages_dict = {}
+#         thoughts = []
+#         node_outputs = {}  # Store actual outputs here
 
-#     retrieved_passages_dict = {}
-#     thoughts = []
-#     node_outputs = {}  # Store actual outputs here
+#         def execute_node(node: ExecutionNode) -> str:
+#             if node.id in node_outputs:
+#                 return node_outputs[node.id]
 
-#     def execute_node(node: ExecutionNode) -> str:
-#         if node.id in node_outputs:
-#             return node_outputs[node.id]
+#             upstream_results = []
+#             for up_id in node.upstream_node_ids:
+#                 up_node = next(n for n in graph_response.graph.nodes if n.id == up_id)
+#                 up_result = execute_node(up_node)
+#                 upstream_results.append((up_node.id, up_result))
 
-#         upstream_results = []
-#         for up_id in node.upstream_node_ids:
-#             up_node = next(n for n in best_graph_response.graph.nodes if n.id == up_id)
-#             up_result = execute_node(up_node)
-#             upstream_results.append((up_node.id, up_result))
+#             if node.node_type == NodeType.retrievalandreasoning:
+#                 result, passages, scores = retrieve_and_reason_step(
+#                     query=query,
+#                     instruction=node.instruction,
+#                     corpus=corpus,
+#                     top_k=args.top_k,
+#                     retriever=retriever,
+#                     dataset=args.dataset,
+#                     client=client,
+#                     few_shot=few_shot_samples,
+#                     upstream_results=upstream_results
+#                 )
+#                 # Update retrieved_passages_dict with max scores
+#                 for passage, score in zip(passages, scores):
+#                     if passage in retrieved_passages_dict:
+#                         retrieved_passages_dict[passage] = max(retrieved_passages_dict[passage], score)
+#                     else:
+#                         retrieved_passages_dict[passage] = score
+#             elif node.node_type == NodeType.reasoning:
+#                 result = reason_step(
+#                     instruction=node.instruction,
+#                     client=client,
+#                     upstream_results=upstream_results
+#                 )
+#             else:
+#                 raise ValueError(f"Unknown node type: {node.node_type}")
 
-#         if node.node_type == NodeType.retrievalandreasoning:
-#             result, passages, scores = retrieve_and_reason_step(
-#                 query=query,
-#                 instruction=node.instruction,
-#                 corpus=corpus,
-#                 top_k=args.top_k,
-#                 retriever=retriever,
-#                 dataset=args.dataset,
-#                 client=client,
-#                 few_shot=few_shot_samples,
-#                 upstream_results=upstream_results
-#             )
-#             # Update retrieved_passages_dict with max scores
-#             for passage, score in zip(passages, scores):
-#                 if passage in retrieved_passages_dict:
-#                     retrieved_passages_dict[passage] = max(retrieved_passages_dict[passage], score)
-#                 else:
-#                     retrieved_passages_dict[passage] = score
-#         elif node.node_type == NodeType.reasoning:
-#             result = reason_step(
-#                 instruction=node.instruction,
-#                 client=client,
-#                 upstream_results=upstream_results
-#             )
+#             thoughts.append(result)
+#             node_outputs[node.id] = result
+#             print(f"Node {node.id} output: {result}")
+#             return result
+
+#         final_node = next(n for n in graph_response.graph.nodes if n.id == graph_response.graph.final_node_id)
+#         final_output = execute_node(final_node)
+
+#         # Sort retrieved passages by score
+#         sorted_passages = sorted(retrieved_passages_dict.items(), key=lambda x: x[1], reverse=True)
+#         retrieved_passages, scores = zip(*sorted_passages) if sorted_passages else ([], [])
+
+#         # Calculate recall
+#         if args.dataset in ['hotpotqa']:
+#             gold_passages = [item for item in sample['supporting_facts']]
+#             gold_items = set([item[0] for item in gold_passages])
+#             retrieved_items = [passage.split('\n')[0].strip() for passage in retrieved_passages]
+#         elif args.dataset in ['musique']:
+#             gold_passages = [item for item in sample['paragraphs'] if item['is_supporting']]
+#             gold_items = set([item['title'] + '\n' + item['paragraph_text'] for item in gold_passages])
+#             retrieved_items = list(retrieved_passages)
+#         elif args.dataset in ['2wikimultihopqa']:
+#             gold_passages = [item for item in sample['supporting_facts']]
+#             gold_items = set([item[0] for item in gold_passages])
+#             retrieved_items = [passage.split('\n')[0].strip() for passage in retrieved_passages]
 #         else:
-#             raise ValueError(f"Unknown node type: {node.node_type}")
+#             raise NotImplementedError(f'Dataset {args.dataset} not implemented')
 
-#         thoughts.append(result)
-#         node_outputs[node.id] = result
-#         print(f"Node {node.id} output: {result}")
-#         return result
+#         recall = {k: sum(1 for t in gold_items if t in retrieved_items[:k]) / len(gold_items) for k in k_list}
 
-#     final_node = next(n for n in best_graph_response.graph.nodes if n.id == best_graph_response.graph.final_node_id)
-#     final_output = execute_node(final_node)
+#         # 计算平均 recall 作为选择标准
+#         avg_recall = sum(recall.values()) / len(recall)
+#         if avg_recall > best_recall_score:
+#             best_recall_score = avg_recall
+#             best_result = (idx, recall, list(retrieved_passages), thoughts, len(thoughts))
 
-#     # Sort retrieved passages by score
-#     sorted_passages = sorted(retrieved_passages_dict.items(), key=lambda x: x[1], reverse=True)
-#     retrieved_passages, scores = zip(*sorted_passages) if sorted_passages else ([], [])
-
-#     # Calculate recall
-#     if args.dataset in ['hotpotqa']:
-#         gold_passages = [item for item in sample['supporting_facts']]
-#         gold_items = set([item[0] for item in gold_passages])
-#         retrieved_items = [passage.split('\n')[0].strip() for passage in retrieved_passages]
-#     elif args.dataset in ['musique']:
-#         gold_passages = [item for item in sample['paragraphs'] if item['is_supporting']]
-#         gold_items = set([item['title'] + '\n' + item['paragraph_text'] for item in gold_passages])
-#         retrieved_items = list(retrieved_passages)
-#     elif args.dataset in ['2wikimultihopqa']:
-#         gold_passages = [item for item in sample['supporting_facts']]
-#         gold_items = set([item[0] for item in gold_passages])
-#         retrieved_items = [passage.split('\n')[0].strip() for passage in retrieved_passages]
-#     else:
-#         raise NotImplementedError(f'Dataset {args.dataset} not implemented')
-
-#     recall = {k: sum(1 for t in gold_items if t in retrieved_items[:k]) / len(gold_items) for k in k_list}
-#     return idx, recall, list(retrieved_passages), thoughts, len(thoughts)
+#     # 返回最佳结果
+#     return best_result
 
 def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, corpus: Dict[str, Any], retriever: DocumentRetriever, client: Any, processed_ids: set) -> Optional[Tuple[int, Dict[int, float], List[str], List[str], int]]:
     if args.dataset in ['hotpotqa', '2wikimultihopqa']:
@@ -408,12 +418,15 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
         return None
 
     # 保存所有规划结果
-    with open(f'output/graph_attempts_{idx}.json', 'w') as f:
+    with open(f'result/llm_10/graph_attempts_{idx}.json', 'w') as f:
         json.dump([response.dict() for response in all_graph_responses], f, indent=4)
 
     # 遍历每个生成的图，执行并评估
     best_recall_score = -1
     best_result = None
+    best_graph = None
+    
+    all_results = []
     
     for graph_response in all_graph_responses:
         retrieved_passages_dict = {}
@@ -489,10 +502,21 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
 
         # 计算平均 recall 作为选择标准
         avg_recall = sum(recall.values()) / len(recall)
+        all_results.append({
+            "graph": graph_response.dict(),
+            "recall": avg_recall,
+            "retrieved_passages": retrieved_passages,
+            "thoughts": thoughts
+        })
         if avg_recall > best_recall_score:
             best_recall_score = avg_recall
             best_result = (idx, recall, list(retrieved_passages), thoughts, len(thoughts))
+            best_graph = graph_response
 
+    # Log all attempts and mark the best one
+    with open(f'result/llm_10/graph_logs_{idx}.json', 'w') as f:
+        json.dump({"all_graphs": all_results, "best_graph": best_graph.dict(), "best_recall": best_recall_score}, f, indent=4)
+    
     # 返回最佳结果
     return best_result
 

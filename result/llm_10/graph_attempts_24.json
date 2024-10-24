@@ -1,0 +1,157 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the company where Adena Friedman was formerly the managing director and CFO.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Once the company is identified, retrieve information about the key business areas that the company specializes in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the four key business areas from the list of business areas the company specializes in.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into three steps. First, we need to determine the company associated with Adena Friedman as managing director and CFO. Once the company is identified, we retrieve its business areas. Finally, from this information, we extract the four key business areas the company specializes in."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the company where Adena Friedman served as managing director and CFO.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the key business areas of the identified company.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "List the four key business areas of the company where Adena Friedman served as managing director and CFO.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with identifying the company where Adena Friedman served as managing director and CFO. Once identified, the next step involves retrieving the key business areas of that company. Finally, reasoning is performed to list these areas, specifically identifying the four key business areas relevant to the query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the company where Adena Friedman was formerly the managing director and CFO.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the company identified in node 1 to determine its key business areas.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract and list the four key business areas from the information retrieved in node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by identifying the company where Adena Friedman served as managing director and CFO. Once the company is identified, it retrieves information about the company's business areas. Finally, it extracts and lists the four key business areas, which answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Adena Friedman's career history, focusing on roles where she was Managing Director and CFO.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the company where Adena Friedman served as Managing Director and CFO.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the key business areas of the identified company during Adena Friedman's tenure.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task requires finding the company where Adena Friedman held the positions of Managing Director and CFO and subsequently identifying the key business areas of that company as relevant to her tenure. The graph begins by gathering career details of Adena Friedman, followed by pinpointing the specific company related to her role as managing director and CFO. Finally, it involves retrieving details on the main business areas of that company during the relevant period."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the company Adena Friedman was the managing director and CFO of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the key business areas of the identified company.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract and list the four key business areas from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the company Adena Friedman was affiliated with, requiring a retrieval of her career history. Once the company is known, the next step retrieves information about the business areas that company specializes in. Finally, a reasoning step extracts and lists the key business areas from the gathered information, directly answering the original question."
+    }
+]

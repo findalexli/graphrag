@@ -1,0 +1,133 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the band that released the album 'Angel of Retribution'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the drummer who played on the album 'Angel of Retribution'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the birth year of the drummer identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the band associated with the album 'Angel of Retribution'. Next, it retrieves the specific drummer who played on that album. Finally, it finds and returns the birth year of the identified drummer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the drummer of the album 'Angel of Retribution'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the birth year of the identified drummer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into two main steps: \n1. Identify the drummer from the album 'Angel of Retribution'. This step includes retrieving album personnel information to specifically find who the drummer is.\n2. Once the drummer is identified, we retrieve information about the person's birth year. \nThe final node provides the answer to the original question by delivering the birth year of the drummer identified in the first node."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the band that released the album 'Angel of Retribution'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the drummer from the band identified in Node 1 during the release of 'Angel of Retribution'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the birth year of the drummer identified in Node 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To find the birth year of the drummer from the album 'Angel of Retribution', the execution graph first identifies the band associated with the album. Next, it retrieves the name of the drummer from that band who was involved at the time of the album's release. Finally, it retrieves the birth year of that specific drummer. The nodes are sequentially dependent, as each step builds upon the information obtained in the previous step."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the drummer for the album \"Angel of Retribution\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birth year information for the identified drummer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task involves two steps: First, identifying the drummer associated with the album \"Angel of Retribution,\" which requires retrieving and reasoning from available information about the album. The second step is to retrieve the birth year of that drummer. Since no additional reasoning is needed beyond identifying the drummer and finding their birth year, each step handles both retrieval and reasoning for its specific purpose."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the drummer for the album 'Angel of Retribution'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the birth year of the drummer identified in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into two main steps. First, we must determine who the drummer for the album 'Angel of Retribution' is, which requires retrieving specific information about the album's personnel. After identifying the drummer, the next step is to find out their birth year, completing the retrieval and reasoning task."
+    }
+]

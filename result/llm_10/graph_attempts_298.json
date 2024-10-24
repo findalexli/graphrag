@@ -1,0 +1,158 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the starting location of the Out of Control Tour.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the type of venue (e.g., indoor arena) where the Out of Control Tour began.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Research what is located beneath the identified indoor arena from the Out of Control Tour.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the question into steps: first identifying the starting location of the tour, then confirming the type of venue, and finally uncovering what lies beneath this venue to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the specific location or indoor arena where the Out of Control Tour began.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine what is physically located below the identified indoor arena or location.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize information to determine what is directly below the indoor arena where the Out of Control Tour began.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the indoor arena where the 'Out of Control Tour' began. Once the location is identified, the next step is to determine what is physically located beneath this arena. The final step synthesizes this information to answer the original question about what the arena is above."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what 'The Out of Control Tour' refers to.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the location where 'The Out of Control Tour' began.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine what is located below the location where 'The Out of Control Tour' began (identify what the indoor arena is constructed above).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph for answering this question begins by first understanding what 'The Out of Control Tour' is, which involves determining the context or artist associated with the tour. Once the tour is identified, the next step is to retrieve the specific location details of where the tour began. The final step is reasoning to identify what lies beneath the indoor arena where the tour started, which will answer the original question of 'above what'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the starting location of the Out of Control Tour.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine what is below the identified starting location (e.g., the type of establishment, facility, or feature).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task consists of two main steps: First, identifying the indoor arena where the Out of Control Tour began. Second, determining what is located beneath this arena. These steps are carried out sequentially, starting with the retrieval and reasoning needed to find the arena and followed by analyzing or retrieving information about what lies beneath it."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify when and where the Out of Control Tour began.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the specific indoor arena where the Out of Control Tour began.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the location of the identified indoor arena.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine what is located directly below or beneath the arena from Node 3.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph breaks down the task of finding what is beneath the indoor arena where the Out of Control Tour began into logical steps. First, identify the timeframe and place where the tour started. Then specify the actual indoor arena. Afterward, gather details about the arena's location to determine what lies directly below it."
+    }
+]

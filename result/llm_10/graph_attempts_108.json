@@ -1,0 +1,117 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the country in which Ain Timguenai is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the official English name of the identified country.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into two main steps. The first node retrieves and identifies the country where Ain Timguenai is located. The output of this retrieval serves as the input for the second node, which retrieves the official English name of the identified country."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Ain Timguenai to determine which country it is located in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the official English name of the country identified in the previous step.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph comprises two main steps. The first step is to determine which country Ain Timguenai is located in by retrieving relevant geographical information. Once the country is identified, the second step is to retrieve the official English name of that country. The answer is obtained in the final node after completing both retrieval and reasoning processes."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Ain Timguenai and determine the country in which it is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the official English name of the country identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph breaks down the question into two steps. First, we retrieve information about Ain Timguenai to determine which country it is in. Then, using the identified country, we retrieve its official English name."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the country where Ain Timguenai is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the official English name of the country identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph consists of two primary nodes to address the task: \n\n1. The first node focuses on locating Ain Timguenai to determine which country it is situated in. This step uses both retrieval (to find geographic information) and reasoning (to interpret location data).\n\n2. Once the country is identified, the second node retrieves the official English name of the country. This ensures that the answer reflects the proper nomenclature as used in English-speaking contexts.\n\nThere are no parallel steps in this graph since each step depends on the successful completion of the previous one to provide the necessary context and information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the country in which the city or locality \"Ain Timguenai\" is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the official English name of the country identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task of finding the official English name of the country where Ain Timguenai is located consists of two main steps. First, we need to determine which country Ain Timguenai is in. This involves geographic knowledge or retrieval from a database that links cities or localities to their respective countries. Once the country is identified, the next step is to retrieve or verify its official English name. This can typically be done by checking a reliable geographic or governmental database. The execution graph represents these steps as two nodes, where the result of the first step feeds into the second."
+    }
+]

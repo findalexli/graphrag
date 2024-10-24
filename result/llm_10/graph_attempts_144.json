@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find Lawrence Turman's filmography to identify films he produced.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the film that features a character named \"Johnny 5\" from the list of films produced by Lawrence Turman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the sequel to the film identified to feature \"Johnny 5\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the release year of the sequel film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins by retrieving Lawrence Turman's filmography to discover his produced films. Next, it identifies which of those films includes a character called 'Johnny 5'. Once the film is identified, the graph locates any sequels to that film. Finally, it retrieves the release year of the sequel, addressing the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the film produced by Lawrence Turman featuring a character named 'Johnny 5'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the sequel to the film with 'Johnny 5'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the release year of the sequel film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the multi-hop question into a series of logical steps. The first step identifies the film created by Lawrence Turman that features 'Johnny 5'. The next step finds the sequel to this identified film. The final step retrieves the release year of this sequel, which directly answers the question posed."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the film produced by Lawrence Turman that features a character named 'Johnny 5'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the sequel to the film identified in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the release year of the sequel identified in node 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first identify the movie produced by Lawrence Turman that has a character named 'Johnny 5', which is the crucial piece of information needed to proceed. Upon identifying the film, we look for a sequel related to this film. Finally, we retrieve the release year of the sequel film, which will answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the film produced by Lawrence Turman featuring a character named \"Johnny 5\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Once the film is identified, find out if it had any sequels.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the release year of the sequel to the film identified.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question asks for the release year of a sequel to a film produced by Lawrence Turman with a character named \"Johnny 5\". The execution graph begins by identifying the film with \"Johnny 5\" that Turman produced (Node 1). Next, it checks for any sequels to the identified film (Node 2). Finally, it determines the release year of the sequel (Node 3). These steps ensure all parts of the question are addressed methodically."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the film produced by Lawerence Turman that features a character named 'Johnny 5'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Check if the identified film has a sequel.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the release year of the sequel to the film identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into a systematic retrieval and reasoning process. First, we need to identify the specific film produced by Lawerence Turman with the character 'Johnny 5'. Next, we check whether this film has a sequel. Finally, we determine the release year of the sequel to answer the question."
+    }
+]

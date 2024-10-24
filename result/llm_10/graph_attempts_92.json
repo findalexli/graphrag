@@ -1,0 +1,138 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on Tigerair as a budget airline.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Singaporean flag carriers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which Singaporean flag carrier is the parent company of Tigerair, based on the retrieved information about Tigerair.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving background information on Tigerair and Singaporean flag carriers. These two independent retrieval steps provide the necessary data to determine which Singaporean flag carrier is the parent of Tigerair. The reasoning step combines these data points to conclude the correct parent company."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the parent company of Tigerair.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which national or flag carrier airline is based in Singapore.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if Tigerair's parent company is the same as the Singaporean flag carrier.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying which airline company owns Tigerair, retrieving relevant information about Tigerair's parent company. Simultaneously, it identifies which airline is the national or flag carrier for Singapore. The final node determines if Tigerair's parent company is also the Singaporean flag carrier, providing the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the parent company or ownership information of Tigerair.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out if the parent company from Node 1 is a Singaporean flag carrier.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins with identifying the parent company or ownership of Tigerair, which forms the basis for understanding its relationship with any national carrier. The subsequent step determines whether this parent company is Singapore's flag carrier, directly answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the parent company or flag carrier of Tigerair.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify that the identified flag carrier is a Singaporean company.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts by retrieving the parent company or flag carrier of Tigerair, which encompasses searching for ownership or subsidiary relationships. The subsequent step is reasoning to ensure that the identified parent company is indeed a Singaporean flag carrier, correlating the information acquired with known data about Singaporean airlines."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the parent company or flag carrier of the budget airline Tigerair.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify and consolidate information about Singaporean flag carriers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Cross-reference the information from Tigerair's parent company with the list of Singaporean flag carriers to determine the flag carrier that is the parent of Tigerair.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving information about the parent company or flag carrier of Tigerair. Simultaneously, it retrieves information on Singaporean flag carriers. The final reasoning step synthesizes these two pieces of information to determine which flag carrier subsidiary operates Tigerair."
+    }
+]

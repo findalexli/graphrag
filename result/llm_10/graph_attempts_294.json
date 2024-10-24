@@ -1,0 +1,133 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the height and basic details of Calvin Murphy to establish who tied his record.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which NBA player tied Calvin Murphy's record for being the shortest player in an All-Star Game.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out which team this player was sent to in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by gathering data on Calvin Murphy, including his height, to establish context for the record. Then, it identifies the player who matched Murphy's record as the shortest player in an All-Star Game. Finally, it finds information on the team to which this player was traded or sent in 2017, directly answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out who tied Calvin Murphy's record of being the shortest NBA player to play in an All-Star Game.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which teams the player identified in Node 1 was sent to during the year 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The query begins by identifying the basketball player who matched Calvin Murphy's record as the shortest All-Star player. Once the player is identified, the next step is to trace their team movements in 2017. The goal is to determine which team he joined in that year. These two steps are sufficient to resolve the question, with the identification of the player informing the subsequent search for their team assignment."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which player tied Calvin Murphy's record for being the shortest NBA player to play in an All-Star Game.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which team this player was sent to in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task involves two main pieces of information. First, we need to identify the player who tied Calvin Murphy's record for being the shortest NBA player to play in an All-Star Game. After identifying this player, we need to find out the team he was sent to in 2017. The process begins with a retrieval step to determine the player's identity and proceeds with another retrieval step to find out the details of the team transfer in 2017, based on the previously retrieved player's information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the height of Calvin Murphy and the criteria for being considered the shortest NBA player to play in an All-Star Game.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which player tied Calvin Murphy's record for being the shortest player in an NBA All-Star Game.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out which team the player identified in Step 2 was sent to in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to find out which team the player who tied Calvin Murphy's record was sent to in 2017. To do so, we first need to understand the specific record Calvin Murphy holds. Then, we should identify the player who tied this record, and finally, determine which team this player joined in 2017."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which player tied Calvin Murphy's record of being the shortest NBA player to play in an All-Star Game.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the team to which this player was sent in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph first involves identifying the player who tied Calvin Murphy's record for the shortest NBA player in an All-Star Game. Once that player is identified, we need to look up the team that he was sent to in 2017, completing the information required to answer the original question."
+    }
+]

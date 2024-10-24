@@ -1,0 +1,149 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who the Onizuka Prop Wash Award is named after.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the person identified in Node 1's involvement in any space missions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out during which mission the person identified in Node 1 perished.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying who the Onizuka Prop Wash Award is named after. Once determined, the next step involves researching the person's involvement in any space missions to retrieve pertinent details about their spaceflight history. Finally, the graph seeks to find out which specific mission resulted in their demise, synthesizing the information needed to answer the original query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the Onizuka Prop Wash Award, including who it is named after.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the individual after whom the Onizuka Prop Wash Award is named and gather background information about this person, including their notable achievements and career highlights.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the specific space mission during which the individual named in the Onizuka Prop Wash Award perished.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task of determining the space mission in which the man, after whom the Onizuka Prop Wash Award is named, perished. It begins with retrieving information about the award and its namesake to establish the identity of the person. Once identified, the process continues by investigating the circumstances of their demise, particularly focusing on the space mission involved. Each step builds upon the information retrieved in the previous step, ensuring a logical progression to determine the mission associated with their death."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who the Onizuka Prop Wash Award is named after.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve biographical information about the person identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the space mission during which the person identified in step 1 died.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This execution graph breaks down the task of identifying the space mission in which the individual honored by the Onizuka Prop Wash Award perished. First, it identifies who the award is named after (node 1). Then, it retrieves and reasons about this person's biographical details to understand the circumstances of their death (node 2). Finally, it identifies the specific space mission during which this person died (node 3). The nodes are crafted to ensure critical information is gathered and processed, resulting in the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the man after whom the Onizuka Prop Wash Award is named.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for information about the death of the man identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Once the information about the man's death is retrieved, determine the space mission he was part of at the time of his death.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by first identifying the individual for whom the Onizuka Prop Wash Award is named. This is crucial as it forms the basis for subsequent steps. The next step involves searching for details regarding the individual's death, specifically during which event or mission he perished. Finally, reasoning is applied based on the retrieved information to pinpoint the specific space mission involved at the time of his death. This structured approach ensures that each step logically builds on the information obtained from previous steps, leading to a coherent answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the full name of the person after whom the Onizuka Prop Wash Award is named.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which space mission involved the person identified in node 1 and verify if they perished in that mission.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph begins with retrieving the name of the person honored by the Onizuka Prop Wash Award. This requires parsing the context usually given with awards, especially those named after historical figures. Once the name is identified, the next step is to search for the specific space mission associated with this person and confirm whether it was the mission during which they perished. This involves cross-referencing historical records of space missions to validate the information."
+    }
+]

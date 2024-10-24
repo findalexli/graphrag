@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify geographic and administrative boundaries of the City of Tea Tree Gully.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about shopping centers located in the City of Tea Tree Gully.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the size or square footage of each shopping center identified in the City of Tea Tree Gully.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Compare the sizes of the shopping centers to determine the largest one.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by defining the geographical scope of the City of Tea Tree Gully to ensure we are considering the right area. Next, it retrieves data on shopping centers within that area, followed by assessing the size of each shopping center to determine metrics like square footage. Finally, by comparing these sizes, we identify the largest shopping center in the City of Tea Tree Gully."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify known shopping centers in City of Tea Tree Gully.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the size details of each identified shopping center.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which shopping center is the largest based on the size details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To identify the largest shopping center in the City of Tea Tree Gully, begin by retrieving a list of known shopping centers in the area. Next, gather size information for each shopping center identified. Finally, analyze the size data to determine which shopping center is the largest."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the City of Tea Tree Gully to identify its geographic boundaries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of shopping centers located in the City of Tea Tree Gully.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "For each shopping center identified, retrieve information about its size or square footage.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which shopping center is the largest based on the size information collected.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph addresses the question by first gathering necessary geographic information to ensure that retrievals are accurate and relevant to the City of Tea Tree Gully. It then proceeds to gather data on all shopping centers in that locale and assesses their size, leading to a reasoning step to identify the largest shopping center."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve a list of shopping centers in the City of Tea Tree Gully and their sizes.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the shopping center with the largest size.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two steps. The first step retrieves data about shopping centers in the City of Tea Tree Gully, focusing on their sizes for comparison. The second step involves reasoning to identify which shopping center from the list is the largest by size. This two-step process efficiently narrows down to the most relevant shopping center, providing the answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify all shopping centers in the City of Tea Tree Gully.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each shopping center identified, determine their respective sizes.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the sizes of all listed shopping centers to find the largest one.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine the largest shopping center in the City of Tea Tree Gully, we start by retrieving a list of all shopping centers in the area. Then, we obtain the size of each shopping center to enable a comparison, ultimately identifying the largest one based on size."
+    }
+]

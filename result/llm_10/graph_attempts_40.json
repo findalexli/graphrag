@@ -1,0 +1,200 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on the band 'The Maine', including origin.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on the band 'Black', including origin.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if 'The Maine' is from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 'Black' is from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to determine if both 'The Maine' and 'Black' are from Tempe, Arizona.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by retrieving information on both bands, 'The Maine' and 'Black', individually. Each retrieval will gather details about their origins. Parallel reasoning nodes then independently verify if each band is specifically from Tempe, Arizona. Finally, a reasoning node combines these verifications to answer whether both bands are from the specified location."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the origin of the band 'The Maine'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the origin of the band 'Black'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if both 'The Maine' and 'Black' are from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to verify if both bands 'The Maine' and 'Black' originate from Tempe, Arizona. The execution graph first involves retrieving the origin information separately for each band. Then, it evaluates the retrieved data in tandem to determine if both bands are indeed from Tempe, Arizona."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the origin of the band 'The Maine'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the origin of the band 'Black'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if 'The Maine' is from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if 'Black' is from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to answer whether both, neither, or only one of the bands is from Tempe, Arizona.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task is divided into steps to independently and concurrently verify the origin of each band, 'The Maine' and 'Black'. Nodes 1 and 2 handle the retrieval of origin information for each band separately. Nodes 3 and 4 analyze this information to determine the city of origin for 'The Maine' and 'Black' individually. Finally, Node 5 synthesizes these determinations to answer the main question about whether both bands are from Tempe, Arizona."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the origin of the band The Maine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the origin of the band Black.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to answer whether both The Maine and Black are from Tempe, Arizona.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph is structured to first independently retrieve information about the origin of each band (The Maine and Black). Nodes 1 and 2 handle this by accessing data on the origins of the respective bands. Upon retrieving this information, nodes 3 and 4 are responsible for reasoning whether the geolocations retrieved (for each band) match Tempe, Arizona. Finally, the results from nodes 3 and 4 are combined in node 5 to conclude whether both bands are indeed from Tempe, Arizona."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the place of origin for the band The Maine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the place of origin for the band Black.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the places of origin of The Maine and Black to see if both are from Tempe, Arizona.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of two retrieval and reasoning nodes to independently find the origins of the two bands, The Maine and Black. The final reasoning node checks if both retrieved origins are Tempe, Arizona, thus synthesizing the answer to the original question."
+    }
+]

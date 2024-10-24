@@ -1,0 +1,182 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify that the question is asking for the name of a company based in Birmingham, Alabama, which is the third largest private company in that area.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of the largest private companies based in Birmingham, Alabama.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the third largest private company from the list of companies based in Birmingham, Alabama.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve details about the journal 'In the Library with the Lead Pipe', specifically focusing on its abstracting and indexing services.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Verify if the third largest private company in Birmingham, Alabama, is involved in abstracting and indexing the journal 'In the Library with the Lead Pipe'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To answer the question, the execution graph begins by recognizing the requirement to find a company based in Birmingham, Alabama, that is the third largest private company. This involves retrieving a list of such companies and identifying the third largest one. Parallelly, it requires gathering information about the journal 'In the Library with the Lead Pipe' to understand its abstracting and indexing services. Finally, by checking if the identified company from Birmingham abstracted and indexed this journal, we answer the question directly."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the third largest private company located in Birmingham, Alabama.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of companies that abstract and index academic journals, especially in the field of library science.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if the third largest private company in Birmingham, Alabama, abstracts and indexes journals, specifically 'In the Library with the Lead Pipe'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is designed to answer the question by first identifying the relevant company based on its size and location. It then retrieves information about companies involved in abstracting and indexing academic journals within library science to ensure comprehensive coverage. The final step combines the results to confirm if the identified company performs the requested function for the specified journal."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the entity that abstracts and indexes the journal 'Library with the Lead Pipe'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify private companies that are known for abstracting and indexing academic journals.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of these companies is based in Birmingham, Alabama.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the third largest private company in Birmingham, Alabama, involved in abstracting and indexing.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if the company identified in step 4 abstracts and indexes 'Library with the Lead Pipe'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The question requires identifying the third largest private company in Birmingham, Alabama, involved in abstracting and indexing the journal 'Library with the Lead Pipe'. The execution graph starts with identifying the company that indexes the journal and gathers general information about private companies in this field. It narrows down to those based in Birmingham, Alabama, and identifies the third largest among them. Finally, it verifies if the identified company is indeed the one indexing 'Library with the Lead Pipe'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the third largest private company in Birmingham, Alabama.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about 'In the Library with the Lead Pipe' journal indexing sources.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the third largest private company in Birmingham, Alabama, identified as EBSCO Industries, indexes 'In the Library with the Lead Pipe' journal.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to identify which third largest private company in Birmingham, Alabama, abstracts and indexes 'In the Library with the Lead Pipe'. The first step is to discover the company by examining Birmingham-based companies by size. The second step independently retrieves potential indexing sources of the journal. Lastly, the reasoning node combines these insights to verify whether the identified company is involved in indexing the journal."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the third largest private company located in Birmingham, Alabama.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find which companies abstract and index contents from the journal \"In the Library with the Lead Pipe.\"",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the list of companies from node 2 with the third largest company identified in node 1 to check if they match.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires determining which organization indexes the academic journal. First, identify the third largest private company in Birmingham, Alabama. Separately, find out what companies index the journal. Finally, compare these results to see if the company matches the description."
+    }
+]

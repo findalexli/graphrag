@@ -1,0 +1,146 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the e-commerce platform founded in 1995.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about platforms selling the album \"Blues to the Bush\" by The Who.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the e-commerce platform identified in step 1 sells \"Blues to the Bush\".",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task requires identifying an e-commerce platform founded in 1995 and checking if the album \"Blues to the Bush\" by The Who is available on it. The first step retrieves and reasons about e-commerce platforms founded in 1995. The second step retrieves platforms selling the specified album. The final step combines this information to conclude the availability of the album on the identified platform."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the album 'Blues to the Bush' by The Who.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify e-commerce platforms founded in 1995.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which e-commerce platforms currently have 'Blues to the Bush' for sale from the list of those founded in 1995.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task requires identifying an e-commerce platform where the album 'Blues to the Bush' by The Who is available, with the additional condition that the platform was founded in 1995. The graph starts by retrieving information about the album itself, then independently retrieves a list of e-commerce platforms founded in 1995. These two pieces of information are then combined to check which of those platforms currently list the album for sale, providing the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of e-commerce platforms founded in 1995.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify if 'Blues to the Bush' is available on the e-commerce platforms identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which e-commerce platform 'Blues to the Bush' by The Who can still be found on from the results obtained in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying e-commerce platforms founded in the specified year, 1995, then checks the availability of the album on those platforms, and finally determines which of the platforms has the album available."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the e-commerce platform founded in 1995.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the album 'Blues to the Bush' by The Who and identify where it can be purchased online.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the e-commerce platforms found in Node 2 was founded in 1995.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is designed to identify an e-commerce platform that can be related both to the specific year it was founded and its current availability of the album 'Blues to the Bush'. First, we identify e-commerce platforms founded in 1995 (Node 1). We also independently retrieve data about where the album can currently be found online (Node 2). Finally, a reasoning step (Node 3) determines which of these platforms from Node 2 matches the founding year criteria from Node 1, thus answering the initial question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the e-commerce platform founded in 1995.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify if the album 'Blues to the Bush' by The Who is available on the identified e-commerce platform.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins with identifying the e-commerce platform that was founded in 1995. This foundational step is crucial because it narrows down the possible platforms to check for the album 'Blues to the Bush'. In the second node, we retrieve and verify whether the specific album is available on the identified platform. By structuring the task in this way, we ensure a logical, efficient path to answer the question based on the key date-related information about the platform's founding year."
+    }
+]

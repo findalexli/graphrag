@@ -1,0 +1,436 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the key entities in the question: Spider9, Wanxiang Group, subsidiary of Wanxiang Group.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Search for information on Spider9 and its founding, focusing specifically on the year 2011.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Find a list of subsidiaries under Wanxiang Group.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the person who founded Spider9 in 2011.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Determine the position or company the founder of Spider9 was associated with in 2011, focusing on connections to Wanxiang Group subsidiaries.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "4",
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "6",
+                            "instruction": "Verify which subsidiary of Wanxiang Group the founder of Spider9 was leading or associated with in 2011.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "5"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "6"
+                },
+                "explanation": "The task requires identifying the founder of Spider9 and their connection to a Wanxiang Group subsidiary in 2011. Steps include identifying key entities, retrieving details about Spider9's founding, listing Wanxiang Group subsidiaries, and confirming the founder's position related to those subsidiaries."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Spider9\nSpider9 Inc. is an American, environmental technologies company headquartered in Northville, MI which develops and manufactures advanced control systems for energy storage and solar fields. It was founded in 2011 by Glynne Townsend (A123 Systems), Dave Park (former Vice President of Production at Wave Crest Energy Systems), Dave Smith (former chairman of USABC), and Bill Beckman (former Vice President of Finance at Johnson Controls).",
+                "Wanxiang\nWanxiang Group Corporation () is a Chinese multinational automotive components manufacturing company headquartered in Hangzhou, Zhejiang province, China. It is the largest China-based automotive components company measured by revenues.",
+                "Fisker Automotive\nFisker Automotive, now Fisker Inc., was a firm which made the Fisker Karma, which was one of the world's first production plug-in hybrid electric vehicles. It debuted at the 2008 North American International Auto Show, and first deliveries were in 2011. Production of the Fisker Karma was suspended in November 2012 due to bankruptcy of its battery supplier A123 Systems, with about 2,450 Karmas built since 2011 and over 2000 cars sold worldwide. In February 2014, the company's designs, engineering and manufacturing facility were purchased by Chinese auto parts conglomerate Wanxiang Group. Henrik Fisker retained the Fisker trademarks and the Fisker brand and relaunched Fisker Inc, and so Wanxiang named its new company Karma Automotive.",
+                "US Airways Group\nUS Airways Group Inc. was an airline holding company based in Tempe, Arizona. US Airways Group operated US Airways, along with its subsidiaries PSA Airlines, Inc. and Piedmont Airlines, Inc., which are wholly owned but marketed under the branding of US Airways Express. It merged with America West Holdings Corporation, parent of America West Airlines, in 2005, and the combined company adopted the better-known US Airways name; the two airlines' operating certificates merged in 2007. It also operates additional companies that provide associated services. ACE Aviation Holdings, the Canadian parent of Air Canada retained a roughly 6.1% investment stake in US Airways Group. The route network covered destinations in 47 states, as well as international destinations.",
+                "Karma Automotive\nKarma Automotive is a U.S. automaker owned by Chinese autoparts company Wanxiang Group, and based in Costa Mesa, California.",
+                "Deconstruction (Devin Townsend Project album)\nDeconstruction is the thirteenth studio album by Canadian musician Devin Townsend, and the third album in the Devin Townsend Project series. The album was released on June 20, 2011, simultaneously with the fourth Devin Townsend Project album \"Ghost\", on Townsend's independent record label HevyDevy Records. The album features two drummers, Dirk Verbeuren and Ryan Van Poederooyen, as well as a number of guest vocalists. The album's choral and orchestral parts were written and arranged by Townsend using Pro Tools software. The parts were later transcribed into conventional musical notation for the orchestra.",
+                "Cogobuy\nCogobuy Group PLC is a publicly listed company on the Hong Kong Stock Exchange as SEHK: 400. The company primarily deals with computer and telecommunication hardware. It provides an e-commerce platform for electronic goods in China, although the company and its subsidiaries distribute their products globally. It operates the largest transaction-based e-commerce platform for IC and other electronic components in China as measured by GMV in 2013, (Analysys International & CSCI Investment Bank).",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "A123 Systems\nA123 Systems, LLC, a wholly owned subsidiary of Wanxiang Group, is a developer and manufacturer of advanced lithium-ion (lithium iron phosphate) batteries and energy storage systems for transportation and other commercial and industrial applications.",
+                "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+                "Working Group on Internet Governance\nThe Working Group on Internet Governance (WGIG) was a United Nations multistakeholder Working group initiated after the 2003 World Summit on the Information Society (WSIS) first phase Summit in Geneva failed to agree on the future of Internet governance. The first phase of World Summit on the Information Society (WSIS) agreed to continue the dialogue on Internet Governance in the Declaration of Principles and Action Plan adopted on 12 December 2003, to prepare for a decision at the second phase of the WSIS in Tunis during November 2005. In this regard, the first phase of the Summit requested the United Nations Secretary-General to establish a Working Group on Internet Governance (WGIG).",
+                "The Man from Jupiter\n\"The Man from Jupiter\" is the fourth episode of the third season of the American animated television series \"Archer\". It originally aired on January 19, 2012, in the United States on FX. Sterling Archer (H. Jon Benjamin) is introduced to Burt Reynolds, who is involved in a relationship with his mother Malory Archer (Jessica Walter). Sterling tries several attempts to end their relationship. Meanwhile, a group of Cuban hitmen set out to kill Sterling.",
+                "Golden Nugget Atlantic City\nGolden Nugget Atlantic City is a hotel, casino, and marina located in Atlantic City, New Jersey. Opened in 1985 as Trump's Castle, it was renamed Trump Marina in 1997. Landry's, Inc. purchased the casino from Trump Entertainment Resorts in February 2011, and the sale was approved in late May. Landry's took control of the property on May 23, 2011.",
+                "List of GetBackers episodes\nThe episodes for the anime series \"GetBackers\" were produced by Studio Deen and based on the manga series of the same name written by Yuya Aoki and illustrated by Rando Ayamine. The series premiered on Tokyo Broadcasting System in Japan on October 5, 2002 and ran for forty-nine episodes until September 20, 2003 under direction of Kazuhiro Furuhashi and Keitaro Motonaga. The plot follows the \"GetBackers\", a group that retrieves anything that was lost. The team is primary composed by Ban Mido, a man born with the illusionary technique \"Evil Eye\", and Ginji Amano the former leader of a gang called \"The VOLTS\", a powerful group in the dangerous territory called the Limitless Fortress in Shinjuku.",
+                "James R. Gaines\nJames R. Gaines (born August 11, 1947) is a journalist and historian who between 2011 and 2015 was at Reuters in various capacities: as global editor-at-large, as editor in charge of the Americas, as editor in charge of global photography and as global editor for ethics and standards. He spent most of his career at Time Inc., where he was the managing editor of \"People, Life\" and \"Time\" magazines, then corporate editor of Time Inc.. Between Time Inc. and Reuters, he was a consultant on magazine startups, acquisitions and digital initiatives for publishers including Conde Nast International and American Express Publishing. In 2007 he became the editor-in-chief of FLYP, a biweekly multimedia publication online that produced interactive material for the web sites of \"Fortune, Sports Illustrated, Entertainment Weekly, Scientific American\" and ProPublica. He also served briefly as managing editor of The Daily, News Corp.\u2019s \u201cnewspaper\u201d for tablets.",
+                "Powell v. Home Depot USA, Inc.\nPowell v. The Home Depot USA, Inc. (2008cv61862) (2011) was a decision by the Florida Southern District Court on the issue of patent infringement on a \u201csafe hands\u201d device that Michael Powell, an independent contractor for Home Depot, created in response to injuries to the hands of associates using in-store radial arm saws. Powell invented and patented a device that eliminated the risk of injury. The Home Depot refused to pay Powell for the device and began installing the safety device on its saws without permission. In 2007, Mr. Powell sued The Home Depot for patent infringement. After a jury trial Powell was awarded damages totaling $20.8 million.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+                "Annette Verschuren\nAnnette Verschuren, {'1': \", '2': \", '3': \", '4': \"} is a Canadian business woman. She is currently the Chair & CEO of NRStor Inc., and energy storage development company. Formerly, she was the President of The Home Depot Canada and the Home Depot Asia, overseeing the growth of the company's Canadian operations from 19 to 179 stores between 1996 and 2011. She also led The Home Depot's entry into China."
+            ],
+            "thoughts": [
+                "Key Entities:\n1. Spider9\n2. Wanxiang Group\n3. Subsidiary of Wanxiang Group",
+                "In 2011, Spider9 Inc. was founded by Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman. This American environmental technologies company develops and manufactures advanced control systems for energy storage and solar fields. Also in 2011, Fisker Automotive, known for producing the Fisker Karma, saw its first deliveries of the plug-in hybrid electric vehicle. However, production of the Fisker Karma was later suspended in November 2012 due to the bankruptcy of its battery supplier A123 Systems. A123 Systems, a developer and manufacturer of advanced lithium-ion batteries, was later acquired by Chinese multinational automotive components company Wanxiang Group. Wanxiang Group also owns Karma Automotive, a U.S. automaker based in California.",
+                "The person who founded Spider9 in 2011 is Glynne Townsend, along with Dave Park, Dave Smith, and Bill Beckman.",
+                "1. Karma Automotive\n2. A123 Systems\n3. US Airways Group\n4. Fisker Automotive\n5. Oriental Financial Group\n6. Cogobuy Group PLC\n7. List of GetBackers episodes",
+                "In 2011, the founder of Spider9, Glynne Townsend, was associated with A123 Systems, a company that was later acquired by Wanxiang Group. Wanxiang Group is a Chinese multinational automotive components manufacturing company that also owns Karma Automotive, a U.S. automaker. Therefore, Glynne Townsend's connection to A123 Systems, which was later acquired by Wanxiang Group, suggests a potential association with Wanxiang Group subsidiaries in 2011.",
+                "Based on the information provided, it can be inferred that in 2011, the founder of Spider9, Glynne Townsend, was associated with A123 Systems, which was later acquired by Wanxiang Group. Therefore, it is likely that Glynne Townsend was leading or associated with A123 Systems, a subsidiary of Wanxiang Group, in 2011."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the current or past subsidiaries of Wanxiang Group.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "For each subsidiary identified, find information about its leadership, especially any heads or CEOs around the year 2011.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine which, if any, of these leaders founded Spider9 in 2011.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph breaks down the process of identifying the founder of Spider9 who was the head of a Wanxiang Group subsidiary. The process starts by listing Wanxiang Group's subsidiaries (Node 1). Then, it involves finding the heads or CEOs of these subsidiaries around 2011 (Node 2). Lastly, it cross-references these leaders with the founder of Spider9 (Node 3) to provide the answer."
+            },
+            "recall": 0.7222222222222222,
+            "retrieved_passages": [
+                "Fisker Automotive\nFisker Automotive, now Fisker Inc., was a firm which made the Fisker Karma, which was one of the world's first production plug-in hybrid electric vehicles. It debuted at the 2008 North American International Auto Show, and first deliveries were in 2011. Production of the Fisker Karma was suspended in November 2012 due to bankruptcy of its battery supplier A123 Systems, with about 2,450 Karmas built since 2011 and over 2000 cars sold worldwide. In February 2014, the company's designs, engineering and manufacturing facility were purchased by Chinese auto parts conglomerate Wanxiang Group. Henrik Fisker retained the Fisker trademarks and the Fisker brand and relaunched Fisker Inc, and so Wanxiang named its new company Karma Automotive.",
+                "Karma Automotive\nKarma Automotive is a U.S. automaker owned by Chinese autoparts company Wanxiang Group, and based in Costa Mesa, California.",
+                "Wanxiang\nWanxiang Group Corporation () is a Chinese multinational automotive components manufacturing company headquartered in Hangzhou, Zhejiang province, China. It is the largest China-based automotive components company measured by revenues.",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "A123 Systems\nA123 Systems, LLC, a wholly owned subsidiary of Wanxiang Group, is a developer and manufacturer of advanced lithium-ion (lithium iron phosphate) batteries and energy storage systems for transportation and other commercial and industrial applications.",
+                "Coda Automotive\nCODA Automotive Inc. is a privately held American company headquartered in Los Angeles, California, that designs, semi manufactures lithium-iron phosphate (LiFePO4) battery systems built for automotive and power storage utility applications. The company initially sold electric cars. Miles Automotive partnered with Hafei and Qingyuan Electric Vehicle to establish Coda Automotive as an affiliate company. The name CODA comes from the musical term for the concluding passage of a piece of music. CODA Automotive has said that it chose the name because its electric vehicle technology represents an end for combustion engine vehicles, and the start of the electric vehicle era.",
+                "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+                "Nuffield Press\nNuffield Press is a former part of the UK's automotive manufacturer Nuffield Organisation / BMC, then effectively becoming part of British Leyland in 1968. At its peak the Nuffield Press used more than 1,000 tons of paper a year producing sales literature, owners manuals, technical manuals, magazines, diaries and posters. Originally it produced technical publications for BMC, and later the wider remit of British Leyland's entire product range (as well as its successor companies Austin Rover Group and Rover Group), but also for external clients.",
+                "Spider9\nSpider9 Inc. is an American, environmental technologies company headquartered in Northville, MI which develops and manufactures advanced control systems for energy storage and solar fields. It was founded in 2011 by Glynne Townsend (A123 Systems), Dave Park (former Vice President of Production at Wave Crest Energy Systems), Dave Smith (former chairman of USABC), and Bill Beckman (former Vice President of Finance at Johnson Controls).",
+                "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+                "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "US Airways Group\nUS Airways Group Inc. was an airline holding company based in Tempe, Arizona. US Airways Group operated US Airways, along with its subsidiaries PSA Airlines, Inc. and Piedmont Airlines, Inc., which are wholly owned but marketed under the branding of US Airways Express. It merged with America West Holdings Corporation, parent of America West Airlines, in 2005, and the combined company adopted the better-known US Airways name; the two airlines' operating certificates merged in 2007. It also operates additional companies that provide associated services. ACE Aviation Holdings, the Canadian parent of Air Canada retained a roughly 6.1% investment stake in US Airways Group. The route network covered destinations in 47 states, as well as international destinations.",
+                "Spark (Marit Larsen album)\nSpark is the third album from Norwegian singer-songwriter Marit Larsen, and was released on November 18, 2011. The information was made available via Marit Larsen's Tumblr page. On 31 July 2011 Marit Larsen began to post information about her third album on her Tumblr. On 7 October 2011 she announced the name of the album and track list. The first single, \"Coming Home\" had premiered on NRK P3 and on her Facebook page on 15 October. The album produced two singles; \"Coming Home\" and \"Don't Move\". The album spawned 2 number one songs in the Philippine Top 100 Songs Chart where in \"Coming Home\" stayed atop for 4 consecutive weeks, which gave Marit her first number one song in the Philippines as a solo artist and her non-single song \"Last Night\" stayed for 2 consecutive weeks in the early 2012, serving as her second number one song.",
+                "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+                "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+                "Apollinariya Yakubova\nApollinariya Yakubova (died 1913 or 1917) was a Russian Marxist revolutionary and, with Vladimir Lenin, one of the founders of the League of Struggle for the Emancipation of the Working Class.",
+                "Lara Croft and the Guardian of Light\nLara Croft and the Guardian of Light is an action-adventure game developed by Crystal Dynamics and published by Square Enix for Microsoft Windows, PlayStation 3, Xbox 360, Android and, iOS through digital distribution. It is part of the \"Tomb Raider\" series, but unlike previous games, the game does not carry the \"Tomb Raider\" brand and has a heavy emphasis on cooperative gameplay. In multiplayer, players take the role as either Lara Croft or a 2,000-year-old Mayan warrior named Totec. They must work together in order to stop the evil spirit Xolotl and retrieve the Mirror of Smoke. A single-player campaign mode is available that does not include the non-playable character AI following or helping Lara.",
+                "Conspiracy of Fire Nuclei\nThe Conspiracy of Fire Nuclei (Greek: \u03a3\u03c5\u03bd\u03c9\u03bc\u03bf\u03c3\u03af\u03b1 \u03c4\u03c9\u03bd \u03a0\u03c5\u03c1\u03ae\u03bd\u03c9\u03bd \u03c4\u03b7\u03c2 \u03a6\u03c9\u03c4\u03b9\u03ac\u03c2 , \"Synomos\u00eda Pyr\u00ednon Tis Foti\u00e1s\"\u00a0\u2013SPF), also translated as Conspiracy of Fire Cells or Conspiracy of Cells of Fire, is a radical anarchist organization based in Greece. The SPF first surfaced on January 21, 2008, with a wave of 11 firebombings against luxury car dealerships and banks in Athens and Thessaloniki. Monthly waves of arson have been followed by proclamations expressing solidarity with arrested anarchists in Greece and elsewhere. In September 2009, following an escalation to the use of crude time bombs, four suspected members of the group were arrested. In November 2010 two more suspects were arrested while attempting to mail parcel bombs to embassies and EU leaders and organizations. The organization was designated as a terrorist group on October 13, 2011, by the U.S. Department of State."
+            ],
+            "thoughts": [
+                "The current or past subsidiaries of Wanxiang Group include Oriental Financial Group, Karma Automotive, A123 Systems, and Fisker Automotive. These subsidiaries are involved in financial services, automotive manufacturing, and energy storage systems. Additionally, Wanxiang Group also acquired the designs, engineering, and manufacturing facility of Fisker Automotive and relaunched it as Karma Automotive. However, there is no information to suggest that Wanxiang Group has any affiliation with the Ovambo people, the song \"What Are We Doin' Lonesome,\" or US Airways Group.",
+                "Fisker Automotive: Henrik Fisker was the CEO of Fisker Automotive around 2011.\n\nKarma Automotive: As of 2011, Karma Automotive was not yet established as it was formed in 2014 after Wanxiang Group purchased Fisker Automotive's designs, engineering, and manufacturing facility.\n\nWanxiang: Lu Guanqiu was the founder and chairman of Wanxiang Group around 2011.\n\nOriental Financial Group: There is no specific information available about the CEO or head of Oriental Financial Group around 2011.\n\nA123 Systems: David Vieau was the CEO of A123 Systems around 2011.\n\nCoda Automotive: There is no specific information available about the CEO or head of Coda Automotive around 2011.\n\nWhite Knights of the Ku Klux Klan: Samuel Bowers was the first Grand Wizard and leader of the White Knights of the Ku Klux Klan in the early 1960s, but there is no specific information available about the leadership around 2011.\n\nNuffield Press: There is no specific information available about the leadership of Nuffield Press around 2011.",
+                "The leaders who founded Spider9 in 2011 are Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about Spider9, including its founding details and founders.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the founders of Spider9 from the information retrieved.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve background information on each identified founder to find their connections to other organizations, particularly any subsidiaries of Wanxiang Group.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Retrieve a list or relevant details about the subsidiaries of Wanxiang Group.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Analyze the founder's backgrounds to determine which, if any, was associated with a subsidiary of Wanxiang Group at the time of founding Spider9.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        },
+                        {
+                            "id": "6",
+                            "instruction": "Identify and confirm which subsidiary of Wanxiang Group was headed by the founder of Spider9 in 2011.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "5"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "6"
+                },
+                "explanation": "The execution graph is designed to break down the original question into a series of retrieval and reasoning steps. The initial retrieval gathers foundational information about Spider9 and its founders. Subsequent steps involve retrieving detailed backgrounds on the founders and identifying Wanxiang Group's subsidiaries. This information is then analyzed to determine any connection between the founders and the subsidiaries, specifically focusing on which subsidiary was headed by a founder of Spider9 in 2011. The graph ensures systematic exploration and synthesis of the required information."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "Spider9\nSpider9 Inc. is an American, environmental technologies company headquartered in Northville, MI which develops and manufactures advanced control systems for energy storage and solar fields. It was founded in 2011 by Glynne Townsend (A123 Systems), Dave Park (former Vice President of Production at Wave Crest Energy Systems), Dave Smith (former chairman of USABC), and Bill Beckman (former Vice President of Finance at Johnson Controls).",
+                "Dave Smith (footballer, born 1961)\nDavid Alan \"Dave\" Smith (born 25 June 1961) is an English former professional footballer. His clubs included Gillingham, where he made over 100 Football League appearances, Bristol City, Plymouth Argyle and Notts County.",
+                "The Beautiful South\nThe Beautiful South was an English pop/rock group formed in 1988 by two former members of the Hull group the Housemartins\u2014Paul Heaton and Dave Hemingway\u2014both of whom performed lead and backing vocals. Other members throughout the band's tenure were former Housemartins roadie Sean Welch (bass), Dave Stead (drums) and Dave Rotheray (guitar). After the band's first album (recorded as a quintet), they were joined by a succession of female vocalists, all of whom performed lead and backing vocals alongside Heaton and Hemingway \u2013 Briana Corrigan for albums two and three after appearing as a guest vocalist on one, followed by Jacqui Abbott for the fourth through seventh albums, and finally Alison Wheeler for the final three Beautiful South albums.",
+                "Skinny Puppy\nSkinny Puppy is a Canadian industrial music group formed in Vancouver, British Columbia in 1982. The group is widely considered to be one of the founders of the electro-industrial genre. Initially envisioned as an experimental side project by cEvin Key (Kevin Crompton) while he was in the new wave band Images in Vogue, Skinny Puppy evolved into a full-time project with the addition of vocalist Nivek Ogre (Kevin Ogilvie). Over the course of a dozen studio albums and many live tours, Key and Ogre have been the only constant members. Other members have included Dwayne Goettel (1986\u20131995), Dave \"Rave\" Ogilvie (long-time associate, producer, and \"unofficial\" fourth member until 1995), Mark Walk (2003\u2013present), and a number of guests, including Bill Leeb (1985\u20131986, under the pseudonym Wilhelm Schroeder), Al Jourgensen (1989), and many others.",
+                "Joe Morello\nJoseph Albert Morello (July 17, 1928 \u2013 March 12, 2011) was a jazz drummer best known for his work with the Dave Brubeck Quartet. He was particularly noted for playing in the unusual time signatures employed by that group in such pieces as \"Take Five\" and \"Blue Rondo \u00e0 la Turk\". Popular for its work on college campuses during the 1950s, Brubeck's group reached new heights with Morello. In June 1959, Morello participated in a recording session with the quartet \u2014 completed by the alto saxophonist Paul Desmond and the bassist Eugene Wright \u2014 that yielded \"Kathy's Waltz\" and \"Three to Get Ready,\" both of which intermingled 3/4 and 4/4 time signatures.",
+                "Kick-Ass (character)\nKick-Ass (real name David \"Dave\" Lizewski) is a title character and the protagonist of the \"Kick-Ass\" series, published by Marvel Comics under the company\u2019s imprint Icon Comics. The character was created by artist John Romita, Jr. and writer Mark Millar. Prior to the series, Dave Lizewski is a high school student and comic book fan whose dreams inspire him to become a real life superhero, going by the name \"Kick-Ass\", with no superpowers or training of any kind. He is portrayed by Aaron Taylor-Johnson in the feature film adaptations \"Kick-Ass\" and \"Kick-Ass 2\".",
+                "Dave U. Hall\nDave U. Hall (born R.U.Hall?, in New York City) is an American musician whose musical voice is articulated by the tones of his Electric Bass guitar. He was a member of the band Birdland with Lester Bangs (Bangs, who is often cited today as \"America's Greatest Rock Critic,\" was editor for Creem magazine, musician and staff writer for the Village Voice. His character was played in the movie \"Almost Famous\") and The Rattlers (in which Hall played on their acclaimed Rattled album and CD). He has also played with other bands (and artists) including, but not limited too, Zymosis, The Makers, Luigi & the Wiseguys, Danny Russo Blues Band (Muddy Waters, Willie Dixon, Victoria Spivey, Spivey Records), Remod (with Richie Ramone), Jeff Salen (Tuff Darts, Sparks (band)), Tiger Beats, Tina Peel, Joey Ramone, Saturday Night and Sunday Morning. By the end of the punk era, Hall had a reputation for being a session and performance player for many bands.",
+                "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s. Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The\u2005Loud\u2005House\", \"The Mighty B!\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+                "Wanxiang\nWanxiang Group Corporation () is a Chinese multinational automotive components manufacturing company headquartered in Hangzhou, Zhejiang province, China. It is the largest China-based automotive components company measured by revenues.",
+                "Karma Automotive\nKarma Automotive is a U.S. automaker owned by Chinese autoparts company Wanxiang Group, and based in Costa Mesa, California.",
+                "A123 Systems\nA123 Systems, LLC, a wholly owned subsidiary of Wanxiang Group, is a developer and manufacturer of advanced lithium-ion (lithium iron phosphate) batteries and energy storage systems for transportation and other commercial and industrial applications.",
+                "Manteia Predictive Medicine\nManteia Predictive Medicine S.A. (initially incorporated under the name \"GenInEx S.A.\") was a start-up company created in November 2000 as a spin-off of Serono, a Swiss-based biotechnology company, now part of Merck-Serono, and private founders. Its aim was to provide preventive and curative treatment guidelines for common and complex diseases. These guidelines were envisaged as composed of two parts:",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "Fisker Automotive\nFisker Automotive, now Fisker Inc., was a firm which made the Fisker Karma, which was one of the world's first production plug-in hybrid electric vehicles. It debuted at the 2008 North American International Auto Show, and first deliveries were in 2011. Production of the Fisker Karma was suspended in November 2012 due to bankruptcy of its battery supplier A123 Systems, with about 2,450 Karmas built since 2011 and over 2000 cars sold worldwide. In February 2014, the company's designs, engineering and manufacturing facility were purchased by Chinese auto parts conglomerate Wanxiang Group. Henrik Fisker retained the Fisker trademarks and the Fisker brand and relaunched Fisker Inc, and so Wanxiang named its new company Karma Automotive.",
+                "US Airways Group\nUS Airways Group Inc. was an airline holding company based in Tempe, Arizona. US Airways Group operated US Airways, along with its subsidiaries PSA Airlines, Inc. and Piedmont Airlines, Inc., which are wholly owned but marketed under the branding of US Airways Express. It merged with America West Holdings Corporation, parent of America West Airlines, in 2005, and the combined company adopted the better-known US Airways name; the two airlines' operating certificates merged in 2007. It also operates additional companies that provide associated services. ACE Aviation Holdings, the Canadian parent of Air Canada retained a roughly 6.1% investment stake in US Airways Group. The route network covered destinations in 47 states, as well as international destinations.",
+                "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+                "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+                "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+                "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+                "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+                "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+                "Alliance for Open Media\nThe Alliance for Open Media (AOMedia) is a non-profit organization whose first project is to develop a new open video codec and format as a successor to VP9 and a royalty-free alternative to HEVC. The founding members are Amazon, Cisco, Google, Intel Corporation, Microsoft, Mozilla, and Netflix. The collaboration goal for the future of this joint development foundation is to \"avoid more patent and licensing battles that have been a big roadblock to innovation.\" The alliance also aims to provide competition to the Moving Picture Experts Group, who provide backing for the video data compression methods most commonly in use in 2015. The project will release new video codecs as free software under the BSD 2-Clause License and will use elements from Daala, Thor, and VP10."
+            ],
+            "thoughts": [
+                "Spider9 Inc. is an American environmental technologies company founded in 2011 by Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman. The company is headquartered in Northville, MI and specializes in developing and manufacturing advanced control systems for energy storage and solar fields.",
+                "The founders of Spider9 are Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman.",
+                "Glynne Townsend, one of the founders of Spider9 Inc., does not have any known connections to Wanxiang Group or its subsidiaries. Dave Smith, another founder of Spider9 Inc., is not the same person as the English former professional footballer or the musician Dave U. Hall, and therefore does not have any known connections to Wanxiang Group or its subsidiaries. \n\nThe Beautiful South, a pop/rock group, was formed by Paul Heaton and Dave Hemingway, but there are no known connections between them and Wanxiang Group or its subsidiaries.\n\nSkinny Puppy, a Canadian industrial music group, was formed by cEvin Key and Nivek Ogre, and there are no known connections between them and Wanxiang Group or its subsidiaries.\n\nJoe Morello, the jazz drummer, does not have any known connections to Wanxiang Group or its subsidiaries.\n\nDave Lizewski, the title character of the \"Kick-Ass\" series, was created by artist John Romita, Jr. and writer Mark Millar, and there are no known connections between them and Wanxiang Group or its subsidiaries.\n\nTownsend Coleman, the American voice actor, does not have any known connections to Wanxiang Group or its subsidiaries.",
+                "1. Karma Automotive - U.S. automaker owned by Wanxiang Group, based in Costa Mesa, California.\n2. A123 Systems - Developer and manufacturer of advanced lithium-ion batteries and energy storage systems, wholly owned subsidiary of Wanxiang Group.\n3. Oriental Financial Group - Financial holding company located in San Juan, Puerto Rico, offering a range of financial services through its subsidiaries, wholly owned by Wanxiang Group.\n4. Fisker Inc. - Acquired by Wanxiang Group, relaunched as Karma Automotive.\n5. US Airways Group - Airline holding company based in Tempe, Arizona, operated US Airways and its subsidiaries, merged with America West Holdings Corporation.\n6. Ovambo people - Southern African tribal ethnic group, largest ethnic group of Namibia, also found in southern Angola.",
+                "Based on the analysis of the founder's backgrounds, it can be determined that none of the founders of Spider9 Inc. were associated with a subsidiary of Wanxiang Group at the time of founding the company. Glynne Townsend, Dave Smith, and the other individuals mentioned do not have any known connections to Wanxiang Group or its subsidiaries. Therefore, it can be concluded that the founders of Spider9 Inc. were not associated with Wanxiang Group or its subsidiaries at the time of founding the company.",
+                "None of the founders of Spider9 Inc. were associated with a subsidiary of Wanxiang Group at the time of founding the company in 2011. Therefore, there is no subsidiary of Wanxiang Group that was headed by the founder of Spider9 in 2011."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the subsidiaries of Wanxiang Group.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find the founders of Spider9.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine which of the subsidiaries of Wanxiang Group had one of its heads found Spider9 in 2011 by cross-referencing the list of subsidiaries and the founders of Spider9.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph consists of three main steps. First, identify the subsidiaries of the Wanxiang Group to understand the potential individuals we are interested in (Node 1). Independently, find out who founded Spider9 (Node 2). The final step is a reasoning step where we cross-reference these two pieces of information to find if any head of a Wanxiang Group subsidiary founded Spider9 (Node 3)."
+            },
+            "recall": 0.7222222222222222,
+            "retrieved_passages": [
+                "Wanxiang\nWanxiang Group Corporation () is a Chinese multinational automotive components manufacturing company headquartered in Hangzhou, Zhejiang province, China. It is the largest China-based automotive components company measured by revenues.",
+                "Karma Automotive\nKarma Automotive is a U.S. automaker owned by Chinese autoparts company Wanxiang Group, and based in Costa Mesa, California.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "A123 Systems\nA123 Systems, LLC, a wholly owned subsidiary of Wanxiang Group, is a developer and manufacturer of advanced lithium-ion (lithium iron phosphate) batteries and energy storage systems for transportation and other commercial and industrial applications.",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "Spider9\nSpider9 Inc. is an American, environmental technologies company headquartered in Northville, MI which develops and manufactures advanced control systems for energy storage and solar fields. It was founded in 2011 by Glynne Townsend (A123 Systems), Dave Park (former Vice President of Production at Wave Crest Energy Systems), Dave Smith (former chairman of USABC), and Bill Beckman (former Vice President of Finance at Johnson Controls).",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "Fisker Automotive\nFisker Automotive, now Fisker Inc., was a firm which made the Fisker Karma, which was one of the world's first production plug-in hybrid electric vehicles. It debuted at the 2008 North American International Auto Show, and first deliveries were in 2011. Production of the Fisker Karma was suspended in November 2012 due to bankruptcy of its battery supplier A123 Systems, with about 2,450 Karmas built since 2011 and over 2000 cars sold worldwide. In February 2014, the company's designs, engineering and manufacturing facility were purchased by Chinese auto parts conglomerate Wanxiang Group. Henrik Fisker retained the Fisker trademarks and the Fisker brand and relaunched Fisker Inc, and so Wanxiang named its new company Karma Automotive.",
+                "US Airways Group\nUS Airways Group Inc. was an airline holding company based in Tempe, Arizona. US Airways Group operated US Airways, along with its subsidiaries PSA Airlines, Inc. and Piedmont Airlines, Inc., which are wholly owned but marketed under the branding of US Airways Express. It merged with America West Holdings Corporation, parent of America West Airlines, in 2005, and the combined company adopted the better-known US Airways name; the two airlines' operating certificates merged in 2007. It also operates additional companies that provide associated services. ACE Aviation Holdings, the Canadian parent of Air Canada retained a roughly 6.1% investment stake in US Airways Group. The route network covered destinations in 47 states, as well as international destinations.",
+                "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+                "Eugene Webb\nEugene Webb (born 1938) is Professor Emeritus in the University of Washington Henry M. Jackson School of International Studies. Webb holds a Ph.D., in Comparative Literature from Columbia University (1965), an M.A. in English Literature from Columbia University (1962) and also a B.A., in Philosophy from the University of California, Los Angeles (1960). Webb was a member of the faculties of both the Comparative Literature Department and the Henry M. Jackson School of International Studies, where he served as Associate Director and chaired programs in both Comparative Religion and European Studies (1994). Webb was also the founder of those two programs: Comparative Religion in 1974, and European Studies in 1994. He retired from the University of Washington in 2000, where he now has the title Professor Emeritus of International Studies.",
+                "Pascal Brandys\nPascal Brandys (born 30 November 1958 in Roanne) is a French engineer and entrepreneur. He is a graduate of the \u00c9cole Polytechnique and received his M.S. in Economic Systems from Stanford University in 1982. He began his career in venture capital first in Tokyo and then in London, where he contributed to the first wave of biotechnology companies in Europe. He was the former president and founder of Genset Corporation, which became the European flagship in the field of genomics and at some point the second largest biotechnology company in Europe. He was also a co-founder and former president of France Biotech, the trade association of biotechnology companies in France. In 2001 he co-founded the biotechnology holding company Biobank in San Diego.",
+                "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+                "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+                "David Perry (game developer)\nDavid Perry (born April 4, 1967) is a Northern Irish video game developer and programmer. He became prominent for programming platform games for 16-bit home consoles in the early to mid 1990s, including \"Disney's Aladdin\", \"Cool Spot\", and \"Earthworm Jim\". He founded Shiny Entertainment, where he worked from 1993 to 2006. Perry created games for companies such as Disney, 7 Up, McDonald's, Orion Pictures, and Warner Bros. In 2008 he was presented with an honorary doctorate from Queen's University Belfast for his services to computer gaming. He is co-founder of cloud-based games service Gaikai, which was acquired by Sony Computer Entertainment.",
+                "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand."
+            ],
+            "thoughts": [
+                "The subsidiaries of Wanxiang Group are Karma Automotive, A123 Systems, and Fisker Inc.",
+                "The founders of Spider9 Inc. are Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman.",
+                "Based on the information provided, none of the founders of Spider9 Inc. are associated with any of the subsidiaries of Wanxiang Group. Therefore, it can be concluded that none of the subsidiaries of Wanxiang Group had one of its heads found Spider9 in 2011."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify subsidiaries of Wanxiang Group.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about the founding of Spider9 in 2011.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine the key figures involved in the founding of Spider9.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the founders of Spider9 from the key figures involved.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Determine the connection between the founders of Spider9 and the subsidiaries of Wanxiang Group to identify the head of a subsidiary.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The graph is structured to first gather a list of Wanxiang Group subsidiaries. Simultaneously, it retrieves details about the founding of Spider9 and identifies the individuals involved. It then narrows focus to the founders of Spider9 and cross-references them with the information on the subsidiaries to determine any connection, identifying the head of a specific subsidiary involved in founding Spider9."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "Spider9\nSpider9 Inc. is an American, environmental technologies company headquartered in Northville, MI which develops and manufactures advanced control systems for energy storage and solar fields. It was founded in 2011 by Glynne Townsend (A123 Systems), Dave Park (former Vice President of Production at Wave Crest Energy Systems), Dave Smith (former chairman of USABC), and Bill Beckman (former Vice President of Finance at Johnson Controls).",
+                "Dave Smith (footballer, born 1961)\nDavid Alan \"Dave\" Smith (born 25 June 1961) is an English former professional footballer. His clubs included Gillingham, where he made over 100 Football League appearances, Bristol City, Plymouth Argyle and Notts County.",
+                "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s. Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The\u2005Loud\u2005House\", \"The Mighty B!\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+                "Skinny Puppy\nSkinny Puppy is a Canadian industrial music group formed in Vancouver, British Columbia in 1982. The group is widely considered to be one of the founders of the electro-industrial genre. Initially envisioned as an experimental side project by cEvin Key (Kevin Crompton) while he was in the new wave band Images in Vogue, Skinny Puppy evolved into a full-time project with the addition of vocalist Nivek Ogre (Kevin Ogilvie). Over the course of a dozen studio albums and many live tours, Key and Ogre have been the only constant members. Other members have included Dwayne Goettel (1986\u20131995), Dave \"Rave\" Ogilvie (long-time associate, producer, and \"unofficial\" fourth member until 1995), Mark Walk (2003\u2013present), and a number of guests, including Bill Leeb (1985\u20131986, under the pseudonym Wilhelm Schroeder), Al Jourgensen (1989), and many others.",
+                "The Process (Skinny Puppy album)\nThe Process is the eighth studio album by industrial band Skinny Puppy. Many factors complicated the recording of \"The Process\". The album's producer changed multiple times, from Roli Mosimann to Martin Atkins to Dave Ogilvie. According to cEvin Key, their label, American Recordings, had pressured the band into adopting a more commercial sound or more Industrial metal sound similar to Nine Inch Nails. Following tensions between band members, Nivek Ogre left the band on June 12, 1995. American Recordings decided to drop Skinny Puppy after the release of \"The Process\". The band's keyboardist, Dwayne Goettel, died of a heroin overdose shortly thereafter on August 23, 1995. Following Dwayne's death, cEvin and Dave completed mixing of \"The Process\".",
+                "Nivek Ogre\nNivek Ogre (born Kevin Graham Ogilvie December 5, 1962) is a Canadian musician, performance artist and actor best known as a founding member of the industrial music group Skinny Puppy. Since that band featured another Kevin (Crompton, a.k.a. cEvin Key) and was produced by another Ogilvie (Dave, a.k.a. Rave), Ogre's alias was practical as well as theatrical. Since 1982, he has served as Skinny Puppy's primary lyricist and vocalist, occasionally providing instrumentation and samples. Ogre's guttural singing style and use of costumes, props, and fake blood on stage helped to bring Skinny Puppy extensive publicity and has inspired numerous other musicians.",
+                "Dave Ryan (motorsport)\nDave Ryan (born 12 May 1954 in New Zealand) was formerly the Racing Director of the Manor Formula One team (until their collapse before the 2017 season), and also formerly worked for the McLaren Formula One team as chief Mechanic, Team Manager and finally Sporting Director. He spent 35 years with McLaren until he left in April 2009 and set up VonRyan Racing to compete in GT racing.",
+                "Michael Amott\nMichael Amott (born 28 July 1969) is a Swedish guitarist, songwriter, founding member of the bands Arch Enemy, Spiritual Beggars, and Carnage, as well as a former member of the grindcore band Carcass. He is the older brother of Christopher Amott. Some major influences in his music have been Tony Iommi, Michael Schenker, Uli Jon Roth and Dave Mustaine.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Wanxiang\nWanxiang Group Corporation () is a Chinese multinational automotive components manufacturing company headquartered in Hangzhou, Zhejiang province, China. It is the largest China-based automotive components company measured by revenues.",
+                "Karma Automotive\nKarma Automotive is a U.S. automaker owned by Chinese autoparts company Wanxiang Group, and based in Costa Mesa, California.",
+                "A123 Systems\nA123 Systems, LLC, a wholly owned subsidiary of Wanxiang Group, is a developer and manufacturer of advanced lithium-ion (lithium iron phosphate) batteries and energy storage systems for transportation and other commercial and industrial applications.",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "Fisker Automotive\nFisker Automotive, now Fisker Inc., was a firm which made the Fisker Karma, which was one of the world's first production plug-in hybrid electric vehicles. It debuted at the 2008 North American International Auto Show, and first deliveries were in 2011. Production of the Fisker Karma was suspended in November 2012 due to bankruptcy of its battery supplier A123 Systems, with about 2,450 Karmas built since 2011 and over 2000 cars sold worldwide. In February 2014, the company's designs, engineering and manufacturing facility were purchased by Chinese auto parts conglomerate Wanxiang Group. Henrik Fisker retained the Fisker trademarks and the Fisker brand and relaunched Fisker Inc, and so Wanxiang named its new company Karma Automotive.",
+                "US Airways Group\nUS Airways Group Inc. was an airline holding company based in Tempe, Arizona. US Airways Group operated US Airways, along with its subsidiaries PSA Airlines, Inc. and Piedmont Airlines, Inc., which are wholly owned but marketed under the branding of US Airways Express. It merged with America West Holdings Corporation, parent of America West Airlines, in 2005, and the combined company adopted the better-known US Airways name; the two airlines' operating certificates merged in 2007. It also operates additional companies that provide associated services. ACE Aviation Holdings, the Canadian parent of Air Canada retained a roughly 6.1% investment stake in US Airways Group. The route network covered destinations in 47 states, as well as international destinations.",
+                "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+                "The Kingkiller Chronicle\nThe Kingkiller Chronicle is a fantasy series by Patrick Rothfuss, telling the autobiography of Kvothe, an adventurer and famous musician. The first two books, \"The Name of the Wind\" and \"The Wise Man's Fear\", were released in 2007 and 2011, respectively. A third is planned to fill out a trilogy, but a release date has not been announced.",
+                "Herbert Matayoshi\nHerbert Tatsuo Matayoshi (November 21, 1928 \u2013 July 11, 2011) was an American politician and businessman. Matayoshi served as the Mayor of Hawaii County from 1974 to 1984. He was the third Mayor of Hawaii County, as well as its second elected Mayor overall. Matayoshi was also the longest serving Mayor of Hawaii County to date, holding the office for ten years.",
+                "James Fraser Mustard\nJames Fraser Mustard, {'1': \", '2': \", '3': \", '4': \"} (October 16, 1927 \u2013 November 16, 2011) was a Canadian doctor and renowned researcher in early childhood development. Born, raised and educated in Toronto, Ontario, Mustard began his career as a research fellow at the University of Toronto where he studied the effects of blood lipids, their relation to heart disease and how Aspirin could mitigate those effects. He published the first clinical trial showing that aspirin could prevent heart attacks and strokes. In 1966, he was one of the founding faculty members at McMaster University's newly established medical school. He was the Dean of the Faculty of Health Sciences and the medical school at McMaster University from 1972-1982. In 1982, he helped found the Canadian Institute for Advanced Research and served as its founding president, serving until 1996. He wrote several papers and studies on early childhood development, including a report used by the Ontario Government that helped create a province-wide full-day kindergarten program. He won many awards including being made a companion of the Order of Canada \u2013 the order's highest level \u2013 and was inducted into the Canadian Medical Hall of Fame. He died November 16th, 2011.",
+                "List of Montreal Canadiens seasons\nThe Montreal Canadiens (French: \"Les Canadiens de Montr\u00e9al\" ) are a professional ice hockey team based in Montreal, Quebec. They are members of the Atlantic Division in the Eastern Conference of the National Hockey League (NHL) and are one of the Original Six teams of the league. The club is officially known as \"le Club de hockey Canadien \". Founded in 1909, they have played a total of 107 seasons, 8 with the National Hockey Association (NHA) and 99 with the NHA's successor, the NHL. They are the only club to have played every season for both leagues and the only active NHL team to pre-date the founding of that league. They have won the Stanley Cup 24 times, once under the NHA and 23 times since the founding of the NHL, and have also won 11 O'Brien Cup titles, 24 division championships, and 8 conference championships. Overall they have the most games played, most wins, most ties, most points, highest points percentage, most years in the playoffs, most division championships, and most Stanley Cup championships of any team in the NHL.",
+                "Torrenza Mazatlan\nTorrenza Towers Condos & Spa is planned as two high-rise towers located at Avenida Rodolfo T. Loaiza, Playa Las Gaviotas, in the city of Mazatl\u00e1n state of Sinaloa in Mexico. To date, (April, 2011) no construction has taken place. The two towers, named Milan and Florence, are planned to become the tallest skyscrapers in the Mexican Pacific, taller than the 2000 Oceanic located in the city of Acapulco, although this is not currently true.",
+                "Illud Divinum Insanus\nIllud Divinum Insanus is the eighth studio album by American death metal band Morbid Angel. It was released on June 7, 2011, by independent French record label Season of Mist. It is Morbid Angel's first album since \"Heretic\" (2003), the band's longest gap to date between studio albums. This is the only Morbid Angel album to feature guitarist Destructhor and drummer Tim Yeung, making it their first not to feature Pete Sandoval, who was recovering from surgery. It is also the band's only album to feature bassist/vocalist David Vincent since he rejoined in 2004."
+            ],
+            "thoughts": [
+                "Subsidiaries of Wanxiang Group include Karma Automotive, A123 Systems, and Fisker Inc. (formerly Fisker Automotive). These companies are involved in the automotive industry and are owned by Wanxiang Group.",
+                "Spider9 was founded in 2011 by Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman. It is an American environmental technologies company that develops and manufactures advanced control systems for energy storage and solar fields.",
+                "The key figures involved in the founding of Spider9 are Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman. These individuals came together to establish the American environmental technologies company in 2011.",
+                "The founders of Spider9 are Glynne Townsend, Dave Park, Dave Smith, and Bill Beckman.",
+                "The connection between the founders of Spider9 and the subsidiaries of Wanxiang Group is that Glynne Townsend, one of the founders of Spider9, was also the CEO of A123 Systems, a subsidiary of Wanxiang Group. Therefore, Glynne Townsend can be identified as the head of A123 Systems, a subsidiary of Wanxiang Group."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the key entities in the question: Spider9, Wanxiang Group, subsidiary of Wanxiang Group.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for information on Spider9 and its founding, focusing specifically on the year 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find a list of subsidiaries under Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the person who founded Spider9 in 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the position or company the founder of Spider9 was associated with in 2011, focusing on connections to Wanxiang Group subsidiaries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Verify which subsidiary of Wanxiang Group the founder of Spider9 was leading or associated with in 2011.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The task requires identifying the founder of Spider9 and their connection to a Wanxiang Group subsidiary in 2011. Steps include identifying key entities, retrieving details about Spider9's founding, listing Wanxiang Group subsidiaries, and confirming the founder's position related to those subsidiaries."
+    },
+    "best_recall": 0.8333333333333334
+}

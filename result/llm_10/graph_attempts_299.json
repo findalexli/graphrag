@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Radiohead's fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about spoofs or parodies made of Radiohead's identified fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the creator of the spoof or parody from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying Radiohead's fourth studio album, which is the piece of information necessary to find relevant spoof or parody content. After identifying the album, we retrieve data on any spoofs or parodies associated with it. Finally, the information is synthesized to identify who created the spoof."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Radiohead's fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for spoofs or parody creations related to Radiohead's identified fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task begins by identifying Radiohead's fourth studio album, as this information is necessary to find any relevant spoofs or parodies. Once the album is identified, the next step involves searching for any known spoofs or parodies that have been created in relation to this album."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the name of Radiohead's fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify artists or groups who have created a spoof of the identified album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "To answer the question about who made a spoof of Radiohead's fourth studio album, we start with identifying the album's name (which is 'Kid A'). Then, with this specific album information, we can proceed to find artists or groups who have created a spoof based on that album."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of Radiohead's fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for any known spoofs or parodies of the album identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine who created the spoof or parody found in Node 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph first retrieves the name of Radiohead's fourth studio album, which is necessary to find any spoofs related to it. Once the album is identified, the next step is to search for any known spoofs or parodies of that album. The final step is to discover the creator of the spoof, providing the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of Radiohead's fourth studio album.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about spoofs of Radiohead's fourth studio album identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine who made the spoof of the album identified in step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To find out who made a spoof of Radiohead's fourth studio album, we need to identify the album first (Node 1). Once the album is identified, we retrieve information about any spoofs made of this album (Node 2). Finally, we analyze the spoof information to identify the creator of the spoof (Node 3)."
+    }
+]

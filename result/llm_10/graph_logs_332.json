@@ -1,0 +1,403 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify films released in 2016.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine which 2016 films feature Townsend Coleman as a voice actor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify the film(s) from 2016 that feature Townsend Coleman as a voice actor.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Find the director of the identified film from 2016 that features Townsend Coleman.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Find the writer of the identified film from 2016 that features Townsend Coleman.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "6",
+                            "instruction": "Combine information to determine who directed and wrote the 2016 film featuring the voice of Townsend Coleman.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "4",
+                                "5"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "6"
+                },
+                "explanation": "The graph first identifies all films released in 2016. It then narrows down to those featuring Townsend Coleman as a voice actor. From there, it retrieves information on the director and writer of the specific film, which is combined to answer the original question."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s. Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The\u2005Loud\u2005House\", \"The Mighty B!\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+                "Alan Young\nAlan Young (born Angus Young; November 19, 1919\u00a0\u2013 May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\". He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961\u20131966). Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death. During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951. He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+                "Jon Heder\nJonathan Joseph \"Jon\" Heder ( ) (born October 26, 1977) is an American actor and producer. His feature film debut came in 2004 as the title character of the comedy film \"Napoleon Dynamite\". He has also acted in the films \"The Benchwarmers\", \"School for Scoundrels\", \"Blades of Glory\", \"Mama's Boy\", \"When in Rome\", and \"Walt Before Mickey\" as Roy Disney, and provided voice talents in the animated films \"Monster House\" and \"Surf's Up\", as well as the \"Napoleon Dynamite\" animated series.",
+                "True Memoirs of an International Assassin\nTrue Memoirs of an International Assassin is a 2016 American action comedy web film directed by Jeff Wadlow from a screenplay co-written with Jeff Morris. The film stars Kevin James, Zulay Henao, Andy Garc\u00eda, Maurice Compte, Kelen Coleman, Andrew Howard, and Rob Riggle. The film was released on November 11, 2016.",
+                "Deconstruction (Devin Townsend Project album)\nDeconstruction is the thirteenth studio album by Canadian musician Devin Townsend, and the third album in the Devin Townsend Project series. The album was released on June 20, 2011, simultaneously with the fourth Devin Townsend Project album \"Ghost\", on Townsend's independent record label HevyDevy Records. The album features two drummers, Dirk Verbeuren and Ryan Van Poederooyen, as well as a number of guest vocalists. The album's choral and orchestral parts were written and arranged by Townsend using Pro Tools software. The parts were later transcribed into conventional musical notation for the orchestra.",
+                "Hallelooya\nHallelooya (or Hallelujah) is a 2016 Malayalam film, directed by Sudhi Aanna in his feature film debut and starring Narain and Meghana Raj in the lead roles. It also features Sudheer Karamana, Sunil Sukhada, K. B. Ganesh Kumar, Sasi Kalinga, Saju Navodaya and Master Eric in significant roles. The film, produced by K. M. Surendran under the banner of Barking Dogs Seldom Bite Films, was released in May 2016.",
+                "SpongeBob SquarePants: Lights, Camera, Pants!\nSpongeBob SquarePants: Lights, Camera, Pants! is a 2005 party video game based on the TV series \"SpongeBob SquarePants\". It was released in October 2005 for the Xbox, PlayStation 2, GameCube, Game Boy Advance, and the PC. It was released for the Nintendo DS in Korea in 2007, but its North American release was cancelled. It is the first \"SpongeBob SquarePants\" title to feature multiplayer mini-games, similar to the \"Mario Party\" video game series. It is also the last SpongeBob game for the Xbox. It is also the last time Charles Nelson Reilly would voice the Dirty Bubble before his death in 2007. For reasons unknown, Mermaid Man was not voiced by his original voice actor Ernest Borgnine but instead Joe Alaskey, who would voice him again in .",
+                "Arrival (film)\nArrival is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer, based on the 1998 short story \"Story of Your Life\" by Ted Chiang. It stars Amy Adams, Jeremy Renner, and Forest Whitaker, and follows linguist Louise Banks, who is enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that have appeared across the world. She must find out why they have arrived on Earth before tensions lead into war. The film had its world premiere at the Venice Film Festival on September 1, 2016, and was released in the United States on November 11, 2016, in IMAX by Paramount Pictures.",
+                "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Phoenix (1998 film)\nPhoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta. Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.",
+                "Wiener-Dog (film)\nWiener-Dog is a 2016 American dark comedy-drama film directed and written by Todd Solondz. Starring an ensemble cast led by Ellen Burstyn, Kieran Culkin, Julie Delpy, Danny DeVito, Greta Gerwig, Tracy Letts, and Zosia Mamet, the film serves as a spin-off from Solondz's 1995 film \"Welcome to the Dollhouse\", which also features the character of Dawn Wiener.",
+                "Sleeping Dogs Lie (2005 film)\nSleeping Dogs Lie is a 2005 American drama film by writer Chumahan Bowen and director Stuart Lessner, starring Rage Against the Machine drummer Brad Wilk and Ed Asner. The film also features Tool lead singer Maynard James Keenan as Deputy Lance.",
+                "Shooting Fish\nShooting Fish is a 1997 British romantic crime comedy film directed by Stefan Schwartz and co-written with Richard Holmes. Starring Dan Futterman and Stuart Townsend as two con men with Kate Beckinsale as their unwilling assistant, the film was produced by Winchester Films and partly funded by National Lottery money administered through the UK Arts Council. \"Shooting Fish\" aimed to transfer well to international markets that were keen on British films following the success of \"Four Weddings and a Funeral\".",
+                "Herschell Gordon Lewis\nHerschell Gordon Lewis (June 15, 1926 \u2013 September 26, 2016) was an American filmmaker, best known for creating the \"splatter\" subgenre of horror films. He is often called the \"Godfather of Gore\" (a title also given to Lucio Fulci), though his film career included works in a range of exploitation film genres including juvenile delinquent films, nudie-cuties, two children's films and at least one rural comedy. On Lewis' career, AllMovie wrote: \"With his better-known gore films, Herschell Gordon Lewis was a pioneer, going farther than anyone else dared, probing the depths of disgust and discomfort onscreen with more bad taste and imagination than anyone of his era.\"",
+                "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+                "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+                "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars.",
+                "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+                "2016 Nitro World Games\nThe 2016 Nitro World Games was a minor international action-sports event celebrated in Salt Lake City, United States, on 16 July 2016. All first time entrants, more than 40 athletes from 11 countries took part. With 21 sets of medals and trophies, the games featured 5 sports. These sporting events took place at the Rice-Eccles Stadium in the host city. The host city Salt Lake City was announced to be where the inaugural event would take place in honor of where Nitro Circus was first created. The United States topped the first-ever medal table, winning the most golds (5) and most medals overall (11).",
+                "Slimer\nSlimer is a character from the \"Ghostbusters\" franchise. He appears in the films \"Ghostbusters\" (1984), \"Ghostbusters II\" (1989) and \"Ghostbusters: Answer the Call\" (2016), in the animated television series \"The Real Ghostbusters\", \"Slimer!\" and \"Extreme Ghostbusters\", and in the video games \"\" and Beeline's \"Ghostbusters\". Slimer was voiced by Ivan Reitman and Adam Ray in the films and by Frank Welker in the cartoon series. In \"The Real Ghostbusters\", he is the Ghostbusters' mascot."
+            ],
+            "thoughts": [
+                "The films released in 2016 are:\n- Ghostbusters: Answer the Call\n- NRL All Stars team",
+                "There are no 2016 films listed that feature Townsend Coleman as a voice actor.",
+                "Townsend Coleman did not appear as a voice actor in any films from 2016.",
+                "The director of the 2016 film \"True Memoirs of an International Assassin\" featuring Townsend Coleman is Jeff Wadlow.",
+                "The film from 2016 that features Townsend Coleman is \"True Memoirs of an International Assassin.\" The film was directed by Jeff Wadlow and co-written with Jeff Morris.",
+                "The 2016 film \"True Memoirs of an International Assassin\" featuring the voice of Townsend Coleman was directed by Jeff Wadlow and co-written with Jeff Morris."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify films from 2016 that feature the voice of Townsend Coleman.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the director of the film identified in Node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve the writer of the film identified in Node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Combine the director and writer information of the film to answer the question.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph begins by identifying films from 2016 featuring Townsend Coleman's voice, then retrieves the director and writer for the specific film. Finally, it combines the information to provide a comprehensive answer."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s. Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The\u2005Loud\u2005House\", \"The Mighty B!\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+                "Sing (2016 American film)\nSing is a 2016 American 3D computer-animated musical comedy film produced by Illumination Entertainment. It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly. The film is about a group of anthropomorphic animals that enter a singing competition, hosted by a koala hoping to save his theater.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "True Memoirs of an International Assassin\nTrue Memoirs of an International Assassin is a 2016 American action comedy web film directed by Jeff Wadlow from a screenplay co-written with Jeff Morris. The film stars Kevin James, Zulay Henao, Andy Garc\u00eda, Maurice Compte, Kelen Coleman, Andrew Howard, and Rob Riggle. The film was released on November 11, 2016.",
+                "Deconstruction (Devin Townsend Project album)\nDeconstruction is the thirteenth studio album by Canadian musician Devin Townsend, and the third album in the Devin Townsend Project series. The album was released on June 20, 2011, simultaneously with the fourth Devin Townsend Project album \"Ghost\", on Townsend's independent record label HevyDevy Records. The album features two drummers, Dirk Verbeuren and Ryan Van Poederooyen, as well as a number of guest vocalists. The album's choral and orchestral parts were written and arranged by Townsend using Pro Tools software. The parts were later transcribed into conventional musical notation for the orchestra.",
+                "Shooting Fish\nShooting Fish is a 1997 British romantic crime comedy film directed by Stefan Schwartz and co-written with Richard Holmes. Starring Dan Futterman and Stuart Townsend as two con men with Kate Beckinsale as their unwilling assistant, the film was produced by Winchester Films and partly funded by National Lottery money administered through the UK Arts Council. \"Shooting Fish\" aimed to transfer well to international markets that were keen on British films following the success of \"Four Weddings and a Funeral\".",
+                "Sing Me to Sleep\n\"Sing Me to Sleep\" is a song by Norwegian record producer and DJ Alan Walker. Incorporating uncredited vocals provided by Norwegian recording artist Iselin Solheim, it was released commercially for digital consumption on 3 June 2016. Upon release, the recording was generally acclaimed by music critics, with several noticing similarities to the style of its predecessor, \"Faded\".",
+                "Beals Wright\nBeals Coleman Wright (December 19, 1879 \u2013 August 23, 1961) was an American tennis player who was active at the end of the 1890s and early 1900s. He won the singles title at the 1905 U.S. National Championships. Wright was a two-time Olympic gold medalist, and the older brother of American tennis player Irving Wright.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Sing-Sing (band)\nSing-Sing were an English indie pop/dream pop band formed in 1997 in London, comprising vocalist Lisa O'Neill (who had previously worked with Locust, Mad Professor, and Kid Loco) and guitarist/vocalist Emma Anderson (formerly of Lush). They worked with a variety of musicians to create a sound which nodded to 1960s girl groups, electronica and folk. They disbanded in 2007.",
+                "Brian Coleman\nBrian Coleman FRSA (born 25 June 1961) is an English Independent Conservative politician and a former councillor in the London Borough of Barnet. He was a Conservative Party member of the London Assembly for Barnet and Camden between 2000 and 2012, and in Barnet was Mayor for 2009\u20132010. He was also Chairman and Leader of the London Fire and Emergency Planning Authority (LFEPA) from May 2008 to 5 May 2012.",
+                "Herschell Gordon Lewis\nHerschell Gordon Lewis (June 15, 1926 \u2013 September 26, 2016) was an American filmmaker, best known for creating the \"splatter\" subgenre of horror films. He is often called the \"Godfather of Gore\" (a title also given to Lucio Fulci), though his film career included works in a range of exploitation film genres including juvenile delinquent films, nudie-cuties, two children's films and at least one rural comedy. On Lewis' career, AllMovie wrote: \"With his better-known gore films, Herschell Gordon Lewis was a pioneer, going farther than anyone else dared, probing the depths of disgust and discomfort onscreen with more bad taste and imagination than anyone of his era.\"",
+                "Peter Atencio\nPeter Atencio (born March 15, 1983) is an American television and film director best known for directing the sketch comedy series \"Key & Peele\". He also directed the feature film \"Keanu\", released in 2016.",
+                "Sparrows Can't Sing\nSparrows Can't Sing is a 1963 British film. Based on a 1960 play, \"Sparrers Can't Sing\", it was directed by Joan Littlewood and was from a story by Stephen Lewis. The producer was Donald Taylor and the original music by James Stevens, incidental music was composed by Stanley Black. The play, also by Stephen Lewis, was first performed at Joan Littlewood's Theatre Workshop in the Theatre Royal Stratford East.",
+                "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+                "Love the Way You Lie\n\"Love the Way You Lie\" is a song recorded by the American rapper Eminem, featuring the Barbadian singer Rihanna, from Eminem's seventh studio album \"Recovery\" (2010). The singer and songwriter Skylar Grey wrote and recorded a demo of the song alongside the producer Alex da Kid when she felt she was in an abusive romantic relationship with the music industry. Eminem wrote the verses and chose Rihanna to sing the chorus, resulting in a collaboration influenced by their past experiences in difficult relationships. Recording sessions were held in Ferndale, Michigan, and Dublin, Ireland. Backed by guitar, piano and violin, the track is a midtempo hip hop ballad with a pop refrain, sung by Rihanna, and describes two lovers who refuse to separate despite being in a dangerous love\u2013hate relationship.",
+                "South of 8\nSouth of 8 is a 2016 American crime film written by first time director Tony Olmos and Rosewood Five Productions, based on a string of bank robberies set in the near future. It officially premiered September 26, 2016 at the Downtown Los Angeles Film Festival in Los Angeles, California, where it won the jury award for Best Dramatic Screenplay. Prior to its premiere, the film won 'Best Trailer' at the San Diego Film Awards and was a finalist for Audience Choice #TrailerChallenge at DTLAFF via Indi.com. The film screened again on February 11, 2017 at San Diego Film Week and took home the award for \"Best Horror/SciFi/Thriller Feature.\"",
+                "Jack Hofsiss\nJohn Bernard \"Jack\" Hofsiss (September 28, 1950 \u2013 September 13, 2016) was an American theatre, film, and television director. He received a Tony Award for his direction of \"The Elephant Man\" on Broadway, the youngest director to have ever received it at the time. The production also garnered him a Drama Desk Award, Outer Critics Circle Award, Obie Award, and New York Drama Critics Circle Award. Director of Family Secrets in the year 1984; starring Melissa Gilbert, James Spader, Stefanie Powers, and Maureen Stapleton.",
+                "Contracted: Phase II\nContracted: Phase II is a 2015 zombie body horror film and the sequel to the 2013 film \"Contracted\". The movie was directed by Josh Forbes, based on a script written by Craig Walendziak, and Eric England, who wrote and directed the first film.",
+                "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\".",
+                "George Wallace (film)\nGeorge Wallace is a 1997 television film starring Gary Sinise as George Wallace, the former Governor of Alabama. It was directed by John Frankenheimer, who won an Emmy award for it; Sinise and Mare Winningham also won Emmys for their performances. The film was based on the 1996 biography \"Wallace : The Classic Portrait of Alabama Governor George Wallace\" by Marshall Frady, who also co-wrote the teleplay."
+            ],
+            "thoughts": [
+                "Sing (2016) is a film from 2016 that features the voice of Townsend Coleman.",
+                "The director of the film \"Sing\" is Garth Jennings.",
+                "The writer of the film \"Sing\" is Garth Jennings.",
+                "The director and writer of the film \"Sing\" is Garth Jennings."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the 2016 film featuring the voice of Townsend Coleman.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about the director of the identified film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve information about the writer of the identified film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Combine the information about the director and writer of the film.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "To determine the director and writer of a 2016 film featuring Townsend Coleman's voice, the process begins by identifying the specific film (Node 1). Following identification, two parallel steps involve retrieving the director (Node 2) and the writer (Node 3) of that film. Finally, the information from both retrievals is combined to provide the answer (Node 4)."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s. Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The\u2005Loud\u2005House\", \"The Mighty B!\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+                "Sing (2016 American film)\nSing is a 2016 American 3D computer-animated musical comedy film produced by Illumination Entertainment. It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly. The film is about a group of anthropomorphic animals that enter a singing competition, hosted by a koala hoping to save his theater.",
+                "True Memoirs of an International Assassin\nTrue Memoirs of an International Assassin is a 2016 American action comedy web film directed by Jeff Wadlow from a screenplay co-written with Jeff Morris. The film stars Kevin James, Zulay Henao, Andy Garc\u00eda, Maurice Compte, Kelen Coleman, Andrew Howard, and Rob Riggle. The film was released on November 11, 2016.",
+                "The Barbie Diaries\nThe Barbie Diaries is a 2006 motion capture film featuring popular Mattel character Barbie, and directed by Eric Fogel (the director of My Scene films). It is part of the \"Barbie\" film series featuring the voice of Kelly Sheridan as Barbie, and Skye Sweetnam as the singing Barbie. By the Curious Pictures's Movie. This is the last Barbie film made by Lionsgate before Barbie film series was sold to Universal.",
+                "Sing Me to Sleep\n\"Sing Me to Sleep\" is a song by Norwegian record producer and DJ Alan Walker. Incorporating uncredited vocals provided by Norwegian recording artist Iselin Solheim, it was released commercially for digital consumption on 3 June 2016. Upon release, the recording was generally acclaimed by music critics, with several noticing similarities to the style of its predecessor, \"Faded\".",
+                "Peter Atencio\nPeter Atencio (born March 15, 1983) is an American television and film director best known for directing the sketch comedy series \"Key & Peele\". He also directed the feature film \"Keanu\", released in 2016.",
+                "The League of Extraordinary Gentlemen (film)\nThe League of Extraordinary Gentlemen, also promoted as LXG, is a 2003 steampunk-dieselpunk action film loosely based on the first volume of the comic book series of the same name by Alan Moore and Kevin O'Neill. It was released on July 11, 2003, in the United States, and distributed by 20th Century Fox. It was directed by Stephen Norrington and starred Sean Connery, Naseeruddin Shah, Peta Wilson, Tony Curran, Stuart Townsend, Shane West, Jason Flemyng, and Richard Roxburgh.",
+                "Adena Friedman\nAdena T. Friedman (born 1969) is an American businessperson. She currently serves as the president and CEO of Nasdaq. She was formerly the managing director and CFO of The Carlyle Group. In May 2014, it was announced that Friedman would return to NASDAQ OMX as the president of global corporate and information technology solutions. In November 2016, she was named the CEO of NASDAQ.",
+                "Deconstruction (Devin Townsend Project album)\nDeconstruction is the thirteenth studio album by Canadian musician Devin Townsend, and the third album in the Devin Townsend Project series. The album was released on June 20, 2011, simultaneously with the fourth Devin Townsend Project album \"Ghost\", on Townsend's independent record label HevyDevy Records. The album features two drummers, Dirk Verbeuren and Ryan Van Poederooyen, as well as a number of guest vocalists. The album's choral and orchestral parts were written and arranged by Townsend using Pro Tools software. The parts were later transcribed into conventional musical notation for the orchestra.",
+                "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+                "Kelly Metzger\nKelly Metzger is a Canadian voice and theater actress, born in Edmonton and based in Vancouver, British Columbia. After making her debut in the title role of \"Anne of Green Gables\", she performed on the stage with several Vancouver based theatrical companies. After this, she began a career in voice acting. Among her more noted voice acting roles are the English voice of Sayu Yagami in the anime series based on the \"Death Note\" manga, the character of Buttercup in \"Powerpuff Girls Z\", the voice of Spitfire in \"\" (excluding the episode \"Sonic Rainboom\", where she was voiced by Nicole Oliver), the voice of Nya in the Cartoon Network series \"\", and the voice of Sugar Sprinkles and Kora Dixon in \"Littlest Pet Shop\". She also voiced Makena in \"\". Metzger also does the singing voice of the character Gloriosa Daisy in the 2016 film \"\".",
+                "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Game (2016 film)\nGame in Kannada, Oru Melliya Kodu (English: A thin line) in Tamil, is a 2016 Indian bilingual language crime thriller film directed by A. M. R. Ramesh. This movie is an unofficial remake of the 2012 Spanish thriller El Cuerpo (Spanish title) also known as \"The Body\", and features Arjun Sarja, Shaam and Manisha Koirala in the lead roles. With music composed by Ilayaraaja, the film was simultaneously shot in Kannada and Tamil; the former released first on February 26, 2016 while the later released on July 1, 2016. The film was dubbed and released in Telugu as \"Notuku Potu\" in 2017.",
+                "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+                "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+                "Wonder Woman (2017 film)\nWonder Woman is a 2017 American superhero film based on the DC Comics character of the same name, distributed by Warner Bros. Pictures. It is the fourth installment in the DC Extended Universe (DCEU). The film is directed by Patty Jenkins, with a screenplay by Allan Heinberg, from a story by Heinberg, Zack Snyder, and Jason Fuchs, and stars Gal Gadot, Chris Pine, Robin Wright, Danny Huston, David Thewlis, Connie Nielsen, and Elena Anaya. \"Wonder Woman\" is the second live action theatrical film featuring the titular character, following her debut in 2016's \"\". Jenkins's role as director makes her the first female director of a studio superhero comic book live-action theatrical release film. The film tells the story of Princess Diana, who grows up on the Amazon island of Themyscira. After American pilot Steve Trevor crashes offshore of the island and is rescued by her, he tells the Amazons about the ongoing World War. Diana then leaves her home in order to end the conflict, becoming Wonder Woman in the process.",
+                "Elisha Wiesel\nElisha Wiesel (born c. 1972) is an American businessman and the only child of Jewish writer, activist, and Holocaust survivor Elie Wiesel. He serves as the chief information officer of Goldman Sachs.",
+                "Sparrows Can't Sing\nSparrows Can't Sing is a 1963 British film. Based on a 1960 play, \"Sparrers Can't Sing\", it was directed by Joan Littlewood and was from a story by Stephen Lewis. The producer was Donald Taylor and the original music by James Stevens, incidental music was composed by Stanley Black. The play, also by Stephen Lewis, was first performed at Joan Littlewood's Theatre Workshop in the Theatre Royal Stratford East.",
+                "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\"."
+            ],
+            "thoughts": [
+                "The 2016 film featuring the voice of Townsend Coleman is \"Sing\".",
+                "The director of the film \"Sing\" is Garth Jennings, who also co-wrote the film.",
+                "The writer of the 2016 American film \"Sing\" is Garth Jennings. He also served as the director of the film.",
+                "Garth Jennings is both the director and writer of the film \"Sing.\""
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve all films from 2016 that feature the voice of Townsend Coleman.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the film(s) from the retrieved list where Townsend Coleman provided voice work.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve the director of the identified film(s).",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Retrieve the writer of the identified film(s).",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Combine the information to provide the director and writer of the 2016 film featuring Townsend Coleman's voice.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The graph starts by retrieving all films from 2016 featuring Townsend Coleman's voice. Once identified, it retrieves the director and writer of the film separately, followed by synthesizing the information to answer the original question."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Townsend Coleman\nTownsend Putnam Coleman III (born May 28, 1954) is an American voice actor who performed in many animated series and TV commercials beginning in the early 1980s. Among his most notable roles are Michaelangelo from \"Teenage Mutant Ninja Turtles\", Wayne Gretzky on \"ProStars\" and the title character in \"Where's Waldo?\" and the eponymous \"The Tick\" and he also did additional voices in \"Dexter's Laboratory\", \"The Powerpuff Girls\", \"Adventure Time\", \"Animaniacs\", \"The Buzz on Maggie\", \"Camp Lazlo\", \"CatDog\", \"Catscratch\", \"Danny Phantom\", \"Dave the Barbarian\", \"\", \"The Fairly OddParents\", \"Foster's Home for Imaginary Friends\", \"Gravity Falls\", \"Hi Hi Puffy AmiYumi\", \"\", \"The\u2005Loud\u2005House\", \"The Mighty B!\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "True Memoirs of an International Assassin\nTrue Memoirs of an International Assassin is a 2016 American action comedy web film directed by Jeff Wadlow from a screenplay co-written with Jeff Morris. The film stars Kevin James, Zulay Henao, Andy Garc\u00eda, Maurice Compte, Kelen Coleman, Andrew Howard, and Rob Riggle. The film was released on November 11, 2016.",
+                "Deconstruction (Devin Townsend Project album)\nDeconstruction is the thirteenth studio album by Canadian musician Devin Townsend, and the third album in the Devin Townsend Project series. The album was released on June 20, 2011, simultaneously with the fourth Devin Townsend Project album \"Ghost\", on Townsend's independent record label HevyDevy Records. The album features two drummers, Dirk Verbeuren and Ryan Van Poederooyen, as well as a number of guest vocalists. The album's choral and orchestral parts were written and arranged by Townsend using Pro Tools software. The parts were later transcribed into conventional musical notation for the orchestra.",
+                "Shooting Fish\nShooting Fish is a 1997 British romantic crime comedy film directed by Stefan Schwartz and co-written with Richard Holmes. Starring Dan Futterman and Stuart Townsend as two con men with Kate Beckinsale as their unwilling assistant, the film was produced by Winchester Films and partly funded by National Lottery money administered through the UK Arts Council. \"Shooting Fish\" aimed to transfer well to international markets that were keen on British films following the success of \"Four Weddings and a Funeral\".",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Brian Coleman\nBrian Coleman FRSA (born 25 June 1961) is an English Independent Conservative politician and a former councillor in the London Borough of Barnet. He was a Conservative Party member of the London Assembly for Barnet and Camden between 2000 and 2012, and in Barnet was Mayor for 2009\u20132010. He was also Chairman and Leader of the London Fire and Emergency Planning Authority (LFEPA) from May 2008 to 5 May 2012.",
+                "Sing (2016 American film)\nSing is a 2016 American 3D computer-animated musical comedy film produced by Illumination Entertainment. It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly. The film is about a group of anthropomorphic animals that enter a singing competition, hosted by a koala hoping to save his theater.",
+                "Sparrows Can't Sing\nSparrows Can't Sing is a 1963 British film. Based on a 1960 play, \"Sparrers Can't Sing\", it was directed by Joan Littlewood and was from a story by Stephen Lewis. The producer was Donald Taylor and the original music by James Stevens, incidental music was composed by Stanley Black. The play, also by Stephen Lewis, was first performed at Joan Littlewood's Theatre Workshop in the Theatre Royal Stratford East.",
+                "Tuckaleechee Caverns\nTuckaleechee Caverns ( ) a set of caverns and tourist attraction in Townsend, Tennessee and a short drive from Gatlinburg, Sevierville, Knoxville and Chattanooga. Tuckaleechee Caverns has a 5 star \"GEM\" attraction\u00a0listing by AAA. These caverns were discovered in the mid-19th century and were\u00a0opened to the public by Bill Vananda and Harry Myers in 1953. On one end of the Tuckaleechee Caverns tour, the\u00a0\"Big Room\" is found, which is the largest cave/cavern room that is open to the public in the eastern United States.\u00a0Many\u00a0stalagmites reach\u00a0over 24 feet tall with flow-stone formations over hundreds of feet in length and width. Tuckaleechee Caverns is proud to have the tallest underground waterfall in the eastern United States,\u00a0named\u00a0\"Silver Falls\", a 210 foot two-tier waterfall. Tuckaleechee Caverns is one of the most active or \"alive\" caves/caverns the public can visit on Earth and it is located under the Great Smokey Mountains,\u00a0the oldest mountain range on the planet. Tuckaleechee Caverns\u00a0is\u00a0located in Dry Valley\u00a0of Townsend, Tennessee. The Caverns\u00a0are two miles away from Cades Cove, which\u00a0is where the cavern actually originates (at White Oak Sinks in the\u00a0Great Smokey Mountains National Park). The Caverns\u00a0also host\u00a0the most sensitive seismograph system on the planet and is\u00a0monitored by the United States military Department of Defense and the United States Geological Survey (USGS).\u00a0Real-time, worldwide, earthquake and nuclear activity\u00a0are displayed in the welcome center.\u00a0\u00a0\u00a0The cave is noted for its onyx formations, \"Big Room,\" and high waterfalls. Tours are conducted along lighted walkways. Tuckaleechee Caverns in Townsend, TN., are known as the \"Greatest Site Under the Smokies\". Estimated to be between 20 and 30 million years old, the Caverns are rich in history and lore in recent years as well..",
+                "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars.",
+                "Sing-Sing (band)\nSing-Sing were an English indie pop/dream pop band formed in 1997 in London, comprising vocalist Lisa O'Neill (who had previously worked with Locust, Mad Professor, and Kid Loco) and guitarist/vocalist Emma Anderson (formerly of Lush). They worked with a variety of musicians to create a sound which nodded to 1960s girl groups, electronica and folk. They disbanded in 2007.",
+                "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+                "Sing Me to Sleep\n\"Sing Me to Sleep\" is a song by Norwegian record producer and DJ Alan Walker. Incorporating uncredited vocals provided by Norwegian recording artist Iselin Solheim, it was released commercially for digital consumption on 3 June 2016. Upon release, the recording was generally acclaimed by music critics, with several noticing similarities to the style of its predecessor, \"Faded\".",
+                "Barbara Albert\nBarbara Albert (born 1970 in Vienna) is an Austrian writer, film-producer and film-director.",
+                "Jeff Tremaine\nJeffery James Tremaine (born September 4, 1966) is an American film director, film producer, television director, and television producer. He is most closely associated with the \"Jackass\" franchise, having been involved since the inception of the first TV show.",
+                "John Berry (film director)\nJohn Berry (September 6, 1917 \u2013 November 29, 1999) was an American film director, who went into self-exile in France when his career was interrupted by the Hollywood blacklist.",
+                "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley."
+            ],
+            "thoughts": [
+                "The only film from 2016 that features the voice of Townsend Coleman is \"Sing\".",
+                "Townsend Coleman provided voice work for the film \"Sing.\"",
+                "Road Trip - Todd Phillips\nSing - Garth Jennings\nSparrows Can't Sing - Joan Littlewood\nThe SpongeBob SquarePants Movie - Stephen Hillenburg\nSing Me to Sleep - Alan Walker\nJackass franchise - Jeff Tremaine\nJohn Berry - John Berry",
+                "Road Trip (film) - Scot Armstrong and Todd Phillips\nSing (2016 American film) - Garth Jennings and Christophe Lourdelet\nSparrows Can't Sing - Joan Littlewood and Stephen Lewis\nThe SpongeBob SquarePants Movie - Stephen Hillenburg\nTrust (1990 film) - Hal Hartley",
+                "The director and writer of the 2016 film featuring Townsend Coleman's voice is Garth Jennings and Christophe Lourdelet."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find the film released in 2016 featuring the voice of Townsend Coleman.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about the film identified in Node 1, focusing on who directed and wrote it.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "2"
+                },
+                "explanation": "The execution graph begins by identifying the specific film from 2016 that features the voice of Townsend Coleman. Once the film is identified, the next step is to retrieve details about its director and writer. The process ensures all necessary information is collected to respond to the original question."
+            },
+            "recall": 0.0,
+            "retrieved_passages": [
+                "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+                "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+                "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+                "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+                "Last Days (2014 film)\nLast Days is a 2014 animated short documentary film about the decline of African elephant populations and the illegal ivory trade. Director Kathryn Bigelow's other films include \"The Hurt Locker\" (2009), \"Point Break\" (1991), and \"Zero Dark Thirty\" (2012). The film makes the claim that terrorist networks derive much of their income from poached ivory. Featured in the film is footage of the 2013 Westgate shopping mall attack in Nairobi, Kenya, which has been attributed to militant organization Al-Shabaab.",
+                "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+                "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+                "Heath Ledger\nHeathcliff Andrew Ledger (4 April 197922 January 2008) was an Australian actor and director. After performing roles in several Australian television and film productions during the 1990s, Ledger left for the United States in 1998 to develop his film career. His work comprised nineteen films, including \"10 Things I Hate About You\" (1999), \"The Patriot\" (2000), \"A Knight's Tale\" (2001), \"Monster's Ball\" (2001), \"Lords of Dogtown\" (2005), \"Brokeback Mountain\" (2005), \"The Dark Knight\" (2008), and \"The Imaginarium of Doctor Parnassus\" (2009), the latter two being posthumous releases. He also produced and directed music videos and aspired to be a film director.",
+                "Half Past Dead\nHalf Past Dead is a 2002 American action film written and directed by Don Michael Paul in his directorial debut, and produced by Steven Seagal, who also starred in the lead role, alongside Andrew Stevens and Elie Samaha. The film co-stars Morris Chestnut, Ja Rule, Tony Plana, Kurupt, and Nia Peeples. The film tells the story of a criminal who infiltrates a prison to interrogate a prisoner about the location of a fortune in gold while an undercover FBI agent has to stop him. Distribution and copyrights are held by Columbia Pictures. \"Half Past Dead\" was released on November 15, 2002 by Screen Gems. The film grossed $19 million worldwide against its budget of $25 million.",
+                "Stanley Kubrick's Boxes\nStanley Kubrick's Boxes is a 2008 documentary film directed by Jon Ronson about the film director Stanley Kubrick. Ronson's intent was not to create a biography of the filmmaker but rather to understand Kubrick by studying the director's vast personal collection of memorabilia related to his feature films. The documentary came about in 1998 when Ronson received a request from Kubrick's estate for a copy of a documentary Ronson made about the Holocaust (Ronson was unaware that it was Kubrick who was asking for the film until months later). A year later, as Ronson was making plans to conduct a rare interview with the director, Kubrick suddenly died after completing work on his final film \"Eyes Wide Shut\". To his surprise, Ronson was invited to Kubrick's house by his widow. When he arrived, he found that half the house was filled by more than one thousand boxes containing snap shots, newspaper clippings, film out-takes, notes, and fan letters which the director used for research towards each of his films.",
+                "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+                "Ingo Preminger\nIngwald \"Ingo\" Preminger (25 February 1911 in Czernowitz, Austria-Hungary (now Chernivtsi, Ukraine) \u2013 7 June 2006 in Pacific Palisades, California) was a film producer. He was also the literary agent for several writers, including Dalton Trumbo and Ring Lardner Jr., both of whom were blacklisted in the McCarthy era. He was brother of actor-director-producer Otto Preminger.",
+                "Don I. Wortman\nDon I. Wortman is a retired U.S. federal government administrator who served 27 years in senior-level executive positions in many federal government agencies. He was Acting Commissioner of the Social Security Administration (SSA) from December 13, 1977 to October 4, 1978. In early 1977, while working at the Department of Health, Education and Welfare (HEW)\u2014precursor to the Department of Health and Human Services\u2014he was Chairman of the task force for implementing the reorganization of HEW. This reorganization included the merging of the Medicare and Medicaid programs into a new agency; this agency was named the Health Care Financing Administration (and renamed the Centers for Medicare and Medicaid Services in June 2001). He became the first Administrator of the Health Care Financing Administration. On two occasions\u20146 months in 1975 and the first 3 months of 1977\u2014he was Acting Administrator of the Social and Rehabilitation Services, the agency which, at that time, administered the Medicaid program and the Aid to Families with Dependent Children program.",
+                "Jeff Stanzler\nJeff Stanzler is an American screenwriter and director. He wrote and directed the 1992 film \"Jumpin' at the Boneyard\" along with the 2005 psychological thriller, \"Sorry, Haters\", an \"official selection\" in both the Toronto International and American Film Institute film festivals. He is currently working on a documentary about politics in West Africa. He's married to Annouchka Yameogo-Stanzler.",
+                "Alain Resnais\nAlain Resnais (] ; 3 June 19221 March 2014) was a French film director and screenwriter whose career extended over more than six decades. After training as a film editor in the mid-1940s, he went on to direct a number of short films which included \"Night and Fog\" (1955), an influential documentary about the Nazi concentration camps."
+            ],
+            "thoughts": [
+                "The film released in 2016 featuring the voice of Townsend Coleman is \"Pretty Much Dead Already,\" which is the seventh episode and mid-season finale of the second season of the television series \"The Walking Dead.\"",
+                "The film \"Pretty Much Dead Already\" is an episode of the television series \"The Walking Dead\". It was directed by Michelle MacLaren and written by Scott M. Gimple."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify films from 2016 that feature the voice of Townsend Coleman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the director of the film identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the writer of the film identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the director and writer information of the film to answer the question.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by identifying films from 2016 featuring Townsend Coleman's voice, then retrieves the director and writer for the specific film. Finally, it combines the information to provide a comprehensive answer."
+    },
+    "best_recall": 0.9444444444444444
+}

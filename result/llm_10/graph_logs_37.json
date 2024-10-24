@@ -1,0 +1,353 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve taxonomic information for Sporobolus.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve taxonomic information for Zea.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify the shared taxonomic categories for Sporobolus and Zea from the retrieved information.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine the highest shared taxonomic rank for Sporobolus and Zea.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The task is to determine the shared taxonomic category for the plants Sporobolus and Zea. We start by retrieving the taxonomic classification for each (nodes 1 and 2). Then, we compare these classifications to identify which categories they have in common (node 3). Finally, we determine the highest taxonomic rank they both share, which answers the original question (node 4)."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Sporobolus\nSporobolus is a nearly cosmopolitan genus of plants in the grass family.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Sporobolus compositus\nSporobolus compositus, syn. Sporobolus asper, the composite dropseed or tall dropseed, is a native North American prairie grass growing from two to four feet tall. Also called \"rough dropseed\" and \"meadow dropseed\" it is common on the Great Plains, and found in most states in the United States.",
+                "Leopoldo Zea Aguilar\nLeopoldo Zea (born \"Leopoldo Zea Aguilar\"; June 30, 1912 in Mexico City\u00a0\u2013 June 8, 2004) was a Mexican philosopher.",
+                "Zea perennis\nZea perennis, the perennial teosinte, is a true grass species in the genus \"Zea\" and a teosinte. It is one of the two perennial species in the genus \"Zea\". The other perennial, \"Z. diploperennis,\" is the sister taxon of \"Z. perennis\". Those two species also form a clade with \"Z. luxurians\". Together, the three species make up the \"Luxuriantes\" section in the genus \"Zea\". \"Z. perennis\" is the sole tetraploid in the genus and fertile hybrids with diploid \"Zea\" species are rare. Ribosomal ITS evidence suggested introgression between \"Z. perennis\" and \"Z. mays\" that must have come from either crossing the ploidy barrier or been from the diploid ancestral pool. \"Z. perennis\" is generally considered to be an autotetraploid from some ancestral population of \"Z. diploperennis\".",
+                "Microplitis croceipes\nMicroplitis croceipes is a braconid wasp native to the US state of Georgia. It is an important parasitoid of caterpillars, including those of major agricultural pests \"Helicoverpa zea\" (formerly called \"Heliothis zea\") and \"Heliothis virescens\".",
+                "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+                "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+                "Zea (plant)\nZea is a genus of plants in the grass family. The best-known species is \"Z. mays\", variously called maize, corn, or Indian corn, one of the most important crops for human societies over much of the world. Several wild species are commonly known as teosintes and are native to Mesoamerica.",
+                "Zea nicaraguensis\nZea nicaraguensis is a true grass species in the genus \"Zea\". It is considered to be phenotypically the most distinctive, as well as the most threatened teosinte. This teosinte thrives in flooded conditions along 200 m of a coastal estuarine river in northwest Nicaragua. Virtually all populations of teosinte are either threatened or endangered: \"Z. nicaraguensis\" survives as about 6000 plants in an area of 200 x 150 m. The Mexican and Nicaraguan governments have taken action in recent years to protect wild teosinte populations, using both \"in situ\" and \"ex situ\" conservation methods. Currently, a large amount of scientific interest exists in conferring beneficial teosinte traits, such as insect resistance, perennialism, and flood tolerance, to cultivated maize lines, although this is very difficult due to linked deleterious teosinte traits.",
+                "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association.",
+                "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+                "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+                "Sapho (software)\nSapho is a venture-backed enterprise application infrastructure company based in San Francisco, California, that was founded in 2014 by Fouad ElNaggar, the former of Chief Strategy Officer of CBS Interactive, Peter Yared, the former Chief Technology Officer and Chief Information Officer at CBS Interactive, and Charles Christolini, the former VP Architecture of CBS Interactive. Sapho provides an enterprise software platform for organizations to offer access to corporate information on mobile devices by utilizing software APIs to pull information from a company\u2019s enterprise applications and SaaS vendors."
+            ],
+            "thoughts": [
+                "Sporobolus is a nearly cosmopolitan genus of plants in the grass family. One specific species within this genus is Sporobolus compositus, also known as the composite dropseed or tall dropseed, which is a native North American prairie grass. Additionally, there are around 233 species in the genus \"Utricularia,\" belonging to the Bladderwort family, making it the largest genus of carnivorous plants with a worldwide distribution. Karine Nahon is an Israeli information scientist and public intellectual, known for her work in the area of information, technology, and society. The giraffe is a genus of African even-toed ungulate mammals, with the current genus consisting of one species, \"Giraffa camelopardalis.\" A military staff is a group responsible for the administrative, operational, and logistical needs of its unit, providing bi-directional flow of information between commanding officers and subordinate military units. Sapho is a venture-backed enterprise application infrastructure company based in San Francisco, California, providing an enterprise software platform for organizations to offer access to corporate information on mobile devices.",
+                "The taxonomic information for Zea is as follows:\n\n- Zea is a genus of plants in the grass family, with the best-known species being \"Z. mays\", also known as maize, corn, or Indian corn.\n- Zea perennis is a true grass species in the genus \"Zea\" and a teosinte, one of the two perennial species in the genus \"Zea\".\n- Zea nicaraguensis is another true grass species in the genus \"Zea\", considered to be phenotypically the most distinctive and the most threatened teosinte.\n- Zea (plant) is the genus of plants in the grass family, with several wild species known as teosintes and native to Mesoamerica.\n\nThese species are part of the \"Zea\" genus, which is a group of plants in the grass family.",
+                "The shared taxonomic category for Sporobolus and Zea is that they both belong to the grass family (Poaceae). Additionally, they are both genera of plants within the grass family.",
+                "The highest shared taxonomic rank for Sporobolus and Zea is the family level, as they both belong to the grass family (Poaceae)."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the biological classification categories relevant to Sporobolus.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the biological classification categories relevant to Zea.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve and compare the higher-level categories (family, order, etc.) of Sporobolus and Zea to identify common classifications.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task is to determine in which biological classification category (e.g., family, order, class) Sporobolus and Zea are the same. The execution graph consists of three main nodes: Node 1 retrieves the classification details for Sporobolus, and Node 2 retrieves the classification details for Zea. Node 3 then compares these classifications to identify any categories they have in common. The root and final node ensure the process begins with retrieval and ends with identifying shared categories."
+            },
+            "recall": 0.4444444444444444,
+            "retrieved_passages": [
+                "Sporobolus compositus\nSporobolus compositus, syn. Sporobolus asper, the composite dropseed or tall dropseed, is a native North American prairie grass growing from two to four feet tall. Also called \"rough dropseed\" and \"meadow dropseed\" it is common on the Great Plains, and found in most states in the United States.",
+                "Sporobolus\nSporobolus is a nearly cosmopolitan genus of plants in the grass family.",
+                "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+                "List of keratins\nThe first sequences of keratins revealed that keratins could be grouped into two categories based on their sequence homologies. These two groups of keratins were named as type I and type II keratins. These two categories also represent the first two categories of the superfamily of intermediate filament proteins.",
+                "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+                "Prehypertension\nPrehypertension, also known as high normal blood pressure, is an American medical classification for cases where a person's blood pressure is elevated above normal, but not to the level considered hypertension (high blood pressure). Prehypertension is blood pressure readings with a systolic pressure from 120 to 139\u00a0mm Hg or a diastolic pressure from 80 to 89\u00a0mm Hg. Readings greater than or equal to 140/90\u00a0mm Hg are considered hypertension. Classification of blood pressure is based upon two or more readings at two or more separate occasions separated by at least one week. The seventh report of the Joint National Committee (JNC 7) proposed the new labeling for elevated blood pressure values below 140/90 to more accurately communicate the tendency of blood pressure to rise with age.",
+                "Hwang Woo-seul-hye\nHwang Woo-seul-hye (born Hwang Jin-hee on August 10, 1979) is a South Korean actress. She made her acting debut as a \"dumb blonde\"-type character in the critically praised black comedy \"Crush and Blush\" (2008). Hwang has since played leading roles in the indie melodrama \"Lovers Vanished\" (2010), the TV sitcom \"I Need a Fairy\" (also known as \"Sent from Heaven\", 2012), and the romantic comedy \"Virgin Theory: 7 Steps to Get On the Top\" (2014).",
+                "Shall We Gather at the River (Falling Skies)\n\"Shall We Gather at the River\" is the second episode of the second season of the American television drama series \"Falling Skies\", and the 12th overall episode of the series. It originally aired on TNT in the United States on June 17, 2012 as a two-hour season premiere with the first episode of the season. It was written by Bradley Thompson & David Weddle and directed by Greg Beeman.",
+                "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+                "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+                "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+                "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+                "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+                "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+                "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+                "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+            ],
+            "thoughts": [
+                "Kingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\nGenus: Sporobolus",
+                "The biological classification categories relevant to Zea are:\n\nKingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\nGenus: Zea\nSpecies: Zea mays",
+                "Based on the retrieved information, both Sporobolus and Zea belong to the same higher-level categories:\n\nKingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\n\nTherefore, Sporobolus and Zea share common classifications at the kingdom, phylum, class, order, and family levels."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the scientific classification hierarchy for Sporobolus.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the scientific classification hierarchy for Zea.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Extract the classification levels of Sporobolus from kingdom to genus.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Extract the classification levels of Zea from kingdom to genus.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Compare the classification levels of Sporobolus and Zea to find the common level.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The execution graph is designed to find a common classification level for the plants Sporobolus and Zea. It starts by independently retrieving classification information for each genus, extracting relevant levels, and then comparing them to determine the level at which they are the same. The nodes ensure efficient information retrieval and reasoning across both scientific classifications, finally deducing the common taxonomic rank."
+            },
+            "recall": 0.2777777777777778,
+            "retrieved_passages": [
+                "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+                "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+                "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+                "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+                "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+                "You Belong with Me\n\"You Belong with Me\" is a song performed by American singer-songwriter Taylor Swift. The song was co-written by Swift and Liz Rose and produced by Nathan Chapman with Swift's aid. It was released on April 18, 2009, by Big Machine Records as the third single from Swift's second studio album, \"Fearless\" (2008). Swift was inspired to write \"You Belong with Me\" after overhearing a male friend of hers arguing with his girlfriend through a phone call; she continued to develop a story line afterward. The song contains many pop music elements and its lyrics have Swift desiring an out-of-reach love interest.",
+                "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Zea nicaraguensis\nZea nicaraguensis is a true grass species in the genus \"Zea\". It is considered to be phenotypically the most distinctive, as well as the most threatened teosinte. This teosinte thrives in flooded conditions along 200 m of a coastal estuarine river in northwest Nicaragua. Virtually all populations of teosinte are either threatened or endangered: \"Z. nicaraguensis\" survives as about 6000 plants in an area of 200 x 150 m. The Mexican and Nicaraguan governments have taken action in recent years to protect wild teosinte populations, using both \"in situ\" and \"ex situ\" conservation methods. Currently, a large amount of scientific interest exists in conferring beneficial teosinte traits, such as insect resistance, perennialism, and flood tolerance, to cultivated maize lines, although this is very difficult due to linked deleterious teosinte traits.",
+                "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+                "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+                "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+                "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+                "Leopoldo Zea Aguilar\nLeopoldo Zea (born \"Leopoldo Zea Aguilar\"; June 30, 1912 in Mexico City\u00a0\u2013 June 8, 2004) was a Mexican philosopher.",
+                "Zea (plant)\nZea is a genus of plants in the grass family. The best-known species is \"Z. mays\", variously called maize, corn, or Indian corn, one of the most important crops for human societies over much of the world. Several wild species are commonly known as teosintes and are native to Mesoamerica."
+            ],
+            "thoughts": [
+                "Kingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\nGenus: Sporobolus",
+                "Kingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\nGenus: Sporobolus",
+                "Kingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\nGenus: Zea",
+                "Kingdom: Plantae\nPhylum: Angiosperms\nClass: Monocots\nOrder: Poales\nFamily: Poaceae\nGenus: Zea",
+                "The common classification level for both Sporobolus and Zea is Class: Monocots."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the biological classification hierarchy (e.g., family, genus, order) that can be used to determine if two species are in the same group within the hierarchy.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the family of the genus Sporobolus.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine the family of the genus Zea.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Compare the families identified for both Sporobolus and Zea and determine if they are in the same family.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The task is to determine the lowest shared biological category for the genera Sporobolus and Zea, which implies checking if they belong to the same family. The graph first establishes the hierarchy, then independently retrieves the family for each genus, and finally compares them to see if they are the same."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Sporobolus\nSporobolus is a nearly cosmopolitan genus of plants in the grass family.",
+                "Zea (plant)\nZea is a genus of plants in the grass family. The best-known species is \"Z. mays\", variously called maize, corn, or Indian corn, one of the most important crops for human societies over much of the world. Several wild species are commonly known as teosintes and are native to Mesoamerica.",
+                "Zea perennis\nZea perennis, the perennial teosinte, is a true grass species in the genus \"Zea\" and a teosinte. It is one of the two perennial species in the genus \"Zea\". The other perennial, \"Z. diploperennis,\" is the sister taxon of \"Z. perennis\". Those two species also form a clade with \"Z. luxurians\". Together, the three species make up the \"Luxuriantes\" section in the genus \"Zea\". \"Z. perennis\" is the sole tetraploid in the genus and fertile hybrids with diploid \"Zea\" species are rare. Ribosomal ITS evidence suggested introgression between \"Z. perennis\" and \"Z. mays\" that must have come from either crossing the ploidy barrier or been from the diploid ancestral pool. \"Z. perennis\" is generally considered to be an autotetraploid from some ancestral population of \"Z. diploperennis\".",
+                "Zea nicaraguensis\nZea nicaraguensis is a true grass species in the genus \"Zea\". It is considered to be phenotypically the most distinctive, as well as the most threatened teosinte. This teosinte thrives in flooded conditions along 200 m of a coastal estuarine river in northwest Nicaragua. Virtually all populations of teosinte are either threatened or endangered: \"Z. nicaraguensis\" survives as about 6000 plants in an area of 200 x 150 m. The Mexican and Nicaraguan governments have taken action in recent years to protect wild teosinte populations, using both \"in situ\" and \"ex situ\" conservation methods. Currently, a large amount of scientific interest exists in conferring beneficial teosinte traits, such as insect resistance, perennialism, and flood tolerance, to cultivated maize lines, although this is very difficult due to linked deleterious teosinte traits.",
+                "Sporobolus compositus\nSporobolus compositus, syn. Sporobolus asper, the composite dropseed or tall dropseed, is a native North American prairie grass growing from two to four feet tall. Also called \"rough dropseed\" and \"meadow dropseed\" it is common on the Great Plains, and found in most states in the United States.",
+                "Leopoldo Zea Aguilar\nLeopoldo Zea (born \"Leopoldo Zea Aguilar\"; June 30, 1912 in Mexico City\u00a0\u2013 June 8, 2004) was a Mexican philosopher.",
+                "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+                "Broughtonia\nBroughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles. The genus is abbreviated Bro in trade journals.",
+                "Cryptanthus\nCryptanthus is a genus in the botanical family Bromeliaceae, subfamily Bromelioideae. The genus name is from the Greek \u201ccryptos\u201d (hidden) and \u201canthos\u201d (flower). This genus has two recognized subgenera: the type subgenus and \"Hoplocryptanthus\" . All species of this genus are endemic to Brazil. The common name for any \"Cryptanthus\" is \"Earth Star\".",
+                "Broughtonia sanguinea\nBroughtonia sanguinea, also known as Blood Red Broughtonia is a plant in the genus \"Broughtonia\", a member of the Orchidaceae family. The genus is abbreviated Bro in trade journals.",
+                "Arnebia\nArnebia is a genus of flowering plants in the family Boraginaceae.",
+                "Pimelea\nPimelea (often seen spelled \"Pimelia\", which is the name of a genus of beetles) is a genus of plants belonging to the family Thymelaeaceae. There are about 80 species in the genus, which is native to Australia and New Zealand. Many of the species are poisonous to cattle and horses."
+            ],
+            "thoughts": [
+                "The biological classification hierarchy includes the following levels: domain, kingdom, phylum, class, order, family, genus, and species. To determine if two species are in the same group within the hierarchy, we can compare their classification at each level, starting from the highest (domain) and moving down to the lowest (species). If the two species share the same classification at each level, then they are in the same group within the hierarchy. For example, if two species belong to the same genus and the same family, then they are in the same group within the hierarchy.",
+                "The family of the genus Sporobolus is the grass family (Poaceae).",
+                "The family of the genus Zea is the grass family (Poaceae).",
+                "The families identified for both Sporobolus and Zea are the same, as they both belong to the grass family (Poaceae). Therefore, they are in the same family."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve taxonomic classification of Sporobolus.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve taxonomic classification of Zea.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify the highest taxonomic rank shared by both Sporobolus and Zea from their classifications.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "3",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task is to identify the common taxonomic rank of the two genera, Sporobolus and Zea. The execution graph starts with retrieving the taxonomic classifications for each genus (nodes 1 and 2). The final node (3) uses this information to deduce the highest common taxonomic rank, such as family, order, or class, for the two taxa."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Sporobolus\nSporobolus is a nearly cosmopolitan genus of plants in the grass family.",
+                "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+                "Sporobolus compositus\nSporobolus compositus, syn. Sporobolus asper, the composite dropseed or tall dropseed, is a native North American prairie grass growing from two to four feet tall. Also called \"rough dropseed\" and \"meadow dropseed\" it is common on the Great Plains, and found in most states in the United States.",
+                "Leopoldo Zea Aguilar\nLeopoldo Zea (born \"Leopoldo Zea Aguilar\"; June 30, 1912 in Mexico City\u00a0\u2013 June 8, 2004) was a Mexican philosopher.",
+                "Zea perennis\nZea perennis, the perennial teosinte, is a true grass species in the genus \"Zea\" and a teosinte. It is one of the two perennial species in the genus \"Zea\". The other perennial, \"Z. diploperennis,\" is the sister taxon of \"Z. perennis\". Those two species also form a clade with \"Z. luxurians\". Together, the three species make up the \"Luxuriantes\" section in the genus \"Zea\". \"Z. perennis\" is the sole tetraploid in the genus and fertile hybrids with diploid \"Zea\" species are rare. Ribosomal ITS evidence suggested introgression between \"Z. perennis\" and \"Z. mays\" that must have come from either crossing the ploidy barrier or been from the diploid ancestral pool. \"Z. perennis\" is generally considered to be an autotetraploid from some ancestral population of \"Z. diploperennis\".",
+                "Microplitis croceipes\nMicroplitis croceipes is a braconid wasp native to the US state of Georgia. It is an important parasitoid of caterpillars, including those of major agricultural pests \"Helicoverpa zea\" (formerly called \"Heliothis zea\") and \"Heliothis virescens\".",
+                "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+                "Zea (plant)\nZea is a genus of plants in the grass family. The best-known species is \"Z. mays\", variously called maize, corn, or Indian corn, one of the most important crops for human societies over much of the world. Several wild species are commonly known as teosintes and are native to Mesoamerica.",
+                "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+                "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+                "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+                "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies."
+            ],
+            "thoughts": [
+                "The taxonomic classification of Sporobolus is as follows:\n- Kingdom: Plantae\n- Clade: Tracheophytes\n- Clade: Angiosperms\n- Clade: Monocots\n- Clade: Commelinids\n- Order: Poales\n- Family: Poaceae\n- Genus: Sporobolus",
+                "Kingdom: Plantae\nClade: Tracheophytes\nClade: Angiosperms\nClade: Monocots\nClade: Commelinids\nOrder: Poales\nFamily: Poaceae\nSubfamily: Panicoideae\nTribe: Andropogoneae\nGenus: Zea",
+                "The highest taxonomic rank shared by both Sporobolus and Zea is the Order Poales."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the biological classification hierarchy (e.g., family, genus, order) that can be used to determine if two species are in the same group within the hierarchy.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the family of the genus Sporobolus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the family of the genus Zea.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Compare the families identified for both Sporobolus and Zea and determine if they are in the same family.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task is to determine the lowest shared biological category for the genera Sporobolus and Zea, which implies checking if they belong to the same family. The graph first establishes the hierarchy, then independently retrieves the family for each genus, and finally compares them to see if they are the same."
+    },
+    "best_recall": 0.9444444444444444
+}

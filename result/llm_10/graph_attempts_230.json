@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 1941 Japanese surprise attack that has a memorial.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the name of the memorial for the identified 1941 Japanese surprise attack.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out who designed the memorial identified.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the specific historical event in question, which is the 1941 Japanese surprise attack. The most well-known event of this kind is the attack on Pearl Harbor. Next, it retrieves the name of the memorial that commemorates this event, which is the USS Arizona Memorial. Finally, it finds out who designed this particular memorial, culminating in a complete answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the 1941 Japanese surprise attack.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which memorial commemorates the 1941 Japanese surprise attack.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information on the design and designer of the identified memorial.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the name of the designer of the memorial commemorating the 1941 Japanese surprise attack from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by identifying the significant 1941 Japanese surprise attack, which is the attack on Pearl Harbor. Then, the task involves finding the memorial commemorating this event, which is typically the USS Arizona Memorial. Once the correct memorial is identified, the task is to retrieve information on who designed this memorial and extract the designer's name. This structured approach ensures all necessary pieces of information are gathered systematically to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which 1941 Japanese surprise attack the memorial is commemorating.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the name of the memorial for the identified attack from Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine who the designer of the memorial identified in Step 2 is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer the question, we first need to understand which 1941 Japanese surprise attack is being referred to, which is Step 1. Once we know it is the attack on Pearl Harbor, we proceed to identify the memorial built for this event, which is the USS Arizona Memorial (Step 2). Finally, we retrieve the designer of this specific memorial in Step 3, completing the task."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the event referred to by a 1941 Japanese surprise attack.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the memorial that commemorates the event identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine who designed the memorial identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer the question, we need to identify the event referred to as the 1941 Japanese surprise attack, which historical knowledge suggests is the attack on Pearl Harbor. Next, we find out which memorial commemorates this specific event. The final step is to retrieve who designed the Pearl Harbor Memorial once it is identified. This step-by-step decomposition allows us to handle the multi-faceted retrieval and reasoning required to answer the question accurately."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the event referred to by 'a 1941 Japanese surprise attack'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the memorial associated with the identified 1941 Japanese surprise attack.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the designer of the identified memorial.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The problem is broken down into the following steps: First, identify the specific event referred to by 'a 1941 Japanese surprise attack', which is widely known as the attack on Pearl Harbor. Once the event is identified, the next step is to find out which memorial is associated with this historical event. The final step is to retrieve information about who designed the particular memorial associated with the Pearl Harbor attack. By following these steps, we can effectively answer the question about the memorial and its designer."
+    }
+]

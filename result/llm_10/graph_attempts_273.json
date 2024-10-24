@@ -1,0 +1,214 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify North American tribal governments with constitutions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Filter tribal governments based on formation or constitutional dates in the 19th century.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information on tribal governments that signed their constitution in Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference the constitution signing dates with September 6, 1839, in Oklahoma.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize information to identify the tribal government.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task of identifying which North American tribal government signed a constitution in 1839 in Oklahoma. It starts by retrieving a list of tribal governments with constitutions, narrows them down by relevant dates, retrieves specific details about constitution signings in Oklahoma, and cross-references this information to pinpoint the government that signed its constitution on September 6, 1839. The final node synthesizes this information to produce the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify autonomous North American tribal governments with constitutions signed in the early 1800s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about tribal governments with historical events related to constitution signings specifically around the 1830s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Filter governments identified to those that were in Oklahoma in 1839.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the specific tribe that signed its constitution on September 6, 1839.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins by retrieving information about autonomous North American tribal governments that signed constitutions in the early 1800s and then focuses on those based in Oklahoma. The reasoning nodes ensure that the timeline and location match the query's specifics, leading to the identification of the appropriate tribe."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify autonomous North American tribal governments.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which of these governments are legally recognized and have constitutions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve historical information about significant events in 1839 related to tribal governments.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify tribal governments that signed constitutions in Oklahoma in the year 1839.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize information to conclude which tribal government signed its constitution on September 6, 1839, in Oklahoma.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task of answering the question into manageable steps. It starts by identifying autonomous tribal governments, then narrows down to those that are legally recognized and have constitutions. In parallel, it retrieves historical events of 1839 related to tribal governments. The findings from these nodes are combined to pinpoint which tribal government signed a constitution on the specified date in Oklahoma. The final reasoning step synthesizes this information to answer the initial question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify North American tribal governments which had constitutions in the 19th century.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the signing of tribal constitutions in Oklahoma, specifically around 1839.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Filter tribes identified from Node 1 to find those that signed their constitutions in Oklahoma in the 19th century.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which tribe signed its constitution on September 6, 1839.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question is about identifying a specific tribal government that signed its constitution on a particular date. The process begins with a broad identification of tribal governments with constitutions from the 19th century (Node 1) and then narrows down through the retrieval of those acts with relevance to Oklahoma in the year 1839 (Node 2). The reasoning process filters these two datasets to resolve which tribe matches the specific date in question (Node 4). This results in determining the autonomous tribal government that signed its constitution on September 6, 1839, in Oklahoma."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify legal, autonomous North American tribal governments.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List tribal governments that have a constitution signed in the 19th century.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information on tribal constitutions signed specifically on September 6, 1839.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve historical context on locations where tribal constitutions were signed in the 19th century, particularly focusing on Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine which tribal government fits all criteria: legal, autonomous, North American, signed its constitution in Oklahoma on September 6, 1839.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts by identifying tribes that have legal and autonomous status, narrowing it down using the criteria of constitution signing, the specific date, and the location. Reasoning is used to synthesize this information and identify the specific tribal government in question."
+    }
+]

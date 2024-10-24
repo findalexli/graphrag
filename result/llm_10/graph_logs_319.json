@@ -1,0 +1,312 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information on all goal scorers in the 1992 FA Cup Final.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information on the nationalities of the goal scorers identified in Node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify which goal scorers from the 1992 FA Cup Final are Welsh using the nationalities retrieved in Node 2.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph breaks down the task into three primary steps. First, it retrieves a list of all goal scorers from the 1992 FA Cup Final. Second, it gathers information about the nationalities of these players. Finally, it performs a reasoning step to determine which of these players is Welsh, synthesizing the information from the previous nodes to answer the question."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "1992 FA Cup Final\nThe 1992 FA Cup Final was contested by Liverpool and Sunderland at Wembley. Liverpool won 2\u20130, with goals from Michael Thomas and Ian Rush.",
+                "1895 FA Cup Final\nThe 1895 FA Cup Final was contested by Aston Villa and West Bromwich Albion at Crystal Palace. Aston Villa won 1\u20130, with Bob Chatt being credited with scoring the fastest goal in FA Cup Final history, scored after just 30\u00a0seconds. This record would stand for 114 years before being broken by Louis Saha of Everton in the 2009 FA Cup Final with a goal after 25\u00a0seconds.",
+                "2013 FA Cup Final\nThe 2013 FA Cup Final was the 132nd final of the FA Cup, the world's oldest football cup competition. The match, contested by Manchester City and Wigan Athletic, took place on 11 May 2013 at Wembley Stadium in London, and kicked off at 5:15\u00a0p.m. It was Wigan's first FA Cup final and Manchester City's 10th. Wigan pulled off a shock victory against favourites City, winning in circumstances reminiscent of the 1988 FA Cup Final when Wimbledon overcame Liverpool. Ben Watson's stoppage-time headed goal produced the \"greatest FA Cup Final upset for a quarter of a century\". In the United Kingdom, the match was televised by ITV and ESPN.",
+                "2009 FA Cup Final\nThe 2009 FA Cup Final was the 128th final of the world's oldest domestic football cup competition, the FA Cup. The final was played at Wembley Stadium in London on 30 May 2009 and marked the third time that the final has been staged at the stadium since it was rebuilt. The match was contested by Chelsea, who beat Arsenal 2\u20131 in their semi-final, and Everton who beat Manchester United 4\u20132 on penalties after a 0\u20130 draw after extra time. After Louis Saha opened the scoring after just 25 seconds, the fastest ever goal in an FA Cup Final, Didier Drogba equalised in the 21st minute before Frank Lampard scored the winner with 19 minutes left to play to give Chelsea their fifth FA Cup success.",
+                "2007 FA Cup Final\nThe 2007 FA Cup Final was played on Saturday, 19 May 2007 between Chelsea and Manchester United. It was the 126th FA Cup Final and the first to be played at the new Wembley Stadium. Manchester United suffered a 1\u20130 defeat to Chelsea by Didier Drogba's extra time goal, completing a domestic cup double for the Blues in the 2006\u201307 season, as they had already won the League Cup Final in February . While United were favourite for playing a double of their own as they had recently beaten Chelsea to the Premier League title two weeks earlier. The game was widely considered to be a disappointment by pundits and fans alike. As a result of Manchester United and Chelsea having already been guaranteed qualification for the UEFA Champions League, the UEFA Cup entry for the FA Cup winner/runner-up went instead to the highest positioned Premier League team who hadn't already qualified for Europe: Bolton Wanderers.",
+                "2014 FA Cup Final\nThe 2014 FA Cup Final was the 133rd final of the FA Cup, the world's oldest football cup competition. The match was contested between Arsenal and Hull City at Wembley Stadium on 17 May 2014. Hull City made their first appearance in an FA Cup Final, while Arsenal equalled Manchester United's record of 18 final appearances. It was the first time since 2010 that the FA Cup Final had taken place after the end of the Premier League season.",
+                "Dan Lewis (footballer)\nDaniel \"Dan\" Lewis (11 December 1902 \u2013 1965) was a Welsh football goalkeeper, who is most notable for his time playing for Arsenal. He kept goal for Arsenal in the 1927 FA Cup Final where a mistake by him saw Cardiff City win the cup.",
+                "1970 FA Cup Final\nThe 1970 FA Cup Final was contested by Chelsea and Leeds United. The match took place on 11 April 1970 at Wembley Stadium and ended 2\u20132, making it the first FA Cup final to require a replay since 1912. The replay was staged at Old Trafford and played on 29 April; after four hours of fiercely contested football, Chelsea eventually won 2\u20131. As of 2016, both the final and replay were the last times that FA Cup final ties were played in the month of April; all subsequent FA Cup final ties have been played in the month of May."
+            ],
+            "thoughts": [
+                "The goal scorers in the 1992 FA Cup Final were Michael Thomas and Ian Rush, both from Liverpool.",
+                "Michael Thomas and Ian Rush are both English, as they played for Liverpool in the 1992 FA Cup Final. Bob Chatt, who scored in the 1895 FA Cup Final, was also English, as he played for Aston Villa. Ben Watson, who scored in the 2013 FA Cup Final, is English and played for Wigan Athletic. Louis Saha, who scored in the 2009 FA Cup Final, is French and played for Everton. Didier Drogba, who scored in the 2009 and 2007 FA Cup Finals, is Ivorian and played for Chelsea. Dan Lewis, who made a mistake in the 1927 FA Cup Final, was Welsh and played for Arsenal.",
+                "The goal scorer from the 1992 FA Cup Final who is Welsh is Ian Rush."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve the list of goal scoring players in the 1992 FA Cup Final",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve the nationalities of each player from the 1992 FA Cup Final who scored a goal.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify which of the goal scoring players is Welsh based on their nationalities.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph begins with retrieving the list of players who scored goals in the 1992 FA Cup Final. From there, it retrieves the nationalities of these players. Finally, it analyzes the nationality information to determine which player is Welsh."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "1992 FA Cup Final\nThe 1992 FA Cup Final was contested by Liverpool and Sunderland at Wembley. Liverpool won 2\u20130, with goals from Michael Thomas and Ian Rush.",
+                "1895 FA Cup Final\nThe 1895 FA Cup Final was contested by Aston Villa and West Bromwich Albion at Crystal Palace. Aston Villa won 1\u20130, with Bob Chatt being credited with scoring the fastest goal in FA Cup Final history, scored after just 30\u00a0seconds. This record would stand for 114 years before being broken by Louis Saha of Everton in the 2009 FA Cup Final with a goal after 25\u00a0seconds.",
+                "2009 FA Cup Final\nThe 2009 FA Cup Final was the 128th final of the world's oldest domestic football cup competition, the FA Cup. The final was played at Wembley Stadium in London on 30 May 2009 and marked the third time that the final has been staged at the stadium since it was rebuilt. The match was contested by Chelsea, who beat Arsenal 2\u20131 in their semi-final, and Everton who beat Manchester United 4\u20132 on penalties after a 0\u20130 draw after extra time. After Louis Saha opened the scoring after just 25 seconds, the fastest ever goal in an FA Cup Final, Didier Drogba equalised in the 21st minute before Frank Lampard scored the winner with 19 minutes left to play to give Chelsea their fifth FA Cup success.",
+                "Ian Rush\nIan James Rush, {'1': \", '2': \", '3': \", '4': \"} (born 20 October 1961) is a retired Welsh professional footballer who played as a forward. At club level Rush played for Liverpool F.C. from 1980\u20131987 and 1988\u20131996. He is the club's all-time leading goalscorer, having scored a total of 346 goals in all competitions at the club, including a record 25 goals versus Merseyside derby rival Everton F.C.. At international level, Rush made 73 appearances for the Wales national football team and remains the record goalscorer for his country with 28 goals between 1980 and 1996.",
+                "2013 FA Cup Final\nThe 2013 FA Cup Final was the 132nd final of the FA Cup, the world's oldest football cup competition. The match, contested by Manchester City and Wigan Athletic, took place on 11 May 2013 at Wembley Stadium in London, and kicked off at 5:15\u00a0p.m. It was Wigan's first FA Cup final and Manchester City's 10th. Wigan pulled off a shock victory against favourites City, winning in circumstances reminiscent of the 1988 FA Cup Final when Wimbledon overcame Liverpool. Ben Watson's stoppage-time headed goal produced the \"greatest FA Cup Final upset for a quarter of a century\". In the United Kingdom, the match was televised by ITV and ESPN.",
+                "2007 FA Cup Final\nThe 2007 FA Cup Final was played on Saturday, 19 May 2007 between Chelsea and Manchester United. It was the 126th FA Cup Final and the first to be played at the new Wembley Stadium. Manchester United suffered a 1\u20130 defeat to Chelsea by Didier Drogba's extra time goal, completing a domestic cup double for the Blues in the 2006\u201307 season, as they had already won the League Cup Final in February . While United were favourite for playing a double of their own as they had recently beaten Chelsea to the Premier League title two weeks earlier. The game was widely considered to be a disappointment by pundits and fans alike. As a result of Manchester United and Chelsea having already been guaranteed qualification for the UEFA Champions League, the UEFA Cup entry for the FA Cup winner/runner-up went instead to the highest positioned Premier League team who hadn't already qualified for Europe: Bolton Wanderers.",
+                "MLS Cup 2003\nMLS Cup 2003, the eighth edition of Major League Soccer's championship match, was played between the Chicago Fire and the San Jose Earthquakes to decide the champion of the 2003 season. The match took place at The Home Depot Center in Carson, California on November 23, 2003. San Jose defeated Chicago 4\u20132 with a goal from Richard Mulrooney in the 50th minute. It was San Jose's second MLS Cup victory in three years. It was the first MLS Cup in which players from both teams were allowed to wear their primary uniforms. It was also the first MLS Cup played between two former MLS Cup champions as well as the highest-scoring final, with 6 goals in total.",
+                "2014 FA Cup Final\nThe 2014 FA Cup Final was the 133rd final of the FA Cup, the world's oldest football cup competition. The match was contested between Arsenal and Hull City at Wembley Stadium on 17 May 2014. Hull City made their first appearance in an FA Cup Final, while Arsenal equalled Manchester United's record of 18 final appearances. It was the first time since 2010 that the FA Cup Final had taken place after the end of the Premier League season.",
+                "Dan Lewis (footballer)\nDaniel \"Dan\" Lewis (11 December 1902 \u2013 1965) was a Welsh football goalkeeper, who is most notable for his time playing for Arsenal. He kept goal for Arsenal in the 1927 FA Cup Final where a mistake by him saw Cardiff City win the cup.",
+                "Liverpool F.C. league record by opponent\nLiverpool Football Club is an English association football club based in Liverpool, Merseyside, which competes in the top tier of English football, for the 2015\u201316 season. The club was formed in 1892 following a disagreement between the board of Everton and club president John Houlding, who owned the club's ground, Anfield. The dispute over rent resulted in Everton leaving Anfield for Goodison Park, which left Houlding with an empty stadium. Not content for his ground to lay idle, he created his own club: Liverpool. Liverpool joined the Lancashire League on their foundation before the 1892\u201393 season. They ended their inaugural season as league champions, and were elected to The Football League soon afterwards. The club remained in The Football League until 1992, when its First Division was superseded as English football's top level by the newly formed Premier League.",
+                "List of Liverpool F.C. players (1\u201324 appearances)\nLiverpool Football Club is an English association football club based in Liverpool, Merseyside. The club was formed in 1892 following a disagreement between the board of Everton and club president John Houlding, who owned the club's ground, Anfield. The disagreement between the two parties over rent resulted in Everton moving to Goodison Park from Anfield, which left Houlding with an empty stadium. Thus, he founded Liverpool F.C. to play in the empty stadium. Liverpool won the First Division title for the first time in 1901; since then, the club has won a further 17 league titles, along with seven FA Cups and eight Football League Cups. They have also been crowned champions of European football on five occasions by winning the European Cup/UEFA Champions League in 1977, 1978, 1981, 1984 and 2005. The club was one of 22 members of the Premier League when it was formed in 1992. They experienced the most successful period in their history under the management of Bob Paisley, who guided the team to 21 trophies in nine seasons.",
+                "List of Liverpool F.C. managers\nLiverpool Football Club is an English association football club based in Liverpool, Merseyside. The club was formed in 1892 following a disagreement between the board of Everton and club president John Houlding, who owned the club's ground, Anfield. The disagreement between the two parties over rent resulted in Everton with is the best moving to Goodison Park from Anfield, which left Houlding with no tenant. Thus, he founded Liverpool F.C. to play in the empty stadium. Liverpool won the First Division title for the first time in 1901; since then, the club has won a further 17 league titles, along with seven FA Cups and eight Football League Cups. They have also been crowned champions of European football on five occasions by winning the European Cup/UEFA Champions League in 1977, 1978, 1981, 1984 and 2005. The club was one of 22 members of the Premier League when it was formed in 1992.",
+                "List of Liverpool F.C. seasons\nLiverpool Football Club is an English association football club based in Liverpool, Merseyside. The club was formed in 1892 following a disagreement between the board of Everton and club president John Houlding, who owned the club's ground, Anfield. The disagreement between the two parties over rent resulted in Everton moving to Goodison Park from Anfield, which left Houlding with an empty stadium. Thus, he founded Liverpool F.C. to play in the empty stadium. Liverpool won the First Division title for the first time in 1901; since then, the club has won a further seventeen league titles, along with seven FA Cups and eight Football League Cups. They have also been crowned champions of European football on five occasions by winning the European Cup/UEFA Champions League in 1977, 1978, 1981, 1984 and 2005. The club was one of 22 members of the Premier League when it was formed in 1992.",
+                "Afternoon Records\nAfternoon Records is a record label based in Minneapolis, Minnesota. The label was founded by Ian Anderson and Michael M. Sandstedt in 2003, the year of Ian's graduation from high school. Ian wanted to create a platform for his high school band \"Aneuretical\", and others.",
+                "Burn Country\nBurn Country is a 2016 American drama film directed by Ian Olds and written by Ian Olds and Paul Felten. The film stars James Franco, Melissa Leo, Rachel Brosnahan, Dominic Rains, Thomas Jay Ryan and James Oliver Wheatley. The film was released on December 9, 2016, by Orion Pictures and Samuel Goldwyn Films."
+            ],
+            "thoughts": [
+                "The list of goal scoring players in the 1992 FA Cup Final are Michael Thomas and Ian Rush, both from Liverpool.",
+                "Michael Thomas is English and Ian Rush is Welsh.",
+                "The Welsh goal scoring player is Ian Rush."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about the 1992 FA Cup Final.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify players who scored goals in the 1992 FA Cup Final from the gathered information.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve detailed profiles of the players who scored in the 1992 FA Cup Final to determine their nationalities.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Analyze the profiles to identify which goal scoring player was Welsh.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph breaks down the question into four key steps. First, it retrieves general information about the 1992 FA Cup Final, which includes identifying the goal scorers from the match. Then, it focuses on gathering more detailed information about these players to determine their nationalities. Finally, it synthesizes this information to identify which of the goal scorers was Welsh."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "1992 FA Cup Final\nThe 1992 FA Cup Final was contested by Liverpool and Sunderland at Wembley. Liverpool won 2\u20130, with goals from Michael Thomas and Ian Rush.",
+                "2014 FA Cup Final\nThe 2014 FA Cup Final was the 133rd final of the FA Cup, the world's oldest football cup competition. The match was contested between Arsenal and Hull City at Wembley Stadium on 17 May 2014. Hull City made their first appearance in an FA Cup Final, while Arsenal equalled Manchester United's record of 18 final appearances. It was the first time since 2010 that the FA Cup Final had taken place after the end of the Premier League season.",
+                "2013 FA Cup Final\nThe 2013 FA Cup Final was the 132nd final of the FA Cup, the world's oldest football cup competition. The match, contested by Manchester City and Wigan Athletic, took place on 11 May 2013 at Wembley Stadium in London, and kicked off at 5:15\u00a0p.m. It was Wigan's first FA Cup final and Manchester City's 10th. Wigan pulled off a shock victory against favourites City, winning in circumstances reminiscent of the 1988 FA Cup Final when Wimbledon overcame Liverpool. Ben Watson's stoppage-time headed goal produced the \"greatest FA Cup Final upset for a quarter of a century\". In the United Kingdom, the match was televised by ITV and ESPN.",
+                "1970 FA Cup Final\nThe 1970 FA Cup Final was contested by Chelsea and Leeds United. The match took place on 11 April 1970 at Wembley Stadium and ended 2\u20132, making it the first FA Cup final to require a replay since 1912. The replay was staged at Old Trafford and played on 29 April; after four hours of fiercely contested football, Chelsea eventually won 2\u20131. As of 2016, both the final and replay were the last times that FA Cup final ties were played in the month of April; all subsequent FA Cup final ties have been played in the month of May.",
+                "1895 FA Cup Final\nThe 1895 FA Cup Final was contested by Aston Villa and West Bromwich Albion at Crystal Palace. Aston Villa won 1\u20130, with Bob Chatt being credited with scoring the fastest goal in FA Cup Final history, scored after just 30\u00a0seconds. This record would stand for 114 years before being broken by Louis Saha of Everton in the 2009 FA Cup Final with a goal after 25\u00a0seconds.",
+                "2009 FA Cup Final\nThe 2009 FA Cup Final was the 128th final of the world's oldest domestic football cup competition, the FA Cup. The final was played at Wembley Stadium in London on 30 May 2009 and marked the third time that the final has been staged at the stadium since it was rebuilt. The match was contested by Chelsea, who beat Arsenal 2\u20131 in their semi-final, and Everton who beat Manchester United 4\u20132 on penalties after a 0\u20130 draw after extra time. After Louis Saha opened the scoring after just 25 seconds, the fastest ever goal in an FA Cup Final, Didier Drogba equalised in the 21st minute before Frank Lampard scored the winner with 19 minutes left to play to give Chelsea their fifth FA Cup success.",
+                "2008 FA Cup Final\nThe 2008 FA Cup Final was a football match held at Wembley Stadium on 17 May 2008 and was the final match of the 2007\u201308 FA Cup competition. The match was the 127th FA Cup Final, and the second to be held at the new Wembley Stadium since its redevelopment. The match was contested by Portsmouth and Cardiff City, with Portsmouth winning 1\u20130. This was the first time that the two sides have ever met in the competition. Both teams were aiming to win the FA Cup for the second time, Cardiff having won it in 1927 and Portsmouth in 1939. Had Cardiff won, they would have been the first club from outside the top division of English football to have won the competition since West Ham United in 1980. The match had an attendance of 89,874, a record which still stands as the largest ever for an FA Cup Final at the new Wembley Stadium.",
+                "Ian Rush\nIan James Rush, {'1': \", '2': \", '3': \", '4': \"} (born 20 October 1961) is a retired Welsh professional footballer who played as a forward. At club level Rush played for Liverpool F.C. from 1980\u20131987 and 1988\u20131996. He is the club's all-time leading goalscorer, having scored a total of 346 goals in all competitions at the club, including a record 25 goals versus Merseyside derby rival Everton F.C.. At international level, Rush made 73 appearances for the Wales national football team and remains the record goalscorer for his country with 28 goals between 1980 and 1996.",
+                "1992\u201393 Birmingham City F.C. season\nThe 1992\u201393 Football League season was Birmingham City Football Club's 90th in the Football League. They competed in the second tier of English football, renamed Division One following the Premier League's split from the Football League. They were promoted to Division One in 1991\u201392, and finished in 19th position in the 24-team division, avoiding relegation back to the third tier on the final day of the season. They lost in their opening first-round matches in both the 1992\u201393 FA Cup and the League Cup, and were eliminated at the group stage of the Anglo-Italian Cup.",
+                "Twin Towers (San Antonio Spurs)\nThe Twin Towers is a name applied to the combination of Tim Duncan and David Robinson playing as the frontcourt of the San Antonio Spurs from 1997\u20132003. Both players were selected first overall by the San Antonio Spurs in their draft years with Robinson's selection coming in the 1987 NBA draft and Duncan's selection coming ten years later and both played their entire careers with the San Antonio Spurs.",
+                "Conjuring (book)\nConjuring is an illustrated book by James Randi. Randi gives a detailed history of conjuring, more commonly known as magic, said to be the world's second oldest profession. It includes detailed portraits of conjurors, including the Harry Blackstone, Sr., Harry Blackstone, Jr., Harry Houdini and his entourage, Howard Thurston, Robert Heller, Joe Berg, and others.",
+                "Afternoon Records\nAfternoon Records is a record label based in Minneapolis, Minnesota. The label was founded by Ian Anderson and Michael M. Sandstedt in 2003, the year of Ian's graduation from high school. Ian wanted to create a platform for his high school band \"Aneuretical\", and others.",
+                "Burn Country\nBurn Country is a 2016 American drama film directed by Ian Olds and written by Ian Olds and Paul Felten. The film stars James Franco, Melissa Leo, Rachel Brosnahan, Dominic Rains, Thomas Jay Ryan and James Oliver Wheatley. The film was released on December 9, 2016, by Orion Pictures and Samuel Goldwyn Films.",
+                "1973 NFL season\nThe 1973 NFL season was the 54th regular season of the National Football League. The season featured O.J. Simpson becoming the first player to rush for 2,000 yards in one season. Buffalo moved their home games into Rich Stadium. After playing their first two home games at Yankee Stadium, the New York Giants played the rest of their home games at the Yale Bowl. The season ended with Super Bowl VIII when the Miami Dolphins repeated as league champions by defeating the Minnesota Vikings 24-7 at the Rice Stadium in Houston Texas. The Pro Bowl took place on January 20,1974 at Arrowhead Stadium in Kansas City, Missouri. The AFC beat the NFC 15-13.",
+                "List of iZombie characters\n\"iZombie\" (stylized as \"iZOMBiE\") is an American television series developed by Rob Thomas and Diane Ruggiero-Wright for The CW. It is a loose adaptation of the comic book series of the same name created by Chris Roberson and Michael Allred, and published by DC Comics under their Vertigo imprint. The series premiered on March 17, 2015."
+            ],
+            "thoughts": [
+                "The 1992 FA Cup Final was contested by Liverpool and Sunderland at Wembley, with Liverpool winning 2-0 with goals from Michael Thomas and Ian Rush. This was Liverpool's fifth FA Cup win.",
+                "The players who scored goals in the 1992 FA Cup Final were Michael Thomas and Ian Rush for Liverpool.",
+                "The players who scored in the 1992 FA Cup Final were Michael Thomas and Ian Rush. Ian Rush is a retired Welsh professional footballer, while Michael Thomas is an English former professional footballer.",
+                "The goal scoring player who was Welsh is Ian Rush."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the players who scored in the 1992 FA Cup Final.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find out the nationality of each of the players identified in node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine which player among them is Welsh.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph breaks the task into three main steps. First, retrieve the names of the players who scored in the 1992 FA Cup Final. Then, for each of these players, retrieve their nationalities. Finally, identify the player(s) who is Welsh from the list obtained."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "1992 FA Cup Final\nThe 1992 FA Cup Final was contested by Liverpool and Sunderland at Wembley. Liverpool won 2\u20130, with goals from Michael Thomas and Ian Rush.",
+                "2008 FA Cup Final\nThe 2008 FA Cup Final was a football match held at Wembley Stadium on 17 May 2008 and was the final match of the 2007\u201308 FA Cup competition. The match was the 127th FA Cup Final, and the second to be held at the new Wembley Stadium since its redevelopment. The match was contested by Portsmouth and Cardiff City, with Portsmouth winning 1\u20130. This was the first time that the two sides have ever met in the competition. Both teams were aiming to win the FA Cup for the second time, Cardiff having won it in 1927 and Portsmouth in 1939. Had Cardiff won, they would have been the first club from outside the top division of English football to have won the competition since West Ham United in 1980. The match had an attendance of 89,874, a record which still stands as the largest ever for an FA Cup Final at the new Wembley Stadium.",
+                "1970 FA Cup Final\nThe 1970 FA Cup Final was contested by Chelsea and Leeds United. The match took place on 11 April 1970 at Wembley Stadium and ended 2\u20132, making it the first FA Cup final to require a replay since 1912. The replay was staged at Old Trafford and played on 29 April; after four hours of fiercely contested football, Chelsea eventually won 2\u20131. As of 2016, both the final and replay were the last times that FA Cup final ties were played in the month of April; all subsequent FA Cup final ties have been played in the month of May.",
+                "2014 FA Cup Final\nThe 2014 FA Cup Final was the 133rd final of the FA Cup, the world's oldest football cup competition. The match was contested between Arsenal and Hull City at Wembley Stadium on 17 May 2014. Hull City made their first appearance in an FA Cup Final, while Arsenal equalled Manchester United's record of 18 final appearances. It was the first time since 2010 that the FA Cup Final had taken place after the end of the Premier League season.",
+                "2013 FA Cup Final\nThe 2013 FA Cup Final was the 132nd final of the FA Cup, the world's oldest football cup competition. The match, contested by Manchester City and Wigan Athletic, took place on 11 May 2013 at Wembley Stadium in London, and kicked off at 5:15\u00a0p.m. It was Wigan's first FA Cup final and Manchester City's 10th. Wigan pulled off a shock victory against favourites City, winning in circumstances reminiscent of the 1988 FA Cup Final when Wimbledon overcame Liverpool. Ben Watson's stoppage-time headed goal produced the \"greatest FA Cup Final upset for a quarter of a century\". In the United Kingdom, the match was televised by ITV and ESPN.",
+                "1895 FA Cup Final\nThe 1895 FA Cup Final was contested by Aston Villa and West Bromwich Albion at Crystal Palace. Aston Villa won 1\u20130, with Bob Chatt being credited with scoring the fastest goal in FA Cup Final history, scored after just 30\u00a0seconds. This record would stand for 114 years before being broken by Louis Saha of Everton in the 2009 FA Cup Final with a goal after 25\u00a0seconds.",
+                "2009 FA Cup Final\nThe 2009 FA Cup Final was the 128th final of the world's oldest domestic football cup competition, the FA Cup. The final was played at Wembley Stadium in London on 30 May 2009 and marked the third time that the final has been staged at the stadium since it was rebuilt. The match was contested by Chelsea, who beat Arsenal 2\u20131 in their semi-final, and Everton who beat Manchester United 4\u20132 on penalties after a 0\u20130 draw after extra time. After Louis Saha opened the scoring after just 25 seconds, the fastest ever goal in an FA Cup Final, Didier Drogba equalised in the 21st minute before Frank Lampard scored the winner with 19 minutes left to play to give Chelsea their fifth FA Cup success.",
+                "1992\u201393 Birmingham City F.C. season\nThe 1992\u201393 Football League season was Birmingham City Football Club's 90th in the Football League. They competed in the second tier of English football, renamed Division One following the Premier League's split from the Football League. They were promoted to Division One in 1991\u201392, and finished in 19th position in the 24-team division, avoiding relegation back to the third tier on the final day of the season. They lost in their opening first-round matches in both the 1992\u201393 FA Cup and the League Cup, and were eliminated at the group stage of the Anglo-Italian Cup.",
+                "Ian Rush\nIan James Rush, {'1': \", '2': \", '3': \", '4': \"} (born 20 October 1961) is a retired Welsh professional footballer who played as a forward. At club level Rush played for Liverpool F.C. from 1980\u20131987 and 1988\u20131996. He is the club's all-time leading goalscorer, having scored a total of 346 goals in all competitions at the club, including a record 25 goals versus Merseyside derby rival Everton F.C.. At international level, Rush made 73 appearances for the Wales national football team and remains the record goalscorer for his country with 28 goals between 1980 and 1996.",
+                "Afternoon Records\nAfternoon Records is a record label based in Minneapolis, Minnesota. The label was founded by Ian Anderson and Michael M. Sandstedt in 2003, the year of Ian's graduation from high school. Ian wanted to create a platform for his high school band \"Aneuretical\", and others.",
+                "Burn Country\nBurn Country is a 2016 American drama film directed by Ian Olds and written by Ian Olds and Paul Felten. The film stars James Franco, Melissa Leo, Rachel Brosnahan, Dominic Rains, Thomas Jay Ryan and James Oliver Wheatley. The film was released on December 9, 2016, by Orion Pictures and Samuel Goldwyn Films.",
+                "Polaris (composition)\nPolaris: Voyage for Orchestra is an orchestral composition by the British composer Thomas Ad\u00e8s. The work was co-commissioned by the New World Symphony under the direction of Michael Tilson Thomas for the opening of the New World Center. The New World Symphony was joined in commission by the Royal Concertgebouw Orchestra, the New York Philharmonic, the Calouste Gulbenkian Foundation, the Barbican Centre, the Los Angeles Philharmonic, and the San Francisco Symphony. It was given its world premiere by Michael Tilson Thomas and the New World Symphony at the New World Center in Miami Beach on January 26, 2011.",
+                "Booked!\nBooked! was a radio programme that originally aired from October 1995 to April 2000. There were thirty 35-minute episodes and it was broadcast on BBC Radio 4. It starred Ian McMillan, Mark Thomas, David Stafford, Stuart Maconie, Linda Smith, Dillie Keane, Miles Kington, and Roger McGough.",
+                "Michael Drayer\nMichael Drayer (born March 19, 1986) is an American actor. He is best known for his recurring role as Cisco on the television drama\u2013thriller series \"Mr. Robot\", Gabe on the television drama series \"Deception\", and for his supporting role as Eddie in Sneaky Pete. Drayer also took part on other TV series such as \"Vinyl\", \"The Sopranos\", \"The Following\",\"Aquarius\", \"Timeless\", and a main role on the episode \"Bully\" of the comedy-drama television series \"Louie.\" In addition to the TV series, he also acted in small roles in films as \"The Wrestler\", \"August Rush\", and \"Before I Disappear\".",
+                "Rush Creek (Mono County, California)\nRush Creek is a 27.2 mi creek in California on the eastern slope of the Sierra Nevada, running east and then northeast to Mono Lake. Rush Creek is the largest stream in the Mono Basin, carrying 41% of the total runoff. It was extensively diverted by the Los Angeles Aqueduct system in the twentieth century until California Trout, Inc., the National Audubon Society, and the Mono Lake Committee sued Los Angeles Department of Water and Power (LADWP) for continuous low flows in Rush Creek to maintain trout populations in good condition, which was ordered by the court in 1985."
+            ],
+            "thoughts": [
+                "In the 1992 FA Cup Final, the players who scored were Michael Thomas and Ian Rush for Liverpool.",
+                "Ian Rush is Welsh.\nMichael Drayer is American.",
+                "The Welsh player among them is Ian Rush."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the players who scored goals in the 1992 FA Cup Final.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find the nationality of each goal-scoring player identified in the 1992 FA Cup Final.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine which of these players is Welsh.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph starts with retrieving information about which players scored in the 1992 FA Cup Final. Then, it gathers the nationality of each of these players. Finally, it identifies the player who is Welsh among the goal scorers."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "1992 FA Cup Final\nThe 1992 FA Cup Final was contested by Liverpool and Sunderland at Wembley. Liverpool won 2\u20130, with goals from Michael Thomas and Ian Rush.",
+                "1895 FA Cup Final\nThe 1895 FA Cup Final was contested by Aston Villa and West Bromwich Albion at Crystal Palace. Aston Villa won 1\u20130, with Bob Chatt being credited with scoring the fastest goal in FA Cup Final history, scored after just 30\u00a0seconds. This record would stand for 114 years before being broken by Louis Saha of Everton in the 2009 FA Cup Final with a goal after 25\u00a0seconds.",
+                "2009 FA Cup Final\nThe 2009 FA Cup Final was the 128th final of the world's oldest domestic football cup competition, the FA Cup. The final was played at Wembley Stadium in London on 30 May 2009 and marked the third time that the final has been staged at the stadium since it was rebuilt. The match was contested by Chelsea, who beat Arsenal 2\u20131 in their semi-final, and Everton who beat Manchester United 4\u20132 on penalties after a 0\u20130 draw after extra time. After Louis Saha opened the scoring after just 25 seconds, the fastest ever goal in an FA Cup Final, Didier Drogba equalised in the 21st minute before Frank Lampard scored the winner with 19 minutes left to play to give Chelsea their fifth FA Cup success.",
+                "2013 FA Cup Final\nThe 2013 FA Cup Final was the 132nd final of the FA Cup, the world's oldest football cup competition. The match, contested by Manchester City and Wigan Athletic, took place on 11 May 2013 at Wembley Stadium in London, and kicked off at 5:15\u00a0p.m. It was Wigan's first FA Cup final and Manchester City's 10th. Wigan pulled off a shock victory against favourites City, winning in circumstances reminiscent of the 1988 FA Cup Final when Wimbledon overcame Liverpool. Ben Watson's stoppage-time headed goal produced the \"greatest FA Cup Final upset for a quarter of a century\". In the United Kingdom, the match was televised by ITV and ESPN.",
+                "2007 FA Cup Final\nThe 2007 FA Cup Final was played on Saturday, 19 May 2007 between Chelsea and Manchester United. It was the 126th FA Cup Final and the first to be played at the new Wembley Stadium. Manchester United suffered a 1\u20130 defeat to Chelsea by Didier Drogba's extra time goal, completing a domestic cup double for the Blues in the 2006\u201307 season, as they had already won the League Cup Final in February . While United were favourite for playing a double of their own as they had recently beaten Chelsea to the Premier League title two weeks earlier. The game was widely considered to be a disappointment by pundits and fans alike. As a result of Manchester United and Chelsea having already been guaranteed qualification for the UEFA Champions League, the UEFA Cup entry for the FA Cup winner/runner-up went instead to the highest positioned Premier League team who hadn't already qualified for Europe: Bolton Wanderers.",
+                "2014 FA Cup Final\nThe 2014 FA Cup Final was the 133rd final of the FA Cup, the world's oldest football cup competition. The match was contested between Arsenal and Hull City at Wembley Stadium on 17 May 2014. Hull City made their first appearance in an FA Cup Final, while Arsenal equalled Manchester United's record of 18 final appearances. It was the first time since 2010 that the FA Cup Final had taken place after the end of the Premier League season.",
+                "MLS Cup 2003\nMLS Cup 2003, the eighth edition of Major League Soccer's championship match, was played between the Chicago Fire and the San Jose Earthquakes to decide the champion of the 2003 season. The match took place at The Home Depot Center in Carson, California on November 23, 2003. San Jose defeated Chicago 4\u20132 with a goal from Richard Mulrooney in the 50th minute. It was San Jose's second MLS Cup victory in three years. It was the first MLS Cup in which players from both teams were allowed to wear their primary uniforms. It was also the first MLS Cup played between two former MLS Cup champions as well as the highest-scoring final, with 6 goals in total.",
+                "Dan Lewis (footballer)\nDaniel \"Dan\" Lewis (11 December 1902 \u2013 1965) was a Welsh football goalkeeper, who is most notable for his time playing for Arsenal. He kept goal for Arsenal in the 1927 FA Cup Final where a mistake by him saw Cardiff City win the cup.",
+                "1970 FA Cup Final\nThe 1970 FA Cup Final was contested by Chelsea and Leeds United. The match took place on 11 April 1970 at Wembley Stadium and ended 2\u20132, making it the first FA Cup final to require a replay since 1912. The replay was staged at Old Trafford and played on 29 April; after four hours of fiercely contested football, Chelsea eventually won 2\u20131. As of 2016, both the final and replay were the last times that FA Cup final ties were played in the month of April; all subsequent FA Cup final ties have been played in the month of May."
+            ],
+            "thoughts": [
+                "The players who scored goals in the 1992 FA Cup Final were Michael Thomas and Ian Rush for Liverpool.",
+                "1992 FA Cup Final:\n- Michael Thomas: English\n- Ian Rush: Welsh\n\n1895 FA Cup Final:\n- Bob Chatt: English\n\n2009 FA Cup Final:\n- Louis Saha: French\n- Didier Drogba: Ivorian\n- Frank Lampard: English\n\n2013 FA Cup Final:\n- Ben Watson: English\n\n2007 FA Cup Final:\n- Didier Drogba: Ivorian\n\n2014 FA Cup Final:\n- No goal-scoring player nationality provided\n\nMLS Cup 2003:\n- Richard Mulrooney: American\n\nDan Lewis (footballer):\n- Dan Lewis: Welsh",
+                "The Welsh player is Ian Rush."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of goal scoring players in the 1992 FA Cup Final",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the nationalities of each player from the 1992 FA Cup Final who scored a goal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the goal scoring players is Welsh based on their nationalities.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with retrieving the list of players who scored goals in the 1992 FA Cup Final. From there, it retrieves the nationalities of these players. Finally, it analyzes the nationality information to determine which player is Welsh."
+    },
+    "best_recall": 0.8888888888888888
+}

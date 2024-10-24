@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the full name of the business where Manny Cussins was a chairman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Gather detailed information about the business identified, focusing on its products or services.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the main products or services that the business offers or makes.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This execution graph begins by retrieving the specific business associated with Manny Cussins, which is necessary since multiple businesses could exist. Once identified, the graph directs the retrieval of comprehensive information about the business, emphasizing the products or services it offers. The final reasoning step synthesizes this information to inform us about what the business makes."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify relevant businesses or organizations where Manny Cussins was the chairman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified business where Manny Cussins was the chairman, retrieve information about the products or services they manufacture or provide.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Consolidate the information about the products or services provided by the businesses Manny Cussins chaired to answer what they make.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph for this question is formed by first retrieving information about the businesses or organizations where Manny Cussins held the position of chairman. This requires understanding who Manny Cussins is and identifying his associated businesses. Once identified, the next step involves gathering information on what these businesses make, which includes both manufactured products and provided services. The final step consolidates this information to directly answer the original question regarding what those businesses make. The structure allows for handling multiple businesses if Manny Cussins chaired more than one, ensuring the answer covers all possibilities."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find information about the person Manny Cussins, focusing on his role as a chairman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the specific business or company Manny Cussins was the chairman of.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find information about the business or company determined in the previous step, focusing on the products or services it makes or provides.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with retrieving information about Manny Cussins to understand his professional background. The next step is to deduce which specific business he was associated with as chairman. Finally, the graph ends with gathering information on that business to find out what products or services it provides."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the business that Manny Cussins was chairman of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the products or services produced by the business identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into two main steps: first, identifying the business Manny Cussins was involved with as chairman, and second, finding out what that business makes. These are logical steps for retrieving information about a person's business association and the nature of that business, allowing us to answer the question fully."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the business of which Manny Cussins was a chairman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine what products or services this business provides.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts with identifying the company where Manny Cussins served as chairman (Node 1). Once the business is identified, the next step is to determine what products or services that business offers (Node 2), leading directly to the answer to the question."
+    }
+]

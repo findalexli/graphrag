@@ -1,0 +1,142 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify American rock singers who are known for performing recorded covers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each singer identified, retrieve their biography and find their date of death.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which singer's performance of recorded covers is most notable or known, to narrow down the list.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference the notable recorded covers performer with the list of singers' death dates.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is organized starting from identifying potential candidates (American rock singers known for covers), followed by retrieving specific biographical data to ascertain their death dates. A reasoning step is introduced to pinpoint which singer is most notable for such performances to streamline the investigation, ensuring that only relevant information converges to answer the initial query accurately."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the American rock singer known for performing recorded covers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the date of death of the identified rock singer from step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task requires finding an American rock singer who is known for performing recorded covers and then determining their date of death. First, we identify the singer in question by looking for rock singers renowned for covers. Once the singer is identified, we retrieve data about the date they passed away."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify American rock singer known for recording covers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the year of death for the identified American rock singer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph starts by identifying the American rock singer known for recording covers, which is the core subject of the question. Once identified, it retrieves information on their death, specifically when they died."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the American rock singer known for performing recorded covers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the identified singer's biography, including their date of death.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the year the identified singer died from their biography information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying an American rock singer known for performing recorded covers. The initial step is to find who this singer is. Once identified, the next step is to retrieve comprehensive biographical information about the singer, focusing on finding out when they died. Finally, use this information to determine the exact year of their death. Each step builds on the previous one, making a logical sequence from identification to information retrieval and finally reasoning to find the death year."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the American rock singer who performed recorded covers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the date of death of the identified American rock singer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph begins by identifying the specific American rock singer who is known for performing recorded covers. Once identified, the next step is to retrieve the date of death for this singer. The process requires identifying the correct person before determining the date of death, hence the sequential dependency between nodes 1 and 2."
+    }
+]

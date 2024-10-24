@@ -1,0 +1,181 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Alvaro Mexia was and retrieve details about his diplomatic missions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "From the details of Alvaro Mexia, identify any mention of specific tribes of indigenous people he had interactions with.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the specific tribe of indigenous people Alvaro Mexia had a diplomatic mission with.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine which tribe Alvaro Mexia had a diplomatic mission with, we start by retrieving information about him, focusing on his diplomatic efforts. After gathering all details of his interactions, we analyze the information to identify any references to tribes of indigenous people, and finally, reason out to pinpoint the specific tribe he had a diplomatic mission with."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Alvaro Mexia was and his role or notable actions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Investigate historical records to find diplomatic missions conducted by Alvaro Mexia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the tribes of indigenous people encountered or interacted with during Alvaro Mexia's diplomatic missions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the specific tribe involved in the diplomatic mission with Alvaro Mexia.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question involves understanding the historical figure Alvaro Mexia and identifying specific details about his diplomatic missions. The process involves initially identifying Mexia's identity and role, then examining historical records of his diplomatic activities. Finally, by focusing on these missions, specifically determining which indigenous tribes were involved, the question can be answered."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Alvaro Mexia and his historical activities.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify any diplomatic missions Alvaro Mexia was involved in.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about indigenous tribes in North America during the period Alvaro Mexia was active.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which tribe Alvaro Mexia had a diplomatic mission with from the historical context.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question requires knowing Alvaro Mexia's historical interactions with indigenous tribes, specifically diplomatic missions. The graph begins by retrieving general information about Alvaro Mexia to understand his activities. Next, a reasoning step identifies his involvement in any diplomatic missions. Concurrently, knowledge about indigenous tribes during Mexia's active period is gathered. Finally, reasoning is applied to identify the specific tribe involved based on the historical missions Mexia undertook."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Alvaro Mexia and his historical context, focusing on his role and activities.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research historical records or documents related to Alvaro Mexia to identify any diplomatic missions he may have undertaken.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which indigenous tribes might have been relevant to Alvaro Mexia's geographical and historical context.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference identified diplomatic missions with known interactions or records of indigenous tribes during Mexia's time.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by understanding the historical figure, Alvaro Mexia, and his context, which helps to frame the scope of possible diplomatic missions. The graph then retrieves specific historical records related to his activities (node 2) and concurrently identifies indigenous tribes relevant to his context (node 3). Finally, it synthesizes these pieces of information to determine which tribe Mexia had interaction or diplomatic missions with, based on historical records (node 4)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify Alvaro Mexia and determine his historical context and activities.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve historical records or documents detailing Alvaro Mexia's diplomatic missions or interactions.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract information about the specific tribe of indigenous people involved in Alvaro Mexia's diplomatic mission from retrieved documents.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task by first retrieving information on Alvaro Mexia to understand his role and historical activities. This is followed by retrieving specific historical documents that mention his diplomatic missions. Finally, the reasoning step extracts the relevant tribe of indigenous people from these documents."
+    }
+]

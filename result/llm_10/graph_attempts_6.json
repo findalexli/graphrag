@@ -1,0 +1,182 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who is the current member of the Gujarat Legislative Assembly.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify who is the current member of the Indian Parliament representing Gujarat.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the countries associated with the offices of the Gujarat Legislative Assembly and Indian Parliament.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the current members of both the Gujarat Legislative Assembly and the Indian Parliament representing Gujarat. These retrieval steps help clarify the individuals currently in those offices, though for this specific question, the emphasis is on understanding the geographical representation. The final reasoning step leverages logical common knowledge: members of both legislative bodies represent constituencies within India, making India the associated country for both queries."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the current member of the Gujarat Legislative Assembly and parliament.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the constituency or region they represent.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the country where the constituency is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to find the country associated with a member of the Gujarat Legislative Assembly and parliament. It starts by retrieving the identity of such a member (Node 1). With the member's identity, the next step is to determine the constituency they represent (Node 2), as the constituency's geographical information is crucial. Finally, we use this constituency information to ascertain the country, which is ultimately India (Node 3)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the members of the Gujarat Legislative Assembly.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the members of the parliament from Gujarat.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the current country where Gujarat is located.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the common country for members identified in nodes 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph first involves retrieving information about the members of the Gujarat Legislative Assembly and the members of parliament from Gujarat. Simultaneously, it establishes the country where Gujarat is located. Finally, using this geographical definition, it confirms that the Gujarat Legislative Assembly and parliament members represent India, as Gujarat is a part of India."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who are the current members of Gujarat Legislative Assembly and Gujarat members of Parliament.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the country that the Gujarat Legislative Assembly is part of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the country that the Gujarat Members of Parliament represent.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Combine the information from node 2 and node 3 to determine the country that the member of Gujarat Legislative Assembly and Parliament represents.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph consists of identifying the members of the Gujarat Legislative Assembly and Parliament, and determining the country that these bodies are part of or represent. In this context, 'Gujarat Legislative Assembly' and 'Parliament' suggest a legislative body and a national-level representation, respectively. We retrieve information on their affiliation to countries and synthesize this information to identify the country associated with both representations."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the current members of the Gujarat Legislative Assembly.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the current members of the Indian Parliament from Gujarat.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the country represented by members of the Gujarat Legislative Assembly.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the country represented by members of the Indian Parliament.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine results to confirm the country represented by individuals who are members of both the Gujarat Legislative Assembly and the Indian Parliament.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by identifying members of the Gujarat Legislative Assembly and the Indian Parliament from Gujarat in parallel. The next steps involve reasoning about the country these members represent. Finally, it synthesizes the information to confirm the country represented by individuals who are members of both the Gujarat Legislative Assembly and the Parliament."
+    }
+]

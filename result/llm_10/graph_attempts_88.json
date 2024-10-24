@@ -1,0 +1,180 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify films directed by F. Gary Gray and written by Chris Morgan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Investigate the list of action films directed by F. Gary Gray and identify potential matches written by Chris Morgan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "From the list of American action films determined in node 2, identify those that feature a car as an important element of the storyline.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "For the identified film(s) from node 3, research and identify any cars that are specifically noted as being from the Arab World.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question requires identifying a specific car from the Arab World used in an American action film co-created by F. Gary Gray and Chris Morgan. The execution graph first requires identifying the collaboration between Gary Gray and Morgan, focusing on action films they worked on together. The graph subsequently zeroes in on films that feature cars prominently, ultimately narrowing down to cars originating from the Arab World."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify American action films directed by F. Gary Gray and written by Chris Morgan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified film, research the cars featured in the film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify car brands and models that are associated with the Arab World, focusing on manufacturers or brands originating from Arab countries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference the list of cars from the films with those identified as Arab World's cars to find a match.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins with identifying all films directed by F. Gary Gray and written by Chris Morgan, which is a specific combination that significantly narrows down the list of films to consider. Then, it involves gathering information on the cars featured in these films. Parallel to this, it involves identifying cars associated with the Arab World, usually by tracing the origin of their manufacturers or brands. Finally, these two lists are cross-referenced to find any matches, thus identifying which Arab World's car was used in the specified film."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify American action films directed by F. Gary Gray and written by Chris Morgan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified film, determine the prominent cars used in those films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the prominent cars used in the films is from the Arab World.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To find out which Arab World's car was used in an American action film directed by F. Gary Gray and written by Chris Morgan, the graph begins by identifying all such films (Node 1). Then, it retrieves information about the prominent cars used in each identified film (Node 2). Finally, it filters these cars to find the one that is from the Arab World (Node 3), which is the answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify American action film(s) directed by F. Gary Gray and written by Chris Morgan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified film from node 1, find the cars featured in them.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the cars identified in node 2 are from the Arab World.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with identifying films that match both the director (F. Gary Gray) and the writer (Chris Morgan). The second step involves listing cars used in those films. The final step checks which of those cars are from the Arab World, thus answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify American action films directed by F. Gary Gray and written by Chris Morgan.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified film, list the cars featured in the movie.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of these cars were manufactured in the Arab world.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the specific film and car model where the car manufactured in the Arab world was featured.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is designed to first identify all possible American action films that meet the criteria of being directed by F. Gary Gray and written by Chris Morgan. Once these films are identified, the second step involves retrieving detailed information about the cars featured in each of these films. The third step is to filter this list of cars to find any that were manufactured in the Arab world. Finally, the reasoning node synthesizes this information to determine the specific car and film in which it appeared, thereby answering the original question."
+    }
+]

@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what type of musical recording is between a single and an LP.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for information about \"Stoke Extinguisher\" and determine what type of musical recording it is classified as.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Confirm if the type of recording for \"Stoke Extinguisher\" matches the type identified as being between a single and an LP.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks the question into two parallel retrieval tasks: identifying the type of musical recording that fits the description and finding out how \"Stoke Extinguisher\" is classified. The reasoning node then verifies if \"Stoke Extinguisher\" matches this type."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on the musical recording 'Stoke Extinguisher'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the type of musical recording that contains more tracks than a single but is usually unqualified as an album or LP.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the type of musical recording for 'Stoke Extinguisher' from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Match the identified type of 'Stoke Extinguisher' against the description of musical recording types such as EPs, singles, albums, etc.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph is designed to systematically identify the type of musical recording 'Stoke Extinguisher' is. It begins by retrieving details on 'Stoke Extinguisher', then identifies and understands the specific type of recording as per the question's description. The final node synthesizes this information to accurately classify it based on common types like EPs, which fit the given description of having more tracks than a single but not qualifying as an album or LP."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what musical recording is characterized by containing more tracks than a single, but is usually unqualified as an album or LP.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine what type of musical recording 'Stoke Extinguisher' is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the definition from Node 1 with the type of recording identified in Node 2 to determine if 'Stoke Extinguisher' fits the definition.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into identifying the general type of music recording first, then determining the specific type of 'Stoke Extinguisher'. By comparing both, we confirm if 'Stoke Extinguisher' fits the description of having more tracks than a single but less than an album or LP."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what Stoke Extinguisher is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the different types of musical recordings that contain more tracks than a single but are not qualified as albums or LPs.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare Stoke Extinguisher to the identified types of musical recordings and determine its specific type.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving information about 'Stoke Extinguisher', specifically identifying what it is in the context of music (Node 1). Next, it identifies the various types of music recordings that have more tracks than a single but don't qualify as an album or LP (Node 2), such as EPs (extended plays). Finally, it compares the types of recordings identified in Node 2 with Stoke Extinguisher to determine its specific type, synthesizing all the information to provide an answer (Node 3)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine what 'Stoke Extinguisher' refers to in the context of music.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify and define different types of musical recordings (e.g., Single, EP, Album, LP).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Research specific details about 'Stoke Extinguisher' to determine how many tracks it contains.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Use the number of tracks in 'Stoke Extinguisher' to compare with definitions of musical recordings to determine its classification (e.g., EP).",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph starts by identifying what 'Stoke Extinguisher' refers to in musical terms. Then it gathers definitions of different types of musical recordings (Single, EP, Album, LP) independently. By examining 'Stoke Extinguisher' specifics such as the number of tracks, it will match this information against the characteristics of each recording type to deduce the correct classification, likely an EP, as it usually refers to a recording with more tracks than a single, but is not an album or LP."
+    }
+]

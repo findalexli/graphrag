@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on all goal scorers in the 1992 FA Cup Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on the nationalities of the goal scorers identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which goal scorers from the 1992 FA Cup Final are Welsh using the nationalities retrieved in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into three primary steps. First, it retrieves a list of all goal scorers from the 1992 FA Cup Final. Second, it gathers information about the nationalities of these players. Finally, it performs a reasoning step to determine which of these players is Welsh, synthesizing the information from the previous nodes to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of goal scoring players in the 1992 FA Cup Final",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the nationalities of each player from the 1992 FA Cup Final who scored a goal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the goal scoring players is Welsh based on their nationalities.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with retrieving the list of players who scored goals in the 1992 FA Cup Final. From there, it retrieves the nationalities of these players. Finally, it analyzes the nationality information to determine which player is Welsh."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the 1992 FA Cup Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify players who scored goals in the 1992 FA Cup Final from the gathered information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve detailed profiles of the players who scored in the 1992 FA Cup Final to determine their nationalities.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze the profiles to identify which goal scoring player was Welsh.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the question into four key steps. First, it retrieves general information about the 1992 FA Cup Final, which includes identifying the goal scorers from the match. Then, it focuses on gathering more detailed information about these players to determine their nationalities. Finally, it synthesizes this information to identify which of the goal scorers was Welsh."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the players who scored in the 1992 FA Cup Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out the nationality of each of the players identified in node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which player among them is Welsh.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks the task into three main steps. First, retrieve the names of the players who scored in the 1992 FA Cup Final. Then, for each of these players, retrieve their nationalities. Finally, identify the player(s) who is Welsh from the list obtained."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the players who scored goals in the 1992 FA Cup Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the nationality of each goal-scoring player identified in the 1992 FA Cup Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of these players is Welsh.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with retrieving information about which players scored in the 1992 FA Cup Final. Then, it gathers the nationality of each of these players. Finally, it identifies the player who is Welsh among the goal scorers."
+    }
+]

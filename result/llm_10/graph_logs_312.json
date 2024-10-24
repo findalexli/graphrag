@@ -1,0 +1,410 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "node1",
+                            "instruction": "Identify the actress who plays Julia McNamara in the series 'Nip/Tuck'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "node2",
+                            "instruction": "Identify the 1997 horror film in which Laurence Fishburne appears.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "node3",
+                            "instruction": "Identify any films the actress from step 1 appeared in with Laurence Fishburne.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "node1"
+                            ]
+                        },
+                        {
+                            "id": "node4",
+                            "instruction": "Determine the director of the film(s) identified in step 3.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "node3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "node1",
+                    "final_node_id": "node4"
+                },
+                "explanation": "The task is to find the director of a specific film. First, we identify the actress who plays Julia McNamara in 'Nip/Tuck'. Next, we identify a 1997 horror film featuring Laurence Fishburne. Then, for any identified films the actress appeared in with Fishburne, we determine the director. This involves a mix of retrieval (identifying films and the actress) and reasoning (connecting the film details to find the director)."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "Julia McNamara\nJulia McNamara (\"n\u00e9e\" Noughton) is a fictional character in the American television series \"Nip/Tuck\", portrayed by Joely Richardson.",
+                "List of Nip/Tuck episodes\n\"Nip/Tuck\" is an American drama created by Ryan Murphy, which aired on FX in the United States between 2003 and 2010. The series focuses on McNamara/Troy, a plastic surgery practice, and follows its founders, Sean McNamara and Christian Troy (portrayed by Dylan Walsh and Julian McMahon). Each episode typically involves the cosmetic procedures of one or more patients, and also features the personal and professional lives of its main cast.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Joely Richardson\nJoely Kim Richardson (born 9 January 1965) is an English actress, known for her role as Julia McNamara in the FX drama series \"Nip/Tuck\" (2003\u201310), and Queen Catherine Parr in the Showtime series \"The Tudors\" (2010). She has also appeared in films such as \"101 Dalmatians\" (1996), \"Event Horizon\" (1997), \"The Patriot\" (2000), \"Return to Me\" (2000), \"Anonymous\" (2011), the Hollywood film adaptation \"The Girl with the Dragon Tattoo\" (2011), and the remake of \"Endless Love\" (2014).",
+                "Event Horizon (film)\nEvent Horizon is a 1997 British-American science fiction horror film directed by Paul W. S. Anderson. The screenplay was written by Philip Eisner, with an uncredited rewrite by Andrew Kevin Walker. The film stars Laurence Fishburne and Sam Neill.",
+                "John Wick: Chapter 2\nJohn Wick: Chapter 2 is a 2017 American neo-noir action thriller film directed by Chad Stahelski and written by Derek Kolstad. The second installment in the \"John Wick\" film series, the plot follows hitman John Wick, who goes on the run after a bounty is placed on his head. It stars Keanu Reeves, Common, Laurence Fishburne, Riccardo Scamarcio, Ruby Rose, John Leguizamo and Ian McShane, and marks the first collaboration between Reeves and Fishburne since appearing together in \"The Matrix\" trilogy.",
+                "Hoodlum (film)\nHoodlum is a 1997 American crime drama film that gives a fictionalized account of the gang war between the Italian/Jewish mafia alliance and the Black gangsters of Harlem that took place in the late 1920s and early 1930s. The film concentrated on Ellsworth \"Bumpy\" Johnson (Laurence Fishburne), Dutch Schultz (Tim Roth), and Lucky Luciano (Andy Garc\u00eda).",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Rebecca Gayheart\nRebecca Gayheart (born August 12, 1971) is an American fashion model and television and film actress. Gayheart began her career appearing in a student short film by Brett Ratner, and later gained notice as a spokesperson and model for Noxzema in the early 1990s. She had minor roles in \"Nothing to Lose\" and \"Scream 2\" (1997) before starring in the 1998 slasher film \"Urban Legend\" (1998) and the black comedy \"Jawbreaker\" (1999). She has also had roles on the television series \"Dead Like Me\", \"Vanished\", and \"Nip/Tuck\".",
+                "Man of Steel (film)\nMan of Steel is a 2013 superhero film featuring the DC Comics character Superman. It is a British-American venture produced by Legendary Pictures, DC Entertainment, Syncopy Inc., and Cruel and Unusual Films, and distributed by Warner Bros. Pictures. It is the first installment in the DC Extended Universe (DCEU). The film is directed by Zack Snyder, written by David S. Goyer, and stars Henry Cavill, Amy Adams, Michael Shannon, Kevin Costner, Diane Lane, Laurence Fishburne, Antje Traue, Ayelet Zurer, Christopher Meloni, and Russell Crowe. \"Man of Steel\" is a reboot of the \"Superman\" film series that retells the character's origin story. In the film, Clark Kent learns that he is a superpowered alien from the planet Krypton and assumes the role of mankind's protector as Superman, but finds himself having to prevent General Zod from destroying humanity.",
+                "Phoenix (1998 film)\nPhoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta. Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.",
+                "Pascal Trottier\nPascal Trottier is a Canadian filmmaker and screenwriter. He graduated from the Canadian Film Centre in 2005. His credits include \"The Colony\", starring Laurence Fishburne and Bill Paxton, and the horror feature \"Hellions\", directed by Bruce McDonald and starring Chloe Rose and Robert Patrick, which had its world premiere at the 2015 Sundance Film Festival. In 2013, he wrote for the horror TV series \"Darknet\", produced by Steve Hoban and Vincenzo Natali, and penned a segment of the horror anthology feature film \"A Christmas Horror Story\", which won the Writer's Guild of Canada award for Best Feature Screenplay in 2016.",
+                "Festival Kanzunetta Indipendenza\nKonkors Kanzunetta Indipendenza (\"Independence Song Contest\") is Maltese festival held on a day near September 21 (Malta's independence day). All songs are interpreted in the Maltese language and is one of the most anticipated events on the Maltese musical calendar. The event first took place back in 1983 in a span of four years until 1987 before returning just 10 years later in 1997 going on to take place each and every year since then. Several local stars like to submit their entries into such a prestigious musical event due to the fact that the songs are written in Maltese. In recent years there were a number of winners who went on to be successful both locally and abroad. Below you could find the list of the past winners",
+                "Batman v Superman: Dawn of Justice\nBatman v Superman: Dawn of Justice is a 2016 American superhero film featuring the DC Comics characters Batman and Superman. Directed by Zack Snyder and distributed by Warner Bros. Pictures, the film is the second installment in the DC Extended Universe (DCEU) following 2013's \"Man of Steel\". It was written by Chris Terrio and David S. Goyer, and features an ensemble cast that includes Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter and Gal Gadot. \"Batman v Superman: Dawn of Justice\" is the first live-action film to feature Batman and Superman together, as well as the first live-action cinematic portrayal of Wonder Woman, Aquaman, Flash and Cyborg. In the film, criminal mastermind Lex Luthor manipulates Batman into a preemptive battle with Superman, whom Luthor is obsessed with defeating.",
+                "Phil Lloyd (actor)\nPhil Lloyd is an Australian actor and scriptwriter and partner in the production company Jungleboys. He is best known for his acting role as Myles Barlow in the Australian TV series, \"Review with Myles Barlow\" and the comedy series \"At Home with Julia\", where he played Tim Mathieson, the partner of prime minister Julia Gillard.",
+                "Luc Besson\nLuc Besson (] ; born 18 March 1959) is a French film director, screenwriter, and producer. He directed or produced the films \"Subway\" (1985), \"The Big Blue\" (1988), and \"Nikita\" (1990). Besson is known for his distinctive filmmaking style and is associated with the movement critics call \"Cin\u00e9ma du look\". He has been nominated for a C\u00e9sar Award for Best Director and Best Picture for his films \"\" and \"\". He won Best Director and Best French Director for his sci-fi action film \"The Fifth Element\" (1997). He wrote and directed the 2014 sci-fi thriller film \"Lucy\".",
+                "Anthony Tuck\nAnthony Tuck (born 1940) is Emeritus Professor of Medieval History at the University of Bristol. He was educated at the Royal Grammar School, Newcastle (1948\u201359) and at the University of Cambridge. From 1965 to 1978 he was Senior Lecturer in Medieval History at Lancaster University. He was also Master of Collingwood College at the University of Durham from 1978 to 1985. His published work focus on the relationship between the king and nobility in late medieval England.",
+                "1997 Argentine Grand Prix\nThe 1997 Argentine Grand Prix was a Formula One motor race held at Aut\u00f3dromo Oscar Alfredo G\u00e1lvez in Buenos Aires, Argentina on 13 April 1997. It was the third race of the 1997 Formula One season and the 600th World Championship event. The 72-lap race was won by Williams driver Jacques Villeneuve after he started from pole position. Eddie Irvine finished second for the Ferrari team and Jordan driver Ralf Schumacher came in third.",
+                "Vertical Horizon\nVertical Horizon is an American alternative rock band formed at Georgetown University in Washington, D.C. in 1991. The band is best known for their 1999 hit, \"Everything You Want\". Their most recent album, \"Echoes from the Underground,\" was released in October 2013.",
+                "Crossing the Rubicon (Armageddon album)\nCrossing the Rubicon was an album by the Swedish melodic death metal band Armageddon, released in Europe on the now defunct W.A.R. records, and in Japan on Toy's Factory records in 1997. The album features Christopher Amott of Arch Enemy, as well as former Arch Enemy members Peter Wildoer and Martin Bengtsson. The album was only released in Japan, briefly in Europe, and is extremely hard to find."
+            ],
+            "thoughts": [
+                "The actress who plays Julia McNamara in the series 'Nip/Tuck' is Joely Richardson.",
+                "Joely Richardson appeared in the film \"Event Horizon\" (1997) with Laurence Fishburne.",
+                "Event Horizon (film) - Directed by Paul W. S. Anderson\nPhoenix (1998 film) - Directed by Danny Cannon\nFestival Kanzunetta Indipendenza - No specific film mentioned\n1997 Argentine Grand Prix - No specific film mentioned\nVertical Horizon - No specific film mentioned\nCrossing the Rubicon (Armageddon album) - No specific film mentioned"
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find out who plays the character Julia McNamara in the series 'Nip/Tuck'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find movies in which the actress identified in Node 1 appears alongside Laurence Fishburne.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify which of the movies from Node 2 was released in 1997 and is a horror film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine the director of the 1997 horror film identified in Node 3.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph starts by determining who plays Julia McNamara in 'Nip/Tuck'. With this actress identified, the next step is to find all movies she appears in with Laurence Fishburne. From this list, the 1997 horror film is singled out, and finally, the director of this specific film is identified. Each step narrows down the information to effectively answer the original question."
+            },
+            "recall": 0.7222222222222222,
+            "retrieved_passages": [
+                "Julia McNamara\nJulia McNamara (\"n\u00e9e\" Noughton) is a fictional character in the American television series \"Nip/Tuck\", portrayed by Joely Richardson.",
+                "List of Nip/Tuck episodes\n\"Nip/Tuck\" is an American drama created by Ryan Murphy, which aired on FX in the United States between 2003 and 2010. The series focuses on McNamara/Troy, a plastic surgery practice, and follows its founders, Sean McNamara and Christian Troy (portrayed by Dylan Walsh and Julian McMahon). Each episode typically involves the cosmetic procedures of one or more patients, and also features the personal and professional lives of its main cast.",
+                "Quicksilver Highway\nQuicksilver Highway is a 1997 horror film directed by Mick Garris. It is based on Clive Barker's short story \"The Body Politic\" and Stephen King's short story \"Chattery Teeth\". The film was originally shown on television before being released on video.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Joely Richardson\nJoely Kim Richardson (born 9 January 1965) is an English actress, known for her role as Julia McNamara in the FX drama series \"Nip/Tuck\" (2003\u201310), and Queen Catherine Parr in the Showtime series \"The Tudors\" (2010). She has also appeared in films such as \"101 Dalmatians\" (1996), \"Event Horizon\" (1997), \"The Patriot\" (2000), \"Return to Me\" (2000), \"Anonymous\" (2011), the Hollywood film adaptation \"The Girl with the Dragon Tattoo\" (2011), and the remake of \"Endless Love\" (2014).",
+                "Event Horizon (film)\nEvent Horizon is a 1997 British-American science fiction horror film directed by Paul W. S. Anderson. The screenplay was written by Philip Eisner, with an uncredited rewrite by Andrew Kevin Walker. The film stars Laurence Fishburne and Sam Neill.",
+                "John Wick: Chapter 2\nJohn Wick: Chapter 2 is a 2017 American neo-noir action thriller film directed by Chad Stahelski and written by Derek Kolstad. The second installment in the \"John Wick\" film series, the plot follows hitman John Wick, who goes on the run after a bounty is placed on his head. It stars Keanu Reeves, Common, Laurence Fishburne, Riccardo Scamarcio, Ruby Rose, John Leguizamo and Ian McShane, and marks the first collaboration between Reeves and Fishburne since appearing together in \"The Matrix\" trilogy.",
+                "Hoodlum (film)\nHoodlum is a 1997 American crime drama film that gives a fictionalized account of the gang war between the Italian/Jewish mafia alliance and the Black gangsters of Harlem that took place in the late 1920s and early 1930s. The film concentrated on Ellsworth \"Bumpy\" Johnson (Laurence Fishburne), Dutch Schultz (Tim Roth), and Lucky Luciano (Andy Garc\u00eda).",
+                "Midnite Movies\nMidnite Movies is a line of B movies released first on VHS and later on DVD by MGM Home Entertainment. The line was begun by MGM in March 2001 following its acquisition of Orion Pictures, which bought out Filmways, the owner of American International Pictures. AIP had a library of B movies from the 1950s and 1960s that were science fiction, horror, and exploitation films. The \"Midnite Movies\" collection is primarily derived from the AIP library (including most of Roger Corman's and Vincent Price's horror movies) but also included Hammer Film Productions, Amicus Productions, United Artists, and Empire International Pictures movies as well. The DVDs were first released as single films but most later releases would be double features on single double-sided discs. Sony Pictures Home Entertainment later became owners of the MGM library and continued the \"Midnite Movies\" line with distributor 20th Century Fox Home Entertainment. All double feature titles released on the 20th Century Fox label were two-disc packages. By 2011, no new titles were forthcoming; the previous catalog titles slowly went out of print and the \"Midnite Movies\" website was taken down.",
+                "Pascal Trottier\nPascal Trottier is a Canadian filmmaker and screenwriter. He graduated from the Canadian Film Centre in 2005. His credits include \"The Colony\", starring Laurence Fishburne and Bill Paxton, and the horror feature \"Hellions\", directed by Bruce McDonald and starring Chloe Rose and Robert Patrick, which had its world premiere at the 2015 Sundance Film Festival. In 2013, he wrote for the horror TV series \"Darknet\", produced by Steve Hoban and Vincenzo Natali, and penned a segment of the horror anthology feature film \"A Christmas Horror Story\", which won the Writer's Guild of Canada award for Best Feature Screenplay in 2016.",
+                "The Apparition\nThe Apparition is a 2012 American supernatural horror film, written and directed by Todd Lincoln, making his directorial debut, and starring Ashley Greene, Sebastian Stan, Tom Felton, Julianna Guill and Rick Gomez. The plot follows three college students who, after the death of their friend, must battle a supernatural force they summoned themselves. The film was loosely inspired by the Philip experiment conducted in 1972. The film was a box office bomb and was cited by critics as one of the worst horror movies of 2012. It was also the last Warner Bros. Pictures horror film to be released under its own label before resorting to New Line Cinema to release all future horror movies made by Warner Bros.",
+                "Bad Meets Evil\nBad Meets Evil is an American hip hop duo composed of Detroit-based rappers, Royce da 5'9\" (Bad) and Eminem (Evil). Bad Meets Evil was formed in 1997, thanks to the duo's mutual friend, Proof. Their discography consists of one extended play (EP) and four singles. In 1999, the duo released a double non-album single, \"Nuttin' to Do\" and \"Scary Movies\"; the former peaked at 36 on the Hot Rap Songs chart, while the latter peaked at 63 on the UK Singles Chart, and was featured on the soundtrack of the 2000 horror comedy parody film \"Scary Movie\".",
+                "Witchcraft IX: Bitter Flesh\nWitchcraft IX: Bitter Flesh is a 1997 horror film directed by Michael Paul Girard. The film is a sequel to the 1988 film \"Witchcraft\".",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Fran\u00e7ois Morel (actor)\nFran\u00e7ois Morel (born 10 June 1959) is a French actor and filmmaker. He is best known for his role of Mister Morel in the cult TV series \"Les Deschiens\" (1993-2002), in which he appears alongside Yolande Moreau.",
+                "Rebecca Gayheart\nRebecca Gayheart (born August 12, 1971) is an American fashion model and television and film actress. Gayheart began her career appearing in a student short film by Brett Ratner, and later gained notice as a spokesperson and model for Noxzema in the early 1990s. She had minor roles in \"Nothing to Lose\" and \"Scream 2\" (1997) before starring in the 1998 slasher film \"Urban Legend\" (1998) and the black comedy \"Jawbreaker\" (1999). She has also had roles on the television series \"Dead Like Me\", \"Vanished\", and \"Nip/Tuck\".",
+                "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+                "To Sir, with Love (2006 film)\nTo Sir, with Love () (aka My Teacher, Teacher's Mercy and Bloody Reunion) is a 2006 South Korean horror film, and the feature film debut of director Im Dae-Woong.",
+                "Campfire Tales (1997 film)\nCampfire Tales is a 1997 American anthology horror film directed by Matt Cooper, Martin Kunert, and David Semel. The film is made up of three individual short segments that are presented in an overarching narrative, told by a group of friends around a fire after they crash their car in the woods. It stars James Marsden, Christine Taylor, Amy Smart, and Ron Livingston. The film was released direct to video in 1998 through New Line Cinema.",
+                "Tammy Lauren\nTammy Lauren Vasquez (born November 16, 1968), known professionally as Tammy Lauren, is an American film and television actress. She starred in the 1997 horror film \"Wishmaster\", portraying Alexandra Amberson, a young woman who accidentally awakens the \"Djinn\", a powerful spirit more commonly known as a genie.",
+                "Hwang In-ho\nHwang In-ho is a South Korean film director and screenwriter. He wrote and directed the horror-romantic comedy \"Spellbound\" (2011) and the crime thriller \"Monster\" (2014).",
+                "Plaga Zombie: Zona Mutante\nPlaga Zombie:Zona Mutante is a 2001 Argentine horror film directed and written by Pablo Par\u00e9s and Hern\u00e1n S\u00e1ez with Berta Mu\u00f1iz and Gabriel Grieco who all starred in the film. It is the second entry in the \"Plaga Zombie film series\" as the sequel to the 1997 film \"Plaga Zombie\" and followed by the 2012 film \"\".",
+                "Crossing the Rubicon (Armageddon album)\nCrossing the Rubicon was an album by the Swedish melodic death metal band Armageddon, released in Europe on the now defunct W.A.R. records, and in Japan on Toy's Factory records in 1997. The album features Christopher Amott of Arch Enemy, as well as former Arch Enemy members Peter Wildoer and Martin Bengtsson. The album was only released in Japan, briefly in Europe, and is extremely hard to find.",
+                "Richardson Square Mall\nRichardson Square Mall was an enclosed shopping center located in Richardson, Texas, United States. Richardson Square Mall demolition began in June 2007. Now located in its place is an outdoor retail center which goes by the name Richardson Square. The retail center includes Super Target with a Starbucks and Pizza Hut Express inside, Sears, Ross Dress for Less, Anna's Linens, and a Lowe's home improvement store. The center also includes pad sites such as Panda Express, Chick-fil-A, Whataburger, Sonic Drive-In, and a Bank of America.",
+                "Julia Child rose\nThe Julia Child rose, known in the UK as the Absolutely Fabulous rose, is a golden butter or golden floribunda rose, named after the chef Julia Child.",
+                "Baking with Julia\nBaking With Julia is an American television cooking program produced by Julia Child and the name of the book which accompanied the series. Each episode featured one pastry chef or baker who demonstrates professional techniques that can be performed in a home kitchen. It was taped primarily in Child's Cambridge, Massachusetts house (Julia Child's kitchen was converted into a TV studio for the purpose) and was aired over four television seasons from 1996 to 1999; it is still occasionally aired in reruns on Create on PBS digital stations."
+            ],
+            "thoughts": [
+                "Joely Richardson plays the character Julia McNamara in the series 'Nip/Tuck'.",
+                "The movies in which Joely Richardson appears alongside Laurence Fishburne are \"Event Horizon\" (1997) and \"Hoodlum\" (1997).",
+                "The horror film released in 1997 from Node 2 is \"Quicksilver Highway\" directed by Mick Garris.",
+                "The director of the 1997 horror film \"Quicksilver Highway\" is Mick Garris."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the actress who plays Julia McNamara in the series 'Nip/Tuck'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "List films that the identified actress participated in alongside Laurence Fishburne.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Find the name of the 1997 horror film starring Laurence Fishburne and the identified actress.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the director of the 1997 horror film found in the previous step.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph breaks down the original question into several steps focusing on retrieval of information and reasoning. We start by identifying the actress playing Julia McNamara in 'Nip/Tuck'. Then, we check for films that feature both this actress and Laurence Fishburne, specifically focusing on those released around 1997 and known to be in the horror genre. Finally, we identify who directed the film, answering the original question."
+            },
+            "recall": 0.7222222222222222,
+            "retrieved_passages": [
+                "Julia McNamara\nJulia McNamara (\"n\u00e9e\" Noughton) is a fictional character in the American television series \"Nip/Tuck\", portrayed by Joely Richardson.",
+                "List of Nip/Tuck episodes\n\"Nip/Tuck\" is an American drama created by Ryan Murphy, which aired on FX in the United States between 2003 and 2010. The series focuses on McNamara/Troy, a plastic surgery practice, and follows its founders, Sean McNamara and Christian Troy (portrayed by Dylan Walsh and Julian McMahon). Each episode typically involves the cosmetic procedures of one or more patients, and also features the personal and professional lives of its main cast.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Event Horizon (film)\nEvent Horizon is a 1997 British-American science fiction horror film directed by Paul W. S. Anderson. The screenplay was written by Philip Eisner, with an uncredited rewrite by Andrew Kevin Walker. The film stars Laurence Fishburne and Sam Neill.",
+                "Pascal Trottier\nPascal Trottier is a Canadian filmmaker and screenwriter. He graduated from the Canadian Film Centre in 2005. His credits include \"The Colony\", starring Laurence Fishburne and Bill Paxton, and the horror feature \"Hellions\", directed by Bruce McDonald and starring Chloe Rose and Robert Patrick, which had its world premiere at the 2015 Sundance Film Festival. In 2013, he wrote for the horror TV series \"Darknet\", produced by Steve Hoban and Vincenzo Natali, and penned a segment of the horror anthology feature film \"A Christmas Horror Story\", which won the Writer's Guild of Canada award for Best Feature Screenplay in 2016.",
+                "Joely Richardson\nJoely Kim Richardson (born 9 January 1965) is an English actress, known for her role as Julia McNamara in the FX drama series \"Nip/Tuck\" (2003\u201310), and Queen Catherine Parr in the Showtime series \"The Tudors\" (2010). She has also appeared in films such as \"101 Dalmatians\" (1996), \"Event Horizon\" (1997), \"The Patriot\" (2000), \"Return to Me\" (2000), \"Anonymous\" (2011), the Hollywood film adaptation \"The Girl with the Dragon Tattoo\" (2011), and the remake of \"Endless Love\" (2014).",
+                "Hoodlum (film)\nHoodlum is a 1997 American crime drama film that gives a fictionalized account of the gang war between the Italian/Jewish mafia alliance and the Black gangsters of Harlem that took place in the late 1920s and early 1930s. The film concentrated on Ellsworth \"Bumpy\" Johnson (Laurence Fishburne), Dutch Schultz (Tim Roth), and Lucky Luciano (Andy Garc\u00eda).",
+                "John Wick: Chapter 2\nJohn Wick: Chapter 2 is a 2017 American neo-noir action thriller film directed by Chad Stahelski and written by Derek Kolstad. The second installment in the \"John Wick\" film series, the plot follows hitman John Wick, who goes on the run after a bounty is placed on his head. It stars Keanu Reeves, Common, Laurence Fishburne, Riccardo Scamarcio, Ruby Rose, John Leguizamo and Ian McShane, and marks the first collaboration between Reeves and Fishburne since appearing together in \"The Matrix\" trilogy.",
+                "Man of Steel (film)\nMan of Steel is a 2013 superhero film featuring the DC Comics character Superman. It is a British-American venture produced by Legendary Pictures, DC Entertainment, Syncopy Inc., and Cruel and Unusual Films, and distributed by Warner Bros. Pictures. It is the first installment in the DC Extended Universe (DCEU). The film is directed by Zack Snyder, written by David S. Goyer, and stars Henry Cavill, Amy Adams, Michael Shannon, Kevin Costner, Diane Lane, Laurence Fishburne, Antje Traue, Ayelet Zurer, Christopher Meloni, and Russell Crowe. \"Man of Steel\" is a reboot of the \"Superman\" film series that retells the character's origin story. In the film, Clark Kent learns that he is a superpowered alien from the planet Krypton and assumes the role of mankind's protector as Superman, but finds himself having to prevent General Zod from destroying humanity.",
+                "Witchcraft IX: Bitter Flesh\nWitchcraft IX: Bitter Flesh is a 1997 horror film directed by Michael Paul Girard. The film is a sequel to the 1988 film \"Witchcraft\".",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Rebecca Gayheart\nRebecca Gayheart (born August 12, 1971) is an American fashion model and television and film actress. Gayheart began her career appearing in a student short film by Brett Ratner, and later gained notice as a spokesperson and model for Noxzema in the early 1990s. She had minor roles in \"Nothing to Lose\" and \"Scream 2\" (1997) before starring in the 1998 slasher film \"Urban Legend\" (1998) and the black comedy \"Jawbreaker\" (1999). She has also had roles on the television series \"Dead Like Me\", \"Vanished\", and \"Nip/Tuck\".",
+                "To Sir, with Love (2006 film)\nTo Sir, with Love () (aka My Teacher, Teacher's Mercy and Bloody Reunion) is a 2006 South Korean horror film, and the feature film debut of director Im Dae-Woong.",
+                "Phoenix (1998 film)\nPhoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta. Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.",
+                "Quicksilver Highway\nQuicksilver Highway is a 1997 horror film directed by Mick Garris. It is based on Clive Barker's short story \"The Body Politic\" and Stephen King's short story \"Chattery Teeth\". The film was originally shown on television before being released on video.",
+                "Campfire Tales (1997 film)\nCampfire Tales is a 1997 American anthology horror film directed by Matt Cooper, Martin Kunert, and David Semel. The film is made up of three individual short segments that are presented in an overarching narrative, told by a group of friends around a fire after they crash their car in the woods. It stars James Marsden, Christine Taylor, Amy Smart, and Ron Livingston. The film was released direct to video in 1998 through New Line Cinema.",
+                "Festival Kanzunetta Indipendenza\nKonkors Kanzunetta Indipendenza (\"Independence Song Contest\") is Maltese festival held on a day near September 21 (Malta's independence day). All songs are interpreted in the Maltese language and is one of the most anticipated events on the Maltese musical calendar. The event first took place back in 1983 in a span of four years until 1987 before returning just 10 years later in 1997 going on to take place each and every year since then. Several local stars like to submit their entries into such a prestigious musical event due to the fact that the songs are written in Maltese. In recent years there were a number of winners who went on to be successful both locally and abroad. Below you could find the list of the past winners",
+                "Batman v Superman: Dawn of Justice\nBatman v Superman: Dawn of Justice is a 2016 American superhero film featuring the DC Comics characters Batman and Superman. Directed by Zack Snyder and distributed by Warner Bros. Pictures, the film is the second installment in the DC Extended Universe (DCEU) following 2013's \"Man of Steel\". It was written by Chris Terrio and David S. Goyer, and features an ensemble cast that includes Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter and Gal Gadot. \"Batman v Superman: Dawn of Justice\" is the first live-action film to feature Batman and Superman together, as well as the first live-action cinematic portrayal of Wonder Woman, Aquaman, Flash and Cyborg. In the film, criminal mastermind Lex Luthor manipulates Batman into a preemptive battle with Superman, whom Luthor is obsessed with defeating.",
+                "Phil Lloyd (actor)\nPhil Lloyd is an Australian actor and scriptwriter and partner in the production company Jungleboys. He is best known for his acting role as Myles Barlow in the Australian TV series, \"Review with Myles Barlow\" and the comedy series \"At Home with Julia\", where he played Tim Mathieson, the partner of prime minister Julia Gillard.",
+                "Anthony Tuck\nAnthony Tuck (born 1940) is Emeritus Professor of Medieval History at the University of Bristol. He was educated at the Royal Grammar School, Newcastle (1948\u201359) and at the University of Cambridge. From 1965 to 1978 he was Senior Lecturer in Medieval History at Lancaster University. He was also Master of Collingwood College at the University of Durham from 1978 to 1985. His published work focus on the relationship between the king and nobility in late medieval England."
+            ],
+            "thoughts": [
+                "The actress who plays Julia McNamara in the series 'Nip/Tuck' is Joely Richardson.",
+                "The films in which Joely Richardson participated alongside Laurence Fishburne are \"Event Horizon\" (1997) and \"Batman v Superman: Dawn of Justice\" (2016).",
+                "The 1997 horror film starring Laurence Fishburne and Joely Richardson is \"Event Horizon\".",
+                "The director of the 1997 horror film \"Event Horizon\" is Paul W. S. Anderson."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the actress who plays Julia McNamara in the series 'Nip/Tuck'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine in which 1997 horror film Laurence Fishburne appeared.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify the director of the 1997 horror film involving Laurence Fishburne.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Check if the actress from Node 1 appears in the 1997 horror film from Node 2.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Combine the information to determine the director of the 1997 horror film in which both the actress from 'Nip/Tuck' and Laurence Fishburne appear.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The task is to find out who directed a specific film that involves an actress from 'Nip/Tuck' and Laurence Fishburne. The graph begins by identifying the actress from the TV series, followed by determining the horror films from 1997 featuring Laurence Fishburne. The next step is to find the director of such films. The reasoning node checks the actress's involvement in these films. Finally, it concludes by pinpointing the director of the correct film."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "Event Horizon (film)\nEvent Horizon is a 1997 British-American science fiction horror film directed by Paul W. S. Anderson. The screenplay was written by Philip Eisner, with an uncredited rewrite by Andrew Kevin Walker. The film stars Laurence Fishburne and Sam Neill.",
+                "Pascal Trottier\nPascal Trottier is a Canadian filmmaker and screenwriter. He graduated from the Canadian Film Centre in 2005. His credits include \"The Colony\", starring Laurence Fishburne and Bill Paxton, and the horror feature \"Hellions\", directed by Bruce McDonald and starring Chloe Rose and Robert Patrick, which had its world premiere at the 2015 Sundance Film Festival. In 2013, he wrote for the horror TV series \"Darknet\", produced by Steve Hoban and Vincenzo Natali, and penned a segment of the horror anthology feature film \"A Christmas Horror Story\", which won the Writer's Guild of Canada award for Best Feature Screenplay in 2016.",
+                "Hoodlum (film)\nHoodlum is a 1997 American crime drama film that gives a fictionalized account of the gang war between the Italian/Jewish mafia alliance and the Black gangsters of Harlem that took place in the late 1920s and early 1930s. The film concentrated on Ellsworth \"Bumpy\" Johnson (Laurence Fishburne), Dutch Schultz (Tim Roth), and Lucky Luciano (Andy Garc\u00eda).",
+                "John Wick: Chapter 2\nJohn Wick: Chapter 2 is a 2017 American neo-noir action thriller film directed by Chad Stahelski and written by Derek Kolstad. The second installment in the \"John Wick\" film series, the plot follows hitman John Wick, who goes on the run after a bounty is placed on his head. It stars Keanu Reeves, Common, Laurence Fishburne, Riccardo Scamarcio, Ruby Rose, John Leguizamo and Ian McShane, and marks the first collaboration between Reeves and Fishburne since appearing together in \"The Matrix\" trilogy.",
+                "Joely Richardson\nJoely Kim Richardson (born 9 January 1965) is an English actress, known for her role as Julia McNamara in the FX drama series \"Nip/Tuck\" (2003\u201310), and Queen Catherine Parr in the Showtime series \"The Tudors\" (2010). She has also appeared in films such as \"101 Dalmatians\" (1996), \"Event Horizon\" (1997), \"The Patriot\" (2000), \"Return to Me\" (2000), \"Anonymous\" (2011), the Hollywood film adaptation \"The Girl with the Dragon Tattoo\" (2011), and the remake of \"Endless Love\" (2014).",
+                "Man of Steel (film)\nMan of Steel is a 2013 superhero film featuring the DC Comics character Superman. It is a British-American venture produced by Legendary Pictures, DC Entertainment, Syncopy Inc., and Cruel and Unusual Films, and distributed by Warner Bros. Pictures. It is the first installment in the DC Extended Universe (DCEU). The film is directed by Zack Snyder, written by David S. Goyer, and stars Henry Cavill, Amy Adams, Michael Shannon, Kevin Costner, Diane Lane, Laurence Fishburne, Antje Traue, Ayelet Zurer, Christopher Meloni, and Russell Crowe. \"Man of Steel\" is a reboot of the \"Superman\" film series that retells the character's origin story. In the film, Clark Kent learns that he is a superpowered alien from the planet Krypton and assumes the role of mankind's protector as Superman, but finds himself having to prevent General Zod from destroying humanity.",
+                "Witchcraft IX: Bitter Flesh\nWitchcraft IX: Bitter Flesh is a 1997 horror film directed by Michael Paul Girard. The film is a sequel to the 1988 film \"Witchcraft\".",
+                "Batman v Superman: Dawn of Justice\nBatman v Superman: Dawn of Justice is a 2016 American superhero film featuring the DC Comics characters Batman and Superman. Directed by Zack Snyder and distributed by Warner Bros. Pictures, the film is the second installment in the DC Extended Universe (DCEU) following 2013's \"Man of Steel\". It was written by Chris Terrio and David S. Goyer, and features an ensemble cast that includes Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter and Gal Gadot. \"Batman v Superman: Dawn of Justice\" is the first live-action film to feature Batman and Superman together, as well as the first live-action cinematic portrayal of Wonder Woman, Aquaman, Flash and Cyborg. In the film, criminal mastermind Lex Luthor manipulates Batman into a preemptive battle with Superman, whom Luthor is obsessed with defeating.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Campfire Tales (1997 film)\nCampfire Tales is a 1997 American anthology horror film directed by Matt Cooper, Martin Kunert, and David Semel. The film is made up of three individual short segments that are presented in an overarching narrative, told by a group of friends around a fire after they crash their car in the woods. It stars James Marsden, Christine Taylor, Amy Smart, and Ron Livingston. The film was released direct to video in 1998 through New Line Cinema.",
+                "Rita Bhaduri\nRita Bhaduri (Bengali: \u09b0\u09c0\u09a4\u09be \u09ad\u09be\u09a6\u09c1\u09a1\u09bc\u09bf , Hindi: \u0930\u0940\u091f\u093e \u092d\u093e\u0926\u0941\u0921\u093c\u0940 ) is an Indian film and now television actress. She initially appeared as supporting actress in various Bollywood films during the 1970s, 1980s, & 1990s. Currently, she works as television actor, playing the role of biji in \"Bani - Ishq Da Kalma\" on \"Colors\" and in \"Rishtey\". She is most known for films like \"Sawan Ko Aane Do\" a 1979 Rajshri Productions film, and \"Raja\" (1995) for which she received a Filmfare Award nomination for Best Supporting Actress. She had a supporting role as Julie's best friend in the hit film Julie (1975 film) (1975), where the song \"Yeh Ratien Nayi Purani,\" was picturized on her.",
+                "Sylvio Sarkis\nSylvio Sarkis is a Lebanese actor born on the 28th of September 1998. His career started in 2008 when he participated in the hit Lebanese series \"Mou\u2019abbad\" along with the much known actors Badih Abou Chakra and Patricia Nammour. Sylvio Sarkis had worked over the past 9 years in 7 hit series such as: \"Mou\u2019abbad (Mou2abbad)\", \"Badal An Dayeh (Badal 3an Daye3)\" with famous actor Youssef El Khal and Nelly Maatouk, \"Ala El A\u2019aehed (3ala Al 3ahed)\" with Famous Actress Darine Hamze and Talal El Jurdi where Sylvio was one of the three main characters in the series. \"Ayli Mat\u2019oub Alaya (3ayle Mat3oub 3laya)\" along side with the late actor Issam Breidy and actress Yara Fares. The hit Series \"Helwe W Kezzabi (Beautiful Liar)\" with the famous actress Dalida Khalil and famous singer Ziad Bourji. \"Joumhouriyet Noun\" with famous actor Youssef Haddad and famous actress Rita Harb. \"50 Alef (50 thousand)\" with famous actor Tony Issa and famous actress Dalida Khalil which was his second collaboration with her as being co-actors and main characters.",
+                "List of awards and nominations received by Rekha\nRekha is an Indian film actress who primarily works in Hindi films. Hailed as one of India's finest actresses, she made her debut as a child artist in 1966 and went on to appear in lead roles in the early 1970s. Since her debut as a leading actress she has acted in over 180 films. Rekha has often portrayed strong female characters, while also acting in some arthouse films besides numerous mainstream cinema. She has won four Filmfare Awards; two Best Actress Awards\u2014resulting from seven nominations, one Best Supporting Actress Award\u2014resulting from six nominations, and a Lifetime Achievement Award. The first award came in 1981 for the Hrishikesh Mukherjee-directed \"Khubsoorat\" where she was cast in a comic role. Her portrayal of a classical courtesan in \"Umrao Jaan\" (1981) fetched her the National Film Award for Best Actress in 1982. Rekha received her second Filmfare award in 1989 for \"Khoon Bhari Maang\". She portrayed the role of a widow who sets out to take revenge on her lover. Her negative role in \"Khiladiyon Ka Khiladi\" was highly appreciated by the critics and earned her a Filmfare Award in the Best Supporting Actress category. In 2003, she was presented with the Lifetime Achievement Award. In 2010, Rekha was awarded the Padma Shri, the 4th highest civilian honour in India. Other awards won by her include International Indian Film Academy Awards, Bengal Film Journalists' Association Awards, Star Screen Awards, Zee Cine Awards, Stardust Awards and Bollywood Movie Awards.",
+                "Sabine Thalbach\nSabine Thalbach (1932\u20131966) was a German actress who appeared in many East German films. She was married to the director Benno Besson, and was the mother of the actress Katharina Thalbach.",
+                "Diane Ladd\nDiane Ladd (born November 29, 1932) is an American actress, film director, producer and author. She has appeared in over 120 film and television roles. For the 1974 film \"Alice Doesn't Live Here Anymore\", she won the BAFTA Award for Best Actress in a Supporting Role and was nominated for the Academy Award for Best Supporting Actress. She went on to win the Golden Globe Award for Best Supporting Actress on Television for \"Alice\" (1980\u201381), and to receive Academy Award nominations for \"Wild at Heart\" (1990) and \"Rambling Rose\" (1991). Her other film appearances include \"Chinatown\" (1974), \"Ghosts of Mississippi\" (1996), \"Primary Colors\" (1998), \"28 Days\" (2000), and \"American Cowslip\" (2008). Ladd is the mother of actress Laura Dern, with her ex-husband, actor Bruce Dern.",
+                "Ren\u00e9e Bourque\nRen\u00e9e Lee Moniz (born October 16, 1977) is an American actress born and raised in Rhode Island. She is also known as \"Ren\u00e9e Moniz\" and \"Renee Bourque Moniz\". She has appeared in \"American Hustle\" and in the movie \"27 Dresses\" where she plays Katherine Heigl's co-worker at Urban Everest.",
+                "Amy Madigan\nAmy Marie Madigan (born September 11, 1950) is an American actress, producer, and singer. She was nominated for the Academy Award for Best Supporting Actress for the 1985 film \"Twice in a Lifetime\". Her other film credits include \"Love Child\" (1982), \"Places in the Heart\" (1984), \"Field of Dreams\" (1989), \"Uncle Buck\" (1989), \"The Dark Half\" (1993), \"Pollock\" (2000), and \"Gone Baby Gone\" (2007). Madigan won the Golden Globe Award for Best Supporting Actress on Television and was nominated for the Primetime Emmy Award for Outstanding Lead Actress in a Miniseries or a Movie for her portrayal of Sarah Weddington in the 1989 television film \"Roe vs. Wade\"."
+            ],
+            "thoughts": [
+                "Laurence Fishburne appeared in the 1997 horror film \"Event Horizon.\"",
+                "The director of the 1997 horror film \"Event Horizon\" involving Laurence Fishburne is Paul W. S. Anderson.",
+                "The actress who plays Julia McNamara in the series 'Nip/Tuck' is Joely Richardson.",
+                "Since Joely Richardson is not mentioned as a cast member in the 1997 horror film \"Event Horizon,\" it can be concluded that she does not appear in the film.",
+                "The director of the 1997 horror film \"Event Horizon\" in which Laurence Fishburne appears is Paul W. S. Anderson. Joely Richardson, the actress from 'Nip/Tuck', does not appear in the film."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the actress who plays Julia McNamara in the TV series 'Nip/Tuck'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify 1997 horror films starring Laurence Fishburne.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine potential 1997 horror films featuring the actress identified in Step 1.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the director of the 1997 horror films that are common in Steps 2 and 3.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph begins by identifying information independently retrievable: who plays Julia McNamara in 'Nip/Tuck' and the 1997 horror films starring Laurence Fishburne. Once these details are gathered, the reasoning step involves identifying which films Laurence Fishburne starred in that also include the actress playing Julia McNamara. Finally, by focusing on the films identified, the director(s) of such films are determined, answering the original question."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "Julia McNamara\nJulia McNamara (\"n\u00e9e\" Noughton) is a fictional character in the American television series \"Nip/Tuck\", portrayed by Joely Richardson.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Joely Richardson\nJoely Kim Richardson (born 9 January 1965) is an English actress, known for her role as Julia McNamara in the FX drama series \"Nip/Tuck\" (2003\u201310), and Queen Catherine Parr in the Showtime series \"The Tudors\" (2010). She has also appeared in films such as \"101 Dalmatians\" (1996), \"Event Horizon\" (1997), \"The Patriot\" (2000), \"Return to Me\" (2000), \"Anonymous\" (2011), the Hollywood film adaptation \"The Girl with the Dragon Tattoo\" (2011), and the remake of \"Endless Love\" (2014).",
+                "List of Nip/Tuck episodes\n\"Nip/Tuck\" is an American drama created by Ryan Murphy, which aired on FX in the United States between 2003 and 2010. The series focuses on McNamara/Troy, a plastic surgery practice, and follows its founders, Sean McNamara and Christian Troy (portrayed by Dylan Walsh and Julian McMahon). Each episode typically involves the cosmetic procedures of one or more patients, and also features the personal and professional lives of its main cast.",
+                "Event Horizon (film)\nEvent Horizon is a 1997 British-American science fiction horror film directed by Paul W. S. Anderson. The screenplay was written by Philip Eisner, with an uncredited rewrite by Andrew Kevin Walker. The film stars Laurence Fishburne and Sam Neill.",
+                "Pascal Trottier\nPascal Trottier is a Canadian filmmaker and screenwriter. He graduated from the Canadian Film Centre in 2005. His credits include \"The Colony\", starring Laurence Fishburne and Bill Paxton, and the horror feature \"Hellions\", directed by Bruce McDonald and starring Chloe Rose and Robert Patrick, which had its world premiere at the 2015 Sundance Film Festival. In 2013, he wrote for the horror TV series \"Darknet\", produced by Steve Hoban and Vincenzo Natali, and penned a segment of the horror anthology feature film \"A Christmas Horror Story\", which won the Writer's Guild of Canada award for Best Feature Screenplay in 2016.",
+                "Hoodlum (film)\nHoodlum is a 1997 American crime drama film that gives a fictionalized account of the gang war between the Italian/Jewish mafia alliance and the Black gangsters of Harlem that took place in the late 1920s and early 1930s. The film concentrated on Ellsworth \"Bumpy\" Johnson (Laurence Fishburne), Dutch Schultz (Tim Roth), and Lucky Luciano (Andy Garc\u00eda).",
+                "Baking with Julia\nBaking With Julia is an American television cooking program produced by Julia Child and the name of the book which accompanied the series. Each episode featured one pastry chef or baker who demonstrates professional techniques that can be performed in a home kitchen. It was taped primarily in Child's Cambridge, Massachusetts house (Julia Child's kitchen was converted into a TV studio for the purpose) and was aired over four television seasons from 1996 to 1999; it is still occasionally aired in reruns on Create on PBS digital stations.",
+                "Rebecca Gayheart\nRebecca Gayheart (born August 12, 1971) is an American fashion model and television and film actress. Gayheart began her career appearing in a student short film by Brett Ratner, and later gained notice as a spokesperson and model for Noxzema in the early 1990s. She had minor roles in \"Nothing to Lose\" and \"Scream 2\" (1997) before starring in the 1998 slasher film \"Urban Legend\" (1998) and the black comedy \"Jawbreaker\" (1999). She has also had roles on the television series \"Dead Like Me\", \"Vanished\", and \"Nip/Tuck\".",
+                "John Wick: Chapter 2\nJohn Wick: Chapter 2 is a 2017 American neo-noir action thriller film directed by Chad Stahelski and written by Derek Kolstad. The second installment in the \"John Wick\" film series, the plot follows hitman John Wick, who goes on the run after a bounty is placed on his head. It stars Keanu Reeves, Common, Laurence Fishburne, Riccardo Scamarcio, Ruby Rose, John Leguizamo and Ian McShane, and marks the first collaboration between Reeves and Fishburne since appearing together in \"The Matrix\" trilogy.",
+                "Julia Ling\nJulia Ling, born Shel Wei Lin (: \"L\u00edn Xi\u01ceow\u0113i\" ) (born February 14, 1983), is an American actress. Her television work includes recurring roles on NBC series such as \"ER\", \"Studio 60 on the Sunset Strip\", and as a series regular on \"Chuck\".",
+                "Phil Lloyd (actor)\nPhil Lloyd is an Australian actor and scriptwriter and partner in the production company Jungleboys. He is best known for his acting role as Myles Barlow in the Australian TV series, \"Review with Myles Barlow\" and the comedy series \"At Home with Julia\", where he played Tim Mathieson, the partner of prime minister Julia Gillard.",
+                "Man of Steel (film)\nMan of Steel is a 2013 superhero film featuring the DC Comics character Superman. It is a British-American venture produced by Legendary Pictures, DC Entertainment, Syncopy Inc., and Cruel and Unusual Films, and distributed by Warner Bros. Pictures. It is the first installment in the DC Extended Universe (DCEU). The film is directed by Zack Snyder, written by David S. Goyer, and stars Henry Cavill, Amy Adams, Michael Shannon, Kevin Costner, Diane Lane, Laurence Fishburne, Antje Traue, Ayelet Zurer, Christopher Meloni, and Russell Crowe. \"Man of Steel\" is a reboot of the \"Superman\" film series that retells the character's origin story. In the film, Clark Kent learns that he is a superpowered alien from the planet Krypton and assumes the role of mankind's protector as Superman, but finds himself having to prevent General Zod from destroying humanity.",
+                "Witchcraft IX: Bitter Flesh\nWitchcraft IX: Bitter Flesh is a 1997 horror film directed by Michael Paul Girard. The film is a sequel to the 1988 film \"Witchcraft\".",
+                "Batman v Superman: Dawn of Justice\nBatman v Superman: Dawn of Justice is a 2016 American superhero film featuring the DC Comics characters Batman and Superman. Directed by Zack Snyder and distributed by Warner Bros. Pictures, the film is the second installment in the DC Extended Universe (DCEU) following 2013's \"Man of Steel\". It was written by Chris Terrio and David S. Goyer, and features an ensemble cast that includes Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter and Gal Gadot. \"Batman v Superman: Dawn of Justice\" is the first live-action film to feature Batman and Superman together, as well as the first live-action cinematic portrayal of Wonder Woman, Aquaman, Flash and Cyborg. In the film, criminal mastermind Lex Luthor manipulates Batman into a preemptive battle with Superman, whom Luthor is obsessed with defeating.",
+                "Quicksilver Highway\nQuicksilver Highway is a 1997 horror film directed by Mick Garris. It is based on Clive Barker's short story \"The Body Politic\" and Stephen King's short story \"Chattery Teeth\". The film was originally shown on television before being released on video.",
+                "To Sir, with Love (2006 film)\nTo Sir, with Love () (aka My Teacher, Teacher's Mercy and Bloody Reunion) is a 2006 South Korean horror film, and the feature film debut of director Im Dae-Woong.",
+                "Phoenix (1998 film)\nPhoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta. Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.",
+                "Campfire Tales (1997 film)\nCampfire Tales is a 1997 American anthology horror film directed by Matt Cooper, Martin Kunert, and David Semel. The film is made up of three individual short segments that are presented in an overarching narrative, told by a group of friends around a fire after they crash their car in the woods. It stars James Marsden, Christine Taylor, Amy Smart, and Ron Livingston. The film was released direct to video in 1998 through New Line Cinema.",
+                "Festival Kanzunetta Indipendenza\nKonkors Kanzunetta Indipendenza (\"Independence Song Contest\") is Maltese festival held on a day near September 21 (Malta's independence day). All songs are interpreted in the Maltese language and is one of the most anticipated events on the Maltese musical calendar. The event first took place back in 1983 in a span of four years until 1987 before returning just 10 years later in 1997 going on to take place each and every year since then. Several local stars like to submit their entries into such a prestigious musical event due to the fact that the songs are written in Maltese. In recent years there were a number of winners who went on to be successful both locally and abroad. Below you could find the list of the past winners"
+            ],
+            "thoughts": [
+                "The actress who plays Julia McNamara in the TV series 'Nip/Tuck' is Joely Richardson.",
+                "The 1997 horror film starring Laurence Fishburne is \"Event Horizon\".",
+                "Based on the information provided, potential 1997 horror films featuring Joely Richardson could include \"Event Horizon\" as it is a horror film released in 1997. However, further research may be needed to identify additional potential horror films from that year featuring Joely Richardson.",
+                "The director of the 1997 horror film \"Event Horizon\" is Paul W. S. Anderson."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the actress who plays Julia McNamara in the series 'Nip/Tuck'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine in which 1997 horror film Laurence Fishburne appeared.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the director of the 1997 horror film involving Laurence Fishburne.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check if the actress from Node 1 appears in the 1997 horror film from Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the information to determine the director of the 1997 horror film in which both the actress from 'Nip/Tuck' and Laurence Fishburne appear.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task is to find out who directed a specific film that involves an actress from 'Nip/Tuck' and Laurence Fishburne. The graph begins by identifying the actress from the TV series, followed by determining the horror films from 1997 featuring Laurence Fishburne. The next step is to find the director of such films. The reasoning node checks the actress's involvement in these films. Finally, it concludes by pinpointing the director of the correct film."
+    },
+    "best_recall": 0.8888888888888888
+}

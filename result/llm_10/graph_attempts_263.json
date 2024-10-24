@@ -1,0 +1,147 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the home that serves as the residence for the Mayor of New York City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which paintings by Stockely Webster are displayed in that residence.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize information to find out the name of the residence for the Mayor of New York City where Stockely Webster's paintings are hanging.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts with retrieving information about the residence of the Mayor of New York City (Node 1), as this is foundational to understanding where Stockely Webster's paintings might be hanging. Node 2 involves retrieving specific information about whether Stockely Webster's paintings are indeed in this residence. Finally, Node 3 synthesizes the collected information to answer the main question. The execution should reveal that the home is Gracie Mansion if the information is accurate."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the official residence of the Mayor of New York City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify where Stockely Webster's paintings are displayed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Stockely Webster's paintings are hanging in the Mayor's residence identified in Node 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is designed to first identify the official residence of the Mayor of New York City and where Stockely Webster's paintings are displayed. These initial nodes are retrieval and reasoning steps (Node 1 and Node 2) that execute in parallel. The final step (Node 3) combines the information from the first two nodes to determine if the paintings are displayed in the Mayor's residence."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the official residence of the Mayor of New York.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine if Stockely Webster has paintings in the identified residence.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into identifying the official residence of the Mayor of New York and then determining if Stockely Webster has paintings there. The first node retrieves the necessary information about the residence, and the second node checks if the paintings are present in that residence, allowing for the synthesis of the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the residence that serves as the home for the Mayor of New York.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about paintings by Stockely Webster and their locations.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Stockely Webster's paintings are present in the residence identified in Node 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying two pieces of information: (1) which residence serves as the home for the Mayor of New York, and (2) whether there are Stockely Webster paintings in that residence. Node 1 determines the residence of the Mayor of New York, typically Gracie Mansion. Node 2 collects information on Stockely Webster's paintings and their locations. Finally, Node 3 synthesizes the information to check if the paintings are in the identified residence."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the official residence for the Mayor of New York City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find which home has paintings by Stockely Webster.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Intersect the findings to determine which home serves both as the official residence of the Mayor of New York City and has paintings by Stockely Webster.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This execution graph first identifies two separate pieces of information: the official residence of the Mayor of New York City and which home has paintings by Stockely Webster. The final step intersects this information to answer the original question."
+    }
+]

@@ -1,0 +1,163 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the relevant geographical area for Pontotoc County, Oklahoma.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of CBS-affiliated television stations in Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the CBS-affiliated station that serves the identified geographical area of Pontotoc County, Oklahoma.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by determining the geographical location relevant to Pontotoc County, Oklahoma. Then, it involves retrieving CBS-affiliated stations in Oklahoma. Finally, it reasons to find out which station serves Pontotoc County based on the geographical area and the list of CBS stations."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the CBS-affiliated stations in Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the broadcast coverage area of each CBS-affiliated station in Oklahoma identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the stations in Step 2 includes Pontotoc County in its coverage area.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with retrieving a list of CBS-affiliated stations in Oklahoma. Next, it checks the coverage areas of each station to find out where they broadcast. Finally, it determines which station covers Pontotoc County, Oklahoma, thereby answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the major city or cities in Pontotoc County, Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on CBS-affiliated television stations in Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the CBS-affiliated station that serves the city or cities identified in Pontotoc County.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by identifying the major city or cities in Pontotoc County, as television stations often serve larger cities or regions. In parallel, it retrieves a list of CBS-affiliated television stations in Oklahoma. It then combines this information to determine which CBS-affiliated station serves Pontotoc County. This approach ensures that the station is correctly identified based on available regional affiliations and coverage areas."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the television market that Pontotoc County, Oklahoma belongs to.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find CBS-affiliated stations in the identified television market.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the CBS-affiliated stations serves Pontotoc County, Oklahoma specifically.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To find the CBS-affiliated station servicing Pontotoc County, Oklahoma, the execution graph first identifies the television market to which the county belongs. The next step is to retrieve all CBS-affiliated stations within that market. Finally, it filters those stations to identify which one serves Pontotoc County specifically."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main cities or locations in Pontotoc County, Oklahoma.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify CBS-affiliated stations that cover the Oklahoma region.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the broadcasting reach of identified CBS-affiliated stations in Oklahoma to see if they include Pontotoc County.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Select the CBS-affiliated station that is confirmed to serve Pontotoc County, Oklahoma.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task into manageable steps to find the CBS-affiliated station serving Pontotoc County, Oklahoma. The process begins by identifying major cities or locations within the county to understand which media markets they might fall under. Simultaneously, we gather a list of CBS-affiliated stations in Oklahoma. By analyzing the broadcasting reach of these stations and comparing it with the locations in Pontotoc County, we can determine which station serves the area."
+    }
+]

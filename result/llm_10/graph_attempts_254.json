@@ -1,0 +1,149 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the ballet that Rita Sangalli premiered in 1876.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the structure of the ballet identified in Node 1, specifically the number of acts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the number of acts from the information retrieved in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying which ballet Rita Sangalli premiered in during 1876. Once the ballet is identified, the next step retrieves details about the structure of the ballet, particularly focusing on the number of acts. The final step extracts the specific information regarding the number of acts from the gathered details. Each node builds upon the information derived from its upstream nodes, creating a clear pathway from identifying the ballet to determining the count of its acts."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the ballets in which Rita Sangalli premiered in 1876.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each identified ballet from Node 1, determine the number of acts it contains.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile the acts information to specifically answer the question of how many acts the ballet premiered by Rita Sangalli in 1876 has.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying the ballet performances premiered by Rita Sangalli in the year 1876 (Node 1). Once we have the specific ballets, we then determine how many acts each of these ballets contains (Node 2). Finally, the information is synthesized to answer the question about the number of acts in the ballet premiered by Rita Sangalli in 1876 (Node 3). This graph ensures all possible ballets are considered and then focuses on the number of acts in each identified performance to arrive at the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the ballet that was premiered by Rita Sangalli in 1876.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve details about the structure of the identified ballet, specifically the number of acts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts by identifying which ballet Rita Sangalli premiered in 1876. This is crucial because knowing the ballet's name allows us to look up specific details about it. Once the ballet is identified, the next step is to determine its structure, specifically the number of acts, by retrieving relevant information about that particular ballet."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the ballet premiered by Rita Sangalli in 1876.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the name of the ballet premiered by Rita Sangalli in 1876 from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve details about the identified ballet, specifically focusing on the structure and number of acts.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the number of acts in the ballet using the retrieved details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To determine how many acts the ballet premiered by Rita Sangalli in 1876 had, first retrieve information regarding which ballet she premiered that year. Once we know the ballet's name, further retrieve structural details about it, focusing on the number of acts, and conclude by identifying the number of acts from the information obtained."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the ballet Rita Sangalli premiered in during the year 1876.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the number of acts in the identified ballet from 1876.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph starts by identifying the specific ballet that Rita Sangalli premiered in 1876. This requires retrieving information about her performances during that year. Once the ballet is identified, the next step involves retrieving and deducing the number of acts in that ballet. The retrieval and reasoning steps are designed to lead systematically toward answering the original question about the number of acts."
+    }
+]

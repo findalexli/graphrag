@@ -1,0 +1,224 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the location where The Smashing Pumpkins originated.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the location where Greek Fire originated.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the geographical coordinates (latitude) of the origin location of The Smashing Pumpkins from Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the geographical coordinates (latitude) of the origin location of Greek Fire from Node 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the latitudes from Nodes 3 and 4 to determine which is more southern.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Provide the final answer based on the comparison of latitudes performed in Node 5.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph begins by identifying the origin locations of both bands, The Smashing Pumpkins and Greek Fire. It then proceeds to retrieve geographical coordinates specifically focusing on latitude to determine how far south each location is. The latitudes are compared, and the most southern latitude indicates the more southernly origin. The final node synthesizes this information to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify where The Smashing Pumpkins originated from.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify where the band Greek Fire originated from.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the latitude of the location where The Smashing Pumpkins originated.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the latitude of the location where Greek Fire originated.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the latitudes of the origins of The Smashing Pumpkins and Greek Fire to determine which is more southern.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "First, we need to find the origin locations of both The Smashing Pumpkins and Greek Fire. Once we have the locations, we calculate their latitudes. By comparing the latitudes, we can determine which band originated in a more southern location. The entire process involves retrieval of the band's origins and reasoning to calculate and compare geographical positions."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the location where The Smashing Pumpkins originated.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the location where Greek Fire originated.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the southern latitude for the location where The Smashing Pumpkins originated using the retrieved location information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the southern latitude for the location where Greek Fire originated using the retrieved location information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the latitudes from nodes 3 and 4 to determine which band originated from a more southern location.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph first retrieves the geographic origins of both The Smashing Pumpkins and Greek Fire. Then, it calculates the latitude of each origin to understand how far south each is. Finally, it compares these latitudes to determine which band originated from a more southern location."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the origin of The Smashing Pumpkins.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the origin of Greek Fire (the band).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the geographic coordinates (latitude) of the origin location for The Smashing Pumpkins.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the geographic coordinates (latitude) of the origin location for Greek Fire.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the latitudes from nodes 3 and 4 to determine which is more southern.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task into identifying the origin of both bands, converting those origins into geographic coordinates, specifically latitude, and then comparing the two latitudes to determine which location is more southern. The process involves initial retrieval of origin information followed by reasoning steps to compare the locations."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the origin location of The Smashing Pumpkins.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the origin location of Greek Fire.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the latitudinal positions of the origin locations of The Smashing Pumpkins and Greek Fire to determine which is more southern.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with two parallel retrieval and reasoning tasks to find the origin locations of the two bands, The Smashing Pumpkins and Greek Fire. Once these locations are identified, a reasoning step compares the latitudinal positions of these locations to determine which band originated in a more southern location."
+    }
+]

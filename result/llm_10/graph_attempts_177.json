@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the occupations of Ronnie Dunn.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the occupations of Annie Lennox.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the common occupations between the lists obtained from nodes 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with retrieval steps to gather information about the occupations of both individuals, Ronnie Dunn and Annie Lennox. This is necessary to understand the list of professions each person has been associated with. Once these lists are retrieved, the next step is a reasoning task to identify which occupations are common between the two lists. The final node completes the process by determining the shared occupations, answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the occupations of Ronnie Dunn.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the occupations of Annie Lennox.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the common occupations between Ronnie Dunn and Annie Lennox based on their respective occupations.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying the occupations of both individuals separately. First, we fetch and understand Ronnie Dunn's occupations, and then we do the same for Annie Lennox. After individually determining their occupations, a reasoning step is used to compare the two sets of occupations and find any commonalities, which answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the occupations of Ronnie Dunn.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the occupations of Annie Lennox.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify common occupations from the occupations of Ronnie Dunn and Annie Lennox.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with retrieval nodes to gather information about the occupations of both individuals, Ronnie Dunn and Annie Lennox. Once the information for each individual is obtained and listed, a reasoning node compares these two lists to find any common occupations. The graph is straightforward because it involves simple retrieval followed by a comparison step to arrive at the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve occupations of Ronnie Dunn.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve occupations of Annie Lennox.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify common occupations between the lists of occupations for Ronnie Dunn and Annie Lennox.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph consists of two initial nodes for retrieving information about the occupations of Ronnie Dunn and Annie Lennox. The first two nodes operate independently and in parallel as they retrieve data on the respective individuals. The final node combines the results from both retrieval nodes to determine which occupations are shared in common between the two individuals."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the occupations of Ronnie Dunn.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the occupations of Annie Lennox.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the common occupations between Ronnie Dunn and Annie Lennox from the identified occupations.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the question into three steps: Nodes 1 and 2 gather the occupations for each individual separately. Node 3 then compares the lists from Nodes 1 and 2 to find the common occupations, thus answering the original question."
+    }
+]

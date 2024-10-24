@@ -1,0 +1,227 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Super Bowl Dion Lewis' team won.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the third quarter score of the identified Super Bowl for both teams.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the points by which Dion Lewis' team was trailing by comparing the scores of the two teams at the end of the third quarter.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer the question, we need to first identify which Super Bowl Dion Lewis' team won. Once we have that information, we can retrieve the score at the end of the third quarter for both teams involved. Finally, by comparing these scores, we can calculate the point deficit Dion Lewis' team faced at that time."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Super Bowl was won by Dion Lewis' team.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out which team Dion Lewis was part of during that Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine who Dion Lewis' team's opponent was in that Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the score details of the third quarter for the identified Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Calculate the point difference between Dion Lewis' team and their opponent at the end of the third quarter.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph breaks down the task of determining how many points Dion Lewis' team trailed by in the third quarter of their winning Super Bowl into specific steps. First, it identifies the specific Super Bowl and determines Dion Lewis' team and their opponent. Next, the score details for the third quarter are retrieved. Finally, the point difference at the end of the third quarter is calculated based on these details."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Super Bowl that Dion Lewis' team won.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the team Dion Lewis was on during that Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the score of the identified Super Bowl during the third quarter.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find the points scored by both teams in that Super Bowl up to the third quarter.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Calculate the point differential between Dion Lewis' team and their opponent by the end of the third quarter.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To determine by how many points Dion Lewis' team trailed in the third quarter of the Super Bowl they won, the execution graph begins by identifying the specific Super Bowl and Dion Lewis' team. Then, it retrieves the score during the third quarter of that game. Using this information, it calculates the point difference between the two teams at that time."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Super Bowl Dion Lewis participated in and won.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the team Dion Lewis was on during that Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the details of the Super Bowl game identified in step 1, focusing on the score progression per quarter.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the score at the end of the second quarter and the end of the third quarter for Dion Lewis' team.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Calculate the point difference for Dion Lewis' team between the end of the second quarter and the end of the third quarter to determine by how many points they trailed in the third quarter.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by identifying the specific Super Bowl in which Dion Lewis played and won. This involves finding the team he was on during that game. Following this, details of that Super Bowl are retrieved, with a focus on the scores at the end of each quarter. The reasoning steps involve calculating the difference in scores for Dion Lewis' team between the second and third quarters to determine how many points they trailed by in the third quarter."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Super Bowl in which Dion Lewis' team won.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the team Dion Lewis was playing for during that Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the game summary for that particular Super Bowl.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the score at the end of the third quarter from the Super Bowl game summary.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine by how many points Dion Lewis' team was trailing at the end of the third quarter.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins with identifying which Super Bowl Dion Lewis' team won, allowing us to narrow down the specific game. Next, we retrieve the team he was part of during that game to correlate with the correct match. Subsequently, we obtain the game summary of that Super Bowl to analyze the scoring details. The crucial part here is to extract the score at the end of the third quarter, which gives us the raw data needed. Finally, we calculate the point difference to determine how much his team was trailing by at the time."
+    }
+]

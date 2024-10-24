@@ -1,0 +1,117 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the football club that Aly Mohamed plays for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the city or country of origin for the identified football club.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The first step involves identifying the specific football club that Aly Mohamed is affiliated with, which might require external data retrieval if not directly known. Once the club is identified, the next step is to find out the city or country of origin of the club, which provides the location information needed to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the football club Aly Mohamed plays for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the city and country where the identified football club is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is to find out where a football club, which Aly Mohamed plays for, is from. First, we retrieve which club Aly Mohamed is a part of. Once we have the club's name, we then determine the geographical location of this club to answer the overall question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the football club Aly Mohamed plays for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the location (city/country) of the football club identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph starts by identifying the football club for which Aly Mohamed plays. Once the club is identified, the next step is to find out the location (city or country) of this club, which answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the football club that Aly Mohamed plays for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the location (city and country) of the football club identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is a multi-step question that requires identifying the specific football club associated with the player Aly Mohamed, then determining the geographical location of that club. The execution graph starts by retrieving information about the club and then uses that information to find out the location of the club. The graph consists of two nodes, where the output of the first node feeds into the second node."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which football club Aly Mohamed is currently playing for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the city or region the identified football club is based in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task requires finding the geographical location of a football club associated with a specific player, Aly Mohamed. The process necessitates first retrieving information about the club he currently plays for, followed by determining the club's home location."
+    }
+]

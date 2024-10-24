@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve release date for Life After People.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve release date for Werner Herzog Eats His Shoe.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of Life After People and Werner Herzog Eats His Shoe to determine which aired first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with two independent retrieval and reasoning nodes to find the release dates of 'Life After People' and 'Werner Herzog Eats His Shoe'. Once both dates are obtained, a reasoning node compares these dates to determine which film aired first."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the release date of 'Life After People' TV series.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the release date of 'Werner Herzog Eats His Shoe' film.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of 'Life After People' and 'Werner Herzog Eats His Shoe' to determine which aired first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of two retrieval nodes that separately gather the release dates of 'Life After People' and 'Werner Herzog Eats His Shoe'. These tasks can be executed in parallel as they are independent of each other. Once both dates are retrieved, a reasoning node compares them to determine which was released first, providing the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on the release date of the TV series 'Life After People'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on the release date of the film 'Werner Herzog Eats His Shoe'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of 'Life After People' and 'Werner Herzog Eats His Shoe' to determine which aired first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is structured to first independently retrieve the release dates of each of the titles: 'Life After People' and 'Werner Herzog Eats His Shoe'. These retrieval steps are independent and thus can run in parallel. Once both release dates are retrieved, a reasoning step compares these dates to determine which title aired first, culminating in the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the release date for the documentary 'Life After People'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the release date for the short film 'Werner Herzog Eats His Shoe'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates obtained for 'Life After People' and 'Werner Herzog Eats His Shoe' to determine which aired first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with two retrieval steps to gather the release dates for both 'Life After People' and 'Werner Herzog Eats His Shoe'. Once both dates are retrieved, a reasoning step compares these dates to ascertain which film aired first."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the release date of 'Life After People.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the release date of 'Werner Herzog Eats His Shoe.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of 'Life After People' and 'Werner Herzog Eats His Shoe' to determine which aired first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of three nodes:\n1. Each of the first two nodes involves retrieving the release dates for 'Life After People' and 'Werner Herzog Eats His Shoe' independently. These operations can be executed in parallel because they do not depend on each other.\n2. The final node involves reasoning based on the release dates obtained from the first two nodes, by comparing the two dates to identify which event happened first. The result of this comparison provides the answer to the original question."
+    }
+]

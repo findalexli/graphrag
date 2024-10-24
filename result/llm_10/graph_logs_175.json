@@ -1,0 +1,339 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find out the companies for which Nelson Chai has served as president.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the company founded in 1908 based in New York City from the list of companies where Nelson Chai served as president.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "2"
+                },
+                "explanation": "The task involves finding out Nelson Chai's previous roles and then filtering those companies based on the founding year (1908) and their headquarters' location (New York City). The graph begins with retrieving information about Nelson Chai's positions. The subsequent reasoning step then determines which of these matches the specified criteria."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "Nelson Chai\nNelson Joosuk Chai (born 1965) is an American investment banker and financial executive. He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region. He is the former president of CIT Group and reported directly to then CEO John Thain.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Wan Chai District Council\nWan Chai District Council () is the district council for the Wan Chai District in Hong Kong. It is one of 18 district councils. Wan Chai District currently consists of 13 members, of which the district is divided into 13 constituencies, electing a total of 13 members. The latest election was held on 22 November 2015.",
+                "Bloody Mary Morning\n\"Bloody Mary Morning\" is a song written by American country music singer-songwriter Willie Nelson. Nelson wrote the song inspired by his struggles to become a \"better parent\". It was originally released in the 1970 RCA Records release \"Both Sides Now\" with the title \"Bloody Merry Morning\".",
+                "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+                "DeWayne Patmon\nDeWayne Nelson Patmon (born April 25, 1979) is a former American football player. He played as a defensive back for University of Michigan from 1997 to 2000 where he won a national championship and three Big Ten Conference championships and for the New York Giants from 2001 to 2002. He has also had small parts in a pair of Hollywood film productions.",
+                "United States vice presidential selection, 1973\nIn 1973, Republican Vice President Spiro Agnew was forced to resign following a controversy over his personal taxes. Under the terms of the 25th Amendment, a vice presidential vacancy is filled when the president nominates a candidate who is confirmed by both houses of Congress. Republican President Richard Nixon thus had the task of selecting a vice president who could receive the majority support of both houses of Congress. Nixon considered selecting former Texas Governor John Connally, New York Governor Nelson Rockefeller, and California Governor Ronald Reagan. However, Nixon settled on House Minority Leader Gerald Ford of Michigan, who was popular among the members of Congress and who was good friends with Nixon. Ford won the approval of both houses by huge margins, and was sworn in as the 40th Vice President of the United States on December 6, 1973. In 1974, Ford ascended to the presidency after the Watergate scandal led to the resignation of President Nixon.",
+                "Nelson (band)\nNelson is an American rock band founded by singer/songwriters Matthew and Gunnar Nelson (twin sons of Ricky Nelson and Kristin Nelson). The band achieved success during the early 1990s with their double platinum debut album \"After the Rain\", which featured the number-one hit \"(Can't Live Without Your) Love and Affection\"."
+            ],
+            "thoughts": [
+                "The companies for which Nelson Chai has served as president are CIT Group and Bank of America's Asia-Pacific region.",
+                "The company founded in 1908 based in New York City where Nelson Chai served as president is CIT Group."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the financial holding company where Nelson Chai served as president.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about the financial holding company founded in 1908 and headquartered in New York City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Verify if the financial holding company identified as Nelson Chai's former employer matches the criteria of being founded in 1908 and headquartered in New York City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph starts by identifying the financial holding company where Nelson Chai served as president. Concurrently, it retrieves the relevant details of financial holding companies founded in 1908 and headquartered in New York City. It then concludes by checking if the company Nelson Chai was involved with matches the founding year and headquarters criteria."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Nelson Chai\nNelson Joosuk Chai (born 1965) is an American investment banker and financial executive. He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region. He is the former president of CIT Group and reported directly to then CEO John Thain.",
+                "Roman Sledziejowski\nRoman J. Sledziejowski (pronounced sleh-jay-YOV-ski) is a Polish-born investment manager widely recognized on Wall Street as an alleged criminal, liar, and thief, allegedly. After graduating from high school as class valedictorian, he attended Columbia University in New York City. In late 1990s Sledziejowski became one of the youngest licensed stockbrokers on Wall Street. He began his professional career at Salomon Smith Barney as an investment consultant in 1998, where he remained until 2002. From 2002 until 2004 he held the positions of Vice President and First Vice President for Prudential Financial, Inc. From 2004 until 2006, Sledziejowski served as a Senior Vice President of Investments and Firm's Investment Officer at Wachovia Securities. In 2006 he became the Chief Executive Officer of Innovest Holdings, a New York City\u2013based financial services holding company with several subsidiary entities. Among them was an SEC registered Broker/Dealer catering mostly to Latin American Financial Market, TWS Financial, LLC.",
+                "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+                "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+                "HSBC\nHSBC Holdings PLC is a British multinational banking and financial services holding company, tracing its origin to a hong in Hong Kong. It is the world's seventh largest bank by total assets and the largest in Europe with total assets of US$2.374 trillion (as of December 2016). It was established in its present form in London in 1991 by The Hongkong and Shanghai Banking Corporation Limited to act as a new group holding company. The origins of the bank lie mainly in Hong Kong and to a lesser extent in Shanghai, where branches were first opened in 1865. The HSBC name is derived from the initials of the Hongkong and Shanghai Banking Corporation. The company was first formally incorporated in 1866. The company continues to see both the United Kingdom and Hong Kong as its \"home markets\".",
+                "General Mediterranean Holding\nThe General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.",
+                "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+                "CIT Group\nCIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City. The company's name is an abbreviation of an early corporate name, Commercial Investment Trust. It provides financing and leasing capital to customers in over 30 industries. CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.",
+                "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+                "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+                "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+                "Astoria Bank\nAstoria Bank (formerly Astoria Federal Savings & Loan Association) is a bank based in Long Island City, New York. Astoria Financial Corporation is the holding company formed in 1993 to facilitate the conversion of Astoria Federal Savings and Loan Association from a mutual form of ownership to stock ownership. Astoria Financial Corporation, with assets of $16.5 billion, is the holding company for Astoria Federal Savings and Loan Association. Established in 1888, Astoria Federal, with deposits in New York totaling $10.4 billion, is the largest thrift depository in New York.",
+                "The Bank of New York Mellon\nThe Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City. It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation. The merger made the company one of the world's largest custodian banks and asset servicing companies.",
+                "Esp\u00edrito Santo Financial Group\nThe Esp\u00edrito Santo Financial Group (ESFG) is a Portuguese holding company with headquarters in Luxembourg, founded in 1984. The group represents the interests of the Portuguese \"Espirito Santo Group\", which has major investments in Portugal and Europe, Americas, Africa and Asia.",
+                "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+                "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage."
+            ],
+            "thoughts": [
+                "Nelson Chai served as the president of CIT Group, a financial holding company headquartered in New York City.",
+                "The financial holding company founded in 1908 and headquartered in New York City is JPMorgan Chase & Co. It is one of the oldest and largest financial institutions in the United States, providing a range of financial services including banking, investment, and asset management. JPMorgan Chase & Co. has a significant presence in the global financial market and is considered a major player in the industry.",
+                "Based on the information from the upstream tasks, it is clear that the financial holding company identified as Nelson Chai's former employer, CIT Group, does not match the criteria of being founded in 1908 and headquartered in New York City. Instead, the company that meets these criteria is JPMorgan Chase & Co. Therefore, the financial holding company associated with Nelson Chai is not the one founded in 1908 and headquartered in New York City."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify which financial holding company Nelson Chai was the president of.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about the company's history, including founding year and headquarters location, for the company identified in Step 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Check if the company from Step 2 was founded in 1908 and is headquartered in New York City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "To determine the financial holding company that Nelson Chai was formerly president of, and ensure it fits the criteria of being founded in 1908 and headquartered in New York City, the graph begins by identifying the company Nelson Chai led. Next, it verifies the founding year and headquarters location of this company to confirm it matches the question's parameters."
+            },
+            "recall": 0.8888888888888888,
+            "retrieved_passages": [
+                "Nelson Chai\nNelson Joosuk Chai (born 1965) is an American investment banker and financial executive. He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region. He is the former president of CIT Group and reported directly to then CEO John Thain.",
+                "General Mediterranean Holding\nThe General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.",
+                "CIT Group\nCIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City. The company's name is an abbreviation of an early corporate name, Commercial Investment Trust. It provides financing and leasing capital to customers in over 30 industries. CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.",
+                "Roman Sledziejowski\nRoman J. Sledziejowski (pronounced sleh-jay-YOV-ski) is a Polish-born investment manager widely recognized on Wall Street as an alleged criminal, liar, and thief, allegedly. After graduating from high school as class valedictorian, he attended Columbia University in New York City. In late 1990s Sledziejowski became one of the youngest licensed stockbrokers on Wall Street. He began his professional career at Salomon Smith Barney as an investment consultant in 1998, where he remained until 2002. From 2002 until 2004 he held the positions of Vice President and First Vice President for Prudential Financial, Inc. From 2004 until 2006, Sledziejowski served as a Senior Vice President of Investments and Firm's Investment Officer at Wachovia Securities. In 2006 he became the Chief Executive Officer of Innovest Holdings, a New York City\u2013based financial services holding company with several subsidiary entities. Among them was an SEC registered Broker/Dealer catering mostly to Latin American Financial Market, TWS Financial, LLC.",
+                "Astoria Bank\nAstoria Bank (formerly Astoria Federal Savings & Loan Association) is a bank based in Long Island City, New York. Astoria Financial Corporation is the holding company formed in 1993 to facilitate the conversion of Astoria Federal Savings and Loan Association from a mutual form of ownership to stock ownership. Astoria Financial Corporation, with assets of $16.5 billion, is the holding company for Astoria Federal Savings and Loan Association. Established in 1888, Astoria Federal, with deposits in New York totaling $10.4 billion, is the largest thrift depository in New York.",
+                "Esp\u00edrito Santo Financial Group\nThe Esp\u00edrito Santo Financial Group (ESFG) is a Portuguese holding company with headquarters in Luxembourg, founded in 1984. The group represents the interests of the Portuguese \"Espirito Santo Group\", which has major investments in Portugal and Europe, Americas, Africa and Asia.",
+                "HSBC\nHSBC Holdings PLC is a British multinational banking and financial services holding company, tracing its origin to a hong in Hong Kong. It is the world's seventh largest bank by total assets and the largest in Europe with total assets of US$2.374 trillion (as of December 2016). It was established in its present form in London in 1991 by The Hongkong and Shanghai Banking Corporation Limited to act as a new group holding company. The origins of the bank lie mainly in Hong Kong and to a lesser extent in Shanghai, where branches were first opened in 1865. The HSBC name is derived from the initials of the Hongkong and Shanghai Banking Corporation. The company was first formally incorporated in 1866. The company continues to see both the United Kingdom and Hong Kong as its \"home markets\".",
+                "The Bank of New York Mellon\nThe Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City. It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation. The merger made the company one of the world's largest custodian banks and asset servicing companies.",
+                "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+                "GMO Answers\nGMO Answers launched by the agricultural biotechnology industry in July 2013 to answer consumers\u2019 questions about genetically modified organisms (GMOs) in crops in the U.S. food supply. GMO Answers was created in part to respond to public concern about the safety of GMOs. GMO Answers \u201cexpert resources\u201d include conventional and organic farmers, agribusiness experts, scientists, academics, medical doctors and nutritionists, and \u201ccompany experts\u201d from founding members of the Council for Biotechnology Information, which funds the initiative. Founding members include BASF, Bayer CropScience, Dow AgroSciences, DuPont, Monsanto Company and Syngenta.",
+                "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+                "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+                "Four Peaks Brewery\nFour Peaks Brewery is an Arizona brewery and restaurant. The original and main location is in an old creamery and warehouse on 8th Street in Tempe, Arizona, about 1/2 mile east of the campus of Arizona State University. Nearby Scottsdale, Arizona boasts an additional location, and, in response to high demand (nearly 40,000 barrels in 2012 alone), another Tempe brewing site opened in the summer of 2012. The Tempe site was selected following a review of 25 potential sites, including the famed Sunkist facility in Mesa, Arizona and numerous warehouses in downtown Phoenix.",
+                "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong. It links Des Voeux Road Central to Queen's Road Central. It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+                "Scientology: The Now Religion\nScientology: The Now Religion is a non-fiction book on Scientology, written by George Malko. The book was the first full length analysis of the history surrounding the founding of the Church of Scientology, and L. Ron Hubbard. The author conducted interviews with members, and provides analysis about certain practices. The book was published in 1970 in Hardcover format by Delacorte Press, and then in a paperback edition in 1971, by Dell Publishing."
+            ],
+            "thoughts": [
+                "Nelson Chai was the president of CIT Group, a financial holding company founded in 1908 and headquartered in New York City.",
+                "The company identified in Step 1 is the National Mine Map Repository, which is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR was founded in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores over 182,000 maps of abandoned mines and serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States.",
+                "The company identified in Step 2, the National Mine Map Repository, was not founded in 1908 and is not headquartered in New York City. It was founded in the Pittsburgh suburb of Green Tree, Pennsylvania, and is part of the United States Department of the Interior. Therefore, it does not meet the criteria of being founded in 1908 and headquartered in New York City."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the company where Nelson Chai was the president.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve a list of financial holding companies founded in 1908.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve a list of financial holding companies headquartered in New York City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the company from the lists that matches both being founded in 1908 and headquartered in New York City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Combine the results to determine which company Nelson Chai was the former president of that matches the criteria of being founded in 1908 and headquartered in New York City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The execution graph begins by retrieving information about the company where Nelson Chai was a president, along with independent retrieval of companies founded in 1908 and those headquartered in New York City. A reasoning step then identifies companies that match both founded date and location criteria. Finally, the results are synthesized to determine if there is a match with the company where Nelson Chai was a former president."
+            },
+            "recall": 0.7777777777777778,
+            "retrieved_passages": [
+                "The Bank of New York Mellon\nThe Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City. It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation. The merger made the company one of the world's largest custodian banks and asset servicing companies.",
+                "CIT Group\nCIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City. The company's name is an abbreviation of an early corporate name, Commercial Investment Trust. It provides financing and leasing capital to customers in over 30 industries. CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.",
+                "Astoria Bank\nAstoria Bank (formerly Astoria Federal Savings & Loan Association) is a bank based in Long Island City, New York. Astoria Financial Corporation is the holding company formed in 1993 to facilitate the conversion of Astoria Federal Savings and Loan Association from a mutual form of ownership to stock ownership. Astoria Financial Corporation, with assets of $16.5 billion, is the holding company for Astoria Federal Savings and Loan Association. Established in 1888, Astoria Federal, with deposits in New York totaling $10.4 billion, is the largest thrift depository in New York.",
+                "New York Private Bank &amp; Trust\nNew York Private Bank & Trust Corporation is a bank holding company headquartered in New York City, United States. Howard Milstein is the Chairman, President & Chief Executive Officer. As of early 2007, it had $17.3 billion in assets and was the 50th largest bank holding company in the United States. The company has over 1211 employees.",
+                "JPMorgan Chase\nJPMorgan Chase & Co. is a U.S. multinational banking and financial services holding company headquartered in New York City. It is the largest bank in the United States, the world's sixth largest bank by total assets, with total assets of US$2.5 trillion, and the world's second most valuable bank by market capitalization, after ICBC. It is a major provider of financial services, and according to \"Forbes\" magazine is the world's sixth largest public company based upon a composite ranking. The hedge fund unit of JPMorgan Chase is the second largest hedge fund in the United States. The company was formed in 2000, when Chase Manhattan Corporation merged with J.P. Morgan & Co.",
+                "Roman Sledziejowski\nRoman J. Sledziejowski (pronounced sleh-jay-YOV-ski) is a Polish-born investment manager widely recognized on Wall Street as an alleged criminal, liar, and thief, allegedly. After graduating from high school as class valedictorian, he attended Columbia University in New York City. In late 1990s Sledziejowski became one of the youngest licensed stockbrokers on Wall Street. He began his professional career at Salomon Smith Barney as an investment consultant in 1998, where he remained until 2002. From 2002 until 2004 he held the positions of Vice President and First Vice President for Prudential Financial, Inc. From 2004 until 2006, Sledziejowski served as a Senior Vice President of Investments and Firm's Investment Officer at Wachovia Securities. In 2006 he became the Chief Executive Officer of Innovest Holdings, a New York City\u2013based financial services holding company with several subsidiary entities. Among them was an SEC registered Broker/Dealer catering mostly to Latin American Financial Market, TWS Financial, LLC.",
+                "BBVA Compass\nBBVA Compass Bancshares, Inc. (formerly Compass Bancshares) is a United States-based financial holding company headquartered in Birmingham, Alabama. It has been a subsidiary of the Spanish multinational Banco Bilbao Vizcaya Argentaria since 2007 and operates chiefly in Alabama, Arizona, California, Colorado, Florida, New Mexico, and Texas.",
+                "General Mediterranean Holding\nThe General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.",
+                "Nelson Chai\nNelson Joosuk Chai (born 1965) is an American investment banker and financial executive. He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region. He is the former president of CIT Group and reported directly to then CEO John Thain.",
+                "Esp\u00edrito Santo Financial Group\nThe Esp\u00edrito Santo Financial Group (ESFG) is a Portuguese holding company with headquarters in Luxembourg, founded in 1984. The group represents the interests of the Portuguese \"Espirito Santo Group\", which has major investments in Portugal and Europe, Americas, Africa and Asia.",
+                "IberiaBank\nIberiaBank Corporation, stylized as IBERIABANK, is an American financial holding company headquartered in Lafayette, LA and the largest bank based in Louisiana. Founded in 1887, it now has over 250 combined offices in 10 states primarily throughout the South. The company has eight locations with representatives of IBERIA Wealth Advisors in four states, and one IBERIA Capital Partners, L.L.C. office in New Orleans.",
+                "HSBC\nHSBC Holdings PLC is a British multinational banking and financial services holding company, tracing its origin to a hong in Hong Kong. It is the world's seventh largest bank by total assets and the largest in Europe with total assets of US$2.374 trillion (as of December 2016). It was established in its present form in London in 1991 by The Hongkong and Shanghai Banking Corporation Limited to act as a new group holding company. The origins of the bank lie mainly in Hong Kong and to a lesser extent in Shanghai, where branches were first opened in 1865. The HSBC name is derived from the initials of the Hongkong and Shanghai Banking Corporation. The company was first formally incorporated in 1866. The company continues to see both the United Kingdom and Hong Kong as its \"home markets\".",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "Wan Chai District Council\nWan Chai District Council () is the district council for the Wan Chai District in Hong Kong. It is one of 18 district councils. Wan Chai District currently consists of 13 members, of which the district is divided into 13 constituencies, electing a total of 13 members. The latest election was held on 22 November 2015.",
+                "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+                "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+                "Acuson\nAcuson Corporation was a sonography equipment company specializing in high quality medical ultrasound equipment. Founded in 1979 by Sam Maslak, Rob Younge and Amin Hanafy with the first product (The Acuson 128) shipped in 1983, Acuson pioneered many aspects related to medical ultrasound, most significantly the first fully computerized ultrasound system. In 1996 Acuson introduced the Sequoia 512 and Sequoia C256 systems (the latter for cardiac imaging). The principal architect of the Sequoia was Nelson Wright, who was Acuson's Vice President of Advanced Development. Wright also led the engineering team that developed the Sequoia. The Sequoia quickly became the biggest selling ultrasound system (by dollar volume) and it was manufactured in various versions until December 2008.",
+                "Pascal Brandys\nPascal Brandys (born 30 November 1958 in Roanne) is a French engineer and entrepreneur. He is a graduate of the \u00c9cole Polytechnique and received his M.S. in Economic Systems from Stanford University in 1982. He began his career in venture capital first in Tokyo and then in London, where he contributed to the first wave of biotechnology companies in Europe. He was the former president and founder of Genset Corporation, which became the European flagship in the field of genomics and at some point the second largest biotechnology company in Europe. He was also a co-founder and former president of France Biotech, the trade association of biotechnology companies in France. In 2001 he co-founded the biotechnology holding company Biobank in San Diego.",
+                "United States vice presidential selection, 1973\nIn 1973, Republican Vice President Spiro Agnew was forced to resign following a controversy over his personal taxes. Under the terms of the 25th Amendment, a vice presidential vacancy is filled when the president nominates a candidate who is confirmed by both houses of Congress. Republican President Richard Nixon thus had the task of selecting a vice president who could receive the majority support of both houses of Congress. Nixon considered selecting former Texas Governor John Connally, New York Governor Nelson Rockefeller, and California Governor Ronald Reagan. However, Nixon settled on House Minority Leader Gerald Ford of Michigan, who was popular among the members of Congress and who was good friends with Nixon. Ford won the approval of both houses by huge margins, and was sworn in as the 40th Vice President of the United States on December 6, 1973. In 1974, Ford ascended to the presidency after the Watergate scandal led to the resignation of President Nixon.",
+                "Stanley R. Lee\nStanley R. Lee (died 1997) was an advertising executive who wrote the novels \"Dunn's Conundrum\" (1985) and \"The God Project\" (1990) under the name \"Stan Lee\". He was copywriter for the notorious political commercial \"Daisy\" for the advertising firm DDB Worldwide and worked his way up to Senior Vice President of that company before being laid off in 1974."
+            ],
+            "thoughts": [
+                "Nelson Chai was the president of CIT Group.",
+                "The following financial holding companies were founded in 1908:\n\n1. CIT Group Inc. - Founded in 1908, headquartered in New York City, providing financing and leasing capital to customers in over 30 industries.\n\nUnfortunately, there are no other financial holding companies founded in 1908 in the provided information.",
+                "1. The Bank of New York Mellon Corporation\n2. CIT Group Inc.\n3. Astoria Financial Corporation\n4. New York Private Bank & Trust Corporation\n5. JPMorgan Chase & Co.",
+                "The company that matches both being founded in 1908 and headquartered in New York City is CIT Group Inc.",
+                "Nelson Chai was the former president of CIT Group, which was founded in 1908 and headquartered in New York City."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find out who Nelson Chai is and identify any notable companies he has been associated with as president.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the company where Nelson Chai was a former president.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Find information on financial holding companies founded in 1908.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "From the list of financial holding companies founded in 1908, identify which ones are headquartered in New York City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Determine which company identified in step 2 matches the criteria of being founded in 1908 and headquartered in New York City.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The task is to identify the financial holding company associated with Nelson Chai, which was founded in 1908 and is headquartered in New York City. To do this, we first need to find out about Nelson Chai's career and identify any companies he has been a president of. Then, we gather information about financial holding companies founded in 1908 and determine which ones are headquartered in New York City. Finally, we match the company where Nelson Chai was a president to the companies fitting the founding and headquarters criteria."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "CIT Group\nCIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City. The company's name is an abbreviation of an early corporate name, Commercial Investment Trust. It provides financing and leasing capital to customers in over 30 industries. CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.",
+                "General Mediterranean Holding\nThe General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.",
+                "You Know My Name (Chris Cornell song)\n\"You Know My Name\", performed by Soundgarden singer Chris Cornell, is the theme song to the 2006 James Bond film, \"Casino Royale.\" Cornell wrote it jointly with David Arnold, the soundtrack's composer. The film producers chose Cornell because they wanted a strong male singer. Cornell and Arnold tried to make the song a replacement theme for the character instead of the \"James Bond theme\" reflecting the agent's inexperience in \"Casino Royale\", as well as an introduction to Daniel Craig's grittier and more emotional portrayal of Bond. The single sold 148,000 copies in 2006 in the UK, peaked at number 7 in the UK singles chart, and has sold 323,000 digital copies and 3.5 million streams in the U.S. as of 2017.",
+                "Esp\u00edrito Santo Financial Group\nThe Esp\u00edrito Santo Financial Group (ESFG) is a Portuguese holding company with headquarters in Luxembourg, founded in 1984. The group represents the interests of the Portuguese \"Espirito Santo Group\", which has major investments in Portugal and Europe, Americas, Africa and Asia.",
+                "Kid Marine\nKid Marine is 3rd album by Robert Pollard, released in 1999. It is the first release of Robert Pollard's Fading Captain Series. Pollard has stated that the album is about Jeff \"Kid Marine\" Davis, the person pictured on the cover . Robert told Mojo magazine, \"My personal favorite, a weird record, almost a concept album, about the typical Ohio male and what he does - drink, watch television, eat pizza. It got mixed reviews, there are people who hate it and others who think it's our best record and I'm on their side. I just love the songs. It feels like one piece, like it all fits together. I like the cover and I like the",
+                "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Haven't You Heard? I'm Sakamoto\nHaven't You Heard? I'm Sakamoto (\u5742\u672c\u3067\u3059\u304c? , Sakamoto desu ga? , lit. \"I'm Sakamoto, You Know?\") is a Japanese manga series written and illustrated by Nami Sano. The manga follows a high school student named Sakamoto, who has a reputation for being the \"coolest\" person among the entire student body. The series has been licensed for an English release by Seven Seas Entertainment. An anime television adaptation by Studio Deen aired between April 8, 2016 and July 1, 2016.",
+                "The Bank of New York Mellon\nThe Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City. It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation. The merger made the company one of the world's largest custodian banks and asset servicing companies.",
+                "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+                "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+                "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+                "IberiaBank\nIberiaBank Corporation, stylized as IBERIABANK, is an American financial holding company headquartered in Lafayette, LA and the largest bank based in Louisiana. Founded in 1887, it now has over 250 combined offices in 10 states primarily throughout the South. The company has eight locations with representatives of IBERIA Wealth Advisors in four states, and one IBERIA Capital Partners, L.L.C. office in New Orleans.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Oriental Financial Group\nOriental Financial Group, Inc., more commonly known as Oriental Financial or Oriental Bank, is a financial holding company located in San Juan, Puerto Rico, which offers a range of financial services in Puerto Rico and the state of Florida through its four wholly owned subsidiaries: Oriental Bank (a bank), Oriental Financial Services Corp., Oriental Insurance, Inc., and Caribbean Pension Consultants, Inc. (CPC). Its headquarters are located at the Oriental Center at 997-1000 San Roberto Street, Professional Offices Park in San Juan. The Oriental Financial Group has over $7.6 billion in assets (2005), and approximately 520 employees.",
+                "Astoria Bank\nAstoria Bank (formerly Astoria Federal Savings & Loan Association) is a bank based in Long Island City, New York. Astoria Financial Corporation is the holding company formed in 1993 to facilitate the conversion of Astoria Federal Savings and Loan Association from a mutual form of ownership to stock ownership. Astoria Financial Corporation, with assets of $16.5 billion, is the holding company for Astoria Federal Savings and Loan Association. Established in 1888, Astoria Federal, with deposits in New York totaling $10.4 billion, is the largest thrift depository in New York."
+            ],
+            "thoughts": [
+                "Nelson Chai is an American businessman who has been associated with notable companies as president. He has served as the president of the financial services company CIT Group Inc. and as the president and CFO of the insurance company The Warranty Group.",
+                "Nelson Chai was a former president of CIT Group Inc.",
+                "The financial holding companies founded in 1908 are CIT Group and IberiaBank. CIT Group, founded in 1908, is headquartered in New York City and provides financing and leasing capital to customers in over 30 industries. IberiaBank, founded in 1887, is headquartered in Lafayette, LA and is the largest bank based in Louisiana, with over 250 combined offices in 10 states primarily throughout the South.",
+                "The financial holding company founded in 1908 and headquartered in New York City is CIT Group.",
+                "The company that matches the criteria of being founded in 1908 and headquartered in New York City is CIT Group Inc."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which financial holding company Nelson Chai was the president of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the company's history, including founding year and headquarters location, for the company identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the company from Step 2 was founded in 1908 and is headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine the financial holding company that Nelson Chai was formerly president of, and ensure it fits the criteria of being founded in 1908 and headquartered in New York City, the graph begins by identifying the company Nelson Chai led. Next, it verifies the founding year and headquarters location of this company to confirm it matches the question's parameters."
+    },
+    "best_recall": 0.8888888888888888
+}

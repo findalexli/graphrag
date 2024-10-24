@@ -1,0 +1,390 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify who Ari Up is and what her role in music is.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify who Boz Burrell is and what his role in music is.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine if Ari Up is a guitarist based on her role in music.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine if Boz Burrell is a guitarist based on his role in music.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Combine results to determine if both Ari Up and Boz Burrell are guitarists.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The execution graph is designed to first gather background information on each person (Ari Up and Boz Burrell) to determine their roles in music. This is done in parallel since the two tasks are independent. After retrieving relevant details, two reasoning nodes are used to assess whether Ari Up and Boz Burrell are guitarists individually. Finally, to answer the original question, a synthesis step reviews the findings from the reasoning nodes to determine if both are guitarists."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Ari Up\nAriane Daniela Forster (17 January 1962 \u2013 20 October 2010), known by her stage name Ari Up, was a German vocalist best known as a member of the English punk rock band The Slits.",
+                "Boz Burrell\nRaymond \"Boz\" Burrell (1 August 1946 \u2013 21 September 2006) was an English musician. Originally a vocalist and guitarist, Burrell is best known for his bass playing and work with the bands King Crimson and Bad Company. He died of a heart attack in Spain on 21 September 2006 aged 60.",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+                "Call Me by My Name\nCall Me by My Name is the sixth studio album by British soul singer Ruby Turner, released in October 1998. Turner co-wrote five songs and enlisted the help of rhythm and blues luminaries Bobby Tench, Zoot Money, Stan Webb and Bad Company bassist Boz Burrell.",
+                "Bad Company\nBad Company is an English hard rock supergroup formed in Westminster, London, in 1973 by two former Free band members\u2014singer Paul Rodgers and drummer Simon Kirke\u2014as well as Mott the Hoople guitarist Mick Ralphs and King Crimson bassist Boz Burrell. Peter Grant, who managed the rock band Led Zeppelin, also managed Bad Company until 1982.",
+                "ARIA Music Awards\nThe Australian Recording Industry Association Music Awards (commonly known informally as ARIA Music Awards or ARIA Awards) is an annual series of awards nights celebrating the Australian music industry, put on by the Australian Recording Industry Association (ARIA). The event has been held annually since 1987 and encompasses the general genre-specific and popular awards (these are what is usually being referred to as \"the ARIA awards\") as well as Fine Arts Awards and Artisan Awards (held separately from 2004), Lifetime Achievement Awards and ARIA Hall of Fame \u2013 held separately from 2005 to 2010 but returned to the general ceremony in 2011. For 2010, ARIA introduced public voted awards for the first time.",
+                "Boxer (band)\nBoxer were a rock band formed by keyboardist Mike Patto and guitarist Ollie Halsall in 1975. They signed to Virgin and three albums followed, \"Below the Belt\" (1975), \"Absolutely\" (1977) and \"Bloodletting\" (1979), which also featured Bobby Tench and Boz Burrell. The band dissolved after \"Absolutely\" when Patto became ill.",
+                "Wahu\nRosemary Wahu Kagwi, professionally known by her mononym Wahu, is a Kenyan singer-songwriter, former fashion model, actress and entrepreneur. She released her first single \"Niangalie\" which received positive reception all over Africa and the world at large. She is the inaugural recipient of the MTV Africa Music Awards 2008, for Best Female Artist category. Moreover, she has won the Pearl of Africa Music Awards, Chaguo La Teeniez Awards and Kisima Music Awards. In the acting industry, Wahu had a leading role in the television series \"Tazama\".",
+                "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+                "Marty Raybon\nMarty Raybon (born December 8, 1959) is an American country music artist. He is known primarily for his role as the lead singer of the band Shenandoah, a role which he held from 1985 to 1997, until he rejoined the band in 2014. He recorded his first solo album, \"Marty Raybon\", in 1995 on Sparrow Records. Before leaving Shenandoah in 1997, he and his brother Tim formed a duo known as the Raybon Brothers, which had crossover success that year with the hit single \"Butterfly Kisses\".",
+                "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+            ],
+            "thoughts": [
+                "Ari Up was a German vocalist best known as a member of the English punk rock band The Slits. She was known for her influential role in the punk music scene.",
+                "Based on the information provided, Ari Up is not known for being a guitarist, but rather as a vocalist in the punk rock band The Slits. Therefore, she is not a guitarist.",
+                "Boz Burrell was an English musician best known for his bass playing and work with the bands King Crimson and Bad Company. He was also involved in the band Boxer and collaborated with British soul singer Ruby Turner on her album \"Call Me by My Name.\" Burrell passed away in 2006 at the age of 60.",
+                "Based on the information provided, Boz Burrell is not a guitarist but rather a bass player. His primary role in music was as a bassist, and he is best known for his work in bands such as King Crimson and Bad Company. Therefore, he is not a guitarist.",
+                "Based on the results from upstream tasks 3 and 4, it can be determined that neither Ari Up nor Boz Burrell are guitarists. Therefore, the conclusion is that neither Ari Up nor Boz Burrell are guitarists."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about Ari Up, focusing on her musical career and the instruments she played.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about Boz Burrell, focusing on his musical career and the instruments he played.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine if Ari Up is known for playing the guitar.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine if Boz Burrell is known for playing the guitar.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Combine the results to determine if both Ari Up and Boz Burrell are guitarists.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The execution graph starts with retrieving information about the musical careers of both Ari Up and Boz Burrell. Then, it separately assesses whether each individual is known for playing guitar. Finally, it synthesizes these findings to answer whether both individuals are guitarists."
+            },
+            "recall": 0.5,
+            "retrieved_passages": [
+                "Ari Up\nAriane Daniela Forster (17 January 1962 \u2013 20 October 2010), known by her stage name Ari Up, was a German vocalist best known as a member of the English punk rock band The Slits.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Mike Mills\nMichael Edward \"Mike\" Mills (born December 17, 1958) is an American multi-instrumentalist, singer, and composer who was a founding member of the alternative rock band R.E.M. Though known primarily as a bass guitarist, backing vocalist, and pianist, his musical repertoire also includes keyboards, guitar, and percussion instruments. He contributed to a majority of the band's musical compositions.",
+                "Wardruna\nWardruna is a Norwegian music group dedicated to creating musical renditions of Norse cultural and esoteric traditions. It was formed in 2003 by Einar Selvik along with Gaahl and Lindy Fay Hella. The band have since released three full-length albums, each based on a set of runes. Their third album, \"Runaljod - Ragnarok\", was released on October 21, 2016. Wardruna make significant use of Nordic historical and traditional instruments including various percussion, flutes, kraviklyra, tagelharpe, mouth harp, goat horn and lur. Non-traditional instruments and other sources of sound like trees, rocks, water and torches are also used.",
+                "Captain Beefheart\nDon Van Vliet ( , born Don Glen Vliet; January 15, 1941 \u2013 December 17, 2010) was an American singer, songwriter, musician and artist best known by the stage name Captain Beefheart. His musical work was conducted with a rotating ensemble of musicians called the Magic Band (1964\u20131982), with whom he recorded 13 studio albums. Noted for his powerful singing voice and his wide vocal range, Van Vliet also played the harmonica, saxophone, and numerous other wind instruments. His music integrated blues, rock, psychedelia, and free jazz with contemporary experimental composition and the avant-garde. Beefheart was also known for often constructing myths about his life and for exercising an almost dictatorial control over his supporting musicians.",
+                "Paul Giles\nPaul Giles is a retired Welsh professional footballer. He is the younger brother of former Welsh international footballer David Giles. Giles started off his career at Cardiff City where he was on their books from the age of seven. He is one of only a few UK based footballers who have played in the top flight of Dutch football and up until recently was the only Welsh player along with Trevor Ford and Nick Deacy for whom both played for PSV Eindhoven to have played there. At this time in his career Giles played against upcoming footballers such as Ruud Gullit and Marco van Basten also the Dutch legend Johan Cruyff.",
+                "Robert Giardinelli\nRobert Giardinelli (1914 in Catania, Italy \u2013 1996 in New York City, New York) was a noted musical instrument craftsman who operated a musical instrument repair shop in New York City. After immigrating to the United States, Giardinelli served in the United States Army during World War II. Starting in the Bronx in 1946, he later moved his music shop to midtown Manhattan, where he remained in business for over 40 years until his retirement. Giardinelli's business included musical mouthpiece manufacturing, a discount retail music store, and a custom repair shop for brass and wind instruments. Giardinelli's music shop was located on the upper floors at 151 West 46th Street. His business became a world-renowned stop for musicians during the 1980's.",
+                "Thumbs Up (film)\nThumbs Up is a 1943 American musical drama film directed by Joseph Santley and starring Brenda Joyce, Richard Fraser and Elsa Lanchester.",
+                "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+                "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+                "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+                "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+                "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+                "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+                "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+                "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+            ],
+            "thoughts": [
+                "Ari Up, born Ariane Daniela Forster, was a German vocalist best known for her role as a member of the English punk rock band The Slits. She was known for her powerful and distinctive singing voice. While there is no specific information available about the instruments she played, it is likely that as a member of a punk rock band, she may have played guitar or other traditional punk rock instruments.\n\nUnfortunately, there is no specific information available about Ari Up's musical career or the instruments she played.",
+                "It is unclear if Ari Up is known for playing the guitar, as there is no specific information available about her musical career or the instruments she played.",
+                "Boz Burrell was a musician best known for his work as the bassist and vocalist for the rock band Bad Company. He also played with the bands King Crimson and Boz. Burrell was primarily a bass player, but he also played guitar and provided vocals for his bands. His musical career was marked by his contributions to the rock music scene, particularly with Bad Company.",
+                "No, Boz Burrell is not primarily known for playing the guitar. He is best known as a bassist and vocalist for the rock band Bad Company, and also played with other bands such as King Crimson and Boz. While he did play guitar and provide vocals for his bands, his primary instrument was the bass.",
+                "Based on the results from the upstream tasks, it is unclear if Ari Up is known for playing the guitar, and Boz Burrell is not primarily known for playing the guitar. Therefore, it can be determined that neither Ari Up nor Boz Burrell are guitarists."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about Ari Up, focusing on musical career and instruments played.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about Boz Burrell, focusing on musical career and instruments played.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine whether Ari Up is a guitarist based on the information about her musical career and instruments played.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine whether Boz Burrell is a guitarist based on the information about his musical career and instruments played.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Combine findings to conclude whether both Ari Up and Boz Burrell are guitarists.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The execution graph starts with retrieving information about the musical careers and instruments played by Ari Up and Boz Burrell. Separate reasoning nodes then determine if each individual is a guitarist. The final node synthesizes these findings to answer the original question."
+            },
+            "recall": 0.3333333333333333,
+            "retrieved_passages": [
+                "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+                "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+                "Captain Beefheart\nDon Van Vliet ( , born Don Glen Vliet; January 15, 1941 \u2013 December 17, 2010) was an American singer, songwriter, musician and artist best known by the stage name Captain Beefheart. His musical work was conducted with a rotating ensemble of musicians called the Magic Band (1964\u20131982), with whom he recorded 13 studio albums. Noted for his powerful singing voice and his wide vocal range, Van Vliet also played the harmonica, saxophone, and numerous other wind instruments. His music integrated blues, rock, psychedelia, and free jazz with contemporary experimental composition and the avant-garde. Beefheart was also known for often constructing myths about his life and for exercising an almost dictatorial control over his supporting musicians.",
+                "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+                "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+                "Mike Mills\nMichael Edward \"Mike\" Mills (born December 17, 1958) is an American multi-instrumentalist, singer, and composer who was a founding member of the alternative rock band R.E.M. Though known primarily as a bass guitarist, backing vocalist, and pianist, his musical repertoire also includes keyboards, guitar, and percussion instruments. He contributed to a majority of the band's musical compositions.",
+                "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+                "Wardruna\nWardruna is a Norwegian music group dedicated to creating musical renditions of Norse cultural and esoteric traditions. It was formed in 2003 by Einar Selvik along with Gaahl and Lindy Fay Hella. The band have since released three full-length albums, each based on a set of runes. Their third album, \"Runaljod - Ragnarok\", was released on October 21, 2016. Wardruna make significant use of Nordic historical and traditional instruments including various percussion, flutes, kraviklyra, tagelharpe, mouth harp, goat horn and lur. Non-traditional instruments and other sources of sound like trees, rocks, water and torches are also used.",
+                "Ari Up\nAriane Daniela Forster (17 January 1962 \u2013 20 October 2010), known by her stage name Ari Up, was a German vocalist best known as a member of the English punk rock band The Slits.",
+                "Paul Giles\nPaul Giles is a retired Welsh professional footballer. He is the younger brother of former Welsh international footballer David Giles. Giles started off his career at Cardiff City where he was on their books from the age of seven. He is one of only a few UK based footballers who have played in the top flight of Dutch football and up until recently was the only Welsh player along with Trevor Ford and Nick Deacy for whom both played for PSV Eindhoven to have played there. At this time in his career Giles played against upcoming footballers such as Ruud Gullit and Marco van Basten also the Dutch legend Johan Cruyff.",
+                "Sarah Paulson\nSarah Catharine Paulson (born December 17, 1974) is an American actress. After beginning her acting career on stage, she starred in the 1990s television series \"American Gothic\" (1995\u201396) and \"Jack & Jill\" (1999\u20132001). Paulson later appeared in comedy films such as \"What Women Want\" (2000) and \"Down with Love\" (2003), and had dramatic roles in films such as \"Path to War\" (2002) and \"The Notorious Bettie Page\" (2005). From 2006 to 2007, Paulson played the role of Harriet Hayes in the NBC comedy-drama series \"Studio 60 on the Sunset Strip\", for which she received her first Golden Globe Award nomination. In 2008, she starred as Ellen Dolan in the superhero noir film \"The Spirit\"."
+            ],
+            "thoughts": [
+                "Ari Up, born Ariane Daniela Forster, was a German vocalist best known as a member of the English punk rock band The Slits. She was known for her unique vocal style and her influential role in the punk music scene. As a member of The Slits, Ari Up played a significant role in shaping the sound and attitude of the band, contributing to their distinctive and influential music. While specific information about the instruments she played is not readily available, her impact on the punk rock genre is widely recognized.",
+                "Based on the information provided, there is no indication that Ari Up was a guitarist. She is primarily known as a vocalist and for her influential role in the punk music scene. While she may have played instruments, the information does not specify that she played the guitar. Therefore, it cannot be determined whether Ari Up was a guitarist based on the information provided.",
+                "Boz Burrell was an English musician best known for his work as the bassist and vocalist for the rock bands King Crimson and Bad Company. He was also a member of the blues rock band Boz, which he formed after leaving King Crimson. Burrell was primarily known for playing the bass guitar, but he also played other instruments such as the piano and guitar. His musical career spanned several decades and he made significant contributions to the rock and blues genres.",
+                "Based on the information provided, Boz Burrell was primarily known for playing the bass guitar, but he also played other instruments such as the piano and guitar. Therefore, he is not primarily known as a guitarist, but rather as a bassist and vocalist.",
+                "Based on the findings, it cannot be concluded that both Ari Up and Boz Burrell are guitarists. Ari Up is primarily known as a vocalist and her role in the punk music scene, with no indication of her being a guitarist. Boz Burrell, on the other hand, is primarily known as a bassist and vocalist, with the ability to play the guitar as well. Therefore, it can be concluded that Boz Burrell is not primarily a guitarist, and there is no indication that Ari Up is a guitarist."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about Ari Up's musical instrument associations.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Retrieve information about Boz Burrell's musical instrument associations.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine if Ari Up is a guitarist based on the retrieved information.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine if Boz Burrell is a guitarist based on the retrieved information.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Synthesize information to conclude if both Ari Up and Boz Burrell are guitarists.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3",
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The execution graph begins by retrieving information about the musical instruments associated with Ari Up and Boz Burrell independently. Once we have the relevant data, we analyze it to determine whether each individual is a guitarist. Finally, we combine the results of these analyses to answer the original question, 'Are Ari Up and Boz Burrell both guitarists?'"
+            },
+            "recall": 0.0,
+            "retrieved_passages": [
+                "List of word board games\nWord board games are those games played on a board as players of the game attempt to construct words that use a scoring system. The player with the highest score wins the game. Many if not most board games are also available as software programs and online. Online word board games can be organized so that the player is playing against other people or the game can be played against an automated program acting as an artificial intelligence. Players of some word board games organize themselves into associations, clubs, and tournaments.",
+                "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+                "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+                "How? (song)\n\"How?\" is a song from John Lennon's second solo album \"Imagine\", released in 1971. It is a contemplative song inspired by the Primal Therapy he was undergoing with his wife Yoko Ono, during which he faced many personal questions such as \"How can I go forward when I don't know which way I'm facing?\" This song also shows his thoughts about the world in general (such as \"And the World is so tough; Sometimes I feel I've had enough\").",
+                "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+                "Sistrum\nA sistrum (plural: sistrums or Latin sistra; from the Greek \u03c3\u03b5\u1fd6\u03c3\u03c4\u03c1\u03bf\u03bd \"seistron\" of the same meaning; literally \"that which is being shaken\", from \u03c3\u03b5\u03af\u03b5\u03b9\u03bd \"seiein\", \"to shake\") is a musical instrument of the percussion family, chiefly associated with ancient Iraq and Egypt. It consists of a handle and a U-shaped metal frame, made of brass or bronze and between 30 and 76\u00a0cm in width. When shaken the small rings or loops of thin metal on its movable crossbars produce a sound that can be from a soft clank to a loud jangling. Its name in the ancient Egyptian language was sekhem \"(s\u1e2bm)\" and sesheshet \"(s\u0161\u0161t).\" Sekhem is the simpler, hoop-like sistrum, while sesheshet (an onomatopoeic word) is the naos-shaped one.",
+                "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+                "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+                "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+                "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+                "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+                "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+                "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album."
+            ],
+            "thoughts": [
+                "There is no specific information available about Ari Up's musical instrument associations in the provided text.",
+                "Based on the lack of specific information about Ari Up's musical instrument associations, it cannot be determined if she is a guitarist.",
+                "There is no information available about Boz Burrell's musical instrument associations in the provided text.",
+                "Based on the lack of information about Boz Burrell's musical instrument associations, it cannot be determined if he is a guitarist.",
+                "Based on the lack of specific information about Ari Up and Boz Burrell's musical instrument associations, it cannot be concluded if both of them are guitarists. Without clear evidence or confirmation, it is not possible to determine their roles as guitarists."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Determine if Ari Up was a guitarist by retrieving factual information about her musical roles.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine if Boz Burrell was a guitarist by retrieving factual information about his musical roles.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Combine the information on whether Ari Up and Boz Burrell were guitarists to answer the question.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task is broken down into two major retrievals to determine the primary musical function of each individual, Ari Up and Boz Burrell. Each retrieval step gathers specific details about the person's role in music, particularly focusing on whether they played the guitar. Once both pieces of information are retrieved, a reasoning step is required to synthesize this information and produce a final answer to the question of whether both were guitarists."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Boz Burrell\nRaymond \"Boz\" Burrell (1 August 1946 \u2013 21 September 2006) was an English musician. Originally a vocalist and guitarist, Burrell is best known for his bass playing and work with the bands King Crimson and Bad Company. He died of a heart attack in Spain on 21 September 2006 aged 60.",
+                "Boxer (band)\nBoxer were a rock band formed by keyboardist Mike Patto and guitarist Ollie Halsall in 1975. They signed to Virgin and three albums followed, \"Below the Belt\" (1975), \"Absolutely\" (1977) and \"Bloodletting\" (1979), which also featured Bobby Tench and Boz Burrell. The band dissolved after \"Absolutely\" when Patto became ill.",
+                "Bad Company\nBad Company is an English hard rock supergroup formed in Westminster, London, in 1973 by two former Free band members\u2014singer Paul Rodgers and drummer Simon Kirke\u2014as well as Mott the Hoople guitarist Mick Ralphs and King Crimson bassist Boz Burrell. Peter Grant, who managed the rock band Led Zeppelin, also managed Bad Company until 1982.",
+                "Saiichi Sugiyama\nSaiichi Sugiyama (born 1960 in Tokyo, Japan) is a British-based guitarist, singer and composer, best known for his writing and performing collaborations with Pete Brown, the lyricist for Cream since 2002 to date. His previous bands in 1990s featured Mike Casswell and Phil Williams of Walk on Fire, Andy Smith of Hot Chocolate, Zoot Money, Boz Burrell of Bad Company, John Cook of Rory Gallagher band as well as the guitarist, Paul Wassif. Sugiyama's self-published studio albums in 2000s featured Clem Clempson of Colosseum, Pete Brown (who co-wrote and co-produced the albums), Zoot Money and Ben Matthews of Thunder. Sugiyama plays a Gibson Les Paul guitar and Marshall amplifiers. His guitar style has more than a passing resemblance to that of Peter Green and has a vibrato technique similar that of Paul Kossoff.",
+                "Mike Mills\nMichael Edward \"Mike\" Mills (born December 17, 1958) is an American multi-instrumentalist, singer, and composer who was a founding member of the alternative rock band R.E.M. Though known primarily as a bass guitarist, backing vocalist, and pianist, his musical repertoire also includes keyboards, guitar, and percussion instruments. He contributed to a majority of the band's musical compositions.",
+                "Call Me by My Name\nCall Me by My Name is the sixth studio album by British soul singer Ruby Turner, released in October 1998. Turner co-wrote five songs and enlisted the help of rhythm and blues luminaries Bobby Tench, Zoot Money, Stan Webb and Bad Company bassist Boz Burrell.",
+                "Before I Forget (album)\nBefore I Forget is a 1982 album by Jon Lord, featuring a largely conventional eight-song line-up, no orchestra. The bulk of the songs are either mainstream rock tracks (\"Hollywood Rock and Roll\", \"Chance on a Feeling\") or, specifically on Side Two, a series of very English classical piano ballads sung by mother and daughter duo, Vicki Brown and Sam Brown (wife and daughter of entertainer Joe Brown) and vocalist Elmer Gantry. The album also features prolific session drummer (and National Youth Jazz Orchestra alumnus) Simon Phillips, Cozy Powell, Neil Murray, Simon Kirke, Boz Burrell and Mick Ralphs. Lord used synthesizers more than before, principally to retain an intimacy with the material and to create a jam atmosphere with old friends like Tony Ashton.",
+                "Adaraneeya Kathawak\nAdaraneeya Kathawak (English: \"A Melody Of Love\" ) is a 2016 Sri Lankan Sinhala romantic musical film, directed and co-produced by Priyantha Colombage. It was released on 10 June 2016. Starring Hemal Ranasinghe, Udari Warnakulasooriya, Bimal Jayakody and Aruni Rajapaksha in the lead roles. The film has influenced by romantic musical Bollywood film \"Aashiqui 2\".",
+                "Ari Up\nAriane Daniela Forster (17 January 1962 \u2013 20 October 2010), known by her stage name Ari Up, was a German vocalist best known as a member of the English punk rock band The Slits.",
+                "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+                "Thumbs Up (film)\nThumbs Up is a 1943 American musical drama film directed by Joseph Santley and starring Brenda Joyce, Richard Fraser and Elsa Lanchester.",
+                "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+                "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+                "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+                "Ratha Sapthami\nRatha Sapthami (\u0cb0\u0ca5\u0cb8\u0caa\u0ccd\u0ca4\u0cae\u0cbf) is a 1986 Indian-Kannada romantic musical film directed by M. S. Rajashekar and produced by S. A. Govindaraj. The film starred Shivarajkumar in his second venture after \"Anand\" and debutant actress Asha Rani and playwrighter Parvathavani in the lead roles. The film had a musical score composed by Upendra Kumar while the lyrics, screenplay and dialogues were written by Chi. Udaya Shankar. P. Vasu was co-writer of this movie. The movie is based on Kannada novel of same name by Vidyullatha Sasanoor."
+            ],
+            "thoughts": [
+                "Ari Up was not a guitarist, but rather a vocalist known for her role as a member of the English punk rock band The Slits.",
+                "Boz Burrell was not primarily a guitarist, but rather a vocalist and bass player. He is best known for his work with the bands King Crimson and Bad Company, where he played bass. Additionally, he was involved in the band Boxer, where he also played bass. There is no information indicating that he played guitar in any of his musical roles.",
+                "Neither Ari Up nor Boz Burrell were guitarists. Ari Up was a vocalist for The Slits, and Boz Burrell was a vocalist and bass player for bands like King Crimson and Bad Company."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Ari Up is and what her role in music is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify who Boz Burrell is and what his role in music is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Ari Up is a guitarist based on her role in music.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Boz Burrell is a guitarist based on his role in music.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine results to determine if both Ari Up and Boz Burrell are guitarists.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is designed to first gather background information on each person (Ari Up and Boz Burrell) to determine their roles in music. This is done in parallel since the two tasks are independent. After retrieving relevant details, two reasoning nodes are used to assess whether Ari Up and Boz Burrell are guitarists individually. Finally, to answer the original question, a synthesis step reviews the findings from the reasoning nodes to determine if both are guitarists."
+    },
+    "best_recall": 0.9444444444444444
+}

@@ -1,0 +1,173 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the singer who performs 'Pon de Replay' and was born Robyn Fenty.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the birthplace of the singer identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two main steps. First, we need to identify the singer based on the criteria given: they perform 'Pon de Replay' and were born Robyn Fenty. This information is enough to determine that the singer is Rihanna. Once this identification is complete, we use this information to find her birthplace, which is the final answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the singer who performs 'Pon de Replay'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the birth name of the singer identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if the birth name from Node 2 matches 'Robyn Fenty'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the birth place of the singer identified as Robyn Fenty.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the question into steps to identify the singer, confirm their legal name is Robyn Fenty, and retrieve the birth place. \n1. First, identify who performs 'Pon de Replay'. This retrieval node checks public music databases. \n2. Retrieve the birth name of the identified singer. \n3. Confirm that the birth name matches 'Robyn Fenty'. \n4. Retrieve the birthplace based on the confirmed match from step 3. The final node provides the answer to the birthplace question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the performer of 'Pon de Replay'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the birth name of the performer identified in Node 1. Confirm if they were born Robyn Fenty.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the birthplace of Robyn Fenty (Rihanna).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by identifying the performer of the song 'Pon de Replay', which is a crucial first step as it connects the popular song to its singer. The second node verifies this performer's birth name to ensure it matches 'Robyn Fenty', reducing ambiguity if there are similar artists. The final node then retrieves the birthplace of the confirmed individual, Robyn Fenty, also known as Rihanna."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the real name of the singer who performs 'Pon de Replay'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify where Robyn Fenty was born.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify that the singer 'Pon de Replay' and Robyn Fenty refer to the same person.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the birthplace of the singer if verified to be Robyn Fenty.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by retrieving information on the real name of the artist who performs 'Pon de Replay' to establish whether it's Robyn Fenty (node 1). Concurrently, it retrieves the birthplace of Robyn Fenty (node 2). Node 3 confirms whether both refer to the same individual. Finally, if this condition holds true, the birthplace from node 2 is determined to be the answer, synthesized in node 4."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the singer who performs 'Pon de Replay'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the birth name of the singer identified in Step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Match the birth name from Step 2 with 'Robyn Fenty' to confirm identity.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the birthplace of Robyn Fenty once identity is confirmed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the process required to answer the question by first identifying the singer of 'Pon de Replay', then confirming this singer's birth name is Robyn Fenty, and finally retrieving the birthplace of Robyn Fenty."
+    }
+]

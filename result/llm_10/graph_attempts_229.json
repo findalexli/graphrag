@@ -1,0 +1,182 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the biographies of the identified actors from Marcus Welby, M.D., focusing on their spouses.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the name of the actor's spouse from their biographies.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find the name of the actor's spouse who married an actor from Marcus Welby, M.D.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by identifying the main actors from the show 'Marcus Welby, M.D.'. Then, it retrieves the biographies of these actors to find information about their spouses. The reasoning step extracts the names of the spouses from these biographies. Finally, the graph concludes by selecting the name of the spouse married to an actor from 'Marcus Welby, M.D.'."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors who starred in the TV show Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve personal life details of the actors identified in Node 1, focusing on their marital status and spouse information.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the spouses of the actors from Node 2 is famous or noteworthy, if any. This may include cross-referencing their involvement in the entertainment industry or public life.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to find someone who married a man starring in a specific TV show, 'Marcus Welby, M.D.'. The graph starts by retrieving actors from the TV show (Node 1). The next step is to gather information about the personal lives of these actors, specifically their marriage details (Node 2). Finally, the graph determines which actor is married to someone significant enough to be the person referred to in the question (Node 3). The execution is designed to focus on narrowing down the possibilities by initially identifying all potential candidates and then filtering according to marital information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify actors who starred in the TV show Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each actor identified in Step 1, check their marital history to find if any are currently or were previously married.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile a list of spouses from the marital history found in Step 2, identifying those who are married to or were married to any actor from Marcus Welby, M.D.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Present the name(s) of the person who married a man who starred in Marcus Welby, M.D.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task requires understanding who was married to the actors from the TV show 'Marcus Welby, M.D.'. The process begins by identifying the main cast of the show in Step 1. Step 2 involves retrieving and examining the marital history of these actors. Step 3 compiles the names of the spouses of these actors. Finally, Step 4 presents the answer to the given question by listing those who married a man from the cast."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the spouses of each of the identified actors from Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if any spouses are married to a man who starred in Marcus Welby, M.D.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task involves identifying actors from \"Marcus Welby, M.D.\" and then finding who they were married to. The graph starts by retrieving the main actors from the TV show. Then, it gathers information about the spouses of these actors. Finally, it analyzes this information to answer the question of who among these spouses was married to a man who starred in \"Marcus Welby, M.D.\"."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the main actors in the TV show Marcus Welby, M.D.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of people each actor from Marcus Welby, M.D. married.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the people identified in the previous step is a man who was married to someone.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify who married the man found in the previous node.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph starts by identifying the actors who starred in the show Marcus Welby, M.D. Then, it retrieves information about the spouses of these actors. The next step is to determine which actor is a man and identifies who is their spouse. Finally, it finds who is married to this man, thus answering the question."
+    }
+]

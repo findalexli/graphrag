@@ -1,0 +1,199 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which soliloquy in the 'nunnery scene' of Shakespeare's play 'Hamlet' contains a reference to the 'undiscovered country'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the text of Hamlet's soliloquy identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the opening phrase of the soliloquy identified in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by identifying which soliloquy in the 'nunnery scene' contains the reference to the 'undiscovered country'. This is necessary because Hamlet has multiple soliloquies in the play. Once the correct soliloquy is identified, its text is retrieved. Finally, the task is to determine the opening phrase of the soliloquy, which directly answers the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the soliloquies spoken by Prince Hamlet in the 'nunnery scene' of William Shakespeare's 'Hamlet'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the text of each identified soliloquy from the 'nunnery scene' of Shakespeare's 'Hamlet'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the retrieved soliloquies to find references to the 'undiscovered country'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which soliloquy and specific phrase refers to the concept of the afterlife as the 'undiscovered country'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task involves identifying the soliloquies spoken by Hamlet in the specific 'nunnery scene', retrieving the text of those soliloquies, and analyzing them to find a reference to the 'undiscovered country'. The analysis includes determining which phrase specifically mentions the concept of the afterlife in that manner. This approach first narrows down the potential sources of information by focusing on the relevant scene and character before extracting and analyzing specific text."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the nunnery scene in William Shakespeare's play \"Hamlet\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the soliloquies from the nunnery scene in \"Hamlet\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the soliloquies to find any references to the afterlife described as \"undiscovered country.\"",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the opening phrase of the soliloquy that contains the reference to the afterlife as \"undiscovered country.\"",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "This execution graph starts by locating the nunnery scene within \"Hamlet,\" then identifies the soliloquies delivered in that scene. It then checks each soliloquy for the reference to the afterlife as \"undiscovered country.\" The final step is to identify the opening phrase of the specific soliloquy that contains this reference."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the soliloquy spoken by Prince Hamlet in the 'nunnery scene' of William Shakespeare's play 'Hamlet'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the opening phrase of the soliloquy obtained from the 'nunnery scene'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which part of the soliloquy refers to 'Undiscovered Country' and how it relates to the concept of the afterlife.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Synthesize information to confirm the exact opening phrase that references 'Undiscovered Country' with respect to the afterlife as mentioned in the soliloquy.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins with retrieving the full text of the soliloquy from the nunnery scene in 'Hamlet'. The nodes then break down the task into identifying the opening phrase of the soliloquy and analyzing the relevance of 'Undiscovered Country' within that text. The graph utilizes a reasoning node to correlate the phrase in question with its role in describing the afterlife and concludes by synthesizing the gathered insights to provide a complete answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the play 'Hamlet' by William Shakespeare and its themes.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the 'nunnery scene' within the play 'Hamlet'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve and examine the soliloquies spoken by Prince Hamlet in the 'nunnery scene'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the meaning of the phrase 'undiscovered country'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify the soliloquy by Prince Hamlet that includes the phrase 'undiscovered country'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is structured to first identify the context of the question, which is the play 'Hamlet' by Shakespeare (Node 1). Subsequently, it identifies the specific 'nunnery scene' (Node 2) to narrow down the location of the desired soliloquy. Then, the graph instructs to retrieve the soliloquies spoken by Prince Hamlet in that scene (Node 3). After securing the right scene and character, it examines the meaning of 'undiscovered country' as the afterlife (Node 4), and finally identifies the soliloquy where this phrase appears (Node 5). This structured approach ensures a precise extraction of the relevant soliloquy from the play."
+    }
+]

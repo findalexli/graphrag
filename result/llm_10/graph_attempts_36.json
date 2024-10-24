@@ -1,0 +1,172 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the English actor born on 25 June 1961.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the filmography or TV show appearances for the actor identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which of the retrieved appearances are linked to the TV series 'Alias'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the season(s) of 'Alias' in which the identified actor appears.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To determine which season of 'Alias' the actor appears in, first identify the actor using the birthdate. Then gather their appearances to check if they were involved with 'Alias'. Finally, verify the specific season(s) of the show in which they appeared."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the English actor born on 25 June 1961.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the filmography of the identified actor, focusing on the TV series Alias.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which seasons of Alias the actor appeared in based on their filmography.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with identifying the English actor born on 25 June 1961, which is necessary to link the person to their roles. After retrieving the actor's name, the next step involves collecting their acting credits for the series Alias. The final node synthesizes this information to determine which seasons featured the actor."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the English actor born on 25 June 1961.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which seasons of Alias each actor appeared in, with a focus on Seymour Mace.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compile the specific seasons of Alias Seymour Mace appears in.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task requires identifying the actor by his birth date, then checking his appearances in the series Alias. The graph starts by identifying the actor, followed by checking his involvement in Alias, and finally compiles the specific seasons of his appearance."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify all seasons of the TV show 'Alias'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify English actors born on June 25, 1961.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the filmography of actors identified in step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check if any actor from step 3 appeared in 'Alias' and identify the specific season(s).",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The question requires determining which season of the TV show 'Alias' features an English actor born on a specific date. The execution graph starts with identifying all seasons of 'Alias' for context (Node 1) and separately identifies English actors with the given birthdate (Node 2). After finding potential actors, their filmographies are acquired (Node 3), which is used to check for their participation in 'Alias' and determine the relevant season(s) (Node 4). This is a multi-hop task that involves both retrieval of information about actors and the show's seasons, and reasoning to connect these pieces of information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "0",
+                    "instruction": "Identify the English actor born on 25 June 1961.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the filmography of the identified actor from node 0.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "0"
+                    ]
+                },
+                {
+                    "id": "2",
+                    "instruction": "Check which seasons of the show 'Alias' the actor from node 0 appeared in based on their filmography from node 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "0",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is broken down into identifying the English actor with the specified birth date, retrieving their filmography, and then checking which season(s) of 'Alias' they appeared in. The focus is to first ensure we have the correct actor and then determine their involvement in the series."
+    }
+]

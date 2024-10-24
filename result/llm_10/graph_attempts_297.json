@@ -1,0 +1,219 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the key entities in the question: Spider9, Wanxiang Group, subsidiary of Wanxiang Group.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for information on Spider9 and its founding, focusing specifically on the year 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find a list of subsidiaries under Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the person who founded Spider9 in 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the position or company the founder of Spider9 was associated with in 2011, focusing on connections to Wanxiang Group subsidiaries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Verify which subsidiary of Wanxiang Group the founder of Spider9 was leading or associated with in 2011.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The task requires identifying the founder of Spider9 and their connection to a Wanxiang Group subsidiary in 2011. Steps include identifying key entities, retrieving details about Spider9's founding, listing Wanxiang Group subsidiaries, and confirming the founder's position related to those subsidiaries."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the current or past subsidiaries of Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each subsidiary identified, find information about its leadership, especially any heads or CEOs around the year 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which, if any, of these leaders founded Spider9 in 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the process of identifying the founder of Spider9 who was the head of a Wanxiang Group subsidiary. The process starts by listing Wanxiang Group's subsidiaries (Node 1). Then, it involves finding the heads or CEOs of these subsidiaries around 2011 (Node 2). Lastly, it cross-references these leaders with the founder of Spider9 (Node 3) to provide the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Spider9, including its founding details and founders.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the founders of Spider9 from the information retrieved.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve background information on each identified founder to find their connections to other organizations, particularly any subsidiaries of Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve a list or relevant details about the subsidiaries of Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Analyze the founder's backgrounds to determine which, if any, was associated with a subsidiary of Wanxiang Group at the time of founding Spider9.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Identify and confirm which subsidiary of Wanxiang Group was headed by the founder of Spider9 in 2011.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph is designed to break down the original question into a series of retrieval and reasoning steps. The initial retrieval gathers foundational information about Spider9 and its founders. Subsequent steps involve retrieving detailed backgrounds on the founders and identifying Wanxiang Group's subsidiaries. This information is then analyzed to determine any connection between the founders and the subsidiaries, specifically focusing on which subsidiary was headed by a founder of Spider9 in 2011. The graph ensures systematic exploration and synthesis of the required information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the subsidiaries of Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the founders of Spider9.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the subsidiaries of Wanxiang Group had one of its heads found Spider9 in 2011 by cross-referencing the list of subsidiaries and the founders of Spider9.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of three main steps. First, identify the subsidiaries of the Wanxiang Group to understand the potential individuals we are interested in (Node 1). Independently, find out who founded Spider9 (Node 2). The final step is a reasoning step where we cross-reference these two pieces of information to find if any head of a Wanxiang Group subsidiary founded Spider9 (Node 3)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify subsidiaries of Wanxiang Group.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the founding of Spider9 in 2011.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the key figures involved in the founding of Spider9.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the founders of Spider9 from the key figures involved.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the connection between the founders of Spider9 and the subsidiaries of Wanxiang Group to identify the head of a subsidiary.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph is structured to first gather a list of Wanxiang Group subsidiaries. Simultaneously, it retrieves details about the founding of Spider9 and identifies the individuals involved. It then narrows focus to the founders of Spider9 and cross-references them with the information on the subsidiaries to determine any connection, identifying the head of a specific subsidiary involved in founding Spider9."
+    }
+]

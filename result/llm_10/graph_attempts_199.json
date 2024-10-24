@@ -1,0 +1,133 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the brother of Christopher I of Denmark who was king before him.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the reign period of the brother of Christopher I of Denmark.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph begins with identifying Christopher I of Denmark's predecessor, his brother, which involves a retrieval step. Once the brother's identity is confirmed, the next node retrieves information about the reign period of that brother, fulfilling the task of the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the brother of Christopher I of Denmark.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out the time period during which Christopher I's brother was king.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph for this question consists of two main steps. The first step is to identify the brother of Christopher I of Denmark, which requires retrieving historical data about his family. Once the brother is identified, the second step is to find out the period during which he was king, requiring historical date retrieval for the brother's reign. The second node depends on the information retrieved in the first node."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Christopher I of Denmark and find out who his predecessor was.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the historical period during which Christopher I's predecessor reigned as king.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the information about Christopher I's predecessor and the period of his reign to answer the question.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying Christopher I's predecessor. Once identified, the next step is to retrieve details about the period during which this predecessor reigned. Finally, the information is synthesized to determine the time period when Christopher I's brother was king."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the brother of Christopher I of Denmark.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the reign period of Christopher I of Denmark's brother.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task is to find out the reign period of the brother of Christopher I of Denmark. The execution graph starts with identifying who the brother is because the question specifies that Christopher I succeeded his brother. Once the brother's identity is established, the next step is to retrieve the information about the duration of his reign as king, which directly answers the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the period during which Christopher I's brother was king of Denmark.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine who Christopher I of Denmark's brother was and during what period he reigned as king of Denmark.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the information to determine the period during which Christopher I's brother reigned.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with two retrieval tasks executed in parallel. The first node seeks to directly identify the reign period of Christopher I's brother, while the second node is about retrieving information on who his brother was and his reign period. The final node synthesizes this information to provide the period during which Christopher I's brother was king."
+    }
+]

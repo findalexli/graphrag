@@ -1,0 +1,197 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of champions from the 2006 NCAA Wrestling Championships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify Jake Rosholt as one of the champions from the list of 2006 NCAA Wrestling Championships champions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the other champions from the list of 2006 NCAA Wrestling Championships champions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve information about each of the other champions to determine if any of them are known for their powerful punching abilities, specifically from a particular hand (left or right).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify which hand the athlete known for powerful punches primarily uses to punch powerfully.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by retrieving the list of champions from the 2006 NCAA Wrestling Championships. It then identifies Jake Rosholt and other champions from this list. Subsequent steps involve retrieving biographical information about these other champions to determine if any are known for powerful punching and from which hand."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the athletes crowned at the 2006 NCAA Wrestling Championships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find which athlete among the 2006 champions is known for powerful punches.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine from which hand the identified athlete is known to deliver powerful punches.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the question into nodes focusing on retrieving and reasoning about the 2006 NCAA Wrestling Championships winners, particularly identifying a champion known for powerful punches with a specific hand."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the venue and participants of the 2006 NCAA Wrestling Championships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Look up the winners of the 2006 NCAA Wrestling Championships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify Jake Rosholt as one of the winners of the 2006 NCAA Wrestling Championships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Search for the second winner of the 2006 NCAA Wrestling Championships who is known for powerful punches.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine which hand the second winner is known for using in powerful punches.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To determine which hand the second winner from the 2006 NCAA Wrestling Championships, known for powerful punches, uses, we first identify the participants and winners of the event. After confirming Jake Rosholt as one of the winners, the next step is to find the other winner who is recognized for their powerful punching ability. The final step involves determining the specific hand associated with their notable punching skill."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the 2006 NCAA Wrestling Championships winners.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the athletes crowned at the 2006 NCAA Wrestling Championships alongside Jake Rosholt.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "For the athletes identified alongside Jake Rosholt, find out which athlete is known for powerful punches and from which hand (left or right).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the problem into distinct steps. First, we retrieve information about the winners of the 2006 NCAA Wrestling Championships. Then, we identify which of these athletes was crowned alongside Jake Rosholt. Finally, we find which of these athletes is known for having powerful punches, specifically noting which hand they are known for punching with."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the athletes who were crowned champions in the 2006 NCAA Wrestling Championships.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find which other athlete, besides Jake Rosholt, was crowned at the 2006 NCAA Wrestling Championships.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the identified athlete to determine if they are known for powerful punches.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find out from which hand the athlete known for powerful punches typically throws these punches.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph first retrieves the list of champions from the 2006 NCAA Wrestling Championships. Then, it isolates the athlete who shares the championship win with Jake Rosholt. Next, it checks if this athlete is known for their punching ability and, finally, determines which hand they use primarily for these punches."
+    }
+]

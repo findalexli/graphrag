@@ -1,0 +1,212 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the play 'Une Temp\u00eate'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the author of 'Une Temp\u00eate'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the author's nationality.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve information about the locations where 'Une Temp\u00eate' was first performed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine if 'Une Temp\u00eate' was first performed in Tunisia.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Verify if the author identified is indeed the poet associated with the play performed in Tunisia and retrieve their nationality.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph breaks down the task into a series of steps needed to identify the nationality of the poet who wrote 'Une Temp\u00eate' and first performed it in Tunisia. It starts by gathering basic information about the play, followed by identifying its author. It retrieves detailed information about the author's nationality and performance history in Tunisia. The reasoning nodes ensure that the conditions are met to identify the correct nationality based on the performance location."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out who wrote the play 'Une Temp\u00eate'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "When was the play 'Une Temp\u00eate' first performed?",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Confirm if 'Une Temp\u00eate' was first performed in Tunisia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the nationality of the author identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To answer the question, we must identify the author of 'Une Temp\u00eate' and determine the nationality of this author. First, we retrieve the name of the author (Node 1). We also need to verify the first performance details to ensure the play was performed in Tunisia (Nodes 2 and 3). Finally, we determine the nationality of the author found in Node 1 (Node 4), linking us to the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the poet who wrote 'Une Tempete'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine where the play 'Une Tempete' was first performed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Confirm if 'Une Tempete' was first performed in Tunisia and find the poet who was involved in the first performance.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the nationality of the identified poet.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins with identifying the poet of 'Une Tempete'. Simultaneously, it checks where the play was first performed. The third step confirms that the play was indeed first performed in Tunisia while reaffirming the identity of the poet. Finally, it retrieves the nationality of the poet identified in the performance in Tunisia."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the poet who wrote 'Une Tempete'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the country where 'Une Tempete' was first performed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the poet identified wrote 'Une Tempete' first performed in Tunisia.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find out the nationality of the poet if the conditions match.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins by identifying the poet who wrote 'Une Tempete' (Node 1) and concurrently checks where the play was first performed (Node 2). The reasoning step (Node 3) ensures that the poet identified is indeed the one who wrote the play first performed in Tunisia. If this condition is met, the final step (Node 4) retrieves the nationality of this specific poet, thus answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the author of the play 'Une Temp\u00eate'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the nationality of the identified poet from Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Confirm the location of the first performance of 'Une Temp\u00eate' by the identified author to check if it was indeed first performed in Tunisia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "If Node 3 confirms Tunisia as the first performance location, finalize the nationality identified in Node 2 as the answer. Otherwise, re-evaluate.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task of finding the nationality of the poet who wrote 'Une Temp\u00eate' and first performed it in Tunisia. The process begins with identifying the author of the play. Once the author is identified, their nationality is determined. Simultaneously, it's confirmed that the play was first performed in Tunisia. These steps lead to confirming the author's nationality based on the performance location data as a final check."
+    }
+]

@@ -1,0 +1,177 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out the companies for which Nelson Chai has served as president.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the company founded in 1908 based in New York City from the list of companies where Nelson Chai served as president.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task involves finding out Nelson Chai's previous roles and then filtering those companies based on the founding year (1908) and their headquarters' location (New York City). The graph begins with retrieving information about Nelson Chai's positions. The subsequent reasoning step then determines which of these matches the specified criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the financial holding company where Nelson Chai served as president.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the financial holding company founded in 1908 and headquartered in New York City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Verify if the financial holding company identified as Nelson Chai's former employer matches the criteria of being founded in 1908 and headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the financial holding company where Nelson Chai served as president. Concurrently, it retrieves the relevant details of financial holding companies founded in 1908 and headquartered in New York City. It then concludes by checking if the company Nelson Chai was involved with matches the founding year and headquarters criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which financial holding company Nelson Chai was the president of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the company's history, including founding year and headquarters location, for the company identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check if the company from Step 2 was founded in 1908 and is headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine the financial holding company that Nelson Chai was formerly president of, and ensure it fits the criteria of being founded in 1908 and headquartered in New York City, the graph begins by identifying the company Nelson Chai led. Next, it verifies the founding year and headquarters location of this company to confirm it matches the question's parameters."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the company where Nelson Chai was the president.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of financial holding companies founded in 1908.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve a list of financial holding companies headquartered in New York City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the company from the lists that matches both being founded in 1908 and headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to determine which company Nelson Chai was the former president of that matches the criteria of being founded in 1908 and headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins by retrieving information about the company where Nelson Chai was a president, along with independent retrieval of companies founded in 1908 and those headquartered in New York City. A reasoning step then identifies companies that match both founded date and location criteria. Finally, the results are synthesized to determine if there is a match with the company where Nelson Chai was a former president."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out who Nelson Chai is and identify any notable companies he has been associated with as president.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the company where Nelson Chai was a former president.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find information on financial holding companies founded in 1908.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "From the list of financial holding companies founded in 1908, identify which ones are headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine which company identified in step 2 matches the criteria of being founded in 1908 and headquartered in New York City.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task is to identify the financial holding company associated with Nelson Chai, which was founded in 1908 and is headquartered in New York City. To do this, we first need to find out about Nelson Chai's career and identify any companies he has been a president of. Then, we gather information about financial holding companies founded in 1908 and determine which ones are headquartered in New York City. Finally, we match the company where Nelson Chai was a president to the companies fitting the founding and headquarters criteria."
+    }
+]

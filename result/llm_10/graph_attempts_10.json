@@ -1,0 +1,170 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which National sports league the fictional character Gary Beltman is a parody of.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the current commissioner of the identified National sports league.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task requires determining the National sports league associated with the parody character Gary Beltman. Once the league is identified, the next step is to find the current commissioner of that league. Each step builds on the previous one, ensuring logical progression from identifying the parody's target to retrieving the current commissioner's name."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the current commissioner of the National Hockey League (NHL).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Gather information about the movie 'Bon Cop, Bad Cop' and list the characters, focusing on identifying the role played by Rick Howland.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the character 'Harry Buttman' in 'Bon Cop, Bad Cop' is a parody of a real-life NHL commissioner.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "2",
+            "final_node_id": "3"
+        },
+        "explanation": "The task involves determining the current commissioner of the National sports league that the parody character 'Harry Buttman' in 'Bon Cop, Bad Cop' imitates. The execution graph begins with retrieving the current NHL commissioner (Node 1) and information about the movie and its characters (Node 2). The reasoning step (Node 3) connects these by verifying the parody and identifying the corresponding real-world figure."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the film 'Bon Cop, Bad Cop' and gather information about its characters and cast.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve details about Canadian actor Rick Howland's role in 'Bon Cop, Bad Cop'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the role of Harry Buttman portrayed by Rick Howland and identify if it is a parody of a real person.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve information about the real individual Gary Bettman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "5",
+                    "instruction": "Verify Gary Bettman's current position and identify the national sports league he is involved with.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The question involves identifying the character played by Rick Howland in 'Bon Cop, Bad Cop' and understanding its parody context. The execution graph begins with retrieving details about the film and Rick Howland's role, followed by investigating the parody link to Gary Bettman. Since Gary Bettman is a known figure, the next step is to confirm his role and the associated sports league, which directly answers the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the character Harry Buttman in the movie 'Bon Cop, Bad Cop' and find out what role this character parodies.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which real-life individual is parodied by the character Harry Buttman in the movie.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the real-life individual Gary Bettman, focusing on his professional title or position.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the national sports league for which Gary Bettman serves as the commissioner.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins with identifying the fictional character Harry Buttman from the movie 'Bon Cop, Bad Cop'. The reasoning node determines that Harry Buttman parodies Gary Bettman. Subsequent retrieval identifies Gary Bettman's professional role as the commissioner, and the final reasoning step concludes with the sports league he now leads."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the character Harry Buttman in 'Bon Cop, Bad Cop' and the real person it is parodying, Gary Bettman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research the current position held by Gary Bettman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the national sports league associated with the position held by Gary Bettman.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by identifying the character Harry Buttman from 'Bon Cop, Bad Cop', clarifying that it's a parody of Gary Bettman. It then retrieves information on Gary Bettman's current role to establish a link to the next node. Finally, it discovers the national sports league associated with his role to answer the original question."
+    }
+]

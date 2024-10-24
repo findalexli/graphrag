@@ -1,0 +1,195 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the television miniseries that aired in 1980 featuring a character known as the 'father of the atomic bomb'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine who is commonly referred to as the 'father of the atomic bomb'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the cast list for the identified 1980 television miniseries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Based on the common reference, identify which actor portrayed the 'father of the atomic bomb' in the miniseries from the cast list.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins with two parallel retrieval tasks: identifying the 1980 miniseries that features the 'father of the atomic bomb' and determining who this historical figure is. Once we have the name of the miniseries, we retrieve the cast list. In parallel, we identify the person commonly known as the 'father of the atomic bomb'. The final reasoning step is to cross-reference the cast list with the identified historical figure to determine which actor portrayed this role."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve a list of television miniseries from 1980.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "From the list of 1980 television miniseries, identify any that are related to the atomic bomb.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the plot and characters of the identified miniseries related to the atomic bomb.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify which character is referred to as the 'father of the atomic bomb' in the plot or character descriptions of the miniseries.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Retrieve the cast information for the miniseries identified.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Determine which actor plays the character identified as the 'father of the atomic bomb'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph begins by retrieving a list of television miniseries from 1980 to determine which are relevant to the atomic bomb. It then involves reasoning to identify the relevant miniseries and the character who is the 'father of the atomic bomb'. Subsequent retrieval involves getting the cast list of this miniseries, and further reasoning connects the character to the actual actor."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the 1980 television miniseries that features the 'father of the atomic bomb'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine who is known as the 'father of the atomic bomb'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the cast of the identified 1980 television miniseries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which actor portrayed the 'father of the atomic bomb' in the identified miniseries.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task is to find out who starred as the 'father of the atomic bomb' in a specific 1980 television miniseries. First, we need to identify the miniseries that features this character (Node 1). Simultaneously, we need to determine who is often referred to as the 'father of the atomic bomb', which historically is usually J. Robert Oppenheimer (Node 2). Once we know the miniseries, we retrieve its cast (Node 3). Finally, using the cast and the identity of 'the father of the atomic bomb', we determine which actor portrayed this character in the miniseries (Node 4)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify television miniseries from 1980 about the atomic bomb or related theme.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the cast list of the identified miniseries from Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which cast member portrayed the 'father of the atomic bomb', Robert Oppenheimer, in the series identified in Step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This execution graph breaks down the task of finding who starred as the 'father of the atomic bomb' in a 1980 miniseries into several steps. First, we need to identify any relevant miniseries from 1980; then, we retrieve its cast list, and finally determine which actor portrayed Robert Oppenheimer, known as the 'father of the atomic bomb.' Each step relies on successful completion of the previous one, reflecting a logical flow from general topic identification to specific role identification."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the title of the 1980 television miniseries that features the 'father of the atomic bomb.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who the 'father of the atomic bomb' is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine who starred as the 'father of the atomic bomb' in that miniseries.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the title of the miniseries from 1980 that centers on the 'father of the atomic bomb', which is often a historical figure. Simultaneously, we determine who is commonly referred to as the 'father of the atomic bomb' to ensure the right historical context is used. Finally, we retrieve the specific actor who portrayed this character in the miniseries using the information from the first two nodes."
+    }
+]

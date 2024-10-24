@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List the films featuring Carrie Coon released in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the films identified in Step 2 also features the actor identified in Step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first identify the actor who plays Joe MacMillan, then independently gather a list of films released in 2017 featuring Carrie Coon. Finally, by comparing these two data sets, we can determine which 2017 horror film starred both the actor from 'Halt and Catch Fire' and Carrie Coon."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify films featuring Carrie Coon released in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "List 2017 films starring the actor identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find the common film between the filmography of the actor identified in step 1 and the 2017 films starring Carrie Coon.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task is to find a common movie that starred both the actor who plays Joe MacMillan in 'Halt and Catch Fire' and Carrie Coon, released in 2017. First, identify the actor playing Joe MacMillan. Then, separately list films featuring Carrie Coon released in 2017, as well as films from 2017 featuring the identified actor. Finally, determine which film appears in both lists."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List films from 2017 that Carrie Coon appeared in.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if any of Carrie Coon's 2017 horror films include the actor who plays Joe MacMillan.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Select the 2017 horror film featuring both the actor who played Joe MacMillan and Carrie Coon.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the question into steps where we first need to identify the actor who played Joe MacMillan. In parallel, we gather a list of films Carrie Coon appeared in during 2017 with an emphasis on horror films. Then, we compare the results to identify if they starred together in any same films in 2017, specifically horror, and finally select that film."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the actor who plays Joe MacMillan in \"Halt and Catch Fire\".",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List films starring Carrie Coon released in 2017.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out if the films from Step 2 also feature the actor identified in Step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the actor who plays Joe MacMillan in the TV series, a straightforward retrieval task. In parallel, another retrieval task is to list 2017 films starring Carrie Coon. With both pieces of information, the final reasoning step checks which film(s) from 2017 feature both the identified actor and Carrie Coon."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify films released in 2017 that feature Carrie Coon.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Check which of the 2017 films featuring Carrie Coon also stars the actor identified in Step 1.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the original question into steps that separately identify the actor who plays Joe MacMillan and the 2017 films featuring Carrie Coon. The final step cross-references these findings to determine the specific film where both actors co-starred."
+    }
+]

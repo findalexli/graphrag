@@ -1,0 +1,217 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Royal Oak Mines and its operation history.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Extract data about the start and end dates of Royal Oak Mines operating the Kemess Mine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract data about the start and end dates of Royal Oak Mines operating the Colomac Mine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Compare the operation start dates of Kemess Mine and Colomac Mine to determine which mine was operated earlier by Royal Oak Mines.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts with retrieving information about the operations history of Royal Oak Mines. This step is critical to understanding which mines were operated by the company. The next two nodes extract specific details about the operation periods for the Kemess Mine and the Colomac Mine. Finally, the reasoning node compares these dates to determine which mine had an earlier operation start date under Royal Oak Mines."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the history of the Kemess Mine, including operation periods and operating companies.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the history of the Colomac Mine, including operation periods and operating companies.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the specific periods during which Royal Oak Mines operated the Kemess Mine.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the specific periods during which Royal Oak Mines operated the Colomac Mine.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the operation start dates extracted for Kemess Mine and Colomac Mine under Royal Oak Mines to determine which mine was operated at an earlier date.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the original question into steps involving retrieval of historical operation periods and companies associated with each mine. Nodes 1 and 2 perform the retrieval for Kemess and Colomac mines, respectively. Nodes 3 and 4 focus on identifying the periods during which Royal Oak Mines operated each mine. Finally, node 5 compares these periods to determine the mine operated by Royal Oak Mines at an earlier date."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve historical operation records of Royal Oak Mines.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information specifically about the Kemess Mine and its operators over time.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information specifically about the Colomac Mine and its operators over time.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the dates when Royal Oak Mines operated the Kemess Mine using the retrieved historical records.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine the dates when Royal Oak Mines operated the Colomac Mine using the retrieved historical records.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Compare the operation dates of Royal Oak Mines for both Kemess and Colomac Mines to determine which mine was operated at an earlier date.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4",
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The execution graph is designed to first gather general historical operation records of Royal Oak Mines and then collects specific data about the two mines in question, Kemess Mine and Colomac Mine. It processes this information to identify the exact operation periods for each mine under Royal Oak Mines. Finally, it compares the operation start dates to determine which mine was operated at an earlier date."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the operational history of Royal Oak Mines.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the operational history of Kemess Mine, including when it was operated by Royal Oak Mines.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the operational history of Colomac Mine, including when it was operated by Royal Oak Mines.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the dates when Royal Oak Mines operated the Kemess Mine and the Colomac Mine.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the operational dates and identify which mine was operated earlier by Royal Oak Mines.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph involves retrieving the operational histories of both the Kemess and Colomac Mines as well as Royal Oak Mines to determine their involvement. Each mine's history is independently retrieved before consolidating this information to identify and compare the operational periods of Royal Oak Mines at each site. The final reasoning step determines which mine Royal Oak Mines operated first based on the timeline."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the operational start date for Kemess Mine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the operational start date for Colomac Mine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which mine Royal Oak Mines operated at an earlier date by comparing the start dates of Kemess Mine and Colomac Mine.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first independently retrieve and establish the operational start dates of Kemess Mine and Colomac Mine. Once these dates are identified, a reasoning step is performed to compare these dates and determine which mine was operated by Royal Oak Mines at an earlier date. This setup ensures efficient retrieval and reasoning by paralleling independent retrieval tasks and consolidating them through a final reasoning step to answer the original question."
+    }
+]

@@ -1,0 +1,200 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out if Chlidanthus is a flowering plant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out if Maianthemum is a flowering plant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if both Chlidanthus and Maianthemum are flowering plants based on the information about their classifications.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine if both Chlidanthus and Maianthemum are classified as flowering plants. Two retrieval steps are executed in parallel to obtain classification information for each genus. A reasoning step then analyzes the data to check if both are flowering plants."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on whether Chlidanthus is a flowering plant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on whether Maianthemum is a flowering plant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Chlidanthus is classified as a flowering plant based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Maianthemum is classified as a flowering plant based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Conclude whether both Chlidanthus and Maianthemum are flowering plants based on previous deductions.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To determine if both Chlidanthus and Maianthemum are flowering plants, we execute independent retrieval steps for each plant to gather relevant information about their classification. Once we retrieve the necessary data, we proceed to reasoning steps where we classify each plant. Finally, we aggregate the results to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on whether Chlidanthus is a flowering plant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on whether Maianthemum is a flowering plant.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if both Chlidanthus and Maianthemum are classified as flowering plants based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two independent retrieval and reasoning steps to determine whether each of the two plant genera, Chlidanthus and Maianthemum, are flowering plants. The final step involves reasoning based on the results of both retrievals to determine if both are indeed flowering plants, synthesizing the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Chlidanthus.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine if Chlidanthus is a flowering plant.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about Maianthemum.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Maianthemum is a flowering plant.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to determine if both Chlidanthus and Maianthemum are flowering plants.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts with retrieving information about each plant genus (Chlidanthus and Maianthemum) independently (nodes 1 and 3). Each retrieval step is followed by a reasoning node (nodes 2 and 4) to determine whether the retrieved plant is a flowering plant. Finally, the results are combined (node 5) to answer if both are indeed flowering plants."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Chlidanthus, specifically its classification in the plant kingdom.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Maianthemum, specifically its classification in the plant kingdom.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if Chlidanthus is classified as a flowering plant based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if Maianthemum is classified as a flowering plant based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Combine the results to determine if both Chlidanthus and Maianthemum are flowering plants.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The question requires determining if both Chlidanthus and Maianthemum are flowering plants. The process begins with retrieving classification details about each plant. After acquiring this information, separate reasoning steps are used to confirm if each is a flowering plant. Finally, the results are combined to answer the original question. The graph supports parallel retrieval as information about each genus is independent of the other."
+    }
+]

@@ -1,0 +1,200 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the campuses of Northwestern University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the campuses of Johns Hopkins University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if any of Northwestern University's campuses are located outside of United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine if any of Johns Hopkins University's campuses are located outside of United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare results to identify which university has a campus outside of United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph starts with retrieving information about campuses for Northwestern University and Johns Hopkins University. It then separately evaluates each university to identify if they have campuses located outside US territories. Finally, it compares the findings to determine which, if any, university has such a campus."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out if Northwestern University has a campus outside of United States territories.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out if Johns Hopkins University has a campus outside of United States territories.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the findings to determine which universities have campuses outside United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is constructed to address the research requirement that can resolve the user query. It begins with separate checks for each university (Northwestern and Johns Hopkins) to gather information about their campus locations. These initial nodes (1 and 2) gather necessary facts to determine if these universities have campuses outside U.S. territories. The third node (3) then synthesizes this information to provide a comprehensive answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Gather information about the campus locations of Northwestern University, including whether they have any international campuses.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Gather information about the campus locations of Johns Hopkins University, including whether they have any international campuses.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine whether Northwestern University has a campus outside of the United States territories using the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine whether Johns Hopkins University has a campus outside of the United States territories using the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the findings for Northwestern University and Johns Hopkins University to conclude which, if any, have a campus outside of the United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins with two parallel retrieval nodes to gather detailed location information about both universities' campuses. Each university's data is then analyzed separately to determine the presence of international campuses. Finally, the reasoning process compares the results of both analyses to answer the original query about which university, if any, has a campus outside of the United States territories."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the campuses of Northwestern University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the campuses of Johns Hopkins University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze if any of the campuses of Northwestern University are located outside the United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze if any of the campuses of Johns Hopkins University are located outside the United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine which university, Northwestern University or Johns Hopkins University, has a campus outside of the United States territories based on previous analyses.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the question into information retrieval about each university's campuses, followed by reasoning to determine if any campuses are outside the United States territories. Finally, it synthesizes this information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify campuses of Northwestern University and determine if any are outside of United States territories.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify campuses of Johns Hopkins University and determine if any are outside of United States territories.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the identified campuses from nodes 1 and 2 to determine which university has a campus outside of United States territories.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer the question about which universities have a campus outside the United States, the graph breaks the task into two main retrieval and reasoning steps: one for Northwestern University and one for Johns Hopkins University. Each node retrieves information about the respective university's campuses and checks for locations outside US territories. The final node synthesizes this information to directly compare and determine which, if either, has a campus outside the US."
+    }
+]

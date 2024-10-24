@@ -1,0 +1,184 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the region of origin for the Basset Bleu de Gascogne.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the region of origin for the Bulldog.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the regions of origin for the Basset Bleu de Gascogne and the Bulldog to determine which is native to France.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is composed of three main steps. First, we retrieve and reason about the region of origin for the Basset Bleu de Gascogne (Node 1) and for the Bulldog (Node 2). These steps can be executed in parallel as they are independent of each other. Finally, we compare these regions (Node 3) to answer the question about which dog is native to France."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the Basset Bleu de Gascogne.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the Bulldog.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the native country of the Basset Bleu de Gascogne from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the native country of the Bulldog from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the native countries of the Basset Bleu de Gascogne and the Bulldog to see which one is native to France.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the question into a series of steps to determine which dog breed, the Basset Bleu de Gascogne or the Bulldog, is native to France. First, we retrieve information about each dog breed. Then, we determine the native country of each breed using the retrieved information. Finally, a reasoning step compares these countries to identify which dog, if any, is native to France."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the origin of the Basset Bleu de Gascogne dog breed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the origin of the Bulldog dog breed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the retrieved dog breeds is native to France.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "3",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with two retrieval nodes to determine the origins of the Basset Bleu de Gascogne and the Bulldog dog breeds. After retrieving the origins, a reasoning step is used to ascertain which breed, if any, is native to France. The two first steps can be performed in parallel, improving efficiency."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "node1",
+                    "instruction": "Retrieve information about the origin of the Basset Bleu de Gascogne.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node2",
+                    "instruction": "Retrieve information about the origin of the Bulldog.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node3",
+                    "instruction": "Determine whether the Basset Bleu de Gascogne is native to France based on retrieved origin information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node1"
+                    ]
+                },
+                {
+                    "id": "node4",
+                    "instruction": "Determine whether the Bulldog is native to France based on retrieved origin information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node2"
+                    ]
+                },
+                {
+                    "id": "node5",
+                    "instruction": "Compare the findings about the nativeness to France of both breeds to answer which one is native.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node3",
+                        "node4"
+                    ]
+                }
+            ],
+            "root_node_id": "node1",
+            "final_node_id": "node5"
+        },
+        "explanation": "The execution graph breaks down the task into retrieval and reasoning steps:\n- Two parallel retrieval nodes (node1 and node2) gather information about the origin of each dog breed.\n- Two reasoning nodes (node3 and node4) analyze the retrieved origin information to establish the nativeness of each breed to France.\n- Finally, a reasoning node (node5) compares the results to provide the final answer about which breed is native to France."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on the origin of the Basset Bleu de Gascogne.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on the origin of the Bulldog.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the origin data to determine which, if either, of the breeds is native to France.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is structured to first retrieve information about the origins of both dog breeds in parallel. Nodes 1 and 2 execute this by retrieving details about the Basset Bleu de Gascogne and the Bulldog respectively. Once both pieces of information are retrieved, node 3 performs a reasoning task to compare the origins and concludes which breed is native to France."
+    }
+]

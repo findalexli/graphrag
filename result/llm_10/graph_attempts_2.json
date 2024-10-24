@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of campuses for Dalhousie University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of campuses for California State Polytechnic University, Pomona.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of campuses for Dalhousie University and California State Polytechnic University, Pomona, to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks the problem into three steps. First, it retrieves the number of campuses for each university separately. Then, it compares these numbers to determine which university has more campuses. The final reasoning step synthesizes the information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of campuses Dalhousie University has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of campuses California State Polytechnic University, Pomona has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the campus counts from Dalhousie University and California State Polytechnic University, Pomona, to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph consists of three nodes. The first two nodes (1 and 2) are responsible for retrieving the number of campuses each university has: Dalhousie University and California State Polytechnic University, Pomona, respectively. Both retrieval tasks are independent and executed in parallel. The third node (3) takes the outputs from the first two nodes and compares the numbers to determine which university has more campuses. The comparison provides the final answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of campuses for Dalhousie University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of campuses for California State Polytechnic University, Pomona.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of campuses retrieved for Dalhousie University and California State Polytechnic University, Pomona, to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two parallel retrieval and reasoning nodes to find the number of campuses for each university. The results from these nodes are then compared in a reasoning node to determine which university has more campuses, providing the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the number of campuses Dalhousie University has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the number of campuses California State Polytechnic University, Pomona has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of campuses between Dalhousie University and California State Polytechnic University, Pomona to determine which has more.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of three nodes. The first two nodes retrieve and reason about the number of campuses for Dalhousie University and California State Polytechnic University, Pomona, respectively. The final node compares the results from these two nodes to determine which university has more campuses."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of campuses for Dalhousie University.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of campuses for California State Polytechnic University, Pomona.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of campuses retrieved for both universities to determine which one has more campuses.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to find out which university has more campuses between Dalhousie University and California State Polytechnic University, Pomona. The execution graph begins by separately retrieving information about the number of campuses for each university (nodes 1 and 2). Once this information is gathered, a reasoning step (node 3) compares the retrieved numbers to find out which university has more campuses in total. The graph allows for parallel execution of retrieval tasks for both universities."
+    }
+]

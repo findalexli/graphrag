@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the director of the documentary 'Out of Place'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the director of the documentary 'The Mosuo Sisters'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the directors retrieved for 'Out of Place' and 'The Mosuo Sisters' to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph consists of two initial retrieval and reasoning nodes where we fetch the directors of the two documentaries separately. After retrieving the respective directors, a reasoning node compares these two directors to determine if they are the same. This structure ensures we gather all relevant information about both documentaries' directors before performing the comparison, which is critical to answering the question accurately."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the documentary 'Out of Place', focusing on the director's name.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the documentary 'The Mosuo Sisters', focusing on the director's name.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the directors' names obtained from nodes 1 and 2 to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving information about each documentary separately to determine the director's name. Once the information is gathered, it compares the directors' names to conclude whether they are the same."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the director of the documentary 'Out of Place'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the director of the documentary 'The Mosuo Sisters'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the directors of 'Out of Place' and 'The Mosuo Sisters' to determine if they are the same person.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two parallel retrieval and reasoning nodes (1 and 2) to find the directors of each documentary independently. This is necessary so we can have the required information to compare in the final reasoning node (3). Node 3 takes the outputs of nodes 1 and 2 to conclude whether both documentaries share the same director."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the documentary 'Out of Place', including the director.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the documentary 'The Mosuo Sisters', including the director.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the directors of 'Out of Place' and 'The Mosuo Sisters' to determine if they are the same person.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by retrieving information about each documentary separately, specifically targeting the retrieval of director information. These two retrieval steps are independent and can be executed in parallel. The final step compares the directors of the two documentaries to ascertain if they are the same individual, thereby answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the directors of the documentaries 'Out of Place'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the directors of the documentaries 'The Mosuo Sisters'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the directors retrieved for 'Out of Place' and 'The Mosuo Sisters' to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts with two parallel retrieval nodes to independently gather information about the directors of 'Out of Place' and 'The Mosuo Sisters'. Once both pieces of information are retrieved, a reasoning node compares the directors to determine if they are the same, which answers the original question."
+    }
+]

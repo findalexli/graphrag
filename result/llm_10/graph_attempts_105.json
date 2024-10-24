@@ -1,0 +1,190 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify that the question is asking for the original name of the UEFA Champions League before it was renamed.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the UEFA Champions League, specifically details about its history and name changes.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Locate the specific season that corresponds to the 2014\u201315 UEFA Champions League and confirm which numbered season it was.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Using the identified history of the UEFA Champions League's name change, determine what it was called prior to being renamed.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Validate the numbering of the seasons from the point it was renamed to confirm the 23rd season aligns with the 2014\u201315 season.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph breaks down the task into understanding the question context, retrieving relevant historical data about the UEFA Champions League, verifying season numbering, and reasoning through this information to identify the correct historical name."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what the 2014\u201315 UEFA Champions League knockout phase is and why it is the 23rd season.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research the renaming of the UEFA Champions League. What was it called before?",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the name of the competition before it was known as the UEFA Champions League.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts by identifying the nature of the 2014-15 UEFA Champions League and understanding why it's considered the 23rd season since renaming. Next, it involves retrieving historical information regarding the name change of the UEFA Champions League, specifically what it was called prior to the rename. Finally, it synthesizes this information to find the original name and confirm the reasoning."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the current name of the UEFA Champions League and understand its history.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine in which year the UEFA Champions League was renamed to its current name.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compute the original name of the UEFA Champions League based on how it was known prior to being renamed, using the current name and renaming history.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with understanding the current name of the UEFA Champions League and its renaming history. Then, it retrieves the exact year when the name was changed, allowing a final reasoning step to determine the original name before it was changed to the UEFA Champions League."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what the UEFA Champions League was called before it was renamed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify which season corresponds to the 2014-15 UEFA Champions League.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Calculate the year the UEFA Champions League was renamed by subtracting 23 seasons from the 2014\u201315 season year.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the name of the competition in the year calculated in Step 3.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Confirm the name of the competition before it was renamed to the UEFA Champions League using results from Step 1 and Step 4.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To answer the question about the original name of the UEFA Champions League before it was renamed, the execution graph breaks down the process into distinct retrieval and reasoning steps. First, we identify what the competition was previously called, ensuring the correct historical context. Second, we ascertain the year marking the 23rd season leading up to the 2014-15 event. Through calculation, we identify the year the UEFA Champions League name was first used and verify what the competition was named in that year, ensuring a consistent result. The final reasoning node then synthesizes information from each step to confirm the original name."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the original name of the UEFA Champions League before it was renamed.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the season when UEFA Champions League was renamed from its original name.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Calculate the number of years since the UEFA Champions League was renamed based on the 2014-15 season being the 23rd since renaming.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Use the calculated number of years since renaming to verify the original name of the competition through historical context.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph breaks down the task into steps: first, identify the original name of the UEFA Champions League before renaming. Second, determine the renaming year. Third, verify the number of seasons since renaming by using the known season (23rd since renaming). Finally, confirm the original name using the context from all gathered data."
+    }
+]

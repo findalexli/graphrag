@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the founding year of Diva magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the founding year of Elle magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the founding years of Diva and Elle magazines to determine which was founded first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This graph first retrieves the founding years of both Diva and Elle magazines (nodes 1 and 2). Once both founding years are obtained, it compares them to determine which magazine was founded first (node 3). This approach ensures that the task is broken down into clear and logical steps, gathering necessary data before making the comparison."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the founding year of Diva magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the founding year of Elle magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the founding years of Diva and Elle to determine which was founded first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by retrieving the founding years of both Diva and Elle magazines as these are the key pieces of information needed. These two retrieval steps (nodes 1 and 2) can be done in parallel since they are independent tasks. Once both founding years are determined, a reasoning step (node 3) is used to compare these years to decide which magazine was founded first, thereby directly addressing the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the founding year of Diva magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the founding year of Elle magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the founding years of Diva and Elle magazines to determine which was founded first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of retrieving the founding years of both Diva and Elle magazines separately. These steps can be executed in parallel as they are independent retrieval tasks. The final node compares the two dates to determine which magazine was founded first, providing the answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the founding year and location of Diva magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the founding year and location of Elle magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the founding years of Diva and Elle magazine to determine which was founded first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with two parallel retrieval steps to gather information on the founding years and locations of the two magazines in question, Diva and Elle. Once the necessary data is retrieved, a reasoning step compares the two founding years to determine which magazine was founded first. The graph is designed to ensure that each piece of information necessary to answer the question is collected and synthesized efficiently."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the founding year of Diva magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the founding year of Elle magazine.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the founding years of Diva and Elle magazines to determine which was founded first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with two retrieval nodes to gather the necessary information regarding the founding years of both Diva and Elle magazines. Once both pieces of data are retrieved, the graph proceeds to a reasoning node that compares the two years to identify which magazine was founded first. This step-by-step approach ensures all relevant information is collected before making the comparison."
+    }
+]

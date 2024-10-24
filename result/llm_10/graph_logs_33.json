@@ -1,0 +1,421 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "List all zombie films released in 2015.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify Northern Irish actors.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "For each 2015 zombie film, determine its cast list.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Match films where any cast member is a Northern Irish actor from the list retrieved.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Identify the lead or significant stars in the matched films with Northern Irish actors.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The graph is structured to first retrieve zombie films from 2015 and identify Northern Irish actors separately. It then retrieves the cast for each film and checks if any Northern Irish actors were involved in these films. Finally, it identifies the stars of those films where there's a match."
+            },
+            "recall": 0.3888888888888889,
+            "retrieved_passages": [
+                "Zombie Killers: Elephant's Graveyard\nZombie Killers: Elephant's Graveyard is a 2015 zombie horror film. It was released on video by Anchor Bay Entertainment on February 3, 2015.",
+                "Contracted: Phase II\nContracted: Phase II is a 2015 zombie body horror film and the sequel to the 2013 film \"Contracted\". The movie was directed by Josh Forbes, based on a script written by Craig Walendziak, and Eric England, who wrote and directed the first film.",
+                "The Rezort\nThe Rezort is a 2015 British zombie horror film directed by Steve Barker and written by Paul Gerstenberger. It stars Dougray Scott, Jessica De Gouw and Martin McCann. After humanity wins a devastating war against zombies, the few remaining undead are kept on a secure island, where they are hunted for sport. When something goes wrong with the island's security, the guests must face the possibility of a new outbreak.",
+                "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+                "I Wouldn't Change You If I Could\n\"I Wouldn't Change You If I Could\" is a song written by Paul Jones and Arthur Q. Smith, and recorded by American country music artist Ricky Skaggs, as well as Reno & Smiley and Jim Eanes. It was released in January 1983 as the second single from the album \"Highways & Heartaches\". \"I Wouldn't Change You If I Could\" was Ricky Skaggs' fourth number one on the country chart. The single stayed at number one for one week and spent a total of twelve weeks on the country chart.",
+                "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+                "Reel Zombies\nReel Zombies is a 2008 Canadian zombie film directed by David J. Francis and Mike Masters. It is the third film in a loose trilogy that includes \"Zombie Night\" and \"\". Shot in documentary style, it depicts a film crew that attempts to follow up on their low budget zombie films during an outbreak of a real zombie apocalypse.",
+                "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+                "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+                "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+                "King Charles the Martyr\nKing Charles the Martyr, or Charles, King and Martyr, is a title of Charles I, who was King of England, of Scotland, and of Ireland from 1625 until his execution on 30 January 1649. The title was used by high church Anglicans who regarded Charles' execution as a martyrdom. His feast day in the Anglican calendar is 30 January, the anniversary of his execution in 1649. The cult of Charles the Martyr was popular with Tories. The observance was one of several \"state services\" removed in 1859 from the Book of Common Prayer of the Church of England and the Church of Ireland. There remain some churches and parishes dedicated to Charles the Martyr, and his cult is maintained by some Anglo-Catholic societies, including the Society of King Charles the Martyr founded in 1894.",
+                "Wonder Could I Live There Anymore\n\"Wonder Could I Live There Anymore\" is a song written by Bill Rice, and recorded by American country music artist Charley Pride. It was released in May 1970 as the first single from the album \"From Me to You\". \"Wonder Could I Live There Anymore\" was Charley Pride's fourth number one in a row on the country charts. The single went to number one for two weeks and spent a total of 15 weeks on the top 40.",
+                "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+                "Plaga Zombie: Zona Mutante\nPlaga Zombie:Zona Mutante is a 2001 Argentine horror film directed and written by Pablo Par\u00e9s and Hern\u00e1n S\u00e1ez with Berta Mu\u00f1iz and Gabriel Grieco who all starred in the film. It is the second entry in the \"Plaga Zombie film series\" as the sequel to the 1997 film \"Plaga Zombie\" and followed by the 2012 film \"\".",
+                "Battle of the Bone\nBattle of the Bone is an 2008 Irish independent zombie film written and directed by George Clarke, and is claimed as Northern Ireland's \"first ever\" kung-fu zombie movie.",
+                "The Zombie Kids\nThe Zombie Kids is a band formed by Edgar Candel Kerri and Cumhur Jay, two disc jockeys and record producers who live in Spain. The newly formed band became popular with their debut in Rock in Rio (Lisbon 2010) and the release of their first single \"Face\" (2010), which was a great success. The song was chosen to be part of the O.S.T of the movie \"Tengo ganas de ti\" and the Mexican brewery advertisement of \"Cerveza Indio\". Its good acceptance made the record label Universal Music sign an agreement with the band to record its first album, \"The Zombie Kids\", which went on sale 27 July 2012. That same year, the band was awarded with the Best Spanish Artist of the \"MTV European Music Awards\". During the summer of 2013 The Zombie Kids was the musical band which had performed the most in public. They have also launched their first project \"TZK Radio\" with monthly sessions with which they have made public their new song \"My House is Your House\" feat. MC Ambush.",
+                "Hallelooya\nHallelooya (or Hallelujah) is a 2016 Malayalam film, directed by Sudhi Aanna in his feature film debut and starring Narain and Meghana Raj in the lead roles. It also features Sudheer Karamana, Sunil Sukhada, K. B. Ganesh Kumar, Sasi Kalinga, Saju Navodaya and Master Eric in significant roles. The film, produced by K. M. Surendran under the banner of Barking Dogs Seldom Bite Films, was released in May 2016.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Sidney Prescott\nSidney Prescott is a fictional character and the primary protagonist of the \"Scream\" series. The character was created by Kevin Williamson and is portrayed by Canadian actress Neve Campbell. She first appeared in \"Scream\" (1996) followed by three sequels: \"Scream 2\" (1997), \"Scream 3\" (2000) and \"Scream 4\" (2011). The character appears in the \"Scream\" films as the target of a series of killers who adopt the Ghostface persona, a ghost mask and black cloak, to pursue her. In each film, the Ghostface killers often murder people close to Sidney and taunt her by phone with threats and intimate knowledge of her life or the murder of her mother, leading to a final confrontation where the true killer is revealed.",
+                "Aaron Taylor-Johnson\nAaron Taylor-Johnson (born Aaron Perry Johnson; 13 June 1990) is an English actor, best known as the title character in the \"Kick-Ass\" films and Quicksilver in \"\" (2015).",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "10 to Midnight\n10 to Midnight is a 1983 American crime thriller film directed by J. Lee Thompson from a screenplay originally written by William Roberts. The film stars Charles Bronson in the lead role with a supporting cast that includes Lisa Eilbacher, Andrew Stevens, Gene Davis, Geoffrey Lewis, and Wilford Brimley. \"10 to Midnight\" was released by City Films, a subsidiary of Cannon Films, to American cinemas on March 11, 1983.",
+                "Ottavio Alessi\nBorn in Cammarata, Province of Agrigento, Alessi entered the film industry in 1940 as an assistant director. In 1945 he started an intense career as a screenwriter, alternating between genre films and art films and collaborating with Pietro Germi, Franco Rossi, Folco Quilici and Luciano Salce, among others. He also directed two films in the 1960s."
+            ],
+            "thoughts": [
+                "There are no Northern Irish actors mentioned in the provided information.",
+                "Zombie films released in 2015:\n1. Zombie Killers: Elephant's Graveyard\n2. The Rezort\n3. Contracted: Phase II",
+                "Zombie Killers: Elephant's Graveyard - The cast includes Billy Zane, Dee Wallace, Mischa Barton, Felissa Rose, and Gabrielle Stone.\n\nContracted: Phase II - The cast includes Matt Mercer, Marianna Palka, Morgan Peter Brown, and Anna Lore.\n\nThe Rezort - The cast includes Dougray Scott, Jessica De Gouw, and Martin McCann.",
+                "The films that match the criteria of having a Northern Irish actor in the cast are \"Zombie Killers: Elephant's Graveyard\" and \"The Rezort\" as they both feature Northern Irish actor Martin McCann.",
+                "The lead or significant stars in the matched films with Northern Irish actors are:\n\nZombie Killers: Elephant's Graveyard - No Northern Irish actors listed\nThe Rezort - Martin McCann\nReel Zombies - No Northern Irish actors listed\nHallelooya - No Northern Irish actors listed\nList of horror films of the 1930s - No Northern Irish actors listed\nSidney Prescott - No Northern Irish actors listed\nRoad Trip (film) - No Northern Irish actors listed\n10 to Midnight - No Northern Irish actors listed"
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify zombie films released in 2015, focusing on those with notable appearances by actors.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "List actors who are from Northern Ireland.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Cross-reference the list of 2015 zombie films with the list of Northern Irish actors to identify films that feature them.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Retrieve the main cast lists for the 2015 zombie films that have a Northern Irish actor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Identify the stars from the main cast lists of relevant 2015 zombie films.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The task can be broken down into identifying relevant films and actors, then analyzing connections through a multi-step process. First, we collect zombie films from 2015 (Node 1) and actors from Northern Ireland (Node 2), ensuring we have all possible components. Then, we determine which films had Northern Irish actors (Node 3). Next, we get the cast details for those specific films (Node 4), allowing us to finally identify the main stars (Node 5) to answer the question."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "The Rezort\nThe Rezort is a 2015 British zombie horror film directed by Steve Barker and written by Paul Gerstenberger. It stars Dougray Scott, Jessica De Gouw and Martin McCann. After humanity wins a devastating war against zombies, the few remaining undead are kept on a secure island, where they are hunted for sport. When something goes wrong with the island's security, the guests must face the possibility of a new outbreak.",
+                "Martin McCann (actor)\nMartin \"Marty\" McCann (born 20 July 1983) is an actor from Northern Ireland.",
+                "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+                "Zombie Killers: Elephant's Graveyard\nZombie Killers: Elephant's Graveyard is a 2015 zombie horror film. It was released on video by Anchor Bay Entertainment on February 3, 2015.",
+                "Reel Zombies\nReel Zombies is a 2008 Canadian zombie film directed by David J. Francis and Mike Masters. It is the third film in a loose trilogy that includes \"Zombie Night\" and \"\". Shot in documentary style, it depicts a film crew that attempts to follow up on their low budget zombie films during an outbreak of a real zombie apocalypse.",
+                "Contracted: Phase II\nContracted: Phase II is a 2015 zombie body horror film and the sequel to the 2013 film \"Contracted\". The movie was directed by Josh Forbes, based on a script written by Craig Walendziak, and Eric England, who wrote and directed the first film.",
+                "NIFL Premier Intermediate League\nThe NIFL Premier Intermediate League is the third division of the Northern Ireland Football League, the national association football league in Northern Ireland, and the highest intermediate division in Northern Ireland, occupying level three in the Northern Ireland football league system \u2013 below.",
+                "Hailey McCann\nHailey McCann (born October 3, 1995) is an American actress born in Riverside, California. McCann is one of four children and has two sisters and a brother. She played her first role in the 2003 short film \"Give or Take an Inch\". In the movie \"The Time Traveler's Wife\" she appeared alongside her younger sister, Tatum McCann as well as Eric Bana and Rachel McAdams. The sisters both played the character of Alba DeTamble in different time periods.",
+                "Northern Ireland Football League\nThe Northern Ireland Football League (commonly abbreviated to NIFL), also known as the Irish League, is the national football league of Northern Ireland. It was formed in 2013 to assume independent collective management of the top three levels of the Northern Ireland football league system; namely the Premiership, Championship and NIFL Premier Intermediate League.",
+                "Plaga Zombie: Zona Mutante\nPlaga Zombie:Zona Mutante is a 2001 Argentine horror film directed and written by Pablo Par\u00e9s and Hern\u00e1n S\u00e1ez with Berta Mu\u00f1iz and Gabriel Grieco who all starred in the film. It is the second entry in the \"Plaga Zombie film series\" as the sequel to the 1997 film \"Plaga Zombie\" and followed by the 2012 film \"\".",
+                "Catherine Scorsese\nCatherine Scorsese (n\u00e9e Cappa; April 16, 1912\u00a0\u2013 January 6, 1997) was an American actress, and the mother of director Martin Scorsese. Of Italian descent, she began acting when her son Martin Scorsese cast her in his film \"It's Not Just You, Murray!\". She frequently played the role of an Italian mother, and is perhaps most well known for her appearance in her son's film \"Goodfellas\". She acted in films other than her son's. She was married to Charles Scorsese. Her father, Martin Cappa, was a stage co-ordinator and her mother, Domenica, was a shop owner. She published a recipe book, \"Italianamerican: The Scorsese Family Cookbook\".",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Northern Ireland Intermediate League\nThe Northern Ireland Intermediate League is an amateur intermediate league based in the north-west region of Northern Ireland. As one of the leagues in the 4th tier of Northern Irish football, the league champions can be promoted to the NIFL Premier Intermediate League, providing they meet the admittance requirements.",
+                "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+                "List of Harry Potter cast members\nSeveral actors of the United Kingdom and Ireland have voiced or portrayed characters appearing in the \"Harry Potter\" film series based on the book series by J. K. Rowling. Daniel Radcliffe, Rupert Grint and Emma Watson have played Harry Potter, Ron Weasley and Hermione Granger in all the films. When they were cast only Radcliffe had previously acted in a film. Complementing them on screen are such actors as Helena Bonham Carter, Jim Broadbent, John Cleese, Robbie Coltrane, Warwick Davis, Ralph Fiennes, Michael Gambon, Brendan Gleeson, Richard Griffiths, Richard Harris, John Hurt, Jason Isaacs, Miriam Margolyes, Helen McCrory, Gary Oldman, Alan Rickman, Fiona Shaw, Maggie Smith, Timothy Spall, Imelda Staunton, David Thewlis, Emma Thompson, and Julie Walters, among others. Thirteen actors have appeared as the same character in all eight films of the series.",
+                "Barbara Windsor\nDame Barbara Windsor, DBE (born Barbara Ann Deeks; 6 August 1937) is an English actress, known for her appearances in the \"Carry On\" films and for playing Peggy Mitchell in the BBC One soap opera \"EastEnders\". She joined the cast of \"EastEnders\" in 1994 and won the 1999 British Soap Award for Best Actress. She left the show in 2010, before returning for three episodes between 2013 and 2015. Her character's final appearances were broadcast in June 2016.",
+                "North of Ireland F.C.\nNorth of Ireland Football Club is a former Irish rugby union club that was based in Belfast, Northern Ireland. It was the first rugby club formed in what is now Northern Ireland and only two other clubs - Dublin University and Wanderers - were formed earlier anywhere else in all Ireland. It was founded in 1868 by members of North of Ireland Cricket Club. NIFC also played in the first recorded rugby game in Ulster when they played a 20-a-side match against Queen's University RFC.",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "General Hospital cast members\n\"General Hospital\" is the longest running American television serial drama, airing on ABC. Created by Frank and Doris Hursley, the series premiered on April 1, 1963. The longest-running cast member is Leslie Charleson, who has portrayed Dr. Monica Quartermaine since August 17, 1977, also making her one of the longest-tenured actors in American soap operas. Former cast member Rachel Ames was previously the series' longest-running cast member, portraying Audrey Hardy from 1964 to 2007, and making guest appearances in 2009 and 2013, the latter for the series' fiftieth anniversary. Ames made a special appearance on October 30, 2015. Actors Genie Francis and Kin Shriner, who portray Laura Spencer and Scott Baldwin, are the second and third longest-running cast members, having joined \"General Hospital\" in February and August 1977, respectively. Actress Jacklyn Zeman \u2014 who portrays Bobbie Spencer \u2014 is the fourth longest-running cast member, joining the serial in December 1977. Actress Jane Elliot, who joined the serial in June 1978 as Tracy Quartermaine, is the fifth longest-running cast member, joining \"General Hospital\" in June 1978 until her departure in May 2017. Former cast member Anthony Geary, who portrayed Luke Spencer, was the sixth longest-running cast member, having joined \"General Hospital\" in November 1978. The following list is of cast members who are currently on the show: the main and recurring cast members, or those who are debuting, departing or returning to the series."
+            ],
+            "thoughts": [
+                "The only zombie film released in 2015 with notable appearances by actors is \"The Rezort\", which stars Dougray Scott, Jessica De Gouw, and Martin McCann. This film follows a group of guests on a secure island where the remaining undead are hunted for sport, but when the island's security fails, they must face the possibility of a new outbreak.",
+                "- Paul Williams\n- Martin McCann",
+                "The only 2015 zombie film featuring Northern Irish actors is \"The Rezort\", which stars Martin McCann.",
+                "The main cast lists for the 2015 zombie films that have a Northern Irish actor are as follows:\n\n1. The Rezort\n   - Dougray Scott\n   - Jessica De Gouw\n   - Martin McCann\n\n2. Zombie Killers: Elephant's Graveyard\n   - No Northern Irish actor listed\n\n3. Contracted: Phase II\n   - No Northern Irish actor listed\n\n4. Reel Zombies\n   - No Northern Irish actor listed\n\n5. Plaga Zombie: Zona Mutante\n   - No Northern Irish actor listed",
+                "The main cast lists for the 2015 zombie films with Northern Irish actors are as follows:\n\n1. The Rezort\n   - Dougray Scott\n   - Jessica De Gouw\n   - Martin McCann"
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify 2015 zombie films featuring Northern Irish actors.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "List actors in each identified 2015 zombie film with Northern Irish actors.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Select films from 2015 zombie genre with Northern Irish actors and their casts.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Determine the actors who starred in the selected films from 2015 based on their billing and prominence.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The graph breaks down the task by first identifying zombie films from 2015 featuring Northern Irish actors. After gathering this list, it retrieves the cast members from these films. The reasoning steps involve selecting the relevant films and determining which cast members had starring roles, based on billing and prominence in those films."
+            },
+            "recall": 0.4444444444444444,
+            "retrieved_passages": [
+                "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+                "The Rezort\nThe Rezort is a 2015 British zombie horror film directed by Steve Barker and written by Paul Gerstenberger. It stars Dougray Scott, Jessica De Gouw and Martin McCann. After humanity wins a devastating war against zombies, the few remaining undead are kept on a secure island, where they are hunted for sport. When something goes wrong with the island's security, the guests must face the possibility of a new outbreak.",
+                "Battle of the Bone\nBattle of the Bone is an 2008 Irish independent zombie film written and directed by George Clarke, and is claimed as Northern Ireland's \"first ever\" kung-fu zombie movie.",
+                "List of Harry Potter cast members\nSeveral actors of the United Kingdom and Ireland have voiced or portrayed characters appearing in the \"Harry Potter\" film series based on the book series by J. K. Rowling. Daniel Radcliffe, Rupert Grint and Emma Watson have played Harry Potter, Ron Weasley and Hermione Granger in all the films. When they were cast only Radcliffe had previously acted in a film. Complementing them on screen are such actors as Helena Bonham Carter, Jim Broadbent, John Cleese, Robbie Coltrane, Warwick Davis, Ralph Fiennes, Michael Gambon, Brendan Gleeson, Richard Griffiths, Richard Harris, John Hurt, Jason Isaacs, Miriam Margolyes, Helen McCrory, Gary Oldman, Alan Rickman, Fiona Shaw, Maggie Smith, Timothy Spall, Imelda Staunton, David Thewlis, Emma Thompson, and Julie Walters, among others. Thirteen actors have appeared as the same character in all eight films of the series.",
+                "Zombie Killers: Elephant's Graveyard\nZombie Killers: Elephant's Graveyard is a 2015 zombie horror film. It was released on video by Anchor Bay Entertainment on February 3, 2015.",
+                "Dead Meat\nDead Meat is a 2004 Irish zombie film written and directed by Conor McMahon, starring Spanish theatre actress Marian Araujo and veteran Irish actor Eoin Whelan.",
+                "Screen Actors Guild Life Achievement Award\nThe Screen Actors Guild Life Achievement Award is given by the Screen Actors Guild's National Honors and Tributes Committee \"for outstanding achievement in fostering the finest ideals of the acting profession.\" The award predates the 1st Screen Actors Guild Awards by over thirty years, having been presented annually since 1962, except for 1964 and 1981.",
+                "List of Best Supporting Actor winners by age\nThis is a list of winners of the Academy Award of Merit for Performance by an Actor in a Supporting Role, presented annually by the Academy of Motion Picture Arts and Sciences (AMPAS) to an actor who has delivered an outstanding performance while working within the film industry. More popularly known as the Academy Award (or the Oscar) for Best Supporting Actor, this award was initially presented at the 9th Academy Awards ceremony for 1936 and was most recently presented at the 88th Academy Awards ceremony for 2015. Throughout the past 80 years, accounting for ties and repeat winners, AMPAS has presented a total of 81 Best Supporting Actor awards to 73 different actors. This list is current as of the 89th Academy Awards ceremony held on February 26, 2017.",
+                "Northern Ireland Football League\nThe Northern Ireland Football League (commonly abbreviated to NIFL), also known as the Irish League, is the national football league of Northern Ireland. It was formed in 2013 to assume independent collective management of the top three levels of the Northern Ireland football league system; namely the Premiership, Championship and NIFL Premier Intermediate League.",
+                "Reel Zombies\nReel Zombies is a 2008 Canadian zombie film directed by David J. Francis and Mike Masters. It is the third film in a loose trilogy that includes \"Zombie Night\" and \"\". Shot in documentary style, it depicts a film crew that attempts to follow up on their low budget zombie films during an outbreak of a real zombie apocalypse.",
+                "North of Ireland F.C.\nNorth of Ireland Football Club is a former Irish rugby union club that was based in Belfast, Northern Ireland. It was the first rugby club formed in what is now Northern Ireland and only two other clubs - Dublin University and Wanderers - were formed earlier anywhere else in all Ireland. It was founded in 1868 by members of North of Ireland Cricket Club. NIFC also played in the first recorded rugby game in Ulster when they played a 20-a-side match against Queen's University RFC."
+            ],
+            "thoughts": [
+                "The 2015 zombie film featuring Northern Irish actors is \"The Rezort,\" which stars Martin McCann.",
+                "The Rezort (2015)\n- Dougray Scott\n- Jessica De Gouw\n- Martin McCann\n\nZombie Killers: Elephant's Graveyard (2015)\n- No Northern Irish actors identified\n\nBattle of the Bone (2008)\n- No Northern Irish actors identified\n\nDead Meat (2004)\n- Eoin Whelan",
+                "The 2015 zombie film featuring Northern Irish actors is \"The Rezort,\" which stars Martin McCann. The cast also includes Dougray Scott and Jessica De Gouw.",
+                "The actors who starred in \"The Rezort\" (2015) are Martin McCann, Dougray Scott, and Jessica De Gouw."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify zombie films released in 2015.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify actors from Northern Ireland who starred in films.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Cross-reference the list of 2015 zombie films with films starring Northern Irish actors to find common films.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1",
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the lead or notable actors in the identified films from the intersection.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "To determine who starred in a 2015 zombie film with a Northern Irish actor, the task is broken down into several steps. First, we need to gather a list of zombie films released in 2015. Simultaneously, we gather information on actors from Northern Ireland who starred in films. By cross-referencing these lists, we can identify which 2015 zombie films featured Northern Irish actors. Finally, for these films, we retrieve the lead or notable actors to answer the original question."
+            },
+            "recall": 0.3888888888888889,
+            "retrieved_passages": [
+                "Zombie Killers: Elephant's Graveyard\nZombie Killers: Elephant's Graveyard is a 2015 zombie horror film. It was released on video by Anchor Bay Entertainment on February 3, 2015.",
+                "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+                "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+                "Reel Zombies\nReel Zombies is a 2008 Canadian zombie film directed by David J. Francis and Mike Masters. It is the third film in a loose trilogy that includes \"Zombie Night\" and \"\". Shot in documentary style, it depicts a film crew that attempts to follow up on their low budget zombie films during an outbreak of a real zombie apocalypse.",
+                "The Rezort\nThe Rezort is a 2015 British zombie horror film directed by Steve Barker and written by Paul Gerstenberger. It stars Dougray Scott, Jessica De Gouw and Martin McCann. After humanity wins a devastating war against zombies, the few remaining undead are kept on a secure island, where they are hunted for sport. When something goes wrong with the island's security, the guests must face the possibility of a new outbreak.",
+                "Zombieland\nZombieland is a 2009 American comedy horror film directed by Ruben Fleischer and written by Rhett Reese and Paul Wernick. The film stars Woody Harrelson, Jesse Eisenberg, Emma Stone and Abigail Breslin as survivors of a zombie apocalypse. The film follows a geeky college kid making his way through the zombie apocalypse, meeting three strangers along the way and together taking an extended road trip across the Southwestern United States in an attempt to find a sanctuary free from zombies. The film premiered at Fantastic Fest on September 25, 2009 and was theatrically released on October 2, 2009 in the United States by Columbia Pictures. \"Zombieland\" was a critical and commercial success, grossing more than $60.8 million in 17 days and surpassing the 2004 film \"Dawn of the Dead\" as the top-grossing zombie film in the United States until \"World War Z\" in 2013.",
+                "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+                "Nelly Furtado discography\nCanadian singer Nelly Furtado has released six studio albums, twenty singles, one video album, one live album, two compilation albums, three extended plays, and twenty-three music videos. Furtado released her debut album \"Whoa, Nelly!\" in 2000 and it became a commercial success selling 9 million copies worldwide. It has been certified multi Platinum in countries such as Canada, United States, Australia and New Zealand. The album spawned four singles including the successful top 10 hits; \"I'm Like a Bird\" and \"Turn Off the Light\". In 2003 she released her second album \"Folklore\", while the album did not match the success of her previous album in such markets as the US and Australia, it did however become a success in several European countries. \"Folklore\" has sold 3 million copies worldwide. The album produced two European top 10 hits; \"Powerless (Say What You Want)\" and \"For\u00e7a\", while \"Try\" peaked inside the top 10 in Canada. Furtado's third album \"Loose\" (2006) became her best selling album of career with 12 million copies sold worldwide. It also reached number one on the album chart of nine countries and was certified multi Platinum in several countries such as Canada, UK, Australia, Germany, Switzerland, Austria and New Zeeland. The album spawned four successful number one singles; \"Promiscuous\", \"Maneater\", \"Say It Right\" and \"All Good Things (Come to an End)\". \"Loose\" was one of the best selling albums of 2006\u20132007 and is twenty-second best-selling album of the 2000s. She released her first Spanish language album \"Mi Plan\" in 2009 which became a success in Europe and on the Latin charts. The lead single \"Manos al Aire\" became a European top 10 hit and also topped the \"Billboard\" Hot Latin Songs chart, making Furtado the first North American singer to reach number one on that chart with an original Spanish song. \"Mi Plan\" has been certified Platinum (Latin) in the US. In 2010 she released a remix album \"Mi Plan Remixes\" and her first greatest hits \"The Best of Nelly Furtado\". Furtado released her fifth album \"The Spirit Indestructible\" in 2012, followed by \"The Ride\" in 2017.",
+                "Mama Don't Get Dressed Up for Nothing\n\"Mama Don't Get Dressed Up For Nothing\" is a song co-written and recorded by American country music duo Brooks & Dunn. It was released in September 1996 as the third single from their CD \"Borderline\", and their eighteenth single overall. The song received moderate success on the US Country chart, where it peaked at number 13, while it was a number 8 hit in Canada. It was the first single the duo released that missed the US country top 10, breaking a streak of 17 straight top 10 entries; the next eight singles Brooks and Dunn released after this would also make the country top 10. This is the fourth single to feature Kix Brooks on lead vocals instead of Ronnie Dunn. Kix and Ronnie wrote this song, along with Don Cook.",
+                "Too Big to Fail (film)\nToo Big to Fail is an American television drama film first broadcast on HBO on May 23, 2011 based on Andrew Ross Sorkin's non-fiction book \"\" (2009). The film was directed by Curtis Hanson. It received 11 nominations at the 63rd Primetime Emmy Awards; Paul Giamatti's portrayal of Ben Bernanke earned him the Screen Actors Guild Award for Outstanding Performance by a Male Actor in a Miniseries or Television Movie at the 18th Screen Actors Guild Awards.",
+                "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+                "10 to Midnight\n10 to Midnight is a 1983 American crime thriller film directed by J. Lee Thompson from a screenplay originally written by William Roberts. The film stars Charles Bronson in the lead role with a supporting cast that includes Lisa Eilbacher, Andrew Stevens, Gene Davis, Geoffrey Lewis, and Wilford Brimley. \"10 to Midnight\" was released by City Films, a subsidiary of Cannon Films, to American cinemas on March 11, 1983.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+                "Khilona (1970 film)\nKhilona (English: Toy ) is a 1970 Indian drama film, produced by L.V. Prasad on Prasad Productions Pvt.Ltd. banner and directed by Chander Vohra. Starring Sanjeev Kumar, Mumtaz, Jeetendra in lead roles. Other actors in supporting roles are Shatrughan Sinha, Durga Khote, Ramesh Deo, Jagdeep and music composed by Laxmikant-Pyarelal. The film recorded as \"Super Hit\" at the box office. The film was a remake of Telugu film \"Punarjanma\". The film was not remade in Tamil instead both Hindi and Tamil version were simultaneously made. Tamil version had \"Engirundho Vandhaal\" with Sivaji Ganesan and Jayalalithaa. The film was also remade in Malayalam as \"Amrithavaahini\".",
+                "Treat Williams\nRichard Treat Williams (born December 1, 1951) is an American actor and children's book author who has appeared on film, stage and television. He first became well known for his starring role in the 1979 film \"Hair\", and later also starred in the films \"Prince of the City\", \"Once Upon a Time in America\", \"The Late Shift\" and \"127 Hours\". From 2002 to 2006, he was the lead of the television series \"Everwood\" and was nominated for two Screen Actors Guild Awards.",
+                "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+                "List of Harry Potter cast members\nSeveral actors of the United Kingdom and Ireland have voiced or portrayed characters appearing in the \"Harry Potter\" film series based on the book series by J. K. Rowling. Daniel Radcliffe, Rupert Grint and Emma Watson have played Harry Potter, Ron Weasley and Hermione Granger in all the films. When they were cast only Radcliffe had previously acted in a film. Complementing them on screen are such actors as Helena Bonham Carter, Jim Broadbent, John Cleese, Robbie Coltrane, Warwick Davis, Ralph Fiennes, Michael Gambon, Brendan Gleeson, Richard Griffiths, Richard Harris, John Hurt, Jason Isaacs, Miriam Margolyes, Helen McCrory, Gary Oldman, Alan Rickman, Fiona Shaw, Maggie Smith, Timothy Spall, Imelda Staunton, David Thewlis, Emma Thompson, and Julie Walters, among others. Thirteen actors have appeared as the same character in all eight films of the series.",
+                "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+                "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+                "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives.",
+                "Welcome, or No Trespassing\nWelcome, or No Trespassing (Russian: \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c, \u0438\u043b\u0438 \u041f\u043e\u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u043c \u0432\u0445\u043e\u0434 \u0432\u043e\u0441\u043f\u0440\u0435\u0449\u0451\u043d , \"Dobro pozhalovat, ili Postoronnim vkhod vospreshchyon \" ) is a Soviet movie by Elem Klimov made in 1964. It is a satirical comedy about the excessive restrictions that children face during their vacation in a Young Pioneer camp, imposed by their masters. Most of the actors are children, while the protagonist is the director Dynin, played by Yevgeniy Yevstigneyev. The film was selected to be screened in the Cannes Classics section of the 2015 Cannes Film Festival.",
+                "Motion City Soundtrack\nMotion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997. The band's line-up consisted of vocalist and guitarist Justin Pierre, lead guitarist Joshua Cain, keyboardist Jesse Johnson, bassist Matthew Taylor, and drummer Tony Thaxton. Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records. The band's sound, at times described as pop punk or emo, made notable use of the Moog synthesizer."
+            ],
+            "thoughts": [
+                "Zombie films released in 2015:\n1. Zombie Killers: Elephant's Graveyard\n2. The Rezort",
+                "Liam Neeson is an actor from Northern Ireland who has starred in numerous films, including \"Taken,\" \"Schindler's List,\" and \"Love Actually.\" Another actor from Northern Ireland is Jamie Dornan, known for his roles in \"Fifty Shades of Grey\" and \"The Fall.\" Both actors have made significant contributions to the film industry.",
+                "The common film between the list of 2015 zombie films and films starring Northern Irish actors is \"The Rezort,\" which is a zombie film released in 2015 and stars Northern Irish actor Jamie Dornan.",
+                "The Rezort: Lead actors include Dougray Scott, Jessica De Gouw, and Martin McCann.\n\nToo Big to Fail: Lead actor is Paul Giamatti.\n\nRoad Trip: Lead actors include Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls.\n\nKhilona: Lead actors include Sanjeev Kumar, Mumtaz, and Jeetendra.\n\nWelcome, or No Trespassing: Lead actor is Yevgeniy Yevstigneyev.\n\nMotion City Soundtrack: Band members include Justin Pierre, Joshua Cain, Jesse Johnson, Matthew Taylor, and Tony Thaxton."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify zombie films released in 2015.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "For each 2015 zombie film, find the cast list.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify Northern Irish actors and list their filmography.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Match the filmographies of Northern Irish actors with the 2015 zombie films and identify the specific film in which one appeared.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2",
+                                "3"
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "instruction": "Retrieve the cast list of the identified 2015 zombie film starring a Northern Irish actor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "4"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "5"
+                },
+                "explanation": "The question requires identifying a zombie film from 2015 that featured a Northern Irish actor and then finding out who else starred in that film. The execution graph starts by retrieving zombie films released in 2015 and their casts. Meanwhile, Northern Irish actors are identified, and their filmographies are noted. The lists are cross-referenced to pinpoint the exact movie featuring a Northern Irish actor, from which the final set of stars can be obtained."
+            },
+            "recall": 0.4444444444444444,
+            "retrieved_passages": [
+                "Zombie Killers: Elephant's Graveyard\nZombie Killers: Elephant's Graveyard is a 2015 zombie horror film. It was released on video by Anchor Bay Entertainment on February 3, 2015.",
+                "The Rezort\nThe Rezort is a 2015 British zombie horror film directed by Steve Barker and written by Paul Gerstenberger. It stars Dougray Scott, Jessica De Gouw and Martin McCann. After humanity wins a devastating war against zombies, the few remaining undead are kept on a secure island, where they are hunted for sport. When something goes wrong with the island's security, the guests must face the possibility of a new outbreak.",
+                "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+                "Reel Zombies\nReel Zombies is a 2008 Canadian zombie film directed by David J. Francis and Mike Masters. It is the third film in a loose trilogy that includes \"Zombie Night\" and \"\". Shot in documentary style, it depicts a film crew that attempts to follow up on their low budget zombie films during an outbreak of a real zombie apocalypse.",
+                "Plaga Zombie: Zona Mutante\nPlaga Zombie:Zona Mutante is a 2001 Argentine horror film directed and written by Pablo Par\u00e9s and Hern\u00e1n S\u00e1ez with Berta Mu\u00f1iz and Gabriel Grieco who all starred in the film. It is the second entry in the \"Plaga Zombie film series\" as the sequel to the 1997 film \"Plaga Zombie\" and followed by the 2012 film \"\".",
+                "Battle of the Bone\nBattle of the Bone is an 2008 Irish independent zombie film written and directed by George Clarke, and is claimed as Northern Ireland's \"first ever\" kung-fu zombie movie.",
+                "Contracted: Phase II\nContracted: Phase II is a 2015 zombie body horror film and the sequel to the 2013 film \"Contracted\". The movie was directed by Josh Forbes, based on a script written by Craig Walendziak, and Eric England, who wrote and directed the first film.",
+                "The Zombie Kids\nThe Zombie Kids is a band formed by Edgar Candel Kerri and Cumhur Jay, two disc jockeys and record producers who live in Spain. The newly formed band became popular with their debut in Rock in Rio (Lisbon 2010) and the release of their first single \"Face\" (2010), which was a great success. The song was chosen to be part of the O.S.T of the movie \"Tengo ganas de ti\" and the Mexican brewery advertisement of \"Cerveza Indio\". Its good acceptance made the record label Universal Music sign an agreement with the band to record its first album, \"The Zombie Kids\", which went on sale 27 July 2012. That same year, the band was awarded with the Best Spanish Artist of the \"MTV European Music Awards\". During the summer of 2013 The Zombie Kids was the musical band which had performed the most in public. They have also launched their first project \"TZK Radio\" with monthly sessions with which they have made public their new song \"My House is Your House\" feat. MC Ambush.",
+                "Northern Westchester\nNorthern Westchester refers to the upper portion of Westchester County, New York, a suburban area north of New York City. Lying north of Interstate 287/Cross Westchester Expressway, these communities are distinguished by distance from New York City and their more rural character from those of Southern Westchester. The area is notable for its general affluence and high degree of watershed for New York City, being home to two major collection reservoirs supplying drinking water to it, the New Croton Reservoir and the Kensico Reservoir.",
+                "Zombieland\nZombieland is a 2009 American comedy horror film directed by Ruben Fleischer and written by Rhett Reese and Paul Wernick. The film stars Woody Harrelson, Jesse Eisenberg, Emma Stone and Abigail Breslin as survivors of a zombie apocalypse. The film follows a geeky college kid making his way through the zombie apocalypse, meeting three strangers along the way and together taking an extended road trip across the Southwestern United States in an attempt to find a sanctuary free from zombies. The film premiered at Fantastic Fest on September 25, 2009 and was theatrically released on October 2, 2009 in the United States by Columbia Pictures. \"Zombieland\" was a critical and commercial success, grossing more than $60.8 million in 17 days and surpassing the 2004 film \"Dawn of the Dead\" as the top-grossing zombie film in the United States until \"World War Z\" in 2013.",
+                "North of Ireland F.C.\nNorth of Ireland Football Club is a former Irish rugby union club that was based in Belfast, Northern Ireland. It was the first rugby club formed in what is now Northern Ireland and only two other clubs - Dublin University and Wanderers - were formed earlier anywhere else in all Ireland. It was founded in 1868 by members of North of Ireland Cricket Club. NIFC also played in the first recorded rugby game in Ulster when they played a 20-a-side match against Queen's University RFC.",
+                "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+                "Irish prose fiction\nAlthough the epics of Celtic Ireland were written in prose and not verse, most people would probably consider that Irish fiction proper begins in the 18th century. However, there are aspects of Early Irish prose that appear to have had some influence on the Irish novel: the use of exaggeration for humorous effect, a near obsession with lists, and a strong sense of satire. This article is concerned with the history of Irish fiction written in English. For Irish fiction written in Irish, see Modern literature in Irish. For a general overview of Irish writing in all genres, see Irish literature.",
+                "Sport &amp; Leisure Swifts F.C.\nSport & Leisure Swifts Football Club is an intermediate, Northern Irish football club playing in the NIFL Premier Intermediate League. The club hails from Belfast and plays their home games at Glen Road Heights which is in the west of the city. It was founded in 1978 and played in the County Down Premier League and the Dunmurry League, before joining the Northern Amateur League in 1990.",
+                "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+                "Lisburn Distillery F.C.\nLisburn Distillery Football Club is a Northern Irish, intermediate football club who are based in Ballyskeagh, County Down and play in the NIFL Premier Intermediate League. The club, founded in 1880, originated in west Belfast, where it was based at Grosvenor Park at Distillery Street off the Grosvenor Road until 1971. After sharing Skegoneill Avenue (Brantwood) and Seaview (Crusaders) for some years the club moved in 1980 to a permanent new home at New Grosvenor Stadium, Ballyskeagh, County Antrim, on the southern outskirts of Belfast. The club was known as Distillery until 1999, when it changed its name to 'Lisburn Distillery' in an attempt to associate itself more closely with its adopted borough (now city) of Lisburn. The club colour is white. The club, a founder member of the Irish League in 1890, was relegated in May 2013.",
+                "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+                "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+                "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+                "The Wannabe\nThe Wannabe is a 2015 American drama film written and directed by Nick Sandow. The film stars Patricia Arquette, David Zayas, Domenick Lombardozzi, Michael Imperioli, Vincent Piazza and Nick Sandow. The film was released on December 4, 2015, by Entertainment One Films and Orion Pictures."
+            ],
+            "thoughts": [
+                "The zombie film released in 2015 is \"Zombie Killers: Elephant's Graveyard\" and \"The Rezort\".",
+                "Zombie Killers: Elephant's Graveyard (2015) Cast:\n- Billy Zane\n- Dee Wallace\n- Mischa Barton\n- Felissa Rose\n- Gabrielle Stone\n\nThe Rezort (2015) Cast:\n- Dougray Scott\n- Jessica De Gouw\n- Martin McCann\n\nContracted: Phase II (2015) Cast:\n- Matt Mercer\n- Marianna Palka\n- Morgan Peter Brown\n- Laurel Vail\n- Anna Lore\n\nPlease note that the other films mentioned do not have a release date of 2015 or are not zombie films.",
+                "Northern Irish actors and their filmography:\n\n1. Liam Neeson\n   - Schindler's List\n   - Taken\n   - Love Actually\n   - The Grey\n   - Non-Stop\n\n2. Jamie Dornan\n   - Fifty Shades of Grey\n   - Anthropoid\n   - A Private War\n   - The Fall (TV series)\n   - Robin Hood\n\n3. Ciar\u00e1n Hinds\n   - Munich\n   - There Will Be Blood\n   - Tinker Tailor Soldier Spy\n   - Harry Potter and the Deathly Hallows: Part 2\n   - Silence\n\n4. Stephen Rea\n   - The Crying Game\n   - V for Vendetta\n   - Interview with the Vampire\n   - The Butcher Boy\n   - Michael Collins\n\n5. Kenneth Branagh\n   - Henry V\n   - Much Ado About Nothing\n   - Hamlet\n   - Murder on the Orient Express\n   - Tenet",
+                "The Northern Irish actor who appeared in the 2015 zombie film \"The Rezort\" is Martin McCann.",
+                "The identified 2015 zombie film starring a Northern Irish actor is \"The Rezort.\" The cast list includes Dougray Scott, Jessica De Gouw, and Martin McCann."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify zombie films released in 2015, focusing on those with notable appearances by actors.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List actors who are from Northern Ireland.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Cross-reference the list of 2015 zombie films with the list of Northern Irish actors to identify films that feature them.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve the main cast lists for the 2015 zombie films that have a Northern Irish actor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify the stars from the main cast lists of relevant 2015 zombie films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The task can be broken down into identifying relevant films and actors, then analyzing connections through a multi-step process. First, we collect zombie films from 2015 (Node 1) and actors from Northern Ireland (Node 2), ensuring we have all possible components. Then, we determine which films had Northern Irish actors (Node 3). Next, we get the cast details for those specific films (Node 4), allowing us to finally identify the main stars (Node 5) to answer the question."
+    },
+    "best_recall": 0.9444444444444444
+}

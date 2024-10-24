@@ -1,0 +1,267 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the Stoke City football player who endorses the Nike Mercurial Vapor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the national team for the Stoke City football player identified in Step 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "2"
+                },
+                "explanation": "The execution graph consists of two main steps. The first step is to retrieve the name of the Stoke City football player who endorses the Nike Mercurial Vapor. This endorsement information would typically be found in sports sponsorship and endorsement reports or announcements. Once that player's name is known, the second step is to look up which national team he represents, which can be found on sports databases or official national team listings. Both steps involve retrieval and reasoning to connect the endorsement and national team information."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Nike Mercurial Vapor\nThe Mercurial Vapor is a football boot manufactured by Nike. The boot is known for being lightweight. Because of this, the boot is endorsed by many players for whom speed is part of their game, notably wingers or strikers, such as Cristiano Ronaldo, Franck Rib\u00e9ry, Luiz Adriano, Zlatan Ibrahimovi\u0107, Didier Drogba, Jes\u00fas Navas, Luka Modri\u0107, Arturo Vidal, Douglas Costa, Xherdan Shaqiri, Raheem Sterling, Stephan El Shaarawy, Eden Hazard, Alexis S\u00e1nchez, Carlos Bacca and Philippe Coutinho, among others.",
+                "Tommy Hyslop\nThomas \"Tommy\" Hyslop (22 September 1874 \u2013 1936) was a Scottish footballer who played in the Football League for Stoke City and Sunderland He was the first Stoke player to be capped by Scotland. He represented the Scotland national team, playing twice against England in 1896 and in 1897, scoring on his debut. He also played for Sunderland and Rangers.",
+                "Stoke City F.C. Under-23s and Academy\nStoke City Football Club Under-23s is the most senior of Stoke City's youth teams and the club's former reserve team. The Under-23 team is effectively Stoke City's second-string side. They play in Premier League 2 Division 2. The team also competes in the Premier League Cup and the Staffordshire Senior Cup.",
+                "Gareth Evans (footballer, born 1967)\nGareth John Evans (born 14 January 1967) is an English football player and coach. He played for Coventry City, Rotherham United, Hibernian, Stoke City, Northampton Town, Partick Thistle, Airdrie and Alloa Athletic. Evans has been the caretaker manager of Hibernian and Livingston, and was head coach of the Scotland women's under-19 national team for four years.",
+                "Maurice Setters\nMaurice Edgar Setters (born 16 December 1936) is an English former football player and manager. As player, he made more than 400 appearances in the Football League representing Exeter City, West Bromwich Albion, Manchester United, Stoke City, Coventry City and Charlton Athletic, and in the United Soccer Association with the Cleveland Stokers (Stoke City under another name). His favoured position was wing half. As manager, he took charge of Doncaster Rovers and (briefly) Sheffield Wednesday, and spent several years as assistant manager of the Republic of Ireland.",
+                "Stoke City F.C.\nStoke City Football Club is a professional football club based in Stoke-on-Trent, Staffordshire, England, that plays in the Premier League, the top flight of English football.",
+                "Eddie Niedzwiecki\nAndrzej Edward \"Eddie\" Niedzwiecki; born 3 May 1959) is a Welsh former footballer who played as a goalkeeper for Wrexham and Chelsea and is now first-team coach at Stoke City. After retiring early due to injury Niedzwiecki became a coach with Chelsea and then Arsenal before working with Mark Hughes with the Wales national team. Since then he has worked with Hughes at Blackburn Rovers, Manchester City, Fulham, Queens Park Rangers and Stoke City.",
+                "Xherdan Shaqiri\nXherdan Shaqiri (] ; born 10 October 1991) is a Swiss professional footballer who plays as a winger for Premier League club Stoke City, and the Switzerland national team.",
+                "Stoke City F.C. in European football\nStoke City Football Club is an English football club based in Stoke-on-Trent, Staffordshire. The club was founded in 1863 and has competed in the English football league system since 1888. They played in the UEFA Cup in 1972\u201373 and 1974\u201375, before qualifying for the tournament in 2011\u201312 under the new name of UEFA Europa League. The club also entered the Anglo-Italian Cup and the Texaco Cup.",
+                "Arthur Turner (footballer, born 1909)\nArthur Owen Turner (1 April 1909 \u2013 12 January 1994) was an English professional association football player and manager. He played as a centre-half for Stoke City, Birmingham City and Southport. Turner was player-manager of Southport, managed Crewe Alexandra and was assistant at Stoke before joining Birmingham City as manager. He won the Second Division championship in 1954\u201355, led them the following season to the 1956 FA Cup Final and their highest ever top flight finish, and became the first man to manage an English club side in European competition when he took the club to the semi-final of the Inter-Cities Fairs Cup in 1958. Turner went on to manage the transformation of Southern League club Headington United into Oxford United of the Second Division of the Football League.",
+                "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars."
+            ],
+            "thoughts": [
+                "The Stoke City football player who endorses the Nike Mercurial Vapor is not mentioned in the provided information. Therefore, the specific player cannot be identified.",
+                "The national team for Tommy Hyslop, the Stoke City football player, is the Scotland national team. He represented Scotland in matches against England in 1896 and 1897, scoring on his debut."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify which Stoke City football players endorse the Nike Mercurial Vapor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "For each player identified in step 1, determine their national team affiliations.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "2"
+                },
+                "explanation": "The task is to find the national team of a Stoke City player who endorses the Nike Mercurial Vapor. The graph consists of two nodes: the first node retrieves and reasons about Stoke City players who endorse Nike Mercurial Vapor boots, and the second node retrieves and reasons about the national teams of those players."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Nike Mercurial Vapor\nThe Mercurial Vapor is a football boot manufactured by Nike. The boot is known for being lightweight. Because of this, the boot is endorsed by many players for whom speed is part of their game, notably wingers or strikers, such as Cristiano Ronaldo, Franck Rib\u00e9ry, Luiz Adriano, Zlatan Ibrahimovi\u0107, Didier Drogba, Jes\u00fas Navas, Luka Modri\u0107, Arturo Vidal, Douglas Costa, Xherdan Shaqiri, Raheem Sterling, Stephan El Shaarawy, Eden Hazard, Alexis S\u00e1nchez, Carlos Bacca and Philippe Coutinho, among others.",
+                "Tommy Hyslop\nThomas \"Tommy\" Hyslop (22 September 1874 \u2013 1936) was a Scottish footballer who played in the Football League for Stoke City and Sunderland He was the first Stoke player to be capped by Scotland. He represented the Scotland national team, playing twice against England in 1896 and in 1897, scoring on his debut. He also played for Sunderland and Rangers.",
+                "Stoke City F.C. Under-23s and Academy\nStoke City Football Club Under-23s is the most senior of Stoke City's youth teams and the club's former reserve team. The Under-23 team is effectively Stoke City's second-string side. They play in Premier League 2 Division 2. The team also competes in the Premier League Cup and the Staffordshire Senior Cup.",
+                "Nike Hypervenom\nThe \"Nike Hypervenom\" is a football boot that is manufactured by Nike. This type of boot is said to be for traction and agility, designed for deceptive players. Therefore, it is endorsed/worn by players, notably forwards, such as Marcus Rashford, Kylian Mbapp\u00e9, Robert Lewandowski, Gonzalo Higua\u00edn, Mauro Icardi, Harry Kane, Edinson Cavani, Riyad Mahrez, Romelu Lukaku, Cian Brennan Aubameyang and Thiago.",
+                "Gareth Evans (footballer, born 1967)\nGareth John Evans (born 14 January 1967) is an English football player and coach. He played for Coventry City, Rotherham United, Hibernian, Stoke City, Northampton Town, Partick Thistle, Airdrie and Alloa Athletic. Evans has been the caretaker manager of Hibernian and Livingston, and was head coach of the Scotland women's under-19 national team for four years.",
+                "Stoke City F.C.\nStoke City Football Club is a professional football club based in Stoke-on-Trent, Staffordshire, England, that plays in the Premier League, the top flight of English football.",
+                "Eddie Niedzwiecki\nAndrzej Edward \"Eddie\" Niedzwiecki; born 3 May 1959) is a Welsh former footballer who played as a goalkeeper for Wrexham and Chelsea and is now first-team coach at Stoke City. After retiring early due to injury Niedzwiecki became a coach with Chelsea and then Arsenal before working with Mark Hughes with the Wales national team. Since then he has worked with Hughes at Blackburn Rovers, Manchester City, Fulham, Queens Park Rangers and Stoke City.",
+                "Xherdan Shaqiri\nXherdan Shaqiri (] ; born 10 October 1991) is a Swiss professional footballer who plays as a winger for Premier League club Stoke City, and the Switzerland national team.",
+                "Stoke City F.C. in European football\nStoke City Football Club is an English football club based in Stoke-on-Trent, Staffordshire. The club was founded in 1863 and has competed in the English football league system since 1888. They played in the UEFA Cup in 1972\u201373 and 1974\u201375, before qualifying for the tournament in 2011\u201312 under the new name of UEFA Europa League. The club also entered the Anglo-Italian Cup and the Texaco Cup.",
+                "Stand Up Speak Up\nStand Up Speak Up was a Europe-wide campaign that was launched in January 2005 by the French Football player Thierry Henry following an increase in reports of racist incidents in football across Europe. Together with Nike and other top European players, he protests against this continuing problem inviting football fans to voice their opposition to racism.",
+                "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars.",
+                "Maurice Setters\nMaurice Edgar Setters (born 16 December 1936) is an English former football player and manager. As player, he made more than 400 appearances in the Football League representing Exeter City, West Bromwich Albion, Manchester United, Stoke City, Coventry City and Charlton Athletic, and in the United Soccer Association with the Cleveland Stokers (Stoke City under another name). His favoured position was wing half. As manager, he took charge of Doncaster Rovers and (briefly) Sheffield Wednesday, and spent several years as assistant manager of the Republic of Ireland."
+            ],
+            "thoughts": [
+                "Based on the information provided, there are no specific Stoke City football players mentioned who endorse the Nike Mercurial Vapor. Therefore, it is not possible to identify which Stoke City football players endorse the Nike Mercurial Vapor.",
+                "Tommy Hyslop - Scotland national team\nGareth Evans - Scotland women's under-19 national team\nEddie Niedzwiecki - Wales national team\nXherdan Shaqiri - Switzerland national team"
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify which Stoke City football players endorse the Nike Mercurial Vapor boots.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "For the identified player(s), determine their national teams.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "2"
+                },
+                "explanation": "The execution graph breaks down the process into two main steps: first, identifying the Stoke City player associated with the Nike Mercurial Vapor; and second, retrieving the national team associated with that player. This sequence allows us to accurately find the relevant information by first determining the player's identity and then using that context to ascertain their national team affiliation."
+            },
+            "recall": 0.8333333333333334,
+            "retrieved_passages": [
+                "Nike Mercurial Vapor\nThe Mercurial Vapor is a football boot manufactured by Nike. The boot is known for being lightweight. Because of this, the boot is endorsed by many players for whom speed is part of their game, notably wingers or strikers, such as Cristiano Ronaldo, Franck Rib\u00e9ry, Luiz Adriano, Zlatan Ibrahimovi\u0107, Didier Drogba, Jes\u00fas Navas, Luka Modri\u0107, Arturo Vidal, Douglas Costa, Xherdan Shaqiri, Raheem Sterling, Stephan El Shaarawy, Eden Hazard, Alexis S\u00e1nchez, Carlos Bacca and Philippe Coutinho, among others.",
+                "Nike Hypervenom\nThe \"Nike Hypervenom\" is a football boot that is manufactured by Nike. This type of boot is said to be for traction and agility, designed for deceptive players. Therefore, it is endorsed/worn by players, notably forwards, such as Marcus Rashford, Kylian Mbapp\u00e9, Robert Lewandowski, Gonzalo Higua\u00edn, Mauro Icardi, Harry Kane, Edinson Cavani, Riyad Mahrez, Romelu Lukaku, Cian Brennan Aubameyang and Thiago.",
+                "Stand Up Speak Up\nStand Up Speak Up was a Europe-wide campaign that was launched in January 2005 by the French Football player Thierry Henry following an increase in reports of racist incidents in football across Europe. Together with Nike and other top European players, he protests against this continuing problem inviting football fans to voice their opposition to racism.",
+                "Tommy Hyslop\nThomas \"Tommy\" Hyslop (22 September 1874 \u2013 1936) was a Scottish footballer who played in the Football League for Stoke City and Sunderland He was the first Stoke player to be capped by Scotland. He represented the Scotland national team, playing twice against England in 1896 and in 1897, scoring on his debut. He also played for Sunderland and Rangers.",
+                "Stoke City F.C. Under-23s and Academy\nStoke City Football Club Under-23s is the most senior of Stoke City's youth teams and the club's former reserve team. The Under-23 team is effectively Stoke City's second-string side. They play in Premier League 2 Division 2. The team also competes in the Premier League Cup and the Staffordshire Senior Cup.",
+                "Gareth Evans (footballer, born 1967)\nGareth John Evans (born 14 January 1967) is an English football player and coach. He played for Coventry City, Rotherham United, Hibernian, Stoke City, Northampton Town, Partick Thistle, Airdrie and Alloa Athletic. Evans has been the caretaker manager of Hibernian and Livingston, and was head coach of the Scotland women's under-19 national team for four years.",
+                "Stoke City F.C.\nStoke City Football Club is a professional football club based in Stoke-on-Trent, Staffordshire, England, that plays in the Premier League, the top flight of English football.",
+                "Eddie Niedzwiecki\nAndrzej Edward \"Eddie\" Niedzwiecki; born 3 May 1959) is a Welsh former footballer who played as a goalkeeper for Wrexham and Chelsea and is now first-team coach at Stoke City. After retiring early due to injury Niedzwiecki became a coach with Chelsea and then Arsenal before working with Mark Hughes with the Wales national team. Since then he has worked with Hughes at Blackburn Rovers, Manchester City, Fulham, Queens Park Rangers and Stoke City.",
+                "Xherdan Shaqiri\nXherdan Shaqiri (] ; born 10 October 1991) is a Swiss professional footballer who plays as a winger for Premier League club Stoke City, and the Switzerland national team.",
+                "Stoke City F.C. in European football\nStoke City Football Club is an English football club based in Stoke-on-Trent, Staffordshire. The club was founded in 1863 and has competed in the English football league system since 1888. They played in the UEFA Cup in 1972\u201373 and 1974\u201375, before qualifying for the tournament in 2011\u201312 under the new name of UEFA Europa League. The club also entered the Anglo-Italian Cup and the Texaco Cup.",
+                "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars.",
+                "Maurice Setters\nMaurice Edgar Setters (born 16 December 1936) is an English former football player and manager. As player, he made more than 400 appearances in the Football League representing Exeter City, West Bromwich Albion, Manchester United, Stoke City, Coventry City and Charlton Athletic, and in the United Soccer Association with the Cleveland Stokers (Stoke City under another name). His favoured position was wing half. As manager, he took charge of Doncaster Rovers and (briefly) Sheffield Wednesday, and spent several years as assistant manager of the Republic of Ireland."
+            ],
+            "thoughts": [
+                "None of the mentioned Stoke City football players are specifically identified as endorsing the Nike Mercurial Vapor boots. Therefore, it is unclear which Stoke City players endorse this particular brand of football boots.",
+                "Tommy Hyslop - Scotland national team\nGareth Evans - Scotland national team\nEddie Niedzwiecki - Wales national team\nXherdan Shaqiri - Switzerland national team"
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Find the Stoke City football player who endorses the Nike Mercurial Vapor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Identify the national team that the player from Node 1 represents.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "2"
+                },
+                "explanation": "The graph breaks down the original question into two primary steps. The first step is to identify the Stoke City football player who endorses the Nike Mercurial Vapor. Once we know who this player is, the second step is to retrieve information about which national team he plays for."
+            },
+            "recall": 0.0,
+            "retrieved_passages": [
+                "Vanuatu national under-23 football team\nThe Vanuatu national under-23 football team, also known as Vanuatu Cyclone, represents Vanuatu at U23 tournaments. The team is considered to be the feeder team for the Vanuatu national football team. They are controlled by the Vanuatu Football Federation. The team has gained notoriety for thrashing Micronesia's side 46\u20130 in the 2015 Pacific Games.",
+                "Switzerland women's national football team\nThe Switzerland women's national football team represents Switzerland in international women's football. The team played its first match in 1972. Their most recent competition is qualification for the 2015 FIFA Women's World Cup, and they had qualified as the best team in their group. It would be the first time that Switzerland participated in a women's World Cup, and the first time both the men's team and women's team qualified for a World Cup simultaneously. Switzerland qualified for the European Championship for the first time in 2017. They have never qualified for the Olympic games.",
+                "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+                "Andy Murray\nSir Andrew Barron Murray, {'1': \", '2': \", '3': \", '4': \"} (born 15 May 1987) is a British professional tennis player from Scotland currently ranked world no. 3 in men's singles. Murray represents Great Britain in his sporting activities and is a three-time Grand Slam tournament winner, two-time Olympic champion, Davis Cup champion and the winner of the 2016 ATP World Tour Finals.",
+                "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+                "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+                "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+                "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+                "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars.",
+                "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+                "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+                "2014 Baylor Bears baseball team\nThe 2014 Baylor Bears baseball team represents Baylor University in the 2014 college baseball season. Baylor competes in Division I of the National Collegiate Athletic Association (NCAA) as a charter member of the Big 12 Conference. The Bears play home games at Baylor Ballpark on the university's campus in Waco, Texas. Twenty year head coach Steve Smith leads the Bears, a former pitcher for the team during the 1982 and 1983 seasons.",
+                "Spain national football team\nThe Spain national football team (Spanish: \"Selecci\u00f3n de f\u00fatbol de Espa\u00f1a\" ) represents Spain in men's International association football and is controlled by the Royal Spanish Football Federation, the governing body for football in Spain. The current head coach is Julen Lopetegui after Vicente del Bosque stepped down following Euro 2016. The Spanish side is commonly referred to as \"La Roja\" (\"The Red [One]\"), \"La Furia Roja\" (\"The Red Fury\"), \"La Furia Espa\u00f1ola\" (\"The Spanish Fury\") or simply \"La Furia\" (\"The Fury\"). Spain became a member of FIFA in 1904 even though the Spanish Football Federation was first established in 1909. Spain's national team debuted in 1920. Since then, the Spanish national team has participated in a total of 14 of 20 FIFA World Cups and 10 of 15 UEFA European Championships.",
+                "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+                "Lahore Qalandars in 2016\nThe Lahore Qalandars is a franchise cricket team that represents Lahore in the Pakistan Super League. They are one of the five teams that had a competition in the 2016 Pakistan Super League. The team was captained by Azhar Ali, and they stand on fifth position after winning just two matches from their eight matches in the PSL 2016, as a result they were eliminated in group stage. Umar Akmal with 335 runs in 7 matches was leading run scorer of the tournament.",
+                "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition."
+            ],
+            "thoughts": [
+                "The information provided does not contain any details about Stoke City football players or their endorsements of specific products such as the Nike Mercurial Vapor. Therefore, it is not possible to identify the Stoke City football player who endorses the Nike Mercurial Vapor based on the given information.",
+                "The player from Node 1 represents the Vanuatu national under-23 football team."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the Nike Mercurial Vapor endorsers who play for Stoke City.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the national teams of current Stoke City football players endorsing Nike Mercurial Vapor.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Consolidate information to find which national team the Nike Mercurial Vapor endorser from Stoke City plays for.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "First, we must identify any football players who endorse the Nike Mercurial Vapor while playing for Stoke City. Once these players are identified, we then need to determine their respective national teams. The final step is to compile this information and pinpoint which national team is represented by the player in question."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "Nike Mercurial Vapor\nThe Mercurial Vapor is a football boot manufactured by Nike. The boot is known for being lightweight. Because of this, the boot is endorsed by many players for whom speed is part of their game, notably wingers or strikers, such as Cristiano Ronaldo, Franck Rib\u00e9ry, Luiz Adriano, Zlatan Ibrahimovi\u0107, Didier Drogba, Jes\u00fas Navas, Luka Modri\u0107, Arturo Vidal, Douglas Costa, Xherdan Shaqiri, Raheem Sterling, Stephan El Shaarawy, Eden Hazard, Alexis S\u00e1nchez, Carlos Bacca and Philippe Coutinho, among others.",
+                "Xherdan Shaqiri\nXherdan Shaqiri (] ; born 10 October 1991) is a Swiss professional footballer who plays as a winger for Premier League club Stoke City, and the Switzerland national team.",
+                "Tommy Hyslop\nThomas \"Tommy\" Hyslop (22 September 1874 \u2013 1936) was a Scottish footballer who played in the Football League for Stoke City and Sunderland He was the first Stoke player to be capped by Scotland. He represented the Scotland national team, playing twice against England in 1896 and in 1897, scoring on his debut. He also played for Sunderland and Rangers.",
+                "Stoke City F.C. Under-23s and Academy\nStoke City Football Club Under-23s is the most senior of Stoke City's youth teams and the club's former reserve team. The Under-23 team is effectively Stoke City's second-string side. They play in Premier League 2 Division 2. The team also competes in the Premier League Cup and the Staffordshire Senior Cup.",
+                "Nike Hypervenom\nThe \"Nike Hypervenom\" is a football boot that is manufactured by Nike. This type of boot is said to be for traction and agility, designed for deceptive players. Therefore, it is endorsed/worn by players, notably forwards, such as Marcus Rashford, Kylian Mbapp\u00e9, Robert Lewandowski, Gonzalo Higua\u00edn, Mauro Icardi, Harry Kane, Edinson Cavani, Riyad Mahrez, Romelu Lukaku, Cian Brennan Aubameyang and Thiago.",
+                "Stoke City F.C.\nStoke City Football Club is a professional football club based in Stoke-on-Trent, Staffordshire, England, that plays in the Premier League, the top flight of English football.",
+                "Stoke City F.C. in European football\nStoke City Football Club is an English football club based in Stoke-on-Trent, Staffordshire. The club was founded in 1863 and has competed in the English football league system since 1888. They played in the UEFA Cup in 1972\u201373 and 1974\u201375, before qualifying for the tournament in 2011\u201312 under the new name of UEFA Europa League. The club also entered the Anglo-Italian Cup and the Texaco Cup.",
+                "Stand Up Speak Up\nStand Up Speak Up was a Europe-wide campaign that was launched in January 2005 by the French Football player Thierry Henry following an increase in reports of racist incidents in football across Europe. Together with Nike and other top European players, he protests against this continuing problem inviting football fans to voice their opposition to racism.",
+                "Eddie Niedzwiecki\nAndrzej Edward \"Eddie\" Niedzwiecki; born 3 May 1959) is a Welsh former footballer who played as a goalkeeper for Wrexham and Chelsea and is now first-team coach at Stoke City. After retiring early due to injury Niedzwiecki became a coach with Chelsea and then Arsenal before working with Mark Hughes with the Wales national team. Since then he has worked with Hughes at Blackburn Rovers, Manchester City, Fulham, Queens Park Rangers and Stoke City.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "Gareth Evans (footballer, born 1967)\nGareth John Evans (born 14 January 1967) is an English football player and coach. He played for Coventry City, Rotherham United, Hibernian, Stoke City, Northampton Town, Partick Thistle, Airdrie and Alloa Athletic. Evans has been the caretaker manager of Hibernian and Livingston, and was head coach of the Scotland women's under-19 national team for four years."
+            ],
+            "thoughts": [
+                "The Nike Mercurial Vapor endorsers who play for Stoke City are Xherdan Shaqiri and Tommy Hyslop.",
+                "The national teams of current Stoke City football players endorsing Nike Mercurial Vapor are:\n\n1. Xherdan Shaqiri - Switzerland national team\n\nIt is important to note that the other mentioned players endorsing Nike Mercurial Vapor are not currently playing for Stoke City.",
+                "The Nike Mercurial Vapor endorser from Stoke City is Xherdan Shaqiri, who plays for the Switzerland national team."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Nike Mercurial Vapor endorsers who play for Stoke City.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the national teams of current Stoke City football players endorsing Nike Mercurial Vapor.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Consolidate information to find which national team the Nike Mercurial Vapor endorser from Stoke City plays for.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "First, we must identify any football players who endorse the Nike Mercurial Vapor while playing for Stoke City. Once these players are identified, we then need to determine their respective national teams. The final step is to compile this information and pinpoint which national team is represented by the player in question."
+    },
+    "best_recall": 0.9444444444444444
+}

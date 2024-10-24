@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the release year of the Dick Smith Super-80 Computer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the release year of the Pecom 32.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release years of the Dick Smith Super-80 Computer and Pecom 32 to determine which was developed first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph retrieves the release years of the Dick Smith Super-80 Computer and the Pecom 32. It then compares these years to determine which was developed first. The first two nodes perform independent retrieval tasks and can be executed in parallel, while the final node consolidates the information to provide the answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the development year of the Dick Smith Super-80 Computer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the development year of the Pecom 32.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the development years of the Dick Smith Super-80 Computer and the Pecom 32 to determine which was developed first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "This graph breaks down the question into three nodes: first, retrieving the development year of each computer, and then comparing these years to determine which computer was developed first. This ensures we gather and analyze the necessary data to answer the query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the release date of the Dick Smith Super-80 Computer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the release date of the Pecom 32.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of the Dick Smith Super-80 Computer and Pecom 32 to determine which was developed first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of two retrieval nodes to gather the release dates of each computer, followed by a reasoning node that compares these dates to determine which computer was developed first."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the release date or year of the Dick Smith Super-80 Computer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the release date or year of the Pecom 32.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of the Dick Smith Super-80 Computer and Pecom 32 to determine which one was developed first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the question into retrieval steps for each computer's release date. These steps can run in parallel as they are independent. The final step compares the collected dates to determine which computer was developed first."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Research the release date or development period of the Dick Smith Super-80 Computer.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research the release date or development period of the Pecom 32.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the release dates of the Dick Smith Super-80 Computer and the Pecom 32 to determine which was developed first.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph first requires retrieving and reasoning about the release or development dates of both computers individually. Once their development periods are known, a reasoning step compares these dates to determine which was developed first. This approach ensures that each piece of information is gathered independently and then synthesized to answer the question."
+    }
+]

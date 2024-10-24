@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which Prosper Merimee novella was adapted into a famous opera comique.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the famous opera comique based on the identified novella, including its plot and tone (comedy or tragedy).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine whether the opera comique is classified as a comedy or a tragedy based on its plot and tone.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is structured to first identify the specific Prosper Merimee novella that was adapted into an opera comique. The first step is retrieval and reasoning to determine this key piece of information. The second step involves retrieving detailed information about the opera itself, focusing on its plot and tone to assess its nature. Finally, a reasoning node determines whether the opera is considered a comedy or a tragedy based on the retrieved information about its plot and tone."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the famous opera comique based on a novella by Prosper Merimee.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine if the identified opera comique is a comedy or a tragedy.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph is designed to first retrieve information about which opera comique was based on Prosper Merimee's novella. Once identified, the next step is to classify the type of the opera \u2014 whether it is a comedy or a tragedy."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the famous opera comique based on a Prosper Merimee novella.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the genre of the identified opera comique (comedy or tragedy).",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph first retrieves information about which famous opera comique is based on a Prosper Merimee novella. Once this opera is identified (e.g., 'Carmen'), the second step is to determine its genre, where the opera is analyzed to categorize it as a comedy or tragedy."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the notable opera comique based on a novella by Prosper Merimee.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find detailed information about the plot or theme of the identified opera comique.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the plot or theme of the opera comique should be classified as a comedy or a tragedy.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question asks for the genre classification of an opera. First, we need to identify the name of the opera comique based on Prosper Merimee's novella (Node 1). After identifying the opera, we retrieve detailed information about its plot or themes (Node 2). Finally, we analyze whether the opera is a comedy or tragedy based on its plot or theme (Node 3)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the title of the famous opera comique that was based on a novella by Prosper Merimee.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the plot and genre of the identified opera comique.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine whether the opera comique is categorized primarily as a comedy or a tragedy based on the plot and genre information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task of identifying the nature of the opera comique based on a novella by Prosper Merimee. First, we retrieve the opera title. Next, we gather information about its plot and genre. Finally, we reason about its classification as a comedy or tragedy."
+    }
+]

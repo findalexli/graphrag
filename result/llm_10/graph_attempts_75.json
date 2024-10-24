@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify late 1980s and 1990s English supermodels.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Search for the song 'Nasty Girl' by The Notorious B.I.G. and find any references to individuals mentioned in the song.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of the English supermodels identified in Step 1 is mentioned in the song 'Nasty Girl' by The Notorious B.I.G. as identified in Step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task requires identifying a specific English supermodel from the late 1980s and 1990s who is mentioned in the song 'Nasty Girl' by The Notorious B.I.G. The execution graph begins by identifying potential supermodels from that era and retrieving details about the song to see which models are mentioned. The reasoning step then cross-references the two sets of information to identify the correct supermodel."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the English supermodels prominent in the late 1980s and 1990s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the lyrics and credits related to the song 'Nasty Girl' by The Notorious B.I.G. to identify any featured models or references.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze connections between the identified English supermodels and the references in the song 'Nasty Girl.'",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into identifying relevant English supermodels from the specified era and retrieving song information to find references. Finally, it analyzes the connections to deliver the correct answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the song 'Nasty Girl' by The Notorious B.I.G., including featured artists and themes.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve a list of late 1980s and 1990s English supermodels.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the lyrics of 'Nasty Girl' to identify any references to models or celebrities.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference the names of models mentioned in 'Nasty Girl' with the list of English supermodels from the late 1980s and 1990s.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task requires identifying a specific supermodel from the late 1980s and 1990s who was mentioned in the song 'Nasty Girl' by The Notorious B.I.G. The execution graph begins with understanding the song and gathering necessary information about English supermodels from that era. The lyrics are analyzed in context, and a cross-reference is made to find the match with the model mentioned in the song. This structured approach ensures all relevant information is retrieved and accurately processed to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the models commonly recognized as English supermodels from the late 1980s and 1990s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the song 'Nasty Girl' by The Notorious B.I.G., specifically looking for any mention of individuals featured in the song.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Cross-reference the list of English supermodels from the late 1980s and 1990s with those mentioned in the song 'Nasty Girl'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into identifying the key potential English supermodels from the 1980s and 1990s and retrieving details about the noted song. The reasoning node then cross-references to identify if any supermodel matches both criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the song 'Nasty Girl' by The Notorious B.I.G. and its lyrics or references.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Extract any names or references to English supermodels from the late 1980s and 1990s in the lyrics of 'Nasty Girl'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "List notable English supermodels from the late 1980s and 1990s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "4",
+                    "instruction": "Compare the names or references found in 'Nasty Girl' with the list of English supermodels from the late 1980s and 1990s to find a match.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts with retrieving information about the song 'Nasty Girl' by The Notorious B.I.G. (Node 1). The lyrics or references within the song are then examined to extract names of any supermodels (Node 2). Meanwhile, another independent step is to retrieve a list of notable English supermodels from the late 1980s and 1990s (Node 3). Finally, the reasoning task (Node 4) is to find a matching name between the song references and the list of supermodels, providing the answer to the question."
+    }
+]

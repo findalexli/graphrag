@@ -1,0 +1,157 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the movie 'Shrek 2' and its release year, 2004.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the production company or producers involved in the movie 'Shrek 2'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize the information retrieved to identify the producers or production company responsible for 'Shrek 2'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks the task of identifying the producers of the 2004 movie sequel 'Shrek 2' into three steps. First, it confirms the movie and its release year (step 1). Next, it retrieves information about its production (step 2). Finally, it synthesizes this data to present the producers or production company responsible for the film (step 3), thus providing a comprehensive and structured approach to answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the production company or companies responsible for producing the movie Shrek 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Obtain information about the major releases in 2004 and verify Shrek 2 as a major release sequel in that year.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the results of the above nodes to specifically attribute the production of the 2004 major release sequel Shrek 2 to the correct company or companies.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into two main tasks: first, identifying the production company behind Shrek 2, and second, confirming Shrek 2 as a major release in 2004. After gathering this information in parallel, the graph connects these details to produce a clear, final attribution of the production company responsible for this major sequel release."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the production companies involved in the production of Shrek 2, which was released in 2004.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the main production company responsible for producing the sequel, Shrek 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph is organized to first gather information on which companies were involved in the production of Shrek 2, focusing on identifying the key production companies. Then, the graph includes a reasoning step to specifically pinpoint the main production company responsible for the film, providing a precise answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the title 'Shrek 2' and identify it as a movie sequel released in 2004.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the production company or producer behind 'Shrek 2'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about major sequels released in 2004 and their producers.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify which entry among the retrieved information corresponds to the movie 'Shrek 2' and confirm its producer.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph for this question starts by identifying 'Shrek 2' as a movie sequel released in 2004. Then, it retrieves information about the producers or production companies associated with 'Shrek 2'. Since there may be other 2004 sequels, it also gathers data on major sequels released that year and their producers for comparative analysis. The reasoning step then confirms the producer of 'Shrek 2' by matching it with the retrieved data, ensuring accuracy and specificity in identifying the correct producer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the movie studio or company that produced the 2004 movie Shrek 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine if Shrek 2 is a major release or if it was produced by a notable major company during 2004.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Confirm if the production company identified is known for producing sequels or major animated films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts with retrieving the production company of Shrek 2 (Node 1). Since the question asks about a 'major release sequel', after identifying the company, we reason if Shrek 2 was indeed a major release by confirming if it was associated with a major company or had significant box office impact (Node 2). Finally, the reasoning step (Node 3) confirms that the identified company meets the known criteria for producing major films or sequels, ensuring it fits the query requirement."
+    }
+]

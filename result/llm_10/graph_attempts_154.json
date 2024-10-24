@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Tom Hewitt is to gather relevant biographical information.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find biographical records or databases that provide birth information.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve birth details of Tom Hewitt from identified sources.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the county of birth from the retrieved birth details of Tom Hewitt.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by identifying who Tom Hewitt is to ensure we have the correct individual. Once identified, the next step involves finding reputable sources that contain birth information. After locating these sources, the task proceeds to extract Tom Hewitt's birth details, specifically focusing on determining the county where he was born."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Tom Hewitt is and gather basic information about his identity (e.g., birthdate, notable activities, etc.).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Based on the retrieved identity information, determine the place of birth for Tom Hewitt.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "From the place of birth information, determine the specific county where Tom Hewitt was born.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins by identifying Tom Hewitt to gather key identity details, which includes contextual information to guide subsequent retrieval tasks. Next, the place of birth is retrieved based on the identified individual. Finally, this geographical data is used to specify the county of birth, concluding the task."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine who Tom Hewitt is and gather information about his birthplace.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Extract the birth location of Tom Hewitt.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the county corresponding to the birth location of Tom Hewitt.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is structured to first gather comprehensive information about Tom Hewitt, including identifying any specific details that might help locate his birthplace. The next step is to extract the specific birth location, if available, from the collected information. Finally, the focus shifts to identifying the county associated with the birth location."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Tom Hewitt's biography, focusing on birth details.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Extract the place of birth from Tom Hewitt's biography.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which county the place of birth belongs to.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with retrieving Tom Hewitt's biography to find details about his birth (Node 1). After retrieving the biography, the next step is to extract the specific place of birth (Node 2). Once the place of birth is identified, the final step is to determine the county this location belongs to (Node 3). This structure ensures that each piece of needed information is obtained and processed in a logical sequence to ultimately identify the county of birth."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Tom Hewitt is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve biographical information about Tom Hewitt, focusing on place of birth.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the place of birth information to determine the specific county.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins with identifying who Tom Hewitt is, as this is necessary to ensure we are searching for the correct person. The next step involves retrieving complete biographical information, specifically targeting where he was born. Finally, reasoning is applied to the place of birth data to deduce the county, thereby answering the question."
+    }
+]

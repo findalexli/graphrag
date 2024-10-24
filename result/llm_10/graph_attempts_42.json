@@ -1,0 +1,198 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify any songwriter collaborations for the songs 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "From the list of songwriters retrieved, find if Liz Rose is among them.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "If Liz Rose is confirmed as a co-writer, identify the other co-writers for each song.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Check for common songwriters between 'White Horse' and 'You Belong with Me' and also check for any common co-writer across both songs.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize the information to determine with which artist Liz Rose has co-written both 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph breaks down the task of identifying the artist with whom Liz Rose has co-written the specified songs into multiple steps. Step 1 retrieves and checks collaborations for both 'White Horse' and 'You Belong with Me'. Step 2 confirms Liz Rose's involvement. Steps 3 and 4 identify other songwriters and check for shared collaborators between the two songs. Finally, Step 5 integrates the information to answer the question about Liz Rose's co-writer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the songs 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine lyricists or co-writers for the song 'White Horse'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine lyricists or co-writers for the song 'You Belong with Me'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find common co-writers for both songs identified in nodes 2 and 3.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Identify which of the common co-writers in node 4 has collaborated multiple times with Liz Rose, particularly for 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is designed to identify the common co-writer with Liz Rose for the songs 'White Horse' and 'You Belong with Me'. The process involves retrieving information about both songs (node 1), determining the lyricists for each song (nodes 2 and 3), and then identifying the common artists involved in writing both songs (node 4). Finally, it checks for the artist who has worked with Liz Rose on these specific songs, pointing out the repeating collaboration (node 5)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the artist(s) who co-wrote the song 'White Horse'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the artist(s) who co-wrote the song 'You Belong with Me'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the common artist(s) who co-wrote both 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question requires identifying the common artist who co-wrote both 'White Horse' and 'You Belong with Me' along with Liz Rose. Initially, we retrieve the co-writers of each song separately. Then, we reason over these results to find the common artist across both songs, leading to the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the songs 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out who co-wrote 'White Horse'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find out who co-wrote 'You Belong with Me'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the common co-writer for both 'White Horse' and 'You Belong with Me'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the task of identifying the common co-writer for the songs 'White Horse' and 'You Belong with Me' by Liz Rose. The graph starts with retrieving the songs mentioned (node 1), then separately retrieves the co-writer for each song (nodes 2 and 3). Finally, it performs reasoning to identify the common co-writer for both songs (node 4), which completes the task of finding the artist who has co-written both songs with Liz Rose."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the songs \"White Horse\" and \"You Belong with Me\" in the music database.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For the songs identified in node 1, retrieve the list of artists who have co-written them with Liz Rose.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Cross-reference the information from node 2 to find the common artist who has co-written both songs with Liz Rose.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To solve the task, we start by retrieving information about the two songs 'White Horse' and 'You Belong with Me'. Then, we find the list of co-writers for each song. The final step is to identify the artist who appears as a co-writer for both songs, which gives us the answer to the original question."
+    }
+]

@@ -1,0 +1,148 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British soap opera in which Pippa Hinchley played the character Elaine Fenwick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the broadcasting channel for the identified British soap opera.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the information to identify the channel on which the British soap opera featuring Elaine Fenwick was shown.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by retrieving the name of the British soap opera in which Pippa Hinchley portrayed Elaine Fenwick. Once the soap opera is identified, the next step involves finding out the broadcasting channel for that specific soap opera. Finally, the last node synthesizes this information to answer the original question about the channel on which the soap opera was shown."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the list of British soap operas.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the soap opera in which Pippa Hinchley played the character Elaine Fenwick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which soap opera from the list obtained in Step 1 has a character named Elaine Fenwick played by Pippa Hinchley.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find the broadcasting channel for the soap opera identified in Step 3.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is designed to identify the broadcasting channel for a specific soap opera character played by Pippa Hinchley, by first recognizing the soap opera she acted in and cross-referencing this with known British soap operas. The accurate channel is then determined by linking the identified soap opera to its broadcasting channel."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Pippa Hinchley's acting career.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which British Soap opera Pippa Hinchley played the character Elaine Fenwick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information about the British Soap opera identified in step 2, specifically focusing on its broadcasting channel.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with retrieving general information about Pippa Hinchley's acting career to identify specific roles she has played. The next step focuses on finding out which British Soap opera featured her as Elaine Fenwick. This identified soap opera is then examined to determine which channel it was broadcast on."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the British soap opera in which Pippa Hinchley played the character Elaine Fenwick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the TV channel on which the identified British soap opera was shown.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The task can be broken down into two main steps. First, we need to find out the specific British soap opera where Pippa Hinchley played the character Elaine Fenwick. Once the soap opera is identified, we can then look up the channel on which this particular soap was broadcasted. Each step involves retrieval of specific information and reasoning to ensure the correct soap opera and channel are identified."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "node1",
+                    "instruction": "Identify the British Soap opera in which Pippa Hinchley played Elaine Fenwick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node2",
+                    "instruction": "Determine the original broadcast channel of the soap opera identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "node1"
+                    ]
+                }
+            ],
+            "root_node_id": "node1",
+            "final_node_id": "node2"
+        },
+        "explanation": "The graph breaks down the problem into two key steps. First, identifying the specific British soap opera in which Pippa Hinchley played the character Elaine Fenwick. Once the soap opera is identified, the next step is to retrieve information about the channel on which this soap opera was originally broadcast. This structured approach ensures that we systematically deduce the required information by focusing on each piece of the query individually."
+    }
+]

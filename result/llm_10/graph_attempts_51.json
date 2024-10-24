@@ -1,0 +1,158 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the fiction magazines where Robert E. Howard published his works in the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "For each magazine identified in Step 1, retrieve publication details from the 1930s, including typical page counts per issue.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the page count data retrieved in Step 2 to determine a typical page count for the magazines during the 1930s.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into three main steps. The first step is to identify the specific fiction magazines where Robert E. Howard published in the 1930s. Then, for each identified magazine, their publication details, including typical page counts, are retrieved for that decade. Finally, the data is analyzed to determine the typical page count across the relevant fiction magazines in which he published."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the fiction magazine in which Robert E. Howard published his stories during the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about typical magazine page counts of the fiction magazine identified in Node 1 during the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the information from Node 1 and Node 2 to determine the typical page count of the magazine.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to find out the typical number of pages in the fiction magazine where Robert E. Howard published in the 1930s. The execution graph starts by identifying the magazine(s) in which he published. Once identified, the next step is to find details about the typical page count for those magazines during the 1930s. Finally, we synthesize this information to provide a typical page count."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the fiction magazine(s) Robert E. Howard contributed to in the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the general characteristics or format of the identified magazine(s), with a focus on the number of pages typically included in issues during the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize the information gathered to determine the typical number of pages in the fiction magazine(s) Robert E. Howard wrote for in the 1930s.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with identifying the specific fiction magazine(s) Robert E. Howard wrote for during the 1930s. Once this information is gathered, the next step involves retrieving details about the typical format of each magazine, especially the number of pages in a typical issue from that era. The reasoning node at the end synthesizes this information to provide the answer to the question about the typical number of pages in the magazines he contributed to."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the fiction magazine that Robert E. Howard contributed to in the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the typical number of pages for the identified magazine from the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the typical number of pages in the identified magazine based on retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with identifying the magazine associated with Robert E. Howard in the 1930s. This retrieval step gathers the necessary details about the magazine. The next node focuses on retrieving typical page count information for that specific magazine during the 1930s. Finally, the reasoning step synthesizes the retrieved information to determine the answer to the question regarding the page count."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the fiction magazine in which Robert E. Howard published his works in the 1930s.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the publication details of the identified magazine from the 1930s, focusing on the typical number of pages in each issue.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the retrieved publication details to determine the typical number of pages in the magazine during the 1930s.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into a series of logical steps. The first step is to identify the specific fiction magazine where Robert E. Howard published in the 1930s. Once identified, the next step retrieves details about the magazine's publication from the 1930s period, focusing on the typical number of pages per issue. Finally, the reasoning step analyzes the retrieved information to determine the typical number of pages in the magazine during that era. This structured approach ensures a comprehensive gathering and synthesis of information needed to answer the question."
+    }
+]

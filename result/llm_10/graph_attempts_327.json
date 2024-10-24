@@ -1,0 +1,208 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify how often B\u00e1iki is published.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify how often Sick is published.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the publication frequencies of B\u00e1iki and Sick to determine which one is published more frequently.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the type of the publication that is published most frequently based on its frequency attribute identified in the comparison step.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph begins by retrieving information about the publication frequencies of both B\u00e1iki and Sick independently. Once this information is gathered, a reasoning node compares these frequencies to determine which publication is more frequent. Finally, using the result of this comparison, another retrieval step determines the type of the more frequently published item, completing the reasoning task."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on the publication frequency of B\u00e1iki.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on the publication frequency of Sick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the publication frequencies of B\u00e1iki and Sick to determine which was published most frequently.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Retrieve publication type of the more frequently published publication identified in Node 3.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To determine which publication type was published most frequently, we need to first retrieve and compare the publication frequencies of both B\u00e1iki and Sick. This will involve parallel retrievals for each publication's frequency (nodes 1 and 2), followed by a reasoning step (node 3) to identify which one is more frequent. Lastly, we retrieve the type of the publication identified as more frequent in the final step (node 4)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the publication frequency of B\u00e1iki.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the publication frequency of Sick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the publication frequencies of B\u00e1iki and Sick to determine which one is published more frequently.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the type of publication for the more frequently published one determined in node 3.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the question into the following steps: First, retrieve the publication frequency for B\u00e1iki and Sick separately. This requires identifying sources or records that detail how frequently these publications are released. Next, compare these frequencies to determine which publication has the higher frequency. Finally, retrieve the publication type (e.g., magazine, journal, etc.) for the publication identified as being published most frequently. This structured approach ensures each piece of information is gathered and reasoned through systematically to answer the question posed."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the publication details for B\u00e1iki.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the publication details for Sick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the publication frequency for B\u00e1iki from the retrieved details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the publication frequency for Sick from the retrieved details.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the publication frequencies of B\u00e1iki and Sick to determine which one was published more frequently.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Identify the type of the publication that was published most frequently, either B\u00e1iki or Sick, based on the previous comparison.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "To determine which publication, B\u00e1iki or Sick, was published more frequently, we first need to gather publication details for each (nodes 1 and 2). We then analyze these details to determine their respective publication frequencies (nodes 3 and 4). Once we have both frequencies, we compare them to find out which publication is more frequent (node 5). The final step is to find out the type of the publication that was most frequently published based on this comparison (node 6)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the publication frequency of B\u00e1iki.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the publication frequency of Sick.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the publication frequencies of B\u00e1iki and Sick to find out which one is published most frequently.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the type of the publication that is published most frequently based on the comparison result.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph begins by determining the publication frequency of each publication, B\u00e1iki and Sick, separately. These initial nodes are independent and can be executed in parallel. The results are then compared to identify which publication is published most frequently. Finally, the type of the most frequently published publication is retrieved and reasoned about to provide the answer to the original question."
+    }
+]

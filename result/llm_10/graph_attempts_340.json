@@ -1,0 +1,200 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Harry Kizirian's professional background and industry.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Howard Kazanjian's professional background and industry.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the industry Harry Kizirian is known for from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the industry Howard Kazanjian is known for from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the industries that Harry Kizirian and Howard Kazanjian are known for to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph is structured to initially gather detailed professional background information for both individuals, Harry Kizirian and Howard Kazanjian. The reasoning steps then involve distilling this information to identify the specific industries they're associated with, followed by a comparative analysis to answer whether they are known for the same industry."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify who Harry Kizirian is and what industry he is known for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify who Howard Kazanjian is and what industry he is known for.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the industries associated with Harry Kizirian and Howard Kazanjian to determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into three main steps. First, we need to find information about Harry Kizirian to determine the industry he is associated with. Second, we do the same for Howard Kazanjian. These are independent retrieval and reasoning tasks, so they can be executed in parallel. Finally, we compare the results of the first two steps to see if the industries are the same, which involves a reasoning step that synthesizes the retrieved information."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Gather information about the professional backgrounds of Harry Kizirian.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Gather information about the professional backgrounds of Howard Kazanjian.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the industry or industries associated with Harry Kizirian based on his professional background.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the industry or industries associated with Howard Kazanjian based on his professional background.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the industries associated with both Harry Kizirian and Howard Kazanjian to determine if they are known for the same industry.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is designed to first gather information separately about Harry Kizirian and Howard Kazanjian to understand their professional backgrounds. Following this, reasoning is applied to each person's data to ascertain the specific industries they are associated with. Finally, the industries identified for each individual are compared to determine if they are known for the same industry."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Harry Kizirian's professional background.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Howard Kazanjian's professional background.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the industry Harry Kizirian is known for based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the industry Howard Kazanjian is known for based on the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the industries Harry Kizirian and Howard Kazanjian are known for and determine if they are the same.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph is structured to first gather professional background information for both individuals, Harry Kizirian and Howard Kazanjian. Independent retrieval steps (nodes 1 and 2) are utilized to gather necessary data about each individual, which prevents bottlenecks from dependencies. Next, each individual's industry is determined separately (nodes 3 and 4). Finally, a reasoning step (node 5) compares the industries to evaluate if they are the same, which answers the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Harry Kizirian's professional background and industry.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Howard Kazanjian's professional background and industry.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the industries associated with Harry Kizirian and Howard Kazanjian.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts with retrieving detailed information about the professional backgrounds of Harry Kizirian and Howard Kazanjian in nodes 1 and 2. These retrieval tasks are independent and can be processed in parallel. The reasoning step in node 3 then compares the industries of both individuals to determine if they are known for the same industry."
+    }
+]

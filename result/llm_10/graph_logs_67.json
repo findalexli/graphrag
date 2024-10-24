@@ -1,0 +1,325 @@
+{
+    "all_graphs": [
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Retrieve information about the inspiration for 'The Dukes of Hazzard'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the 1975 film that inspired 'The Dukes of Hazzard'.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Retrieve the main cast of the 1975 film identified in node 2.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "instruction": "Identify the star of the 1975 film from the main cast.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "3"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "4"
+                },
+                "explanation": "The execution graph starts by retrieving information about what inspired 'The Dukes of Hazzard'. The next step involves determining the specific 1975 film from this information. Once the film is identified, the main cast of the film is retrieved. Finally, the star of the film is determined from the main cast list, answering the original question."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "The Dukes of Hazzard\nThe Dukes of Hazzard is an American action-comedy television series that aired on CBS from January 26, 1979, to February 8, 1985. The show aired for a total of 147 episodes spanning seven seasons. The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.",
+                "Moonrunners\nMoonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor. It was reworked four years later into the popular long-running television series \"The Dukes of Hazzard\", and as such the two productions share many similar concepts. Mitchum had co-starred with his father, Robert Mitchum, in the similar drive-in favorite \"Thunder Road\" eighteen years earlier, which also focused upon moonshine-running bootleggers using fast cars to elude federal agents. \"Moonrunners\", a B movie, was filmed in 1973 and awaited release for over a year. Its soundtrack reflects the outlaw music boom of the 1970s during which the film was released.",
+                "The Midnight Man (1974 film)\nThe Midnight Man is a 1974 detective film starring and co-directed by Burt Lancaster. The film also stars Susan Clark, Cameron Mitchell, Morgan Woodward, Harris Yulin, Robert Quarry, Joan Lorring, Lawrence Dobkin, Ed Lauter, Mills Watson, Charles Tyner and a pre-\"Dukes of Hazzard\" Catherine Bach.",
+                "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+                "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+                "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+                "Rosebud (film)\nRosebud is a 1975 film directed by Otto Preminger, and starring Peter O'Toole, Richard Attenborough, and Peter Lawford. The script was by Otto's son, Erik Lee Preminger, based on the novel by Joan Hemingway and . Originally the film was set to star Robert Mitchum, but he left after disagreements with Preminger. Kim Cattrall made her film d\u00e9but as a teenager. Barbara Emerson, who had been cast as one of the girls, was replaced during production.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "The Manchu Eagle Murder Caper Mystery\nThe Manchu Eagle Murder Caper Mystery is a 1975 film starring former \u201cBowery Boys\" members Gabriel Dell and Huntz Hall, Jackie Coogan, and Joyce Van Patten. The film is a spoof of the 1941 film noir, \"The Maltese Falcon\", starring Humphrey Bogart. The cast also includes Barbara Harris, Anjanette Comer, Will Geer, Sorrell Booke, Vincent Gardenia, Nita Talbot and Nicholas Colasanto. The film was written by Dell and Dean Hargrove and directed by Hargrove. It was released by United Artists.",
+                "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+                "Friedenstein Palace\nFriedenstein Palace (German: Schloss Friedenstein ) is an early Baroque palace built in the mid-17th century by Ernest I, Duke of Saxe-Gotha at Gotha, Thuringia, Germany. In Germany, \"Friedenstein\" was one of the largest palaces of its time and one of the first Baroque palaces ever built. \"Friedenstein\" served as the main seat of the Dukes of Saxe-Gotha and later as one of the residences of the Dukes of Saxe-Coburg and Gotha, closely linked with the Royal Family of Great Britain through the marriage of Queen Victoria and Prince Albert. The final two ruling Dukes were both princes of the United Kingdom.",
+                "Jaws (franchise)\nJaws is an American natural horror film series that started with a 1975 film that expanded into three sequels, a theme park ride, and other tie-in merchandise, based on a 1974 novel. The main subject of the saga is a great white shark, and its attacks on people in specific areas of the United States. The Brody family is featured in all of the films as the primary antithesis to the shark. The original film was based on a novel written by Peter Benchley, which itself was inspired by the Jersey Shore shark attacks of 1916. Benchley adapted his novel, along with help from Carl Gottlieb and Howard Sackler, into the 1975 film \"Jaws\", which was directed by Steven Spielberg. Although Gottlieb went on to pen two of the three sequels, neither Benchley nor Spielberg returned to the film series in any capacity.",
+                "Il segreto del Bosco Vecchio\nIl segreto del Bosco Vecchio (\"the secret of the Old Woods\") is a 1935 novel by the Italian writer Dino Buzzati. It tells the story of a general who is about to cut down an old forest for the sake of financial gain, but discovers that the forest is inhabited by invisible spirits. Buzzati wrote the novel with inspiration from Arthur Rackham's illustrations for fairy tales and fables. He was also inspired by Gustave Dor\u00e9 and the environments of the Dolomites.",
+                "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks."
+            ],
+            "thoughts": [
+                "The inspiration for 'The Dukes of Hazzard' came from the 1975 film \"Moonrunners\", which was created by Gy Waldron and shared many identical or similar character names and concepts with the TV series. The film \"Moonrunners\" was about a Southern family that runs bootleg liquor, and it was reworked four years later into the popular long-running television series \"The Dukes of Hazzard\". Additionally, the film \"Moonrunners\" starred James Mitchum, who had previously co-starred with his father, Robert Mitchum, in the similar drive-in favorite \"Thunder Road\". This connection to moonshine-running bootleggers using fast cars to elude federal agents likely served as further inspiration for the TV series.",
+                "The 1975 film that inspired 'The Dukes of Hazzard' is \"Moonrunners\".",
+                "The main cast of the 1975 film \"Moonrunners\" includes James Mitchum.",
+                "The star of the 1975 film \"Moonrunners\" is James Mitchum."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the 1975 film that inspired 'The Dukes of Hazzard'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find the main cast of the identified 1975 film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine who starred in the identified 1975 film.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph breaks down the process of answering the question into three steps. The first node retrieves information about which 1975 film influenced 'The Dukes of Hazzard'. The second node gathers the main cast of that film. Finally, the third node reasons about the gathered information to identify who starred in that film."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "The Dukes of Hazzard\nThe Dukes of Hazzard is an American action-comedy television series that aired on CBS from January 26, 1979, to February 8, 1985. The show aired for a total of 147 episodes spanning seven seasons. The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.",
+                "Moonrunners\nMoonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor. It was reworked four years later into the popular long-running television series \"The Dukes of Hazzard\", and as such the two productions share many similar concepts. Mitchum had co-starred with his father, Robert Mitchum, in the similar drive-in favorite \"Thunder Road\" eighteen years earlier, which also focused upon moonshine-running bootleggers using fast cars to elude federal agents. \"Moonrunners\", a B movie, was filmed in 1973 and awaited release for over a year. Its soundtrack reflects the outlaw music boom of the 1970s during which the film was released.",
+                "The Midnight Man (1974 film)\nThe Midnight Man is a 1974 detective film starring and co-directed by Burt Lancaster. The film also stars Susan Clark, Cameron Mitchell, Morgan Woodward, Harris Yulin, Robert Quarry, Joan Lorring, Lawrence Dobkin, Ed Lauter, Mills Watson, Charles Tyner and a pre-\"Dukes of Hazzard\" Catherine Bach.",
+                "The Stepford Children\nThe Stepford Children is a 1987 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Alan J. Levi with a screenplay by Bill Bleich and starring Barbara Eden, Don Murray, Tammy Lauren, Randall Batinkoff and Pat Corley. It is the second in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Revenge of the Stepford Wives\nRevenge of the Stepford Wives is a 1980 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Robert Fuest with a screenplay by David Wiltse and starring Sharon Gless, Julie Kavner, Don Johnson, Arthur Hill, and Audra Lindley. It is the first in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "The Stepford Husbands\nThe Stepford Husbands is a 1996 American made-for-television thriller-drama film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Fred Walton with a screenplay by brothers Ken Wheat and Jim Wheat and starring Donna Mills, Michael Ontkean, Cindy Williams, Sarah Douglas and Louise Fletcher. It is the third in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Jaws (franchise)\nJaws is an American natural horror film series that started with a 1975 film that expanded into three sequels, a theme park ride, and other tie-in merchandise, based on a 1974 novel. The main subject of the saga is a great white shark, and its attacks on people in specific areas of the United States. The Brody family is featured in all of the films as the primary antithesis to the shark. The original film was based on a novel written by Peter Benchley, which itself was inspired by the Jersey Shore shark attacks of 1916. Benchley adapted his novel, along with help from Carl Gottlieb and Howard Sackler, into the 1975 film \"Jaws\", which was directed by Steven Spielberg. Although Gottlieb went on to pen two of the three sequels, neither Benchley nor Spielberg returned to the film series in any capacity.",
+                "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+                "Rosebud (film)\nRosebud is a 1975 film directed by Otto Preminger, and starring Peter O'Toole, Richard Attenborough, and Peter Lawford. The script was by Otto's son, Erik Lee Preminger, based on the novel by Joan Hemingway and . Originally the film was set to star Robert Mitchum, but he left after disagreements with Preminger. Kim Cattrall made her film d\u00e9but as a teenager. Barbara Emerson, who had been cast as one of the girls, was replaced during production.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "The Manchu Eagle Murder Caper Mystery\nThe Manchu Eagle Murder Caper Mystery is a 1975 film starring former \u201cBowery Boys\" members Gabriel Dell and Huntz Hall, Jackie Coogan, and Joyce Van Patten. The film is a spoof of the 1941 film noir, \"The Maltese Falcon\", starring Humphrey Bogart. The cast also includes Barbara Harris, Anjanette Comer, Will Geer, Sorrell Booke, Vincent Gardenia, Nita Talbot and Nicholas Colasanto. The film was written by Dell and Dean Hargrove and directed by Hargrove. It was released by United Artists.",
+                "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976)."
+            ],
+            "thoughts": [
+                "The 1975 film that inspired 'The Dukes of Hazzard' is \"Moonrunners\".",
+                "The main cast of the 1975 film \"Moonrunners\" includes James Mitchum.",
+                "The main star of the 1975 film \"Moonrunners\" is James Mitchum."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the 1975 film that inspired 'The Dukes of Hazzard'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the main actors in the 1975 film identified in Node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Identify the starring actor or actors among the main actors listed in Node 2.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The graph breaks down the task into three steps. The first step retrieves information about the 1975 film that inspired 'The Dukes of Hazzard'. The second step focuses on identifying the main actors from this film. The third step involves reasoning over the list of main actors to determine who was the starring actor or actors. This structured approach ensures that the task is tackled in manageable steps, allowing for clear and logical processing."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "The Dukes of Hazzard\nThe Dukes of Hazzard is an American action-comedy television series that aired on CBS from January 26, 1979, to February 8, 1985. The show aired for a total of 147 episodes spanning seven seasons. The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.",
+                "Moonrunners\nMoonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor. It was reworked four years later into the popular long-running television series \"The Dukes of Hazzard\", and as such the two productions share many similar concepts. Mitchum had co-starred with his father, Robert Mitchum, in the similar drive-in favorite \"Thunder Road\" eighteen years earlier, which also focused upon moonshine-running bootleggers using fast cars to elude federal agents. \"Moonrunners\", a B movie, was filmed in 1973 and awaited release for over a year. Its soundtrack reflects the outlaw music boom of the 1970s during which the film was released.",
+                "The Midnight Man (1974 film)\nThe Midnight Man is a 1974 detective film starring and co-directed by Burt Lancaster. The film also stars Susan Clark, Cameron Mitchell, Morgan Woodward, Harris Yulin, Robert Quarry, Joan Lorring, Lawrence Dobkin, Ed Lauter, Mills Watson, Charles Tyner and a pre-\"Dukes of Hazzard\" Catherine Bach.",
+                "The Stepford Children\nThe Stepford Children is a 1987 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Alan J. Levi with a screenplay by Bill Bleich and starring Barbara Eden, Don Murray, Tammy Lauren, Randall Batinkoff and Pat Corley. It is the second in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Revenge of the Stepford Wives\nRevenge of the Stepford Wives is a 1980 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Robert Fuest with a screenplay by David Wiltse and starring Sharon Gless, Julie Kavner, Don Johnson, Arthur Hill, and Audra Lindley. It is the first in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "The Stepford Husbands\nThe Stepford Husbands is a 1996 American made-for-television thriller-drama film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Fred Walton with a screenplay by brothers Ken Wheat and Jim Wheat and starring Donna Mills, Michael Ontkean, Cindy Williams, Sarah Douglas and Louise Fletcher. It is the third in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Jaws (franchise)\nJaws is an American natural horror film series that started with a 1975 film that expanded into three sequels, a theme park ride, and other tie-in merchandise, based on a 1974 novel. The main subject of the saga is a great white shark, and its attacks on people in specific areas of the United States. The Brody family is featured in all of the films as the primary antithesis to the shark. The original film was based on a novel written by Peter Benchley, which itself was inspired by the Jersey Shore shark attacks of 1916. Benchley adapted his novel, along with help from Carl Gottlieb and Howard Sackler, into the 1975 film \"Jaws\", which was directed by Steven Spielberg. Although Gottlieb went on to pen two of the three sequels, neither Benchley nor Spielberg returned to the film series in any capacity.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+                "Sharif Badmash (1975 film)\n\u2032\u2032Sharif Badmash (1975 film)\u2032\u2032 (Punjabi: ) is 1975 \u0938\u093e\u092e\u093e\u091c\u093f\u0915 \u0914\u0930 \u0938\u0902\u0917\u0940\u0924\u092e\u092f \u092b\u093f\u0932\u094d\u092e Pakistani Punjabi language action film, directed by Iqbal Kashmiri and produced by Asim Ilyas. Film starring actor Mumtaz in the lead role and with Yousuf Khan , Aasia, Sultan Rahi and Asad Bukhari as the villain. It was a super-hit musical movie and celebrated its Golden Jubilee in Pakistani cinemas in 1975.",
+                "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+                "Too Big to Fail (film)\nToo Big to Fail is an American television drama film first broadcast on HBO on May 23, 2011 based on Andrew Ross Sorkin's non-fiction book \"\" (2009). The film was directed by Curtis Hanson. It received 11 nominations at the 63rd Primetime Emmy Awards; Paul Giamatti's portrayal of Ben Bernanke earned him the Screen Actors Guild Award for Outstanding Performance by a Male Actor in a Miniseries or Television Movie at the 18th Screen Actors Guild Awards.",
+                "Posse (1975 film)\nPosse is a 1975 American Western film, produced by, directed by and starring Kirk Douglas. The screenplay was written by Christopher Knopf and William Roberts. The plot centers on a U.S. marshal with political ambitions leading an elite posse in pursuit of a notorious bank robber to further his political career. The film premiered in New York City on June 4, 1975, and in June the same year in Berlin at the 25th Berlin International Film Festival, where Douglas also was nominated for the Golden Bear."
+            ],
+            "thoughts": [
+                "The 1975 film that inspired 'The Dukes of Hazzard' is \"Moonrunners\".",
+                "The main actors in the 1975 film \"Moonrunners\" are James Mitchum and Robert Mitchum.",
+                "The starring actors among the main actors listed in Node 2 are James Mitchum and Robert Mitchum."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the 1975 film that inspired 'The Dukes of Hazzard'.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Find out who starred in the identified 1975 film.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Determine the lead actors from the cast of the 1975 film.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The task is to find the actor from the 1975 film that inspired 'The Dukes of Hazzard'. First, we identify the film, then retrieve who starred in it, and finally determine the lead actors to answer the question about inspiration for the show."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "The Dukes of Hazzard\nThe Dukes of Hazzard is an American action-comedy television series that aired on CBS from January 26, 1979, to February 8, 1985. The show aired for a total of 147 episodes spanning seven seasons. The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.",
+                "Moonrunners\nMoonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor. It was reworked four years later into the popular long-running television series \"The Dukes of Hazzard\", and as such the two productions share many similar concepts. Mitchum had co-starred with his father, Robert Mitchum, in the similar drive-in favorite \"Thunder Road\" eighteen years earlier, which also focused upon moonshine-running bootleggers using fast cars to elude federal agents. \"Moonrunners\", a B movie, was filmed in 1973 and awaited release for over a year. Its soundtrack reflects the outlaw music boom of the 1970s during which the film was released.",
+                "The Midnight Man (1974 film)\nThe Midnight Man is a 1974 detective film starring and co-directed by Burt Lancaster. The film also stars Susan Clark, Cameron Mitchell, Morgan Woodward, Harris Yulin, Robert Quarry, Joan Lorring, Lawrence Dobkin, Ed Lauter, Mills Watson, Charles Tyner and a pre-\"Dukes of Hazzard\" Catherine Bach.",
+                "Aloha, Bobby and Rose\nAloha, Bobby and Rose is a 1975 American road drama film about a young working-class couple who accidentally cause the death of a store clerk during their first date, and go on the run from the law. The film was written and directed by Floyd Mutrux, and starred Paul Le Mat and Dianne Hull, in addition to Robert Carradine in an early role.",
+                "The Stepford Children\nThe Stepford Children is a 1987 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Alan J. Levi with a screenplay by Bill Bleich and starring Barbara Eden, Don Murray, Tammy Lauren, Randall Batinkoff and Pat Corley. It is the second in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Revenge of the Stepford Wives\nRevenge of the Stepford Wives is a 1980 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Robert Fuest with a screenplay by David Wiltse and starring Sharon Gless, Julie Kavner, Don Johnson, Arthur Hill, and Audra Lindley. It is the first in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "The Stepford Husbands\nThe Stepford Husbands is a 1996 American made-for-television thriller-drama film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Fred Walton with a screenplay by brothers Ken Wheat and Jim Wheat and starring Donna Mills, Michael Ontkean, Cindy Williams, Sarah Douglas and Louise Fletcher. It is the third in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Jaws (franchise)\nJaws is an American natural horror film series that started with a 1975 film that expanded into three sequels, a theme park ride, and other tie-in merchandise, based on a 1974 novel. The main subject of the saga is a great white shark, and its attacks on people in specific areas of the United States. The Brody family is featured in all of the films as the primary antithesis to the shark. The original film was based on a novel written by Peter Benchley, which itself was inspired by the Jersey Shore shark attacks of 1916. Benchley adapted his novel, along with help from Carl Gottlieb and Howard Sackler, into the 1975 film \"Jaws\", which was directed by Steven Spielberg. Although Gottlieb went on to pen two of the three sequels, neither Benchley nor Spielberg returned to the film series in any capacity.",
+                "Tara Reid\nTara Donna Reid (born November 8, 1975) is an American actress. She is known for playing Vicky in the films \"American Pie\" (1999), \"American Pie 2\" (2001) and \"American Reunion\" (2012), and Bunny Lebowski in \"The Big Lebowski\" (1998). In 2013, she starred as April Wexler in the television film \"Sharknado\", and went on to reprise the role in four sequels (2013\u20132017).",
+                "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+                "Me, Natalie\nMe, Natalie is a 1969 American comedy-drama film directed by Fred Coe about a homely young woman from Brooklyn who moves to Greenwich Village and finds romance with an aspiring painter. The screenplay by A. Martin Zweiback is based on an original story by Stanley Shapiro. Patty Duke, who starred in the title role, won a Golden Globe Award for her performance. The film also starred James Farentino, Salome Jens, Elsa Lanchester, Martin Balsam and Nancy Marchand. Al Pacino made his film debut with a bit part.",
+                "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+                "Sharif Badmash (1975 film)\n\u2032\u2032Sharif Badmash (1975 film)\u2032\u2032 (Punjabi: ) is 1975 \u0938\u093e\u092e\u093e\u091c\u093f\u0915 \u0914\u0930 \u0938\u0902\u0917\u0940\u0924\u092e\u092f \u092b\u093f\u0932\u094d\u092e Pakistani Punjabi language action film, directed by Iqbal Kashmiri and produced by Asim Ilyas. Film starring actor Mumtaz in the lead role and with Yousuf Khan , Aasia, Sultan Rahi and Asad Bukhari as the villain. It was a super-hit musical movie and celebrated its Golden Jubilee in Pakistani cinemas in 1975.",
+                "Plaga Zombie: Zona Mutante\nPlaga Zombie:Zona Mutante is a 2001 Argentine horror film directed and written by Pablo Par\u00e9s and Hern\u00e1n S\u00e1ez with Berta Mu\u00f1iz and Gabriel Grieco who all starred in the film. It is the second entry in the \"Plaga Zombie film series\" as the sequel to the 1997 film \"Plaga Zombie\" and followed by the 2012 film \"\"."
+            ],
+            "thoughts": [
+                "The 1975 film that inspired 'The Dukes of Hazzard' is \"Moonrunners\".",
+                "The identified 1975 film \"Moonrunners\" starred James Mitchum.",
+                "The lead actor from the cast of the 1975 film \"Moonrunners\" is James Mitchum."
+            ]
+        },
+        {
+            "graph": {
+                "graph": {
+                    "nodes": [
+                        {
+                            "id": "1",
+                            "instruction": "Identify the film from 1975 that inspired The Dukes of Hazzard.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": []
+                        },
+                        {
+                            "id": "2",
+                            "instruction": "Determine the star of the 1975 film identified in node 1.",
+                            "node_type": "retrievalandreasoning",
+                            "upstream_node_ids": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "instruction": "Synthesize information about the star of the film that inspired The Dukes of Hazzard to answer the original question.",
+                            "node_type": "reasoning",
+                            "upstream_node_ids": [
+                                "2"
+                            ]
+                        }
+                    ],
+                    "root_node_id": "1",
+                    "final_node_id": "3"
+                },
+                "explanation": "The execution graph is designed to first identify the 1975 film that served as the inspiration for The Dukes of Hazzard. Once the film is identified, the next step is to find out the main actor of this film. Finally, using this information, the system synthesizes the information to provide the star's name as the answer to the original question."
+            },
+            "recall": 0.9444444444444444,
+            "retrieved_passages": [
+                "The Dukes of Hazzard\nThe Dukes of Hazzard is an American action-comedy television series that aired on CBS from January 26, 1979, to February 8, 1985. The show aired for a total of 147 episodes spanning seven seasons. The series was inspired by the 1975 film \"Moonrunners\", which was also created by Gy Waldron and had many identical or similar character names and concepts.",
+                "Moonrunners\nMoonrunners is a 1975 film, starring James Mitchum, about a Southern family that runs bootleg liquor. It was reworked four years later into the popular long-running television series \"The Dukes of Hazzard\", and as such the two productions share many similar concepts. Mitchum had co-starred with his father, Robert Mitchum, in the similar drive-in favorite \"Thunder Road\" eighteen years earlier, which also focused upon moonshine-running bootleggers using fast cars to elude federal agents. \"Moonrunners\", a B movie, was filmed in 1973 and awaited release for over a year. Its soundtrack reflects the outlaw music boom of the 1970s during which the film was released.",
+                "The Midnight Man (1974 film)\nThe Midnight Man is a 1974 detective film starring and co-directed by Burt Lancaster. The film also stars Susan Clark, Cameron Mitchell, Morgan Woodward, Harris Yulin, Robert Quarry, Joan Lorring, Lawrence Dobkin, Ed Lauter, Mills Watson, Charles Tyner and a pre-\"Dukes of Hazzard\" Catherine Bach.",
+                "Jaws (franchise)\nJaws is an American natural horror film series that started with a 1975 film that expanded into three sequels, a theme park ride, and other tie-in merchandise, based on a 1974 novel. The main subject of the saga is a great white shark, and its attacks on people in specific areas of the United States. The Brody family is featured in all of the films as the primary antithesis to the shark. The original film was based on a novel written by Peter Benchley, which itself was inspired by the Jersey Shore shark attacks of 1916. Benchley adapted his novel, along with help from Carl Gottlieb and Howard Sackler, into the 1975 film \"Jaws\", which was directed by Steven Spielberg. Although Gottlieb went on to pen two of the three sequels, neither Benchley nor Spielberg returned to the film series in any capacity.",
+                "The Stepford Children\nThe Stepford Children is a 1987 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Alan J. Levi with a screenplay by Bill Bleich and starring Barbara Eden, Don Murray, Tammy Lauren, Randall Batinkoff and Pat Corley. It is the second in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "Revenge of the Stepford Wives\nRevenge of the Stepford Wives is a 1980 American made-for-television science fiction-thriller film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Robert Fuest with a screenplay by David Wiltse and starring Sharon Gless, Julie Kavner, Don Johnson, Arthur Hill, and Audra Lindley. It is the first in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "The Stepford Husbands\nThe Stepford Husbands is a 1996 American made-for-television thriller-drama film inspired by the Ira Levin novel \"The Stepford Wives\". It was directed by Fred Walton with a screenplay by brothers Ken Wheat and Jim Wheat and starring Donna Mills, Michael Ontkean, Cindy Williams, Sarah Douglas and Louise Fletcher. It is the third in a series of sequels inspired by the 1972 novel and the original 1975 film \"The Stepford Wives\".",
+                "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+                "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+                "Rosebud (film)\nRosebud is a 1975 film directed by Otto Preminger, and starring Peter O'Toole, Richard Attenborough, and Peter Lawford. The script was by Otto's son, Erik Lee Preminger, based on the novel by Joan Hemingway and . Originally the film was set to star Robert Mitchum, but he left after disagreements with Preminger. Kim Cattrall made her film d\u00e9but as a teenager. Barbara Emerson, who had been cast as one of the girls, was replaced during production.",
+                "Sharif Badmash (1975 film)\n\u2032\u2032Sharif Badmash (1975 film)\u2032\u2032 (Punjabi: ) is 1975 \u0938\u093e\u092e\u093e\u091c\u093f\u0915 \u0914\u0930 \u0938\u0902\u0917\u0940\u0924\u092e\u092f \u092b\u093f\u0932\u094d\u092e Pakistani Punjabi language action film, directed by Iqbal Kashmiri and produced by Asim Ilyas. Film starring actor Mumtaz in the lead role and with Yousuf Khan , Aasia, Sultan Rahi and Asad Bukhari as the villain. It was a super-hit musical movie and celebrated its Golden Jubilee in Pakistani cinemas in 1975.",
+                "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+                "Posse (1975 film)\nPosse is a 1975 American Western film, produced by, directed by and starring Kirk Douglas. The screenplay was written by Christopher Knopf and William Roberts. The plot centers on a U.S. marshal with political ambitions leading an elite posse in pursuit of a notorious bank robber to further his political career. The film premiered in New York City on June 4, 1975, and in June the same year in Berlin at the 25th Berlin International Film Festival, where Douglas also was nominated for the Golden Bear.",
+                "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan."
+            ],
+            "thoughts": [
+                "The film from 1975 that inspired The Dukes of Hazzard is \"Moonrunners\".",
+                "The star of the 1975 film \"Moonrunners\" is James Mitchum.",
+                "The star of the 1975 film \"Moonrunners\" is James Mitchum, who played the character of Grady Hagg. This film served as the inspiration for the popular TV show \"The Dukes of Hazzard.\" James Mitchum's performance in \"Moonrunners\" helped set the tone and style for the characters and storylines that would later be adapted into the TV series."
+            ]
+        }
+    ],
+    "best_graph": {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the inspiration for 'The Dukes of Hazzard'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the 1975 film that inspired 'The Dukes of Hazzard'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the main cast of the 1975 film identified in node 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the star of the 1975 film from the main cast.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by retrieving information about what inspired 'The Dukes of Hazzard'. The next step involves determining the specific 1975 film from this information. Once the film is identified, the main cast of the film is retrieved. Finally, the star of the film is determined from the main cast list, answering the original question."
+    },
+    "best_recall": 0.9444444444444444
+}

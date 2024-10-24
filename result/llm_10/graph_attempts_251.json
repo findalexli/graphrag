@@ -1,0 +1,202 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify actors who appeared in all eight 'American Pie' films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of actors from the film 'Armed and Dangerous'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "From the 'American Pie' actors identified, find who also appeared in 'Armed and Dangerous'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the co-stars of this actor in 'Armed and Dangerous'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Determine which of those co-stars matches the answer criteria (an actor who appeared alongside the identified actor in 'Armed and Dangerous').",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph is designed to first identify actors who have appeared in all eight 'American Pie' films. It then retrieves information about all actors in 'Armed and Dangerous' to find any overlaps with the 'American Pie' actors. Once the common actor is identified, it goes back to list all co-stars from 'Armed and Dangerous' and uses this information to answer the original question by identifying the relevant co-star."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the actor who appeared in all eight 'American Pie' films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of actors who starred in 'Armed and Dangerous'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the actor found in step 1 appeared alongside any actors in the list retrieved in step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The question asks for an actor who appeared in all eight 'American Pie' films and also starred in 'Armed and Dangerous.' First, we need to identify this actor via retrieval of the cast information from the 'American Pie' series. Simultaneously, we retrieve the cast list from 'Armed and Dangerous.' Once both sets of information are available, we perform a reasoning step to see if there is any overlap in actors between these two, hence answering the question by identifying the actor who appeared in both."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the actors who appeared in all eight 'American Pie' films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find other actors in 'Armed and Dangerous.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which actor from 'American Pie' series also appeared in 'Armed and Dangerous.'",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify actors who starred alongside the identified actor in 'Armed and Dangerous.'",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by identifying the actors who appeared in all eight 'American Pie' films. In parallel, it retrieves actors in the movie 'Armed and Dangerous.' The subsequent reasoning node matches actors from the 'American Pie' series who also appeared in 'Armed and Dangerous.' Finally, it retrieves actors who starred alongside the matched actor in 'Armed and Dangerous,' answering the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify all actors who appeared in all eight 'American Pie' films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Check the cast list of the movie 'Armed and Dangerous'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which actor from node 1's result is also in the cast list of 'Armed and Dangerous'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the co-stars of the actor identified in node 3 within 'Armed and Dangerous'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Provide the names of the actors identified in node 4.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by identifying actors who have appeared in all eight 'American Pie' films. Parallelly, it retrieves the cast list for 'Armed and Dangerous'. The result from these is used to determine which actor fits both criteria. Following this, the graph explores the known co-stars of this actor in the movie, concluding with presenting these co-stars as the final answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify actors who appeared in all eight 'American Pie' films.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List the actors in the movie 'Armed and Dangerous' (1986).",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the intersection of actors identified in Step 1 and Step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify actors from Step 1 who starred alongside actors from Step 3 in 'Armed and Dangerous'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "To solve this question, we first need to identify which actors appeared in all eight 'American Pie' films. Concurrently, we list the cast of 'Armed and Dangerous'. After retrieving this information, we find if any actor appears in both lists (they would be the connecting actor), and then identify alongside whom they appeared in 'Armed and Dangerous'."
+    }
+]

@@ -1,0 +1,165 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about R\u00f8nnaug Alten's stage debut at Den Nationale Scene, specifically in which play she played 'Viola' in 1930.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the author of the play retrieved in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the first name of the author identified in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first gather information about R\u00f8nnaug Alten's stage debut to identify the play in which she performed as 'Viola' in 1930. After identifying the play, the next step is to ascertain who authored that play. Finally, we extract the first name of the author to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the play in which R\u00f8nnaug Alten made her stage debut at Den Nationale Scene in 1930 as 'Viola'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the author of the play identified in step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the first name of the author from the information retrieved in step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph starts by identifying the play where R\u00f8nnaug Alten debuted. Once we have the play, we find the author of that play. Finally, we extract the first name of the author to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the play in which R\u00f8nnaug Alten made her stage debut as 'Viola' at Den Nationale Scene in 1930.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine who wrote the play identified in Node 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the first name of the author from the information gathered in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into manageable steps. First, we need to find which play R\u00f8nnaug Alten performed in as 'Viola' for her debut in 1930. Once the play is identified, the next step is to find out who wrote it. Lastly, from the author's information, we extract the first name to answer the original question. Each step logically follows from the previous one, leading to a final synthesis of information to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the plays in which R\u00f8nnaug Alten performed as \"Viola\" at Den Nationale Scene in 1930.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the play from the list found in step 1 that corresponds to R\u00f8nnaug Alten's debut performance in 1930.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the author of the identified play from step 2.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the first name of the author found in step 3.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the question into a series of steps, starting with finding the plays R\u00f8nnaug Alten performed in, particularly as \"Viola\" at the Den Nationale Scene in 1930. The next step involves identifying which of these plays marks her debut, followed by retrieving the author of that particular play. Finally, the execution graph isolates the author's first name, which is necessary to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the play in which R\u00f8nnaug Alten made her stage debut at Den Nationale Scene in 1930 playing 'Viola'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Once the play is identified, retrieve information on who the author of that play is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the first name of the play's author.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into three main steps: first, we retrieve the play where R\u00f8nnaug Alten debuted as 'Viola'. Once identified, we proceed to retrieve information about the author of this play. Finally, we extract and verify the first name of the author to provide the answer."
+    }
+]

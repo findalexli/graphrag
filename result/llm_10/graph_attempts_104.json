@@ -1,0 +1,192 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out what Stauntonia is, including its classification and characteristics.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out what Pimelea is, including its classification and characteristics.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the classifications and characteristics of Stauntonia and Pimelea to determine any commonalities or differences.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Based on the classifications and characteristics, conclude what both Stauntonia and Pimelea are.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph breaks down the process into retrieving and analyzing botanical information. Nodes 1 and 2 gather detailed descriptions of each plant genus, while Node 3 compares them, and Node 4 synthesizes the information to answer the question about what both Stauntonia and Pimelea are."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the category or classification to which Stauntonia belongs.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the category or classification to which Pimelea belongs.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Synthesize the classifications of both Stauntonia and Pimelea to answer the question about what they are.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the task into three nodes. First, nodes 1 and 2 are tasked with retrieving and reasoning about the classifications of Stauntonia and Pimelea, respectively. These nodes operate independently and in parallel. The final node (node 3) synthesizes the information from nodes 1 and 2 to construct a coherent answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Stauntonia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Pimelea.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the scientific classification or special characteristics of Stauntonia from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the scientific classification or special characteristics of Pimelea from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize the characteristics or classifications of both Stauntonia and Pimelea to explain what they are.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The question is asking to identify what both Stauntonia and Pimelea are. This requires retrieving information about each genus or plant name (Stauntonia and Pimelea) to understand their classifications or characteristics. First, retrieval steps are taken separately for Stauntonia and Pimelea. Then, reasoning nodes interpret the retrieved information to classify what each one is. Finally, a synthesis step combines the results to provide a complete answer to the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about Stauntonia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about Pimelea.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Analyze the information retrieved about Stauntonia to determine its classification and characteristics.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Analyze the information retrieved about Pimelea to determine its classification and characteristics.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Synthesize the classifications and characteristics of both Stauntonia and Pimelea.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "To determine what both Stauntonia and Pimelea are, the task is divided into retrieving information about each separately, analyzing those pieces of information to understand the classifications and characteristics, and then synthesizing this to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify what Stauntonia is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify what Pimelea is.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Combine the descriptions of Stauntonia and Pimelea to summarize what they both are.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is structured in a straightforward manner due to the independent and parallel nature of the retrieval tasks involved in identifying what Stauntonia and Pimelea are. Nodes 1 and 2 handle retrieval and initial reasoning for Stauntonia and Pimelea separately. Once both are identified, Node 3 combines this knowledge to synthesize a final answer."
+    }
+]

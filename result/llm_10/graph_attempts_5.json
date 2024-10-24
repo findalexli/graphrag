@@ -1,0 +1,133 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Korean cooking-variety program featuring the owner of 'Dear. bread'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the airing schedule of the identified program.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the specific day of the week the program airs based on the airing schedule.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph breaks down the task into three steps. The first step is to identify the Korean cooking-variety program that features the owner of 'Dear. bread'. With this information, the second step is to retrieve the airing schedule of this program. Finally, the third step is to determine the day of the week the program airs based on the retrieved schedule. This approach ensures that all necessary information is gathered and reasoned through to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Korean cooking-variety program that features the owner of 'Dear. bread'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the airing schedule of the identified Korean cooking-variety program.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the specific day of the week from the airing schedule of the program.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph first involves identifying the specific Korean cooking-variety program associated with the owner of 'Dear. bread' through retrieval and reasoning. Once the program is identified, the next step is to retrieve its airing schedule. Finally, the specific day of the week when the program airs is extracted from this schedule to answer the query."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Korean cooking-variety program featuring the owner of 'Dear. bread'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the airing schedule for the identified Korean cooking-variety program, specifically the day of the week it airs.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph consists of two main nodes. The first node retrieves and identifies the specific Korean cooking-variety program that features the owner of 'Dear. bread'. Once identified, the second node retrieves the airing schedule for this program, specifically focusing on determining the day of the week it airs. This structure ensures that we first understand which program to investigate before finding its airing schedule."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of the Korean cooking-variety program that features the owner of 'Dear. bread'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the airing schedule of the identified program, including the day of the week it airs.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the question into two main tasks: first, identifying the name of the program featuring the owner of 'Dear. bread', and second, finding out the airing schedule of this program. The first node aims to gather background information necessary to proceed, while the second node focuses on retrieving specific details (the day of the week) about the program's schedule."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the Korean cooking-variety program featuring the owner of 'Dear. bread'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine the schedule of the identified Korean cooking-variety program, specifically noting what day(s) it airs.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph begins by identifying the specific Korean cooking-variety program associated with the owner of 'Dear. bread'. Once the program is identified, the next step is to determine the airing schedule of that program to find the specific day it airs. The final node provides the answer by synthesizing the airing information."
+    }
+]

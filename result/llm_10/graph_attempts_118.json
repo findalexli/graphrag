@@ -1,0 +1,152 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "node1",
+                    "instruction": "Find the number of acts in the opera Mos\u00e8 in Egitto.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node2",
+                    "instruction": "Find the number of acts in the opera Lucrezia Borgia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "node3",
+                    "instruction": "Compare the number of acts from Mos\u00e8 in Egitto and Lucrezia Borgia to determine which one has more acts.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "node1",
+                        "node2"
+                    ]
+                }
+            ],
+            "root_node_id": "node1",
+            "final_node_id": "node3"
+        },
+        "explanation": "The execution graph is structured to first retrieve the number of acts for both operas independently. The retrieved data is then compared to determine which opera has more acts. This breakdown allows for parallel retrieval processes, which are then synthesized in a comparison step."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of acts in the opera 'Mos\u00e8 in Egitto'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of acts in the opera 'Lucrezia Borgia'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of acts retrieved for 'Mos\u00e8 in Egitto' and 'Lucrezia Borgia' to determine which opera has more acts.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is designed to answer which of the two operas, 'Mos\u00e8 in Egitto' and 'Lucrezia Borgia', has more acts by first retrieving the number of acts for each opera individually and then comparing these numbers to determine which one is greater. Each piece of information about the number of acts is obtained in parallel, and the final step involves comparing these quantities."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the structure and number of acts in the opera 'Mos\u00e8 in Egitto'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the structure and number of acts in the opera 'Lucrezia Borgia'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of acts in 'Mos\u00e8 in Egitto' and 'Lucrezia Borgia' to determine which opera has more acts.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is organized to first retrieve specific data regarding the number of acts in each opera ('Mos\u00e8 in Egitto' and 'Lucrezia Borgia'). These retrieval operations can be executed in parallel as they are independent from each other. Once the information is gathered, a reasoning node compares the results to determine which opera has more acts, providing the final answer to the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the number of acts in the opera Mos\u00e8 in Egitto.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the number of acts in the opera Lucrezia Borgia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of acts between Mos\u00e8 in Egitto and Lucrezia Borgia to determine which one has more acts.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph begins with two parallel retrieval tasks, each designed to collect information on the number of acts in the operas Mos\u00e8 in Egitto and Lucrezia Borgia. Once both pieces of information are retrieved, the final node compares the numbers to ascertain which opera has more acts."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the number of acts in the opera Mos\u00e8 in Egitto.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the number of acts in the opera Lucrezia Borgia.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of acts retrieved for Mos\u00e8 in Egitto and Lucrezia Borgia to determine which one has more acts.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the original question into a two-step process. The first two nodes are independent retrieval steps to find out the number of acts in each opera separately. The final step is a reasoning step that compares the two numbers to determine which opera has more acts."
+    }
+]

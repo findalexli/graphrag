@@ -1,0 +1,161 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify notable clients of fashion designer Lindka Cierach.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the cast of the film 'The Queen'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Clarify which actor played Queen Elizabeth II in the film 'The Queen'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine which of Lindka Cierach's clients played Queen Elizabeth II in 'The Queen' by matching the person identified in previous steps with her notable clients.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The task is broken down into retrieving information about Lindka Cierach's notable clients and the cast of the film 'The Queen'. The reasoning is needed to identify the actor who played Queen Elizabeth II and verify if this actor is one of Cierach's clients."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify notable clients of Lindka Cierach.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the cast of the film 'The Queen'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify which actors from the cast of 'The Queen' portrayed Queen Elizabeth II.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Cross-reference the list of Lindka Cierach's clients with the actor who played Queen Elizabeth II in 'The Queen'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph breaks down the question into steps needed to determine which client of Lindka Cierach played Queen Elizabeth II in the film 'The Queen'. First, we retrieve the list of notable clients of Lindka Cierach (Node 1) and the cast of 'The Queen' (Node 2) separately. We then identify who among the cast played Queen Elizabeth II (Node 3). Finally, we cross-reference the list of Lindka Cierach's clients with the information about who played Queen Elizabeth II to find the answer (Node 4)."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify notable clients of Lindka Cierach.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the film 'The Queen' and the actress who played Queen Elizabeth II.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find common links between the clients of Lindka Cierach and the actress in 'The Queen'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To determine which client of Lindka Cierach played Queen Elizabeth II in 'The Queen', the task is first split into identifying the notable clients of the designer (Node 1) and retrieving information about the movie 'The Queen' including the identity of the actress who played Queen Elizabeth II (Node 2). Finally, you assess the commonality between Lindka Cierach's clients and the actress (Node 3), resulting in the identification of the client who fits the criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the notable clients of Lindka Cierach.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the actresses who played Queen Elizabeth II in the film 'The Queen'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine which of Lindka Cierach's clients from Node 1 acted in the role of Queen Elizabeth II in 'The Queen' as identified in Node 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph starts with identifying notable clients of Lindka Cierach. In parallel, it retrieves information about actresses who played Queen Elizabeth II in the film 'The Queen'. The final step requires reasoning to find the intersection - a client of Lindka Cierach who also played the specified role."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find out who Lindka Cierach's clients are.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify which of Lindka Cierach's clients played Queen Elizabeth II in 'The Queen'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph breaks down the question into two primary steps. The first step is to gather information on who Lindka Cierach's clients are, which can involve researching famous personalities, actors, or public figures she has worked with. Once we have a list of her clients, the second step is to identify which client played Queen Elizabeth II in the film 'The Queen'. This involves checking the list of clients against the cast of the movie to find a match."
+    }
+]

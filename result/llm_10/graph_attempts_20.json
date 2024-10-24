@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information on 'The Importance of Being Icelandic', including its genre.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information on 'The Five Obstructions', including its genre.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the genre of 'The Importance of Being Icelandic'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Determine the genre of 'The Five Obstructions'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the genres of 'The Importance of Being Icelandic' and 'The Five Obstructions' to check if they are different.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph begins with retrieving information about the two films. Nodes 1 and 2 retrieve the necessary details about each film separately, including their genres. Once the genres are retrieved, nodes 3 and 4 deduce the genres from the collected information. Finally, node 5 compares these genres to determine if they belong to different film genres. This structured breakdown allows for the parallel retrieval of information about both films before synthesizing it to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the genre information for the film 'The Importance of Being Icelandic'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the genre information for the film 'The Five Obstructions'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the genres of 'The Importance of Being Icelandic' and 'The Five Obstructions' are different by comparing the results from nodes 1 and 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "To answer whether 'The Importance of Being Icelandic' and 'The Five Obstructions' belong to different film genres, we first need to retrieve the genre information for both films independently (nodes 1 and 2). These retrieval steps do not depend on each other and can be executed in parallel. Once genre information is collected, node 3 will compare the genres to determine if they are different."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the genre of the film 'The Importance of Being Icelandic'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the genre of the film 'The Five Obstructions'.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the genres obtained from nodes 1 and 2 to determine if they are different.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph is designed to first retrieve and determine the genres of the two films 'The Importance of Being Icelandic' and 'The Five Obstructions' separately. Each film's genre is found independently because they do not depend on each other. Then, in the reasoning step, the genres are compared to see if they belong to different film genres, thereby directly answering the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the film 'The Importance of Being Icelandic', including its genre.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the film 'The Five Obstructions', including its genre.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine if the genre of 'The Importance of Being Icelandic' is different from the genre of 'The Five Obstructions'.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph begins by retrieving information on both films to determine their genres. Once both genres have been obtained, a reasoning step compares them to see if they belong to different genres, thus addressing the multi-hop nature of the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve information about the film 'The Importance of Being Icelandic', including its genre.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the film 'The Five Obstructions', including its genre.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the genres of 'The Importance of Being Icelandic' and 'The Five Obstructions' to determine if they belong to different film genres.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine if two films belong to different genres. The execution graph begins by retrieving information for each film, including their genres. This is done in parallel as obtaining the genre of each film is independent of the other. Once the genre information for both films is gathered, a reasoning step compares the two genres to determine if they are different."
+    }
+]

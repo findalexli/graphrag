@@ -1,0 +1,210 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the number of films directed by Jon Paul Puno.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the number of films directed by Ken Kwapis.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the number of films directed by Jon Paul Puno and Ken Kwapis to determine which filmmaker has directed more films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The graph consists of two initial retrieval and reasoning nodes to gather data on the number of films each filmmaker has directed. Once the data is gathered, the third node compares the counts to determine which filmmaker has directed more films. This approach allows for parallel retrieval of each filmmaker's filmography, with a final reasoning step to make the comparison."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Determine the list of American filmmakers who have directed films, specifically referring to Jon Paul Puno and Ken Kwapis.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Research filmography of Jon Paul Puno and list the number of films directed by him.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Research filmography of Ken Kwapis and list the number of films directed by him.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Compare the number of films directed by Jon Paul Puno and Ken Kwapis to determine which one has directed more films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph starts by ensuring we are considering the correct individuals, then splits into two parallel retrieval tasks\u2014each focused on gathering filmography data for Jon Paul Puno and Ken Kwapis. Finally, a reasoning step evaluates the number of films associated with each director to provide a comparative answer."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the list of films directed by Jon Paul Puno.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the list of films directed by Ken Kwapis.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Count the number of films directed by Jon Paul Puno based on the retrieved list.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Count the number of films directed by Ken Kwapis based on the retrieved list.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the number of films directed by Jon Paul Puno and Ken Kwapis to determine who has directed more films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts by retrieving the list of films directed by each filmmaker, Jon Paul Puno and Ken Kwapis. These retrieval steps are performed in parallel as they are independent of each other. Then, the number of films is counted for each director. Finally, these counts are compared to determine which filmmaker has directed more films."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the list of films directed by Jon Paul Puno.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Identify the list of films directed by Ken Kwapis.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Count the number of films directed by Jon Paul Puno.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Count the number of films directed by Ken Kwapis.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the film counts of Jon Paul Puno and Ken Kwapis to determine who has directed more films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts with two independent retrieval steps: one to gather film details for Jon Paul Puno, and another for Ken Kwapis. These steps simultaneously collect the necessary lists of films. Next, separate reasoning steps count the number of films directed by each filmmaker. Finally, a reasoning step compares the two counts to determine which filmmaker has directed more films. This structured approach ensures all necessary information is retrieved and processed before synthesis."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find a list of all films directed by Jon Paul Puno.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find a list of all films directed by Ken Kwapis.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Count the number of films directed by Jon Paul Puno using the list obtained.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Count the number of films directed by Ken Kwapis using the list obtained.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the number of films directed by Jon Paul Puno and Ken Kwapis to determine who has directed more films.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The graph breaks down the task of identifying which filmmaker has directed more films into a series of steps. It first requires gathering data on films directed by Jon Paul Puno and Ken Kwapis (nodes 1 and 2). The next steps involve counting the films for each director (nodes 3 and 4) and finally, comparing the counts to find which director has more films to their credit (node 5)."
+    }
+]

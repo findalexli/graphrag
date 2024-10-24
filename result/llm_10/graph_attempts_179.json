@@ -1,0 +1,168 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve birth details for Emma Bull.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birth details for Virginia Woolf.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Extract the birth year of Emma Bull from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Extract the birth year of Virginia Woolf from the retrieved information.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Compare the birth years of Emma Bull and Virginia Woolf to determine who was born earlier.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "5"
+        },
+        "explanation": "The execution graph starts with retrieving birth details for both Emma Bull and Virginia Woolf. Then, it separates the information to extract their birth years. Once the birth years are obtained, it compares them to determine who was born earlier."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve the birth date of Emma Bull.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve the birth date of Virginia Woolf.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the birth dates of Emma Bull and Virginia Woolf to determine who was born earlier.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph breaks down the question into retrieval and reasoning steps. Firstly, nodes 1 and 2 are independent retrieval steps to find the birth dates of Emma Bull and Virginia Woolf, respectively. Once the birth dates are retrieved, node 3 performs a reasoning step to compare the dates and determine who was born earlier."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the birth date of Emma Bull.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the birth date of Virginia Woolf.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the birth dates of Emma Bull and Virginia Woolf to determine who was born earlier.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of three nodes. The first two nodes independently retrieve the birth dates of Emma Bull and Virginia Woolf. The third node performs reasoning by comparing the two birth dates to establish who was born earlier. This step synthesizes the necessary information from the first two steps to directly answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Retrieve birth date of Emma Bull.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve birth date of Virginia Woolf.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the birth dates of Emma Bull and Virginia Woolf to determine who was born earlier.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is to determine who was born earlier between Emma Bull and Virginia Woolf. First, we need to retrieve the birthdates of both individuals. The retrieval of Emma Bull's birth date and Virginia Woolf's birth date can be done in parallel as both are independent retrieval tasks. Once we have both birthdates, we can compare the two to determine who was born earlier, which is the reasoning step completing the task."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Find the birth date of Emma Bull.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find the birth date of Virginia Woolf.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Compare the birth dates of Emma Bull and Virginia Woolf to determine who was born earlier.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph is designed to first gather the essential birth date information for both Emma Bull and Virginia Woolf through two retrieval steps. Once these dates are obtained, a reasoning step compares the two dates to determine which individual was born earlier."
+    }
+]

@@ -1,0 +1,141 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the stadium that was home to the 1998 IAAF Grand Prix Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify if the stadium identified is the largest in Eastern Europe.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve the seating capacity of the stadium identified in Step 1.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Confirm that the seating capacity information is current and accurate.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph first identifies the stadium associated with the 1998 IAAF Grand Prix Final and checks its status as the largest in Eastern Europe. Once the stadium is correctly identified, the graph retrieves the number of seats it has and ensures that this information is up-to-date."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the stadium that hosted the 1998 IAAF Grand Prix Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the seating capacity of the identified stadium.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph begins by identifying the stadium that hosted the 1998 IAAF Grand Prix Final. Once identified, the next step retrieves the seating capacity of the stadium. This two-step process ensures we know which stadium to get the seating information for."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the name of the stadium that hosted the 1998 IAAF Grand Prix Final and is the largest in Eastern Europe.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Retrieve information about the seating capacity of the identified stadium.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The execution graph has two nodes. The task begins by identifying the name of the stadium that is both the largest in Eastern Europe and was home to the 1998 IAAF Grand Prix Final. Once identified, the next step is to retrieve specific information about the seating capacity of that stadium to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the largest stadium in eastern Europe.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Verify which stadium hosted the 1998 IAAF Grand Prix Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Determine the seating capacity of the identified stadium.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task is broken down into three primary steps. First, we need to identify the largest stadium in eastern Europe, as it is a key piece of information. The next step is to confirm this stadium was indeed the venue for the 1998 IAAF Grand Prix Final, ensuring we are examining the correct stadium. Finally, once the correct stadium is confirmed, we retrieve its seating capacity to answer the question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify which stadium is the largest in Eastern Europe that was home to the 1998 IAAF Grand Prix Final.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Find out how many seats the identified stadium has.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "2"
+        },
+        "explanation": "The graph consists of two main nodes. The first node identifies the stadium that meets the criteria of being the largest in Eastern Europe and hosting the 1998 IAAF Grand Prix Final. The second node retrieves the seating capacity of that stadium, answering the initial question."
+    }
+]

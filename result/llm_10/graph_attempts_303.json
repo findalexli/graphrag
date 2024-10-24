@@ -1,0 +1,194 @@
+[
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify towns linked by rail to Kendal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List lakes in the area surrounding Kendal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Filter the towns linked by rail to Kendal to find those that share a name with a lake.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The execution graph consists of identifying towns connected by rail to Kendal and listing lakes in the area. Then, through reasoning, we find which of these towns are named after a lake. The final node synthesizes information to answer the original question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify towns linked by rail to Kendal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List lakes in the vicinity or region where Kendal is located.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Find the names of towns that are named after lakes from the list obtained in Step 2.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify which of the towns named after lakes from Step 3 are linked by rail to Kendal.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The execution graph is designed to identify a town linked by rail to Kendal and named after a lake with the same name. Step 1 retrieves information about towns linked by rail to Kendal. Step 2 gathers information on lakes in the Kendal area. Step 3 narrows down towns listed in Step 2 by identifying those with names matching any of the lakes. Finally, Step 4 cross-references the towns from Steps 1 and 3 to find a match, synthesizing the answer to the main question."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the lakes near Kendal in the UK.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Determine which of these lakes have towns nearby or associated with them.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "instruction": "Retrieve information on rail links between Kendal and these towns.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Identify the town that has the same name as the lake it is associated with and has a rail link to Kendal.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2",
+                        "3"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "4"
+        },
+        "explanation": "The graph starts by identifying lakes near Kendal. Then it determines which lakes have towns associated with them. The next step is retrieving information on the rail links between Kendal and these towns. Finally, it identifies which town has the same name as the lake it is associated with and is linked by rail to Kendal."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify rail links to Kendal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "List lakes in the region around Kendal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify towns linked by rail to Kendal.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "instruction": "Find towns named after one of the lakes identified.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "instruction": "Find the intersection of towns found in nodes 3 and 4.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "3",
+                        "4"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "instruction": "Determine the name of the town linked by rail to Kendal, named after a lake.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "5"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "6"
+        },
+        "explanation": "The graph first retrieves information about the rail links to Kendal and lakes in the area. It then identifies towns linked by rail and checks these against town names derived from lakes. The process concludes by finding the town matching both criteria."
+    },
+    {
+        "graph": {
+            "nodes": [
+                {
+                    "id": "1",
+                    "instruction": "Identify the lake near Kendal that has a town named after it.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "2",
+                    "instruction": "Check for any towns linked by rail to Kendal.",
+                    "node_type": "retrievalandreasoning",
+                    "upstream_node_ids": []
+                },
+                {
+                    "id": "3",
+                    "instruction": "Identify the specific town among those connected by rail to Kendal which shares its name with a nearby lake.",
+                    "node_type": "reasoning",
+                    "upstream_node_ids": [
+                        "1",
+                        "2"
+                    ]
+                }
+            ],
+            "root_node_id": "1",
+            "final_node_id": "3"
+        },
+        "explanation": "The task involves identifying a town linked by rail to Kendal that shares a name with a nearby lake. First, we retrieve and reason about lakes near Kendal with eponymous towns (Node 1). Simultaneously, we retrieve information about rail-linked towns near Kendal (Node 2). Finally, we cross-reference these sets to identify the town that satisfies both conditions (Node 3). This approach ensures a comprehensive search of geographical names and transportation links."
+    }
+]
