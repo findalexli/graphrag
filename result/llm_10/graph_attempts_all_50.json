@@ -1,0 +1,658 @@
+[
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve location details of Aughton Park railway station.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve details regarding the Northern Line branches and stations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the location of Liverpool city center or main railway station.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the specific branch of the Northern Line on which Aughton Park railway station is situated using its location details.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine the nearest Liverpool station on the Northern Line from the branches identified, using the location of Liverpool.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Calculate the distance from Aughton Park railway station to the nearest Liverpool station on the same branch of the Northern Line.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "To determine the distance from Aughton Park railway station to Liverpool on a branch of the Northern Line, the execution graph first retrieves necessary location details and branch information. It identifies the specific branch of the Northern Line on which the station is located, finds what is considered as Liverpool's endpoint on this branch, and finally calculates the distance between Aughton Park and this Liverpool endpoint."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Pak Nam Pho Railway Station\nPak Nam Pho Railway Station is a railway station located in Pak Nam Pho Subdistrict, Nakhon Sawan City, Nakhon Sawan. It is located 250.559\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 31 October 1905 as part of the Northern Line extension from Lop Buri to Pak Nam Pho. The line continued to Phitsanulok in 1908. Originally, this was the railway station for Nakhon Sawan City as passengers would alight here and cross the Chao Phraya River to reach the city, however its main purpose was removed as the new railway station built at Nong Pling replaced its role. Today, the station acts as a railyard, a railway maintenance centre and a junction for an occasionally-used freight line to Kamnansong Rice Mill.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Tanjong Pagar railway station\nTanjong Pagar railway station (Malay: \"Stesen Keretapi Tanjong Pagar\" ; ; Tamil: \u0ba4\u0b9e\u0bcd\u0b9a\u0bcb\u0b99\u0bcd \u0baa\u0b95\u0bbe\u0bb0\u0bcd \u0bb0\u0baf\u0bbf\u0bb2\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bae\u0bcd ), also called Singapore railway station (Malay: \"Stesen Keretapi Singapura\" ; ; Tamil: \u0b9a\u0bbf\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0bc2\u0bb0\u0bcd \u0bb0\u0baf\u0bbf\u0bb2\u0bcd \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bae\u0bcd ) or Keppel Road railway station, is a former railway station located at 30 Keppel Road in Singapore. The station was the southern terminus of the network operated by Keretapi Tanah Melayu (KTM), the main railway operator in Malaysia, until 30 June 2011 when the station ceased operations with relocation of the KTM station to Woodlands Train Checkpoint. The land on which the station and the KTM railway tracks stood was originally owned by KTM and over which Malaysia had partial sovereignty. This arrangement lasted until 30 June 2011, when rail service to Tanjong Pagar was ended and the land reverted to Singapore.",
+            "Bueng Phra Railway Station\nBueng Phra Railway Station is a railway station located in Bueng Phra Subdistrict, Phitsanulok City, Phitsanulok. It is located 381.875\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 24 January 1908 as part of the Northern Line extension from Pak Nam Pho to Phitsanulok. PTT Public Company Limited operates a crude oil depot adjacent to the site and the railway operates several oil freight services from this station (to Mae Nam Station).",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Stafford Common railway station\nStafford Common railway station was a former British railway station on the outskirts of Stafford.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities."
+        ],
+        "thoughts": [
+            "Aughton Park railway station is located in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network. It is situated 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "The requested information about the Northern Line branches and stations was not found in the provided text.",
+            "Aughton Park railway station is situated on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "The location of Liverpool city center or main railway station is not provided in the given information.",
+            "Without the specific location of Liverpool or its main railway station, it is not possible to determine the nearest Liverpool station on the Northern Line from the branches identified. Additional information about the location of Liverpool or its main railway station is needed to provide an accurate answer.",
+            "Without the specific location of Liverpool or its main railway station, it is not possible to determine the nearest Liverpool station on the Northern Line from the Ormskirk branch. Additional information about the location of Liverpool or its main railway station is needed to provide an accurate answer."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the branch of the Northern Line that Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve comprehensive details about the Northern Line's specific branch including all stations on that branch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify Liverpool on the Northern Line map.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the distance from Aughton Park railway station to Liverpool by checking the number of stations or the geographical distance between them on the identified branch.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to first determine which branch of the Northern Line Aughton Park railway station is on (Node 1). Then, it retrieves information about all the stations on this branch (Node 2). Simultaneously, it identifies the location of Liverpool on the Northern Line (Node 3). Finally, it calculates the distance from Aughton Park to Liverpool, either in terms of stations or by geographical distance using the previously gathered data (Node 4)."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Muzzle brake\nA muzzle brake or recoil compensator is a device connected to the muzzle of a firearm or cannon that redirects propellant gases to counter recoil and unwanted rising of the barrel during rapid fire. The concept was first introduced for artillery and was a common feature on many anti-tank guns, especially those mounted on tanks, in order to reduce the area needed to take up the strokes of recoil and kickback. They have been used in various forms for rifles and pistols to help control recoil and the rising of the barrel that normally occurs after firing. They are used on pistols for practical pistol competitions, and are usually called compensators in this context.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Blue Point (LIRR station)\nBlue Point was a station stop along the Montauk Branch of the Long Island Rail Road It was located on Martha Avenue on the south side of the tracks in Blue Point, New York, and was the westernmost station along the Montauk Branch in the Town of Brookhaven. Access to the station was through a driveway that emptied onto Blue Point Avenue. The station was originally opened on February 1, 1870, by the South Side Railroad of Long Island and closed on June 1, 1882. The second depot opened around June, 1900, evidently in conjunction with the bridge over Blue Point Avenue. The newer station also had a connection to the South Shore Traction Company trolleys, which were later replaced by Suffolk Traction Company trolleys. Blue Point station closed on September 6, 1980, in conjunction with the nearby Bayport Station. It was located between Bayport and Patchogue Stations. The former station site, across from the Blue Point Wine & Liquor store, remains, to this day, gated off, and covered partially in trees, leaves, and weeds.",
+            "Ossining Electric Railway\nThe Ossining Electric Railway was a streetcar transit line that operated in northern Westchester County. Chartered in 1892 as the Ossining Street Railway, the first section of the line opened in 1893, starting at the New York Central Railroad station at Ossining, and terminating at the Methodist Meeting Grounds (later Camp Woods) 1.8 miles away. There was also a short branch off Main Street to Sparta Hill. The town purchased the company in 1897 for unpaid taxes and continued operation until 1902 when the Westchester Traction Company took control. The new company announced an ambitious project to build a new line to White Plains as well as a route to Port Chester, but the only extension built was from Sparta Hill to Ossining Hospital. Westchester Traction Company took control of the Danbury and Harlem Traction Company project, which was only partially constructed between Danbury, Connecticut and North Salem, New York, and never put into operation. The \"Industrial Contracting Company\" was hired to construct the Danbury and Harlem line as well as the extension of the Ossining Electric Railway. Considerable grading and some track construction took place on the Danbury line, but no evidence of construction on the Ossining line could be found.",
+            "Federal Reserve Bank of Chicago Detroit Branch\nThe Federal Reserve Bank of Chicago Detroit Branch Office is one of two branch offices of the Federal Reserve Bank of Chicago. It is part of the 7th district and its code is 7-G. It is currently located at 1600 East Warren Avenue, near I-75 in Detroit's Eastern Market Historic District. The office occupies 17 acre and cost $80 million to build. The Detroit branch was founded in 1927 and is currently headed by Robert Wiley."
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "The specific branch of the Northern Line mentioned in the relevant information is the Ormskirk branch. This branch includes the following stations:\n\n1. Ormskirk railway station - located in Ormskirk, Lancashire, England, serving as an interchange between Merseyrail services from Liverpool Central and Northern services from Preston.\n\n2. Aughton Park railway station - located in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network.\n\n3. Orrell Park railway station - located in Orrell Park, Liverpool, England, serving the Ormskirk branch of the Merseyrail network's Northern Line.\n\nThese are the stations on the specific branch of the Northern Line, providing connectivity and transportation services in the mentioned areas.",
+            "Liverpool is not mentioned in the given text, therefore it cannot be identified on the Northern Line map.",
+            "Based on the information provided, the distance from Aughton Park railway station to Liverpool cannot be calculated by checking the number of stations or the geographical distance between them on the identified branch. This is because Liverpool is not mentioned in the given text, and therefore it cannot be identified on the Northern Line map. Additional information about the distance or alternative methods of calculation would be needed to determine the distance between Aughton Park railway station and Liverpool."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which branch of the Northern Line Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the stations and distances on this branch from Liverpool to Aughton Park railway station.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the distance from Liverpool to Aughton Park railway station using the retrieved station and distance information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by identifying the specific branch of the Northern Line on which Aughton Park railway station is located. This is necessary because the Northern Line has multiple branches, and the distance from Liverpool will vary depending on the branch. After identifying the branch, the next step involves retrieving information about all the stations and their respective distances on this branch. Finally, the distance to Aughton Park from Liverpool is calculated based on the retrieved data."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Bueng Phra Railway Station\nBueng Phra Railway Station is a railway station located in Bueng Phra Subdistrict, Phitsanulok City, Phitsanulok. It is located 381.875\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 24 January 1908 as part of the Northern Line extension from Pak Nam Pho to Phitsanulok. PTT Public Company Limited operates a crude oil depot adjacent to the site and the railway operates several oil freight services from this station (to Mae Nam Station)."
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "The stations and distances on the Ormskirk branch from Liverpool to Aughton Park railway station are as follows:\n\n1. Liverpool Central - Starting point\n2. Orrell Park railway station - Located to the north of the city centre\n3. Aughton Park railway station - 11\u00bd miles (19 km) north east of Liverpool Central\n\nThe total distance from Liverpool Central to Aughton Park railway station is approximately 11\u00bd miles (19 km).",
+            "The distance from Liverpool to Aughton Park railway station is approximately 11\u00bd miles (19 km) northeast."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which branch of the Northern Line Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the starting point of the branch that Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the location or landmark in Liverpool that serves as the reference point for measuring distance from Aughton Park railway station.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the distance from the starting point of the branch to the reference point in Liverpool.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine the distance from Aughton Park railway station to Liverpool, we start by figuring out the specific branch of the Northern Line it is on. Next, we find out where that branch begins, usually at a station in Liverpool. Separately, we identify a reference point in Liverpool to measure distance, such as the Liverpool city center or the Liverpool Central railway station. Finally, we calculate the distance from the starting point of the branch to the reference point."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Bueng Phra Railway Station\nBueng Phra Railway Station is a railway station located in Bueng Phra Subdistrict, Phitsanulok City, Phitsanulok. It is located 381.875\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 24 January 1908 as part of the Northern Line extension from Pak Nam Pho to Phitsanulok. PTT Public Company Limited operates a crude oil depot adjacent to the site and the railway operates several oil freight services from this station (to Mae Nam Station).",
+            "Ossining Electric Railway\nThe Ossining Electric Railway was a streetcar transit line that operated in northern Westchester County. Chartered in 1892 as the Ossining Street Railway, the first section of the line opened in 1893, starting at the New York Central Railroad station at Ossining, and terminating at the Methodist Meeting Grounds (later Camp Woods) 1.8 miles away. There was also a short branch off Main Street to Sparta Hill. The town purchased the company in 1897 for unpaid taxes and continued operation until 1902 when the Westchester Traction Company took control. The new company announced an ambitious project to build a new line to White Plains as well as a route to Port Chester, but the only extension built was from Sparta Hill to Ossining Hospital. Westchester Traction Company took control of the Danbury and Harlem Traction Company project, which was only partially constructed between Danbury, Connecticut and North Salem, New York, and never put into operation. The \"Industrial Contracting Company\" was hired to construct the Danbury and Harlem line as well as the extension of the Ossining Electric Railway. Considerable grading and some track construction took place on the Danbury line, but no evidence of construction on the Ossining line could be found.",
+            "Shawnee Trail (West Virginia)\nThe Shawnee Trail was the white settlers' name for an American Indian trail in what is now eastern West Virginia, USA. It was a segment (or branch) of the much larger Indian trail network known as the Great Indian Warpath, which stretched from New York to Alabama. The GIW was referred to from this point north as the \"Seneca Trail\". Thus, in pioneer days, the segment known as the Shawnee Trail was often also referred to as the Seneca Trail.",
+            "Blue Point (LIRR station)\nBlue Point was a station stop along the Montauk Branch of the Long Island Rail Road It was located on Martha Avenue on the south side of the tracks in Blue Point, New York, and was the westernmost station along the Montauk Branch in the Town of Brookhaven. Access to the station was through a driveway that emptied onto Blue Point Avenue. The station was originally opened on February 1, 1870, by the South Side Railroad of Long Island and closed on June 1, 1882. The second depot opened around June, 1900, evidently in conjunction with the bridge over Blue Point Avenue. The newer station also had a connection to the South Shore Traction Company trolleys, which were later replaced by Suffolk Traction Company trolleys. Blue Point station closed on September 6, 1980, in conjunction with the nearby Bayport Station. It was located between Bayport and Patchogue Stations. The former station site, across from the Blue Point Wine & Liquor store, remains, to this day, gated off, and covered partially in trees, leaves, and weeds.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "The starting point of the branch that Aughton Park railway station is on is Ormskirk railway station.",
+            "The landmark in Liverpool that serves as the reference point for measuring distance from Aughton Park railway station is not mentioned in the provided information.",
+            "Without the specific landmark in Liverpool that serves as the reference point for measuring distance from Aughton Park railway station, it is not possible to calculate the distance accurately. Additional information about the reference point in Liverpool is needed in order to calculate the distance from the starting point of the branch to the reference point in Liverpool."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the branch of the Northern Line that Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve distance data for each branch of the Northern Line relative to Liverpool.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the specific distance of Aughton Park railway station from Liverpool using the identified branch from Node 1 and distance data from Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires determining the distance from a specific railway station to Liverpool. First, we need to ascertain which branch of the Northern Line the station belongs to (Node 1). Concurrently, we need to gather distance information for the railway lines around Liverpool (Node 2). Once we have both the branch and general distance data, we can accurately calculate the distance of the specific station from Liverpool (Node 3). This structured approach allows us to efficiently determine the answer by breaking down the problem into manageable steps, using both retrieval and reasoning nodes."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "I'm sorry, but I was unable to find any distance data for each branch of the Northern Line relative to Liverpool.",
+            "Based on the information provided, we are unable to determine the specific distance of Aughton Park railway station from Liverpool using the identified branch and distance data. We recommend seeking alternative sources or contacting the railway network for accurate distance information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which branch of the Northern Line Aughton Park railway station belongs to.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the list of stations on the identified branch, including terminal stations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Locate Liverpool on the railway map and identify its main station on the Northern Line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the distance between Aughton Park and Liverpool, considering the order of the stations identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question asks for the distance from Aughton Park railway station to Liverpool on the Northern Line. The execution graph begins by identifying which branch of the Northern Line Aughton Park is on, as the Northern Line could have multiple branches. Next, it lists all the stations on that branch, which is necessary to determine the travel path to Liverpool. Simultaneously, it retrieves where Liverpool's main Northern Line station is located. Finally, it calculates the distance, taking into account the stations between Aughton Park and Liverpool along the identified branch of the Northern Line."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "WAMC\nWAMC is a public radio network headquartered in Albany, New York. The network has 12 broadcast radio stations (transmitters) and 16 broadcast relay stations (translators,repeaters). One of the stations is an AM station: WAMC (AM) 1400 in Albany. The organization's legal name is \"WAMC\" and it is also known as \"WAMC Public Radio\" or \"WAMC Northeast Public Radio.\"",
+            "AMPERS\nAMPERS (Association of Minnesota Public Educational Radio Stations) is a public radio network in Minnesota. It is the second-largest public radio organization in the state, after Minnesota Public Radio (MPR). Known as Independent Public Radio (IPR) between 2004 and 2012, the network helps member stations coordinate fundraising and allows them to share a certain amount of programming. A number of AMPERS' 12 members are college radio stations. The network headquarters is located at 525 Park Street, Suite 310, St. Paul, MN.",
+            "TSN Radio\nTSN Radio is a semi-national sports radio brand and part-time network in Canada carried on AM radio stations owned by Bell Media Radio. The TSN Radio brand, and some of the stations' content, is shared with Bell Media's television sports channel, The Sports Network. With the American sports media company ESPN being a minority shareholder in TSN, most of the stations also air some ESPN Radio programming, usually on weekends and/or overnight.",
+            "New Jersey Network\nThe New Jersey Network (NJN) was a network of public television and radio stations serving the U.S. state of New Jersey. NJN was a member of the Public Broadcasting Service (PBS) for television and the National Public Radio (NPR) for radio, broadcasting their programming as well as producing and broadcasting their own programming, mostly relating to issues in New Jersey. With studios in both Trenton and Newark, NJN's television network covered all of New Jersey, plus parts of Pennsylvania, New York, Connecticut and Delaware; the radio network primarily served several areas of New Jersey that were not covered by Philadelphia and New York City public radio stations.",
+            "Steve Robinson (executive)\nSteve Robinson (born September 7, 1946) is an American radio manager, producer and executive producer. He has held senior management positions with numerous American radio stations, including WFMT and the WFMT Radio Network/Chicago, WBUR/Boston, WGBH/Boston, WCRB/Boston, KPFA/Berkeley, WBGO/Newark, Vermont Public Radio and Nebraska Public Radio Network.ork. Robinson served as general manager of the statewide Nebraska Public Radio Network (1990-2000) and WFMT and the WFMT Radio Network from 2000 until October 2016.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Aughton Park railway station belongs to the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "Stations on the Ormskirk branch of the Merseyrail network include:\n1. Aughton Park railway station\n2. Ormskirk railway station\n3. Orrell Park railway station",
+            "I'm sorry, I cannot provide a response to this request as it does not align with the information provided.",
+            "The distance between Aughton Park and Liverpool can be calculated by first finding the distance between Aughton Park and Ormskirk, and then adding the distance between Ormskirk and Liverpool. Since Ormskirk is the station between Aughton Park and Liverpool, we can use this approach to calculate the total distance."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which branch of the Northern Line Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the distance of Aughton Park railway station from Liverpool on its branch of the Northern Line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph breaks down the question into two steps. The first step is to determine which branch of the Northern Line Aughton Park railway station is located on. Once that information is obtained, the next step is to retrieve the distance between this station and Liverpool on the specified branch. This sequential approach ensures that accurate and specific data is retrieved for the correct branch."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Bueng Phra Railway Station\nBueng Phra Railway Station is a railway station located in Bueng Phra Subdistrict, Phitsanulok City, Phitsanulok. It is located 381.875\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 24 January 1908 as part of the Northern Line extension from Pak Nam Pho to Phitsanulok. PTT Public Company Limited operates a crude oil depot adjacent to the site and the railway operates several oil freight services from this station (to Mae Nam Station)."
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "Aughton Park railway station is located 11\u00bd miles (19 km) northeast of Liverpool Central on the Ormskirk branch of the Northern Line of the Merseyrail network."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the railway line that Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the branch of the Northern Line on which Aughton Park railway station is situated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the reference point or key station on the Northern Line branch for measuring distance from Liverpool.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Fetch the distance from Aughton Park railway station to the identified reference point on the Northern Line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Fetch the distance from Liverpool to the identified reference point on the Northern Line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Calculate the total distance from Aughton Park railway station to Liverpool by adding or comparing distances from the reference point.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The task requires determining the distance between Aughton Park railway station and Liverpool, using the context of the Northern Line's branch. First, identify the specific branch of the Northern Line the station is situated on. Then, establish a reference point commonly used for distance measurements on this branch (often a key station). Fetch distances from Aughton Park to this reference point and from Liverpool to this reference point, and combine the data to calculate the full distance from Aughton Park to Liverpool."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Bueng Phra Railway Station\nBueng Phra Railway Station is a railway station located in Bueng Phra Subdistrict, Phitsanulok City, Phitsanulok. It is located 381.875\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 24 January 1908 as part of the Northern Line extension from Pak Nam Pho to Phitsanulok. PTT Public Company Limited operates a crude oil depot adjacent to the site and the railway operates several oil freight services from this station (to Mae Nam Station).",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Pak Nam Pho Railway Station\nPak Nam Pho Railway Station is a railway station located in Pak Nam Pho Subdistrict, Nakhon Sawan City, Nakhon Sawan. It is located 250.559\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 31 October 1905 as part of the Northern Line extension from Lop Buri to Pak Nam Pho. The line continued to Phitsanulok in 1908. Originally, this was the railway station for Nakhon Sawan City as passengers would alight here and cross the Chao Phraya River to reach the city, however its main purpose was removed as the new railway station built at Nong Pling replaced its role. Today, the station acts as a railyard, a railway maintenance centre and a junction for an occasionally-used freight line to Kamnansong Rice Mill.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Blue Point (LIRR station)\nBlue Point was a station stop along the Montauk Branch of the Long Island Rail Road It was located on Martha Avenue on the south side of the tracks in Blue Point, New York, and was the westernmost station along the Montauk Branch in the Town of Brookhaven. Access to the station was through a driveway that emptied onto Blue Point Avenue. The station was originally opened on February 1, 1870, by the South Side Railroad of Long Island and closed on June 1, 1882. The second depot opened around June, 1900, evidently in conjunction with the bridge over Blue Point Avenue. The newer station also had a connection to the South Shore Traction Company trolleys, which were later replaced by Suffolk Traction Company trolleys. Blue Point station closed on September 6, 1980, in conjunction with the nearby Bayport Station. It was located between Bayport and Patchogue Stations. The former station site, across from the Blue Point Wine & Liquor store, remains, to this day, gated off, and covered partially in trees, leaves, and weeds."
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "Aughton Park railway station is situated on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "The key station on the Northern Line branch for measuring distance from Liverpool is Ormskirk railway station, which is 12+3/4 miles northeast of Liverpool.",
+            "The distance from Aughton Park railway station to Orrell Park railway station on the Northern Line is approximately 11\u00bd miles (19 km) north east.",
+            "The distance from Liverpool to Ormskirk railway station on the Northern Line is 12+3/4 miles northeast of Liverpool.",
+            "To calculate the total distance from Aughton Park railway station to Liverpool, we can add the distance from Aughton Park to Orrell Park (11\u00bd miles) and the distance from Orrell Park to Liverpool (12+3/4 miles). \n\n11\u00bd miles + 12+3/4 miles = 24\u00bc miles\n\nSo, the total distance from Aughton Park railway station to Liverpool is approximately 24\u00bc miles."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which branch of the Northern Line Aughton Park railway station is on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Locate the starting point of the identified branch in Liverpool.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the distance between the starting point in Liverpool and Aughton Park railway station along the railway line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task involves finding out the branch of the Northern Line on which Aughton Park railway station is situated, locating its starting point with respect to Liverpool, and then determining the distance along the railway line between this starting point and Aughton Park."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Nong Tom Railway Station\nNong Tom Railway Station is a railway station located in Wong Khong Subdistrict, Phrom Phiram District, Phitsanulok. It is located 423.203\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Nong Tom Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Bueng Phra Railway Station\nBueng Phra Railway Station is a railway station located in Bueng Phra Subdistrict, Phitsanulok City, Phitsanulok. It is located 381.875\u00a0km from Bangkok Railway Station and is a class 1 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened on 24 January 1908 as part of the Northern Line extension from Pak Nam Pho to Phitsanulok. PTT Public Company Limited operates a crude oil depot adjacent to the site and the railway operates several oil freight services from this station (to Mae Nam Station).",
+            "Ossining Electric Railway\nThe Ossining Electric Railway was a streetcar transit line that operated in northern Westchester County. Chartered in 1892 as the Ossining Street Railway, the first section of the line opened in 1893, starting at the New York Central Railroad station at Ossining, and terminating at the Methodist Meeting Grounds (later Camp Woods) 1.8 miles away. There was also a short branch off Main Street to Sparta Hill. The town purchased the company in 1897 for unpaid taxes and continued operation until 1902 when the Westchester Traction Company took control. The new company announced an ambitious project to build a new line to White Plains as well as a route to Port Chester, but the only extension built was from Sparta Hill to Ossining Hospital. Westchester Traction Company took control of the Danbury and Harlem Traction Company project, which was only partially constructed between Danbury, Connecticut and North Salem, New York, and never put into operation. The \"Industrial Contracting Company\" was hired to construct the Danbury and Harlem line as well as the extension of the Ossining Electric Railway. Considerable grading and some track construction took place on the Danbury line, but no evidence of construction on the Ossining line could be found.",
+            "Shawnee Trail (West Virginia)\nThe Shawnee Trail was the white settlers' name for an American Indian trail in what is now eastern West Virginia, USA. It was a segment (or branch) of the much larger Indian trail network known as the Great Indian Warpath, which stretched from New York to Alabama. The GIW was referred to from this point north as the \"Seneca Trail\". Thus, in pioneer days, the segment known as the Shawnee Trail was often also referred to as the Seneca Trail.",
+            "Blue Point (LIRR station)\nBlue Point was a station stop along the Montauk Branch of the Long Island Rail Road It was located on Martha Avenue on the south side of the tracks in Blue Point, New York, and was the westernmost station along the Montauk Branch in the Town of Brookhaven. Access to the station was through a driveway that emptied onto Blue Point Avenue. The station was originally opened on February 1, 1870, by the South Side Railroad of Long Island and closed on June 1, 1882. The second depot opened around June, 1900, evidently in conjunction with the bridge over Blue Point Avenue. The newer station also had a connection to the South Shore Traction Company trolleys, which were later replaced by Suffolk Traction Company trolleys. Blue Point station closed on September 6, 1980, in conjunction with the nearby Bayport Station. It was located between Bayport and Patchogue Stations. The former station site, across from the Blue Point Wine & Liquor store, remains, to this day, gated off, and covered partially in trees, leaves, and weeds."
+        ],
+        "thoughts": [
+            "Aughton Park railway station is on the Ormskirk branch of the Northern Line of the Merseyrail network.",
+            "The starting point of the identified branch in Liverpool is the Aughton Park railway station, which is on the Ormskirk branch of the Northern Line of the Merseyrail network, located 11\u00bd miles (19 km) northeast of Liverpool Central.",
+            "The distance between the starting point in Liverpool and Aughton Park railway station along the railway line is 11\u00bd miles (19 km) north east of Liverpool Central."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the main route of the Northern Line in the Merseyside area.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the location of Aughton Park railway station in relation to the primary route of the Northern Line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the distance from Aughton Park railway station to Liverpool along the Northern Line.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with identifying the main route of the Northern Line to understand its structure and direction (Node 1). Simultaneously, we determine where Aughton Park railway station is situated in relation to this main route (Node 2). The final node (Node 3) calculates the distance between Aughton Park railway station and Liverpool by combining the data about the Northern Line's overall route and Aughton Park's specific position on it."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Aughton Park railway station\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.",
+            "Ormskirk railway station\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.",
+            "Orrell Park railway station\nOrrell Park railway station is a railway station in Orrell Park, Liverpool, England. The station was opened in 1906 by the Lancashire and Yorkshire Railway, and was originally named \"Orrell Park Halt\"; this was simplified to \"Orrell Park\" by British Rail. It is located to the north of the city centre. It also serves the nearby district of Orrell. It is on the Ormskirk branch of the Merseyrail network's Northern Line.",
+            "Braintree Freeport railway station\nBraintree Freeport railway station is on the Braintree Branch Line in the East of England, serving the Freeport out-of-town shopping centre in Braintree, Essex. It is 44 mi down-line from London Liverpool Street via and it is situated between to the south and to the north. Its three-letter station code is BTP.",
+            "Royal National Park railway station\nRoyal National Park railway station is located in Audley, New South Wales, that serviced travellers to the Royal National Park. It is the terminus of the Royal National Park railway line, now operated by the Sydney Tramway Museum, although the station platform itself is not usable by the heritage trams operating the service. It opened in 1886 as a commuter rail station, forming part of the Sydney railway network. Along with the Royal National Park railway line, it closed in 1991 due to low patronage. The line and station were acquired by the Sydney Tramway Museum and reopened in May 1993.",
+            "Ban Pin Railway Station\nBan Pin Railway Station is a railway station located in Ban Pin Subdistrict, Long District, Phrae. It is located 563.865\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. The station opened in June 1914, following the Northern Line extension from Huai Mae Ta to Ban Pin. The line continued to Pha Khan in 1915.",
+            "Phichai Railway Station\nPhichai Railway Station is a railway station located in Nai Mueang Subdistrict, Phichai District, Uttaradit. It is located 447.553\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phichai Railway Station opened as part of the Northern Line extension from Phitsanulok to Ban Dara Junction in November 1908.",
+            "Phrom Phiram Railway Station\nPhrom Phiram Railway Station is a railway station located in Phrom Phiram Subdistrict, Phrom Phiram District, Phitsanulok. It is located 414.507\u00a0km from Bangkok Railway Station and is a class 2 railway station. It is on the Northern Line of the State Railway of Thailand. Phrom Phiram Railway Station opened in November 1908 as part of the Northern Line extension from Phitsanulok to Ban Dara Junction.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "The main route of the Northern Line in the Merseyside area is not provided in the given information.",
+            "Aughton Park railway station is located in Aughton, Lancashire, England. In relation to the primary route of the Northern Line, Aughton Park railway station is situated on the Ormskirk branch of the Northern Line.",
+            "The distance from Aughton Park railway station to Liverpool along the Northern Line is 11\u00bd miles (19 km)."
+        ],
+        "is_best": false
+    }
+]

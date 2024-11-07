@@ -1,0 +1,693 @@
+[
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the film 'Salt'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the cast of the film 'Salt' from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Confirm that Live Schreiber was part of the cast in 'Salt'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the director of the film 'Salt' from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by retrieving comprehensive information about the film 'Salt' (Node 1). Then, it identifies the cast of the film (Node 2) and specifically confirms the involvement of Live Schreiber, ensuring relevance to the question (Node 3). Simultaneously, it extracts the director's information from the data, which is needed to answer the question (Node 4). The final knowledge needed to answer the question lies in identifying the director of the film, which is the final step of the execution."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "2016 Nitro World Games\nThe 2016 Nitro World Games was a minor international action-sports event celebrated in Salt Lake City, United States, on 16 July 2016. All first time entrants, more than 40 athletes from 11 countries took part. With 21 sets of medals and trophies, the games featured 5 sports. These sporting events took place at the Rice-Eccles Stadium in the host city. The host city Salt Lake City was announced to be where the inaugural event would take place in honor of where Nitro Circus was first created. The United States topped the first-ever medal table, winning the most golds (5) and most medals overall (11).",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "History of Salt Lake City\nOriginally, the Salt Lake Valley was inhabited by the Shoshone, Paiute, Goshute and Ute Native American tribes. At the time of the founding of Salt Lake City the valley was within the territory of the Northwestern Shoshone, who had their seasonal camps along streams within the valley and in adjacent valleys. One of the local Shoshone tribes, the Western Goshute tribe, referred to the Great Salt Lake as \"Pi'a-pa\", meaning \"big water\", or \"Ti'tsa-pa\", meaning \"bad water\". The land was treated by the United States as public domain; no aboriginal title by the Northwestern Shoshone was ever recognized by the United States or extinguished by treaty with the United States. Father Silvestre V\u00e9lez de Escalante, a Spanish Franciscan missionary is considered the first European explorer in the area in 1776, but only came as far north as Utah valley (Provo), some 60 miles south of the Salt Lake City area. The first US visitor to see the Salt Lake area was John Chugg in 1824. U.S. Army officer John C. Fr\u00e9mont surveyed the Great Salt Lake and the Salt Lake Valley in 1843 and 1845. The Donner Party, a group of ill-fated pioneers, traveled through the Great Salt Lake Valley a year before the Mormon pioneers. This group had spent weeks traversing difficult terrain and brush, cutting a road through the Wasatch Mountains, coming through Emigration canyon into the Salt Lake Valley on August 12, 1846. This same path would be used by the vanguard company of Mormon pioneers, and for many years after that by those following them to Salt Lake.",
+            "Courthouse (UTA station)\nCourthouse is a light rail station in Downtown Salt Lake City, Utah, United States serviced by all three lines of Utah Transit Authority's TRAX light rail system. The Blue Line provides service from Downtown Salt Lake City to Draper. The Red Line provides service from the University of Utah to the Daybreak Community of South Jordan. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City)."
+        ],
+        "thoughts": [
+            "The film 'Salt' is not mentioned in the provided information.",
+            "The film 'Salt' is not mentioned in the provided information, therefore the director of the film cannot be identified."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the full name Live Schreiber is known for in Hollywood.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the main movie associated with Liev Schreiber that would lead to the director's name being associated.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the 2010 film 'Salt', including its main cast and production team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine who directed 'Salt' based on the film info retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Validate that Liev Schreiber acted in Salt and confirm the film's director.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph for this question involves first confirming Liev Schreiber's connection with 'Salt' through basic reasoning steps about his main roles, then retrieving details about the movie 'Salt' itself to find information about its director. The node where the director's name is determined from the retrieved data is critical to forming the answer, and validating Liev Schreiber's role in 'Salt' ties his connection to the director back to the original query."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "The full name Live Schreiber is known for in Hollywood is Liev Schreiber.",
+            "The main movie associated with Liev Schreiber that would lead to the director's name being associated is \"X-Men Origins: Wolverine,\" directed by Gavin Hood.",
+            "The film 'Salt' is a 2010 action thriller directed by Phillip Noyce and written by Kurt Wimmer. The main cast includes Angelina Jolie, Liev Schreiber, Chiwetel Ejiofor, and Daniel Olbrychski.",
+            "The film 'Salt' was directed by Phillip Noyce.",
+            "Based on the upstream tasks, Liev Schreiber did not act in the film \"Salt.\" The film \"Salt\" was directed by Phillip Noyce."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Verify the identity of 'Live Schreiber'. Is 'Live Schreiber' the same as Liev Schreiber?",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve films featuring Liev Schreiber.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve details about the film 'Salt', including the year it was released and its director.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Confirm whether Liev Schreiber acted in 'Salt'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the director of the film 'Salt' from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Provide the name of the director of 'Salt', confirming that Liev Schreiber is the actor in question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph begins by establishing whether 'Live Schreiber' refers to the actor Liev Schreiber. This is crucial for correctly identifying the films he acted in. The next steps run in parallel, where one branch verifies the films Liev Schreiber acted in, while the other retrieves specific information about the film 'Salt', including its release year and director. This parallel execution ensures both verification and retrieval of film-specific details. The reasoning branch then confirms Liev Schreiber's participation in 'Salt'. Finally, all information converges in the last node where the film's director is identified, ensuring that all assumptions about the actor's identity are correct."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Chuffilly-Roche\nArthur Rimbaud, French poet, lived for a while in Roche, where his family had a farm. He wrote several works there, notably \"Une saison en enfer\" (\"A Season in Hell\") and \"Le bateau ivre\" (\"The Drunken Boat\").",
+            "Arthur Roberts (editor)\nArthur Roberts July 17, 1890 \u2013 February 5, 1961), also known as Arthur E. Roberts, was an American film editor who edited over 100 films during his almost 30 year career. He began ending towards the end of the silent era of the film industry, his first film being 1927's \"The College Hero\", directed by Walter Lang. His last film was Republic's \"Lay That Rifle Down\" in 1955, after which he spent a brief period as the editor for the television series, \"Lassie\", before retiring in 1956. During his career he would work with many famous directors, including Frank Capra (on several films, including \"The Donovan Affair\"), Lowell Sherman (on \"The Royal Bed\"), William Seiter (on several films, including \"Way Back Home\"), Edward Cline (on \"Cracked Nuts\"), George Cukor (\"A Bill of Divorcement\"), Dorothy Arzner (the first female member of the DGA, on \"Christopher Strong\"), Anthony Mann (\"Strangers in the Night\"), George Archainbaud (\"Girls of the Big House\"), Fritz Lang (\"House by the River\"),",
+            "Scream 2\nScream 2 is a 1997 American slasher film directed by Wes Craven and written by Kevin Williamson. It stars David Arquette, Neve Campbell, Courteney Cox, Sarah Michelle Gellar, Jamie Kennedy, Laurie Metcalf, Jerry O'Connell, Jada Pinkett and Liev Schreiber.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Mental (2012 film)\nMental is a 2012 Australian comedy film directed by PJ Hogan and starring Toni Collette, Rebecca Gibney, Anthony LaPaglia and Liev Schreiber. It premiered on closing night at the 2012 Melbourne International Film Festival, and was released in cinemas on 4 October 2012.",
+            "Filter (band)\nFilter is an American industrial rock group formed in 1993 in Cleveland by singer Richard Patrick and guitarist/programmer Brian Liesegang. The band was formed after Patrick desired to start his own band after leaving Nine Inch Nails as their touring guitarist. Their debut album, \"Short Bus\", was released in 1995, and ended up going platinum, selling over one million copies, largely due to the success of the band's single \"Hey Man Nice Shot.\" After the album, the band would go through the first of many line-up changes, leaving Patrick as the only consistent member across all music releases.",
+            "The Killing Field\nThe Killing Field is an Australian mystery-drama-thriller television film on the Seven Network. It was created by Sarah Smith and Michaeley O'Brien and directed by Samantha Lang, from a screenplay by Sarah Smith and Michaeley O'Brien. It was produced by Bill Hughes and Sarah Smith with Rebecca Gibney co-producing and Julie McGauran executive producing. A spin-off series \"Winter\" screened from February 2015.",
+            "Hey Man Nice Shot\n\"Hey Man Nice Shot\" is a 1995 single by the industrial rock band Filter. The song was released on July 18, 1995 via Reprise Records, as the first single from their debut album \"Short Bus\".",
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "The Amalgamut\nThe Amalgamut is the third studio album by industrial rock band Filter released on July 30, 2002 on Reprise Records. Contrary to their prior two albums, \"Short Bus\" and \"Title of Record\", which were both certified platinum, indicating over one million copies sold, \"The Amalgamut\" stalled prior to hitting 100,000 copies sold, in part due to frontman Richard Patrick cancelling the album's main tour in order to enter a rehab facility. The album still had two singles release in its promotion, \"Where Do We Go from Here\" and \"American Clich\u00e9\".",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "Bosko the Musketeer\nBosko the Musketeer is an American animated short film. It is a \"Looney Tunes\" cartoon, featuring Bosko, the first star of the series. It was released on August 12, 1933, although some sources note September 16 as a date; this is problematic, as that would imply that the last films featuring Bosko as the star of Warner Bros. cartoons were released after the first film featuring Buddy, the second star of the series. It was, like most \"Looney Tunes\" of the time, directed by Hugh Harman; Frank Marsales was the musical director.",
+            "The Barbie Diaries\nThe Barbie Diaries is a 2006 motion capture film featuring popular Mattel character Barbie, and directed by Eric Fogel (the director of My Scene films). It is part of the \"Barbie\" film series featuring the voice of Kelly Sheridan as Barbie, and Skye Sweetnam as the singing Barbie. By the Curious Pictures's Movie. This is the last Barbie film made by Lionsgate before Barbie film series was sold to Universal.",
+            "Den of Thieves (film)\nDen of Thieves is an upcoming American heist action thriller film directed by Christian Gudegast. The film stars Gerard Butler, 50 Cent, Pablo Schreiber, O'Shea Jackson Jr., Evan Jones, Dawn Olivieri, Mo McRae, and Max Holloway.",
+            "Rebirth of Mothra\nRebirth of Mothra (\u30e2\u30b9\u30e9 , Mosura , released in Japan simply as Mothra) is a 1996 Japanese tokusatsu kaiju film featuring Mothra, produced and distributed by Toho. The film is directed by Okihiro Yoneda and serves as a reboot of the \"Mothra\" film series and is the first installment in the \"Rebirth of Mothra\" trilogy. It is also the last kaiju film produced by Tomoyuki Tanaka, who produced various kaiju films featuring Mothra, Godzilla, and others. The film was released in Japan on December 14, 1996."
+        ],
+        "thoughts": [
+            "Yes, 'Live Schreiber' is the same as Liev Schreiber. The correct spelling of the actor's name is Liev Schreiber.",
+            "Films featuring Liev Schreiber include \"Scream 2\" (1997), \"Mental\" (2012), \"Salt\" (2010), \"Den of Thieves\" (upcoming), and \"The Barbie Diaries\" (2006).",
+            "The film 'Salt' was released in 2010 and was directed by Phillip Noyce.",
+            "Yes, Liev Schreiber did act in the film 'Salt' which was released in 2010.",
+            "The director of the film 'Salt' is Phillip Noyce.",
+            "The director of 'Salt' is Phillip Noyce, and Liev Schreiber did act in the film."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the film 'Salt' released in 2010.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the director of the film 'Salt' from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph begins by retrieving information about the film 'Salt', which was released in 2010. This retrieval step is necessary to obtain the context of the film, including its director. Once the relevant information is gathered, a reasoning step follows to extract the specific detail of who directed the film from the collected data."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "Salt Lake City metropolitan area\nThe Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah. The Office of Management and Budget and the United States Census Bureau currently define the Salt Lake City, Utah Metropolitan Statistical Area as comprising two counties: Salt Lake and Tooele. As of the 2010 census, the MSA had a population of 1,087,873. As of July 1, 2014 the U.S. Census Bureau's population estimates division placed the population at 1,153,340, an increase of 65,467 or 6.0 percent since April 2010; out of 381 total MSAs, the Census Bureau ranks it as the 48th largest MSA in the United States in 2014 and the 58th fastest growing since 2010. The Salt Lake City Metropolitan Area and the Ogden-Clearfield Metropolitan Area were a single metropolitan area known as the Salt Lake City-Ogden Metropolitan Area until being separated in 2005.",
+            "2016 Nitro World Games\nThe 2016 Nitro World Games was a minor international action-sports event celebrated in Salt Lake City, United States, on 16 July 2016. All first time entrants, more than 40 athletes from 11 countries took part. With 21 sets of medals and trophies, the games featured 5 sports. These sporting events took place at the Rice-Eccles Stadium in the host city. The host city Salt Lake City was announced to be where the inaugural event would take place in honor of where Nitro Circus was first created. The United States topped the first-ever medal table, winning the most golds (5) and most medals overall (11).",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City)."
+        ],
+        "thoughts": [
+            "The film \"Salt\" is a 2010 American action thriller directed by Phillip Noyce and written by Kurt Wimmer. It stars Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. The plot revolves around Jolie's character, Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to clear her name. Liev Schreiber is one of the main actors in the film. The movie was released in 2010 and received attention for its action-packed storyline and Jolie's performance.",
+            "The director of the film \"Salt\" is Phillip Noyce."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the film 'Salt', released in 2010.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the director of the film 'Salt' based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph starts by focusing on retrieving information specifically about the film 'Salt' from 2010, which is essential given the commonness of the name 'Salt'. This retrieval will provide various data including its director, cast, and production details. The subsequent reasoning step isolates the information on who directed the film, fulfilling the question's requirement on identifying the director of this specific film."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "Salt Lake City metropolitan area\nThe Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah. The Office of Management and Budget and the United States Census Bureau currently define the Salt Lake City, Utah Metropolitan Statistical Area as comprising two counties: Salt Lake and Tooele. As of the 2010 census, the MSA had a population of 1,087,873. As of July 1, 2014 the U.S. Census Bureau's population estimates division placed the population at 1,153,340, an increase of 65,467 or 6.0 percent since April 2010; out of 381 total MSAs, the Census Bureau ranks it as the 48th largest MSA in the United States in 2014 and the 58th fastest growing since 2010. The Salt Lake City Metropolitan Area and the Ogden-Clearfield Metropolitan Area were a single metropolitan area known as the Salt Lake City-Ogden Metropolitan Area until being separated in 2005.",
+            "2016 Nitro World Games\nThe 2016 Nitro World Games was a minor international action-sports event celebrated in Salt Lake City, United States, on 16 July 2016. All first time entrants, more than 40 athletes from 11 countries took part. With 21 sets of medals and trophies, the games featured 5 sports. These sporting events took place at the Rice-Eccles Stadium in the host city. The host city Salt Lake City was announced to be where the inaugural event would take place in honor of where Nitro Circus was first created. The United States topped the first-ever medal table, winning the most golds (5) and most medals overall (11).",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City)."
+        ],
+        "thoughts": [
+            "\"Salt\" is a 2010 American action thriller film directed by Phillip Noyce and starring Angelina Jolie, Liev Schreiber, and others. The film follows the story of Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to clear her name. The film also features actor Liev Schreiber, who has appeared in several independent and mainstream Hollywood films. The Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah, and the 2016 Nitro World Games, a minor international action-sports event, took place in Salt Lake City. Additionally, there are several light rail stations in Downtown Salt Lake City, including Arena, Temple Square, and City Center.",
+            "The director of the film \"Salt\" is Phillip Noyce."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the full name of Live Schreiber to confirm it matches Isaac Live Schreiber.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the list of films acted by Liev Schreiber, with particular focus on the film 'Salt'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify that Liev Schreiber acted in the film 'Salt'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve information about the film 'Salt', specifically who directed the movie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine information to confirm Liev Schreiber's connection to 'Salt' and identify its director.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the question into steps that verify the actor's history and roles, particularly focusing on 'Salt', and retrieving relevant film details, including the director. The flow ensures that information about Liev Schreiber's involvement in 'Salt' is precise before identifying the director."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Treat (album)\nTreat is a split cassette shared between by Dutch punk band The Ex and Scottish ex-pat tour mates Dog Faced Hermans. The album was recorded live while the two bands toured Europe together and was released only on cassette in 1990. That year the two bands also collaborated on the single \"Lied der Steinklopfer\" (\"Stonestamper's Song\") released under the name Ex Faced Hermans, as well as sharing live sound engineer Gert-Jan, credited as a full member of the Dog Faced Hermans who continued to tour with The Ex for more than a decade.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Salt tectonics\nSalt tectonics is concerned with the geometries and processes associated with the presence of significant thicknesses of evaporites containing rock salt within a stratigraphic sequence of rocks. This is due both to the low density of salt, which does not increase with burial, and its low strength.",
+            "A Night at the Roxbury\nA Night at the Roxbury is a 1998 American comedy film based on a recurring skit on television's long-running \"Saturday Night Live\" called \"The Roxbury Guys\". \"Saturday Night Live\" regulars Will Ferrell, Chris Kattan, Molly Shannon, Mark McKinney and Colin Quinn star. This film expands on the original Saturday Night Live sketches where the Roxbury Guys were joined by that week's host, and bobbed their heads to Haddaway's hit song \"What Is Love\" while being comically rejected by women at various clubs.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Den of Thieves (film)\nDen of Thieves is an upcoming American heist action thriller film directed by Christian Gudegast. The film stars Gerard Butler, 50 Cent, Pablo Schreiber, O'Shea Jackson Jr., Evan Jones, Dawn Olivieri, Mo McRae, and Max Holloway.",
+            "Scream 2\nScream 2 is a 1997 American slasher film directed by Wes Craven and written by Kevin Williamson. It stars David Arquette, Neve Campbell, Courteney Cox, Sarah Michelle Gellar, Jamie Kennedy, Laurie Metcalf, Jerry O'Connell, Jada Pinkett and Liev Schreiber."
+        ],
+        "thoughts": [
+            "The full name of Liev Schreiber is Isaac Liev Schreiber.",
+            "Films acted by Liev Schreiber:\n\n1. Salt (2010) - Liev Schreiber played the role of Ted Winter in this action thriller film.\n2. Can You Ever Forgive Me? (2018) - Liev Schreiber played the role of Jack Hock in this biographical comedy-drama film.",
+            "Based on the upstream task, it is verified that Liev Schreiber did indeed act in the film 'Salt' in 2010, playing the role of Ted Winter in the action thriller.",
+            "The film 'Salt' was directed by Phillip Noyce.",
+            "Liev Schreiber is confirmed to have a connection to the film 'Salt' as he played the role of Ted Winter in the 2010 action thriller. The film was directed by Phillip Noyce."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information for Isaac Live Schreiber, also known as Liev Schreiber.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Gather the list of films Liev Schreiber has acted in, specifically focusing on the year 2010.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the film 'Salt', including its release year and director.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify if 'Salt' is in the list of films Liev Schreiber acted in based on the gathered filmography.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine the director of 'Salt' from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the question into steps that first confirm the identity and filmography of Liev Schreiber to ensure 'Salt' is among his films, and then retrieves details about the movie, including the director. This ensures the answer is accurate by verifying Salts' inclusion in his filmography and extracting the director's name from reliable sources."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Scream 2\nScream 2 is a 1997 American slasher film directed by Wes Craven and written by Kevin Williamson. It stars David Arquette, Neve Campbell, Courteney Cox, Sarah Michelle Gellar, Jamie Kennedy, Laurie Metcalf, Jerry O'Connell, Jada Pinkett and Liev Schreiber.",
+            "Mental (2012 film)\nMental is a 2012 Australian comedy film directed by PJ Hogan and starring Toni Collette, Rebecca Gibney, Anthony LaPaglia and Liev Schreiber. It premiered on closing night at the 2012 Melbourne International Film Festival, and was released in cinemas on 4 October 2012.",
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "Manimaran\nManimaran is an Indian film director, working in the Tamil film industry. He made his directorial debut in Tamil, Udhayam NH4 (2013) featuring Siddharth and a newcomer Ashrita Shetty in lead roles which was simultaneously dubbed and released in Telugu in the same year. Udhayam NH4 was produced by Meeka Entertainment & Grassroot Film Company for which director Vetrimaaran penned the story.",
+            "Danny Boyle\nDanny Boyle (born 20 October 1956) is an English director, producer, screenwriter and theatre director, known for his work on films including \"Shallow Grave\", \"Trainspotting\", \"The Beach\", \"28 Days Later\", \"Sunshine\", \"Slumdog Millionaire\", \"127 Hours\", and \"Steve Jobs\". His debut film \"Shallow Grave\" won the BAFTA Award for Best British Film. Boyle's 2008 film \"Slumdog Millionaire\" was nominated for ten Academy Awards and won eight, including the Academy Award for Best Director. He also won the Golden Globe and BAFTA Award for Best Director. Boyle was presented with the Extraordinary Contribution to Filmmaking Award at the 2008 Austin Film Festival, where he also introduced that year's AFF Audience Award Winner \"Slumdog Millionaire\".",
+            "Alka Sadat\nAlka Sadat (born 1988) is an Afghan documentary and feature film producer, director and cameraman. She became famous with her first 25-minute film \"Half Value Life\", which highlights social injustice and crime; the film won several awards. She is the younger sister of Roya Sadat, the first Afghan woman film producer and director. The two sisters have collaborated in many film productions from 2004 and were instrumental in establishing the Roya Film House. For her first film she received the Afghan Peace Prize and since then has made many documentaries for which she has won many international awards as a producer, cameraman, and director and also for her work in Television. Both had participated in the \"Muslim World: A Short-Film Festival\", organized at the Los Angeles Film School, where 32 films from Afghanistan were featured. In 2013, she coordinated in holding the first Afghanistan International Women's Film Festival. Her contribution to film making so far is in 15 documentaries and one short fiction feature film.",
+            "Den of Thieves (film)\nDen of Thieves is an upcoming American heist action thriller film directed by Christian Gudegast. The film stars Gerard Butler, 50 Cent, Pablo Schreiber, O'Shea Jackson Jr., Evan Jones, Dawn Olivieri, Mo McRae, and Max Holloway.",
+            "Elaine Schreiber\nElaine Annette Schreiber (4 June 1939 \u2013 11 June 2017) was an Australian Paralympic table tennis player and athlete. She contracted poliomyelitis as a child. At the 1964 Tokyo Games, she won a gold medal in the women's club throw A event, a silver medal in the women's javelin A event, and a bronze medal in the women's singles B event. At the 1968 Tel Aviv Games, she won a silver medal in the women's doubles C event with Marion O'Brien; she also competed but did not win any medals in athletic events at the 1968 games. She participated without winning medals in athletics events at both the 1972 Heidelberg and 1976 Toronto Games, and also participated in table tennis at the latter games.",
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Stanley Kubrick's Boxes\nStanley Kubrick's Boxes is a 2008 documentary film directed by Jon Ronson about the film director Stanley Kubrick. Ronson's intent was not to create a biography of the filmmaker but rather to understand Kubrick by studying the director's vast personal collection of memorabilia related to his feature films. The documentary came about in 1998 when Ronson received a request from Kubrick's estate for a copy of a documentary Ronson made about the Holocaust (Ronson was unaware that it was Kubrick who was asking for the film until months later). A year later, as Ronson was making plans to conduct a rare interview with the director, Kubrick suddenly died after completing work on his final film \"Eyes Wide Shut\". To his surprise, Ronson was invited to Kubrick's house by his widow. When he arrived, he found that half the house was filled by more than one thousand boxes containing snap shots, newspaper clippings, film out-takes, notes, and fan letters which the director used for research towards each of his films.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Jack Hofsiss\nJohn Bernard \"Jack\" Hofsiss (September 28, 1950 \u2013 September 13, 2016) was an American theatre, film, and television director. He received a Tony Award for his direction of \"The Elephant Man\" on Broadway, the youngest director to have ever received it at the time. The production also garnered him a Drama Desk Award, Outer Critics Circle Award, Obie Award, and New York Drama Critics Circle Award. Director of Family Secrets in the year 1984; starring Melissa Gilbert, James Spader, Stefanie Powers, and Maureen Stapleton.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "List of awards and nominations received by Rekha\nRekha is an Indian film actress who primarily works in Hindi films. Hailed as one of India's finest actresses, she made her debut as a child artist in 1966 and went on to appear in lead roles in the early 1970s. Since her debut as a leading actress she has acted in over 180 films. Rekha has often portrayed strong female characters, while also acting in some arthouse films besides numerous mainstream cinema. She has won four Filmfare Awards; two Best Actress Awards\u2014resulting from seven nominations, one Best Supporting Actress Award\u2014resulting from six nominations, and a Lifetime Achievement Award. The first award came in 1981 for the Hrishikesh Mukherjee-directed \"Khubsoorat\" where she was cast in a comic role. Her portrayal of a classical courtesan in \"Umrao Jaan\" (1981) fetched her the National Film Award for Best Actress in 1982. Rekha received her second Filmfare award in 1989 for \"Khoon Bhari Maang\". She portrayed the role of a widow who sets out to take revenge on her lover. Her negative role in \"Khiladiyon Ka Khiladi\" was highly appreciated by the critics and earned her a Filmfare Award in the Best Supporting Actress category. In 2003, she was presented with the Lifetime Achievement Award. In 2010, Rekha was awarded the Padma Shri, the 4th highest civilian honour in India. Other awards won by her include International Indian Film Academy Awards, Bengal Film Journalists' Association Awards, Star Screen Awards, Zee Cine Awards, Stardust Awards and Bollywood Movie Awards.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Lilly Singh\nLilly Singh (born 26 September 1988) is a Canadian YouTube personality, vlogger, comedian, writer, and actress. She is better known by her YouTube username IISuperwomanII. Since beginning her channel in October 2010, her videos have received over 2\u00a0billion views, and her channel has accumulated over 12 million subscribers. In 2016, she was ranked 3rd on the \"Forbes\" list of the world's highest paid YouTube stars (behind Roman Atwood and PewDiePie), earning a reported $7.5\u00a0million in 2016. Singh has featured in the annual YouTube Rewind every year since 2014. She ranked 1st on 2017 Forbes Top Influencers List in the entertainment category.",
+            "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer. Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017). \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama. She has also acted as producer and writer for many of her films.",
+            "List of Harry Potter cast members\nSeveral actors of the United Kingdom and Ireland have voiced or portrayed characters appearing in the \"Harry Potter\" film series based on the book series by J. K. Rowling. Daniel Radcliffe, Rupert Grint and Emma Watson have played Harry Potter, Ron Weasley and Hermione Granger in all the films. When they were cast only Radcliffe had previously acted in a film. Complementing them on screen are such actors as Helena Bonham Carter, Jim Broadbent, John Cleese, Robbie Coltrane, Warwick Davis, Ralph Fiennes, Michael Gambon, Brendan Gleeson, Richard Griffiths, Richard Harris, John Hurt, Jason Isaacs, Miriam Margolyes, Helen McCrory, Gary Oldman, Alan Rickman, Fiona Shaw, Maggie Smith, Timothy Spall, Imelda Staunton, David Thewlis, Emma Thompson, and Julie Walters, among others. Thirteen actors have appeared as the same character in all eight films of the series."
+        ],
+        "thoughts": [
+            "The film \"Salt\" is not mentioned in the provided information.",
+            "Isaac Liev Schreiber, known professionally as Liev Schreiber, is an American actor, director, screenwriter, and producer. He gained recognition in the late 1990s and early 2000s for his roles in independent films and later mainstream Hollywood films. Some of his notable works include the \"Scream\" trilogy, \"Ransom,\" \"Phantoms,\" \"The Sum of All Fears,\" \"The Omen,\" \"Taking Woodstock,\" \"Salt,\" \"Goon,\" \"Pawn Sacrifice,\" and \"Spotlight.\"\n\nIn addition to his film work, Schreiber has also appeared in the 1997 film \"Scream 2\" and the 2012 Australian comedy film \"Mental.\" He starred alongside Angelina Jolie in the 2010 action thriller \"Salt.\"\n\nLiev Schreiber is also set to appear in the upcoming American heist action thriller film \"Den of Thieves.\"\n\nIt's important to note that there is also information about Elaine Annette Schreiber, an Australian Paralympic table tennis player and athlete, as well as details about the podcast \"Here's the Thing\" hosted by Alec Baldwin and the military staff's functions. However, these are not directly related to Isaac Liev Schreiber.",
+            "In 2010, Liev Schreiber acted in the film \"Salt\" alongside Angelina Jolie. This action thriller film was directed by Phillip Noyce and also starred Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor.",
+            "Based on the gathered filmography, \"Salt\" is in the list of films Liev Schreiber acted in.",
+            "The director of \"Salt\" is not mentioned in the provided information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the full name of Live Schreiber as Isaac Live Schreiber.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine that Live Schreiber acted in Salt, a 2010 American action thriller film.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the director of the film Salt (2010).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question by first establishing the identity of 'Live Schreiber' and confirming the film he acted in, 'Salt.' Once the film is identified, the next step is to retrieve the information of the film's director. Each node builds upon the results of the previous ones, forming a logical and linear progression towards answering the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Den of Thieves (film)\nDen of Thieves is an upcoming American heist action thriller film directed by Christian Gudegast. The film stars Gerard Butler, 50 Cent, Pablo Schreiber, O'Shea Jackson Jr., Evan Jones, Dawn Olivieri, Mo McRae, and Max Holloway.",
+            "Close Range\nClose Range (formerly known as Dust Up) is a 2015 American action thriller film directed by Isaac Florentine, and starring Scott Adkins, Javad Ramezani Nick Chinlund, Jake La Botz, and Tony Perez. The film follows Colton MacReady, a rogue soldier-turned-outlaw, who is forced to protect his sister and young niece from a corrupt sheriff and a dangerous drug cartel who descend upon his ranch for revenge.",
+            "102 Dalmatians\n102 Dalmatians is a 2000 American live action and CG-animated film adventure drama film directed by Kevin Lima in his live-action directorial debut and produced by Edward S. Feldman and Walt Disney Pictures. It is the sequel to the 1996 film \"101 Dalmatians\", a live-action remake of the 1961 Disney animated film of the same name and stars Glenn Close reprising her role as Cruella de Vil as she attempts to steal puppies for her \"grandest\" fur coat yet. Close and Tim McInnerny were the only two actors from the first film to return for the sequel, however. The film was nominated for an Academy Award for Best Costume Design, but lost to \"Gladiator.\"",
+            "Timothy Olyphant\nTimothy David Olyphant ( ; ; born May 20, 1968) is an American actor and producer. He made his acting debut in Off-Broadway theater in 1995 in \"The Monogamist\", winning the Theatre World Award for his performance, and then originated David Sedaris' \"The Santaland Diaries\" in 1996. Following this he branched out to film; in the early years of his career, he was often cast in supporting villainous roles, most notably in \"Scream 2\" (1997), \"Go\" (1999), \"A Man Apart\" (2003) and \"The Girl Next Door\" (2004). He came to the attention of a wider audience with his portrayal of Sheriff Seth Bullock in HBO's western \"Deadwood\" (2004\u20132006). He then had starring roles in the romantic comedy \"Catch and Release\" (2006), the action film \"Hitman\" (2007), the thriller \"A Perfect Getaway\" (2009) and the horror film \"The Crazies\" (2010). He was a villain in \"Live Free or Die Hard\" (2007) and was a recurring guest star in season two of the FX legal thriller \"Damages\" (2009).",
+            "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer. Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017). \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama. She has also acted as producer and writer for many of her films.",
+            "Bulletface\nBulletface is a 2010 American action thriller film directed by Albert Pyun. The screenplay was written by Randall Fontana, who had previously collaborated with Pyun on \"Hong Kong '97\".",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Salt Lake City metropolitan area\nThe Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah. The Office of Management and Budget and the United States Census Bureau currently define the Salt Lake City, Utah Metropolitan Statistical Area as comprising two counties: Salt Lake and Tooele. As of the 2010 census, the MSA had a population of 1,087,873. As of July 1, 2014 the U.S. Census Bureau's population estimates division placed the population at 1,153,340, an increase of 65,467 or 6.0 percent since April 2010; out of 381 total MSAs, the Census Bureau ranks it as the 48th largest MSA in the United States in 2014 and the 58th fastest growing since 2010. The Salt Lake City Metropolitan Area and the Ogden-Clearfield Metropolitan Area were a single metropolitan area known as the Salt Lake City-Ogden Metropolitan Area until being separated in 2005.",
+            "La Surprise de l'amour\nLike many of Marivaux's , \"La Surprise de l'amour\" makes use of stock characters from the Commedia dell'arte. In this play, Arlequin and Columbine are featured.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Orange clownfish\nThe orange clownfish (\"Amphiprion percula\") is widely known as a popular aquarium fish. Like other clownfishes (also known as anemonefishes), it often lives in association with sea anemones. \"A. percula\" is associated specifically with \"Heteractis magnifica\" and \"Stichodactyla gigantea\", and as larva use chemical cues released from the anemones to identify and locate the appropriate host species to use them for shelter and protection. This causes preferential selection when finding their anemone host species. Although popular, maintaining this species in captivity is rather complex. The Great Barrier Reef Marine Park Authority regulates the number of collection permits that are issued to aquarium fish dealers who seek this, and other tropical fish within the Great Barrier Reef Marine Park.",
+            "The Expendables (2010 film)\nThe Expendables is a 2010 American ensemble action film written by David Callaham and Sylvester Stallone, and directed by Stallone, who also starred in the lead role. The film co-stars Jason Statham, Jet Li, Dolph Lundgren, Randy Couture, Terry Crews, Steve Austin and Mickey Rourke. The film was released in the United States on August 13, 2010. It is the first installment in \"The Expendables\" film series. This was Dolph Lundgren's first theatrically released film since 1995's \"Johnny Mnemonic\", and Steve Austin's last theatrical release film until 2013's \"Grown Ups 2\".",
+            "Kajraare\nKajraare is a Bollywood film that released on 15 October 2010. The film was directed by Pooja Bhatt and starred Himesh Reshammiya and the Pakistani actress Sara Loren. Reshammiya plays a singer who falls in love with a bar dancer and the film is centred on how they find true love. It is the first Hindi film to be shot in Petra, often called \"the eighth wonder of the world.\"",
+            "Alice in Wonderland (2010 film)\nAlice in Wonderland is a 2010 American fantasy adventure film directed by Tim Burton from a screenplay written by Linda Woolverton. The film stars Johnny Depp, Anne Hathaway, Helena Bonham Carter, Crispin Glover, Matt Lucas, and Mia Wasikowska and features the voices of Alan Rickman, Stephen Fry, Michael Sheen, and Timothy Spall. Based on Lewis Carroll's fantasy novels, \"Alice's Adventures in Wonderland\" and \"Through the Looking-Glass\". This film tells the story of a nineteen-year-old Alice Kingsley (stated in the film to be a daughter of Charles Kingsley), who is told that she can restore the White Queen to her throne, with the help of the Mad Hatter. She is the only one who can slay the Jabberwock, a dragon-like creature that is controlled by the Red Queen and terrorizes Underland's inhabitants.",
+            "127 Hours\n127 Hours is a 2010 biographical survival found footage drama film directed, co-written, and produced by Danny Boyle. The film stars James Franco as Aron Ralston, a canyoneer who becomes trapped by a boulder in an isolated slot canyon in Blue John Canyon, southeastern Utah, in April 2003. It is a British and American venture produced by Everest Entertainment, Film4 Productions, HandMade Films and Cloud Eight Films.",
+            "Clive Donner\nClive Stanley Donner (21 January 1926 \u2013 6 September 2010) was a British film director who was a defining part of the British New Wave, directing films such as \"The Caretaker\", \"Nothing But the Best\", \"Here We Go Round the Mulberry Bush\" and \"What's New Pussycat?\". He also directed television movies and commercials through the mid-1990s."
+        ],
+        "thoughts": [
+            "Isaac Live Schreiber",
+            "Liev Schreiber acted in Salt, a 2010 American action thriller film.",
+            "The director of the film Salt (2010) is Phillip Noyce."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the full name 'Isaac Live Schreiber' and the more commonly known name 'Live Schreiber'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the person known as 'Live Schreiber', particularly his acting roles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve contextual information specifically about the film 'Salt', focusing on its release year and genre.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve the director of the 2010 film 'Salt'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Confirm if 'Live Schreiber' acted in 'Salt'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Synthesize information from 'Live Schreiber's involvement in 'Salt' and the director's name to provide a complete answer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The graph breaks down the question into steps that first involve understanding who 'Live Schreiber' is and his related works. Concurrently, it retrieves details about the movie 'Salt' and its director. It then verifies 'Live Schreiber's participation in 'Salt' before finally combining this information to identify the director of the film in which he acted."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Mental (2012 film)\nMental is a 2012 Australian comedy film directed by PJ Hogan and starring Toni Collette, Rebecca Gibney, Anthony LaPaglia and Liev Schreiber. It premiered on closing night at the 2012 Melbourne International Film Festival, and was released in cinemas on 4 October 2012.",
+            "Scream 2\nScream 2 is a 1997 American slasher film directed by Wes Craven and written by Kevin Williamson. It stars David Arquette, Neve Campbell, Courteney Cox, Sarah Michelle Gellar, Jamie Kennedy, Laurie Metcalf, Jerry O'Connell, Jada Pinkett and Liev Schreiber.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "Mohammad-Reza Foroutan\nMohammad-Reza Foroutan (Persian: \u0645\u062d\u0645\u062f \u0631\u0636\u0627 \u0641\u0631\u0648\u062a\u0646\u200e \u200e , born December 28, 1968 in Tehran, Iran) is an Iranian actor. He graduated with a master's degree in clinical psychology from Azad University and now is a Ph.D candidate of Health Psychology. He has passed some free courses in acting. His first film was \"Goal\". After some minor roles his performance in an episode of TV series \"The Clue\" revealed his capabilities and Masoud Kimiay chose him for the leading role of Mercedes. He has been acting as actor for more than two decades and received several awards including best male actor award for acting in Germez 1999 Fajr International Film Festival and best male actor award for acting in  Be Ahestegi  Fajr International Film Festival 2005.",
+            "Reece Thompson\nReece Daniel Thompson (born November 22, 1988) is a Canadian actor. Thompson started his acting career as a child actor by voice acting in several animated television series and minor roles on television shows before transitioning to films. His first major role came in the 2007 film \"Rocket Science\". Thompson appeared in 2009's \"Assassination of a High School President\" with Mischa Barton and Bruce Willis, and in \"Afterwards\". Also in 2012, he appeared as Craig in \"The Perks of Being a Wallflower\".",
+            "The Extraordinary Seaman\nThe Extraordinary Seaman is a 1969 American comedy war film directed by John Frankenheimer and starring David Niven, Faye Dunaway, Alan Alda, Mickey Rooney, and Jack Carter. Apart from his participation in the documentaries \"That's Entertainment!\" (1974), and \"That's Entertainment! III\" (1994), the movie is notable for being the last film Mickey Rooney acted in which was released by Metro-Goldwyn-Mayer.",
+            "The SpongeBob Movie: Sponge Out of Water\nThe SpongeBob Movie: Sponge Out of Water is a 2015 American 3D live-action/animated comedy film based on the animated television series \"SpongeBob SquarePants\". A stand-alone sequel to \"The SpongeBob SquarePants Movie\" (2004), it was directed by former series showrunner Paul Tibbitt in his directorial debut, with live-action sequences directed by Mike Mitchell. It was the first film to be produced by Paramount Animation and second film in the \"SpongeBob SquarePants\" film series. The film stars Antonio Banderas and features the show's regular voice cast, who returned to reprise their respective roles from the series and the previous film. The plot follows a pirate called Burger-Beard, who steals the Krabby Patty secret formula using a magical book that makes any text written upon it come true. SpongeBob and his friends must travel to the surface to confront Burger-Beard and get the formula back.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Timothy Olyphant\nTimothy David Olyphant ( ; ; born May 20, 1968) is an American actor and producer. He made his acting debut in Off-Broadway theater in 1995 in \"The Monogamist\", winning the Theatre World Award for his performance, and then originated David Sedaris' \"The Santaland Diaries\" in 1996. Following this he branched out to film; in the early years of his career, he was often cast in supporting villainous roles, most notably in \"Scream 2\" (1997), \"Go\" (1999), \"A Man Apart\" (2003) and \"The Girl Next Door\" (2004). He came to the attention of a wider audience with his portrayal of Sheriff Seth Bullock in HBO's western \"Deadwood\" (2004\u20132006). He then had starring roles in the romantic comedy \"Catch and Release\" (2006), the action film \"Hitman\" (2007), the thriller \"A Perfect Getaway\" (2009) and the horror film \"The Crazies\" (2010). He was a villain in \"Live Free or Die Hard\" (2007) and was a recurring guest star in season two of the FX legal thriller \"Damages\" (2009).",
+            "Salt Lake City metropolitan area\nThe Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah. The Office of Management and Budget and the United States Census Bureau currently define the Salt Lake City, Utah Metropolitan Statistical Area as comprising two counties: Salt Lake and Tooele. As of the 2010 census, the MSA had a population of 1,087,873. As of July 1, 2014 the U.S. Census Bureau's population estimates division placed the population at 1,153,340, an increase of 65,467 or 6.0 percent since April 2010; out of 381 total MSAs, the Census Bureau ranks it as the 48th largest MSA in the United States in 2014 and the 58th fastest growing since 2010. The Salt Lake City Metropolitan Area and the Ogden-Clearfield Metropolitan Area were a single metropolitan area known as the Salt Lake City-Ogden Metropolitan Area until being separated in 2005.",
+            "Derek Stephen Prince\nDerek Stephen Prince (born February 5, 1969 in Inglewood, California) is an American voice actor who is most memorable for his various roles in the \"Digimon\" series, as well as the voice of Elgar in the live-action \"Power Rangers Turbo\" and \"Power Rangers in Space\".",
+            "James Franco\nJames Edward Franco (born April 19, 1978) is an American actor, director, screenwriter, and producer. For his role in \"127 Hours\" (2010), Franco was nominated for an Academy Award for Best Actor. He is known for his roles in live-action films such as \"Milk\" (2008), \"Pineapple Express\" (2008), \"Rise of the Planet of the Apes\" (2011), \"Spring Breakers\" (2012), \"Oz the Great and Powerful\" (2013), \"This Is the End\" (2013), \" The Disaster Artist\" (2017), and Sam Raimi's \"Spider-Man\" trilogy, while also voicing characters in the animated films \"The Little Prince\" (2015) and \"Sausage Party\" (2016).",
+            "History of Salt Lake City\nOriginally, the Salt Lake Valley was inhabited by the Shoshone, Paiute, Goshute and Ute Native American tribes. At the time of the founding of Salt Lake City the valley was within the territory of the Northwestern Shoshone, who had their seasonal camps along streams within the valley and in adjacent valleys. One of the local Shoshone tribes, the Western Goshute tribe, referred to the Great Salt Lake as \"Pi'a-pa\", meaning \"big water\", or \"Ti'tsa-pa\", meaning \"bad water\". The land was treated by the United States as public domain; no aboriginal title by the Northwestern Shoshone was ever recognized by the United States or extinguished by treaty with the United States. Father Silvestre V\u00e9lez de Escalante, a Spanish Franciscan missionary is considered the first European explorer in the area in 1776, but only came as far north as Utah valley (Provo), some 60 miles south of the Salt Lake City area. The first US visitor to see the Salt Lake area was John Chugg in 1824. U.S. Army officer John C. Fr\u00e9mont surveyed the Great Salt Lake and the Salt Lake Valley in 1843 and 1845. The Donner Party, a group of ill-fated pioneers, traveled through the Great Salt Lake Valley a year before the Mormon pioneers. This group had spent weeks traversing difficult terrain and brush, cutting a road through the Wasatch Mountains, coming through Emigration canyon into the Salt Lake Valley on August 12, 1846. This same path would be used by the vanguard company of Mormon pioneers, and for many years after that by those following them to Salt Lake.",
+            "Marrying the Mafia II\nMarrying the Mafia II is a 2005 South Korean film, the sequel to \"Marrying the Mafia\" (2002). It was the most successful comedy film in South Korea the year of its release; its over 5 million tickets sold represented more than 10% of the population and contributed to the third straight year that more tickets were sold for local than for Hollywood films.",
+            "Zahid Ahmed (actor)\nZahid Iftikhar Ahmed (born September 20, 1984) is a Pakistani television actor and former RJ. Ahmed worked as a creative manager for PTV World, and later became an RJ. Although successful, he left it to pursue a career in acting, and made his broadway debut with a leading role in the play \"It Runs in the Family\" (2006). He received widespread acclaim for his portrayal of Muhammad Ali Jinnah in Anwar Maqsood's, \"Sawa 14 August\" and its sequel \"Pawnay 14 August\" (both 2014). That same year, he made his television debut with the Hum TV romantic series \"Mehram\". His breakout role in the Hum TV series \"Alvida\" (2015), garnered him the Hum Award for Best Villain, and a nomination for Best Supporting Actor. Subsequently, he received wide recognition for his portrayal of leading roles in several of the successful series, including \"Jugnoo\" (2015), \"Tum Mere Paas Raho\" (2015), \"Sangat\" (2015), \"Zara Yaad Kar\" (2016) and \"Besharam\" (2016).",
+            "Anushka Shetty filmography\nAnushka Shetty is an Indian actress who appears in Telugu and Tamil films. She made her acting debut in Puri Jagannadh's 2005 Telugu film \"Super\", and appeared in \"Mahanandi\", released later the same year. The following year, she had four releases, the first being S. S. Rajamouli's \"Vikramarkudu\", which helped her gain recognition, followed by \"Astram\" (a remake of the 1999 Hindi film \"Sarfarosh\"), the Sundar C.-directed \"Rendu\", (which marked her debut in Tamil cinema), and a special appearance in AR Murugadoss' Telugu film \"Stalin\". She had two releases in 2007: \"Lakshyam\" and \"Don\". In 2008, she appeared in six films, including \"Okka Magaadu\", \"Swagatam\" and \"Souryam\". In 2009, Shetty played two roles in the fantasy \"Arundhati\". She went on to win the Nandi Special Jury Award and the Filmfare Best Telugu Actress Award for this film. Her next release that year was \"Billa\", a Telugu remake of the 2007 Tamil film of the same name. Her final release in 2009 was her second Tamil feature film, the masala film \"Vettaikaaran\", where she appeared as a medical student.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Premio Lo Nuestro 2003\nPremio Lo Nuestro 2003 was the 15th anniversary of the awards. the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones. Juanes, Thal\u00eda, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances. In the show, there was 36 awards winners with 135 nominations. In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year. In Rock Genre : Best Rock Album and Best rock Performer of the Year. In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance. Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year . In the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year (\"Quitame Ese Hombre\"), and for Best Regional Mexican Female Artist. In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year. At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Ta\u00f1\u00f3n. There was a great tribute to Celia Cruz by the world-famous salsa group \"Fania All-Stars\", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house.",
+            "Salt tectonics\nSalt tectonics is concerned with the geometries and processes associated with the presence of significant thicknesses of evaporites containing rock salt within a stratigraphic sequence of rocks. This is due both to the low density of salt, which does not increase with burial, and its low strength.",
+            "Hits (compilation series)\nHits is a compilation album series that ran in the United Kingdom for over twenty years from 1984 until 2006. It was compiled as a joint venture, variously between the compilation arms of the Sony BMG and Warner Music groups to rival the \"Now That's What I Call Music\" series that had launched a year earlier in 1983, compiled by rival companies EMI and Virgin. Initially, the \"Hits\" brand was arguably as popular as its main rival, with volume one through to volume eight all achieving at least a platinum BPI award, with several of the early albums going multi-platinum. The standard release rate of \"The Hits Album\" was two volumes per year compared with three volumes of the \"Now\" albums.",
+            "Martin Kunert\nMartin Kunert (Marcin Stanis\u0142aw Kunert-Dziewanowski) is a feature film and television writer, director and producer; and since 2010, a photographer. In 2004, Kunert conceived and directed the documentary \"Voices of Iraq\", made by sending 150 DV cameras to Iraqis to film their own lives. \"MovieMaker Magazine\" hailed the film as \u201ctruly a groundbreaking film\u2026both in terms of its content and the process behind its production.\u201d",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City."
+        ],
+        "thoughts": [
+            "The film 'Salt' is a 2010 American action thriller directed by Phillip Noyce and starring Angelina Jolie. The plot revolves around Jolie's character, Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to clear her name. The film falls under the genre of action thriller and was released in 2010.",
+            "The director of the 2010 film 'Salt' is Phillip Noyce.",
+            "The full name \"Isaac Live Schreiber\" is commonly known as \"Live Schreiber.\"",
+            "Liev Schreiber is an American actor known for his roles in both independent and mainstream Hollywood films. Some of his notable acting roles include appearances in the \"Scream\" trilogy, \"Ransom\", \"The Sum of All Fears\", \"The Omen\", \"Salt\", \"Goon\", \"Pawn Sacrifice\", and \"Spotlight\". He has also worked as a director, screenwriter, and producer in the film industry.",
+            "Yes, Liev Schreiber acted in the film 'Salt' (2010).",
+            "Liev Schreiber was involved in the 2010 film 'Salt' directed by Phillip Noyce."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Isaac Live Schreiber, better known as Live Schrieber, acted in Salt, a 2010 American action thriller film directed by whom?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the film 'Salt' released in 2010.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the full name of the actor referenced as Isaac Live Schreiber and verify if he acted in the film 'Salt'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the director of the 2010 film 'Salt'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Combine the information to confirm the role of Liev Schreiber in the film and identify the director of 'Salt'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question regarding the director of the film 'Salt' in which Liev Schreiber acted, the execution graph begins by identifying the film 'Salt' and verifying its release year. It then ensures that Liev Schreiber, referred to by his formal name Isaac Live Schreiber, indeed acted in this film. The director of the film is then retrieved. Finally, the reasoning step integrates the collected information to answer who directed the film."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Liev Schreiber\nIsaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer. He became known during the late 1990s and early 2000s, having appeared in several independent films, and later mainstream Hollywood films, including the \"Scream\" trilogy of horror films, \"Ransom\" (1996), \"Phantoms\" (1998), \"The Sum of All Fears\" (2002), \"The Omen\" (2006), \"\" (2009), \"Taking Woodstock\" (2009), \"Salt\" (2010), \"Goon\" (2011), \"Pawn Sacrifice\" (2014), and \"Spotlight\" (2015).",
+            "Salt (2010 film)\nSalt is a 2010 American action thriller film directed by Phillip Noyce, written by Kurt Wimmer, and starring Angelina Jolie, Liev Schreiber, Daniel Olbrychski, August Diehl, and Chiwetel Ejiofor. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "North Temple Bridge/Guadalupe (UTA station)\nNorth Temple Bridge/Guadalupe is a light rail and commuter rail station in Salt Lake City, Utah, United States served by the Green Line of Utah Transit Authority's (UTA) TRAX light rail system and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City) and connects with the rest of the TRAX system and UTA's S Line streetcar. Although the official name of the station is \"North Temple Bridge/Guadalupe\", it often referenced by UTA as simply North Temple.",
+            "Albert Hall (actor)\nAlbert W. Hall (born November 10, 1937) is an American actor. He is best known for portraying Chief Phillips in the 1979 war film \"Apocalypse Now\" and Judge Seymore Walsh in \"Ally McBeal\" and \"The Practice\". He is also widely recognized for his role as Brother Baines in the 1992 Spike Lee film \"Malcolm X\", where he acted opposite film star Denzel Washington, who appeared in the title role of slain African-American Muslim, former Nation of Islam minister, and human rights activist Malcolm X.",
+            "Madala Ranga Rao\nMadala Rangarao is an Indian Telugu Film Actor and producer noted for Erra Cinema or revolutionary movies in telugu film industry. He is popularly known as Red Star by people and associated with Communist Party of India and Prajanatya Mandali. Ranga Rao started his career with saitirical telugu film \"Chairman Chelamaiah\". He started his own banner Navataram Pictures and produced and acted movies like Yuvatharam Kadilindi (1980), Erra Mallelu (1981), Mahaprasthanam (1982), Praja Shakthi(1983), Veera Bhadrudu(1984)..",
+            "Jon Heder\nJonathan Joseph \"Jon\" Heder ( ) (born October 26, 1977) is an American actor and producer. His feature film debut came in 2004 as the title character of the comedy film \"Napoleon Dynamite\". He has also acted in the films \"The Benchwarmers\", \"School for Scoundrels\", \"Blades of Glory\", \"Mama's Boy\", \"When in Rome\", and \"Walt Before Mickey\" as Roy Disney, and provided voice talents in the animated films \"Monster House\" and \"Surf's Up\", as well as the \"Napoleon Dynamite\" animated series.",
+            "Rupert Grint\nRupert Alexander Lloyd Grint (born 24 August 1988) is an English actor and producer. He rose to prominence playing Ron Weasley, one of the three main characters in the \"Harry Potter\" film series. Grint was cast as Ron at the age of 11, having previously acted only in school plays and at his local theatre group. From 2001 to 2011, he starred in all eight \"Harry Potter\" films alongside Daniel Radcliffe playing as Harry Potter and Emma Watson playing as Hermione Granger.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Salt Lake City metropolitan area\nThe Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah. The Office of Management and Budget and the United States Census Bureau currently define the Salt Lake City, Utah Metropolitan Statistical Area as comprising two counties: Salt Lake and Tooele. As of the 2010 census, the MSA had a population of 1,087,873. As of July 1, 2014 the U.S. Census Bureau's population estimates division placed the population at 1,153,340, an increase of 65,467 or 6.0 percent since April 2010; out of 381 total MSAs, the Census Bureau ranks it as the 48th largest MSA in the United States in 2014 and the 58th fastest growing since 2010. The Salt Lake City Metropolitan Area and the Ogden-Clearfield Metropolitan Area were a single metropolitan area known as the Salt Lake City-Ogden Metropolitan Area until being separated in 2005.",
+            "Aquamarine (novel)\nAquamarine is a novel by Alice Hoffman, published in April 2001. A film adaptation was released in 2006, although the plot of the film bears little resemblance to that of the book.",
+            "Lipstick (1960 film)\nIl rossetto (internationally released as Lipstick) is a 1960 Italian crime-drama film directed by Damiano Damiani. It is the feature film debut of Damiani, after two documentaries and several screenplays. The film's plot was loosely inspired by actual events. Pietro Germi reprised, with very slight modifications, the character he played in \"Un maledetto imbroglio\".",
+            "The Expendables (2010 film)\nThe Expendables is a 2010 American ensemble action film written by David Callaham and Sylvester Stallone, and directed by Stallone, who also starred in the lead role. The film co-stars Jason Statham, Jet Li, Dolph Lundgren, Randy Couture, Terry Crews, Steve Austin and Mickey Rourke. The film was released in the United States on August 13, 2010. It is the first installment in \"The Expendables\" film series. This was Dolph Lundgren's first theatrically released film since 1995's \"Johnny Mnemonic\", and Steve Austin's last theatrical release film until 2013's \"Grown Ups 2\".",
+            "Fubar 2\nFUBAR 2 (also known as FUBAR: Balls to the Wall or FUBAR: Gods of Blunder) is a 2010 comedy film and the sequel to the 2002 cult film \"FUBAR\". It was released on October 1, 2010 in Canada. It made its world premiere by opening the Midnight Madness program at the 2010 Toronto International Film Festival.",
+            "The Abduction Club\nThe Abduction Club is a British romantic comedy-drama adventure film released in 2002; it was directed by Stefan Schwartz. Based loosely on real events, the plot centres on a group of outlaws who abduct women in order to marry them. It was written by Richard Crawford and Bill Britten (the British director and writer, not the American comedian)",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Martin Kunert\nMartin Kunert (Marcin Stanis\u0142aw Kunert-Dziewanowski) is a feature film and television writer, director and producer; and since 2010, a photographer. In 2004, Kunert conceived and directed the documentary \"Voices of Iraq\", made by sending 150 DV cameras to Iraqis to film their own lives. \"MovieMaker Magazine\" hailed the film as \u201ctruly a groundbreaking film\u2026both in terms of its content and the process behind its production.\u201d",
+            "Salt tectonics\nSalt tectonics is concerned with the geometries and processes associated with the presence of significant thicknesses of evaporites containing rock salt within a stratigraphic sequence of rocks. This is due both to the low density of salt, which does not increase with burial, and its low strength.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City)."
+        ],
+        "thoughts": [
+            "The film 'Salt' released in 2010 is an American action thriller directed by Phillip Noyce and starring Angelina Jolie. Jolie plays Evelyn Salt, who is accused of being a Russian sleeper agent and goes on the run to try to clear her name.",
+            "The full name of the actor referenced as Isaac Live Schreiber is Liev Schreiber. He did indeed act in the film 'Salt' in 2010, alongside Angelina Jolie.",
+            "The director of the 2010 film 'Salt' is Phillip Noyce.",
+            "Liev Schreiber played a role in the 2010 film 'Salt' alongside Angelina Jolie. The director of the film was Phillip Noyce."
+        ],
+        "is_best": false
+    }
+]

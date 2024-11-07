@@ -1,0 +1,753 @@
+[
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the professions of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the professions of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the scope of professions for Edward Dmytryk by analyzing the diversity and influence of his professions based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the scope of professions for Otto Preminger by analyzing the diversity and influence of his professions based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the scope of professions for Edward Dmytryk and Otto Preminger to decide who has a broader scope of profession.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving the professions of both Edward Dmytryk and Otto Preminger independently, as the information needed for each is separate. Following retrieval, we assess the scope of each individual's professions to understand their career breadth and influence. Finally, by comparing these findings, we identify which individual has a broader scope of profession."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Edward Dmytryk\nEdward Dmytryk (September 4, 1908 \u2013 July 1, 1999) was a Canadian-born American film director. He was known for his 1940s \"films noir\" and received an Oscar nomination for Best Director for \"Crossfire\" (1947).",
+            "Cornered (1945 film)\nCornered is a 1945 film noir starring Dick Powell and directed by Edward Dmytryk. This is the second teaming of Powell and Dmytryk (after \"Murder, My Sweet\"). Many scenes shot by cinematographer Harry J. Wild and Dmytryk stand out as classic film noir. The screenplay was written by John Paxton with uncredited help from Ben Hecht.",
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a film director, known for his work in \"films noir\" and Western films. He also directed the 1975 drama film \"The Human Factor.\"",
+            "Based on the retrieved information, the scope of professions for Edward Dmytryk is primarily in the film industry as a director. His work in \"films noir\" and Western films showcases his diversity within the film genre, and his influence can be seen in the impact of his films on the industry. Additionally, his direction of the 1975 drama film \"The Human Factor\" further demonstrates his versatility as a director. Overall, Edward Dmytryk's professions are focused on directing and have had a significant influence on the film industry.",
+            "Otto Preminger was an Austrian-American film director, producer, and actor.",
+            "Based on the information retrieved, Otto Preminger's scope of professions includes film director, producer, and actor. His influence in the film industry is significant, as he was known for his innovative and controversial approach to filmmaking. Preminger's diverse roles in the film industry demonstrate his versatility and impact on the world of cinema.",
+            "Based on the information gathered, Otto Preminger has a broader scope of professions compared to Edward Dmytryk. While Dmytryk's primary profession is in the film industry as a director, Preminger's scope includes directing, producing, and acting. This demonstrates a wider range of involvement and influence in the film industry, showcasing his versatility and impact on cinema. Therefore, Otto Preminger has a broader scope of profession compared to Edward Dmytryk."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of professions associated with Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of professions associated with Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Count the number of different professions identified for Edward Dmytryk from the retrieved list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Count the number of different professions identified for Otto Preminger from the retrieved list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the number of professions between Edward Dmytryk and Otto Preminger and determine who has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts with retrieving the list of professions for both individuals, Edward Dmytryk and Otto Preminger (nodes 1 and 2). It then involves counting these professions separately (nodes 3 and 4). Finally, a comparison is made to determine who has more scope in terms of different professions (node 5). This approach allows a systematic breakdown of the question into retrievable data and logical reasoning to reach the final answer."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Julian P. Kanter Political Commercial Archive\nThe Julian P. Kanter Political Commercial Archive at the University of Oklahoma is a depository for political television and radio commercials. The purpose of the archive is to preserve these materials while making them available for research. The Julian P. Kanter Political Commercial Archive has been designated an official project by Save America's Treasures.",
+            "Coast horned lizard\nThe coast horned lizard (\"Phrynosoma coronatum\") is a species of phrynosomatid lizard which can be found in Baja California Sur. The old classification included all three current species \"P. blainvillii\", \"P. cerroense\", and \"P. coronatum\" as a single species (\"P. coronatum\") ranging from Baja California north to California's Sacramento Valley. It was previously considered to be a widely divergent species with over 6 subspecies in their relatively small range but is now classified as three distinct species. As a defense the lizard can shoot high pressure streams of blood out of its eyes if threatened.",
+            "M. P. Shiel\nMatthew Phipps Shiell (21 July 1865 \u2013 17 February 1947) \u2013 known as M. P. Shiel \u2013 was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "P. W. Underwood\nPhillip Wayne \"Bear\" Underwood (October 16, 1931 \u2013 February 4, 2013), known as P. W. Underwood, was an American gridiron football player and coach. He was the head coach of the Southern Miss Golden Eagles from 1969 to 1974.",
+            "J. P. Moreland\nJames Porter Moreland (born March 9, 1948), better known as J. P. Moreland, is an American philosopher, theologian, and Christian apologist. He currently serves as a Distinguished Professor of Philosophy at Talbot School of Theology at Biola University in La Mirada, California.",
+            "Northrop P-61 Black Widow\nThe Northrop P-61 Black Widow, named for the American spider, was the first operational U.S. warplane designed as a night fighter, and the first aircraft designed to use radar. The P-61 had a crew of three: pilot, gunner, and radar operator. It was armed with four 20 mm (.79 in) Hispano M2 forward-firing cannons mounted in the lower fuselage, and four .50 in (12.7 mm) M2 Browning machine guns mounted in a remote-controlled dorsal gun turret.",
+            "Kenneth P. LaValle Stadium\nThe Kenneth P. LaValle Stadium is the main stadium for Stony Brook University in Stony Brook, New York, United States. Construction began in 2000 at a cost of approximately $22 million. With a capacity of 8,300 people, it is the largest outdoor facility in Suffolk County. The stadium is home to the Division I Stony Brook Seawolves, including soccer, lacrosse, and football teams. The stadium opened on September 14, 2002. On October 19, 2002, it was officially named after Kenneth P. LaValle, the New York state senator who was instrumental in getting the legislative funding available for the construction of the stadium.",
+            "James P. McCaffrey Trophy\nThe James P. McCaffrey Trophy is a Canadian Football League trophy, awarded to the outstanding defensive player in the East Division. Each team in the East division nominates a candidate, from which the winner is chosen. Either the winner of this trophy or the winner of the Norm Fieldgate Trophy will also win the Canadian Football League Most Outstanding Defensive Player award.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today.",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Nurse stereotypes\nA stereotype is a generalized idea or image about a particular person or thing that is often oversimplified and offensive. Stereotypes are victim of prejudice when negative portrayals of a group are untrue of individual members. Nursing has been stereotyped throughout the history of the profession. A common misconception is that all nurses are female; this has led to the stereotype of male nurses as effeminate. These generalized ideas of the nursing profession have formed a skewed image of nurses in the media. The image of a nurse projected by the media is typically of a young white single female being over-sexualized as well as diminished intellectually; this idea is then portrayed in get-well cards, television shows and novels. The over-sexualized nurse is commonly referred to as a naughty nurse and is shown as a sex symbol or nymphomaniac. Along with these common stereotypes, studies have identified several other popular images used in media such as handmaiden, angel, torturer, homosexual male, alcoholic, buffoon and woman in white. Common stereotypes of nursing and portrayal of these misconceptions have fueled a discussion on the effects they have on the profession, harmful or good."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a film director and producer.",
+            "Based on the retrieved list, the number of different professions identified for Edward Dmytryk is 2: film director and producer.",
+            "The list of professions associated with Otto Preminger includes:\n1. Legal profession\n2. Reading law\n3. Convention (meeting)",
+            "Based on the retrieved list, Otto Preminger is associated with three different professions: legal profession, reading law, and convention (meeting).",
+            "Otto Preminger has more professions than Edward Dmytryk. While Edward Dmytryk is associated with two professions (film director and producer), Otto Preminger is associated with three different professions (legal profession, reading law, and convention). Therefore, Otto Preminger has more professions."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the professions of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the professions of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Assess the diversity and range of professions for Edward Dmytryk.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Assess the diversity and range of professions for Otto Preminger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the scope of professions between Edward Dmytryk and Otto Preminger to determine who has more scope.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins with retrieving and reasoning about the professions of Edward Dmytryk and Otto Preminger separately. This involves identifying what professions each individual held. After retrieving this information, two subsequent nodes reason about the diversity and range of these professions, which is crucial to understanding their scope. Finally, these analyses are compared in the final node to determine who has more scope in their professional endeavors. By structuring the graph this way, we can independently analyze each individual's career before making the comparison."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a film director, with credits including \"The Hawk\" and \"The Human Factor\". Guido Coen was an Italian-born British film producer and film subtitler. Sean McNamara is a fictional character on the TV show \"Nip/Tuck\". Anthony Casso was an Italian-American mobster and former underboss of the Lucchese crime family.",
+            "Edward Dmytryk had a diverse range of professions within the film industry, including film director and film editor. He also worked as a writer and producer on various projects. His career spanned multiple decades and genres, showcasing his versatility and adaptability within the film industry. Overall, Dmytryk's diverse range of professions within the film industry demonstrates his expertise and experience in various roles.",
+            "Otto Preminger was an Austrian-American film director, producer, and actor.",
+            "Otto Preminger had a diverse range of professions within the film industry, including director, producer, and actor. As a director, he worked on a variety of genres, including film noir, drama, and musicals. He also produced several of his own films, showcasing his skills in both creative and business aspects of filmmaking. Additionally, he had some experience as an actor, further demonstrating his versatility within the industry. Overall, Otto Preminger's career spanned multiple roles and genres, showcasing his diversity and range within the film profession.",
+            "Based on the comparison of the scope of professions between Edward Dmytryk and Otto Preminger, it can be determined that both individuals had a diverse range of professions within the film industry. However, Otto Preminger's scope appears to be slightly broader, as he not only worked as a director and producer but also had experience as an actor. Additionally, Preminger worked on a variety of genres, including film noir, drama, and musicals, showcasing his versatility within the industry. Therefore, Otto Preminger has a slightly wider scope of professions within the film industry compared to Edward Dmytryk."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the professions of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the professions of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each identified profession of Edward Dmytryk, determine the scope of work associated with it.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "For each identified profession of Otto Preminger, determine the scope of work associated with it.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the scopes of professions of Edward Dmytryk and Otto Preminger and determine who has a broader scope of professions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by identifying the professions associated with Edward Dmytryk and Otto Preminger (nodes 1 and 2). Next, it analyzes the scope of each profession for both individuals (nodes 3 and 4). Finally, it compares the computed scopes to determine who has a broader range of professional activities (node 5). This structured approach ensures each relevant detail is considered, leading to a well-reasoned answer."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "Edward Snyder (cinematographer)\nEdward Snyder, also known as Edward J. Snyder (1895 \u2013 July 10, 1982) was an American cameraman, cinematographer (director of photography), and visual effects/special effects artist. Born in New York City in 1895, Snyder would break into the film industry as the Director of Photography on the 1926 silent film, \"The Fighting Marine\", which featured the only screen performance by boxing heavyweight champion, Gene Tunney. He would be one of the plethora of talented cameramen to work on the Howard Hughes' 1930 aerial classic, \"Hell's Angels\", along with such other notable cameramen and future directors of photography, Paul Ivano, Henry Cronjager and Ernest Laszlo. But it was as special effects artist that he would have his greatest success, working on such classic films as Otto Preminger's \"Laura\"; George Cukor's \"Winged Victory\"; \"The Keys of the Kingdom\", starring Gregory Peck; Elia Kazan's A Tree Grows in Brooklyn; Anna and the King of Siam, starring Irene Dunne and Rex Harrison; and 1948's Deep Waters, for which he was nominated for an Academy Award (losing to the special effects team of Portrait of Jennie). Snyder died in 1982.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a film director, with credits including \"The Hawk\" (1935) and \"The Human Factor\" (1975). He was also a film producer, working on projects such as \"Burke & Hare\" and \"Au Pair Girls\".",
+            "1. Film Director: The scope of work for a film director includes overseeing the creative aspects of a film, such as working with actors, choosing locations, and making decisions about the visual and artistic elements of the film.\n\n2. Film Producer: The scope of work for a film producer includes overseeing the business and financial aspects of a film, such as securing funding, hiring key personnel, and managing the production process.",
+            "Otto Preminger was a film director, producer, and actor.",
+            "1. Film Director: As a film director, Otto Preminger was responsible for overseeing the creative and technical aspects of making a film. This included working with the script, guiding the actors' performances, coordinating with the cinematographer and other crew members, and making decisions about the overall visual and storytelling elements of the film.\n\n2. Producer: In his role as a producer, Otto Preminger would have been involved in the financial and organizational aspects of film production. This could include securing funding for the film, hiring key personnel, managing the budget, and overseeing the overall production process.\n\n3. Actor: As an actor, Otto Preminger would have been responsible for portraying a character in a film or on stage. This would involve interpreting the character, memorizing lines, and working with the director and other actors to bring the character to life in a performance.",
+            "Based on the information provided, both Edward Dmytryk and Otto Preminger have worked as film directors and producers, which are the two main professions in the film industry. However, Otto Preminger also worked as an actor, expanding his scope of professions beyond that of Edward Dmytryk. Therefore, Otto Preminger has a broader scope of professions compared to Edward Dmytryk."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the filmography of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the filmography of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the range of different genres, roles, and other dimensions within Edward Dmytryk's filmography.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the range of different genres, roles, and other dimensions within Otto Preminger's filmography.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the scopes of professions between Edward Dmytryk and Otto Preminger based on the analysis of their filmographies.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first gather the necessary filmographies of Edward Dmytryk and Otto Preminger, which is the foundation of understanding their professional scopes. Then, it analyzes each director's filmography independently to assess the variety within their works, such as different film genres, the roles they have taken (director, writer, producer), and any other relevant professional dimensions. Finally, these analyses are compared to determine who has a broader scope of activity in their profession."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Edward Dmytryk\nEdward Dmytryk (September 4, 1908 \u2013 July 1, 1999) was a Canadian-born American film director. He was known for his 1940s \"films noir\" and received an Oscar nomination for Best Director for \"Crossfire\" (1947).",
+            "Cornered (1945 film)\nCornered is a 1945 film noir starring Dick Powell and directed by Edward Dmytryk. This is the second teaming of Powell and Dmytryk (after \"Murder, My Sweet\"). Many scenes shot by cinematographer Harry J. Wild and Dmytryk stand out as classic film noir. The screenplay was written by John Paxton with uncredited help from Ben Hecht.",
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "Film laboratory\nA film laboratory is a commercial service enterprise and technical facility for the film industry where specialists develop, print, and conform film material for classical film production and distribution which is based on film material, such as negative and positive, black and white and color, on different film formats: 65-70mm, 35mm, 16mm, 9.5mm, 8mm. The film laboratory managers can charge by the footage or by time used while in lab.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "L (film)\nL (\"Learning\") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas. It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19\u201329 January 2012) where its international premiere will take place. The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January \u2013 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards. A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011. L is Makridis's first feature film. His short film \"The Last Fakir\" (2005) was awarded the \"Newcomer's Prize\" at the 2005 International Short Film Festival in Drama which takes place in Greece.",
+            "Life of Riley (2014 film)\nLife of Riley (French: Aimer, boire et chanter ) is a 2014 French comedy-drama film directed by Alain Resnais in his final feature film before his death. Adapted from the play \"Life of Riley\" by Alan Ayckbourn, the film had its premiere in the competition section of the 64th Berlin International Film Festival, just three weeks before Resnais died, where it won the Alfred Bauer Prize.",
+            "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Le Dernier Combat\nLe Dernier Combat (] , English: \"The Last Battle\" ) is a 1983 post-apocalyptic French film. It was the first feature-film to be directed by Luc Besson, and also features Jean Reno's first prominent role. Music for the film was composed by \u00c9ric Serra. The film was the first of many collaborations between Besson, Reno and Serra. A dark vision of post-apocalyptic survival, the film was shot in black and white and contains only two words of dialogue. It depicts a world where people have been rendered mute by some unknown incident.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "The Frozen North\nThe Frozen North is a 1922 American short comedy film directed by and starring Buster Keaton. The film is a parody of early western films, especially those of William S. Hart. The film was written by Keaton and Edward F. Cline (credited as Eddie Cline). The film runs for around 17 minutes. Sybil Seely and Bonnie Hill co-star in the film.",
+            "Edward Snyder (cinematographer)\nEdward Snyder, also known as Edward J. Snyder (1895 \u2013 July 10, 1982) was an American cameraman, cinematographer (director of photography), and visual effects/special effects artist. Born in New York City in 1895, Snyder would break into the film industry as the Director of Photography on the 1926 silent film, \"The Fighting Marine\", which featured the only screen performance by boxing heavyweight champion, Gene Tunney. He would be one of the plethora of talented cameramen to work on the Howard Hughes' 1930 aerial classic, \"Hell's Angels\", along with such other notable cameramen and future directors of photography, Paul Ivano, Henry Cronjager and Ernest Laszlo. But it was as special effects artist that he would have his greatest success, working on such classic films as Otto Preminger's \"Laura\"; George Cukor's \"Winged Victory\"; \"The Keys of the Kingdom\", starring Gregory Peck; Elia Kazan's A Tree Grows in Brooklyn; Anna and the King of Siam, starring Irene Dunne and Rex Harrison; and 1948's Deep Waters, for which he was nominated for an Academy Award (losing to the special effects team of Portrait of Jennie). Snyder died in 1982.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi."
+        ],
+        "thoughts": [
+            "Filmography of Edward Dmytryk:\n1. Cornered (1945)\n2. The Hawk (1935)\n3. The \"Human\" Factor (1975)\n\nOther notable works:\n- Directed the episode \"What Are Little Girls Made Of?\" of the American science fiction television series, \"\"\n- Directed the short comedy film \"The Frozen North\" (1922)\n\nIt is important to note that Edward Dmytryk was known for his work in film noir and received an Oscar nomination for Best Director for \"Crossfire\" (1947).",
+            "Edward Dmytryk's filmography spans a range of genres, including film noir with \"Crossfire\" (1947), crime thriller with \"Cornered\" (1945), and drama with \"The \"Human\" Factor\" (1975). He also worked on a science fiction television series and directed a short comedy film, showcasing his versatility across different genres. In terms of roles, Dmytryk was known for his work as a director, but also worked on television episodes and short films. Overall, his filmography demonstrates a diverse range of genres, roles, and dimensions within the film industry.",
+            "Otto Preminger was a renowned film director, producer, and actor known for his work in classic films such as \"Laura\" (1944), \"Anatomy of a Murder\" (1959), and \"Exodus\" (1960). He also directed \"Advise & Consent\" (1962) and \"The Cardinal\" (1963). Preminger's filmography includes a wide range of genres and styles, making him a significant figure in the history of cinema.",
+            "Otto Preminger's filmography spans a wide range of genres, including film noir (\"Laura\"), courtroom drama (\"Anatomy of a Murder\"), historical epic (\"Exodus\"), political drama (\"Advise & Consent\"), and religious drama (\"The Cardinal\"). In addition to directing, he also took on various roles as a producer and actor, showcasing his versatility and range within the film industry. His work also demonstrates a diversity of themes and storytelling approaches, solidifying his reputation as a multifaceted filmmaker. Overall, Otto Preminger's filmography showcases a rich and varied range of genres, roles, and dimensions, making him a significant and influential figure in the history of cinema.",
+            "Based on the analysis of their filmographies, both Edward Dmytryk and Otto Preminger have demonstrated a diverse range of genres, roles, and dimensions within the film industry. Dmytryk's filmography includes film noir, crime thriller, drama, and even a science fiction television series, showcasing his versatility across different genres. He also worked on television episodes and short films, demonstrating his flexibility in various roles within the industry. On the other hand, Preminger's filmography spans a wide range of genres, including film noir, courtroom drama, historical epic, political drama, and religious drama. In addition to directing, he also took on various roles as a producer and actor, showcasing his versatility and range within the film industry.\n\nBoth filmmakers have demonstrated a diversity of themes and storytelling approaches, solidifying their reputations as multifaceted filmmakers. Overall, their filmographies showcase a rich and varied range of genres, roles, and dimensions, making them significant and influential figures in the history of cinema."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the professional scope and career details of Edward Dmytryk, including his filmography, role diversity, awards, and influence in the industry.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the professional scope and career details of Otto Preminger, including his filmography, role diversity, awards, and influence in the industry.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the career details of Edward Dmytryk to determine his scope of profession by evaluating his filmography, roles undertaken (e.g., director, producer), and his influence in the industry.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the career details of Otto Preminger to determine his scope of profession by evaluating his filmography, roles undertaken (e.g., director, producer), and his influence in the industry.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the professional scope and influence of Edward Dmytryk and Otto Preminger based on the analyzed data to determine who has more scope of profession.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "This execution graph breaks down the task of determining who has more scope of profession between Edward Dmytryk and Otto Preminger into several steps. First, it involves retrieving comprehensive career details for each individual. Then, it requires analyzing these details to evaluate the scope of their professions individually. Finally, a comparative analysis is performed to determine who has broader professional scope based on their career achievements, roles, and influence."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Otto Preminger\nOtto Ludwig Preminger ( , ] ; 5 December 1905 \u2013 23 April 1986) was an American theatre and film director, originally from Austria-Hungary.",
+            "Edward Schulmerich\nEdward C. Schulmerich (1863 \u2013 1937) was a businessman and politician in the U.S. state of Oregon. A native of California, his German family moved to Oregon when he was a boy, settling near Hillsboro. There he worked in the banking industry and other professional pursuits. A Republican, he served in both houses of the Oregon Legislative Assembly and prior to that on the city council of Hillsboro. His former home, the Edward Schulmerich House, is listed on the National Register of Historic Places.",
+            "ARIA Music Awards\nThe Australian Recording Industry Association Music Awards (commonly known informally as ARIA Music Awards or ARIA Awards) is an annual series of awards nights celebrating the Australian music industry, put on by the Australian Recording Industry Association (ARIA). The event has been held annually since 1987 and encompasses the general genre-specific and popular awards (these are what is usually being referred to as \"the ARIA awards\") as well as Fine Arts Awards and Artisan Awards (held separately from 2004), Lifetime Achievement Awards and ARIA Hall of Fame \u2013 held separately from 2005 to 2010 but returned to the general ceremony in 2011. For 2010, ARIA introduced public voted awards for the first time.",
+            "Wahu\nRosemary Wahu Kagwi, professionally known by her mononym Wahu, is a Kenyan singer-songwriter, former fashion model, actress and entrepreneur. She released her first single \"Niangalie\" which received positive reception all over Africa and the world at large. She is the inaugural recipient of the MTV Africa Music Awards 2008, for Best Female Artist category. Moreover, she has won the Pearl of Africa Music Awards, Chaguo La Teeniez Awards and Kisima Music Awards. In the acting industry, Wahu had a leading role in the television series \"Tazama\".",
+            "Shruti Haasan filmography\nShruti Haasan is an Indian film actress, composer and playback singer who works in Telugu, Hindi, and Tamil cinema. Born into the prominent Haasan family, she is the daughter of actors Kamal Haasan and Sarika Thakur. Shruti Haasan started her career as a playback singer at the age of six in the 1992 Tamil film \"Thevar Magan\". She later made a cameo appearance in her father's Tamil-Hindi bilingual directorial \"Hey Ram\" (2000). Haasan's first major appearance was in Soham Shah's Hindi film \"Luck\" (2009), in which she played a dual role of a woman avenging her twin sister's death. She played the female lead in the films \"Anaganaga O Dheerudu\" and \"7aum Arivu\"; both were released in 2011 and together earned her the Best Female Debut \u2013 South at the 59th Filmfare Awards South ceremony. Her subsequent releases \"Oh My Friend\" (2011) and \"3\" (2012) were commercially unsuccessful. The latter earned her a nomination for the Best Actress \u2013 Tamil at the 60th Filmfare Awards South ceremony. A turning point came in Hassan's career with Harish Shankar's commercially successful Telugu film \"Gabbar Singh\" (2012). The release was followed by a series of successful films such as \"Balupu\" (2013) and \"Yevadu\" (2014). She received her first Filmfare Award for Best Actress \u2013 Telugu for her performance in \"Race Gurram\" (2014).",
+            "Steve Phillips (footballer, born 1954)\nSteven Edward Phillips (born 4 August 1954) is an English former professional footballer who had a long career as a forward for a number of teams in the Football League in the 1970s and 1980s. He scored 200 goals from 562 league appearances.",
+            "Edward Dmytryk\nEdward Dmytryk (September 4, 1908 \u2013 July 1, 1999) was a Canadian-born American film director. He was known for his 1940s \"films noir\" and received an Oscar nomination for Best Director for \"Crossfire\" (1947).",
+            "Ingo Preminger\nIngwald \"Ingo\" Preminger (25 February 1911 in Czernowitz, Austria-Hungary (now Chernivtsi, Ukraine) \u2013 7 June 2006 in Pacific Palisades, California) was a film producer. He was also the literary agent for several writers, including Dalton Trumbo and Ring Lardner Jr., both of whom were blacklisted in the McCarthy era. He was brother of actor-director-producer Otto Preminger.",
+            "Rosebud (film)\nRosebud is a 1975 film directed by Otto Preminger, and starring Peter O'Toole, Richard Attenborough, and Peter Lawford. The script was by Otto's son, Erik Lee Preminger, based on the novel by Joan Hemingway and . Originally the film was set to star Robert Mitchum, but he left after disagreements with Preminger. Kim Cattrall made her film d\u00e9but as a teenager. Barbara Emerson, who had been cast as one of the girls, was replaced during production.",
+            "Fallen Angel (1945 film)\nFallen Angel is a 1945 black-and-white film noir directed by Otto Preminger, with cinematography by Joseph LaShelle, who had also worked with Preminger on \"Laura\" a year before. The film features Alice Faye, Dana Andrews, Linda Darnell, and Charles Bickford. It was the last film Faye made as a major Hollywood star, and she did not make another film until \"State Fair\" (1962).",
+            "The Moon Is Blue\nThe Moon Is Blue is a 1953 American romantic comedy film produced and directed by Otto Preminger and starring William Holden, David Niven, and Maggie McNamara. Written by F. Hugh Herbert and based on his 1951 play of the same title, the film is about a young woman who meets an architect on the observation deck of the Empire State Building and quickly turns his life upside down. Herbert's play had also been a huge success in Germany, and Preminger decided to film English- and German-language versions simultaneously, using the same sets but different casts. The German film version is \"Die Jungfrau auf dem Dach\"."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a Canadian-born American film director known for his work in the 1940s \"films noir\" genre. He made his directorial debut with the 1935 Western film \"The Hawk\" and went on to have a successful career in the industry. His final film was the 1975 drama \"The Human Factor.\" Dmytryk's role diversity is evident in his ability to work across different genres and time periods.\n\nIn terms of awards and influence, Dmytryk received an Oscar nomination for Best Director for his work on \"Crossfire\" (1947). This recognition speaks to his impact and talent within the film industry. His filmography showcases his ability to work on a variety of projects, demonstrating his versatility and skill as a director.\n\nOverall, Edward Dmytryk's professional scope and career details highlight his significant contributions to the film industry, particularly in the realm of \"films noir\" and his ability to work across different genres. His influence is evident in the recognition he received for his work, and his filmography reflects his diverse and impactful career.",
+            "Edward Dmytryk had a diverse and impactful career in the film industry, primarily as a director. He made his mark in the 1940s \"films noir\" genre, but also demonstrated his versatility by working across different genres and time periods. His directorial debut was in 1935 with the Western film \"The Hawk,\" and he continued to have a successful career until his final film, the 1975 drama \"The Human Factor.\"\n\nDmytryk's influence in the industry is evident through his Oscar nomination for Best Director for \"Crossfire\" (1947). This recognition speaks to his talent and impact as a director. His filmography showcases his ability to work on a variety of projects, highlighting his versatility and skill.\n\nOverall, Edward Dmytryk's career details and filmography demonstrate his significant contributions to the film industry, particularly in the realm of \"films noir,\" and his ability to work across different genres. His influence is evident in the recognition he received for his work, and his diverse and impactful career.",
+            "Otto Preminger was an American theatre and film director, originally from Austria-Hungary. He was known for his diverse roles in the film industry, including directing, producing, and writing. His filmography includes notable works such as \"Rosebud\" (1975), \"Fallen Angel\" (1945), and \"The Moon Is Blue\" (1953). He was known for his influence in the industry, particularly in the film noir genre, and for his ability to work with a variety of actors and actresses.\n\nPreminger's career spanned several decades, and he received numerous awards and nominations for his work. His influence in the industry can be seen through his collaborations with various actors and actresses, as well as his ability to adapt to different genres and styles of filmmaking.\n\nIn addition to his work in film, Preminger's brother, Ingwald \"Ingo\" Preminger, was also involved in the film industry as a producer and literary agent for several writers. This further demonstrates the family's influence and impact on the entertainment industry.\n\nOverall, Otto Preminger's professional scope and career details showcase his versatility, influence, and significant contributions to the film industry. His filmography, role diversity, awards, and influence have left a lasting legacy in the world of cinema.",
+            "Otto Preminger had a diverse and influential career in the film industry, with roles as a director, producer, and writer. His filmography includes notable works in various genres, showcasing his versatility and ability to work with different actors and actresses. He had a significant influence in the industry, particularly in the film noir genre, and received numerous awards and nominations for his work. His collaborations with various individuals and his ability to adapt to different styles of filmmaking further demonstrate his impact. Additionally, his family's involvement in the industry through his brother, Ingwald \"Ingo\" Preminger, highlights the family's influence and impact on the entertainment industry. Overall, Otto Preminger's career details and filmography reflect his scope of profession, influence, and lasting legacy in the world of cinema.",
+            "Based on the analyzed data, both Edward Dmytryk and Otto Preminger had diverse and influential careers in the film industry, with a significant scope of profession and lasting legacies. Dmytryk made his mark primarily as a director, showcasing his versatility across different genres and time periods, while Preminger had roles as a director, producer, and writer, demonstrating his ability to work with various individuals and adapt to different styles of filmmaking.\n\nBoth directors had a significant influence in the industry, particularly in the film noir genre, and received recognition for their work through awards and nominations. Dmytryk's Oscar nomination for Best Director for \"Crossfire\" and Preminger's collaborations with various individuals highlight their impact and influence in the industry.\n\nIn terms of scope of profession, both directors had diverse and impactful careers, with Dmytryk's focus on \"films noir\" and ability to work across different genres, and Preminger's versatility as a director, producer, and writer. Additionally, Preminger's family's involvement in the industry further highlights the family's influence and impact on the entertainment industry.\n\nOverall, based on the analyzed data, it is difficult to determine who has more scope of profession between Edward Dmytryk and Otto Preminger, as both had significant and influential careers in the film industry."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the career and professional accomplishments of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the career and professional accomplishments of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the scope of profession based on Edward Dmytryk's career information, considering factors like diversity of roles, types of projects, and impact.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the scope of profession based on Otto Preminger's career information, considering factors like diversity of roles, types of projects, and impact.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the professional scope analyses of Edward Dmytryk and Otto Preminger to determine who has a broader scope of profession.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins with retrieving comprehensive career information for both Edward Dmytryk and Otto Preminger. This is essential as it forms the foundation for further analysis of their professional scope. Steps 1 and 2 are carried out in parallel since they are information-gathering steps about different individuals. \n\nFollowing this, the reasoning nodes (3 and 4) involve an analysis of each director's career to assess the scope, taking into account various factors such as the range and diversity of their works, the different roles they may have taken on (e.g., director, producer, writer), and the overall impact and recognition in the film industry.\n\nFinally, node 5 synthesizes the analyses from nodes 3 and 4, comparing the two to establish which figure has a wider scope of profession. This node provides the final answer to the original question, based on a comprehensive evaluation of both directors' careers."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Cornered (1945 film)\nCornered is a 1945 film noir starring Dick Powell and directed by Edward Dmytryk. This is the second teaming of Powell and Dmytryk (after \"Murder, My Sweet\"). Many scenes shot by cinematographer Harry J. Wild and Dmytryk stand out as classic film noir. The screenplay was written by John Paxton with uncredited help from Ben Hecht.",
+            "Edward Dmytryk\nEdward Dmytryk (September 4, 1908 \u2013 July 1, 1999) was a Canadian-born American film director. He was known for his 1940s \"films noir\" and received an Oscar nomination for Best Director for \"Crossfire\" (1947).",
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Steve Phillips (footballer, born 1954)\nSteven Edward Phillips (born 4 August 1954) is an English former professional footballer who had a long career as a forward for a number of teams in the Football League in the 1970s and 1980s. He scored 200 goals from 562 league appearances.",
+            "Edward Schulmerich\nEdward C. Schulmerich (1863 \u2013 1937) was a businessman and politician in the U.S. state of Oregon. A native of California, his German family moved to Oregon when he was a boy, settling near Hillsboro. There he worked in the banking industry and other professional pursuits. A Republican, he served in both houses of the Oregon Legislative Assembly and prior to that on the city council of Hillsboro. His former home, the Edward Schulmerich House, is listed on the National Register of Historic Places.",
+            "Alfred Shrubb\nAlfred \"Alfie\" Shrubb (12 December 1879 \u2013 23 April 1964) was an English middle and long distance runner. During an amateur career lasting from 1899 to 1905 (when he was barred from amateur competition for receiving payment for running) and a professional career from 1905 to 1912 he won over 1,000 races of about 1,800 started. At the peak of his career he was virtually unbeatable at distances up to 15 miles, often racing against relay teams so that the race would be more competitive. On 4 November 1904, at Ibrox Park, Glasgow, he broke the one hour run record as well as all amateur records from six to eleven miles, and all professional records from eight to eleven miles, running eleven miles, 1137 yards (18.742\u00a0km) in one hour. Altogether he set 28 world records.",
+            "Chris Senn (skateboarder)\nChris Senn (born December 11, 1972 in Costa Mesa, California, grew up in Grass Valley, California) is a professional skateboarder, known for his aggressive and spontaneous style. Current and past sponsors include Powell Skateboards Channel one Adrenalin Skateboards Emerica, Ace, Type-S, Paradox, Kamanu Charters and Toy Machine Skateboards. Notable accomplishments include three X-Games gold medals being ranked 2nd in the World in 2002 behind Rodil de Araujo, Jr, being voted Thrasher Skateboard Magazine Skater Of the Year in 1995 and being a two-time world champion.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a Canadian-born American film director known for his work in the 1940s \"films noir.\" He received an Oscar nomination for Best Director for \"Crossfire\" (1947). Some of his notable films include \"Cornered\" (1945), \"The Hawk\" (1935), and \"The Human Factor\" (1975). \"Cornered\" is a classic film noir starring Dick Powell and directed by Dmytryk, and \"The Hawk\" was his debut film as a director. \"The Human Factor\" was his final film. Dmytryk's work in film has left a lasting impact on the industry, particularly in the film noir genre.",
+            "Edward Dmytryk's career as a film director demonstrates a diverse range of roles and projects, showcasing his ability to work across different genres and time periods. His early work in film noir, such as \"Cornered\" and \"Crossfire,\" highlights his impact on the development of this genre. Additionally, his debut film \"The Hawk\" and his final film \"The Human Factor\" demonstrate his versatility and longevity in the industry. Dmytryk's impact can be seen in his lasting contributions to the film noir genre and his ability to adapt and thrive in the ever-changing landscape of filmmaking. Overall, his career exemplifies the scope of the profession, showcasing the potential for directors to have a lasting impact through diverse roles, types of projects, and their overall influence on the industry.",
+            "Otto Preminger was an Austrian-American film director, producer, and actor. He is known for his work in the film industry, including directing films such as \"My Heidelberg, I Can Not Forget You\" in 1927. He also had a successful career in the entertainment industry, with accomplishments such as directing and producing the film \"Can You Ever Forgive Me?\" which is an upcoming biographical comedy-drama film. Additionally, he had a successful career in the music industry, contributing to the rock anthem \"(You Can Still) Rock in America\" by Night Ranger. Overall, Otto Preminger had a diverse and accomplished career in various aspects of the arts and entertainment industry.",
+            "Otto Preminger's career demonstrates a wide scope of profession within the arts and entertainment industry. As a film director, producer, and actor, he worked on a variety of projects, including \"My Heidelberg, I Can Not Forget You\" in 1927 and the upcoming biographical comedy-drama film \"Can You Ever Forgive Me?\". His impact is evident in his successful career, with contributions to both the film and music industries. This showcases the diversity of roles and types of projects he was involved in, highlighting the breadth of his profession. Overall, Otto Preminger's career exemplifies the multifaceted nature of the arts and entertainment industry, with the ability to make an impact in various creative fields.",
+            "Based on the professional scope analyses of Edward Dmytryk and Otto Preminger, it can be determined that Otto Preminger has a broader scope of profession. While both directors have had diverse careers in the film industry, Preminger's involvement as a director, producer, and actor, as well as his contributions to both film and music industries, showcases a wider range of roles and projects. Additionally, his work in different creative fields highlights the multifaceted nature of his profession, demonstrating a broader scope compared to Dmytryk's primarily directorial career. Therefore, Otto Preminger's career exemplifies a broader scope of profession within the arts and entertainment industry."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the professions and contributions of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the professions and contributions of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze Edward Dmytryk's retrieved information to identify the scope and variety of his professions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze Otto Preminger's retrieved information to identify the scope and variety of his professions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the scope of professions of Edward Dmytryk and Otto Preminger to determine who has more scope in their professions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by retrieving detailed information on the professions and contributions of Edward Dmytryk and Otto Preminger (nodes 1 and 2). Next, it analyzes the retrieved information separately to evaluate the variety and scope of each individual's professional life (nodes 3 and 4). Finally, it compares the findings to determine who has a broader range of professions, providing the answer in node 5."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Shall We Gather at the River (Falling Skies)\n\"Shall We Gather at the River\" is the second episode of the second season of the American television drama series \"Falling Skies\", and the 12th overall episode of the series. It originally aired on TNT in the United States on June 17, 2012 as a two-hour season premiere with the first episode of the season. It was written by Bradley Thompson & David Weddle and directed by Greg Beeman.",
+            "Edward Snyder (cinematographer)\nEdward Snyder, also known as Edward J. Snyder (1895 \u2013 July 10, 1982) was an American cameraman, cinematographer (director of photography), and visual effects/special effects artist. Born in New York City in 1895, Snyder would break into the film industry as the Director of Photography on the 1926 silent film, \"The Fighting Marine\", which featured the only screen performance by boxing heavyweight champion, Gene Tunney. He would be one of the plethora of talented cameramen to work on the Howard Hughes' 1930 aerial classic, \"Hell's Angels\", along with such other notable cameramen and future directors of photography, Paul Ivano, Henry Cronjager and Ernest Laszlo. But it was as special effects artist that he would have his greatest success, working on such classic films as Otto Preminger's \"Laura\"; George Cukor's \"Winged Victory\"; \"The Keys of the Kingdom\", starring Gregory Peck; Elia Kazan's A Tree Grows in Brooklyn; Anna and the King of Siam, starring Irene Dunne and Rex Harrison; and 1948's Deep Waters, for which he was nominated for an Academy Award (losing to the special effects team of Portrait of Jennie). Snyder died in 1982.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a prominent American film director and producer. He is best known for his work on films such as \"Can You Ever Forgive Me?\" and \"My Heidelberg, I Can Not Forget You\". Dmytryk also made significant contributions to the rock music industry, as he directed the music video for the song \"(You Can Still) Rock in America\" by Night Ranger. Additionally, he was involved in the South Korean cooking-variety program \"Please Take Care of My Refrigerator\". Dmytryk's diverse contributions also extended to the field of pottery, as he likely had knowledge of pottery fracture and its causes. His impact on the entertainment industry is evident through his involvement in various films, music videos, and television programs.",
+            "Edward Dmytryk had a diverse range of professions, including film director, producer, music video director, and television program contributor. He made significant contributions to the entertainment industry through his work on films, music videos, and television programs. Additionally, his potential knowledge of pottery fracture suggests a possible involvement in the field of pottery. Overall, Dmytryk's scope of professions encompassed various aspects of the entertainment and creative industries.",
+            "Otto Preminger was an Austrian-American film director, producer, and actor. He was known for his contributions to the film industry, including directing classic films such as \"Laura\" and \"Anatomy of a Murder\". He was also known for his innovative and controversial approach to filmmaking, tackling taboo subjects and pushing the boundaries of censorship in Hollywood. Preminger's work had a significant impact on the film industry and he is considered a pioneering figure in American cinema.",
+            "Otto Preminger's professions included film director, producer, and actor. He was known for his innovative and controversial approach to filmmaking, as well as his contributions to the film industry. His work had a significant impact on American cinema, making him a pioneering figure in the industry.",
+            "Based on the scope of their professions, Edward Dmytryk has a wider range of professions compared to Otto Preminger. Dmytryk's professions include film director, producer, music video director, television program contributor, and potentially pottery fracture, showcasing his involvement in various aspects of the entertainment and creative industries. On the other hand, Preminger's professions are limited to film director, producer, and actor, focusing primarily on the filmmaking industry. Therefore, Dmytryk has a broader scope in his professions compared to Preminger."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the profession of Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the profession of Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the range of work or projects associated with Edward Dmytryk\u2019s profession. Identify if he was involved in other fields as well.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the range of work or projects associated with Otto Preminger\u2019s profession. Identify if he was involved in other fields as well.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the range of professions or scope of work between Edward Dmytryk and Otto Preminger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by identifying the professions of both Edward Dmytryk and Otto Preminger (nodes 1 and 2). The next steps (nodes 3 and 4) involve exploring the range of each individual's work within their profession and any additional fields they may have been involved in. Finally, node 5 synthesizes this information to compare the diversity or scope of professions, determining who has more scope in their professional career."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Otto Preminger\nOtto Ludwig Preminger ( , ] ; 5 December 1905 \u2013 23 April 1986) was an American theatre and film director, originally from Austria-Hungary.",
+            "Ingo Preminger\nIngwald \"Ingo\" Preminger (25 February 1911 in Czernowitz, Austria-Hungary (now Chernivtsi, Ukraine) \u2013 7 June 2006 in Pacific Palisades, California) was a film producer. He was also the literary agent for several writers, including Dalton Trumbo and Ring Lardner Jr., both of whom were blacklisted in the McCarthy era. He was brother of actor-director-producer Otto Preminger.",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Edward Dmytryk\nEdward Dmytryk (September 4, 1908 \u2013 July 1, 1999) was a Canadian-born American film director. He was known for his 1940s \"films noir\" and received an Oscar nomination for Best Director for \"Crossfire\" (1947).",
+            "Edward F. Cline\nEdward Francis Cline (November 4, 1891 \u2013 May 22, 1961) was an American screenwriter, actor, writer and director best known for his work with comedians W. C. Fields and Buster Keaton. He was born in Kenosha, Wisconsin and died in Hollywood, California.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Cornered (1945 film)\nCornered is a 1945 film noir starring Dick Powell and directed by Edward Dmytryk. This is the second teaming of Powell and Dmytryk (after \"Murder, My Sweet\"). Many scenes shot by cinematographer Harry J. Wild and Dmytryk stand out as classic film noir. The screenplay was written by John Paxton with uncredited help from Ben Hecht.",
+            "Rosebud (film)\nRosebud is a 1975 film directed by Otto Preminger, and starring Peter O'Toole, Richard Attenborough, and Peter Lawford. The script was by Otto's son, Erik Lee Preminger, based on the novel by Joan Hemingway and . Originally the film was set to star Robert Mitchum, but he left after disagreements with Preminger. Kim Cattrall made her film d\u00e9but as a teenager. Barbara Emerson, who had been cast as one of the girls, was replaced during production.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today.",
+            "The Hawk (1935 film)\nThe Hawk is a 1935 American Western film directed by Edward Dmytryk. It was Dmytryk's debut film as a director.",
+            "Fallen Angel (1945 film)\nFallen Angel is a 1945 black-and-white film noir directed by Otto Preminger, with cinematography by Joseph LaShelle, who had also worked with Preminger on \"Laura\" a year before. The film features Alice Faye, Dana Andrews, Linda Darnell, and Charles Bickford. It was the last film Faye made as a major Hollywood star, and she did not make another film until \"State Fair\" (1962).",
+            "The &quot;Human&quot; Factor (1975 film)\nThe Human Factor is a 1975 drama film directed by Edward Dmytryk and starring George Kennedy and John Mills. It was Dmytryk's final film.",
+            "Edward Lachman\nEdward Lachman, A.S.C. (born March 31, 1948) is an American cinematographer and director. Lachman is mostly associated with the American independent film movement, and has served as director of photography on films by Todd Haynes (including \"Far From Heaven\" in 2002, which earned Lachman an Academy Award nomination), Ulrich Seidl, Wim Wenders, Steven Soderbergh and Paul Schrader. His other work includes Werner Herzog's \"La Soufri\u00e8re\" (1977), \"Desperately Seeking Susan\" (1985), Sofia Coppola's directorial debut, \"The Virgin Suicides\" (1999), Robert Altman's last picture \"A Prairie Home Companion\" (2006), and Todd Solondz's \"Life During Wartime\" (2009). He is a member of the American Society of Cinematographers.",
+            "Edward Snyder (cinematographer)\nEdward Snyder, also known as Edward J. Snyder (1895 \u2013 July 10, 1982) was an American cameraman, cinematographer (director of photography), and visual effects/special effects artist. Born in New York City in 1895, Snyder would break into the film industry as the Director of Photography on the 1926 silent film, \"The Fighting Marine\", which featured the only screen performance by boxing heavyweight champion, Gene Tunney. He would be one of the plethora of talented cameramen to work on the Howard Hughes' 1930 aerial classic, \"Hell's Angels\", along with such other notable cameramen and future directors of photography, Paul Ivano, Henry Cronjager and Ernest Laszlo. But it was as special effects artist that he would have his greatest success, working on such classic films as Otto Preminger's \"Laura\"; George Cukor's \"Winged Victory\"; \"The Keys of the Kingdom\", starring Gregory Peck; Elia Kazan's A Tree Grows in Brooklyn; Anna and the King of Siam, starring Irene Dunne and Rex Harrison; and 1948's Deep Waters, for which he was nominated for an Academy Award (losing to the special effects team of Portrait of Jennie). Snyder died in 1982.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "The Moon Is Blue\nThe Moon Is Blue is a 1953 American romantic comedy film produced and directed by Otto Preminger and starring William Holden, David Niven, and Maggie McNamara. Written by F. Hugh Herbert and based on his 1951 play of the same title, the film is about a young woman who meets an architect on the observation deck of the Empire State Building and quickly turns his life upside down. Herbert's play had also been a huge success in Germany, and Preminger decided to film English- and German-language versions simultaneously, using the same sets but different casts. The German film version is \"Die Jungfrau auf dem Dach\".",
+            "Fitzsimmons Range\nThe Fitzsimmons Range is a small mountain range on the northwestern edge of the Garibaldi Ranges in southwestern British Columbia, Canada, located between the valleys of Cheakamus Lake (SW) and Fitzsimmons Creek (NE). Its most famous summit is Whistler Mountain, which overlooks the resort town of Whistler and is one of the two mountains forming the Whistler Blackcomb ski resort. Most of the range is within Garibaldi Provincial Park, while its northeastern extremity is part of the resort municipality, and of the lands associated with the ski resort operation. Other summits in the range include Oboe Summit, Piccolo Summit and Flute Summit, which are hillocks along the ridge running southeast from Whistler Mountain and were named in association with the renaming of Whistler. Beyond them is Singing Pass and Mount Fitzsimmons 2603\u00a0m (8540\u00a0ft) which is at the opposite end of the range from Whistler Mountain and the location of Fitzsimmons Glacier, which is the source of Fitzsimmons Creek.",
+            "Fictional portrayals of psychopaths\nFictional portrayals of psychopaths, or sociopaths, are some of the most notorious in film and literature but may only vaguely or partly relate to the concept of psychopathy, which is itself used with varying definitions by mental health professionals, criminologists and others. The character may be identified as a diagnosed/assessed psychopath or sociopath within the fictional work itself, or by its creator when discussing their intentions with the work, which might be distinguished from opinions of audiences or critics based only on a character appearing to show traits or behaviors associated with an undefined popular stereotype of psychopathy.",
+            "Nurse stereotypes\nA stereotype is a generalized idea or image about a particular person or thing that is often oversimplified and offensive. Stereotypes are victim of prejudice when negative portrayals of a group are untrue of individual members. Nursing has been stereotyped throughout the history of the profession. A common misconception is that all nurses are female; this has led to the stereotype of male nurses as effeminate. These generalized ideas of the nursing profession have formed a skewed image of nurses in the media. The image of a nurse projected by the media is typically of a young white single female being over-sexualized as well as diminished intellectually; this idea is then portrayed in get-well cards, television shows and novels. The over-sexualized nurse is commonly referred to as a naughty nurse and is shown as a sex symbol or nymphomaniac. Along with these common stereotypes, studies have identified several other popular images used in media such as handmaiden, angel, torturer, homosexual male, alcoholic, buffoon and woman in white. Common stereotypes of nursing and portrayal of these misconceptions have fueled a discussion on the effects they have on the profession, harmful or good.",
+            "Otto F. Walter\nOtto F. Walter (5 June 1928 born as \"Otto Friedrich Walter\" \u2013 24 September 1994) was a Swiss publisher (Walter Verlag), author and novelist, which is well known in the German language countries. Otto Friedrich Walter was the younger brother of Silja Walter, a Benedictine nun in the Fahr Abbey and also a popular writer.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Otto Mann\nOtto Mann is a fictional character on the animated TV series \"The Simpsons\", voiced by Harry Shearer. He is the school bus driver for Springfield Elementary School.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a film director. He was known for his work in \"films noir\" and received an Oscar nomination for Best Director for \"Crossfire\" (1947). He directed several films, including \"Cornered\" (1945) and \"The Hawk\" (1935). His final film was \"The Human Factor\" (1975).",
+            "Edward Dmytryk was primarily involved in the film industry as a director, with his work including Western and drama films such as \"The Hawk\" (1935) and \"The Human Factor\" (1975). He was not involved in other fields.",
+            "Otto Preminger was a renowned American theatre and film director.",
+            "Otto Preminger was primarily involved in the film industry as a director, producer, and actor. He was not involved in other fields such as mining, law, construction, or mountain range management.",
+            "Based on the upstream tasks, it can be concluded that Edward Dmytryk's range of professions or scope of work was primarily focused on the film industry as a director, with a specific focus on Western and drama films. On the other hand, Otto Preminger had a broader range of professions within the film industry, including director, producer, and actor. Both individuals were primarily involved in the film industry, but Otto Preminger had a wider scope of work within that field compared to Edward Dmytryk."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who has more scope of profession, Edward Dmytryk or Otto Preminger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of professions for Edward Dmytryk.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of professions for Otto Preminger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the number of different professions Edward Dmytryk has.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the number of different professions Otto Preminger has.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the number of professions between Edward Dmytryk and Otto Preminger to determine who has more scope of profession.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first retrieve the professional activities of Edward Dmytryk and Otto Preminger separately. Once this information is gathered, reasoning nodes calculate the number of different professions for each individual. The final step compares these numbers to determine who has a broader range of professional activities."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Otto Preminger\nOtto Ludwig Preminger ( , ] ; 5 December 1905 \u2013 23 April 1986) was an American theatre and film director, originally from Austria-Hungary.",
+            "Ingo Preminger\nIngwald \"Ingo\" Preminger (25 February 1911 in Czernowitz, Austria-Hungary (now Chernivtsi, Ukraine) \u2013 7 June 2006 in Pacific Palisades, California) was a film producer. He was also the literary agent for several writers, including Dalton Trumbo and Ring Lardner Jr., both of whom were blacklisted in the McCarthy era. He was brother of actor-director-producer Otto Preminger.",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "Rosebud (film)\nRosebud is a 1975 film directed by Otto Preminger, and starring Peter O'Toole, Richard Attenborough, and Peter Lawford. The script was by Otto's son, Erik Lee Preminger, based on the novel by Joan Hemingway and . Originally the film was set to star Robert Mitchum, but he left after disagreements with Preminger. Kim Cattrall made her film d\u00e9but as a teenager. Barbara Emerson, who had been cast as one of the girls, was replaced during production.",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "Fallen Angel (1945 film)\nFallen Angel is a 1945 black-and-white film noir directed by Otto Preminger, with cinematography by Joseph LaShelle, who had also worked with Preminger on \"Laura\" a year before. The film features Alice Faye, Dana Andrews, Linda Darnell, and Charles Bickford. It was the last film Faye made as a major Hollywood star, and she did not make another film until \"State Fair\" (1962).",
+            "The Moon Is Blue\nThe Moon Is Blue is a 1953 American romantic comedy film produced and directed by Otto Preminger and starring William Holden, David Niven, and Maggie McNamara. Written by F. Hugh Herbert and based on his 1951 play of the same title, the film is about a young woman who meets an architect on the observation deck of the Empire State Building and quickly turns his life upside down. Herbert's play had also been a huge success in Germany, and Preminger decided to film English- and German-language versions simultaneously, using the same sets but different casts. The German film version is \"Die Jungfrau auf dem Dach\".",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Take Me Home (One Direction album)\nTake Me Home is the second studio album by British-Irish group One Direction, released on 9 November 2012 by Syco Music and Columbia Records. As a follow-up to One Direction's internationally successful debut album \"Up All Night\" (2011), \"Take Me Home\" was written in groups and has an average of just under five songwriters per track. Largely recorded and composed in Sweden during 2012, Savan Kotecha, Rami Yacoub and Carl Falk, who composed One Direction's hits, \"What Makes You Beautiful\" and \"One Thing\", spent six months in Stockholm developing songs for the album, and were able to shape melodies around the members' tones.",
+            "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\""
+        ],
+        "thoughts": [
+            "Edward Dmytryk was a film director, film editor, and film producer.",
+            "Edward Dmytryk has three different professions: film director, film editor, and film producer.",
+            "Professions for Otto Preminger:\n1. Theatre director\n2. Film director",
+            "Otto Preminger has two different professions, which are theatre director and film director.",
+            "Edward Dmytryk has a wider scope of professions compared to Otto Preminger, as he has three different professions (film director, film editor, and film producer) while Otto Preminger has two (theatre director and film director). Therefore, Edward Dmytryk has a greater scope of profession."
+        ],
+        "is_best": false
+    }
+]

@@ -1,0 +1,573 @@
+[
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve population details for Wilmington, North Carolina.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if the population 112,067 corresponds with the provided detail for Wilmington.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with retrieving the location of the University of North Carolina at Wilmington, as that is the central piece of information required to answer the question. Simultaneously, we need to verify if the population given (112,067) corresponds to Wilmington, which involves retrieving the current population details for Wilmington and comparing them against the provided number. The final node ensures the population detail is matched, but the main focus is on identifying the location of the university."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "Episcopal Diocese of East Carolina\nThe Episcopal Diocese of East Carolina was formed on October 9, 1883, by action of the General Convention. It consists of the congregations of the Episcopal Church in the eastern portion of the state of North Carolina and forms part of Province 4 of the Episcopal Church in the United States of America. Major cities include Wilmington, Fayetteville, New Bern, and Greenville. Originally its headquarters were located in Wilmington, but in 1983 a new diocesan house was built in Kinston, North Carolina, in order to be located more centrally in the diocese's territory.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Lincolnton, North Carolina\nLincolnton is a small city in Lincoln County, North Carolina, United States, within the Charlotte metropolitan area. The population was 10,683 at the 2010 census. Lincolnton is northwest of Charlotte, on the South Fork of the Catawba River. The junction of State Highway 27 and U.S. Route 321 is located nearby. The city is the county seat of Lincoln County, and is the only legally incorporated municipality wholly within the rural county."
+        ],
+        "thoughts": [
+            "The population of Wilmington, North Carolina is 112,067, making it the 8th largest city in the state according to the 2010 Census. It is the principal city of the Wilmington Metropolitan Statistical Area, which has a population of 263,429 as of the 2012 Census Estimate. The city is also home to the University of North Carolina at Wilmington and was the location of the Wilmington Waves, a former minor league baseball team.",
+            "The population of 112,067 for Wilmington, North Carolina corresponds with the provided detail."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Locate the city with the population of 112,067 where the University of North Carolina at Wilmington is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the state where the University of North Carolina at Wilmington is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine results to determine the full location of the University of North Carolina at Wilmington, including the city and state.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task of finding the location of the University of North Carolina at Wilmington and includes retrieval steps for both the city and state. Node 1 retrieves and reasons about the city with a specific population, while Node 2 retrieves and reasons about the state location. Node 3 synthesizes these pieces of information to provide a complete answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Episcopal Diocese of East Carolina\nThe Episcopal Diocese of East Carolina was formed on October 9, 1883, by action of the General Convention. It consists of the congregations of the Episcopal Church in the eastern portion of the state of North Carolina and forms part of Province 4 of the Episcopal Church in the United States of America. Major cities include Wilmington, Fayetteville, New Bern, and Greenville. Originally its headquarters were located in Wilmington, but in 1983 a new diocesan house was built in Kinston, North Carolina, in order to be located more centrally in the diocese's territory.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014."
+        ],
+        "thoughts": [
+            "The city with the population of 112,067 where the University of North Carolina at Wilmington is located is Wilmington, North Carolina.",
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina.",
+            "The University of North Carolina at Wilmington is located in the city of Wilmington, in the state of North Carolina."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the location (city and state) of the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Check if the population number 112,067 corresponds to a city, possibly linked to the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the location of the University (from Node 1) and the population fact (from Node 2) to determine the city where the University is located.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is broken down into finding the specific city and state where the University of North Carolina at Wilmington is based. The population value may provide a clue, so verifying if it corresponds with the university's city helps cement the location. The final step synthesizes these findings to ensure the location matches both the university's address and the population description."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina.",
+            "The population number 112,067 corresponds to the city of Wilmington, North Carolina. This city is also linked to the University of North Carolina at Wilmington, as it is the principal city of the Wilmington Metropolitan Statistical Area, which includes New Hanover and Pender counties in southeastern North Carolina, where the university is located. Additionally, the Isaac Bear Early College High School is situated on the UNCW campus, and the Wilmington Waves, a minor league baseball team, played their home games at Brooks Field on the campus of UNCW. Therefore, the population number provided is indeed associated with the city of Wilmington, North Carolina, and its connection to the University of North Carolina at Wilmington.",
+            "The University of North Carolina at Wilmington is located in the city of Wilmington, North Carolina, which has a population of 112,067."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the current population of Wilmington, NC to verify it is 112,067.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the data about the University of North Carolina at Wilmington's location with Wilmington's population to ensure consistency and answer the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph consists of three nodes. The first node retrieves and identifies the location of the University of North Carolina at Wilmington, which is necessary to answer the question. The second node retrieves the population data for Wilmington, NC, to verify the given population of 112,067; this helps to ensure the location's identity. The final node combines this information to provide a coherent answer by synthesizing the location and population data, affirming the university's location is in Wilmington, NC, and verifying the specific city population."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "James W. Hutchins\nJames William Hutchins (March 26, 1929 \u2013 March 16, 1984) was convicted of the murders of three NC law enforcement officers. The incident was the largest one-day homicide of law enforcement officers in North Carolina history. The incident inspired a motion picture and also promoted changes in law enforcement protocols statewide for interagency reporting of officer murders, radio cross-communication between local agencies and the NC State Highway Patrol, which dispatches for most NC state law enforcement agencies and training protocols for response to domestic disturbance incidents. The murdered officers were: Rutherford County NC sheriff\u2019s deputies Captain Roy Huskey and Deputy Owen Messersmith and NC State Highway Patrol Trooper Robert L. \"Pete\" Peterson. Hutchins was executed at the age of 54 by the State North Carolina at Central Prison in Raleigh, North Carolina by lethal injection. He became the first person to be executed in North Carolina since 1977 when the death penalty was reinstated.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina, United States. It is situated on the western edge of the city, near North Carolina Highway 132. The campus is also home to Isaac Bear Early College High School. Wilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina. It is the principal city of the Wilmington Metropolitan Statistical Area. The University of North Carolina at Wilmington is also home to Brooks Field, where the Wilmington Waves, a former minor league baseball team, played their home games.",
+            "The current population of Wilmington, NC is 112,067, according to the 2010 Census. This information is consistent with the provided data.",
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina, United States, which has a population of 112,067 according to the 2010 Census."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the University of North Carolina at Wilmington, including its location and basic details.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the population of Wilmington, North Carolina.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify the population of the location identified with the University of North Carolina at Wilmington to see if it matches 112,067.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Conclude where the University of North Carolina at Wilmington is located, assuming the population matches Wilmington, NC, with 112,067 people.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task by first retrieving basic details about the University of North Carolina at Wilmington, specifically focusing on its location (Node 1). Since one piece of information provided in the question is the population figure, a separate retrieval step (Node 2) is conducted to gather population details for Wilmington. A reasoning step (Node 3) then checks if the population aligns with 112,067, confirming the identification of the city as Wilmington, North Carolina. Finally, Node 4 synthesizes the information to confirm the university's location based on these checks, ensuring coherence in the reasoning with the population data."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Episcopal Diocese of East Carolina\nThe Episcopal Diocese of East Carolina was formed on October 9, 1883, by action of the General Convention. It consists of the congregations of the Episcopal Church in the eastern portion of the state of North Carolina and forms part of Province 4 of the Episcopal Church in the United States of America. Major cities include Wilmington, Fayetteville, New Bern, and Greenville. Originally its headquarters were located in Wilmington, but in 1983 a new diocesan house was built in Kinston, North Carolina, in order to be located more centrally in the diocese's territory.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington (UNCW) is a public research university located in Wilmington, North Carolina. It was founded in 1947 and offers a wide range of undergraduate and graduate programs. UNCW is known for its strong emphasis on marine science and its proximity to the Atlantic Ocean. The university has a beautiful campus and is known for its commitment to sustainability and environmental conservation.",
+            "The population of Wilmington, North Carolina is 112,067 according to the 2010 Census, making it the 8th largest city in the state. The city is also part of the Wilmington Metropolitan Statistical Area, which has a population of 263,429 as of the 2012 Census Estimate. Additionally, Wilmington is home to the University of North Carolina at Wilmington, which enrolls 15,740 undergraduate, graduate, and doctoral students each year. The city also has historical significance, as it was the location of the state's only daily African-American newspaper in the late 19th century, and was majority black at the time. Furthermore, Wilmington is served by North Carolina Highway 132 and is located 87 miles northwest of Goldsboro, North Carolina. The city was also home to a minor league baseball team, the Wilmington Waves, and is part of the Episcopal Diocese of East Carolina. Additionally, North Carolina Wesleyan College offers evening courses at a satellite location in Wilmington.",
+            "The population of Wilmington, North Carolina is indeed 112,067 according to the 2010 Census, which matches the provided population figure of 112,067. Therefore, the population of the location identified with the University of North Carolina at Wilmington does match 112,067.",
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina, with a population of 112,067 people."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of the University of North Carolina at Wilmington (UNCW).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the population data for Wilmington, North Carolina to verify if it matches 112,067 or find out the related area with that population figure.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify that the University of North Carolina at Wilmington is located in Wilmington, North Carolina, which should match the specific population data retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by identifying the location of UNCW, presumed to be in Wilmington, North Carolina. Simultaneously, it verifies the population of Wilmington. The final step ensures that these two pieces of information align, confirming the exact location of UNCW with respect to the population data provided."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Episcopal Diocese of East Carolina\nThe Episcopal Diocese of East Carolina was formed on October 9, 1883, by action of the General Convention. It consists of the congregations of the Episcopal Church in the eastern portion of the state of North Carolina and forms part of Province 4 of the Episcopal Church in the United States of America. Major cities include Wilmington, Fayetteville, New Bern, and Greenville. Originally its headquarters were located in Wilmington, but in 1983 a new diocesan house was built in Kinston, North Carolina, in order to be located more centrally in the diocese's territory."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington (UNCW) is located in Wilmington, North Carolina, United States. It is situated on North Carolina Highway 132, just to the east of downtown Wilmington. The campus is also home to the Isaac Bear Early College High School and was the former home of the minor league baseball team, the Wilmington Waves. Wilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina. It is the principal city of the Wilmington Metropolitan Statistical Area. The city is also notable for its historical African-American newspaper, the \"Daily Record,\" which was published by Alexander Manly in the late 19th century. Additionally, Wilmington is home to satellite locations of North Carolina Wesleyan College.",
+            "The population data for Wilmington, North Carolina matches 112,067, according to the 2010 Census. This makes it the 8th largest city in the state. Additionally, the Wilmington Metropolitan Statistical Area, which includes New Hanover and Pender counties, has a population of 263,429 as of the 2012 Census Estimate. Therefore, the population figure of 112,067 is accurate for Wilmington, North Carolina.",
+            "Based on the information from the upstream tasks, it can be verified that the University of North Carolina at Wilmington is indeed located in Wilmington, North Carolina. The specific population data retrieved also matches the population of Wilmington, North Carolina, which is 112,067 according to the 2010 Census. Therefore, the university is located in the city with the specified population data."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location of the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify that the population 112,067 is related to the location found in Node 1 to confirm whether it refers to the city where the university is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph consists of two key nodes: Node 1 retrieves the primary location of the University of North Carolina at Wilmington. Then, Node 2 verifies if the population number refers to the location found in Node 1 by checking if it corresponds to the population of the city where the university is situated. This ensures that the population detail matches the contextual location accurately."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Episcopal Diocese of East Carolina\nThe Episcopal Diocese of East Carolina was formed on October 9, 1883, by action of the General Convention. It consists of the congregations of the Episcopal Church in the eastern portion of the state of North Carolina and forms part of Province 4 of the Episcopal Church in the United States of America. Major cities include Wilmington, Fayetteville, New Bern, and Greenville. Originally its headquarters were located in Wilmington, but in 1983 a new diocesan house was built in Kinston, North Carolina, in order to be located more centrally in the diocese's territory.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "Leland, North Carolina\nLeland is a town in Brunswick County, North Carolina, United States. The population was 13,527 at the 2010 census, up from 1,938 at the 2000 census. It is part of the Myrtle Beach Metropolitan Statistical Area. A number of movies, such as \"Maximum Overdrive\" (1986), \"Domestic Disturbance\" (2001), and \"We're the Millers\" (2013) have been shot in or around Leland.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina, United States. It is situated on North Carolina Highway 132, just to the east of downtown Wilmington and along the western edge of the city. The campus is also home to Isaac Bear Early College High School.",
+            "The population of 112,067 is related to the location found in Node 1, which is Wilmington, North Carolina. This confirms that the population refers to the city where the University of North Carolina at Wilmington is located."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location of the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information to verify the population 112,067 and determine if it refers to a city or other region.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Use the location of the University of North Carolina at Wilmington to determine which city or area it is situated in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Use the population data to identify the name of the city or region with a population of 112,067.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine information to confirm the location of the University of North Carolina at Wilmington and match it with the city or region having a population of 112,067.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph consists of five nodes: two retrieval nodes that gather information about the location of the university and the population data, and three reasoning nodes that synthesize this information to determine if they can be associated with the same location. First, we need to retrieve the location details of the University of North Carolina at Wilmington. Parallelly, we retrieve population information to see if it matches any known city, likely Wilmington, NC. Then, reasoning nodes match these findings to confirm if the university is located in the identified city or area with the corresponding population."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Muck (gambling)\nMuck in gambling has multiple meanings. In poker, it most often refers to the pile of discarded cards into which players may throw their folded hands, and into which the dealer may place burned cards. It may also refer to the action of throwing a hand into the muck. When a player is folding his hand (face down) without saying anything, in fact the hand is not folded until it reaches the muck (it can be taken back and used if the dealer did not take the hand yet). The practice of mucking cards when discarding helps to ensure that no other player can reliably determine which cards were in the folded hand. In poker, the term may also refer to the action that a player who has not folded may take; he can have his hand \"mucked\" if another player attempts to discard but one or more cards end up in the live players hand. This is why many players will place a chip or other object on their cards: it helps to prevent errant cards from entering their hand. Sometimes they are referred to as card covers, card guards or card protector.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "Traverse City, Michigan\nTraverse City ( or ) is a city in the U.S. state of Michigan. It is the county seat of Grand Traverse County, although a small portion extends into Leelanau County. It is the largest city in the 21-county Northern Michigan region. The population was 14,674 at the 2010 census, with 143,372 in the Traverse City micropolitan area.",
+            "Styria (Slovenia)\nStyria (Slovene: \"\u0160tajerska\" ), also Slovenian Styria (\"Slovenska \u0160tajerska\") or Lower Styria (\"Spodnja \u0160tajerska\"; German: \"Untersteiermark\" ), is a traditional region in northeastern Slovenia, comprising the southern third of the former Duchy of Styria. The population of Styria in its historical boundaries amounts to around 705,000 inhabitants, or 34.5% of the population of Slovenia. The largest city is Maribor.",
+            "Tongyeong\nTongyeong (] ) is a coastal city in South Gyeongsang Province, South Korea. In 2010, it had an area of 238.81\u00a0km and a population of 139,869 people. It is divided into 1 eup (town), 6 myeon (township) and 11 dong (neighborhood). Chungmu city and Tongyeong county were reunited in 1995, creating Tongyeong City as it is known today. It consists of Goseong Peninsula, Hansan Island, Mireuk Island and other islets. It was formerly known as Chungmu, after the posthumous name of Admiral Yi Sun-sin. The name Tongyeong means \"command post\" and is itself associated with Admiral Yi, as it refers to his principal base that was located on nearby Hansan Island.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Fatal accident reconstruction team\nIn certain local police departments in the United States, the Fatal Accident Reconstruction Team (F.A.R.T.) is a group of police officers dedicated to investigating motor vehicle accidents that result in death. These type of investigations can involve vehicle on vehicle, vehicle on fixed object or vehicle on pedestrian. The investigation of accidents with no survivors is of particular interest, because the detectives often have no eyewitnesses to give an account of the event. Thus the teams must rely on forensic evidence, such as tire skid marks, tire scuffmarks (yaw marks) or other tire marks to assist in determining what happened in the collision sequence. An accident with both survivors and fatalities is also of concern, because police cannot depend on the survivor(s) to accurately recount the accident. Survivors are often unconscious, incapacitated, or traumatized and thus unable to speak to police. Even if survivors are able to give a statement, their memory may not be perfect, or they may be lying to avoid charges such as vehicular homicide or vehicular manslaughter. In general, the teams try to determine the exact sequence of events that led to the accident, much like criminal detectives attempt to reconstruct crimes.",
+            "Corpus Christi, Texas\nThe city's population was estimated to be 320,434 in 2014, making it the eighth-most populous city in Texas. The Corpus Christi metropolitan area had an estimated population of 442,600. It is also the hub of the six-county Corpus Christi-Kingsville-Alice Combined Statistical Area, with a 2013 estimated population of 516,793. The Port of Corpus Christi is the fifth-largest in the United States. The region is served by the Corpus Christi International Airport."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina, United States. It is situated on North Carolina Highway 132, just to the east of downtown Wilmington and along the western edge of the city. The campus is also home to Isaac Bear Early College High School, which is located at 630 MacMillan Avenue.",
+            "The University of North Carolina at Wilmington is situated in the city of Wilmington, North Carolina.",
+            "The population of 112,067 refers to the city of Wilmington, North Carolina.",
+            "The city with a population of 112,067 is Wilmington, North Carolina.",
+            "The University of North Carolina at Wilmington is located in the city of Wilmington, North Carolina, which has a population of 112,067."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the location of the University of North Carolina at Wilmington (UNCW).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the population data for the city where the University of North Carolina at Wilmington is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the city's population matches 112,067.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "If the population matches, confirm the location; otherwise, re-evaluate the city details to ensure accuracy.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts with finding the location of the University of North Carolina at Wilmington, which is necessary because it sets the geographical focus of the question. After identifying the location, the next step is to substantiate this by checking the population of the city to determine whether it matches 112,067, which could further confirm the location's identity given the specific population figure. The graph structure allows for verifying the location based on population, providing a logical chain from identifying the university location to confirming city population statistics."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "Goldsboro, North Carolina\nGoldsboro is a city in Wayne County, North Carolina, United States. The population was 36,437 at the 2010 Census. It is the principal city of and is included in the Goldsboro, North Carolina Metropolitan Statistical Area. The nearby town of Waynesboro was founded in 1787 and Goldsboro was incorporated in 1847. It is the county seat of Wayne County. The city is situated in North Carolina's Coastal Plain and is bordered on the south by the Neuse River and the west by the Little River, about 43 miles southwest of Greenville and 55 miles southeast of Raleigh, the state capital and 87 miles northwest of Wilmington in Southeastern North Carolina. Goldsboro is best known as home to Seymour Johnson Air Force Base.",
+            "Episcopal Diocese of East Carolina\nThe Episcopal Diocese of East Carolina was formed on October 9, 1883, by action of the General Convention. It consists of the congregations of the Episcopal Church in the eastern portion of the state of North Carolina and forms part of Province 4 of the Episcopal Church in the United States of America. Major cities include Wilmington, Fayetteville, New Bern, and Greenville. Originally its headquarters were located in Wilmington, but in 1983 a new diocesan house was built in Kinston, North Carolina, in order to be located more centrally in the diocese's territory."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington (UNCW) is located in Wilmington, North Carolina, United States. It is situated on the western edge of downtown Wilmington, along North Carolina Highway 132. The campus is also home to Isaac Bear Early College High School.",
+            "The population of Wilmington, North Carolina, where the University of North Carolina at Wilmington is located, is 112,067 according to the 2010 Census.",
+            "The city's population matches 112,067 according to the 2010 Census.",
+            "The city's population matches 112,067 according to the 2010 Census. Therefore, the location is confirmed."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Where is the University of North Carolina at Wilmington, population 112,067 located?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of the University of North Carolina at Wilmington.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Locate the city with the population of 112,067.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Ensure that the city identified in Step 2 matches the city where the University of North Carolina at Wilmington is located.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Synthesize the final answer by confirming the city name as Wilmington, NC based on previous findings.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the question into several steps to determine the location of the University of North Carolina at Wilmington and how it relates to the population provided. The first step retrieves the location of the university. The second step identifies a city with a population of 112,067. The reasoning step ensures both pieces of information align, confirming Wilmington, NC, as the city that matches both criteria. Finally, the last node synthesizes this information to provide the answer."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "University of North Carolina at Wilmington\nThe University of North Carolina at Wilmington (UNCW), sometimes referred to as UNC Wilmington or affectionately as The Dub, is a public, co-educational university located in Wilmington, North Carolina, United States. UNCW enrolls 15,740 undergraduate, graduate and doctoral students each year as part of the 17-campus University of North Carolina System.",
+            "North Carolina Highway 132\nNorth Carolina Highway 132 (NC 132) is a North Carolina state highway entirely in New Hanover County. It travels from U.S. Route 421 (US 421) north of Carolina Beach through Wilmington to US 117/NC 133 just south of the main business district of Castle Hayne. The road runs just to the east of downtown Wilmington, and runs along the western edge of the University of North Carolina Wilmington.",
+            "Wilmington Waves\nThe Wilmington Waves were a minor league baseball team in Wilmington, North Carolina. They were a Low-A class team that played in the South Atlantic League, and were a farm team of the Los Angeles Dodgers for the franchise\u2019s only year in Wilmington. They played all of their home games at Brooks Field, on the campus of the University of North Carolina at Wilmington. However, because Brooks Field was not easy to spot on campus, attendance for the Waves' home games was substantially low. Because of this handicap, the Waves were given a limited amount of time to find a new stadium or build a new one. But the deadline was not met and, prior to the 2002 season, the Wilmington Waves were sold and moved to Albany, Georgia, where the franchise became the South Georgia Waves.",
+            "Wilmington, North Carolina\nWilmington is a port city and the county seat of New Hanover County in coastal southeastern North Carolina, United States. The population is 112,067; according to the 2010 Census it is the 8th largest city in the state. Wilmington is the principal city of the Wilmington Metropolitan Statistical Area, a metropolitan area that includes New Hanover and Pender counties in southeastern North Carolina, which has a population of 263,429 as of the 2012 Census Estimate.",
+            "Isaac Bear Early College High School\nIsaac Bear Early College High School, also called Isaac Bear, is a selective-enrollment school at 630 MacMillan Avenue, Wilmington, North Carolina. The premises are situated on UNCW campus and were founded in the auditorium of Annie H. Snipes Elementary school in the year 2006. New Hanover County Schools operates this school with the support of the University of North Carolina at Wilmington and the Gates Foundation. Students must apply to attend this school; no more than 100 submissions are accepted per year. As of the 2008-2009 school year, only 62/ 63 students were accepted. The program allows for students to work and earn up to 60 college credits, which, on average, are worth about $15,210. \"As a partner in the North Carolina University System and the North Carolina New Schools Project, Isaac Bear Early College High School provides an accelerated, college-ready education by cultivating an environment of mature scholarship and leadership.\"",
+            "Alexander Manly\nAlexander (or Alex) L. Manly (1866\u20131944) was notable as an African-American newspaper owner and editor in Wilmington, North Carolina in the late 19th century. With his brother Frank G. Manly as co-owner, he published the \"Daily Record (Wilmington, North Carolina)\", the state's only daily African-American newspaper and possibly the nation's only black-owned daily newspaper. At the time, the port of Wilmington had 10,000 residents and was the state's largest city; its population was majority black, with a rising middle class.",
+            "Wake Forest University\nWake Forest University is a private, independent, nonprofit, nonsectarian, coeducational research university in Winston-Salem, North Carolina, founded in 1834. The university received its name from its original location in Wake Forest, north of Raleigh, North Carolina, the state capital. The Reynolda Campus, the university's main campus, has been located north of downtown Winston-Salem since the university moved there in 1956. The Wake Forest Baptist Medical Center campus has two locations, the older one located near the Ardmore neighborhood in central Winston-Salem, and the newer campus at Wake Forest Innovation Quarter downtown. The university also occupies lab space at Biotech Plaza at Innovation Quarter, and at the Center for Nanotechnology and Molecular Materials. The University's Graduate School of Management maintains a presence on the main campus in Winston-Salem and in Charlotte, North Carolina.",
+            "North Carolina Wesleyan College\nNorth Carolina Wesleyan College is a private four-year coeducational, liberal arts college, located in Rocky Mount, North Carolina. Founded in 1956, the school is affiliated with the United Methodist Church and offers a number of degree programs in the arts and sciences and selected professional disciplines. The Rocky Mount Campus is a one-hour drive east of Raleigh, North Carolina, a two-hour drive south of Richmond, Virginia, and a four-hour drive north from Columbia, South Carolina. North Carolina Wesleyan also offers evening courses at its main Rocky Mount campus, as well as satellite locations in Morrisville, Goldsboro, Greenville, North Carolina, Whiteville, North Carolina, Washington, North Carolina, and Wilmington, North Carolina. Dr. Dewey G. Clark joined North Carolina Wesleyan College as its seventh president on May 4, 2014.",
+            "Chorlton-cum-Hardy\nChorlton-cum-Hardy is a suburban area of the city of Manchester, England, known locally as Chorlton. It is about four miles southwest of Manchester city centre. Chorlton contains the City of Manchester electoral ward of the same name, with a population taken at the 2011 census of 14,138. Chorlton Park is another ward in the same area. This ward had a separate population at the same census of 15,147.",
+            "Nairobi\nNairobi ( ; ] ) is the capital and largest city of Kenya. The name comes from the Maasai phrase \"Enkare Nairobi\", which translates to \"cool water\", a reference to the Nairobi River which flows through the city. The city proper has a population of 3,138,369, while the metropolitan area has a population of 6,547,547. The city is popularly referred to as the Green City in the Sun.",
+            "Ramos Arizpe\nRamos Arizpe (] ) is a city and seat of the surrounding municipality of the same name in the Mexican state of Coahuila. Ramos Arizpe is located 11\u00a0km from the state capital of Saltillo. It is part of the Saltillo metropolitan area. The city reported a population of 48,228 in the 2005 census; the municipality had a population of 56,708. Its area is 5,306.6\u00a0km\u00b2 (2,048.9 sq mi).",
+            "Jacksonville, Florida\nJacksonville is the largest city by population in the U.S. state of Florida, and the largest city by area in the contiguous United States. It is the county seat of Duval County, with which the city government consolidated in 1968. Consolidation gave Jacksonville its great size and placed most of its metropolitan population within the city limits; with an estimated population of 913,010 as of 2017, Jacksonville is the most populous city in the state of Florida and the southeastern United States. The Jacksonville metropolitan area has a population of 1,626,611. It is the 34th largest MSA in the United States and fourth largest in Florida.",
+            "Castle Hill, Queensland\nCastle Hill is a suburb in the City of Townsville, Queensland, Australia. Most of the suburb is taken up with the Castle Hill reserve with only a small area in the north-east of the suburb being available for housing. In the 2011 census, Castle Hill had a population of 1,009 people. The Indigenous name for Castle Hill is Cootharinga, sometimes written as Cooderinga.",
+            "White House, Tennessee\nWhite House is a city in Robertson and Sumner counties in the United States state of Tennessee. The population was 7,220 at the 2000 census. It is approximately twenty-two miles north of downtown Nashville. According to the city website a special census was conducted in 2008 that placed the city population at 9,891 residents, with 3,587 households within the city limits. The population was 10,255 at the 2010 census which showed growth of 3,000 people from 2000 to 2010. The 2013 population was 10,752.",
+            "Tongyeong\nTongyeong (] ) is a coastal city in South Gyeongsang Province, South Korea. In 2010, it had an area of 238.81\u00a0km and a population of 139,869 people. It is divided into 1 eup (town), 6 myeon (township) and 11 dong (neighborhood). Chungmu city and Tongyeong county were reunited in 1995, creating Tongyeong City as it is known today. It consists of Goseong Peninsula, Hansan Island, Mireuk Island and other islets. It was formerly known as Chungmu, after the posthumous name of Admiral Yi Sun-sin. The name Tongyeong means \"command post\" and is itself associated with Admiral Yi, as it refers to his principal base that was located on nearby Hansan Island."
+        ],
+        "thoughts": [
+            "The University of North Carolina at Wilmington is located in Wilmington, North Carolina, United States. It is situated on the western edge of the city, near North Carolina Highway 132. The campus is also home to Isaac Bear Early College High School. The city of Wilmington is the county seat of New Hanover County and is located in coastal southeastern North Carolina.",
+            "The city with the population of 112,067 is Wilmington, North Carolina.",
+            "The city identified in Step 2 matches the city where the University of North Carolina at Wilmington is located, as both refer to Wilmington, North Carolina.",
+            "Based on the previous findings, the city name is confirmed to be Wilmington, NC."
+        ],
+        "is_best": false
+    }
+]

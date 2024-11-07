@@ -1,0 +1,754 @@
+[
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find out if Thinking Fellers Union Local 282 was active in 1986.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out if the Smiths, with lead singer Morrissey, were active in 1986.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Gather the activity status of both bands in 1986 and verify if they were both active.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by independently confirming the activity status of the two bands in question for the year 1986. Node 1 focuses on the activity of Thinking Fellers Union Local 282, while Node 2 checks the activity status of the Smiths, along with confirming Morrissey as their lead singer. Once both nodes have gathered the necessary information, Node 3 synthesizes the data to verify if both bands were active in the specified year, providing the final answer to the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Housemartins\nThe Housemartins were an English Alternative rock band formed in Hull who were active in the 1980s. Many of the Housemartins' lyrics were a mixture of Marxist politics and Christianity, reflecting singer Paul Heaton's beliefs at the time (the back cover of \"London 0 Hull 4\" contained the message, \"Take Jesus \u2013 Take Marx \u2013 Take Hope\"). The group's cover version of the Isley Brothers' \"Caravan of Love\" was a UK Number 1 single in December 1986.",
+            "Bamboo (band)\nBamboo was a Filipino rock band formed in 2002 and had been active from 2004 until it disbanded in 2011. It consisted of Bamboo Ma\u00f1alac, Ira Cruz, Nathan Azarcon and Vic Mercado.",
+            "Creedence Clearwater Revival\nCreedence Clearwater Revival, often informally abbreviated to Creedence or CCR, was an American rock band active in the late 1960s and early 1970s.",
+            "Eunhyuk\nLee Hyuk-jae (born April 4, 1986), better known by his stage name Eunhyuk, is a South Korean singer-songwriter and actor. He is a member of the South Korean boy group Super Junior and their subgroups, Super Junior-T and Super Junior-H. In 2011, he joined Super Junior's Mandopop subgroup, Super Junior-M and the duo Donghae & Eunhyuk; active in China and Japan respectively.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Danny Jones\nDanny Jones (born 12 March 1986) is a British musician who is one of the lead vocalists and guitarists for pop-rock band McFly. Jones' fellow band members are Tom Fletcher (guitar and vocals), Dougie Poynter (bass and vocals), and Harry Judd (drums)."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was indeed active in 1986, as that is the year they were formed in San Francisco, California.",
+            "The Smiths, with lead singer Morrissey, were active in 1986. They were an indie rock band that was active from 1982 to 1987.",
+            "Based on the gathered activity status, both bands were active in 1986. Thinking Fellers Union Local 282 was formed in 1986 and The Smiths were active from 1982 to 1987, so they were also active in 1986."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Thinking Fellers Union Local 282, including active years.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about The Smiths, including active years and members such as the lead singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if both bands, Thinking Fellers Union Local 282 and The Smiths, were active in the year 1986 based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine if both Thinking Fellers Union Local 282 and The Smiths, with Morrissey as their lead singer, were active in 1986, we need to retrieve information about both bands separately. We then verify if Morrissey was indeed the lead singer of The Smiths. Finally, we check if the active years of both bands included 1986."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Treat (album)\nTreat is a split cassette shared between by Dutch punk band The Ex and Scottish ex-pat tour mates Dog Faced Hermans. The album was recorded live while the two bands toured Europe together and was released only on cassette in 1990. That year the two bands also collaborated on the single \"Lied der Steinklopfer\" (\"Stonestamper's Song\") released under the name Ex Faced Hermans, as well as sharing live sound engineer Gert-Jan, credited as a full member of the Dog Faced Hermans who continued to tour with The Ex for more than a decade.",
+            "Soundtrack of Your Summer Tour\nThe Soundtrack of Your Summer Tour was a tour that was co-headlined by Good Charlotte, and pop-rock band, Boys Like Girls. The Soundtrack of Your Summer Tour included guest bands such as Metro Station and The Maine on selected dates. The tour consisted of 39 dates in the United States and two in Canada. The name of the tour came from a line in the Boys Like Girls song, \"Thunder\".",
+            "Without Grace\nWithout Grace are a rock band from Guildford, Surrey. They have recently announced on their web page that they will be taking a break from the band to pursue any other careers. \"Without Grace\", originally called Jelutong, met at the age of 13 at school. Jon and Matt where the first members of the band to play together, playing in bands from the age of 11. After leaving school the band changed their name to \"Without Grace\" and signed to Management company \"Hug Management\". In 2004 the band signed to Universal and recorded their debut single 20 Yards Away which was never released after the band was dropped when their A&R left. The band, still determined, recorded their debut album at Invincible Studios and released it in 2006 through Genius Twin. The band split in 2007 due to the members drifting apart musically. Singer Markus formed a solo project, entitled Spotlight Cannibal, keeping Jonty on drums, but more recently he has been fronting the hard rock band The Royal Cartel who have supported Marillion. Matt went on to from Flame to Fire with previous members of rock band Radiate, Steve Bradfield and G Rubery.",
+            "Mistral (pisco)\nMistral is a brand of Chilean pisco owned by Compa\u00f1\u00eda de Cervecer\u00edas Unidas (CCU). The brand takes its name from the Chilean nobel literature laureate Gabriela Mistral who was a native from Elqui Valley where pisco grapes are grown."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was an experimental indie rock group active from 1986 to the late 1990s. They released several EPs and albums, including \"Where's Officer Tuba\" (1993), \"The Funeral Pudding\" (1994), \"Admonishing the Bishops\" (1993), \"I Hope It Lands\" (1996), \"Strangers from the Universe\" (1994), \"Mother of All Saints\" (1992), and \"Lovelyville\" (1991). Their music was released through labels such as Ajax Records and Matador Records.",
+            "The Smiths were an indie rock band active from 1982 to 1987, with Steven Patrick Morrissey as the lead singer. After the band's dissolution, Morrissey pursued a solo career and achieved success in the UK Singles Chart.",
+            "Yes, Morrissey was indeed the lead singer of The Smiths.",
+            "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in the year 1986. Thinking Fellers Union Local 282 was active from 1986 to the late 1990s, and The Smiths were active from 1982 to 1987, with Steven Patrick Morrissey as the lead singer."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the active years of the band Thinking Fellers Union Local 282.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the active years of the band The Smiths.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if 1986 falls within the active years of Thinking Fellers Union Local 282 from node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Check if 1986 falls within the active years of The Smiths from node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Combine the information from nodes 4, 5, and verify Morrissey's association from node 3 to determine if both bands were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The task is broken down as follows: We need to confirm the active status of both bands in the year 1986 and verify Morrissey's association with The Smiths. The graph starts with retrieving the active periods for Thinking Fellers Union Local 282 and The Smiths, along with confirming Morrissey as the lead singer of The Smiths. We then separately check if 1986 falls within the retrieved active years for each band. Finally, we synthesize these pieces of information to conclude if both bands were active in 1986."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "She (American band)\nShe was an all-female American garage rock band from Sacramento, California that was active between 1964 and 1971. Originally called the Id, the band later changed its name to the Hairem, where its members recorded several tracks that remained unissued for many years. Though the group was known for a raw sound, as the decade passed they incorporated psychedelic influences and eventually changed their name to She. In 1970, as She, they released the single, \"Boy Little Boy\" b/w \"Outta Reach\". Since 1999, with the release of the \"She Wants a Piece of You\" compilation, the group's work has come to the attention of garage rock enthusiasts.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Bamboo (band)\nBamboo was a Filipino rock band formed in 2002 and had been active from 2004 until it disbanded in 2011. It consisted of Bamboo Ma\u00f1alac, Ira Cruz, Nathan Azarcon and Vic Mercado.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Creedence Clearwater Revival\nCreedence Clearwater Revival, often informally abbreviated to Creedence or CCR, was an American rock band active in the late 1960s and early 1970s.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Type 346 Radar\nType 346 radar is a highly digitized, multi-function, dual-band (S and C bands) naval active phased array radar (APAR) installed on Type 052C destroyers, Type 052D destroyers and Type 055 destroyers of the PLAN. The radar is named as the Star of the Sea (Hai-Zhi-Xing, \u6d77\u4e4b\u661f) by its developer and it is one of the two competitors for PLAN\u2019s SAPARS (Shipborne Active Phased Array Radar System) project/program. Due to its secrecy and lack of information, Type 346 radar has been frequently but erroneously confused with a Chinese fire control radar Type 348, and mistakenly identified as Type 348 by many sources. Furthermore, it is also frequently confused with and misidentified as Sea Lion series C-band phased array radars developed by another design house."
+        ],
+        "thoughts": [
+            "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+            "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs.",
+            "Yes, 1986 falls within the active years of Thinking Fellers Union Local 282.",
+            "The band The Smiths was active from 1982 to 1987.",
+            "Yes, 1986 falls within the active years of The Smiths, as they were active from 1982 to 1987.",
+            "Based on the information from nodes 4, 5, and the verified association of Morrissey with The Smiths from node 3, it can be determined that both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Thinking Fellers Union Local 282 was active in 1986.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if the Smiths, with lead singer Morrissey, were active in 1986.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the activity status of both bands in 1986 to determine if they were both active in that year.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into two main retrieval tasks, one for each band. Each retrieval node checks if the respective band was active in the specified year, 1986. The reasoning node at the end combines the results of both retrieval tasks to provide a final answer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\"."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was active in 1986.",
+            "The information provided does not mention the Smiths or lead singer Morrissey, so it is not possible to determine if they were active in 1986 based on the given information.",
+            "Based on the information provided, it is not possible to determine if both bands were active in 1986. The status of Thinking Fellers Union Local 282 was active in 1986, but there is no information available to confirm the activity status of The Smiths or lead singer Morrissey for that year."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the active years of Thinking Fellers Union Local 282.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the active years of The Smiths, including confirming if Morrissey was the lead singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Thinking Fellers Union Local 282 was active in 1986 based on the retrieved active years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if The Smiths were active in 1986 based on the retrieved active years and confirmation of Morrissey as the lead singer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude whether both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph first retrieves the active years for both bands separately. Then, using this information, it checks if each band was active in 1986. Finally, the graph concludes by verifying if both bands were indeed active in that specific year."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "In the Fishtank\nIn the Fishtank is an ongoing project of Konkurrent, an independent music distributor in the Netherlands. In this project, Konkurrent invites one or two bands to record and gives them two days studio time. The first four albums were recorded by individual bands, but eight of the last ten releases were the result of two bands (three in one case) teaming up to record. The Ex is so far the only band to appear on more than one album in the series."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, with the release of their album \"I Hope It Lands\" in April of that year. Their EP \"Where's Officer Tuba\" was released in 1993, and \"The Funeral Pudding\" was released in February 1994. Their album \"Strangers from the Universe\" was released on September 12, 1994, and \"Mother of All Saints\" was released on November 13, 1992. Additionally, their EP \"Admonishing the Bishops\" was released on October 26, 1993, and their album \"Lovelyville\" was released on December 12, 1991.",
+            "Based on the retrieved active years, Thinking Fellers Union Local 282 was indeed active in 1986.",
+            "The Smiths were active from 1982 to 1987, and Morrissey was indeed the lead singer of the band during that time.",
+            "Yes, The Smiths were active in 1986 as they were active from 1982 to 1987, and Morrissey was the lead singer during that time.",
+            "Both bands, Thinking Fellers Union Local 282 and The Smiths, were indeed active in 1986."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the active years of the band 'Thinking Fellers Union Local 282'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the active years of the band 'The Smiths'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify that Morrissey was the lead singer of 'The Smiths'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if 'Thinking Fellers Union Local 282' was active in 1986 based on their active years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if 'The Smiths' was active in 1986 based on their active years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Check if Morrissey was the lead singer of 'The Smiths' during the period 'The Smiths' were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "5"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Conclude whether both 'Thinking Fellers Union Local 282' and 'The Smiths' with Morrissey as lead singer were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The task is to determine if both bands were active in 1986 and if Morrissey was the lead singer of The Smiths during that time. The graph breaks down the question into finding the active years for both bands, verifying Morrissey's role, and then combining this information to ascertain their activity status in 1986."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "Still Life (US band)\nStill Life was a 3-piece rock band originally from Moorpark, California and then the San Fernando Valley, California. They are credited for helping pioneer the first wave of what is often referred to as emo/emocore /screamo bands in this subgenre that is rooted in punk rock. They started in the late 80s with the name Monster Club. They changed their name in 1991 after the departure of the original lead singer Rick Rodney who joined the band Strife. They were active until 2003 when all of their instruments were stolen from Chris Pitzel's truck parked on the street in front of their house after a show. Former Members Paul Rauch and David Pitzel have started a new band named Old Ground and continue to use Still Life's label, Sunflower Tribe.",
+            "Di'Anno (album)\nDi'Anno is the 1984 self-titled album of the band of the same name. The lead singer Paul Di'Anno had been the frontman of the British heavy metal band Iron Maiden for three years, before being dismissed for his erratic behaviour. The band bearing his name and playing very commercial heavy rock was his first and short-lived solo project.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Did You Ever See a Lassie?\n\"Did You Ever See a Lassie?\" is a folk song, nursery rhyme, and singing game. It has a Roud Folk Song Index number of 5040.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Shall We Gather at the River (Falling Skies)\n\"Shall We Gather at the River\" is the second episode of the second season of the American television drama series \"Falling Skies\", and the 12th overall episode of the series. It originally aired on TNT in the United States on June 17, 2012 as a two-hour season premiere with the first episode of the season. It was written by Bradley Thompson & David Weddle and directed by Greg Beeman.",
+            "She (American band)\nShe was an all-female American garage rock band from Sacramento, California that was active between 1964 and 1971. Originally called the Id, the band later changed its name to the Hairem, where its members recorded several tracks that remained unissued for many years. Though the group was known for a raw sound, as the decade passed they incorporated psychedelic influences and eventually changed their name to She. In 1970, as She, they released the single, \"Boy Little Boy\" b/w \"Outta Reach\". Since 1999, with the release of the \"She Wants a Piece of You\" compilation, the group's work has come to the attention of garage rock enthusiasts.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Bamboo (band)\nBamboo was a Filipino rock band formed in 2002 and had been active from 2004 until it disbanded in 2011. It consisted of Bamboo Ma\u00f1alac, Ira Cruz, Nathan Azarcon and Vic Mercado.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Creedence Clearwater Revival\nCreedence Clearwater Revival, often informally abbreviated to Creedence or CCR, was an American rock band active in the late 1960s and early 1970s."
+        ],
+        "thoughts": [
+            "The active years of the band 'Thinking Fellers Union Local 282' are from 1986 to 2001.",
+            "Yes, Thinking Fellers Union Local 282 was active in 1986 based on their active years.",
+            "The Smiths were active from 1982 to 1987.",
+            "Yes, The Smiths were active in 1986 as their active years span from 1982 to 1987.",
+            "Morrissey was indeed the lead singer of the indie rock band The Smiths, which was active from 1982 to 1987.",
+            "Yes, Morrissey was the lead singer of The Smiths during the period they were active in 1986.",
+            "Both 'Thinking Fellers Union Local 282' and 'The Smiths' with Morrissey as lead singer were active in 1986."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the years during which Thinking Fellers Union Local 282 was active.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the years during which the Smiths were active, and confirm Morrissey was their lead singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if 1986 falls within the active years of Thinking Fellers Union Local 282.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if 1986 falls within the active years of the Smiths.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both bands were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the question into steps to (1) check the active years of Thinking Fellers Union Local 282 and (2) the active years of the Smiths, confirming Morrissey as their lead singer. The subsequent reasoning steps (3 and 4) involve verifying if the year 1986 falls within the active years of each band. Finally, step 5 synthesizes these results to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was active from 1986 to 1996.",
+            "Yes, 1986 falls within the active years of Thinking Fellers Union Local 282.",
+            "The information provided does not contain any details about the years during which the Smiths were active or the confirmation that Morrissey was their lead singer.",
+            "Without specific information about the active years of the Smiths, it is not possible to determine if 1986 falls within their active years. Additional information about the band's timeline would be needed to make a determination.",
+            "Based on the results of the upstream tasks, it can be determined that Thinking Fellers Union Local 282 was active in 1986. However, there is not enough information to determine if the Smiths were active in 1986. Therefore, it cannot be definitively stated whether both bands were active in 1986."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the active years of Thinking Fellers Union Local 282.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the active years of The Smiths and verify the lead singer was Morrissey.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if 1986 is within the active years of Thinking Fellers Union Local 282.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if 1986 is within the active years of The Smiths.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both groups were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task requires verifying if both bands were active in a specific year. First, the active years of both bands are retrieved along with a check for The Smiths' lead singer. Then, the presence of the year 1986 within those periods is reasoned individually. Lastly, the results are combined to conclude if both bands were active in 1986."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Landwehr\nLandwehr, or Landeswehr, is a German language term used in referring to certain national armies, or militias found in nineteenth- and early twentieth-century Europe. In different context it refers to large-scale, low-strength fortifications. In German, the word means \"defence of the country\"; but the term as applied to an insurrectional militia is very ancient, and \"lantveri\" are mentioned in \"Baluzii Capitularia\", as quoted in Hallam's \"Middle Ages\", i. 262, 10th edition.",
+            "Kid Marine\nKid Marine is 3rd album by Robert Pollard, released in 1999. It is the first release of Robert Pollard's Fading Captain Series. Pollard has stated that the album is about Jeff \"Kid Marine\" Davis, the person pictured on the cover . Robert told Mojo magazine, \"My personal favorite, a weird record, almost a concept album, about the typical Ohio male and what he does - drink, watch television, eat pizza. It got mixed reviews, there are people who hate it and others who think it's our best record and I'm on their side. I just love the songs. It feels like one piece, like it all fits together. I like the cover and I like the",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities.",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "The Princeton Three\nThe Princeton Three was a group of two physicists and a political economist working at the Princeton University during the Cold War Era. Of the three men Eugene Wigner and John Archibald Wheeler studied physics and Oskar Morgenstern studied political economy. Their main goal was to establish a national science laboratory in the United States of America that would help America catch the Soviet Union in the Intermediate range ballistic missile (IRBM) race, as well as push the United States ahead in the space race. The basic outline of this laboratory called for university scientists to have complete and open insight to the militaristic needs if the country in order to spend some two or three years working full-time, without the shackles of administrative bodies or security restrictions. They would use their specific field of study to improve the defense systems of the military and other important project deemed necessary.",
+            "Ghost ship\nA ghost ship, also known as a phantom ship, is a vessel with no living crew aboard; it may be a ghostly vessel in folklore or fiction, such as the \"Flying Dutchman\", or a real derelict found adrift with its crew missing or dead, like the \"Mary Celeste\". The term is sometimes used for ships that have been decommissioned but not yet scrapped, as well as drifting boats that have been found after breaking loose of their ropes and becoming carried away by the wind or the waves.",
+            "Ethnic religion\nIn religious studies, ethnic religion (or indigenous religion) is the expression of religion associated with a particular ethnic group. Ethnic religions are often distinguished from religions which claim to not be limited in ethnic or national scope, such as Christianity or Islam. Ethnic religions do not have to be excluded to independent religions. Some localized denominations of global religions are practiced solely by certain ethnic groups, with ethnic groups like the Assyrians following a unique denominational structure of Christianity known as the Assyrian Church of the East.",
+            "Integrated Service Provider\nAn Integrated Service Provider (ISP) is a for-hire firm that performs a variety of logistics service activities such as warehousing, transportation, and other functional activities that constitute a total service package. In addition, other categories of spend may fall under the ISP's scope such as maintenance, repair, and operations (MRO) services. Firms that provide such services typically have a good understanding of their customers needs and are responsible for executing services in accordance with contract documents. Normally the scope of work (SOW) and the ISP contract are finalized only after an extensive due diligence period.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "She (American band)\nShe was an all-female American garage rock band from Sacramento, California that was active between 1964 and 1971. Originally called the Id, the band later changed its name to the Hairem, where its members recorded several tracks that remained unissued for many years. Though the group was known for a raw sound, as the decade passed they incorporated psychedelic influences and eventually changed their name to She. In 1970, as She, they released the single, \"Boy Little Boy\" b/w \"Outta Reach\". Since 1999, with the release of the \"She Wants a Piece of You\" compilation, the group's work has come to the attention of garage rock enthusiasts.",
+            "Without Grace\nWithout Grace are a rock band from Guildford, Surrey. They have recently announced on their web page that they will be taking a break from the band to pursue any other careers. \"Without Grace\", originally called Jelutong, met at the age of 13 at school. Jon and Matt where the first members of the band to play together, playing in bands from the age of 11. After leaving school the band changed their name to \"Without Grace\" and signed to Management company \"Hug Management\". In 2004 the band signed to Universal and recorded their debut single 20 Yards Away which was never released after the band was dropped when their A&R left. The band, still determined, recorded their debut album at Invincible Studios and released it in 2006 through Genius Twin. The band split in 2007 due to the members drifting apart musically. Singer Markus formed a solo project, entitled Spotlight Cannibal, keeping Jonty on drums, but more recently he has been fronting the hard rock band The Royal Cartel who have supported Marillion. Matt went on to from Flame to Fire with previous members of rock band Radiate, Steve Bradfield and G Rubery.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Where You Stand (song)\n\"Where You Stand\" is a song by alternative rock band Travis, written by Dougie Payne, Holly Partridge and Fran Healy. It was released on 30 April 2013 as the lead single from the band's seventh studio album, \"Where You Stand\".",
+            "The Crash (band)\nThe Crash was a pop rock band from Turku, Finland, originally influenced by Britpop but later taking its lead from a diverse range of genres including Motown, disco, new wave and 80's rock. The band formed after Teemu Brunila and Samuli Haataja met in 1991, with both Erkki Kaila and Dani Aavinen joining to complete the line up. Originally, the band was called Ladies & Gentlemen, but later changed its name to New Deal, then again changed it to The Crush. In 1998, the name was changed to The Crash and Dani Aavinen was replaced by keyboard player, Toni Ahola."
+        ],
+        "thoughts": [
+            "The active years of Thinking Fellers Union Local 282 are not provided in the given information.",
+            "Since the active years of Thinking Fellers Union Local 282 are not provided in the given information, we cannot determine if 1986 is within their active years.",
+            "The Smiths were active from 1982 to 1987, and the lead singer was Morrissey.",
+            "1986 falls within the active years of The Smiths, as they were active from 1982 to 1987.",
+            "Based on the results of the upstream tasks, we can determine that The Smiths were active in 1986, as it falls within their active years. However, we cannot determine if Thinking Fellers Union Local 282 were active in 1986 as their active years are not provided. Therefore, we cannot definitively say that both groups were active in 1986."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the time period during which Thinking Fellers Union Local 282 was active.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the time period during which The Smiths were active, and verify if their lead singer was Morrissey.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if 1986 falls within the active time period of Thinking Fellers Union Local 282.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if 1986 falls within the active time period of The Smiths and if Morrissey was the lead singer during that time.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if both Thinking Fellers Union Local 282 and The Smiths (with Morrissey as lead singer) were active in 1986 by evaluating the conclusions of the two reasoning nodes.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the problem into identifying the active years of the two bands in question, including a verification of The Smiths' lead singer. It systematically checks whether 1986 falls within the active periods of both bands. Nodes are constructed to perform retrieval of facts about the bands and reasoning to determine activity overlap in 1986."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Information (Berlin album)\nInformation is the first album by Berlin, released in 1980 by Vinyl Records. It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals. Several songs were written by previous lead singer Toni Childs who went solo prior to the album's release.",
+            "Still Life (US band)\nStill Life was a 3-piece rock band originally from Moorpark, California and then the San Fernando Valley, California. They are credited for helping pioneer the first wave of what is often referred to as emo/emocore /screamo bands in this subgenre that is rooted in punk rock. They started in the late 80s with the name Monster Club. They changed their name in 1991 after the departure of the original lead singer Rick Rodney who joined the band Strife. They were active until 2003 when all of their instruments were stolen from Chris Pitzel's truck parked on the street in front of their house after a show. Former Members Paul Rauch and David Pitzel have started a new band named Old Ground and continue to use Still Life's label, Sunflower Tribe.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "The Housemartins\nThe Housemartins were an English Alternative rock band formed in Hull who were active in the 1980s. Many of the Housemartins' lyrics were a mixture of Marxist politics and Christianity, reflecting singer Paul Heaton's beliefs at the time (the back cover of \"London 0 Hull 4\" contained the message, \"Take Jesus \u2013 Take Marx \u2013 Take Hope\"). The group's cover version of the Isley Brothers' \"Caravan of Love\" was a UK Number 1 single in December 1986.",
+            "Ian Hunter (singer)\nIan Hunter Patterson (born 3 June 1939), known as Ian Hunter, is a British singer-songwriter who is best known as the lead singer of the English rock band Mott the Hoople, from its inception in 1969 to its dissolution in 1974, and at the time of its 2009 and 2013 reunions. Hunter was a musician and songwriter before joining Mott the Hoople, and continued in this vein after he left the band. He embarked on a solo career despite ill health and disillusionment with commercial success, and often worked in collaboration with Mick Ronson, David Bowie's sideman and arranger from the \"Ziggy Stardust and the Spiders from Mars\" period.",
+            "The Plants\nThe Plants were a doo wop quartet, based out of Baltimore, Maryland and formed in 1955. James Lawson (baritone), Thuman Thrower (bass), Steve McDowell (first tenor) and George Jackson (lead) constituted the original line-up, who were known as The Equadors. They got their break from Zell Sanders, owner of J&S Records, performing for her backstage at the Royal Theatre during a concert by The Moonglows. They released their debut, \"Dear I Swear\" in autumn of 1957, but it failed to achieve national success despite being a regional hit. They released another failed single in 1958, \"From Me\", after appearing on \"The Buddy Deane Show\", a major musical venue in Baltimore at the time. A new lineup was assemebled in 1958 by Zell Sanders, recording \"I Searched the Seven Seas\", while Jackson pursued a solo career, releasing a few singles during the 1960s.",
+            "Phallic processions\nPhallic processions, or Penis Parade, called \"phallika\" in ancient Greece, were a common feature of Dionysiac celebrations; they were processions that advanced to a cult center, and were characterized by obscenities and verbal abuse. The display of a fetishized phallus was a common feature. In a famous passage in chapter 3.3 of the \"Poetics\", Aristotle formulated the hypothesis that the earliest forms of comedy originated and evolved from \"those who lead off the phallic processions\", which were still common in many towns at his time."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on their album and EP releases during that time period.",
+            "Yes, 1986 falls within the active time period of Thinking Fellers Union Local 282.",
+            "The Smiths were active from 1982 to 1987, and their lead singer was Morrissey.",
+            "Yes, 1986 falls within the active time period of The Smiths, and Morrissey was the lead singer during that time.",
+            "Both Thinking Fellers Union Local 282 and The Smiths (with Morrissey as lead singer) were active in 1986."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the years when Thinking Fellers Union Local 282 was active as a band.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the years when The Smiths were active as a band and confirm if Morrissey was their lead singer at that time.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if 1986 falls within the active years of Thinking Fellers Union Local 282.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if 1986 falls within the active years of The Smiths.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to determine if both bands were active in 1986.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the task into two parallel retrieval nodes to check the active years of each band independently. One node retrieves information about Thinking Fellers Union Local 282 and another about The Smiths (also verifying if Morrissey was the lead singer). Each retrieval node is followed by a reasoning node that specifically checks if 1986 was within the band's active years. Finally, the results are synthesized to conclude if both bands were active in 1986."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Did You Ever See a Lassie?\n\"Did You Ever See a Lassie?\" is a folk song, nursery rhyme, and singing game. It has a Roud Folk Song Index number of 5040.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Shall We Gather at the River (Falling Skies)\n\"Shall We Gather at the River\" is the second episode of the second season of the American television drama series \"Falling Skies\", and the 12th overall episode of the series. It originally aired on TNT in the United States on June 17, 2012 as a two-hour season premiere with the first episode of the season. It was written by Bradley Thompson & David Weddle and directed by Greg Beeman.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom."
+        ],
+        "thoughts": [
+            "Thinking Fellers Union Local 282 was active as a band from 1986 to 1996.",
+            "Yes, 1986 falls within the active years of Thinking Fellers Union Local 282.",
+            "The Smiths were active as a band from 1982 to 1987, and Morrissey was their lead singer during that time.",
+            "Yes, 1986 falls within the active years of The Smiths, as they were active as a band from 1982 to 1987.",
+            "Based on the results of the upstream tasks, both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986."
+        ],
+        "is_best": false
+    }
+]

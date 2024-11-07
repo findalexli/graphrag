@@ -1,0 +1,634 @@
+[
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify beverages that are commonly shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the list of beverages to exclude those with a name similar to Margarita.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph begins by retrieving a list of beverages that are typically prepared by being shaken with ice, as this is a distinguishing preparation method. The next step is reasoning-based, filtering out any options that could be confused with the name 'Margarita', to ensure the correct drink that fits the description is identified as the answer."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Bacon martini\nA Bacon Martini, also known as bacontini, pig on the tocks or a bloody bacon martini, is a cocktail that consists of bacon-infused vodka served with a garnish that can include strips of bacon, bacon bits, or olives. Variants may include the addition of Bloody Mary mix. Although not a vodka martini, which consists of vodka and vermouth, the term \"bacon martini\" is consistent with the trend of calling any straight liquor in a martini glass a \"martini,\" such as the saketini or other variations.",
+            "Moment distribution method\nThe moment distribution method is a structural analysis method for statically indeterminate beams and frames developed by Hardy Cross. It was published in 1930 in an ASCE journal. The method only accounts for flexural effects and ignores axial and shear effects. From the 1930s until computers began to be widely used in the design and analysis of structures, the moment distribution method was the most widely practiced method.",
+            "Weighted correlation network analysis\nWeighted correlation network analysis, also known as weighted gene co-expression network analysis (WGCNA), is a widely used data mining method especially for studying biological networks based on pairwise correlations between variables. While it can be applied to most high-dimensional data sets, it has been most widely used in genomic applications. It allows one to define modules (clusters), intramodular hubs, and network nodes with regard to module membership, to study the relationships between co-expression modules, and to compare the network topology of different networks (differential network analysis). WGCNA can be used as data reduction technique (related to oblique factor analysis ), as clustering method (fuzzy clustering), as feature selection method (e.g. as gene screening method), as framework for integrating complementary (genomic) data (based on weighted correlations between quantitative variables), and as data exploratory technique. Although WGCNA incorporates traditional data exploratory techniques, its intuitive network language and analysis framework transcend any standard analysis technique. Since it uses network methodology and is well suited for integrating complementary genomic data sets, it can be interpreted as systems biologic or systems genetic data analysis method. By selecting intramodular hubs in consensus modules, WGCNA also gives rise to network based meta analysis techniques",
+            "Software architecture analysis method\nSoftware architecture analysis method (SAAM) is a method used in software architecture to evaluate a system architecture. It was the first documented software architecture analysis method, and was developed in the mid 1990s to analyze a system for modifiability, but it is useful for testing any non-functional aspect.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "Method Man\nClifford Smith (born April 1, 1971), better known by his stage name Method Man, is an American rapper, record producer, and actor. He is known as a member of the East Coast hip hop collective Wu-Tang Clan. He is also one half of the hip hop duo Method Man & Redman. He took his stage name from the 1979 film \"Method Man\". In 1996, he won a Grammy Award for Best Rap Performance by a Duo or Group, for \"I'll Be There for You/You're All I Need to Get By\", with American R&B singer-songwriter Mary J. Blige.",
+            "Frobenius solution to the hypergeometric equation\nIn the following we solve the second-order differential equation called the hypergeometric differential equation using Frobenius method, named after Ferdinand Georg Frobenius. This is a method that uses the series solution for a differential equation, where we assume the solution takes the form of a series. This is usually the method we use for complicated ordinary differential equations.",
+            "Homotopy analysis method\nThe homotopy analysis method (HAM) is a semi-analytical technique to solve nonlinear ordinary/partial differential equations. The homotopy analysis method employs the concept of the homotopy from topology to generate a convergent series solution for nonlinear systems. This is enabled by utilizing a homotopy-Maclaurin series to deal with the nonlinearities in the system."
+        ],
+        "thoughts": [
+            "Beverages that are commonly shaken with ice include the Bacon Martini, which consists of bacon-infused vodka, and cocktails that may include Bloody Mary mix.",
+            "Filtered list of beverages excluding those with a name similar to Margarita:\n\n1. Bacon Martini\n2. Bloody Mary mix cocktail"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of cocktails that are served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the Margarita cocktail.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify features or characteristics that are associated with the Margarita cocktail name or ingredients.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Filter from the list of cocktails that are served shaken with ice, those which do not share features or characteristics with the Margarita cocktail.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Select the most commonly known cocktail from the filtered list that is known for being served shaken with ice, but should not be mistaken with a Margarita.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To determine which cocktail is served shaken with ice and should not be mistaken with the name Margarita, the execution graph follows a series of connected steps. We first need to gather information on cocktails served in a similar manner (i.e., shaken with ice) and understand what distinguishes a Margarita. By filtering out cocktails that do not match the Margarita's distinctive features, we can pinpoint a cocktail that's commonly mistaken with it, focusing on what makes it unique and separate from the Margarita. Finally, the node synthesizes this information to make a selection based on common misconceptions or similarities."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "Margarida\nMargarida is a Portuguese female given name, which is a variant of the name Margaret, and which means \"daisy flower\" in Portuguese. It should not be mistaken for the Mexican alcoholic drink Margarita or the Italian Margherita pizza. The given name may refer to:",
+            "Gisa Geert\nGisa Geert, stage name Margarita Gross (7 June 1900, Vienna; \u20202 April 1991, Madrid), was an Austrian actress and choreographer, who was very active in Italy during the 1940s to 1960s.",
+            "Sistrum\nA sistrum (plural: sistrums or Latin sistra; from the Greek \u03c3\u03b5\u1fd6\u03c3\u03c4\u03c1\u03bf\u03bd \"seistron\" of the same meaning; literally \"that which is being shaken\", from \u03c3\u03b5\u03af\u03b5\u03b9\u03bd \"seiein\", \"to shake\") is a musical instrument of the percussion family, chiefly associated with ancient Iraq and Egypt. It consists of a handle and a U-shaped metal frame, made of brass or bronze and between 30 and 76\u00a0cm in width. When shaken the small rings or loops of thin metal on its movable crossbars produce a sound that can be from a soft clank to a loud jangling. Its name in the ancient Egyptian language was sekhem \"(s\u1e2bm)\" and sesheshet \"(s\u0161\u0161t).\" Sekhem is the simpler, hoop-like sistrum, while sesheshet (an onomatopoeic word) is the naos-shaped one.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Brian Smith (ice hockey, born 1940)\nBrian Desmond \"Smitty\" Smith (September 6, 1940 \u2013 August 2, 1995) was a Canadian professional hockey player and sportscaster. Smith was born in Ottawa, Ontario, the son of former professional ice hockey player Des Smith and brother of former professional hockey goaltender Gary Smith. Smith was a professional ice hockey player from 1960 to 1973, playing in the National Hockey League (NHL) with the Los Angeles Kings and Minnesota North Stars. Following his hockey career, Smith was a broadcaster for CJOH-TV in Ottawa until 1995, when he was shot and killed by gunman Jeffrey Arenburg.",
+            "Aloinopsis\nAloinopsis is a genus of ice plants from South Africa."
+        ],
+        "thoughts": [
+            "- Batida\n- Margarita\n- Bee's Knees (cocktail)\n- Damn the Weather (cocktail)",
+            "The Margarita cocktail is a popular alcoholic beverage consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. It can be served shaken with ice, blended with ice, or without ice. The drink is traditionally served in a margarita glass. The name \"Margarita\" is also a Portuguese female given name, a Colombian singer's stage name, and the name of a Princess of Leiningen. Additionally, \"Margarita\" is not to be confused with the Mexican alcoholic drink Margarita or the Italian Margherita pizza.",
+            "- The Margarita cocktail is typically made with tequila, triple sec, and lime or lemon juice\n- It is often served with salt or sugar on the rim of the glass\n- The drink can be served shaken with ice, blended with ice, or without ice\n- The traditional glassware for serving a Margarita is a margarita glass\n- The name \"Margarita\" is also associated with a Portuguese female given name, a Colombian singer's stage name, and the name of a Princess of Leiningen",
+            "Based on the characteristics of the Margarita cocktail, the cocktails that are served shaken with ice and do not share features or characteristics with the Margarita cocktail are:\n- Bee's Knees (cocktail)\n- Damn the Weather (cocktail)",
+            "The most commonly known cocktail from the filtered list that is known for being served shaken with ice, but should not be mistaken with a Margarita is the Bee's Knees cocktail."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify drinks that are similar to 'Margarita' in name or ingredients.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of these drinks are typically served 'shaken with ice'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Exclude 'Margarita' from the identified drinks that are served shaken with ice.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with identifying drinks that are similar in name or ingredients to Margarita. Next, it narrows down this list to those drinks which are 'shaken with ice', a common preparation method. Finally, it filters out 'Margarita' since the task specifies not to confuse with its name, so the remaining listed drinks answer the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Sidecar (cocktail)\nThe sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.",
+            "Jeongol\nJeongol is a Korean-style hot pot made by putting meat, mushroom, seafood, seasoning, etc., in a stew pot, adding broth, and boiling it. It is similar to the category of Korean stews called \"jjigae\", with the main difference being that \"jjigae\" are generally made with only a single main ingredient, and named after that ingredient (such as \"kimchi jjigae\" or \"sundubu jjigae\"), while \"jeongol\" usually contain a variety of main ingredients. An additional difference is that \"jeongol\" (like \"gujeolpan\") was originally a dish for upper-class Koreans and members of the royal court, while \"jjigae\" was a simpler dish for commoners.",
+            "Discada\nDiscada is a mixed meat dish popular in the northern Mexican states of Baja California, Sinaloa, Sonora, Chihuahua, Coahuila, Durango, Nuevo Le\u00f3n and Tamaulipas. The dish includes a mixture of grilled meats cooked on an agricultural plow disk harrow, hence its name. The basic meats for a traditional discada include beef (usually a flank cut), bacon, ham, sausage, and Mexican chorizo. The disk is placed over an open flame, and the ingredients are introduced one at a time. The meats are seasoned and marinated according to the cook's preference and usually include salt, pepper, lime juice, and garlic. Aromatics including white or purple onions, bell peppers, Jalapeno or Serrano peppers, and tomatoes are also used to add flavor and color to the dish. It is usually served with tortillas in tacos or separately on a plate.",
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Schorle\nSchorle is a German beverage made by diluting juice or wine with carbonated water or lemonade (lemon-lime soda). The most common variety is Apfelschorle (made from apple juice and sparkling mineral water). Large bottles of Schorle can be found at most grocers, stores, supermarkets and anywhere else where carbonated drinks are sold, next to the soda. Due to its dilution it is less sweet or alcoholic than the original beverage, making it better suited as a refreshment on hot summer days or as an alternative to beer at the biergarten or .",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "EAM-2201\nEAM-2201 (4'-ethyl-AM-2201, 5\"-fluoro-JWH-210) is a drug that presumably acts as a potent agonist for the cannabinoid receptors. It had never previously been reported in the scientific or patent literature, and was first identified by laboratories in Japan in July 2012 as an ingredient in synthetic cannabis smoking blends Like the closely related MAM-2201 which had been first reported around a year earlier, EAM-2201 thus appears to be another novel compound invented by designer drug suppliers specifically for recreational use. Structurally, EAM-2201 is a hybrid of two known cannabinoid compounds JWH-210 and AM-2201, both of which had previously been used as active ingredients in synthetic cannabis blends before being banned in many countries.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Tampico Beverages\nTampico Beverages is a manufacturer of juice concentrates, carbonated drinks, iced tea and gelatin. Selling under the TAMPICO brand name, it is available in the United States and more than 55 countries around the globe. Tampico Beverages is wholly owned by Houchens Industries, Inc, since 2008.",
+            "Ceylon Cold Stores\nCeylon Cold Stores (CCS), trading as Elephant House, is a Sri Lankan company which produces carbonated drinks, ice cream and processed meat products. Despite competition from global competitors such as Coca-Cola and Pepsi, Elephant Soft Drinks remains the market leader in Sri Lanka."
+        ],
+        "thoughts": [
+            "1. Sidecar (cocktail) - Similar to Margarita in ingredients, as it also contains a type of orange liqueur and lemon juice.\n2. Caesar (cocktail) - Similar to Margarita in terms of being a popular cocktail, but with different ingredients such as vodka, tomato juice, and clam broth.\n3. Schorle - While not similar in ingredients, it is a popular beverage like the Margarita and can be served as a refreshing drink.\n4. SodaStream - Not similar in ingredients, but like the Margarita, it is a popular drink option for consumers.\n5. EAM-2201 - Not similar in ingredients or purpose, as it is a drug and not a beverage.",
+            "The drinks typically served shaken with ice are the Batida and the Margarita. The Batida is a Brazilian cocktail made with cacha\u00e7a, fruit juice, and sugar, and is blended or shaken with ice. The Margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, and is served shaken with ice (on the rocks).",
+            "The drinks typically served shaken with ice are the Batida."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about cocktails that are served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the cocktail named Margarita.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify characteristics and key ingredients of the Margarita cocktail.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Using the characteristics of the Margarita, filter out any names that are similar to Margarita from the list of shaken cocktails.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine the cocktail name that fits the criteria: served shaken with ice and not to be mistaken with 'Margarita'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the task into two main retrieval steps: one for gathering a list of cocktails that are shaken with ice, and another to gather information about the Margarita cocktail specifically. A reasoning step is used to identify key characteristics of the Margarita cocktail. Then, using this information, another reasoning step filters out any potential cocktails from the shaken list that might be confused with Margarita, focusing on names. Finally, the graph concludes with a node that pulls together all this filtered information to provide an answer to the question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "Margarida\nMargarida is a Portuguese female given name, which is a variant of the name Margaret, and which means \"daisy flower\" in Portuguese. It should not be mistaken for the Mexican alcoholic drink Margarita or the Italian Margherita pizza. The given name may refer to:",
+            "Gisa Geert\nGisa Geert, stage name Margarita Gross (7 June 1900, Vienna; \u20202 April 1991, Madrid), was an Austrian actress and choreographer, who was very active in Italy during the 1940s to 1960s.",
+            "Sistrum\nA sistrum (plural: sistrums or Latin sistra; from the Greek \u03c3\u03b5\u1fd6\u03c3\u03c4\u03c1\u03bf\u03bd \"seistron\" of the same meaning; literally \"that which is being shaken\", from \u03c3\u03b5\u03af\u03b5\u03b9\u03bd \"seiein\", \"to shake\") is a musical instrument of the percussion family, chiefly associated with ancient Iraq and Egypt. It consists of a handle and a U-shaped metal frame, made of brass or bronze and between 30 and 76\u00a0cm in width. When shaken the small rings or loops of thin metal on its movable crossbars produce a sound that can be from a soft clank to a loud jangling. Its name in the ancient Egyptian language was sekhem \"(s\u1e2bm)\" and sesheshet \"(s\u0161\u0161t).\" Sekhem is the simpler, hoop-like sistrum, while sesheshet (an onomatopoeic word) is the naos-shaped one.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Brian Smith (ice hockey, born 1940)\nBrian Desmond \"Smitty\" Smith (September 6, 1940 \u2013 August 2, 1995) was a Canadian professional hockey player and sportscaster. Smith was born in Ottawa, Ontario, the son of former professional ice hockey player Des Smith and brother of former professional hockey goaltender Gary Smith. Smith was a professional ice hockey player from 1960 to 1973, playing in the National Hockey League (NHL) with the Los Angeles Kings and Minnesota North Stars. Following his hockey career, Smith was a broadcaster for CJOH-TV in Ottawa until 1995, when he was shot and killed by gunman Jeffrey Arenburg.",
+            "Aloinopsis\nAloinopsis is a genus of ice plants from South Africa."
+        ],
+        "thoughts": [
+            "The cocktails that are served shaken with ice include the Batida, Margarita, Bee's Knees, and Damn the Weather. These cocktails are prepared by shaking the ingredients with ice to chill and mix them before serving.",
+            "The Margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. It can be served shaken with ice, blended with ice, or without ice. The drink is traditionally served in a margarita glass. It should not be mistaken for the Portuguese given name Margarida, the Colombian singer Margarita Vargas, the Austrian actress Gisa Geert, the Brazilian cocktail Batida, or Princess Margarita of Leiningen.",
+            "Key ingredients of a Margarita cocktail include tequila, triple sec, and lime or lemon juice. The cocktail can be served with salt or sugar on the rim of the glass and can be served shaken with ice, blended with ice, or without ice. It is traditionally served in a margarita glass. The characteristics of a Margarita cocktail include a balance of sweet, sour, and strong flavors, with a refreshing and citrusy taste.",
+            "Based on the characteristics of the Margarita, we will filter out any names that are similar to Margarita from the list of shaken cocktails. The cocktails that are similar to Margarita in terms of ingredients and flavor profile are the Bee's Knees and Damn the Weather. Therefore, we will filter out these names from the list of shaken cocktails.",
+            "The cocktail name that fits the criteria of being served shaken with ice and not to be mistaken with 'Margarita' is the \"Cosmopolitan\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify beverages that are commonly served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify characteristics and ingredients of a Margarita cocktail.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List cocktails or beverages that might have similar names or are commonly confused with a Margarita.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the list from Node 1 with the information gathered about Margaritas to identify beverages that should not be mistaken for a Margarita.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "From the results of Node 4, identify any beverages that also appear in the list from Node 3 as commonly confused with a Margarita.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task of identifying a beverage served shaken with ice but not to be confused with a Margarita. \n1. Node 1 retrieves and reasons about drinks commonly served in a shaken form.\n2. Node 2 gathers information specifically about the Margarita cocktail to understand its ingredients and presentation.\n3. Node 3 lists cocktails or drinks that are often confused with Margarita due to similar names or common mistakes.\n4. Node 4 performs a reasoning step to compare drinks listed in Node 1 with Margarita characteristics from Node 2 to find items shaken with ice but distinct from Margaritas.\n5. Node 5 intersect the results from Node 4 with the list of commonly confused drinks from Node 3 to pinpoint any drink matching the criteria: shaken with ice and not to be mistaken for a Margarita."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Sidecar (cocktail)\nThe sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.",
+            "Moment distribution method\nThe moment distribution method is a structural analysis method for statically indeterminate beams and frames developed by Hardy Cross. It was published in 1930 in an ASCE journal. The method only accounts for flexural effects and ignores axial and shear effects. From the 1930s until computers began to be widely used in the design and analysis of structures, the moment distribution method was the most widely practiced method.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "The Recipe Project\nThe Recipe Project is a CD-book combo that is the result of collaboration by both chefs and musicians to examine the previously unexplored correlation between music and food. Presented by Black Balloon Publishing, The Recipe Project includes a CD of the recipes of famous chefs put to music, as well as a book in which those recipes are written down (not unlike lyrics) plus interviews with the chefs themselves, and the thoughts of top culinary writers.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "Black Velvet (beer cocktail)\nThe Black Velvet is a beer cocktail made from stout (often Guinness) and white, sparkling wine, traditionally Champagne.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Weighted correlation network analysis\nWeighted correlation network analysis, also known as weighted gene co-expression network analysis (WGCNA), is a widely used data mining method especially for studying biological networks based on pairwise correlations between variables. While it can be applied to most high-dimensional data sets, it has been most widely used in genomic applications. It allows one to define modules (clusters), intramodular hubs, and network nodes with regard to module membership, to study the relationships between co-expression modules, and to compare the network topology of different networks (differential network analysis). WGCNA can be used as data reduction technique (related to oblique factor analysis ), as clustering method (fuzzy clustering), as feature selection method (e.g. as gene screening method), as framework for integrating complementary (genomic) data (based on weighted correlations between quantitative variables), and as data exploratory technique. Although WGCNA incorporates traditional data exploratory techniques, its intuitive network language and analysis framework transcend any standard analysis technique. Since it uses network methodology and is well suited for integrating complementary genomic data sets, it can be interpreted as systems biologic or systems genetic data analysis method. By selecting intramodular hubs in consensus modules, WGCNA also gives rise to network based meta analysis techniques",
+            "Final Recipe\nFinal Recipe is a 2013 South Korean-Thai drama film directed by Gina Kim and written by George Huang, who adapted a story by Kim. It stars Michelle Yeoh, Henry Lau, and Chin Han. Lau plays a young man who must impress the host of a cooking show (Yeoh) and her chef husband (Han) to save his grandfather's restaurant. It premiered at the San Sebasti\u00e1n International Film Festival.",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today."
+        ],
+        "thoughts": [
+            "Beverages commonly served shaken with ice include the Caesar cocktail, Sidecar cocktail, Bee's Knees cocktail, and Damn the Weather cocktail. These drinks are typically prepared by shaking the ingredients with ice in a cocktail shaker to chill and mix them before serving.",
+            "Characteristics and ingredients of a Margarita cocktail:\n- Ingredients: Tequila, triple sec, lime or lemon juice\n- Served with salt or sugar on the rim of the glass\n- Can be served on the rocks, frozen, or straight up\n- Traditionally served in a margarita glass\n- Typically garnished with a lime wedge",
+            "Based on the information gathered, the beverages that should not be mistaken for a Margarita include the Caesar cocktail, Sidecar cocktail, Bee's Knees cocktail, and Damn the Weather cocktail. These drinks have different ingredients and characteristics compared to a Margarita, such as different types of alcohol, different garnishes, and different serving methods. Therefore, it is important to differentiate between these beverages to ensure the correct drink is served.",
+            "1. Margarita - a cocktail made with tequila, orange liqueur, and lime juice, often served with a salted rim\n2. Daiquiri - a cocktail made with rum, lime juice, and sugar\n3. Mojito - a cocktail made with white rum, sugar, lime juice, soda water, and mint\n4. Caipirinha - a Brazilian cocktail made with cacha\u00e7a, sugar, and lime\n5. Martini - a cocktail made with gin and vermouth, often garnished with an olive or a lemon twist\n6. Mimosa - a cocktail made with champagne and chilled citrus juice, usually orange juice\n7. Paloma - a cocktail made with tequila, grapefruit soda, and lime juice, often served with a salted rim\n8. Cosmopolitan - a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed lime juice\n9. Margherita - a type of pizza topped with tomato, mozzarella, and basil\n10. Maraschino - a liqueur made from sour Marasca cherries",
+            "Based on the results from Node 4, the beverage \"Margarita\" also appears in the list from Node 3 as commonly confused with a Margarita."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about drinks that are served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the drink called Margarita.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify drinks that are commonly served shaken with ice, excluding those with names similar to Margarita.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find a specific drink that matches the criteria: served shaken with ice and not mistaken with the name Margarita.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is structured to identify a drink that is served shaken with ice but should not be confused with the Margarita. The first node gathers general information about drinks served shaken with ice. The second node focuses on information about the Margarita, to help in distinguishing names. The third node combines this information to filter out drinks that are served shaken with ice and do not have names similar to Margarita. The final node then identifies a specific drink fitting this description."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Ceylon Cold Stores\nCeylon Cold Stores (CCS), trading as Elephant House, is a Sri Lankan company which produces carbonated drinks, ice cream and processed meat products. Despite competition from global competitors such as Coca-Cola and Pepsi, Elephant Soft Drinks remains the market leader in Sri Lanka.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "Margarida\nMargarida is a Portuguese female given name, which is a variant of the name Margaret, and which means \"daisy flower\" in Portuguese. It should not be mistaken for the Mexican alcoholic drink Margarita or the Italian Margherita pizza. The given name may refer to:",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation.",
+            "Gisa Geert\nGisa Geert, stage name Margarita Gross (7 June 1900, Vienna; \u20202 April 1991, Madrid), was an Austrian actress and choreographer, who was very active in Italy during the 1940s to 1960s.",
+            "Schorle\nSchorle is a German beverage made by diluting juice or wine with carbonated water or lemonade (lemon-lime soda). The most common variety is Apfelschorle (made from apple juice and sparkling mineral water). Large bottles of Schorle can be found at most grocers, stores, supermarkets and anywhere else where carbonated drinks are sold, next to the soda. Due to its dilution it is less sweet or alcoholic than the original beverage, making it better suited as a refreshment on hot summer days or as an alternative to beer at the biergarten or ."
+        ],
+        "thoughts": [
+            "The drinks that are served shaken with ice are the Margarita, Batida, and Banta. The Margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served shaken with ice. The Batida is a Brazilian cocktail made with cacha\u00e7a, fruit juice (or coconut milk), and sugar, and is blended or shaken with ice. The Banta, also known as Fotash Jawl in Bengali, Goli Soda, or Goti Soda, is a carbonated lemon or orange-flavored soft drink popular in India, often sold mixed with lemon juice, crushed ice, chaat masala, and kala namak.",
+            "A margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). It is traditionally served in a margarita glass.",
+            "The drinks commonly served shaken with ice, excluding those with names similar to Margarita, are the Batida and Banta. The Batida is a Brazilian cocktail made with cacha\u00e7a, fruit juice (or coconut milk), and sugar, and is blended or shaken with ice. The Banta is a carbonated lemon or orange-flavored soft drink popular in India, often sold mixed with lemon juice, crushed ice, chaat masala, and kala namak.",
+            "The specific drink that matches the criteria of being served shaken with ice and not mistaken with the name Margarita is the Batida. It is a Brazilian cocktail made with cacha\u00e7a, fruit juice (or coconut milk), and sugar, and is blended or shaken with ice."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about beverages served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about beverages that have similar names to 'Margarita'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "From the beverages retrieved in Node 1, find ones that could be mistaken with 'Margarita'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify which of the beverages from Node 3 is served shaken with ice.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by retrieving beverages served shaken with ice (Node 1) and beverages with names similar to 'Margarita' (Node 2). The reasoning step in Node 3 determines which beverages from the list obtained in Node 1 could be mistaken for 'Margarita', utilizing the similarity information from Node 2. Finally, Node 4 identifies which of these potential candidates is actually served shaken with ice, thus providing an answer to the original question."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Tampico Beverages\nTampico Beverages is a manufacturer of juice concentrates, carbonated drinks, iced tea and gelatin. Selling under the TAMPICO brand name, it is available in the United States and more than 55 countries around the globe. Tampico Beverages is wholly owned by Houchens Industries, Inc, since 2008.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Margarida\nMargarida is a Portuguese female given name, which is a variant of the name Margaret, and which means \"daisy flower\" in Portuguese. It should not be mistaken for the Mexican alcoholic drink Margarita or the Italian Margherita pizza. The given name may refer to:",
+            "Gisa Geert\nGisa Geert, stage name Margarita Gross (7 June 1900, Vienna; \u20202 April 1991, Madrid), was an Austrian actress and choreographer, who was very active in Italy during the 1940s to 1960s."
+        ],
+        "thoughts": [
+            "Beverages served shaken with ice include the Batida, Margarita, Bee's Knees, and Damn the Weather cocktails. The Batida is a Brazilian cocktail made with cacha\u00e7a, fruit juice (or coconut milk), and sugar, and is traditionally served with feijoada. The Margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The Bee's Knees is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey, and the Damn the Weather is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener. These cocktails are all served shaken with ice.",
+            "Beverages with similar names to 'Margarita' include Tampico Beverages, which is a manufacturer of juice concentrates, carbonated drinks, iced tea, and gelatin, and Faygo Beverages, Inc., a soft drink company headquartered in Detroit, Michigan. Additionally, the name 'Margarita' is also associated with a popular cocktail consisting of tequila, triple sec, and lime or lemon juice.",
+            "The beverages that could be mistaken with 'Margarita' include Tampico Beverages and Faygo Beverages, Inc. These beverages have similar names to 'Margarita' but are not actually cocktails.",
+            "The beverage served shaken with ice from Node 3 is the Margarita."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify beverages that are served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about beverages with names similar to 'Margarita'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the list of beverages from Node 1 to identify those that should not be mistaken with 'Margarita' based on similarity in name but different in recipe or origin.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the problem by first gathering all potential beverages that are prepared by being shaken with ice. Simultaneously, it retrieves information about drinks with names similar to 'Margarita'. The reasoning step then analyzes these results to find a beverage that is served in the same style but has a name that could be easily confused with 'Margarita', potentially due to similarity in sound or spelling but is distinctly different. The synthesis of these steps provides the answer without directly assuming the most common drinks like 'Martini', which fit the criteria."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "Tampico Beverages\nTampico Beverages is a manufacturer of juice concentrates, carbonated drinks, iced tea and gelatin. Selling under the TAMPICO brand name, it is available in the United States and more than 55 countries around the globe. Tampico Beverages is wholly owned by Houchens Industries, Inc, since 2008.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "Margarida\nMargarida is a Portuguese female given name, which is a variant of the name Margaret, and which means \"daisy flower\" in Portuguese. It should not be mistaken for the Mexican alcoholic drink Margarita or the Italian Margherita pizza. The given name may refer to:",
+            "East African Breweries\nEast African Breweries Limited, commonly referred to as EABL, is a Kenya-based holding company that manufactures branded beer, spirits, and non-alcoholic beverages.",
+            "Gisa Geert\nGisa Geert, stage name Margarita Gross (7 June 1900, Vienna; \u20202 April 1991, Madrid), was an Austrian actress and choreographer, who was very active in Italy during the 1940s to 1960s."
+        ],
+        "thoughts": [
+            "The beverages that are served shaken with ice are Batida, Margarita, Bee's Knees, Damn the Weather, and Caesar.",
+            "The information retrieved includes details about Tampico Beverages, a manufacturer of juice concentrates and carbonated drinks, as well as information about a Colombian singer named Margarita La Diosa de la Cumbia. Additionally, there is information about the cocktail \"Margarita,\" which consists of tequila, triple sec, and lime or lemon juice. There is also information about Princess Margarita of Leiningen, a member of European royalty, and the Portuguese female given name \"Margarida,\" which means \"daisy flower.\" This information is relevant to beverages and names similar to \"Margarita.\"",
+            "Based on the information retrieved, the beverages that should not be mistaken with 'Margarita' based on similarity in name but different in recipe or origin are:\n- Tampico Beverages (manufacturer of juice concentrates and carbonated drinks)\n- Margarita La Diosa de la Cumbia (Colombian singer)\n- Princess Margarita of Leiningen (European royalty)\n- Portuguese female given name \"Margarida\" (meaning \"daisy flower\")\n\nThese beverages and individuals are not related to the cocktail \"Margarita\" consisting of tequila, triple sec, and lime or lemon juice."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify beverages that are typically served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify beverages whose names might be easily confused with 'Margarita'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Cross-reference the list of shaken beverages with the list of beverages similar in name to 'Margarita'. Find any overlaps.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "From the cross-referenced beverages, find the one that is commonly served shaken with ice and often confused with 'Margarita'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by identifying beverages that are typically served shaken with ice and beverages whose names might be confused with 'Margarita'. The reasoning node then cross-references these two lists to identify any overlaps. Finally, the last node filters out and presents the beverage that fits both criteria."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Sidecar (cocktail)\nThe sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.",
+            "Moment distribution method\nThe moment distribution method is a structural analysis method for statically indeterminate beams and frames developed by Hardy Cross. It was published in 1930 in an ASCE journal. The method only accounts for flexural effects and ignores axial and shear effects. From the 1930s until computers began to be widely used in the design and analysis of structures, the moment distribution method was the most widely practiced method.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Black Velvet (beer cocktail)\nThe Black Velvet is a beer cocktail made from stout (often Guinness) and white, sparkling wine, traditionally Champagne.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Weighted correlation network analysis\nWeighted correlation network analysis, also known as weighted gene co-expression network analysis (WGCNA), is a widely used data mining method especially for studying biological networks based on pairwise correlations between variables. While it can be applied to most high-dimensional data sets, it has been most widely used in genomic applications. It allows one to define modules (clusters), intramodular hubs, and network nodes with regard to module membership, to study the relationships between co-expression modules, and to compare the network topology of different networks (differential network analysis). WGCNA can be used as data reduction technique (related to oblique factor analysis ), as clustering method (fuzzy clustering), as feature selection method (e.g. as gene screening method), as framework for integrating complementary (genomic) data (based on weighted correlations between quantitative variables), and as data exploratory technique. Although WGCNA incorporates traditional data exploratory techniques, its intuitive network language and analysis framework transcend any standard analysis technique. Since it uses network methodology and is well suited for integrating complementary genomic data sets, it can be interpreted as systems biologic or systems genetic data analysis method. By selecting intramodular hubs in consensus modules, WGCNA also gives rise to network based meta analysis techniques",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "Beverages that are typically served shaken with ice include the Caesar cocktail, the Bee's Knees cocktail, and the Damn the Weather cocktail.",
+            "1. Margarita (cocktail)\n2. My Heidelberg, I Can Not Forget You (film)\n3. Please Take Care of My Refrigerator (TV show)\n4. Never Let Me Go (Johnny Ace song)",
+            "The overlap between the list of shaken beverages and the list of beverages similar in name to 'Margarita' is the Margarita cocktail.",
+            "The beverage commonly served shaken with ice and often confused with 'Margarita' is the Daiquiri."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is served shaken with ice and should not be mistaken with the name Margarita?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify drinks that are traditionally served shaken with ice.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List drinks that have a name similar to 'Margarita'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Cross-reference to find a drink that is both served shaken with ice and has a name similar to 'Margarita'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires identifying a drink that is both prepared shaken with ice and has a name commonly confused with 'Margarita'. The execution graph begins by retrieving drinks known for being shaken with ice and those with names similar to 'Margarita'. The reasoning step involves cross-referencing these to find the specific drink fitting both criteria."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Batida\nBatida is a Brazilian cocktail, and is one of several Brazilian cocktails that are made with the national alcoholic drink \"cacha\u00e7a\". In Portuguese \"batida\" means \"shaken\" or \"milkshake\", and the word also means a crash, usually used when referring to a car crash. This beverage is made with cacha\u00e7a, fruit juice (or coconut milk), and sugar. It is blended or shaken with ice. In Rio de Janeiro and S\u00e3o Paulo, batidas are traditionally served with the Brazilian national dish, feijoada.",
+            "Margarita\nA margarita is a cocktail consisting of tequila, triple sec, and lime or lemon juice, often served with salt or sugar on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up). Although it has become acceptable to serve a margarita in a wide variety of glass types, ranging from cocktail and wine glasses to pint glasses and even large schooners, the drink is traditionally served in the eponymous margarita glass, a stepped-diameter variant of a cocktail glass or champagne coupe.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Ceylon Cold Stores\nCeylon Cold Stores (CCS), trading as Elephant House, is a Sri Lankan company which produces carbonated drinks, ice cream and processed meat products. Despite competition from global competitors such as Coca-Cola and Pepsi, Elephant Soft Drinks remains the market leader in Sri Lanka.",
+            "Margarita Vargas\nMargarita Mar\u00eda de Santa Teresita Vargas Gaviria (] ) better known by her stage name Margarita La Diosa de la Cumbia , is a Colombian singer.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Damn the Weather (cocktail)\nA Damn the Weather (or Damn-the-Weather) is a Prohibition Era cocktail made with Gin, sweet vermouth, orange juice, and a sweetener (either Triple Sec or Cura\u00e7ao). It is served shaken and chilled, often with a slice of orange.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Princess Margarita of Leiningen\nPrincess Margarita of Leiningen (Full German name: \"Margarita Ileana Viktoria Alexandra Prinzessin zu Leiningen\") (born 9 May 1932 in Coburg, Bavaria, Germany; committed suicide on 16 June 1996 in \u00dcberlingen, Baden-W\u00fcrttemberg, Germany) was a Princess of Leiningen by birth and the Princess of Hohenzollern by marriage. Margarita was the fourth child and second-eldest daughter of Karl, 6th Prince of Leiningen and his wife Grand Duchess Maria Kirillovna of Russia. Margarita was the Princess consort of Hohenzollern 6 February 1965 \u2013 16 June 1996.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Margarida\nMargarida is a Portuguese female given name, which is a variant of the name Margaret, and which means \"daisy flower\" in Portuguese. It should not be mistaken for the Mexican alcoholic drink Margarita or the Italian Margherita pizza. The given name may refer to:",
+            "Gisa Geert\nGisa Geert, stage name Margarita Gross (7 June 1900, Vienna; \u20202 April 1991, Madrid), was an Austrian actress and choreographer, who was very active in Italy during the 1940s to 1960s."
+        ],
+        "thoughts": [
+            "The drinks traditionally served shaken with ice are Batida, Margarita, Bee's Knees, Damn the Weather, and Caesar. These cocktails are typically made with a combination of alcohol, fruit juice, and other ingredients, and are shaken with ice to chill and mix the ingredients before serving.",
+            "1. Margarita (cocktail)\n2. Margarita Vargas (Colombian singer)\n3. Princess Margarita of Leiningen\n4. Margarida (Portuguese given name)\n5. Margarita Gross (Austrian actress)\n6. Elephant House (Sri Lankan company producing carbonated drinks)",
+            "Based on the upstream tasks, the drink that is both served shaken with ice and has a name similar to 'Margarita' is the \"Batida\"."
+        ],
+        "is_best": false
+    }
+]

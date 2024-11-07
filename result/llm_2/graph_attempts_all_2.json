@@ -1,0 +1,582 @@
+[
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the total number of campuses for Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the total number of campuses for California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the total number of campuses for Dalhousie University and California State Polytechnic University, Pomona, and determine which one has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by retrieving information about the number of campuses for each university separately. These retrieval nodes can execute in parallel since they are independent tasks. After obtaining the required information, a reasoning node compares the number of campuses between Dalhousie University and California State Polytechnic University, Pomona, to determine which has more."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres."
+        ],
+        "thoughts": [
+            "Dalhousie University has a total of three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "The total number of campuses for California State Polytechnic University, Pomona is one.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has only one. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the number of campuses of Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the number of campuses of California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses of Dalhousie University and California State Polytechnic University, Pomona to determine which one has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by retrieving the necessary data about the number of campuses for each university involved in the question. Nodes 1 and 2 execute in parallel since the retrieval of information for each university is independent of the other. Once both pieces of data are retrieved, Node 3 compares the results to determine which university has more campuses, synthesizing the information to provide the final answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+            "Ateneo de Manila University\nThe Ateneo de Manila University (Filipino: \"Pamantasang Ateneo de Manila;\" Spanish:\" Universidad Ateneo de Manila\") is a private research university in Quezon City, Philippines. Founded in 1859 by the Society of Jesus, the Ateneo is the third-oldest university in the Philippines. Ateneo offers elementary and secondary education exclusively to male students (and has recently opened the Senior High School to girls). The undergraduate and graduate programmes are coeducational and organized into four schools, collectively known as the Loyola Schools, which are located at its main campus at Loyola Heights. Four professional schools occupy campuses in different parts of Metro Manila."
+        ],
+        "thoughts": [
+            "Dalhousie University has three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has only one campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the number of campuses associated with Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the number of campuses associated with California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses between Dalhousie University and California State Polytechnic University, Pomona, to determine which has more campuses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first two nodes (1 and 2) are retrieval and reasoning nodes that gather data about the number of campuses for each university. The final node (3) is a reasoning node that compares the numbers retrieved in nodes 1 and 2. This setup allows for parallel processing of the information gathering for both universities and a final synthesis step for the comparison."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula."
+        ],
+        "thoughts": [
+            "Dalhousie University has a total of three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona is associated with one campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has only one campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the number of campuses that Dalhousie University has.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the number of campuses that California State Polytechnic University, Pomona has.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses between Dalhousie University and California State Polytechnic University, Pomona to determine which has more campuses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two retrieval and reasoning nodes to gather information about the number of campuses each university has. The third node is a reasoning step that compares the retrieved numbers to determine which university has more campuses."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+            "Ateneo de Manila University\nThe Ateneo de Manila University (Filipino: \"Pamantasang Ateneo de Manila;\" Spanish:\" Universidad Ateneo de Manila\") is a private research university in Quezon City, Philippines. Founded in 1859 by the Society of Jesus, the Ateneo is the third-oldest university in the Philippines. Ateneo offers elementary and secondary education exclusively to male students (and has recently opened the Senior High School to girls). The undergraduate and graduate programmes are coeducational and organized into four schools, collectively known as the Loyola Schools, which are located at its main campus at Loyola Heights. Four professional schools occupy campuses in different parts of Metro Manila."
+        ],
+        "thoughts": [
+            "Dalhousie University has three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has only one campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the number of campuses for Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the number of campuses for California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses from the information retrieved for Dalhousie University and California State Polytechnic University, Pomona, to determine which has more campuses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with two parallel retrieval tasks to gather the necessary information on the number of campuses of the two universities in question. The nodes labeled 1 and 2 are responsible for retrieving this information separately for each university. Once the data is collected, node 3 performs a reasoning task that involves comparing the numbers to determine which university has more campuses. This structure allows for efficient information gathering and comparison, leading to a clear and concise answer to the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres."
+        ],
+        "thoughts": [
+            "Dalhousie University has a total of three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has one main campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the number of campuses Dalhousie University has.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the number of campuses California State Polytechnic University, Pomona has.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses of Dalhousie University and California State Polytechnic University, Pomona to determine which one has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to first independently retrieve the number of campuses each university has, which are necessary pieces of information. Once both pieces of information are retrieved, the next step is to compare them to determine which university has more campuses. The reasoning step (Node 3) synthesizes the information from the two retrieval steps (Nodes 1 and 2) to answer the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+            "Ateneo de Manila University\nThe Ateneo de Manila University (Filipino: \"Pamantasang Ateneo de Manila;\" Spanish:\" Universidad Ateneo de Manila\") is a private research university in Quezon City, Philippines. Founded in 1859 by the Society of Jesus, the Ateneo is the third-oldest university in the Philippines. Ateneo offers elementary and secondary education exclusively to male students (and has recently opened the Senior High School to girls). The undergraduate and graduate programmes are coeducational and organized into four schools, collectively known as the Loyola Schools, which are located at its main campus at Loyola Heights. Four professional schools occupy campuses in different parts of Metro Manila."
+        ],
+        "thoughts": [
+            "Dalhousie University has three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has only one campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the number of campuses Dalhousie University has.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the number of campuses California State Polytechnic University, Pomona has.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses of Dalhousie University and California State Polytechnic University, Pomona to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two retrieval nodes where information about the number of campuses for each university is obtained. The final reasoning node compares these numbers to determine which university has more campuses."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+            "Ateneo de Manila University\nThe Ateneo de Manila University (Filipino: \"Pamantasang Ateneo de Manila;\" Spanish:\" Universidad Ateneo de Manila\") is a private research university in Quezon City, Philippines. Founded in 1859 by the Society of Jesus, the Ateneo is the third-oldest university in the Philippines. Ateneo offers elementary and secondary education exclusively to male students (and has recently opened the Senior High School to girls). The undergraduate and graduate programmes are coeducational and organized into four schools, collectively known as the Loyola Schools, which are located at its main campus at Loyola Heights. Four professional schools occupy campuses in different parts of Metro Manila."
+        ],
+        "thoughts": [
+            "Dalhousie University has three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has one main campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the total number of campuses for Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the total number of campuses for California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses between Dalhousie University and California State Polytechnic University, Pomona, to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two retrieval nodes followed by a reasoning node. The first node retrieves the number of campuses for Dalhousie University. The second node retrieves the number of campuses for California State Polytechnic University, Pomona. The third node compares the retrieved numbers to determine which university has more campuses."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Richard Ziser\nRichard Ziser is a Nevada Real Estate Investor, Socially Conservative Political activist and U.S. Republican Politician. He was born June 7, 1953, in Pomona, CA., and has resided in Las Vegas Nevada since 1991. He graduated from California State Polytechnic University, Pomona (Cal Poly Pomona) with a BS in Industrial Engineering, 1976; then subsequently from Simon Greenleaf University in Santa Ana, Ca. (now a campus of Trinity International University, with an MA in Christian Apologetics in 1989.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres."
+        ],
+        "thoughts": [
+            "Dalhousie University has a total of three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has one main campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the number of campuses for Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the number of campuses for California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses of Dalhousie University and California State Polytechnic University, Pomona, to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph consists of two initial retrieval nodes (1 and 2) to gather information on the number of campuses for each university. These nodes operate independently as the retrieval of this information does not depend on each other. The final node (3) is a reasoning step where the retrieved data from both previous nodes is compared to answer the initial question about which university has more campuses."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Cal Poly Pomona College of Engineering\nThe Cal Poly Pomona College of Engineering is the engineering college at California State Polytechnic University, Pomona (Cal Poly Pomona or Cal Poly) located in Pomona, California, United States. Well known for its \"learn by doing\" philosophy, the college's motto is: \"\"making imagination real\"\". Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States. In the 2017 \"U.S. News & World Report\" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and \"has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California.\"",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state-related, land-grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools, Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special-mission campuses located across the state. Penn State has been labeled one of the \"Public Ivies,\" a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.",
+            "Northwestern University\nNorthwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.",
+            "University of Rochester Medical Center\nThe University of Rochester Medical Center (URMC), located in Rochester, New York, is one of the main campuses of the University of Rochester and comprises the university's primary medical education, research and patient care facilities.",
+            "University of Colorado\nThe University of Colorado system is a system of public universities in Colorado consisting of four campuses: University of Colorado Boulder, University of Colorado Colorado Springs, University of Colorado Denver in downtown Denver and at the Anschutz Medical Campus in Aurora. It is governed by the elected, nine-member Board of Regents of the University of Colorado.",
+            "Hamdard University\nHamdard University (Urdu: ) is a private research university with campuses in Karachi and Islamabad, Pakistan. It was founded in 1991 by the renowned philanthropist Hakim Said of the Hamdard Foundation. Hamdard is one of the first and the oldest private institutions of higher education in Pakistan. In Karachi, Hamdard University is the largest private research university with a campus area of over 350 acres.",
+            "Ateneo de Manila University\nThe Ateneo de Manila University (Filipino: \"Pamantasang Ateneo de Manila;\" Spanish:\" Universidad Ateneo de Manila\") is a private research university in Quezon City, Philippines. Founded in 1859 by the Society of Jesus, the Ateneo is the third-oldest university in the Philippines. Ateneo offers elementary and secondary education exclusively to male students (and has recently opened the Senior High School to girls). The undergraduate and graduate programmes are coeducational and organized into four schools, collectively known as the Loyola Schools, which are located at its main campus at Loyola Heights. Four professional schools occupy campuses in different parts of Metro Manila."
+        ],
+        "thoughts": [
+            "Dalhousie University has three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+            "California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has a total of four campuses, while California State Polytechnic University, Pomona has only one campus. Therefore, Dalhousie University has more campuses than California State Polytechnic University, Pomona."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which university has more campuses, Dalhousie University or California State Polytechnic University, Pomona?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the number of campuses at Dalhousie University.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the number of campuses at California State Polytechnic University, Pomona.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of campuses of Dalhousie University with California State Polytechnic University, Pomona, and determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph begins with two parallel retrieval steps: one to find information about the campuses of Dalhousie University and another for California State Polytechnic University, Pomona. Once the data is collected, the reasoning node compares the numbers to determine which university has more campuses, thus directly answering the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "California State Polytechnic University, Pomona\nCalifornia State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States. It is one of two polytechnics in the California State University system.",
+            "Julian A. McPhee\nJulian Aeneas McPhee (February 7, 1896 \u2013 November 10, 1967) was the sixth university president of California Polytechnic State University, San Luis Obispo (Cal Poly SLO) from 1933 to 1966 and the first president of California State Polytechnic University, Pomona (Cal Poly Pomona) from 1938 to 1966.",
+            "Cal Poly Pomona Broncos women's basketball\nThe Cal Poly Pomona Broncos women's basketball team is the women's basketball team that represents California State Polytechnic University, Pomona, in Pomona, California. The school's team currently competes in the California Collegiate Athletic Association.",
+            "Cal Poly Pomona University Library\nThe Cal Poly Pomona University Library is the main library on the campus of California State Polytechnic University, Pomona (Cal Poly Pomona). It has in its collection 670,580 books; 6,883 serial subscriptions and 10,417 audiovisual materials.",
+            "1981 Cal Poly Pomona Broncos football team\nThe 1981 Cal Poly Pomona Broncos football team represented California State Polytechnic University, Pomona during the 1981 NCAA Division II football season. Cal Poly Pomona competed in the California Collegiate Athletic Association (CCAA).",
+            "International Polytechnic High School\nInternational Polytechnic High School, commonly abbreviated merely as iPoly, is a public college preparatory demonstration high school (9-12) located on the California State Polytechnic University, Pomona (Cal Poly Pomona) campus and operated by the Los Angeles County Office of Education (LACOE) in conjunction with the College of Education and Integrative Studies at the university. iPoly's curriculum is fully accredited by the Western Association of Schools and Colleges and is approved by the University of California and California State University. It maintains a unique affiliation with the Los Angeles County High School for the Arts (LACHSA), which is also run by LACOE. Since iPoly does not lie in a fixed school district, it draws students from throughout Los Angeles, San Bernardino, Orange and Riverside counties. The majority of students come from the Pomona and San Gabriel valleys. In 2009 and 2013, iPoly was honored as a California Distinguished School by the California Department of Education.",
+            "Cal Poly Pomona College of Environmental Design\nThe Cal Poly Pomona College of Environmental Design (CENV) is a college part of the California State Polytechnic University, Pomona (Cal Poly Pomona). The college houses over 1,600 students; making it one of largest environmental design programs in the United States. The college offers bachelor's degrees in five departments, as well as three master's degree programs. It is the only academic unit within the California State University system to be associated with a Pritzker Prize laureate (often referred to as \"The Nobel Prize in Architecture\").",
+            "Cal Poly Pomona Broncos\nThe Cal Poly Pomona Broncos or Cal Poly Broncos are the athletic sports teams for the California State Polytechnic University, Pomona (Cal Poly Pomona). Cal Poly Pomona has 10 varsity sports teams and offers student participation in a wide range of sports including soccer, volleyball, track and field, basketball, softball, and baseball. Cal Poly Pomona participates at the NCAA's Division II (DII) level in the California Collegiate Athletic Association (CCAA). The Broncos have 65 CCAA championships and 14 NCAA National Championships. Current and former Cal Poly athletes have won 7 Olympic medals (3 gold, 1 silver, and 3 bronze).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks."
+        ],
+        "thoughts": [
+            "Dalhousie University has 4 campuses, located in Halifax, Truro, and Saint John.",
+            "The California State Polytechnic University, Pomona has one main campus located in Pomona, California.",
+            "Dalhousie University has more campuses than California State Polytechnic University, Pomona. Dalhousie University has 4 campuses, while California State Polytechnic University, Pomona has only one main campus."
+        ],
+        "is_best": false
+    }
+]

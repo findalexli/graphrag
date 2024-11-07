@@ -1,0 +1,536 @@
+[
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of films that Miles Doleac has acted in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the retrieved films to identify which ones are classified in the supernatural horror genre.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph is designed to first retrieve a comprehensive list of films featuring Miles Doleac. Once this list is obtained, the reasoning step filters by genre to identify which films are classified as supernatural horror, thus answering the original question."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+            "Film laboratory\nA film laboratory is a commercial service enterprise and technical facility for the film industry where specialists develop, print, and conform film material for classical film production and distribution which is based on film material, such as negative and positive, black and white and color, on different film formats: 65-70mm, 35mm, 16mm, 9.5mm, 8mm. The film laboratory managers can charge by the footage or by time used while in lab.",
+            "L (film)\nL (\"Learning\") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas. It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19\u201329 January 2012) where its international premiere will take place. The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January \u2013 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards. A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011. L is Makridis's first feature film. His short film \"The Last Fakir\" (2005) was awarded the \"Newcomer's Prize\" at the 2005 International Short Film Festival in Drama which takes place in Greece.",
+            "Life of Riley (2014 film)\nLife of Riley (French: Aimer, boire et chanter ) is a 2014 French comedy-drama film directed by Alain Resnais in his final feature film before his death. Adapted from the play \"Life of Riley\" by Alan Ayckbourn, the film had its premiere in the competition section of the 64th Berlin International Film Festival, just three weeks before Resnais died, where it won the Alfred Bauer Prize.",
+            "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015)."
+        ],
+        "thoughts": [
+            "Miles Doleac has acted in the following films:\n1. Star 67\n2. Batman (score)\n3. Film laboratory",
+            "After filtering the retrieved films, the following films are classified in the supernatural horror genre:\n1. The Conjuring\n2. The Exorcist\n3. Paranormal Activity\n4. Insidious\n5. The Babadook"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify roles played by Miles Doleac.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the movies to identify which ones are supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select the movie where Miles Doleac had a role, which is identified as a supernatural horror film.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by identifying all roles that Miles Doleac has played. The next step is reasoning, which filters these roles to determine which ones are in supernatural horror films. Finally, the reasoning node selects the specific film where Miles Doleac played a role in the supernatural horror genre. This provides the answer to the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "Wipeout (2008 U.S. game show)\nWipeout is a game show series in which contestants competed in what was billed as the \"World's Largest\" obstacle course. \"Wipeout\" was hosted and commentated by John Henson and John Anderson, while Jill Wagner acted as the \"on-location\" presenter. The show aired on ABC from June 24, 2008 until the show aired its final episode on September 7, 2014. The interim presenter for one season was Vanessa Lachey. The creators and executive producers are Matt Kunitz and Scott Larsen. Distribution of the show was handled by Endemol USA. The show was taped at Sable Ranch in Canyon Country, Santa Clarita, California, about 40 miles north of Los Angeles.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821."
+        ],
+        "thoughts": [
+            "1. Actor: Miles Doleac has had acting roles in several films and television shows, including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"\n\n2. Director: Miles Doleac directed and wrote the films \"The Historian\" and \"The Hollow\".\n\n3. Producer: Miles Doleac has produced the film \"The Historian\" and \"The Hollow\".\n\n4. Writer: Miles Doleac has written the films \"The Historian\" and \"The Hollow\".\n\n5. Supporting Actor: Miles Doleac starred in supporting roles in the films \"Don't Kill It\" and \"The Historian\".\n\n6. Professor: Miles Doleac is also a professor, although the specific subject or institution is not mentioned in the provided information.",
+            "Based on the information provided, the films \"The Historian\" and \"The Hollow\" directed, produced, and written by Miles Doleac are likely to be supernatural horror films.",
+            "The movie \"The Historian\" directed, produced, and written by Miles Doleac is a supernatural horror film."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify films featuring Miles Doleac.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "From the films identified in node 1, determine which ones are classified as supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select the specific film(s) from node 2 that Miles Doleac had a role in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with the retrieval of all films Miles Doleac has appeared in. Node 1 is responsible for gathering this information. Node 2 takes the results from Node 1 and filters them to identify which of these films fall under the supernatural horror genre, necessary to answer the type-specific aspect of the query. Finally, Node 3 examines these filtered results to pinpoint the exact film or films that fulfill both conditions: being a supernatural horror film and having Miles Doleac in the cast. Thus, the graph logically separates the retrieval and analysis tasks into sequential and interdependent steps to answer the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "List of counties in South Carolina\nThe U.S. state of South Carolina is made up of 46 counties, the maximum allowable by state law. They range in size from 359 square miles (578 square kilometers) in the case of Calhoun County to 1,358 square miles (3,517 square kilometers) in the case of Charleston County. The least populous county is McCormick County, with only 9,958 residents, while the most populous county is Greenville County, with a population of 451,225, despite the state's most populous city, Columbia, being located in Richland County.",
+            "List of Disney animated shorts\nThis is a list of animated short films produced by Walt Disney and Walt Disney Animation Studios from 1921 to the present. This includes films produced at the Laugh-O-Gram Studio which Disney founded in 1921 as well as the animation studio now owned by The Walt Disney Company, previously called the Disney Brothers Cartoon Studio (1923), The Walt Disney Studio (1926), Walt Disney Productions (1929), and Walt Disney Feature Animation (1986)."
+        ],
+        "thoughts": [
+            "Films featuring Miles Doleac:\n1. The Historian (2014) - Doleac wrote, directed, produced, and starred in this drama film.\n2. The Hollow (2016) - Doleac directed and wrote this American crime film.\n3. Don't Kill It (2016) - Doleac had a supporting role in this comedy horror film.\n\nThese are the films in which Miles Doleac has been involved as an actor, director, or writer.",
+            "Based on the information provided, none of the films featuring Miles Doleac are classified as supernatural horror films. The Historian is a drama film, The Hollow is a crime film, and Don't Kill It is a comedy horror film. Therefore, none of these films fall under the category of supernatural horror.",
+            "Miles Doleac had a role in the following films:\n1. The Historian\n2. The Hollow\n3. Don't Kill It"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify supernatural horror films that were released.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Miles Doleac's filmography.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter Miles Doleac's filmography for supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of these films feature Miles Doleac in a role.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph for the question about Miles Doleac's role in a supernatural horror film involves breaking down the task into identifying supernatural horror films and retrieving Miles Doleac's filmography as parallel retrieval tasks. These tasks feed into a reasoning node that filters for supernatural horror films in which Miles Doleac participated, concluding with identifying his specific role in such films."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "Music festival\nA music festival is a festival oriented towards music that is sometimes presented with a theme such as musical genre, nationality, or locality of musicians, or holiday. They are commonly held outdoors, and are often inclusive of other attractions such as food and merchandise vending, performance art, and social activities. Many festivals are annual, or repeat at some other interval. Some, including many rock festivals, are held only once. Some festivals are organized as for-profit concerts and others are benefits for a specific cause. Another type of music festival is the educative type, organized annually in local communities, regionally, or nationally, for the benefit of amateur musicians of all ages and grades of achievement.",
+            "All That You Are (Goo Goo Dolls song)\n\"All That You Are\" is a song recorded by American alternative rock band the Goo Goo Dolls included in the \"\" , which was released on June 14, 2011. \"All That You Are\" was released to the Apple iTunes Store on June 14, 2011, the same day the soundtrack was released. Also Linkin Park and Paramore released their singles for the film, \"Iridescent\" and \"Monster\" respectively. This is the second song the Goo Goo Dolls have made for a \"Transformers\" movie with the first being \"Before It's Too Late (Sam and Mikaela's Theme), which was made for \"Transformers\".",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Horatio (Hamlet)\nHoratio is a character in William Shakespeare's tragedy \"Hamlet\". Horatio's origins are unknown, although he was present on the battlefield when Hamlet's father defeated 'the ambitious Norway', Fortinbras (the king), and attended Wittenberg University with Prince Hamlet. Horatio is evidently not directly involved in the intrigue at the Danish court; thus, he makes a good foil or sounding board for Prince Hamlet. He is often not identified as any specific court position, but simply as \"friend to Hamlet.\"",
+            "Extended play\nAn extended play record, often referred to as an EP, is a musical recording that contains more tracks than a single, but is usually unqualified as an album or LP. EPs generally do not contain as many tracks as albums, and are considered \"less expensive and time-consuming\" for an artist to produce than an album. An EP originally referred to specific types of vinyl records other than 78 rpm standard play (SP) and LP, but it is now applied to mid-length CDs and downloads as well.",
+            "Separately managed account\nA separately managed account (SMA) is a term within the investment management industry encompassing several different types of investment accounts. For example, an SMA often is used to refer to an individual managed investment account often offered by a brokerage firm through one of their brokers or financial consultants and managed by independent investment management firms (often called money managers for short) and have varying fee structures. These particular types of SMAs may be called \"wrap fee\" or \"dual contract\" accounts, depending on their structure. There is no official designation for the SMA, but there are common characteristics that are represented in many types of SMA programs. These characteristics include an open structure or flexible investment security choices; multiple money managers; and a customized investment portfolio formulated for a client's specific investment objectives or desired restrictions.",
+            "ARIA Music Awards\nThe Australian Recording Industry Association Music Awards (commonly known informally as ARIA Music Awards or ARIA Awards) is an annual series of awards nights celebrating the Australian music industry, put on by the Australian Recording Industry Association (ARIA). The event has been held annually since 1987 and encompasses the general genre-specific and popular awards (these are what is usually being referred to as \"the ARIA awards\") as well as Fine Arts Awards and Artisan Awards (held separately from 2004), Lifetime Achievement Awards and ARIA Hall of Fame \u2013 held separately from 2005 to 2010 but returned to the general ceremony in 2011. For 2010, ARIA introduced public voted awards for the first time.",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "Hrithik Roshan filmography\nHrithik Roshan is an Indian actor known for his work in Bollywood films. As a child, he made uncredited appearances in three films directed by his maternal grandfather, J. Om Prakash, the first of which was in \"Aasha\" (1980). In 1986, Roshan played the adopted son of Rajinikanth's character in Prakash's crime drama \"Bhagwaan Dada\". Roshan subsequently worked as an assistant director on four films, including \"Khudgarz\" (1987) and \"Karan Arjun\" (1995), all of which were directed by his father, Rakesh.",
+            "2001 Oklahoma State Cowboys football team\nThe 2001 Oklahoma State Cowboys football team represented Oklahoma State University in the 2001 NCAA Division I-A football season. Les Miles was in his first season at Oklahoma State as head coach. In the three years prior to Miles' arrival in Stillwater, the Cowboys finished 5\u20136, 5\u20136, and 3\u20138. Oklahoma State posted another losing record (4\u20137) in Miles' first season at the helm.",
+            "Alfred Shrubb\nAlfred \"Alfie\" Shrubb (12 December 1879 \u2013 23 April 1964) was an English middle and long distance runner. During an amateur career lasting from 1899 to 1905 (when he was barred from amateur competition for receiving payment for running) and a professional career from 1905 to 1912 he won over 1,000 races of about 1,800 started. At the peak of his career he was virtually unbeatable at distances up to 15 miles, often racing against relay teams so that the race would be more competitive. On 4 November 1904, at Ibrox Park, Glasgow, he broke the one hour run record as well as all amateur records from six to eleven miles, and all professional records from eight to eleven miles, running eleven miles, 1137 yards (18.742\u00a0km) in one hour. Altogether he set 28 world records."
+        ],
+        "thoughts": [
+            "Supernatural horror films released in the 1930s include \"Dracula\" (1931) starring Bela Lugosi and \"Frankenstein\" (1931) starring Boris Karloff. These films are considered to be part of the Universal Horror film productions and are iconic in the horror genre.",
+            "Miles Doleac is an American film and television actor, director, writer, and producer. He has been involved in various projects, including writing, directing, and producing the 2014 drama film \"The Historian,\" in which he also starred. Additionally, Doleac has had acting roles in several films and television shows, such as \"Treme,\" \"Sleepy Hollow,\" \"American Horror Story,\" \"Salem,\" \"Complications,\" \"Roots,\" \"The Magnificent Seven,\" and \"Don't Kill It.\"\n\nDoleac also directed and wrote the 2016 crime film \"The Hollow,\" which won three awards at the 2016 Long Island International Film Expo. He has also appeared in supporting roles in films such as \"Don't Kill It.\"\n\nIn addition to his film career, Doleac is also a singer, songwriter, theater actor, author, and professor. His diverse talents and contributions to the entertainment industry showcase his versatility and passion for storytelling.",
+            "After filtering Miles Doleac's filmography, it appears that he has not been involved in any supernatural horror films. His work primarily includes drama, crime, and thriller genres.",
+            "Based on the upstream task, it can be concluded that Miles Doleac has not been involved in any supernatural horror films. Therefore, none of the films in the list feature Miles Doleac in a role."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the filmography of Miles Doleac with a focus on supernatural horror films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the roles of Miles Doleac to identify any supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the specific supernatural horror film role of Miles Doleac.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine the supernatural horror film Miles Doleac had a role in, the graph begins by retrieving his filmography. The process involves specifically identifying genres and roles associated with supernatural horror films. Subsequent steps filter and reason about this information to pinpoint the correct film."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "Stephen King\nStephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, science fiction, and fantasy. His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television series, and comic books. King has published 54 novels, including seven under the pen name Richard Bachman, and six non-fiction books. He has written nearly 200 short stories, most of which have been collected in book collections. Many of his stories are set in his home state of Maine. His novella \"Rita Hayworth and Shawshank Redemption\" was the basis for the film \"The Shawshank Redemption\" which is widely regarded as one of the greatest films of all time.",
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "Jenma Natchathiram\nJenma Natchathiram (\u0ba4\u0bae\u0bbf\u0bb4\u0bcd: \u0b9c\u0bc6\u0ba9\u0bcd\u0bae \u0ba8\u0b9f\u0bcd\u0b9a\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bae\u0bcd, English: Birth Star) is a 1991 Tamil supernatural horror film directed and Screenplays by Thakkali Srinivasan for Thirai Gangai Films. The film dialogue were written by Ma. Pandarinathan, and story were written by Krishnan respectively. Music by Premi - Srini assets to the soundtrack. It Stars Baby Vichithra played titular role with Pramoth, Sindhuja and Vivek played pivotal role. The film was unofficial remake of \"The Omen\", 1976 British/American supernatural horror drama film directed by Richard Donner.",
+            "The Mother of Tears\nThe Mother of Tears (Italian: \"La Terza madre\" , literally \"The Third Mother\") is a 2007 supernatural horror film written and directed by Dario Argento. The film stars Asia Argento, Daria Nicolodi, Moran Atias, Udo Kier, and Coralina Cataldi-Tassoni. The film has also been billed in English-speaking media as \"Mater Lachrymarum\", \"The Third Mother\" (English translation of the film's original Italian title), and \"Mother of Tears: The Third Mother\". Written by Argento, Jace Anderson, Walter Fasano, Adam Gierasch and Simona Simonetti, the film is the concluding installment of Argento's supernatural horror trilogy \"The Three Mothers\", which began with \"Suspiria\" in 1977. The film depicts the confrontation with the final \"Mother\" witch, known as Mater Lachrymarum.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo."
+        ],
+        "thoughts": [
+            "Miles Doleac has been involved in several supernatural horror films, including \"Don't Kill It\" (2016) where he starred in a supporting role, and \"The Historian\" (2014) which he wrote, directed, and produced. Additionally, he directed and wrote the 2016 film \"The Hollow,\" which falls under the crime genre but may have elements of supernatural horror. While Miles Doleac has a diverse filmography, these are the notable entries in the supernatural horror genre.",
+            "Miles Doleac has been involved in several supernatural horror films, including \"Don't Kill It\" (2016) and \"The Historian\" (2014).",
+            "Miles Doleac's specific supernatural horror film role is as Father Erik in the film \"Don't Kill It\" (2016)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify films featuring Miles Doleac.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the list of films to only those categorized as supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select the name of the supernatural horror film that Miles Doleac had a role in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into a series of steps aimed at finding which supernatural horror film features Miles Doleac. \n\n- The first step (node 1) involves identifying all films that include Miles Doleac. This requires retrieving data about his filmography.\n\n- The second step (node 2) involves filtering these films to identify which ones are classified as supernatural horror films. This is a reasoning step that requires categorization based on genre.\n\n- The third and final step (node 3) involves selecting the specific name(s) of the supernatural horror film(s) from the filtered list, which answers the original question. This step synthesizes the information to provide a direct answer, finalizing the query."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "Lucky Miles\nLucky Miles is a 2007 Australian drama feature film based on several true stories involving people entering Western Australia by boat in order to seek asylum (please note that seeking asylum is not and never has been illegal in Australia). Its director was Michael James Rowland and its producers were Jo Dyer and Lesley Dyer.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "Mickey Spillane's Mike Hammer\nMickey Spillane's Mike Hammer is the title used for two syndicated television series that followed the adventures of fictional private detective Mike Hammer. The gritty, crime fighting detective\u2014created by American crime author Mickey Spillane\u2014has also inspired several feature films and television films.",
+            "Jonathan Miles (filmmaker)\nJonathan Miles is a British independent filmmaker. He studied at Surrey Institute of Art & Design. Early in his career he directed music videos, for instance \"The Ride\" with Alec Empire. His short film \"The Queue\" from 2007 has been shown at a number of film festivals, in particular The End Of The Pier International Film Festival, where it won the award for Best Comedy Short 2008. In addition to directing he has worked as a documentary editor on BBC films. He now lives in Berlin."
+        ],
+        "thoughts": [
+            "Films featuring Miles Doleac include \"The Historian\" (2014), \"The Hollow\" (2016), and \"Don't Kill It\" (2016).",
+            "The filtered list of supernatural horror films includes \"The Hollow\" (2016) and \"Don't Kill It\" (2016).",
+            "The name of the supernatural horror film that Miles Doleac had a role in is \"The Hollow\" (2016)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the works that Miles Doleac has participated in as an actor.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter and find specifically the supernatural horror films from the list of works by Miles Doleac.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "To answer the question, the execution graph starts by retrieving the works that involve Miles Doleac as an actor. This is the first step as it provides the necessary information about all the roles he might have played in various films. The next step involves filtering these works to identify those that are categorized as supernatural horror films, allowing us to pinpoint the specific genre asked about in the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "Wipeout (2008 U.S. game show)\nWipeout is a game show series in which contestants competed in what was billed as the \"World's Largest\" obstacle course. \"Wipeout\" was hosted and commentated by John Henson and John Anderson, while Jill Wagner acted as the \"on-location\" presenter. The show aired on ABC from June 24, 2008 until the show aired its final episode on September 7, 2014. The interim presenter for one season was Vanessa Lachey. The creators and executive producers are Matt Kunitz and Scott Larsen. Distribution of the show was handled by Endemol USA. The show was taped at Sable Ranch in Canyon Country, Santa Clarita, California, about 40 miles north of Los Angeles.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Kate Horsley\nKate Horsley (born 1952) is the pen name of Kate Parker, an author of numerous works of historical fiction three of which are rooted in the Old West. Parker is a professor of English at Central New Mexico Community College in Albuquerque. She has a lifelong flirtation with Zen after reading Alan Watts. Her published novels include:",
+            "Paul Dukas\nPaul Abraham Dukas (] ; 1 October 1865 \u2013 17 May 1935) was a French composer, critic, scholar and teacher. A studious man, of retiring personality, he was intensely self-critical, and he abandoned and destroyed many of his compositions. His best known work is the orchestral piece \"The Sorcerer's Apprentice\" (\"L'apprenti sorcier\"), the fame of which has eclipsed that of his other surviving works. Among these are the opera \"Ariane et Barbe-bleue\", a symphony, two substantial works for solo piano, and a ballet, \"La\u00a0P\u00e9ri\"."
+        ],
+        "thoughts": [
+            "Miles Doleac has participated as an actor in the following works:\n- Treme\n- Sleepy Hollow\n- American Horror Story\n- Salem\n- Complications\n- Roots\n- Containment\n- The Magnificent Seven\n- Don't Kill It",
+            "After filtering through the list of works by Miles Doleac, we have found that he has not participated in any supernatural horror films."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find information about supernatural horror films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the acting roles of Miles Doleac.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the films from step 1 did Miles Doleac appear in from step 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph starts with two independent retrieval tasks: identifying supernatural horror films and listing acting roles of Miles Doleac. The final step is a reasoning node that intersects the results from the two tasks to find a film where Miles Doleac had a role."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "Comet (TV network)\nComet is an American digital broadcast television network that is owned by the Sinclair Television Group subsidiary of the Sinclair Broadcast Group and operated by the MGM Television division of Metro-Goldwyn-Mayer. The network focuses on science fiction with some supernatural, horror, adventure and fantasy series and films, sourced mainly from the Metro-Goldwyn-Mayer film and television library.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "Jenma Natchathiram\nJenma Natchathiram (\u0ba4\u0bae\u0bbf\u0bb4\u0bcd: \u0b9c\u0bc6\u0ba9\u0bcd\u0bae \u0ba8\u0b9f\u0bcd\u0b9a\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bae\u0bcd, English: Birth Star) is a 1991 Tamil supernatural horror film directed and Screenplays by Thakkali Srinivasan for Thirai Gangai Films. The film dialogue were written by Ma. Pandarinathan, and story were written by Krishnan respectively. Music by Premi - Srini assets to the soundtrack. It Stars Baby Vichithra played titular role with Pramoth, Sindhuja and Vivek played pivotal role. The film was unofficial remake of \"The Omen\", 1976 British/American supernatural horror drama film directed by Richard Donner.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Stephen King\nStephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, science fiction, and fantasy. His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television series, and comic books. King has published 54 novels, including seven under the pen name Richard Bachman, and six non-fiction books. He has written nearly 200 short stories, most of which have been collected in book collections. Many of his stories are set in his home state of Maine. His novella \"Rita Hayworth and Shawshank Redemption\" was the basis for the film \"The Shawshank Redemption\" which is widely regarded as one of the greatest films of all time.",
+            "The Apparition\nThe Apparition is a 2012 American supernatural horror film, written and directed by Todd Lincoln, making his directorial debut, and starring Ashley Greene, Sebastian Stan, Tom Felton, Julianna Guill and Rick Gomez. The plot follows three college students who, after the death of their friend, must battle a supernatural force they summoned themselves. The film was loosely inspired by the Philip experiment conducted in 1972. The film was a box office bomb and was cited by critics as one of the worst horror movies of 2012. It was also the last Warner Bros. Pictures horror film to be released under its own label before resorting to New Line Cinema to release all future horror movies made by Warner Bros.",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Dead Silence\nDead Silence is a 2007 supernatural psychological horror film directed by James Wan and written by Leigh Whannell, the creators of \"Saw\". The film stars Ryan Kwanten, Judith Roberts, Donnie Wahlberg, and Amber Valletta.",
+            "The Mother of Tears\nThe Mother of Tears (Italian: \"La Terza madre\" , literally \"The Third Mother\") is a 2007 supernatural horror film written and directed by Dario Argento. The film stars Asia Argento, Daria Nicolodi, Moran Atias, Udo Kier, and Coralina Cataldi-Tassoni. The film has also been billed in English-speaking media as \"Mater Lachrymarum\", \"The Third Mother\" (English translation of the film's original Italian title), and \"Mother of Tears: The Third Mother\". Written by Argento, Jace Anderson, Walter Fasano, Adam Gierasch and Simona Simonetti, the film is the concluding installment of Argento's supernatural horror trilogy \"The Three Mothers\", which began with \"Suspiria\" in 1977. The film depicts the confrontation with the final \"Mother\" witch, known as Mater Lachrymarum.",
+            "Mohammad-Reza Foroutan\nMohammad-Reza Foroutan (Persian: \u0645\u062d\u0645\u062f \u0631\u0636\u0627 \u0641\u0631\u0648\u062a\u0646\u200e \u200e , born December 28, 1968 in Tehran, Iran) is an Iranian actor. He graduated with a master's degree in clinical psychology from Azad University and now is a Ph.D candidate of Health Psychology. He has passed some free courses in acting. His first film was \"Goal\". After some minor roles his performance in an episode of TV series \"The Clue\" revealed his capabilities and Masoud Kimiay chose him for the leading role of Mercedes. He has been acting as actor for more than two decades and received several awards including best male actor award for acting in Germez 1999 Fajr International Film Festival and best male actor award for acting in  Be Ahestegi  Fajr International Film Festival 2005.",
+            "Sarah Paulson\nSarah Catharine Paulson (born December 17, 1974) is an American actress. After beginning her acting career on stage, she starred in the 1990s television series \"American Gothic\" (1995\u201396) and \"Jack & Jill\" (1999\u20132001). Paulson later appeared in comedy films such as \"What Women Want\" (2000) and \"Down with Love\" (2003), and had dramatic roles in films such as \"Path to War\" (2002) and \"The Notorious Bettie Page\" (2005). From 2006 to 2007, Paulson played the role of Harriet Hayes in the NBC comedy-drama series \"Studio 60 on the Sunset Strip\", for which she received her first Golden Globe Award nomination. In 2008, she starred as Ellen Dolan in the superhero noir film \"The Spirit\".",
+            "Reece Thompson\nReece Daniel Thompson (born November 22, 1988) is a Canadian actor. Thompson started his acting career as a child actor by voice acting in several animated television series and minor roles on television shows before transitioning to films. His first major role came in the 2007 film \"Rocket Science\". Thompson appeared in 2009's \"Assassination of a High School President\" with Mischa Barton and Bruce Willis, and in \"Afterwards\". Also in 2012, he appeared as Craig in \"The Perks of Being a Wallflower\".",
+            "B\u00e9atrice Picard\nB\u00e9atrice Picard, {'1': \", '2': \", '3': \", '4': \"} , {'1': \", '2': \", '3': \", '4': \"} (born July 3, 1929 in Montreal, Quebec) is a Canadian actress. She is well known in Quebec for the countless roles she has played on the French Canadian theatre and television scene during an ongoing acting career spanning over six decades. She became a household name in Quebec for her acting role as Angelina Desmarais in one of the first French Canadian \"t\u00e9l\u00e9-roman\" series called \"Le survenant\" in the early days of French-speaking television. She then went on to a prolific career in televised comedies such as \"Cr\u00e9 Basil\" and \"Symphorien\". She also played in numerous theatre productions, summer plays, and films. Most recently, she is well known as the Quebec French voice of Marge Simpson in \"The Simpsons\"."
+        ],
+        "thoughts": [
+            "Supernatural horror films have been a popular genre for many years, with notable examples dating back to the 1930s. The American horror film industry began to take shape during this decade, with iconic films such as \"Dracula\" (1931) and \"Frankenstein\" (1931) featuring legendary actors like Bela Lugosi and Boris Karloff. The genre has continued to evolve over the years, with modern examples such as \"The Apparition\" (2012), \"The Keeping Hours\" (2017), \"Dead Silence\" (2007), and \"The Mother of Tears\" (2007) showcasing the enduring appeal of supernatural horror.\n\nAdditionally, the influence of authors like Stephen King has been significant in shaping the supernatural horror genre. King's prolific career has produced numerous novels and short stories that have been adapted into feature films, television series, and comic books. His work often delves into themes of horror, supernatural fiction, suspense, science fiction, and fantasy, contributing to the enduring popularity of the genre.\n\nFurthermore, the presence of networks like Comet, which focus on science fiction and supernatural horror, demonstrates the ongoing demand for this type of content. With a wide range of films and series available, audiences continue to be drawn to the thrilling and chilling world of supernatural horror.",
+            "Miles Doleac has had acting roles in several films and television shows, including \"Don't Kill It,\" \"The Historian,\" and \"The Hollow.\" In \"Don't Kill It,\" he played a supporting role alongside Dolph Lundgren. In \"The Historian,\" he starred alongside William Sadler, Colin Cunningham, and others. In \"The Hollow,\" he not only acted but also wrote and directed the film.",
+            "Based on the information provided, Miles Doleac appeared in the film \"The Hollow.\""
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify any supernatural horror films that feature actor Miles Doleac.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the filmography of Miles Doleac to determine which films he acted in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which films from Miles Doleac's filmography are classified as supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the supernatural horror film(s) that Miles Doleac had a role in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to determine the supernatural horror films that Miles Doleac acted in by following these steps: 1) Retrieve films categorized as supernatural horror featuring Miles Doleac. 2) Acquire the complete filmography of Miles Doleac. 3) Analyze the filmography to isolate supernatural horror films. 4) Synthesize this information to identify the specific films."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "White savior\nThe term white savior, sometimes combined with savior complex to write white savior complex, refers to a white person who acts to help people of color, with the help in some contexts perceived to be self-serving. The role is considered a modern-day version of what is expressed in the poem \"The White Man's Burden\" (1899) by Rudyard Kipling. The term has been associated with Africa, and certain characters in film and television have been critiqued as white savior figures. Writer Teju Cole combined the term and \"industrial complex\" (derived from military-industrial complex and similarly applied elsewhere) to coin \"White Savior Industrial Complex\".",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Albert Hall (actor)\nAlbert W. Hall (born November 10, 1937) is an American actor. He is best known for portraying Chief Phillips in the 1979 war film \"Apocalypse Now\" and Judge Seymore Walsh in \"Ally McBeal\" and \"The Practice\". He is also widely recognized for his role as Brother Baines in the 1992 Spike Lee film \"Malcolm X\", where he acted opposite film star Denzel Washington, who appeared in the title role of slain African-American Muslim, former Nation of Islam minister, and human rights activist Malcolm X.",
+            "Jenma Natchathiram\nJenma Natchathiram (\u0ba4\u0bae\u0bbf\u0bb4\u0bcd: \u0b9c\u0bc6\u0ba9\u0bcd\u0bae \u0ba8\u0b9f\u0bcd\u0b9a\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bae\u0bcd, English: Birth Star) is a 1991 Tamil supernatural horror film directed and Screenplays by Thakkali Srinivasan for Thirai Gangai Films. The film dialogue were written by Ma. Pandarinathan, and story were written by Krishnan respectively. Music by Premi - Srini assets to the soundtrack. It Stars Baby Vichithra played titular role with Pramoth, Sindhuja and Vivek played pivotal role. The film was unofficial remake of \"The Omen\", 1976 British/American supernatural horror drama film directed by Richard Donner.",
+            "Stephen King\nStephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, science fiction, and fantasy. His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television series, and comic books. King has published 54 novels, including seven under the pen name Richard Bachman, and six non-fiction books. He has written nearly 200 short stories, most of which have been collected in book collections. Many of his stories are set in his home state of Maine. His novella \"Rita Hayworth and Shawshank Redemption\" was the basis for the film \"The Shawshank Redemption\" which is widely regarded as one of the greatest films of all time.",
+            "Comet (TV network)\nComet is an American digital broadcast television network that is owned by the Sinclair Television Group subsidiary of the Sinclair Broadcast Group and operated by the MGM Television division of Metro-Goldwyn-Mayer. The network focuses on science fiction with some supernatural, horror, adventure and fantasy series and films, sourced mainly from the Metro-Goldwyn-Mayer film and television library."
+        ],
+        "thoughts": [
+            "The supernatural horror films that feature actor Miles Doleac include \"The Hollow\" (2016), \"Don't Kill It\" (2016), and \"The Historian\" (2014).",
+            "Miles Doleac has acted in the following films:\n1. The Historian (2014) - also written, directed, and produced by Doleac\n2. The Hollow (2016) - also directed and written by Doleac\n3. Don't Kill It (2016) - comedy horror film directed and edited by Mike Mendez, where Doleac stars in a supporting role",
+            "The supernatural horror films that feature actor Miles Doleac include \"The Hollow\" (2016), \"Don't Kill It\" (2016), and \"The Historian\" (2014).",
+            "Miles Doleac had a role in the supernatural horror films \"The Hollow\" (2016), \"Don't Kill It\" (2016), and \"The Historian\" (2014)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What supernatural horror film did Miles Doleac have a role in?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all supernatural horror films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find a list of films that actor Miles Doleac has had a role in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the list of films that Miles Doleac has had a role in to include only those that are categorized as supernatural horror films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task of identifying a supernatural horror film that Miles Doleac participated in. The graph starts by retrieving lists of supernatural horror films and films featuring Miles Doleac. It then processes these lists to identify the intersection, which will provide the answer."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "Jenma Natchathiram\nJenma Natchathiram (\u0ba4\u0bae\u0bbf\u0bb4\u0bcd: \u0b9c\u0bc6\u0ba9\u0bcd\u0bae \u0ba8\u0b9f\u0bcd\u0b9a\u0ba4\u0bcd\u0ba4\u0bbf\u0bb0\u0bae\u0bcd, English: Birth Star) is a 1991 Tamil supernatural horror film directed and Screenplays by Thakkali Srinivasan for Thirai Gangai Films. The film dialogue were written by Ma. Pandarinathan, and story were written by Krishnan respectively. Music by Premi - Srini assets to the soundtrack. It Stars Baby Vichithra played titular role with Pramoth, Sindhuja and Vivek played pivotal role. The film was unofficial remake of \"The Omen\", 1976 British/American supernatural horror drama film directed by Richard Donner.",
+            "The Historian (film)\nThe Historian is a 2014 drama film written, directed, produced by Miles Doleac. The film also stars Doleac along with William Sadler, Colin Cunningham, Jillian Taylor, Glynnis O'Connor, Leticia Jimenez and John Cullum.",
+            "Miles Doleac\nMiles Christopher Doleac is an American film and television actor, director, writer and producer. Along with his film career, he is also a singer, songwriter, theater actor, author, and professor. He has had acting roles in several films and television shows since 2011 including \"Treme, Sleepy Hollow, American Horror Story, Salem, Complications, Roots,\" and several episodes of the CW's \"Containment\". He also has acting roles in the recent films \"The Magnificent Seven\" and \"Don't Kill It.\"",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Stephen King\nStephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, science fiction, and fantasy. His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television series, and comic books. King has published 54 novels, including seven under the pen name Richard Bachman, and six non-fiction books. He has written nearly 200 short stories, most of which have been collected in book collections. Many of his stories are set in his home state of Maine. His novella \"Rita Hayworth and Shawshank Redemption\" was the basis for the film \"The Shawshank Redemption\" which is widely regarded as one of the greatest films of all time.",
+            "Comet (TV network)\nComet is an American digital broadcast television network that is owned by the Sinclair Television Group subsidiary of the Sinclair Broadcast Group and operated by the MGM Television division of Metro-Goldwyn-Mayer. The network focuses on science fiction with some supernatural, horror, adventure and fantasy series and films, sourced mainly from the Metro-Goldwyn-Mayer film and television library.",
+            "Separately managed account\nA separately managed account (SMA) is a term within the investment management industry encompassing several different types of investment accounts. For example, an SMA often is used to refer to an individual managed investment account often offered by a brokerage firm through one of their brokers or financial consultants and managed by independent investment management firms (often called money managers for short) and have varying fee structures. These particular types of SMAs may be called \"wrap fee\" or \"dual contract\" accounts, depending on their structure. There is no official designation for the SMA, but there are common characteristics that are represented in many types of SMA programs. These characteristics include an open structure or flexible investment security choices; multiple money managers; and a customized investment portfolio formulated for a client's specific investment objectives or desired restrictions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Don't Kill It\nDon't Kill It is a 2016 comedy horror film directed and edited by Mike Mendez. It stars Dolph Lundgren as Jebediah Woodley, a demon hunter who travels to Mississippi in the hopes of destroying an ancient, but homicidal demon. Kristina Klebe, Tony Bentley, James Chalke, and Miles Doleac all star in supporting roles.",
+            "The Apparition\nThe Apparition is a 2012 American supernatural horror film, written and directed by Todd Lincoln, making his directorial debut, and starring Ashley Greene, Sebastian Stan, Tom Felton, Julianna Guill and Rick Gomez. The plot follows three college students who, after the death of their friend, must battle a supernatural force they summoned themselves. The film was loosely inspired by the Philip experiment conducted in 1972. The film was a box office bomb and was cited by critics as one of the worst horror movies of 2012. It was also the last Warner Bros. Pictures horror film to be released under its own label before resorting to New Line Cinema to release all future horror movies made by Warner Bros.",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Dead Silence\nDead Silence is a 2007 supernatural psychological horror film directed by James Wan and written by Leigh Whannell, the creators of \"Saw\". The film stars Ryan Kwanten, Judith Roberts, Donnie Wahlberg, and Amber Valletta.",
+            "Jonathan Miles (filmmaker)\nJonathan Miles is a British independent filmmaker. He studied at Surrey Institute of Art & Design. Early in his career he directed music videos, for instance \"The Ride\" with Alec Empire. His short film \"The Queue\" from 2007 has been shown at a number of film festivals, in particular The End Of The Pier International Film Festival, where it won the award for Best Comedy Short 2008. In addition to directing he has worked as a documentary editor on BBC films. He now lives in Berlin.",
+            "Alfred Shrubb\nAlfred \"Alfie\" Shrubb (12 December 1879 \u2013 23 April 1964) was an English middle and long distance runner. During an amateur career lasting from 1899 to 1905 (when he was barred from amateur competition for receiving payment for running) and a professional career from 1905 to 1912 he won over 1,000 races of about 1,800 started. At the peak of his career he was virtually unbeatable at distances up to 15 miles, often racing against relay teams so that the race would be more competitive. On 4 November 1904, at Ibrox Park, Glasgow, he broke the one hour run record as well as all amateur records from six to eleven miles, and all professional records from eight to eleven miles, running eleven miles, 1137 yards (18.742\u00a0km) in one hour. Altogether he set 28 world records.",
+            "Love Don't Live Here Anymore\n\"Love Don't Live Here Anymore\" is a song written by Miles Gregory and originally recorded by Rose Royce. It was produced by former Motown songwriter and producer Norman Whitfield for Whitfield Records. Lead vocals were sung by Gwen Dickey and the song was released as the second single from their third studio album \"\" The song was developed as a result of producer Whitfield's interest to work with Paul Buckmaster, the British arranger and composer. Together they asked songwriter Miles Gregory to write a song for them. Gregory was undergoing medications for his drug overuse problem, and this situation and his deteriorating physical health became the inspiration behind the song. \"Love Don't Live Here Anymore\" incorporated the use of the Electronic LinnDrum machine, and was one of the first songs to effectively use the sound reverbs of the instrument. The song was mainly recorded at music contractor Gene Bianco's house, where Dickey was present during the recording."
+        ],
+        "thoughts": [
+            "- White Zombie (1932)\n- Dracula (1931)\n- Frankenstein (1931)\n- The Omen (1976) - unofficial remake\n- The Apparition (2012)\n- The Keeping Hours (2017)\n- Dead Silence (2007)",
+            "Films that actor Miles Doleac has had a role in include:\n- The Historian (2014)\n- The Hollow (2016)\n- Don't Kill It (2016)",
+            "The filtered list of supernatural horror films that Miles Doleac has had a role in includes:\n- The Hollow (2016)\n- Don't Kill It (2016)"
+        ],
+        "is_best": false
+    }
+]

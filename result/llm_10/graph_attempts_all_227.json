@@ -1,0 +1,553 @@
+[
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the formation year of Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the formation year of Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question is asking for a comparison of the formation years of two bands: Audioslave and Bodyjar. To answer this, we first need to individually retrieve the formation year of each band (nodes 1 and 2). These nodes are independent and can execute in parallel. Once we have both formation years, we perform a reasoning step (node 3) to compare the years and determine which band was formed earlier."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "In the Fishtank\nIn the Fishtank is an ongoing project of Konkurrent, an independent music distributor in the Netherlands. In this project, Konkurrent invites one or two bands to record and gives them two days studio time. The first four albums were recorded by individual bands, but eight of the last ten releases were the result of two bands (three in one case) teaming up to record. The Ex is so far the only band to appear on more than one album in the series.",
+            "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars."
+        ],
+        "thoughts": [
+            "Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the formation year of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the formation year of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task into three nodes. The first node (1) retrieves information about the formation year of Audioslave, and the second node (2) does the same for Bodyjar. The third node (3) is a reasoning step that compares the retrieved formation years to determine which band formed earlier. This structure ensures that all necessary data is retrieved and analyzed logically to answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "Kilburn and the High Roads\nKilburn and the High Roads were a British pub rock band formed by Ian Dury in 1970, and the first band formed by Dury. The band released one studio album in 1975 before disbanding the same year. Allmusic credits the band with being \"an undeniable influence on punk and new wave\".",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain."
+        ],
+        "thoughts": [
+            "The band Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the formation year of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the formation year of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which group formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the task into three nodes: two retrieval and reasoning nodes for obtaining the formation years of Audioslave and Bodyjar respectively, and a final reasoning node to compare these years and determine which band formed earlier. This allows the question to be answered effectively by gathering the necessary data in parallel and then synthesizing it to reach the conclusion."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain."
+        ],
+        "thoughts": [
+            "Audioslave was formed in 2001.",
+            "The band Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the formation year of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the formation year of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which band formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first two nodes are responsible for retrieving the formation years of Audioslave and Bodyjar independently. Once both formation years are retrieved, the third node compares these years to determine which band was formed earlier, synthesizing the necessary information to answer the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain."
+        ],
+        "thoughts": [
+            "Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the formation year of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the formation year of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which band formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to efficiently answer the question by retrieving the formation years of both bands independently and then comparing them. The first two nodes perform retrieval and simple analysis to obtain the necessary information about each band's formation year. The final reasoning node compares these years to determine which band was formed earlier, thus directly answering the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain."
+        ],
+        "thoughts": [
+            "Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve formation year for the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve formation year for the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first node retrieves the formation year of Audioslave. The second node retrieves the formation year of Bodyjar. The third node compares these two years to determine which band was formed earlier. This step-by-step approach ensures that we gather all necessary information before making a comparison, thus simplifying the reasoning process."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "Chuffilly-Roche\nArthur Rimbaud, French poet, lived for a while in Roche, where his family had a farm. He wrote several works there, notably \"Une saison en enfer\" (\"A Season in Hell\") and \"Le bateau ivre\" (\"The Drunken Boat\").",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "1979 (song)\n\"1979\" is a song by American alternative rock band the Smashing Pumpkins. Released in 1996 as the second single from their third studio album, \"Mellon Collie and the Infinite Sadness\", \"1979\" was written by frontman Billy Corgan, and features loops and samples that were uncharacteristic of previous Smashing Pumpkins songs. The song was written as a coming of age story by Corgan. In the year 1979, Corgan was 12 and this is what he considered his transition into adolescence. The song was popular with critics and fans; Allmusic's Amy Hanson called it a \"somewhat surprising hit\". The song was nominated for the Record of the Year and Best Rock Performance by a Duo or Group with Vocal at the 39th Annual Grammy Awards, and won an MTV Video Music Award for Best Alternative Video. In 2012, it was voted the second-best Smashing Pumpkins song by Rolling Stone magazine readers.",
+            "Where You Stand (song)\n\"Where You Stand\" is a song by alternative rock band Travis, written by Dougie Payne, Holly Partridge and Fran Healy. It was released on 30 April 2013 as the lead single from the band's seventh studio album, \"Where You Stand\".",
+            "Shooting Star (Rachael Leahcar album)\nShooting Star is the debut studio album by Australian recording artist Rachael Leahcar, who finished third on the first season of \"The Voice Australia\". The album was released on 13 July 2012, through Universal Music Australia. It features songs Leahcar performed on \"The Voice\", two original songs, as well as newly recorded covers. Leahcar promoted the album with an in-store appearance at Westfield Marion in Oaklands Park, South Australia, where she signed copies of the album and performed the songs \"La Vie en rose\" and \"Shooting Star\". The album debuted at number five on the ARIA Albums Chart.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "2 steg fr\u00e5n Paradise\n2 steg fr\u00e5n Paradise is the sixth studio album by Swedish singer H\u00e5kan Hellstr\u00f6m, released on October 13, 2010. It was produced by H\u00e5kan Hellstr\u00f6m in collaboration with Joakim \u00c5hlund. Many of the songs were written together with The Soundtrack of our Lives' guitarist Bj\u00f6rn Olsson, who also produced Hellstr\u00f6m's third studio album \"Ett kolikbarns bek\u00e4nnelser. \"A double A-side single featuring \"Saknade te havs\" and \"River en vacker dr\u00f6m\" was released prior to the album, on September 11. \"River en vacker dr\u00f6m\" was originally meant to be performed at the current year's edition of Way Out West only. However, nearing the release of the album, Hellstr\u00f6m chose to record it as well."
+        ],
+        "thoughts": [
+            "Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the formation date of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the formation date of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation dates of Audioslave and Bodyjar to determine which band formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to address the question by first gathering the formation dates of both bands independently, allowing for these steps to be processed in parallel. Once the dates are retrieved, the reasoning step compares them to determine which band formed earlier, thereby answering the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "Adrenaline (album)\nAdrenaline is the debut studio album by American alternative metal band Deftones, released in 1995 by Maverick Records. A hidden track on the album, \"Fist\", was produced by Ross Robinson, while the rest of the album was produced by Terry Date.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "In the Fishtank\nIn the Fishtank is an ongoing project of Konkurrent, an independent music distributor in the Netherlands. In this project, Konkurrent invites one or two bands to record and gives them two days studio time. The first four albums were recorded by individual bands, but eight of the last ten releases were the result of two bands (three in one case) teaming up to record. The Ex is so far the only band to appear on more than one album in the series.",
+            "NRL All Stars team\nThe NRL All Stars team was a rugby league football team made up of professional players in the National Rugby League. These players were selected by fan vote. However, fans were only allowed to select one player from each NRL team to join the Australian rugby league team captain and the New Zealand national rugby league team captain. Two other players were selected by the NRL All Stars coach. This team played in the annual NRL All Stars Game against the Indigenous All Stars. They were replaced in 2016 by a World All Stars."
+        ],
+        "thoughts": [
+            "The band Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Based on the formation dates, Bodyjar formed earlier in 1990, while Audioslave formed in 2001. Therefore, Bodyjar formed earlier than Audioslave."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the formation year of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the formation year of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which band formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to first retrieve the formation years of both bands, Audioslave and Bodyjar, using two parallel retrieval steps. Once the formation years are obtained, a reasoning step compares them to determine which band formed earlier. This approach ensures that the question is broken down into manageable retrieval tasks followed by a comparative analysis."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain."
+        ],
+        "thoughts": [
+            "Audioslave was formed in 2001.",
+            "The band Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the formation year of the band Audioslave.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the formation year of the band Bodyjar.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation years of Audioslave and Bodyjar to determine which band formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph is structured to first independently retrieve the formation years of both bands, Audioslave and Bodyjar. These two steps can occur in parallel since they do not depend on each other. Once both formation years are gathered, the final step is a reasoning task that compares the two years to determine which band formed earlier."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Greek Fire (band)\nGreek Fire is an American rock band from St. Louis, Missouri. The band was formed in 2008 by members of Story of the Year and Maybe Today. Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\".",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "The Runaways (film)\nThe Runaways is a 2010 American drama film about the 1970s rock band of the same name written and directed by Floria Sigismondi. It is based on the book \"Neon Angel: A Memoir of a Runaway\" by the band's original lead vocalist Cherie Currie. The film stars Dakota Fanning as Currie, Kristen Stewart as rhythm guitarist and vocalist Joan Jett, and Michael Shannon as record producer Kim Fowley. \"The Runaways\" depicts the formation of the band in 1975 and focuses on the relationship between Currie and Jett until Currie's departure from the band. The film grossed about $4.7 million worldwide and received generally favorable reviews from critics.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Dirty Pretty Things (band)\nDirty Pretty Things were an English band fronted by Carl Bar\u00e2t, a member of The Libertines. The formation of the band was announced in September 2005, after a dispute between Bar\u00e2t and Pete Doherty led to the breakup of The Libertines in 2004. Bar\u00e2t had worked with Vertigo Records and had previously revealed that his new project was with the label. Didz Hammond announced he was leaving the Cooper Temple Clause to join the band alongside Libertines drummer Gary Powell and guitarist Anthony Rossomando, who had filled in for Doherty following his departure from The Libertines. They played their first shows in October 2005 in Italy and Paris, France. They announced their split on 1 October 2008 and played their final shows during November.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain."
+        ],
+        "thoughts": [
+            "The band Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Between two bands Audioslave and Bodyjar, which group formed earlier?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve formation date of Audioslave",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve formation date of Bodyjar",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the formation dates of Audioslave and Bodyjar to determine which band formed earlier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task involves determining which of the two bands, Audioslave or Bodyjar, was formed earlier. This can be broken down into three main steps: first, retrieve the formation date of Audioslave; second, retrieve the formation date of Bodyjar; and finally, compare the two dates to discern which band was established first. The execution graph clearly reflects this division of tasks, allowing for parallel retrieval of data before reaching a final reasoning step."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bodyjar\nBodyjar are an Australian pop punk band which formed in 1990. They began performing under the name Bodyjar in 1994; their previous names included Damnation (1990\u201391) and Helium (1992\u201393). The latter group released an album, \"You Can't Hold Me Down\", in October 1992. As Bodyjar their original line-up were Cameron Baines on vocals and guitar; Ben Petterson on vocals and guitar; Grant Relf on vocals and bass guitar; and Charles Zerafa on drums. In 1995 Ross Hetherington (ex-Bastard Squad, Swamp Rats) replaced Zerafa on drums. In 1999 Tom Read replaced Petterson on guitar and in 2004 Hetherington made way for Shane Wakker on drums.",
+            "Audioslave\nAudioslave was an American rock supergroup formed in Los Angeles in 2001. The four-piece band consisted of Soundgarden lead singer/rhythm guitarist Chris Cornell and Rage Against the Machine members Tom Morello (lead guitar), Tim Commerford (bass/backing vocals), and Brad Wilk (drums). Critics first described Audioslave as a combination of Soundgarden and Rage Against the Machine, but by the band's second album, \"Out of Exile\", it was noted that they had established a separate identity. Audioslave's sound was created by blending 1970s hard rock with 1990s alternative rock. Moreover, Morello incorporated his well-known, unconventional guitar solos into the mix. As with Rage Against the Machine, the band prided themselves on the fact that all sounds on their albums were produced using only guitar, bass, drums, and vocals.",
+            "Air Formation\nAir Formation are an English indie rock band, that debuted with their first 7\" in the summer of 1998 under the name \"b.e.a.b Approved\". In early 2000 they were forced to change their name, they chose Air Formation. Inspired by Flying Saucer Attack, Spacemen 3, and The Jesus and Mary Chain, their music incorporated heavily delayed guitar and feedback, droning keyboards, and soft vocals. They released four albums, three EPs, and five 7\"s singles.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Palestine Brigade RAF\nThe Palestine Brigade of the Royal Flying Corps, and later Royal Air Force, was formed 5 October 1917 in response to General Allenby's request for an air formation for his planned offensive against the Ottoman Empire in Palestine.",
+            "Sox Appeal\nSox Appeal was a reality television series that premiered August 1, 2007 on NESN and ended in 2008. It is a Boston Red Sox themed dating game show that follows a man or woman during three, two-inning long blind dates that take place over the course of a Red Sox game. During the seventh inning stretch, the fan chooses the date he/she wants to continue dating. The date, however, can choose not to continue the date.",
+            "Stone Mountain, Georgia\nStone Mountain is a city in DeKalb County, Georgia, United States. The population was 5,802 at the 2010 census. Stone Mountain is located in the eastern part of Dekalb County and is a suburb of Atlanta. It lies near to but does not include the geological formation Stone Mountain.",
+            "Win a Date with Tad Hamilton!\nWin a Date with Tad Hamilton! is a 2004 American romantic comedy film directed by Robert Luketic, written by Victor Levin, and starring Kate Bosworth, Topher Grace, Josh Duhamel, Gary Cole, Ginnifer Goodwin, Sean Hayes, and Nathan Lane. Heavily inspired by Ram Gopal Varma's 1995 Indian film \"Rangeela\", the film follows a small-town girl (Bosworth) who wins a contest for a date with a male celebrity (Duhamel), and a love triangle forms between the girl, the star, and the girl's best friend (Grace)."
+        ],
+        "thoughts": [
+            "Audioslave was formed in Los Angeles in 2001.",
+            "Bodyjar was formed in 1990.",
+            "Bodyjar formed earlier than Audioslave. Bodyjar was formed in 1990, while Audioslave was formed in 2001."
+        ],
+        "is_best": false
+    }
+]

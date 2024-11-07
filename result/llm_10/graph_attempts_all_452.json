@@ -1,0 +1,612 @@
+[
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine which album contains the song 'How?' by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the release year of the album that contains the song 'How?'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Research the discography of John Lennon and list the albums released before the year identified in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the album with the latest release date from the list of albums released before the identified year.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The process starts by determining which album contains the song 'How?', followed by identifying the release year of that album. Then, by examining John Lennon's discography, we identify albums released prior to that year and select the most recent one."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "How? (song)\n\"How?\" is a song from John Lennon's second solo album \"Imagine\", released in 1971. It is a contemplative song inspired by the Primal Therapy he was undergoing with his wife Yoko Ono, during which he faced many personal questions such as \"How can I go forward when I don't know which way I'm facing?\" This song also shows his thoughts about the world in general (such as \"And the World is so tough; Sometimes I feel I've had enough\").",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records."
+        ],
+        "thoughts": [
+            "The song \"How?\" by John Lennon is included in his second solo album \"Imagine\", released in 1971.",
+            "The song 'How?' is from the album \"Imagine\" by John Lennon, which was released in 1971.",
+            "The albums released before the year 1984 are:\n\n1. John Lennon/Plastic Ono Band (1970)\n2. Imagine (1971)\n3. Rock 'n' Roll (1975)\n4. Double Fantasy (1980)",
+            "The album with the latest release date from the list of albums released before 1984 is \"Double Fantasy\" released in 1980."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the album that contains the song 'How?' by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the release date of the album containing 'How?'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List all John Lennon albums released before the album containing 'How?'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the latest album from the list of albums released before the album containing 'How?'",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "This execution graph breaks down the multi-hop task of identifying the album released by John Lennon immediately before the one containing the song 'How?'. The process begins with locating the album that contains the song 'How?' (Node 1). With that information, the next step involves determining the release date of that album (Node 2), which is crucial for establishing a timeline. Subsequently, we retrieve a list of all albums released before this identified album (Node 3). Finally, the last step (Node 4) involves reasoning to select the most recent album from this list, which answers the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "List of Felicity episodes\n\"Felicity\" is an American drama television series created by J. J. Abrams & Matt Reeves. Abrams and Reeves share executive producer duties with Brian Grazer, Tony Krantz, Jennifer Levin, Ron Howard, John Eisendrath & Laurie McCarthy. It was produced by Touchstone Television (now known as ABC Studios) and Imagine Television. The series first aired on September 29, 1998, and ended on May 22, 2002 after four seasons on The WB."
+        ],
+        "thoughts": [
+            "The album that contains the song \"How?\" by John Lennon is \"Imagine\", which is his second studio album released in 1971.",
+            "The album containing the song \"How?\" by John Lennon is \"Imagine\", which was released in 1971.",
+            "- Imagine (John Lennon album)\n- Lennon Legend: The Very Best of John Lennon\n- I'm Losing You (John Lennon song)\n- Isolation (John Lennon song)\n- Milk and Honey (album)\n- Hold On (John Lennon song)\n- Rock 'n' Roll (John Lennon album)",
+            "The latest album from the list of albums released before the album containing 'How?' is \"Milk and Honey\" by John Lennon."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the song 'How?' by John Lennon and find the album it is contained in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of albums released by John Lennon in chronological order.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the release date of the album containing 'How?'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the album released immediately before the album containing 'How?' using the list of albums and their release dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "This execution graph breaks down the task by first identifying the relevant album for the song 'How?' and then uses John's discography to determine the album chronologically before it. It ensures that both the necessary data points and the sequence of releases are considered to accurately answer the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Nick Egan\nNick Egan (born July 4, 1957 in London, England) is a visual design artist, and director of music videos, commercials and film. He graduated from the Watford College of Art and Design with a DGA in 1976. While attending college, he created cover art for the singles \"White Man In Hammersmith Palais\" and \"Tommy Gun\" for The Clash and T-shirt design for the single \"Sheena is A Punk Rocker\" for The Ramones. His first chart topping album cover was Dexys Midnight Runners' 'Searching For The Young Soul Rebels'. He collaborated with former Sex Pistols manager and fashion entrepreneur Mr. Malcolm McLaren, for whom he designed the album cover for Bow Wow Wow's 'See Jungle'. His longtime partnership with McLaren McLaren led the art direction of McLaren's own inventive albums; Duck Rock and 'Fans'. Egan relocated from Britain to New York, where he created cover art for legendary artists like Bob Dylan and Iggy Pop. Egan also art directed books; John Lennon \"Listen To These Pictures\" by Rock-n-Roll photographer Bob Gruen and Bob Dylan's \"Drawn Blank\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "John Berry (album)\nJohn Berry is an album released by American country music artist John Berry. It was released in 1993 by Liberty Records. It peaked at #13 on the Top Country Albums chart, and was certified Platinum by the RIAA. Singles released from it include \"A Mind of Her Own\", \"Kiss Me in the Car\", \"Your Love Amazes Me\", \"What's In It for Me\" and \"You and Only You\"."
+        ],
+        "thoughts": [
+            "1. John Lennon/Plastic Ono Band (1970)\n2. Imagine (1971)\n3. Lennon Legend: The Very Best of John Lennon (1997)\n4. Double Fantasy (1980)",
+            "The song \"How?\" by John Lennon is contained in the album \"Imagine\".",
+            "The album containing the song \"How?\" by John Lennon is \"Imagine\", which was released in 1971.",
+            "The album released immediately before \"Imagine\" is \"John Lennon/Plastic Ono Band\" which was released in 1970."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the album by John Lennon that contains the song 'How?'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the release order of John Lennon's albums.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the album released immediately before the album containing 'How?'",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To solve the problem, the graph first retrieves the album that contains the song 'How?' (Node 1). Separately, it fetches a chronological list of all John Lennon's albums to understand their release sequence (Node 2). The final reasoning node (Node 3) uses the information from both retrievals to determine which album was released immediately prior to the one identified in Node 1."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Live at the Greek Theatre 2008\nLive at the Greek Theatre 2008 is a live album released by musician Ringo Starr & His All-Starr Band in 2010. It is one of few current albums that Ringo Starr has released on a major label, this one being released on Universal Music Group, as well as his 2008 studio album \"Liverpool 8\", which was released under Capitol Records. One of the reasons that this particular live album might have been released on a more popular label is because the Greek Theatre (located in Los Angeles) is more of a bigger venue then some of Ringo's other concert locations. The album oddly removes many of the songs that were sung at the concert. On the filmed concert, also included with the CD, there are several more songs. Such examples are Edgar Winter's \"Frankenstein\" and what would have been an obvious choice for the album, a live version of Ringo Starr's \"Liverpool 8\" song. Also, there is a sing-along version of John Lennon's \"Give Peace a Chance\". News of the album was originally revealed on the Beatles' official website as well as Ringo's official website.",
+            "The Amalgamut\nThe Amalgamut is the third studio album by industrial rock band Filter released on July 30, 2002 on Reprise Records. Contrary to their prior two albums, \"Short Bus\" and \"Title of Record\", which were both certified platinum, indicating over one million copies sold, \"The Amalgamut\" stalled prior to hitting 100,000 copies sold, in part due to frontman Richard Patrick cancelling the album's main tour in order to enter a rehab facility. The album still had two singles release in its promotion, \"Where Do We Go from Here\" and \"American Clich\u00e9\".",
+            "Hits (compilation series)\nHits is a compilation album series that ran in the United Kingdom for over twenty years from 1984 until 2006. It was compiled as a joint venture, variously between the compilation arms of the Sony BMG and Warner Music groups to rival the \"Now That's What I Call Music\" series that had launched a year earlier in 1983, compiled by rival companies EMI and Virgin. Initially, the \"Hits\" brand was arguably as popular as its main rival, with volume one through to volume eight all achieving at least a platinum BPI award, with several of the early albums going multi-platinum. The standard release rate of \"The Hits Album\" was two volumes per year compared with three volumes of the \"Now\" albums.",
+            "Who Can See It\n\"Who Can See It\" is a song by English musician George Harrison, released on his 1973 album \"Living in the Material World\". The lyrics reflect Harrison's uneasy feelings towards the Beatles' legacy, three years after the group's break-up, and serve as his statement of independence from expectations raised by the band's unprecedented popularity. Some music critics and biographers suggest that he wrote the song during a period of personal anguish, following the acclaim he had received as a solo artist with the 1970 triple album \"All Things Must Pass\" and his 1971\u201372 Bangladesh aid project. The revelatory nature of the lyrics has encouraged comparisons between \"Living in the Material World\" and John Lennon's primal therapy-inspired 1970 release, \"Plastic Ono Band\"."
+        ],
+        "thoughts": [
+            "The album by John Lennon that contains the song 'How?' is \"Imagine\".",
+            "1. John Lennon/Plastic Ono Band (1970)\n2. Milk and Honey (1984)\n3. Lennon Legend: The Very Best of John Lennon (1997/1998)\n4. Life Begins at 40 (song) - included in the \"John Lennon Anthology\" box set (1998)",
+            "The album released immediately before \"Imagine\" (which contains the song 'How?') is \"John Lennon/Plastic Ono Band\" released in 1970."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the album that contains the song \"How?\" by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the release date of the album identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List all albums released by John Lennon prior to the date identified in Node 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the latest album from the list created in Node 3 prior to the date identified in Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph starts by identifying the album containing the song \"How?\" This information is necessary to determine its release date, which is then used to list all albums released by John Lennon before this date. Finally, we identify the most recent album released before the one containing \"How?\" This ensures we correctly answer the question by finding the album released immediately before."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom."
+        ],
+        "thoughts": [
+            "The album that contains the song \"How?\" by John Lennon is \"Imagine\".",
+            "The album \"Milk and Honey\" by John Lennon was released in 1984.",
+            "1. John Lennon/Plastic Ono Band (1970)\n2. Imagine (1971)\n3. Some Time in New York City (1972)\n4. Mind Games (1973)\n5. Walls and Bridges (1974)\n6. Rock 'n' Roll (1975)\n7. Shaved Fish (1975)\n8. Double Fantasy (1980)\n9. Milk and Honey (1984)",
+            "The latest album from the list created in Node 3 prior to the date identified in Node 2 is \"Double Fantasy\" released in 1980."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the album that contains the song 'How?' by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the discography of John Lennon, listing albums in chronological order.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the release order of the album identified in Node 1 within John Lennon's discography from Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the album released immediately before the album determined in Node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "4"
+            },
+            "explanation": "To find the album John Lennon released before the one containing 'How?', we start by identifying which album contains the song (Node 1). Concurrently, we gather John Lennon's album discography listed in order of release (Node 2). Using this discography, we determine the position of the album identified in Node 1 (Node 3). Finally, we find the album that was released immediately prior (Node 4), which answers the question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "The Amalgamut\nThe Amalgamut is the third studio album by industrial rock band Filter released on July 30, 2002 on Reprise Records. Contrary to their prior two albums, \"Short Bus\" and \"Title of Record\", which were both certified platinum, indicating over one million copies sold, \"The Amalgamut\" stalled prior to hitting 100,000 copies sold, in part due to frontman Richard Patrick cancelling the album's main tour in order to enter a rehab facility. The album still had two singles release in its promotion, \"Where Do We Go from Here\" and \"American Clich\u00e9\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Shooting Star (Rachael Leahcar album)\nShooting Star is the debut studio album by Australian recording artist Rachael Leahcar, who finished third on the first season of \"The Voice Australia\". The album was released on 13 July 2012, through Universal Music Australia. It features songs Leahcar performed on \"The Voice\", two original songs, as well as newly recorded covers. Leahcar promoted the album with an in-store appearance at Westfield Marion in Oaklands Park, South Australia, where she signed copies of the album and performed the songs \"La Vie en rose\" and \"Shooting Star\". The album debuted at number five on the ARIA Albums Chart.",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed. Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material. The two started work on a debut album in June 2012. The result of those sessions, \"Device\", was released on April 9, 2013. The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown. The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+            "2 steg fr\u00e5n Paradise\n2 steg fr\u00e5n Paradise is the sixth studio album by Swedish singer H\u00e5kan Hellstr\u00f6m, released on October 13, 2010. It was produced by H\u00e5kan Hellstr\u00f6m in collaboration with Joakim \u00c5hlund. Many of the songs were written together with The Soundtrack of our Lives' guitarist Bj\u00f6rn Olsson, who also produced Hellstr\u00f6m's third studio album \"Ett kolikbarns bek\u00e4nnelser. \"A double A-side single featuring \"Saknade te havs\" and \"River en vacker dr\u00f6m\" was released prior to the album, on September 11. \"River en vacker dr\u00f6m\" was originally meant to be performed at the current year's edition of Way Out West only. However, nearing the release of the album, Hellstr\u00f6m chose to record it as well.",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Filter (band)\nFilter is an American industrial rock group formed in 1993 in Cleveland by singer Richard Patrick and guitarist/programmer Brian Liesegang. The band was formed after Patrick desired to start his own band after leaving Nine Inch Nails as their touring guitarist. Their debut album, \"Short Bus\", was released in 1995, and ended up going platinum, selling over one million copies, largely due to the success of the band's single \"Hey Man Nice Shot.\" After the album, the band would go through the first of many line-up changes, leaving Patrick as the only consistent member across all music releases.",
+            "Hey Man Nice Shot\n\"Hey Man Nice Shot\" is a 1995 single by the industrial rock band Filter. The song was released on July 18, 1995 via Reprise Records, as the first single from their debut album \"Short Bus\".",
+            "Take a Picture\n\"Take a Picture\" is a song by American industrial rock group Filter. It was released in November 1999 as the second single from their second album \"Title of Record\". The song became a major hit during the start of 2000. It was the band's first departure from industrial rock.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\"."
+        ],
+        "thoughts": [
+            "The album that contains the song 'How?' by John Lennon is \"Imagine\".",
+            "1. R. Kelly (1995)\n2. Short Bus (1995) - Filter\n3. Title of Record (1999) - Filter\n4. The Amalgamut (2002) - Filter\n5. Device (2013) - Device\n6. 2 steg fr\u00e5n Paradise (2010) - H\u00e5kan Hellstr\u00f6m\n7. Shooting Star (2012) - Rachael Leahcar",
+            "The release order of the album \"Imagine\" by John Lennon within his discography is as follows:\n1. Imagine (1971)",
+            "The album released immediately before \"Imagine\" by John Lennon is \"John Lennon/Plastic Ono Band\" (1970)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the album that contains the song 'How?' by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List all albums released by John Lennon in chronological order.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the release date of the album identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Using the chronology of John Lennon's albums from step 2, find the album released immediately before the album from step 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "4",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts with two parallel retrieval tasks: one to identify the album containing the song 'How?' and another to list John Lennon's albums in chronological order. The third step involves determining the release date of the identified album. Finally, using the chronology of albums and the release date, the graph finds the album released immediately before the one containing the song 'How?'. The answer to the question is found at the final node."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Joss Whedon's unrealized projects\nThe following is a list of unproduced Joss Whedon projects in roughly chronological order. During his long career, American film director Joss Whedon has worked on a number of projects which never progressed beyond the pre-production stage under his direction. Some of these projects, are officially cancelled or fell in development hell."
+        ],
+        "thoughts": [
+            "1. Imagine (1971)\n2. Milk and Honey (1984)\n3. Lennon Legend: The Very Best of John Lennon (1997)\n4. I'm Losing You (1980)\n5. Isolation (1970)\n6. Hold On (1970)",
+            "The album that contains the song 'How?' by John Lennon is \"Imagine\".",
+            "The album \"Milk and Honey\" by John Lennon and Yoko Ono was released in 1984.",
+            "The album released immediately before \"Milk and Honey\" (1984) is \"Double Fantasy\" (1980), which was also a collaborative album by John Lennon and Yoko Ono."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the album that contains the song 'How?' by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the release date of the album identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List all albums released by John Lennon with their release dates.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which album was released immediately before the album containing 'How?' based on release dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine the album John Lennon released before the one containing the song 'How?', the graph first requires identifying which album 'How?' is part of. Next, it finds the release date of that album. In parallel, a comprehensive list of John Lennon's albums and their release dates is compiled. Finally, using the identified album and its release date, the reasoning step determines the preceding album by comparing release dates."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Nick Egan\nNick Egan (born July 4, 1957 in London, England) is a visual design artist, and director of music videos, commercials and film. He graduated from the Watford College of Art and Design with a DGA in 1976. While attending college, he created cover art for the singles \"White Man In Hammersmith Palais\" and \"Tommy Gun\" for The Clash and T-shirt design for the single \"Sheena is A Punk Rocker\" for The Ramones. His first chart topping album cover was Dexys Midnight Runners' 'Searching For The Young Soul Rebels'. He collaborated with former Sex Pistols manager and fashion entrepreneur Mr. Malcolm McLaren, for whom he designed the album cover for Bow Wow Wow's 'See Jungle'. His longtime partnership with McLaren McLaren led the art direction of McLaren's own inventive albums; Duck Rock and 'Fans'. Egan relocated from Britain to New York, where he created cover art for legendary artists like Bob Dylan and Iggy Pop. Egan also art directed books; John Lennon \"Listen To These Pictures\" by Rock-n-Roll photographer Bob Gruen and Bob Dylan's \"Drawn Blank\".",
+            "Astrid Kirchherr\nAstrid Kirchherr (born 20 May 1938) is a German photographer and artist and is well known for her association with the Beatles (along with her friends Klaus Voormann and J\u00fcrgen Vollmer), and her photographs of the band's original members \u2013 John Lennon, Paul McCartney, George Harrison, Stuart Sutcliffe and Pete Best \u2013 during their early days in Hamburg.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "The album that contains the song \"How?\" by John Lennon is \"Imagine\".",
+            "The album \"Imagine\" by John Lennon was released in 1971.",
+            "1. John Lennon/Plastic Ono Band - Released December 11, 1970\n2. Imagine - Released September 9, 1971\n3. Double Fantasy - Released November 17, 1980\n4. Lennon Legend: The Very Best of John Lennon - Released October 27, 1997",
+            "The album released immediately before \"Imagine\" by John Lennon is \"John Lennon/Plastic Ono Band\" which was released on December 11, 1970."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the album that contains the song 'How?' by John Lennon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of albums released by John Lennon in chronological order.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the album found in Step 1 within the list of albums obtained from Step 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the album released immediately before the album identified in Step 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine the album released by John Lennon before the one containing the song 'How?', we first need to identify which album contains that song. This requires retrieving information about the song 'How?' and the album it belongs to (Step 1). Separately, we also need to gather a chronological list of all albums released by John Lennon (Step 2). Once we have both sets of information, we identify the position of the album containing 'How?' within the list of albums (Step 3), and then find the album that was released immediately before it (Step 4). This breakdown ensures a systematic approach to both retrieval and reasoning."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Nick Egan\nNick Egan (born July 4, 1957 in London, England) is a visual design artist, and director of music videos, commercials and film. He graduated from the Watford College of Art and Design with a DGA in 1976. While attending college, he created cover art for the singles \"White Man In Hammersmith Palais\" and \"Tommy Gun\" for The Clash and T-shirt design for the single \"Sheena is A Punk Rocker\" for The Ramones. His first chart topping album cover was Dexys Midnight Runners' 'Searching For The Young Soul Rebels'. He collaborated with former Sex Pistols manager and fashion entrepreneur Mr. Malcolm McLaren, for whom he designed the album cover for Bow Wow Wow's 'See Jungle'. His longtime partnership with McLaren McLaren led the art direction of McLaren's own inventive albums; Duck Rock and 'Fans'. Egan relocated from Britain to New York, where he created cover art for legendary artists like Bob Dylan and Iggy Pop. Egan also art directed books; John Lennon \"Listen To These Pictures\" by Rock-n-Roll photographer Bob Gruen and Bob Dylan's \"Drawn Blank\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "John Berry (album)\nJohn Berry is an album released by American country music artist John Berry. It was released in 1993 by Liberty Records. It peaked at #13 on the Top Country Albums chart, and was certified Platinum by the RIAA. Singles released from it include \"A Mind of Her Own\", \"Kiss Me in the Car\", \"Your Love Amazes Me\", \"What's In It for Me\" and \"You and Only You\"."
+        ],
+        "thoughts": [
+            "The song \"How?\" by John Lennon is included in the album \"Imagine\", which is the second studio album by John Lennon, recorded and released in 1971.",
+            "1. John Lennon/Plastic Ono Band (1970)\n2. Imagine (1971)\n3. Lennon Legend: The Very Best of John Lennon (1997)\n4. Double Fantasy (1980)",
+            "The album \"Imagine\" by John Lennon can be found in the list of albums obtained from Step 2 at position 2.",
+            "The album released immediately before \"Imagine\" by John Lennon is \"John Lennon/Plastic Ono Band\" released in 1970."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What album did John Lennon release before the one that contained the song \"How?\"",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the album by John Lennon that contains the song 'How?'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of albums released by John Lennon in chronological order.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the album title before the album containing 'How?' by using the chronological order of John Lennon's albums.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine the album John Lennon released before the one containing the song 'How?', the process begins by identifying the specific album that includes the track 'How?' This requires searching for information about the song and its associated album (Node 1). Concurrently, we gather a complete chronological list of John Lennon's albums to contextually locate and compare them (Node 2). With these pieces of information obtained, we can then identify the album that precedes the one discovered in Node 1 by using the sequence of albums in Node 2. The final reasoning step (Node 3) combines these insights to provide the desired album name."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "I'm Losing You (John Lennon song)\n\"I'm Losing You\" is a song written by John Lennon and released on his 1980 album \"Double Fantasy\". It was completed in Bermuda in June 1980, after Lennon failed at an attempted telephone call to Yoko Ono. The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album. The song was also featured in the 2005 musical \"Lennon\".",
+            "Hold On (John Lennon song)\n\"Hold On\" is a song from the album \"John Lennon/Plastic Ono Band\" by John Lennon. It features only vocals, tremolo guitar, drums, and bass guitar, typical of the sparse arrangements Lennon favoured at the time. On the 2000 reissue of \"John Lennon/Plastic Ono Band\", \"Hold On\" features a slightly longer introduction. The original version was restored on the 2010 reissue.",
+            "Life Begins at 40 (song)\n\"Life Begins at 40\" is a song by John Lennon. It was written in 1980, the year that both Lennon and Ringo Starr turned 40 years of age. Lennon recorded a demo of the song at his home, but it was not recorded at any of the sessions for his comeback album, \"Double Fantasy.\" Instead, he intended to give the song to Starr to record on his own forthcoming album, \"Can't Fight Lightning.\" The song's amiable country feel was well suited to Starr's singing style. After Lennon's murder in December 1980, those plans were shelved. However, Lennon's demo was eventually issued in 1998 on the \"John Lennon Anthology\" box set.",
+            "Rock 'n' Roll (John Lennon album)\nRock 'n' Roll is the sixth studio album by John Lennon. Released in 1975, it is an album of late 1950s and early 1960s songs as covered by Lennon. Recording the album was problematic and spanned an entire year: Phil Spector produced sessions in October 1973 at A&M Studios, and Lennon produced sessions in October 1974 at Record Plant Studios (East). Lennon was being sued by Morris Levy over copyright infringement of one line in his song \"Come Together\". As part of an agreement, Lennon had to include three Levy-owned songs on \"Rock 'n' Roll\". Spector disappeared with the session recordings and was subsequently involved in a motor accident, leaving the album's tracks unrecoverable until the beginning of the \"Walls and Bridges\" sessions. With \"Walls and Bridges\" coming out first, featuring one Levy-owned song, Levy sued Lennon expecting to see Lennon's \"Rock 'n' Roll\" album.",
+            "Isolation (John Lennon song)\n\"Isolation\" is a 1970 song appearing on John Lennon's first official solo album release, \"John Lennon/Plastic Ono Band\". It ends side one of the album, and is the fifth track. In the Philippines Apple Records released \"Isolation\" as the b-side to \"Mother\", the single off \"John Lennon/Plastic Ono Band\", in contrast to most countries where the b-side was Yoko Ono's \"Why.\" It was also released on an EP in Mexico along with \"Mother,\" \"Look at Me'\" and \"My Mummy's Dead.\"",
+            "Come Together\n\"Come Together\" is a song by the Beatles written primarily by John Lennon and credited to Lennon\u2013McCartney. The song is the opening track on the album \"Abbey Road\" and was also released as a single coupled with \"Something\". The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom.",
+            "Imagine (John Lennon album)\nImagine is the second studio album by John Lennon. Recorded and released in 1971, the album is more heavily produced in contrast to the basic, raw arrangements of his previous album, the critically acclaimed \"John Lennon/Plastic Ono Band\".",
+            "Lennon Legend: The Very Best of John Lennon\nLennon Legend: The Very Best of John Lennon is the third official compilation album of John Lennon's solo career, coming after 1975's \"Shaved Fish\" and 1982's \"The John Lennon Collection\". Because neither collection spanned Lennon's releases up to and including 1984's \"Milk and Honey\", \"Lennon Legend: The Very Best of John Lennon\" \u2013 considered the definitive Lennon retrospective \u2013 was compiled to rectify the situation. It was released in the UK in 1997 through Parlophone and early 1998 in the US by EMI Records.",
+            "Nick Egan\nNick Egan (born July 4, 1957 in London, England) is a visual design artist, and director of music videos, commercials and film. He graduated from the Watford College of Art and Design with a DGA in 1976. While attending college, he created cover art for the singles \"White Man In Hammersmith Palais\" and \"Tommy Gun\" for The Clash and T-shirt design for the single \"Sheena is A Punk Rocker\" for The Ramones. His first chart topping album cover was Dexys Midnight Runners' 'Searching For The Young Soul Rebels'. He collaborated with former Sex Pistols manager and fashion entrepreneur Mr. Malcolm McLaren, for whom he designed the album cover for Bow Wow Wow's 'See Jungle'. His longtime partnership with McLaren McLaren led the art direction of McLaren's own inventive albums; Duck Rock and 'Fans'. Egan relocated from Britain to New York, where he created cover art for legendary artists like Bob Dylan and Iggy Pop. Egan also art directed books; John Lennon \"Listen To These Pictures\" by Rock-n-Roll photographer Bob Gruen and Bob Dylan's \"Drawn Blank\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "John Berry (album)\nJohn Berry is an album released by American country music artist John Berry. It was released in 1993 by Liberty Records. It peaked at #13 on the Top Country Albums chart, and was certified Platinum by the RIAA. Singles released from it include \"A Mind of Her Own\", \"Kiss Me in the Car\", \"Your Love Amazes Me\", \"What's In It for Me\" and \"You and Only You\"."
+        ],
+        "thoughts": [
+            "The album by John Lennon that contains the song 'How?' is \"Imagine\".",
+            "1. John Lennon/Plastic Ono Band (1970)\n2. Imagine (1971)\n3. Lennon Legend: The Very Best of John Lennon (1997)\n4. Double Fantasy (1980)\n5. Milk and Honey (1984)",
+            "The album title before \"Imagine\" is \"John Lennon/Plastic Ono Band\" (1970)."
+        ],
+        "is_best": false
+    }
+]

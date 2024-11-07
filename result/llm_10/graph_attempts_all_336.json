@@ -1,0 +1,605 @@
+[
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the Rolling Stones album on which Jim Price appeared.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release date (month and year) of the identified Rolling Stones album.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the release month from the release date of the Rolling Stones album retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the task of identifying the month Jim Price appeared on a Rolling Stones album into three distinct steps. The first step identifies which album the musician appeared on. The subsequent step retrieves the release date of this album. The final step extracts the release month from the date, providing the answer to the question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\")."
+        ],
+        "thoughts": [
+            "Jim Price appeared on the Rolling Stones album \"Sticky Fingers\" and \"Exile on Main St.\"",
+            "The release date of the Rolling Stones album \"Sticky Fingers\" is April 1971.",
+            "The release month of the Rolling Stones album \"Sticky Fingers\" is April."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the Rolling Stones album on which Jim Price appeared.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the release date for the identified Rolling Stones album.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract the month from the release date of the album.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to first identify which Rolling Stones album featured Jim Price by retrieving relevant discography information (Node 1). Once the correct album is identified, Node 2 focuses on retrieving the release date of that album. Finally, Node 3 extracts the month from the retrieved release date to answer the original question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\")."
+        ],
+        "thoughts": [
+            "Jim Price appeared on the Rolling Stones album \"Sticky Fingers\" and \"Exile on Main St.\"",
+            "The release date for the Rolling Stones album \"Sticky Fingers\" is April 1971.",
+            "The month extracted from the release date of the album \"Sticky Fingers\" is April."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the Rolling Stones album(s) on which Jim Price appeared.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the release date or month of each album identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Provide the month for the album on which Jim Price appeared with the release date information gathered in Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by identifying which Rolling Stones album(s) feature Jim Price (Node 1). Once identified, the next step (Node 2) is to find the specific release date or month of those albums. Finally, using the gathered release information, Node 3 finalizes the output by extracting the month from the relevant details, thus answering the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Goats Head Soup\nGoats Head Soup is the 11th British and 13th American studio album by The Rolling Stones, released in August 1973. Like its predecessor, \"Exile on Main St.\", the band composed and recorded it outside of the United Kingdom due to tax issues. \"Goats Head Soup\" was recorded in Jamaica and the Netherlands. The album contained 10 tracks, all written by Mick Jagger and Keith Richards, including lead single \"Angie\", which went to No. 1 as a single in the United States and top 5 in the UK. \"Goats Head Soup\" received positive reviews and achieved number one chart positions in the UK, US, and several other World markets. The album was remastered and released in 1994 and again in 2009 by Virgin Records and Universal Music respectively.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\").",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)"
+        ],
+        "thoughts": [
+            "Jim Price appeared on the Rolling Stones albums \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\".",
+            "Goats Head Soup - August 1973\nSticky Fingers - April 1971\nIt's Only Rock 'n Roll - 1974\nExile on Main St. - May 1972\nSome Girls - 1978\nSleep Tonight - 1986\nThe Rolling Stones No. 2 - 1965",
+            "Jim Price appeared on the album \"Sticky Fingers\" which was released in April 1971."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify albums by the Rolling Stones.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify which albums feature Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the release date of each album featuring Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Extract the month from the release dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task into the following steps: \n\n1. **Node 1** - We start by identifying all the albums released by the Rolling Stones (retrieval step) and any relevant details about them. This sets the foundation for understanding which albums could potentially feature Jim Price.\n\n2. **Node 2** - Filter these albums to find only those on which Jim Price appeared. This may involve looking at liner notes or other musical personnel data associated with each album found in Node 1.\n\n3. **Node 3** - For albums featuring Jim Price, find the release dates. Here, we focus specifically on retrieving the release date information for the subset of albums.\n\n4. **Node 4** - Extract the specific month from these release dates, concluding the reasoning to answer the question \u2018Jim Price appeared on the Rolling Stones Album released in what month?\u2019\n\nThis graph efficiently breaks down the question into a series of steps that utilize information retrieval and logical reasoning to come to a comprehensive answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Goats Head Soup\nGoats Head Soup is the 11th British and 13th American studio album by The Rolling Stones, released in August 1973. Like its predecessor, \"Exile on Main St.\", the band composed and recorded it outside of the United Kingdom due to tax issues. \"Goats Head Soup\" was recorded in Jamaica and the Netherlands. The album contained 10 tracks, all written by Mick Jagger and Keith Richards, including lead single \"Angie\", which went to No. 1 as a single in the United States and top 5 in the UK. \"Goats Head Soup\" received positive reviews and achieved number one chart positions in the UK, US, and several other World markets. The album was remastered and released in 1994 and again in 2009 by Virgin Records and Universal Music respectively.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\").",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\".",
+            "Starters (novel)\nStarters is a novel by Lissa Price. The book was published on March 12, 2012 by Delacorte Press and has been published in German, Greek, Dutch, Italian, French, Portuguese, Turkish and Spanish. Price has announced a sequel to the book entitled \"Enders\", with screen rights to the series currently being shopped. Price stated that she came up with the idea for the novel after trying to receive a flu shot and was turned away due to a lack of available vaccines.",
+            "T. Rowe Price\nT. Rowe Price Group, Inc. is an American publicly owned global asset management firm that offers funds, advisory services, account management, and retirement plans and services for individuals, institutions, and financial intermediaries. The firm, with assets under management of more than $800 billion dollars at the end of 2016, is headquartered at 100 East Pratt Street in Baltimore, Maryland, and its 16 offices serve clients in 45 countries around the world.",
+            "Live...In the Raw\nLive...In the Raw is the first live album by W.A.S.P. (fourth album overall), released in 1987. This album can be seen as something of a breakwater between the 'old' W.A.S.P. of the first three albums and the more mature sound of the releases that would follow. It is also the album to feature \"Harder Faster\", which is about the PMRC declaring them \"sexual perverts\".",
+            "Shenandoah discography\nShenandoah is an American country music band founded in 1984 by Marty Raybon, Ralph Ezell, Stan Thorn, Jim Seales and Mike McGuire. Its discography comprises nine studio albums, a greatest hits package, a Christmas music album, and several compilations. Two of Shenandoah's studio albums \u2014 \"The Road Not Taken\" (1989) and \"Extra Mile\" (1990) \u2014 have been certified gold by the Recording Industry Association of America (RIAA). The band's 1994 \"Super Hits\" compilation, part of a series issued by Sony BMG Special Markets, has been certified gold as well.",
+            "Illud Divinum Insanus\nIllud Divinum Insanus is the eighth studio album by American death metal band Morbid Angel. It was released on June 7, 2011, by independent French record label Season of Mist. It is Morbid Angel's first album since \"Heretic\" (2003), the band's longest gap to date between studio albums. This is the only Morbid Angel album to feature guitarist Destructhor and drummer Tim Yeung, making it their first not to feature Pete Sandoval, who was recovering from surgery. It is also the band's only album to feature bassist/vocalist David Vincent since he rejoined in 2004.",
+            "Jamieson Price\nJamieson Kent Price is an American voice actor, best known for his deep and booming voice for numerous anime and video games. He is known as the voice of Walter Bernhard in \",\" Largo the Black Lion in \"Tales of the Abyss\", Iron Tager from the \"BlazBlue\" series, the Count of Monte Cristo in \"Gankutsuou\", Ovan in \".hack//G.U.\", and Galbalan, the main villain of \"\" and Milton Grimm from \"Ever After High\". Price also had a part in the 2000 movie \"The Patriot\"."
+        ],
+        "thoughts": [
+            "1. Dirty Work (1986)\n2. The Rolling Stones No. 2 (1965)\n3. Aftermath (1966)\n4. Sticky Fingers (1971)\n5. Rewind (1971\u20131984) (1984)\n6. Some Girls (1978)\n7. It's Only Rock 'n Roll (1974)",
+            "The albums that feature Jim Price as a horn player are \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\" by The Rolling Stones.",
+            "1. Goats Head Soup - August 1973\n2. Sticky Fingers - April 1971\n3. It's Only Rock 'n Roll - 1974\n4. Exile on Main St. - May 12, 1972\n5. Some Girls - 1978\n6. Sleep Tonight - 1986\n7. The Rolling Stones No. 2 - 1965",
+            "1. August\n2. April\n3. N/A\n4. May\n5. N/A\n6. N/A\n7. N/A"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine which Rolling Stones album Jim Price appeared on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the release date of the album identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract the month from the release date identified in Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with identifying the specific Rolling Stones album featuring Jim Price. Once the album is identified, the next step is to retrieve the release date of that album. Finally, the release date information is used to extract the month of release, providing the answer to the original question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\")."
+        ],
+        "thoughts": [
+            "Jim Price appeared on the Rolling Stones albums \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\".",
+            "The album \"Sticky Fingers\" by The Rolling Stones was released in April 1971.",
+            "The month extracted from the release date in Node 2 is April."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which album(s) by the Rolling Stones feature Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release dates of the identified album(s).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the month in which the Rolling Stones album that features Jim Price was released.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to first identify the Rolling Stones album(s) featuring Jim Price (Node 1), then retrieve their release dates (Node 2), and finally deduce the release month of the relevant album (Node 3). This approach ensures that all necessary information is gathered and synthesized efficiently to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Goats Head Soup\nGoats Head Soup is the 11th British and 13th American studio album by The Rolling Stones, released in August 1973. Like its predecessor, \"Exile on Main St.\", the band composed and recorded it outside of the United Kingdom due to tax issues. \"Goats Head Soup\" was recorded in Jamaica and the Netherlands. The album contained 10 tracks, all written by Mick Jagger and Keith Richards, including lead single \"Angie\", which went to No. 1 as a single in the United States and top 5 in the UK. \"Goats Head Soup\" received positive reviews and achieved number one chart positions in the UK, US, and several other World markets. The album was remastered and released in 1994 and again in 2009 by Virgin Records and Universal Music respectively.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\").",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)"
+        ],
+        "thoughts": [
+            "The albums by the Rolling Stones that feature Jim Price are \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\".",
+            "- Goats Head Soup: Released in August 1973\n- Sticky Fingers: Released in April 1971\n- It's Only Rock 'n Roll: Released in 1974\n- Exile on Main St.: Released on May 12, 1972\n- Some Girls: Released in 1978\n- Sleep Tonight: Appeared on the album \"Dirty Work\" released in 1986\n- The Rolling Stones No. 2: Released in 1965",
+            "The Rolling Stones album that features Jim Price, \"Sticky Fingers,\" was released in April 1971."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all Rolling Stones albums featuring Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each album identified, retrieve the release date.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract the month of release from the release date information for the albums identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task requires identifying the specific month in which a Rolling Stones album featuring Jim Price was released. First, we need to retrieve a list of albums that Jim Price contributed to, using the initial node. Next, we retrieve the release date for each relevant album. Finally, we extract and return the month from these release dates, which directly answers the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Goats Head Soup\nGoats Head Soup is the 11th British and 13th American studio album by The Rolling Stones, released in August 1973. Like its predecessor, \"Exile on Main St.\", the band composed and recorded it outside of the United Kingdom due to tax issues. \"Goats Head Soup\" was recorded in Jamaica and the Netherlands. The album contained 10 tracks, all written by Mick Jagger and Keith Richards, including lead single \"Angie\", which went to No. 1 as a single in the United States and top 5 in the UK. \"Goats Head Soup\" received positive reviews and achieved number one chart positions in the UK, US, and several other World markets. The album was remastered and released in 1994 and again in 2009 by Virgin Records and Universal Music respectively.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Jai Ho! (You Are My Destiny)\n\"Jai Ho! (You Are My Destiny)\" is a song performed by American girl group The Pussycat Dolls for their second studio album \"Doll Domination\" (2008). It was released on February 23, 2009, by Interscope Records as the fourth single from the record. After watching \"Slumdog Millionaire\" record executives Jimmy Iovine and Ron Fair wanted to turn \"Jai Ho\" into a \"pop record without deviating from the original melody\" and asked Scherzinger to do her own interpretation of the song. The song was credited as \"\"A. R. Rahman and The Pussycat Dolls featuring Nicole Scherzinger\"\".",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+            "Shenandoah discography\nShenandoah is an American country music band founded in 1984 by Marty Raybon, Ralph Ezell, Stan Thorn, Jim Seales and Mike McGuire. Its discography comprises nine studio albums, a greatest hits package, a Christmas music album, and several compilations. Two of Shenandoah's studio albums \u2014 \"The Road Not Taken\" (1989) and \"Extra Mile\" (1990) \u2014 have been certified gold by the Recording Industry Association of America (RIAA). The band's 1994 \"Super Hits\" compilation, part of a series issued by Sony BMG Special Markets, has been certified gold as well."
+        ],
+        "thoughts": [
+            "The Rolling Stones albums featuring Jim Price as a horn session player are \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\".",
+            "Goats Head Soup - August 1973\nSticky Fingers - April 1971\nIt's Only Rock 'n Roll - 1974\nExile on Main St. - May 12, 1972\nSome Girls - 1978\nSleep Tonight - 1986\nThe Rolling Stones No. 2 - 1965",
+            "August\nApril\nMay\nMay\nSome Girls - 1978\nSleep Tonight - 1986\nThe Rolling Stones No. 2 - 1965"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the albums released by the Rolling Stones.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of the identified Rolling Stones albums feature Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the release date for the albums identified to feature Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Extract the month from the release date of the identified Rolling Stones album featuring Jim Price.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by identifying all albums released by the Rolling Stones. Once this is established, we filter the list to find which albums feature Jim Price. For those specific albums, retrieval of their release dates is necessary, followed by extracting the month from these dates. This ensures that all relevant data is collected and processed in a logical sequence, ultimately providing the month of release for the album Jim Price appeared on."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Goats Head Soup\nGoats Head Soup is the 11th British and 13th American studio album by The Rolling Stones, released in August 1973. Like its predecessor, \"Exile on Main St.\", the band composed and recorded it outside of the United Kingdom due to tax issues. \"Goats Head Soup\" was recorded in Jamaica and the Netherlands. The album contained 10 tracks, all written by Mick Jagger and Keith Richards, including lead single \"Angie\", which went to No. 1 as a single in the United States and top 5 in the UK. \"Goats Head Soup\" received positive reviews and achieved number one chart positions in the UK, US, and several other World markets. The album was remastered and released in 1994 and again in 2009 by Virgin Records and Universal Music respectively.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Orthodox Jewish feminism\nOrthodox Jewish feminism (also known as Orthodox feminism amongst Jews) is a movement in Orthodox Judaism which seeks to further the cause of a more egalitarian approach to Jewish practice within the bounds of Jewish Law. The major organizations of this movement is the Jewish Orthodox Feminist Alliance (JOFA) in North America, and Women of the Wall (WOW) and its affiliates in Israel and internationally, known as ICWOW - The International Committee for Women of the Wall. In Israel, the leading Orthodox feminist organization is Kolech (http://www.kolech.org.il), started by Dr. Hannah Kehat. Australia has one Orthodox partnership minyan, Shira Hadasha (http://www.shira.org.au), in Melbourne.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\").",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "No Shame (Sarah De Bono album)\nNo Shame is the debut studio album by Australian recording artist Sarah De Bono, who finished fourth on the first season of \"The\u00a0Voice\"\u00a0(Australia). The album was released on 13 July 2012, through Universal Music Australia. It features songs De Bono performed on \"The Voice\", original songs \"No Shame\" and \"Beautiful\", as well as newly recorded covers. To promote the album, De Bono visited the Westfield Knox in Wantirna South, Victoria, where she performed two songs from the album and signed CD copies for fans. The album debuted at number seven on the ARIA Albums Chart.",
+            "Shooting Star (Rachael Leahcar album)\nShooting Star is the debut studio album by Australian recording artist Rachael Leahcar, who finished third on the first season of \"The Voice Australia\". The album was released on 13 July 2012, through Universal Music Australia. It features songs Leahcar performed on \"The Voice\", two original songs, as well as newly recorded covers. Leahcar promoted the album with an in-store appearance at Westfield Marion in Oaklands Park, South Australia, where she signed copies of the album and performed the songs \"La Vie en rose\" and \"Shooting Star\". The album debuted at number five on the ARIA Albums Chart.",
+            "Ronnie Dunn (album)\nRonnie Dunn is the debut solo studio album from country music artist Ronnie Dunn. The album was released on June 7, 2011, via Arista Nashville. The album is Dunn's first release of music in nearly 25 years; he released three singles in the 1980s without issuing an album.",
+            "Spark (Marit Larsen album)\nSpark is the third album from Norwegian singer-songwriter Marit Larsen, and was released on November 18, 2011. The information was made available via Marit Larsen's Tumblr page. On 31 July 2011 Marit Larsen began to post information about her third album on her Tumblr. On 7 October 2011 she announced the name of the album and track list. The first single, \"Coming Home\" had premiered on NRK P3 and on her Facebook page on 15 October. The album produced two singles; \"Coming Home\" and \"Don't Move\". The album spawned 2 number one songs in the Philippine Top 100 Songs Chart where in \"Coming Home\" stayed atop for 4 consecutive weeks, which gave Marit her first number one song in the Philippines as a solo artist and her non-single song \"Last Night\" stayed for 2 consecutive weeks in the early 2012, serving as her second number one song.",
+            "Skepta\nJoseph Junior Adenuga (born 19 September 1982), better known by his stage name Skepta, is a British grime artist, rapper, songwriter, record producer and music video director. Adenuga released his debut studio album \"Greatest Hits\" in late-2007 and his second, \"Microphone Champion\" in 2009, both independently, while his third studio album \"Doin' It Again\" was released in 2011 by AATW. His fourth studio album, \"Konnichiwa\", was released on 6 May 2016 to critical acclaim, winning that year's Mercury Prize. Skepta's brother, and labelmate is the well known grime artist Jme.They have collaborated many times, most recently on his album \"Konnichiwa\".",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+            "A Time for Us (Luke Kennedy album)\nA Time for Us is the debut studio album by Australian recording artist Luke Kennedy, who finished second on the second season of \"The Voice Australia\". The album was released on 12 July 2013, through Universal Music Australia. It features eight songs Kennedy performed on \"The Voice\", two original songs, as well as two newly recorded covers."
+        ],
+        "thoughts": [
+            "The albums released by the Rolling Stones are not mentioned in the provided information.",
+            "The identified Rolling Stones albums that feature Jim Price are \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\".",
+            "The albums that feature Jim Price are:\n1. Sticky Fingers - released in April 1971\n2. Exile on Main St. - released on May 12, 1972\n3. Goats Head Soup - released in August 1973",
+            "The month from the release date of the identified Rolling Stones album featuring Jim Price is April for \"Sticky Fingers\", May for \"Exile on Main St.\", and August for \"Goats Head Soup\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of Rolling Stones albums.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify which Rolling Stones albums feature Jim Price.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the release months of the albums identified in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the specific album(s) from the list obtained that match the given role of Jim Price.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Cross-reference the release months with the specific albums Jim Price appeared on to find the correct month.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into discrete steps to find which Rolling Stones album Jim Price appeared on and in what month it was released. It starts by retrieving the Rolling Stones album list, narrows it to those featuring Jim Price, retrieves the release months, and then matches the details to find the final answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Goats Head Soup\nGoats Head Soup is the 11th British and 13th American studio album by The Rolling Stones, released in August 1973. Like its predecessor, \"Exile on Main St.\", the band composed and recorded it outside of the United Kingdom due to tax issues. \"Goats Head Soup\" was recorded in Jamaica and the Netherlands. The album contained 10 tracks, all written by Mick Jagger and Keith Richards, including lead single \"Angie\", which went to No. 1 as a single in the United States and top 5 in the UK. \"Goats Head Soup\" received positive reviews and achieved number one chart positions in the UK, US, and several other World markets. The album was remastered and released in 1994 and again in 2009 by Virgin Records and Universal Music respectively.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Orthodox Jewish feminism\nOrthodox Jewish feminism (also known as Orthodox feminism amongst Jews) is a movement in Orthodox Judaism which seeks to further the cause of a more egalitarian approach to Jewish practice within the bounds of Jewish Law. The major organizations of this movement is the Jewish Orthodox Feminist Alliance (JOFA) in North America, and Women of the Wall (WOW) and its affiliates in Israel and internationally, known as ICWOW - The International Committee for Women of the Wall. In Israel, the leading Orthodox feminist organization is Kolech (http://www.kolech.org.il), started by Dr. Hannah Kehat. Australia has one Orthodox partnership minyan, Shira Hadasha (http://www.shira.org.au), in Melbourne.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "No Shame (Sarah De Bono album)\nNo Shame is the debut studio album by Australian recording artist Sarah De Bono, who finished fourth on the first season of \"The\u00a0Voice\"\u00a0(Australia). The album was released on 13 July 2012, through Universal Music Australia. It features songs De Bono performed on \"The Voice\", original songs \"No Shame\" and \"Beautiful\", as well as newly recorded covers. To promote the album, De Bono visited the Westfield Knox in Wantirna South, Victoria, where she performed two songs from the album and signed CD copies for fans. The album debuted at number seven on the ARIA Albums Chart.",
+            "Shooting Star (Rachael Leahcar album)\nShooting Star is the debut studio album by Australian recording artist Rachael Leahcar, who finished third on the first season of \"The Voice Australia\". The album was released on 13 July 2012, through Universal Music Australia. It features songs Leahcar performed on \"The Voice\", two original songs, as well as newly recorded covers. Leahcar promoted the album with an in-store appearance at Westfield Marion in Oaklands Park, South Australia, where she signed copies of the album and performed the songs \"La Vie en rose\" and \"Shooting Star\". The album debuted at number five on the ARIA Albums Chart.",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\").",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)",
+            "Ronnie Dunn (album)\nRonnie Dunn is the debut solo studio album from country music artist Ronnie Dunn. The album was released on June 7, 2011, via Arista Nashville. The album is Dunn's first release of music in nearly 25 years; he released three singles in the 1980s without issuing an album.",
+            "Spark (Marit Larsen album)\nSpark is the third album from Norwegian singer-songwriter Marit Larsen, and was released on November 18, 2011. The information was made available via Marit Larsen's Tumblr page. On 31 July 2011 Marit Larsen began to post information about her third album on her Tumblr. On 7 October 2011 she announced the name of the album and track list. The first single, \"Coming Home\" had premiered on NRK P3 and on her Facebook page on 15 October. The album produced two singles; \"Coming Home\" and \"Don't Move\". The album spawned 2 number one songs in the Philippine Top 100 Songs Chart where in \"Coming Home\" stayed atop for 4 consecutive weeks, which gave Marit her first number one song in the Philippines as a solo artist and her non-single song \"Last Night\" stayed for 2 consecutive weeks in the early 2012, serving as her second number one song.",
+            "Skepta\nJoseph Junior Adenuga (born 19 September 1982), better known by his stage name Skepta, is a British grime artist, rapper, songwriter, record producer and music video director. Adenuga released his debut studio album \"Greatest Hits\" in late-2007 and his second, \"Microphone Champion\" in 2009, both independently, while his third studio album \"Doin' It Again\" was released in 2011 by AATW. His fourth studio album, \"Konnichiwa\", was released on 6 May 2016 to critical acclaim, winning that year's Mercury Prize. Skepta's brother, and labelmate is the well known grime artist Jme.They have collaborated many times, most recently on his album \"Konnichiwa\".",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+            "A Time for Us (Luke Kennedy album)\nA Time for Us is the debut studio album by Australian recording artist Luke Kennedy, who finished second on the second season of \"The Voice Australia\". The album was released on 12 July 2013, through Universal Music Australia. It features eight songs Kennedy performed on \"The Voice\", two original songs, as well as two newly recorded covers."
+        ],
+        "thoughts": [
+            "I'm sorry, but I couldn't find any information on Rolling Stones albums.",
+            "The Rolling Stones albums that feature Jim Price are \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\".",
+            "- Goats Head Soup: August 1973\n- Sticky Fingers: April 1971\n- It's Only Rock 'n Roll: 1974\n- Exile on Main St.: May 1972\n- Some Girls: 1978\n- Sleep Tonight: 1986\n- The Rolling Stones No. 2: 1965",
+            "The specific albums from the list that match the role of Jim Price are \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\" by The Rolling Stones.",
+            "Based on the upstream tasks, Jim Price appeared on the albums \"Sticky Fingers\", \"Exile on Main St.\", and \"Goats Head Soup\" by The Rolling Stones. Therefore, the correct release months for these albums are:\n- Sticky Fingers: April 1971\n- Exile on Main St.: May 1972\n- Goats Head Soup: August 1973"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Jim Price appeared on the Rolling Stones Album released in what month?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all albums released by the Rolling Stones.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the list of Rolling Stones albums to find those featuring Jim Price.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For the identified album(s) with Jim Price, find their release date.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Extract the month from the release date(s) of the album(s) featuring Jim Price.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by retrieving information about all Rolling Stones albums. It then filters these albums to find those that feature Jim Price. After identifying the relevant album(s), the release dates are found. The final step extracts the month from these release dates to answer the question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "It's Only Rock 'n Roll\nIt's Only Rock 'n Roll is the 12th British and 14th American studio album by The Rolling Stones, released in 1974. It was the last Rolling Stones album for guitarist Mick Taylor and the songwriting and recording of the album's title track had a connection to Taylor's eventual replacement, Ronnie Wood. The album also marked the 10th anniversary since the release of the band's debut album, \"The Rolling Stones\". \"It's Only Rock 'n Roll\" has a firmer rock sound than the band's previous album, the more funk - and soul - inspired \"Goats Head Soup\". \"It's Only Rock 'n Roll\" reached #1 in the US and #2 in the UK.",
+            "Sticky Fingers\nSticky Fingers is the ninth British and 11th American studio album by the English rock band The Rolling Stones, released in April 1971. It is the band's first album of the 1970s and its first release on the band's newly formed label, Rolling Stones Records, after having been contracted since 1963 with Decca Records in the UK and London Records in the US. It is also Mick Taylor's first full-length appearance on a Rolling Stones album, the first Rolling Stones album not to feature any contributions from guitarist and founder Brian Jones and the first one on which singer Mick Jagger is credited with playing guitar.",
+            "Some Girls\nSome Girls is the 14th British and 16th American studio album by the Rolling Stones, released in 1978 on Rolling Stones Records. It reached number one on the \"Billboard\" 200 album chart, and became the band's top selling album in the United States, certified by the RIAA as having six million copies sold as of 2000. It was a major critical success, becoming the only Rolling Stones album to be nominated for a Grammy in the Album of the Year category. Many reviewers called it a classic return to form and their best album since 1972's \"Exile on Main St.\"",
+            "Jim Price (musician)\nJames Price (born 1945, Fort Worth, Texas, United States) was, together with Bobby Keys and Jim Horn, one of the most in demand horn session players of the 1970s. He toured extensively with The Rolling Stones from 1970 until 1973, including their 1972 American Tour, and appears on the albums, \"Sticky Fingers\", \"Exile on Main St.\" and \"Goats Head Soup\". From September 1968 to February 1969, Price played with New Buffalo Springfield. He also toured and recorded with Delaney, Bonnie and Friends, Joe Cocker's \"Mad Dogs and Englishmen\" and Eric Clapton.",
+            "Rewind (1971\u20131984)\nRewind (1971\u20131984) is a compilation album by The Rolling Stones and was released in 1984. Coming only three years after \"Sucking in the Seventies\", the album was primarily compiled to mark the end of the band's alliance with Warner Music (in North America) and EMI (all other territories), both of whom were the distributors of Rolling Stones Records. It is the second Rolling Stones album to include a lyric sheet (after 1978's \"Some Girls\".)",
+            "Exile on Main St.\nExile on Main St. is a double album by English rock band the Rolling Stones, released on 12 May 1972 on LP by Rolling Stones Records. It was the band's first double album and tenth studio album released in the United Kingdom. It was primarily recorded in a rented villa in Nellc\u00f4te, France while the band lived abroad as tax exiles, and is rooted in styles such as blues, rock and roll, swing, country, and gospel. The sessions included additional musicians such as pianist Nicky Hopkins, saxophonist Bobby Keys, drummer Jimmy Miller, and horn player Jim Price, and were completed at Los Angeles' Sunset Sound.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "The Rolling Stones No. 2\nThe Rolling Stones No. 2 is the second UK album by the Rolling Stones released in 1965 following the massive success of 1964's debut \"The Rolling Stones\". It followed its predecessor's tendency to largely feature R&B covers. However, it does contain three compositions from the still-developing Mick Jagger/Keith Richards songwriting team. On Dutch and German pressings of the album, the title is listed as \"The Rolling Stones Vol. 2\" on the front cover, although the back of the album cover lists the title as \"The Rolling Stones No. 2\".",
+            "Mick Jagger\nSir Michael Philip Jagger, MBE (born 26 July 1943) is an English singer-songwriter, multi-instrumentalist, and composer, who gained fame as the lead singer and one of the founder members of the Rolling Stones (1962-present). Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". His distinctive voice and performance, along with Keith Richards' guitar style, have been the trademark of the Rolling Stones throughout the career of the band. Jagger gained press notoriety for his admitted drug use and romantic involvements, and was often portrayed as a countercultural figure.",
+            "Aftermath (The Rolling Stones album)\nAftermath, released in April 1966 by Decca Records, is the fourth British studio album by the Rolling Stones. It was issued in the United States in June 1966 by London Records as the group's sixth American album. The album is considered an artistic breakthrough for the band: it is the first to consist entirely of Mick Jagger\u2013Keith Richards compositions, while Brian Jones played a variety of instruments not usually associated with their music, including sitar, Appalachian dulcimer, marimbas and Japanese koto, as well as guitar, harmonica and keyboards, though much of the music is still rooted in Chicago electric blues. It was the first Rolling Stones album to be recorded entirely in the US, at the RCA Studios in California, and their first album released in true stereo. It is also one of the earliest rock albums to eclipse the 50-minute mark, and contains one of the earliest rock songs to eclipse the 10-minute mark (\"Goin' Home\").",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\"."
+        ],
+        "thoughts": [
+            "1. The Rolling Stones No. 2 (1965)\n2. Aftermath (1966)\n3. Sleep Tonight (1986)\n4. Rewind (1971\u20131984) (1984)\n5. Sticky Fingers (1971)\n6. Some Girls (1978)\n7. It's Only Rock 'n Roll (1974)\n8. Memo from Turner (1970)",
+            "The albums featuring Jim Price are:\n1. Sticky Fingers (1971)\n2. Some Girls (1978)\n3. It's Only Rock 'n Roll (1974)",
+            "It's Only Rock 'n Roll - Released in 1974\nSticky Fingers - Released in April 1971\nSome Girls - Released in 1978\nExile on Main St. - Released on May 12, 1972",
+            "April, May"
+        ],
+        "is_best": false
+    }
+]

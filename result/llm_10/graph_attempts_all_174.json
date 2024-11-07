@@ -1,0 +1,653 @@
+[
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the native country of the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the native country of the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the retrieved information to determine which breed, if any, is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is structured to retrieve information about the native countries of the Basset Bleu de Gascogne and the Bulldog independently. Once this information is retrieved, a reasoning step is needed to synthesize the data and determine which, if either, of the breeds is native to France. This ensures all necessary data is considered before making a conclusion."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Pit bull\nPit bull is the common name for a type of dog. Formal breeds often considered in North America to be of the pit bull type include the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. The American Bulldog is also sometimes included. Many of these breeds were originally developed as fighting dogs from cross breeding bull-baiting dogs (used to hold the faces and heads of larger animals such as bulls) and terriers. After the use of dogs in blood sports was banned, such dogs were used as catch dogs in the United States for semi-wild cattle and hogs, to hunt and drive livestock, and as family companions. Despite dog fighting now being illegal in the United States, it still exists as an underground activity, and pit bulls are a common breed of choice.",
+            "Chien Fran\u00e7ais Blanc et Orange\nThe Chien Fran\u00e7ais Blanc et Orange (FCI No.316) is a breed of dog of the scenthound type, originating in France. The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+            "Chien Fran\u00e7ais Blanc et Noir\nThe Chien Fran\u00e7ais Blanc et Noir (FCI No.220) translated into English as the French White and Black Hound, is a breed of dog of the scenthound type, originating in France. The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a native breed of dog originating in France. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The breed nearly became extinct in the early 19th century but was saved by Alain Bourbon. The \"bleu\" in its name refers to its coat, which has a ticked appearance. This breed is rare outside of its homeland.",
+            "The Bulldog is native to England, as it is commonly referred to as the English Bulldog or British Bulldog. The Olde English Bulldogge, on the other hand, is a recently created American dog breed. The Bullmastiff, which shares bloodlines with the Bulldog, was originally developed in England by 19th-century gamekeepers.",
+            "The Basset Bleu de Gascogne is the only breed mentioned in the retrieved information that is native to France. The Bulldog, while related to breeds developed in England, is not native to France. Therefore, the Basset Bleu de Gascogne is the only breed native to France based on the information provided."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the Basset Bleu de Gascogne, including its origin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the Bulldog, including its origin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the origins of the Basset Bleu de Gascogne and Bulldog to determine which is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph first retrieves information about the origins of both the Basset Bleu de Gascogne and the Bulldog. These retrieval steps are independent and can be executed in parallel. Once the origins are retrieved, a reasoning step compares the origins to identify which breed is native to France. The final node synthesizes the information to conclude that the Basset Bleu de Gascogne is native to France."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog of the hound type that originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century but was saved by Alain Bourbon. This French native breed is rare outside of its homeland and is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, The Kennel Club in the UK, and the United Kennel Club in the United States. The \"bleu\" in its name refers to its coat, which has a ticked appearance.",
+            "The Bulldog is a breed of dog that originated in England. It was originally bred for bull-baiting, but after the practice was outlawed, it was bred to have a more gentle temperament. The Bulldog is known for its distinctive wrinkled face and pushed-in nose. It is a medium-sized breed with a muscular build and a loyal, affectionate nature.",
+            "The Basset Bleu de Gascogne is native to France, as it originated in the Middle Ages and is descended from the Grand Bleu de Gascogne, a breed that is also native to France. On the other hand, the Bulldog originated in England, where it was originally bred for bull-baiting. Therefore, the Basset Bleu de Gascogne is the breed native to France, while the Bulldog is not."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the origin of the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the origin of the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which dog is native to France based on the origins found in nodes 1 and 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two parallel retrieval and reasoning nodes, each responsible for finding the origin of one of the dog breeds mentioned in the question. Once this information is gathered, a final reasoning node synthesizes the data to determine which dog breed is native to France. This structure ensures that the task is broken down logically, with each step contributing to the overall goal of answering the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Delhi Sultanate\nThe Delhi Sultanate was a Muslim sultanate based mostly in Delhi that stretched over large parts of the Indian subcontinent for 320 years (1206\u20131526). Five dynasties ruled over the Delhi Sultanate sequentially: the Mamluk dynasty (1206\u201390), the Khalji dynasty (1290\u20131320), the Tughlaq dynasty (1320\u20131414), the Sayyid dynasty (1414\u201351), and the Lodi dynasty (1451\u20131526). Three dynasties (Mamluk, Khalji and Sayyid) were of Turkic origin, one dynasty (Tughlaq) was of Turko-Indian origin, and the last dynasty (Lodi) was of Pashtun origin. The sultanate is noted for being one of the few states to repel an attack by the Mongol Empire, and enthroned one of the few female rulers in Islamic history, Razia Sultana, who reigned from 1236 to 1240.",
+            "Colectivo\nColectivo (English: collective bus) is the name given in Argentina, Chile, Paraguay, and Uruguay to a type of public transportation vehicle, especially those of Argentina's capital city, Buenos Aires. The name comes from \"veh\u00edculos de transporte colectivo\" (\"vehicles for collective transport\"), reflecting their origin as shared taxis."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog that originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct in the early 19th century but was saved by Alain Bourbon. This French native breed is rare outside of its homeland and is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, The Kennel Club in the UK, and the United Kennel Club in the United States. The \"bleu\" in its name refers to its coat, which has a ticked appearance.",
+            "The Bulldog, also known as the English Bulldog or British Bulldog, is a medium-sized breed of dog with a muscular, hefty build, wrinkled face, and distinctive pushed-in nose. It is overseen by breeding records from organizations such as the American Kennel Club, The Kennel Club, and the United Kennel Club. The breed originated in England and was developed from the now extinct Old English Bulldog and possibly other breeds such as the American Bulldog and Bull Mastiff. The Bulldog was the fourth most popular purebred in the US in 2007 according to the American Kennel Club.",
+            "The Basset Bleu de Gascogne is the dog native to France, as it originated in France and is recognized as a French native breed."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the native country of the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the native country of the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the two dogs is native to France based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph begins with two parallel retrievalandreasoning nodes that gather information about the native countries of the Basset Bleu de Gascogne and the Bulldog independently. Once these countries are identified, a reasoning step compares the results to determine which dog is native to France."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Sault Tribe of Chippewa Indians\nThe Sault Ste. Marie Tribe of Chippewa Indians (pronounced \"Soo Saint Marie\"), commonly shortened to Sault Tribe of Chippewa Indians or the more colloquial Soo Tribe, is a federally recognized Native American tribe in what is now known as Michigan's Upper Peninsula. The tribal headquarters is located within the major city in the region, Sault Ste. Marie on the St. Marys River.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Gilberto Sosa\nGilberto Sosa (born 23 September 1960 in Mexico City) is a retired Mexican boxer who competed in the men's light flyweight division. He represented his native country at the 1979 Pan American Games, where he captured the bronze medal; at the 1979 Latin American Boxing Championship (\"Campeonato Latinoamericano de Boxeo\" ), where he also won the bronze medal, and at 1980 Summer Olympics in Moscow.",
+            "Shahabuddin Ahmed\nShahabuddin Ahmed (born 1 February 1930) is a Bangladeshi politician who served as the 12th President of Bangladesh. He also served as the Chief Justice of the country. He took over the office of President after a popular uprising against President Hussain Mohammad Ershad in 1991 for what constitution of the country had been amended through 11th amendment. After the resumption of democracy, he returned to his duties as the Chief Justice following the amendment. Later, he served as the President from 1996 to 2001. During his first time in the Presidential office, he served as Acting President. Later when he again took over the office in 1996 he became the 12th President."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is native to France.",
+            "The native country of the Bulldog is England, as it is commonly referred to as the English Bulldog or British Bulldog.",
+            "The Basset Bleu de Gascogne is native to France, while the Bulldog is native to England. Therefore, the dog native to France is the Basset Bleu de Gascogne."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the country of origin for the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the country of origin for the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the countries of origin of the Basset Bleu de Gascogne and the Bulldog to determine which is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is to find the native country of two dog breeds to determine which is French. First, we create two independent retrieval and reasoning nodes to determine the origin of each breed. Finally, a reasoning node compares these findings to provide the answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Griffon Bruxellois\nThe Griffon Bruxellois or Brussels Griffon is a breed of toy dog, named for their city of origin: Brussels, Belgium. The Griffon Bruxellois may refer to three different breeds, the Griffon Bruxellois, the Griffon Belge and the Petit Braban\u00e7on. Identical in standard except for coat and colour differences, in some standards they are considered varieties of the same breed, much like Belgian Shepherd Dogs.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "New South Wales Women's Rugby League\nThe New South Wales Women's Rugby League is the governing body of female rugby league in New South Wales. It is a member of the Australian Women's Rugby League and New South Wales Rugby League. The organisation is responsible for administering the New South Wales Women's rugby league team, Women's City vs Country Origin, Sydney Metropolitan Women's Rugby League and Country Rugby League Women's RL competitions.",
+            "Country New South Wales rugby league team\nThe Country New South Wales rugby league team was a representative rugby league football team that consisted of professional players who originated from clubs of the Country Rugby League, one of two federations in the state of New South Wales. Country annually played in the City vs Country Origin competition against the City New South Wales rugby league team, which was made up of players originating from Sydney.",
+            "Pit bull\nPit bull is the common name for a type of dog. Formal breeds often considered in North America to be of the pit bull type include the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. The American Bulldog is also sometimes included. Many of these breeds were originally developed as fighting dogs from cross breeding bull-baiting dogs (used to hold the faces and heads of larger animals such as bulls) and terriers. After the use of dogs in blood sports was banned, such dogs were used as catch dogs in the United States for semi-wild cattle and hogs, to hunt and drive livestock, and as family companions. Despite dog fighting now being illegal in the United States, it still exists as an underground activity, and pit bulls are a common breed of choice."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne originated in France.",
+            "The Bulldog originated in England, specifically known as the English Bulldog or British Bulldog. It is recognized by the American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) as a purebred dog.",
+            "The Basset Bleu de Gascogne is native to France, while the Bulldog is not native to France, but rather originated in England."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the origin of the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the origin of the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the retrieved dog breeds is native to France based on their origins.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three main steps: two retrieval and reasoning nodes to gather information about the origin of each dog breed, and one reasoning node to determine which dog breed is native to France based on the retrieved data. By separating the task into these steps, we ensure that each dog breed's origin is accurately identified, which allows for a clear and concise conclusion in the final reasoning step."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Delhi Sultanate\nThe Delhi Sultanate was a Muslim sultanate based mostly in Delhi that stretched over large parts of the Indian subcontinent for 320 years (1206\u20131526). Five dynasties ruled over the Delhi Sultanate sequentially: the Mamluk dynasty (1206\u201390), the Khalji dynasty (1290\u20131320), the Tughlaq dynasty (1320\u20131414), the Sayyid dynasty (1414\u201351), and the Lodi dynasty (1451\u20131526). Three dynasties (Mamluk, Khalji and Sayyid) were of Turkic origin, one dynasty (Tughlaq) was of Turko-Indian origin, and the last dynasty (Lodi) was of Pashtun origin. The sultanate is noted for being one of the few states to repel an attack by the Mongol Empire, and enthroned one of the few female rulers in Islamic history, Razia Sultana, who reigned from 1236 to 1240.",
+            "Colectivo\nColectivo (English: collective bus) is the name given in Argentina, Chile, Paraguay, and Uruguay to a type of public transportation vehicle, especially those of Argentina's capital city, Buenos Aires. The name comes from \"veh\u00edculos de transporte colectivo\" (\"vehicles for collective transport\"), reflecting their origin as shared taxis."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog that originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct in the early 19th century but was saved by Alain Bourbon. This French native breed is rare outside of its homeland and is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, The Kennel Club in the UK, and the United Kennel Club in the United States. The \"bleu\" in its name refers to its coat, which has a ticked appearance.",
+            "The Bulldog, also known as the English Bulldog or British Bulldog, is a medium-sized breed of dog with a muscular, hefty build and a distinctive pushed-in nose. It is overseen by breeding records from organizations such as the American Kennel Club, The Kennel Club, and the United Kennel Club. The breed originated in England and was developed from the now extinct Old English Bulldog and possibly other breeds such as the American Bulldog and Bull Mastiff. The Bulldog was the fourth most popular purebred in the US in 2007 according to the American Kennel Club.",
+            "The Basset Bleu de Gascogne is the native dog breed to France based on its origins. It originated in France and is recognized internationally as a French native breed."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the Basset Bleu de Gascogne's origin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the Bulldog's origin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the origin information of the Basset Bleu de Gascogne to determine if it is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the origin information of the Bulldog to determine if it is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the origin information of both the Basset Bleu de Gascogne and the Bulldog to determine which is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts with two retrieval nodes to gather information about the origins of the Basset Bleu de Gascogne and the Bulldog, respectively. Each retrieval node is followed by a reasoning node that analyzes the gathered information to determine if each dog breed is native to France. The final node compares the results of these analyses to conclude which dog is native to France."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a breed of dog that originated in France. It is a scent hound that was originally bred for hunting small game such as rabbits and hares. The breed is known for its distinctive blue mottled coat and long ears. The Basset Bleu de Gascogne is a descendant of the Grand Bleu de Gascogne, and has been recognized as a separate breed since the 19th century. It is known for its keen sense of smell and its ability to track game over long distances. The breed is also known for its friendly and sociable nature, making it a popular choice as a family pet.",
+            "The Basset Bleu de Gascogne originated in France and is a descendant of the Grand Bleu de Gascogne, a breed also native to France. Therefore, it can be determined that the Basset Bleu de Gascogne is native to France.",
+            "The information about the Bulldog's origin was not found in the provided text.",
+            "Based on the lack of information about the Bulldog's origin in the provided text, it is not possible to determine if the Bulldog is native to France. Further research from other sources would be needed to determine the breed's origin.",
+            "The Basset Bleu de Gascogne is native to France, as it originated in France and is a descendant of the Grand Bleu de Gascogne, a breed also native to France. On the other hand, the origin of the Bulldog is not specified in the provided information, so it is not possible to determine if the Bulldog is native to France without further research from other sources."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the origin of the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the origin of the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the Basset Bleu de Gascogne is native to France based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the Bulldog is native to France based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results to identify which dog is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to systematically determine which of the two dog breeds mentioned is native to France. The task requires understanding the geographical origin of two breeds: the Basset Bleu de Gascogne and the Bulldog. The graph breaks this down into steps where first, information about each breed's origin is retrieved. Then, it checks if either breed is native to France. Finally, the reasoning node compares the results to conclude which breed (if any) is native to France."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Delhi Sultanate\nThe Delhi Sultanate was a Muslim sultanate based mostly in Delhi that stretched over large parts of the Indian subcontinent for 320 years (1206\u20131526). Five dynasties ruled over the Delhi Sultanate sequentially: the Mamluk dynasty (1206\u201390), the Khalji dynasty (1290\u20131320), the Tughlaq dynasty (1320\u20131414), the Sayyid dynasty (1414\u201351), and the Lodi dynasty (1451\u20131526). Three dynasties (Mamluk, Khalji and Sayyid) were of Turkic origin, one dynasty (Tughlaq) was of Turko-Indian origin, and the last dynasty (Lodi) was of Pashtun origin. The sultanate is noted for being one of the few states to repel an attack by the Mongol Empire, and enthroned one of the few female rulers in Islamic history, Razia Sultana, who reigned from 1236 to 1240.",
+            "Colectivo\nColectivo (English: collective bus) is the name given in Argentina, Chile, Paraguay, and Uruguay to a type of public transportation vehicle, especially those of Argentina's capital city, Buenos Aires. The name comes from \"veh\u00edculos de transporte colectivo\" (\"vehicles for collective transport\"), reflecting their origin as shared taxis."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog that originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct in the early 19th century but was saved by Alain Bourbon. This French native breed is rare outside of its homeland and is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, The Kennel Club in the UK, and the United Kennel Club in the United States. The \"bleu\" in its name refers to its coat, which has a ticked appearance.",
+            "Based on the information retrieved, the Basset Bleu de Gascogne is indeed native to France. It originated in the Middle Ages and is recognized internationally as a French native breed.",
+            "The Bulldog, also known as the English Bulldog or British Bulldog, is a medium-sized breed of dog with a muscular, hefty build, wrinkled face, and distinctive pushed-in nose. It is overseen by breeding records from organizations such as the American Kennel Club, The Kennel Club, and the United Kennel Club. The breed originated in England and was developed from the now extinct Old English Bulldog. Additionally, there is a recently created American dog breed called the Olde English Bulldogge, which was developed in the 1970s as a re-creation of the healthier working bulldog from early nineteenth century England. This breed was created by crossing English bulldogs, American Bulldogs, American Pit Bull Terriers, and Bull Mastiffs.",
+            "Based on the information provided, the Bulldog is not native to France. It originated in England and was developed from the now extinct Old English Bulldog. Therefore, it is not native to France.",
+            "The Basset Bleu de Gascogne is native to France, while the Bulldog is not."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the origin of the Basset Bleu de Gascogne.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the origin of the Bulldog.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the Basset Bleu de Gascogne is native to France based on its origin information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the Bulldog is native to France based on its origin information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the findings to determine which dog is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to identify which of the two dog breeds, Basset Bleu de Gascogne or Bulldog, is native to France. The graph starts by retrieving the origin details of each breed in two independent nodes (1 and 2). Then, reasoning is done separately for each breed to determine if it is native to France (nodes 3 and 4). Finally, the findings are compared in a reasoning step (node 5) to select the correct breed, thus answering the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Delhi Sultanate\nThe Delhi Sultanate was a Muslim sultanate based mostly in Delhi that stretched over large parts of the Indian subcontinent for 320 years (1206\u20131526). Five dynasties ruled over the Delhi Sultanate sequentially: the Mamluk dynasty (1206\u201390), the Khalji dynasty (1290\u20131320), the Tughlaq dynasty (1320\u20131414), the Sayyid dynasty (1414\u201351), and the Lodi dynasty (1451\u20131526). Three dynasties (Mamluk, Khalji and Sayyid) were of Turkic origin, one dynasty (Tughlaq) was of Turko-Indian origin, and the last dynasty (Lodi) was of Pashtun origin. The sultanate is noted for being one of the few states to repel an attack by the Mongol Empire, and enthroned one of the few female rulers in Islamic history, Razia Sultana, who reigned from 1236 to 1240.",
+            "Colectivo\nColectivo (English: collective bus) is the name given in Argentina, Chile, Paraguay, and Uruguay to a type of public transportation vehicle, especially those of Argentina's capital city, Buenos Aires. The name comes from \"veh\u00edculos de transporte colectivo\" (\"vehicles for collective transport\"), reflecting their origin as shared taxis."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog that originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct in the early 19th century but was saved by Alain Bourbon. The breed is native to France and is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, The Kennel Club in the UK, and the United Kennel Club in the United States. The \"bleu\" in its name refers to its coat, which has a ticked appearance.",
+            "The Basset Bleu de Gascogne is native to France based on its origin information. It originated in France and is recognized internationally as a breed native to the country.",
+            "The Bulldog, also known as the English Bulldog or British Bulldog, is a medium-sized breed of dog with a muscular, hefty build and a distinctive pushed-in nose. It is overseen by organizations such as the American Kennel Club and The Kennel Club. The breed originated in England and was developed from the now extinct Old English Bulldog. Additionally, there is a recently created American dog breed called the Olde English Bulldogge, which was developed in the 1970s as a re-creation of the healthier working bulldog from early nineteenth century England.",
+            "The Bulldog is not native to France, as it originated in England and was developed from the now extinct Old English Bulldog. Therefore, it is not a native breed of France.",
+            "Based on the findings from upstream tasks 3 and 4, it can be determined that the Basset Bleu de Gascogne is native to France, while the Bulldog is not native to France. Therefore, the Basset Bleu de Gascogne is the dog breed that is native to France."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog is native to France, the Basset Bleu de Gascogne or the Bulldog?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Gather general information about the Basset Bleu de Gascogne breed, including its origin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Gather general information about the Bulldog breed, including its origin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the native country of the Basset Bleu de Gascogne based on gathered information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the native country of the Bulldog based on gathered information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the origins of the Basset Bleu de Gascogne and the Bulldog to identify which is native to France.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by independently retrieving information about each breed (Basset Bleu de Gascogne and Bulldog) to determine their origins. After gathering the necessary data, it reasons about each origin to establish the native country of each breed, and finally compares the results to identify which breed is native to France."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Basset Bleu de Gascogne\nThe Basset Bleu de Gascogne (] ), also known as the Blue Gascony Basset, is a long-backed, short legged breed of dog of the hound type. The breed originated in the Middle Ages, descended from the Grand Bleu de Gascogne. It nearly became extinct around the early 19th century; its salvation was attributed to one Alain Bourbon. A French native breed, it is rare outside of its homeland. It is recognized internationally by the F\u00e9d\u00e9ration Cynologique Internationale, in the UK by The Kennel Club, and by the United Kennel Club in the United States. The \"bleu\" of its name is a reference to its coat which has a ticked appearance.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Ariegeois\nThe Ariegeois is a breed of dog from the \"d\u00e9partement\" of Ari\u00e8ge in the Midi-Pyren\u00e9es region of southern France. It is a medium-sized pack-hunting scenthound deriving from crossing of Grand Bleu de Gascogne and Grand Gascon-Saintongeois hounds with local Briquet dogs. It is used both as a courser and for driving game to waiting guns. While most successful with hares, it is also used for hunting deer and boar. It is distinguished by its friendly nature with other hounds and affection for human companions.",
+            "Bulldog\nThe Bulldog is a medium-sized breed of dog commonly referred to as the English Bulldog or British Bulldog. Other scent-hound breeds include the Small Greek Domestic Dog, Irish Wolfhound, Bluetick Coonhound, Finnish Lapphund, and the Basset Hound. The Bulldog is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. The American Kennel Club (AKC), The Kennel Club (UK), and the United Kennel Club (UKC) oversee breeding records. Bulldogs were the fourth most popular purebreed in the US in 2007 according to the American Kennel Club.",
+            "Floc de Gascogne\nThe Floc de Gascogne is a regional ap\u00e9ritif from the C\u00f4tes de Gascogne and Armagnac regions of Sud-Ouest wine region of France. It is a \"vin de liqueur\" fortified with armagnac, the local brandy. It has had \"Appellation d'origine contr\u00f4l\u00e9e\" status since 1990.",
+            "Landes de Gascogne Regional Natural Park\nLandes de Gascogne Regional Natural Park (French: \"Parc naturel r\u00e9gional des Landes de Gascogne\") is a protected area of pine forest, wetland and oceanic coastline located in the Aquitaine region of southwestern France.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "C\u00f4tes de Gascogne\nC\u00f4tes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the d\u00e9partement of the Gers in the French region Midi-Pyr\u00e9n\u00e9es, and it belongs to the wine region South West France. The designation C\u00f4tes de Gascogne is used for a \"Vin de Pays\" (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a \"Vin de Pays\" and simpler table wine, the so-called \"Vin de table\". The designation \"C\u00f4tes de Gascogne\" obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+            "Olde English Bulldogge\nThe Olde English Bulldogge is a recently created American dog breed. In the 1970s David Leavitt created a true-breeding lineage as a re-creation of the healthier working bulldog from early nineteenth century England. Using a breeding scheme developed for cattle, Leavitt crossed English bulldogs, American Bulldogs, American Pit Bull Terriers and Bull Mastiffs. The result was an athletic breed that looks similar to the bulldogs of 1820 but also has a friendly temperament.",
+            "Griffon Bruxellois\nThe Griffon Bruxellois or Brussels Griffon is a breed of toy dog, named for their city of origin: Brussels, Belgium. The Griffon Bruxellois may refer to three different breeds, the Griffon Bruxellois, the Griffon Belge and the Petit Braban\u00e7on. Identical in standard except for coat and colour differences, in some standards they are considered varieties of the same breed, much like Belgian Shepherd Dogs.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Pit bull\nPit bull is the common name for a type of dog. Formal breeds often considered in North America to be of the pit bull type include the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. The American Bulldog is also sometimes included. Many of these breeds were originally developed as fighting dogs from cross breeding bull-baiting dogs (used to hold the faces and heads of larger animals such as bulls) and terriers. After the use of dogs in blood sports was banned, such dogs were used as catch dogs in the United States for semi-wild cattle and hogs, to hunt and drive livestock, and as family companions. Despite dog fighting now being illegal in the United States, it still exists as an underground activity, and pit bulls are a common breed of choice.",
+            "Lantern Waste\nLantern Waste is a fictional place in \"The Chronicles of Narnia\" series by C. S. Lewis. It is a wood and is notable as the place where Lucy Pevensie and Mr. Tumnus meet, which is the first scene of Narnia described in the books. The lamppost in the wood is an iconic image of Narnia, and the question of its origin is what convinced Lewis to write more than one book on Narnia. One of King Edmund's titles is \"Duke of Lantern Waste\"."
+        ],
+        "thoughts": [
+            "The Basset Bleu de Gascogne is a long-backed, short-legged breed of dog that originated in France during the Middle Ages. It is descended from the Grand Bleu de Gascogne and nearly became extinct in the early 19th century. The breed is recognized internationally and is known for its ticked coat. In addition to the Basset Bleu de Gascogne, there are other related breeds such as the Petit Bleu de Gascogne, Griffon Bleu de Gascogne, Grand Bleu de Gascogne, and Ariegeois, all of which are used for hunting in packs. The region of Gascogne is also known for its Floc de Gascogne, a fortified wine, as well as the Landes de Gascogne Regional Natural Park and the C\u00f4tes de Gascogne wine-growing district.",
+            "The native country of the Basset Bleu de Gascogne is France, specifically the region of Gascogne.",
+            "The Bulldog breed, also known as the English Bulldog or British Bulldog, is a medium-sized dog with a muscular build, wrinkled face, and distinctive pushed-in nose. It is overseen by various kennel clubs and was the fourth most popular purebred in the US in 2007. The breed originated in England and has a friendly temperament.\n\nThe Chamuco, also known as the Mexican Pitbull, is a dog breed developed in Mexico in the 1970s through intentional or accidental crosses of various dog breeds, including the American Pit Bull Terrier and the now extinct Mexican Bulldog. It is known for its temperament and tenacity.\n\nThe Olde English Bulldogge is a recently created American dog breed, developed in the 1970s as a re-creation of the healthier working bulldog from early nineteenth century England. It has a friendly temperament and athletic build.\n\nThe Bullmastiff is a large-sized breed of domestic dog, originally developed by 19th-century gamekeepers to guard estates. It shares characteristics with molosser dogs and has bloodlines drawn from the English Mastiff and the extinct Old English Bulldog.\n\nThe Pit bull is a common name for a type of dog, including breeds such as the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. Originally developed as fighting dogs, they are now used as family companions.\n\nThe Grand Bleu de Gascogne is a breed of scenthound originating in France and used for hunting in packs.\n\nOverall, the Bulldog breed has a rich history and has contributed to the development of other breeds such as the Olde English Bulldogge and the Bullmastiff.",
+            "The native country of the Bulldog breed is England. This is supported by the fact that the breed originated in England and has a rich history in the country. Additionally, the Olde English Bulldogge, which is a re-creation of the healthier working bulldog from early nineteenth century England, and the Bullmastiff, which has bloodlines drawn from the English Mastiff and the extinct Old English Bulldog, further support the Bulldog's native country being England.",
+            "The Basset Bleu de Gascogne is native to France, specifically the region of Gascogne, while the Bulldog is native to England."
+        ],
+        "is_best": false
+    }
+]

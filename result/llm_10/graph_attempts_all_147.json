@@ -1,0 +1,752 @@
+[
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the birthplace or descent of Helen Dunmore.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the birthplace or descent of M. P. Shiel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Check if both Helen Dunmore and M. P. Shiel are of West Indian descent based on the previous conclusions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by retrieving information about Helen Dunmore's and M. P. Shiel's birthplaces or descent to establish if they have West Indian roots (nodes 1 and 2). Each retrieval node is followed by a reasoning node that determines whether each individual is indeed of West Indian descent (nodes 3 and 4). Finally, the results are synthesized in node 5 to conclusively answer the question about both individuals' descent."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Frank Sinatra's Greatest Hits\nFrank Sinatra's Greatest Hits! is Frank Sinatra's first compilation released on his own Reprise Records. It concentrates on mostly single releases from the mid to late 60's, which fluctuates between adult contemporary pop and jazzy swing. The album opens up with Sinatra's recent number one hit \"Strangers in the Night\" and continues through the varied styles of music Sinatra recorded in the 60's, from easy listening ballads like \"It Was a Very Good Year\" and \"Softly, as I Leave You\" to contemporary pop like \"When Somebody Loves You\" and \"That's Life\". \"Greatest Hits\" was a modest hit, peaking at #55 on the album charts in late 1968. A second volume was issued in 1972, \"Frank Sinatra's Greatest Hits, Vol. 2\". Both albums have since been supplanted with newer and more cohesive compilations.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+            "Jake Owen discography\nAmerican singer and songwriter Jake Owen has released five studio albums, one extended play, and 17 singles. Signed to RCA Nashville in 2006, he made his chart debut that same year with \"Yee Haw\". Of Owen's 17 singles, six have reached number one on the country charts: \"Barefoot Blue Jean Night\", \"Alone with You\", \"The One That Got Away\", and \"Anywhere with You\"; all from his third studio album, \"Barefoot Blue Jean Night\"; \"Beachin'\" from his fourth studio album, \"Days of Gold\"; as well as \"American Country Love Song\" from his fifth studio album, \"American Love\".",
+            "All That You Are (Goo Goo Dolls song)\n\"All That You Are\" is a song recorded by American alternative rock band the Goo Goo Dolls included in the \"\" , which was released on June 14, 2011. \"All That You Are\" was released to the Apple iTunes Store on June 14, 2011, the same day the soundtrack was released. Also Linkin Park and Paramore released their singles for the film, \"Iridescent\" and \"Monster\" respectively. This is the second song the Goo Goo Dolls have made for a \"Transformers\" movie with the first being \"Before It's Too Late (Sam and Mikaela's Theme), which was made for \"Transformers\".",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Helen Dunmore was born in England.",
+            "Based on the information retrieved, there is no indication that Helen Dunmore is of West Indian descent. She was born in England, which suggests that her ancestry is likely English or European.",
+            "M. P. Shiel was born in Montserrat, West Indies.",
+            "Based on the information retrieved, M. P. Shiel is indeed of West Indian descent, as he was born in Montserrat, West Indies.",
+            "Helen Dunmore is not of West Indian descent, as she was born in England. M. P. Shiel, on the other hand, is of West Indian descent, as he was born in Montserrat, West Indies."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birthplace or origin of Helen Dunmore.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the birthplace or origin of M. P. Shiel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on her birthplace or ancestral origin information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on his birthplace or ancestral origin information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the information to conclude whether both Helen Dunmore and M. P. Shiel are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into multiple nodes to address each target individual's descent separately. Separate nodes for retrieval are created to gather birthplace or origin information for Helen Dunmore and M. P. Shiel. Subsequent nodes are dedicated to reasoning whether each person is of West Indian descent based on the retrieved information. The final node synthesizes these conclusions to answer the question definitively."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Helen Dunmore was born in Beverley, Yorkshire, England.",
+            "Based on the information provided, Helen Dunmore was born in Yorkshire, England, and there is no indication of West Indian descent based on her birthplace or ancestral origin. Therefore, it is unlikely that she is of West Indian descent.",
+            "M. P. Shiel was born in Montserrat, a British Overseas Territory in the Caribbean.",
+            "Based on the information that M. P. Shiel was born in Montserrat, a British Overseas Territory in the Caribbean, it is likely that he is of West Indian descent.",
+            "Based on the information provided, it is unlikely that Helen Dunmore is of West Indian descent, as she was born in Yorkshire, England. However, M. P. Shiel was born in Montserrat, a British Overseas Territory in the Caribbean, indicating that he is likely of West Indian descent."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the ancestry or ethnic background of Helen Dunmore.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the ancestry or ethnic background of M. P. Shiel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the retrieved background information to conclude whether Helen Dunmore is of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the retrieved background information to conclude whether M. P. Shiel is of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both Helen Dunmore and M. P. Shiel are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into two main parts: retrieving and reasoning about each individual's background separately, then combining the results. The first two nodes involve gathering the necessary background information about Helen Dunmore and M. P. Shiel. The next nodes process this information to determine if each individual is of West Indian descent. Finally, the last node synthesizes both results to answer whether both individuals share this descent."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "Ethnic religion\nIn religious studies, ethnic religion (or indigenous religion) is the expression of religion associated with a particular ethnic group. Ethnic religions are often distinguished from religions which claim to not be limited in ethnic or national scope, such as Christianity or Islam. Ethnic religions do not have to be excluded to independent religions. Some localized denominations of global religions are practiced solely by certain ethnic groups, with ethnic groups like the Assyrians following a unique denominational structure of Christianity known as the Assyrian Church of the East.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "The Siege (Dunmore novel)\nThe Siege is a historical novel by the English writer Helen Dunmore. It is set in Leningrad just before and during the Siege of Leningrad by German forces in World War II.",
+            "The Crossing of Ingo\nThe Crossing of Ingo is a children's fantasy novel by Helen Dunmore, first published in 2008. It is the fourth and final volume in the \"Ingo\" tetralogy.",
+            "Zennor in Darkness\nZennor in Darkness, was the debut novel from English author Helen Dunmore, published in 1993. It won the 1994 McKitterick Prize. which is awarded for debut novels for writers over 40. Until that point Dunmore was primarily a poet though had published short stories and books for children. As a result of winning the prize, Penguin offered her a two-book deal and fiction became her focus.",
+            "A Spell of Winter\nA Spell of Winter is a 1995 gothic novel by Helen Dunmore, set in England, around the time of World War I. The novel was the first recipient of the Orange Prize for Fiction, in 1996.",
+            "Unrecognized ethnic groups in China\nSeveral ethnic groups of the People's Republic of China are not officially recognized. Taken together, these groups (\u672a\u8bc6\u522b\u6c11\u65cf \"w\u00e8i sh\u00edbi\u00e9 m\u00ednz\u00fa)\" number more than 730,000 people; if considered as a single group, they would constitute the twentieth most populous ethnic group of China. Some scholars have estimated that there are over 200 distinct ethnic groups that inhabit China. There are in addition small distinct ethnic groups that have been classified as part of larger ethnic groups that are officially recognized. Some groups like the Hui of Xinjiang with the Hui of Fujian are geographically and culturally separate except for the shared belief of Islam. Han Chinese being the world's largest ethnic group has a large diversity within it, such as in Gansu, the Han here may have genetic traits from the assimilated Tangut civilization. Although they are indigenous to Hainan island and do not speak a Chinese language, the Limgao (Ong-Be) people near the capital (8% of the population) are counted as Han Chinese.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Ingo tetralogy\nThe Ingo tetralogy is a series of four children's novels, set in Cornwall, by British author Helen Dunmore. The four books are, in chronological order, \"Ingo\", \"The Tide Knot\", \"The Deep\" and \"The Crossing of Ingo\". The first book was nominated for the 2008 Booktrust Teenage Prize.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Azerbaijanis\nAzerbaijanis ( ) or Azeris (Azerbaijani: \"Az\u0259rbaycanl\u0131lar\" \u0622\u0630\u0631\u0628\u0627\u06cc\u062c\u0627\u0646\u0644\u06cc\u0644\u0627\u0631, \"Az\u0259ril\u0259r\" \u0622\u0630\u0631\u06cc\u0644\u0631), also known as Azerbaijani Turks (Azerbaijani: \"Az\u0259rbaycan t\u00fcrkl\u0259ri\" \u0622\u0630\u0631\u0628\u0627\u06cc\u062c\u0627\u0646 \u062a\u0648\u0631\u06a9\u0644\u0631\u06cc), are a Turkic ethnic group living mainly in Iranian Azerbaijan and the independent Republic of Azerbaijan. They are the second-most numerous ethnic group among the Turkic peoples after Anatolian Turks. They are predominantly Shi'i Muslims, and have a mixed cultural heritage, including Turkic, Iranian, and Caucasian elements. They comprise the largest ethnic group in Republic of Azerbaijan and by far the second-largest ethnic group in neighboring Iran. The world's largest number of ethnic Azerbaijanis live in Iran, followed by Azerbaijan.",
+            "Fezara people\nFezara is an ethnic group of Sudan, who emigrated from Arabia to Egypt, and then to Sudan. The number of persons in this ethnic group is about 200,000. Most members of this ethnic group are Muslims. This ethnic group speaks Sudanese Arabic."
+        ],
+        "thoughts": [
+            "Based on the information provided, there is no specific mention of Helen Dunmore's ancestry or ethnic background. However, based on her name and the fact that she was a British poet and novelist, it is likely that she had British ancestry. There is no indication of any specific ethnic background such as Ovambo. Therefore, it is reasonable to assume that Helen Dunmore's ancestry is British.",
+            "Based on the retrieved background information, it is reasonable to conclude that Helen Dunmore is not of West Indian descent. There is no specific mention of her ancestry or ethnic background, but based on her name and profession as a British poet and novelist, it is likely that she had British ancestry. Therefore, there is no indication to suggest that she is of West Indian descent.",
+            "M. P. Shiel's ethnic background or ancestry is not explicitly mentioned in the provided information. Therefore, it is not possible to determine his specific ethnic background based on the given information.",
+            "Based on the retrieved background information, it is not possible to conclude whether M. P. Shiel is of West Indian descent. His ethnic background or ancestry is not explicitly mentioned in the provided information, so it is not possible to determine his specific ethnic background based on the given information.",
+            "Based on the combined results, it can be concluded that Helen Dunmore is not of West Indian descent, as there is no indication of her ancestry or ethnic background being West Indian. As for M. P. Shiel, it is not possible to determine whether he is of West Indian descent based on the provided information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information about Helen Dunmore.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve biographical information about M. P. Shiel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to determine if both Helen Dunmore and M. P. Shiel are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into necessary retrieval and reasoning steps. It first retrieves biographical information for both Helen Dunmore and M. P. Shiel. Then, it separately determines if each individual is of West Indian descent. Finally, it combines these results to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "M. P. Shiel\nMatthew Phipps Shiell (21 July 1865 \u2013 17 February 1947) \u2013 known as M. P. Shiel \u2013 was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "The Siege (Dunmore novel)\nThe Siege is a historical novel by the English writer Helen Dunmore. It is set in Leningrad just before and during the Siege of Leningrad by German forces in World War II.",
+            "The Last Station\nThe Last Station is a 2009 English-language German biographical drama film written and directed by Michael Hoffman, and based on Jay Parini's 1990 biographical novel of the same name, which chronicled the final months of Leo Tolstoy's life. The film stars Christopher Plummer as Tolstoy and Helen Mirren as his wife Sofya Tolstaya. The film is about the battle between Sofya and his disciple Vladimir Chertkov for his legacy and the copyright of his works. The film premiered at the 2009 Telluride Film Festival.",
+            "The Crossing of Ingo\nThe Crossing of Ingo is a children's fantasy novel by Helen Dunmore, first published in 2008. It is the fourth and final volume in the \"Ingo\" tetralogy.",
+            "Zennor in Darkness\nZennor in Darkness, was the debut novel from English author Helen Dunmore, published in 1993. It won the 1994 McKitterick Prize. which is awarded for debut novels for writers over 40. Until that point Dunmore was primarily a poet though had published short stories and books for children. As a result of winning the prize, Penguin offered her a two-book deal and fiction became her focus.",
+            "A Spell of Winter\nA Spell of Winter is a 1995 gothic novel by Helen Dunmore, set in England, around the time of World War I. The novel was the first recipient of the Orange Prize for Fiction, in 1996.",
+            "Rebecca Cobb\nRebecca Cobb is a British children's book illustrator. She grew up in Buckinghamshire and Somerset and now lives in Falmouth. Along with writing and illustrating her own books, she has also collaborated with other authors including Julia Donaldson, Richard Curtis and Helen Dunmore.",
+            "William Scott Home\nWilliam Scott Home (born January 2, 1940) is the pen name (and, later, legal name) of an American author, poet and biologist principally known for writing horror and dark fantasy. Best known for a short story that appeared in 1978 in \"The Year\u2019s Best Horror Stories\" (along with Stephen King\u2019s \u201cChildren of the Corn\u201d, which also made the cut that year), Home was most prolific during the 1970s and 80s when his poetry and fiction was published in a wide range of media. Part of a circle of Science Fiction, Fantasy and Horror writers that paid homage to M. P. Shiel and H. P. Lovecraft, Home is considered by many to be a unique talent in his own right. His range of styles and control of language and suspense is well-demonstrated in his published collection: \"Hollow Faces, Merciless Moons\". While he has not published much since the 1980s, Home is still writing and currently lives in the Dyea Valley, west of Skagway, Alaska.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Sinatra (miniseries)\nSinatra is a 1992 CBS biographical drama miniseries about singer Frank Sinatra, developed and executive produced by Frank's youngest daughter Tina Sinatra and approved by Frank himself. Directed by James Steven Sadwith, produced by Richard M. Rosenbloom, and written by William Mastrosimone and Abby Mann. It stars Philip Casnoff, Olympia Dukakis, Joe Santos, Gina Gershon, Nina Siemaszko, and Marcia Gay Harden, with some of Sinatra's vocals recreated by Tom Burlinson. It won two and was nominated for seven Emmy Awards, along with a win and two nominations for a Golden Globe Award. Released on November 8, 1992, it was re-released on a two-disc DVD Warner Home Video on May 13, 2008.",
+            "Ist das Ihr Fahrrad, Mr. O'Brien?\nIst das Ihr Fahrrad Mr O\u2019Brien? (Is this your bicycle, Mr. O'Brien?) is a German biographical radio play about life, works and legacy of Irish modernist writer Brian O'Nolan (Irish: \"Brian \u00d3 Nuall\u00e1in\" ; 5 October 1911 \u2013 1 April 1966).",
+            "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\".",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas."
+        ],
+        "thoughts": [
+            "Helen Dunmore was a British poet, novelist, and children's writer, born on December 12, 1952, and passed away on June 5, 2017. She wrote several novels, including \"Mourning Ruby,\" \"The Siege,\" \"Zennor in Darkness,\" and \"A Spell of Winter,\" which won the Orange Prize for Fiction in 1996. Dunmore also wrote children's books, such as \"The Crossing of Ingo.\" She was known for her historical fiction and her debut novel, \"Zennor in Darkness,\" won the McKitterick Prize in 1994. Additionally, she collaborated with other authors, such as Rebecca Cobb, a British children's book illustrator. Helen Dunmore's work continues to be celebrated and remembered in the literary world.",
+            "Based on the retrieved information, there is no indication that Helen Dunmore is of West Indian descent. She is described as a British poet, novelist, and children's writer, with no mention of West Indian heritage. Therefore, it is unlikely that she is of West Indian descent.",
+            "M. P. Shiel, also known as Matthew Phipps Shiell, was a prolific British writer of West Indian descent. He was born on July 21, 1865, and passed away on February 17, 1947. Shiel adopted the pen name \"M. P. Shiel\" and was known for his extensive body of work. His legal surname remained \"Shiell\" but he used the shorter version as a pen name. He was a significant figure in the world of literature and his contributions continue to be recognized.",
+            "Based on the retrieved information, M. P. Shiel is of West Indian descent. This is supported by the fact that he was born with the surname \"Shiell\" and adopted the pen name \"M. P. Shiel,\" indicating a connection to his West Indian heritage. Additionally, his prolific literary contributions further support the assertion of his West Indian descent.",
+            "Based on the combined results, it is determined that M. P. Shiel is of West Indian descent, while there is no indication that Helen Dunmore is of West Indian descent."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Research the biography of Helen Dunmore to identify her descent, focusing on any West Indian heritage.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Research the biography of M. P. Shiel to identify his descent, focusing on any West Indian heritage.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the information obtained about Helen Dunmore to determine if she is of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the information obtained about M. P. Shiel to determine if he is of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results from the analyses of both Helen Dunmore and M. P. Shiel to conclude whether both are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins with two parallel retrieval and reasoning nodes to gather information about the descent of both individuals separately. Subsequently, there are reasoning nodes that process this information to determine whether each individual is of West Indian descent. The final step combines the results from both analyses to answer whether both individuals share West Indian descent."
+        },
+        "recall": 0.2777777777777778,
+        "retrieved_passages": [
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Helen Atkinson-Wood\nHelen Atkinson-Wood (born 14 March 1955) is an English actress and comedian born in Cheadle Hulme, Cheshire.",
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "John Logan (pioneer)\nJohn Logan (1747July 1807) was a pioneer and politician from the U.S. state of Virginia and later, Kentucky. He participated in Lord Dunmore's War in 1774, serving under his brother, Benjamin. After moving to Kentucky County, Virginia, he took part in several expeditions against the Shawnee, including some led by Daniel Boone, John Bowman, and George Rogers Clark. After Kentucky County was split into three counties, Logan represented his home county, Lincoln in the Virginia House of Delegates and at several of the conventions that effected the separation of Virginia from Kentucky.",
+            "The Last Station\nThe Last Station is a 2009 English-language German biographical drama film written and directed by Michael Hoffman, and based on Jay Parini's 1990 biographical novel of the same name, which chronicled the final months of Leo Tolstoy's life. The film stars Christopher Plummer as Tolstoy and Helen Mirren as his wife Sofya Tolstaya. The film is about the battle between Sofya and his disciple Vladimir Chertkov for his legacy and the copyright of his works. The film premiered at the 2009 Telluride Film Festival."
+        ],
+        "thoughts": [
+            "Helen Dunmore was a British poet, novelist, and children's writer. There is no information available in the provided text regarding her descent or any West Indian heritage. Therefore, it is not possible to confirm whether she had any West Indian heritage based on the information provided.",
+            "Based on the information obtained, there is no evidence to suggest that Helen Dunmore is of West Indian descent. Therefore, it cannot be confirmed whether she had any West Indian heritage based on the information provided.",
+            "M. P. Shiel, whose full name is Matthew Phipps Shiel, was a British author known for his works in the science fiction and supernatural fiction genres. He was born in Montserrat, West Indies, in 1865, and later moved to England. His West Indian heritage is evident in his writing, as he often incorporated themes and settings related to the Caribbean in his works. Shiel's diverse background and experiences likely influenced his unique storytelling style and the cultural elements present in his literature.",
+            "Based on the information obtained, M. P. Shiel is indeed of West Indian descent. He was born in Montserrat, West Indies, and his heritage is evident in his writing, as he often incorporated themes and settings related to the Caribbean in his works. Therefore, it can be concluded that M. P. Shiel is of West Indian descent.",
+            "Based on the analyses of both Helen Dunmore and M. P. Shiel, it can be concluded that M. P. Shiel is of West Indian descent, as he was born in Montserrat, West Indies, and his heritage is evident in his writing. However, there is no evidence to suggest that Helen Dunmore is of West Indian descent. Therefore, it can be confirmed that M. P. Shiel is of West Indian descent, but the same cannot be confirmed for Helen Dunmore."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information about Helen Dunmore, focusing on her descent or ancestry.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve biographical information about M. P. Shiel, focusing on his descent or ancestry.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on the retrieved biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on the retrieved biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to assess if both Helen Dunmore and M. P. Shiel are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into separate parts for each individual mentioned. First, it retrieves biographical information about Helen Dunmore and M. P. Shiel in parallel, focusing on their descent. Then, separate reasoning nodes are responsible for analyzing whether each individual has West Indian ancestry. Finally, the results are combined to determine if both are of West Indian descent. This multi-step approach ensures that both retrieval and reasoning logic are clearly delineated and efficient."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "M. P. Shiel\nMatthew Phipps Shiell (21 July 1865 \u2013 17 February 1947) \u2013 known as M. P. Shiel \u2013 was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "The Siege (Dunmore novel)\nThe Siege is a historical novel by the English writer Helen Dunmore. It is set in Leningrad just before and during the Siege of Leningrad by German forces in World War II.",
+            "The Crossing of Ingo\nThe Crossing of Ingo is a children's fantasy novel by Helen Dunmore, first published in 2008. It is the fourth and final volume in the \"Ingo\" tetralogy.",
+            "Zennor in Darkness\nZennor in Darkness, was the debut novel from English author Helen Dunmore, published in 1993. It won the 1994 McKitterick Prize. which is awarded for debut novels for writers over 40. Until that point Dunmore was primarily a poet though had published short stories and books for children. As a result of winning the prize, Penguin offered her a two-book deal and fiction became her focus.",
+            "A Spell of Winter\nA Spell of Winter is a 1995 gothic novel by Helen Dunmore, set in England, around the time of World War I. The novel was the first recipient of the Orange Prize for Fiction, in 1996.",
+            "Ingo tetralogy\nThe Ingo tetralogy is a series of four children's novels, set in Cornwall, by British author Helen Dunmore. The four books are, in chronological order, \"Ingo\", \"The Tide Knot\", \"The Deep\" and \"The Crossing of Ingo\". The first book was nominated for the 2008 Booktrust Teenage Prize.",
+            "Rebecca Cobb\nRebecca Cobb is a British children's book illustrator. She grew up in Buckinghamshire and Somerset and now lives in Falmouth. Along with writing and illustrating her own books, she has also collaborated with other authors including Julia Donaldson, Richard Curtis and Helen Dunmore.",
+            "Dickran Tevrizian\nDickran M. Tevrizian Jr. (born 1940) was a United States federal judge for the Central District of California. Confirmed in 1985, he is the first United States federal judge of Armenian ancestry.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Sinatra (miniseries)\nSinatra is a 1992 CBS biographical drama miniseries about singer Frank Sinatra, developed and executive produced by Frank's youngest daughter Tina Sinatra and approved by Frank himself. Directed by James Steven Sadwith, produced by Richard M. Rosenbloom, and written by William Mastrosimone and Abby Mann. It stars Philip Casnoff, Olympia Dukakis, Joe Santos, Gina Gershon, Nina Siemaszko, and Marcia Gay Harden, with some of Sinatra's vocals recreated by Tom Burlinson. It won two and was nominated for seven Emmy Awards, along with a win and two nominations for a Golden Globe Award. Released on November 8, 1992, it was re-released on a two-disc DVD Warner Home Video on May 13, 2008.",
+            "The Last Station\nThe Last Station is a 2009 English-language German biographical drama film written and directed by Michael Hoffman, and based on Jay Parini's 1990 biographical novel of the same name, which chronicled the final months of Leo Tolstoy's life. The film stars Christopher Plummer as Tolstoy and Helen Mirren as his wife Sofya Tolstaya. The film is about the battle between Sofya and his disciple Vladimir Chertkov for his legacy and the copyright of his works. The film premiered at the 2009 Telluride Film Festival.",
+            "Ist das Ihr Fahrrad, Mr. O'Brien?\nIst das Ihr Fahrrad Mr O\u2019Brien? (Is this your bicycle, Mr. O'Brien?) is a German biographical radio play about life, works and legacy of Irish modernist writer Brian O'Nolan (Irish: \"Brian \u00d3 Nuall\u00e1in\" ; 5 October 1911 \u2013 1 April 1966).",
+            "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\"."
+        ],
+        "thoughts": [
+            "There is no specific information available about Helen Dunmore's descent or ancestry. The provided information focuses on her literary works, including novels, children's books, and collaborations with other authors. It does not mention her family background or heritage.",
+            "Based on the retrieved biographical information, there is no specific mention of Helen Dunmore's descent or ancestry. Therefore, it cannot be determined if she is of West Indian descent based on the available information.",
+            "M. P. Shiel, whose full name was Matthew Phipps Shiell, was a British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name. This indicates that Shiel's ancestry can be traced back to the West Indies.",
+            "Based on the retrieved biographical information, M. P. Shiel is of West Indian descent. His legal surname \"Shiell\" and the fact that he adopted the shorter version as a pen name indicates that his ancestry can be traced back to the West Indies.",
+            "Based on the combined results, it can be determined that M. P. Shiel is of West Indian descent, while there is no specific mention of Helen Dunmore's descent or ancestry. Therefore, it cannot be determined if she is of West Indian descent based on the available information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information for Helen Dunmore.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve biographical information for M. P. Shiel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore has West Indian descent based on her biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel has West Indian descent based on his biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize information from both biographical analyses to determine if both Helen Dunmore and M. P. Shiel are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph is designed to first gather biographical information about both authors independently. The reasoning nodes then process this information to check for West Indian descent. Finally, the synthesis node combines the results to address the question whether both authors share this heritage."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "John Berry (album)\nJohn Berry is an album released by American country music artist John Berry. It was released in 1993 by Liberty Records. It peaked at #13 on the Top Country Albums chart, and was certified Platinum by the RIAA. Singles released from it include \"A Mind of Her Own\", \"Kiss Me in the Car\", \"Your Love Amazes Me\", \"What's In It for Me\" and \"You and Only You\".",
+            "Texas hold 'em\nTexas hold 'em (also known as Texas holdem, hold 'em, and holdem) is a variation of the card game of poker. Two cards, known as the hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages. The stages consist of a series of three cards (\"the flop\"), later an additional single card (\"the turn\" or \"fourth street\"), and a final card (\"the river\" or \"fifth street\"). Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards. (If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called \"playing the board\". If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents, using either or both hole cards.) Players have betting options to check, call, raise, or fold. Rounds of betting take place before the flop is dealt and after each subsequent deal.",
+            "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart.",
+            "Pittosporum kirkii\nPittosporum kirkii is a glabrous evergreen perennial shrub that reaches up to 5 m in height and possesses distinctive coriaceous, fleshy, thick leaves. It is one of four shrubs endemic to New Zealand that frequently displays an epiphytic lifestyle. \"P. kirkii\" is commonly epiphytic, perched amongst nest epiphytes in the canopies of emergent or canopy trees in old-growth forest; however, it can be observed occasionally growing on the ground or over rocks (in a rupestral lifestyle). The type locality of \"P. kirkii\" is Great Barrier Island. It was first described by Joseph Dalton Hooker from material collected by Thomas Kirk, published in 1869. The initial brief description titled \"Pittosporum n. sp.?\" by Thomas Kirk was published in his paper on Great Barrier Island in 1868. This description along with herbarium specimens were sent to Dr. J. D Hooker at Kew Gardens in 1868, and he collaborated to name it after T. Kirk, by giving it the specific epithet \"kirkii\" within the publication that was otherwise written by Kirk.",
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "The Siege (Dunmore novel)\nThe Siege is a historical novel by the English writer Helen Dunmore. It is set in Leningrad just before and during the Siege of Leningrad by German forces in World War II.",
+            "The Crossing of Ingo\nThe Crossing of Ingo is a children's fantasy novel by Helen Dunmore, first published in 2008. It is the fourth and final volume in the \"Ingo\" tetralogy.",
+            "Zennor in Darkness\nZennor in Darkness, was the debut novel from English author Helen Dunmore, published in 1993. It won the 1994 McKitterick Prize. which is awarded for debut novels for writers over 40. Until that point Dunmore was primarily a poet though had published short stories and books for children. As a result of winning the prize, Penguin offered her a two-book deal and fiction became her focus.",
+            "A Spell of Winter\nA Spell of Winter is a 1995 gothic novel by Helen Dunmore, set in England, around the time of World War I. The novel was the first recipient of the Orange Prize for Fiction, in 1996.",
+            "Rebecca Cobb\nRebecca Cobb is a British children's book illustrator. She grew up in Buckinghamshire and Somerset and now lives in Falmouth. Along with writing and illustrating her own books, she has also collaborated with other authors including Julia Donaldson, Richard Curtis and Helen Dunmore.",
+            "Ingo tetralogy\nThe Ingo tetralogy is a series of four children's novels, set in Cornwall, by British author Helen Dunmore. The four books are, in chronological order, \"Ingo\", \"The Tide Knot\", \"The Deep\" and \"The Crossing of Ingo\". The first book was nominated for the 2008 Booktrust Teenage Prize."
+        ],
+        "thoughts": [
+            "Helen Dunmore was a British poet, novelist, and children's writer, born on December 12, 1952, and passed away on June 5, 2017. She was a prolific writer, known for her works such as \"Mourning Ruby\", \"The Siege\", \"The Crossing of Ingo\", \"Zennor in Darkness\", and \"A Spell of Winter\". Dunmore also wrote the \"Ingo\" tetralogy, a series of children's novels set in Cornwall. She was the first recipient of the Orange Prize for Fiction in 1996 for \"A Spell of Winter\". Additionally, she won the McKitterick Prize in 1994 for her debut novel \"Zennor in Darkness\". Helen Dunmore's contributions to literature have left a lasting impact, and her work continues to be celebrated.",
+            "Based on the provided biographical information, there is no indication that Helen Dunmore has West Indian descent. Therefore, it is not possible to determine her ancestry based on the information provided.",
+            "M. P. Shiel was a British writer known for his works of science fiction and fantasy. He was born Matthew Phipps Shiel on July 21, 1865, in Montserrat, West Indies, and died on February 17, 1947, in Chichester, England. Shiel was known for his vivid imagination and unique writing style, and he is best known for his novel \"The Purple Cloud\" which is considered a classic of post-apocalyptic fiction. He also wrote numerous other novels, short stories, and essays, and his work has had a lasting impact on the genres of science fiction and fantasy.",
+            "Based on the biographical information provided, M. P. Shiel was born in Montserrat, West Indies, which indicates that he has West Indian descent.",
+            "Based on the synthesis of the biographical analyses, it can be determined that M. P. Shiel is of West Indian descent, as he was born in Montserrat, West Indies. However, there is no indication that Helen Dunmore has West Indian descent based on the information provided."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information on Helen Dunmore, focusing on her descent and family background.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve biographical information on M. P. Shiel, focusing on his descent and family background.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to conclude whether both, neither, or one of them is of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the original question into biographical information retrieval tasks for each individual. Each retrieval task is followed by a reasoning step to analyze whether the person is of West Indian descent. The final step combines the results to provide a comprehensive answer to the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "M. P. Shiel\nMatthew Phipps Shiell (21 July 1865 \u2013 17 February 1947) \u2013 known as M. P. Shiel \u2013 was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "Stuart Card\nStuart K. Card (born c. 1946), an American researcher and Senior Research Fellow at Xerox PARC, is considered to be one of the pioneers of applying human factors in human\u2013computer interaction. His study of input devices led to the Fitts's Law characterization of the computer mouse and was a major factor leading to the mouse's commercial introduction by Xerox, most notably in the Alto and Star projects, some of the very earliest GUI systems employing a desktop metaphor. The 1983 book \"The Psychology of Human-Computer Interaction\", which he co-wrote with Thomas P. Moran and Allen Newell, became seminal work in the HCI field. Further research into the theoretical characterizations of human\u2013machine interaction led to developments like \"the Model Human Processor, the GOMS theory of user interaction, information foraging theory, and statistical descriptions of Internet use\". In the new millennium his research has been focusing on developing a \"supporting science of human\u2013information interaction and visual-semantic prototypes to aid sense making\".",
+            "William Scott Home\nWilliam Scott Home (born January 2, 1940) is the pen name (and, later, legal name) of an American author, poet and biologist principally known for writing horror and dark fantasy. Best known for a short story that appeared in 1978 in \"The Year\u2019s Best Horror Stories\" (along with Stephen King\u2019s \u201cChildren of the Corn\u201d, which also made the cut that year), Home was most prolific during the 1970s and 80s when his poetry and fiction was published in a wide range of media. Part of a circle of Science Fiction, Fantasy and Horror writers that paid homage to M. P. Shiel and H. P. Lovecraft, Home is considered by many to be a unique talent in his own right. His range of styles and control of language and suspense is well-demonstrated in his published collection: \"Hollow Faces, Merciless Moons\". While he has not published much since the 1980s, Home is still writing and currently lives in the Dyea Valley, west of Skagway, Alaska.",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Lawrence A. Gordon\nLawrence A. Gordon is the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland\u2019s Robert H. Smith School of Business. He is also an Affiliate Professor in the University of Maryland Institute for Advanced Computer Studies. Dr. Gordon earned his Ph.D. in Managerial Economics from Rensselaer Polytechnic Institute. An internationally known scholar in the areas of managerial accounting (often called management accounting) and cybersecurity economics, Dr. Gordon's research focuses on such issues as economic aspects of information security (including cybersecurity or computer security), corporate performance measures, cost management systems, and capital investments. He is the author of approximately 100 articles, published in such journals as The Accounting Review, ACM Transactions on Information and System Security, Communications of the ACM, Journal of Financial and Quantitative Analysis, Journal of Computer Security, MIS Quarterly, Accounting, Organizations and Society, and the Journal of Accounting and Public Policy. Dr. Gordon's current research emphasizes the importance of applying concepts from economics and managerial accounting to an information-based economy. Dr. Gordon is the co-creator (with Martin P. Loeb) of the Gordon-Loeb Model, which provides a mathematical economic model for deriving an organization's optimal investment level in cyber/information security. The Gordon-Loeb Model has been featured in The Wall Street Journal and The Financial Times. For a 3-minute video that provides a non-mathematical overview of the Model, go to: https://www.youtube.com/watch?v=cd8dT0FuqQ4. Dr. Gordon also is the author of several books, including Managerial Accounting: Concepts and Empirical Evidence, Managing Cybersecurity Resources: A Cost-Benefit Analysis and Improving Capital Budgeting: A Decision Support System Approach. In addition, he is the Editor-in-Chief of the Journal of Accounting and Public Policy and serves on the editorial boards of several other journals. Dr. Gordon's research has over 6,400 citations in Google Scholar.",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association.",
+            "Sapho (software)\nSapho is a venture-backed enterprise application infrastructure company based in San Francisco, California, that was founded in 2014 by Fouad ElNaggar, the former of Chief Strategy Officer of CBS Interactive, Peter Yared, the former Chief Technology Officer and Chief Information Officer at CBS Interactive, and Charles Christolini, the former VP Architecture of CBS Interactive. Sapho provides an enterprise software platform for organizations to offer access to corporate information on mobile devices by utilizing software APIs to pull information from a company\u2019s enterprise applications and SaaS vendors.",
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "The Siege (Dunmore novel)\nThe Siege is a historical novel by the English writer Helen Dunmore. It is set in Leningrad just before and during the Siege of Leningrad by German forces in World War II.",
+            "The Crossing of Ingo\nThe Crossing of Ingo is a children's fantasy novel by Helen Dunmore, first published in 2008. It is the fourth and final volume in the \"Ingo\" tetralogy.",
+            "Zennor in Darkness\nZennor in Darkness, was the debut novel from English author Helen Dunmore, published in 1993. It won the 1994 McKitterick Prize. which is awarded for debut novels for writers over 40. Until that point Dunmore was primarily a poet though had published short stories and books for children. As a result of winning the prize, Penguin offered her a two-book deal and fiction became her focus.",
+            "A Spell of Winter\nA Spell of Winter is a 1995 gothic novel by Helen Dunmore, set in England, around the time of World War I. The novel was the first recipient of the Orange Prize for Fiction, in 1996.",
+            "Rebecca Cobb\nRebecca Cobb is a British children's book illustrator. She grew up in Buckinghamshire and Somerset and now lives in Falmouth. Along with writing and illustrating her own books, she has also collaborated with other authors including Julia Donaldson, Richard Curtis and Helen Dunmore.",
+            "Ingo tetralogy\nThe Ingo tetralogy is a series of four children's novels, set in Cornwall, by British author Helen Dunmore. The four books are, in chronological order, \"Ingo\", \"The Tide Knot\", \"The Deep\" and \"The Crossing of Ingo\". The first book was nominated for the 2008 Booktrust Teenage Prize."
+        ],
+        "thoughts": [
+            "Helen Dunmore was a British poet, novelist, and children's writer, born on December 12, 1952. Unfortunately, there is no specific information available about her descent or family background. However, she was a prolific writer, known for her novels such as \"Mourning Ruby\", \"The Siege\", \"Zennor in Darkness\", and \"A Spell of Winter\", as well as the \"Ingo\" tetralogy for children. She also collaborated with other authors, including Rebecca Cobb, a British children's book illustrator. Helen Dunmore passed away on June 5, 2017, leaving behind a legacy of literary works.",
+            "Based on the retrieved information, there is no specific mention of Helen Dunmore's descent or family background. Therefore, it is not possible to determine if she is of West Indian descent based on the available information.",
+            "M. P. Shiel, born Matthew Phipps Shiell, was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name. This background likely influenced his writing and contributed to his unique perspective and style.",
+            "Based on the retrieved information, M. P. Shiel is of West Indian descent. His legal surname \"Shiell\" and the fact that he was born in the West Indies indicate his West Indian heritage.",
+            "Based on the combined results, it can be concluded that M. P. Shiel is of West Indian descent, while there is no specific information available to determine Helen Dunmore's descent."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Helen Dunmore's descent.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about M. P. Shiel's descent.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to determine if both Helen Dunmore and M. P. Shiel are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task of determining if both Helen Dunmore and M. P. Shiel are of West Indian descent into discrete steps. The process begins with retrieving biographical information about each individual (nodes 1 and 3). Each retrieval step is followed by reasoning steps (nodes 2 and 4) to analyze the descent information. Finally, the problem synthesizes the results from both reasoning steps at node 5 to answer the original question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Catherine Scorsese\nCatherine Scorsese (n\u00e9e Cappa; April 16, 1912\u00a0\u2013 January 6, 1997) was an American actress, and the mother of director Martin Scorsese. Of Italian descent, she began acting when her son Martin Scorsese cast her in his film \"It's Not Just You, Murray!\". She frequently played the role of an Italian mother, and is perhaps most well known for her appearance in her son's film \"Goodfellas\". She acted in films other than her son's. She was married to Charles Scorsese. Her father, Martin Cappa, was a stage co-ordinator and her mother, Domenica, was a shop owner. She published a recipe book, \"Italianamerican: The Scorsese Family Cookbook\".",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Jai Ho! (You Are My Destiny)\n\"Jai Ho! (You Are My Destiny)\" is a song performed by American girl group The Pussycat Dolls for their second studio album \"Doll Domination\" (2008). It was released on February 23, 2009, by Interscope Records as the fourth single from the record. After watching \"Slumdog Millionaire\" record executives Jimmy Iovine and Ron Fair wanted to turn \"Jai Ho\" into a \"pop record without deviating from the original melody\" and asked Scherzinger to do her own interpretation of the song. The song was credited as \"\"A. R. Rahman and The Pussycat Dolls featuring Nicole Scherzinger\"\".",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "List of songs recorded by Taylor Swift\nTaylor Swift is an American singer-songwriter. She signed a record deal with Big Machine Records in 2005 and released her eponymous debut album in 2006. Swift wrote three of the album's tracks: \"Our Song\", \"Should've Said No\", and \"The Outside\". The remaining eight were co-written with writers Liz Rose, Robert Ellis Orrall, Brian Maher, and Angelo Petraglia. In 2007, she released her first extended play (EP) \"\", which contains two original tracks written by her: \"Christmases When You Were Mine\" and \"Christmas Must Be Something More\".",
+            "Chloranthaceae\nChloranthaceae is a family of flowering plants (angiosperms), the only family in the order Chloranthales. It is not closely related to any other family of flowering plants, and is among the early-diverging lineages in the angiosperms. They are woody or weakly woody plants occurring in Southeast Asia, the Pacific, Madagascar, Central and South America, and the West Indies. The family consists of four extant genera, totalling about 77 known species according to Christenhusz and Byng in 2016. Some species are used in traditional medicine. The type genus is \"Chloranthus\".",
+            "M. P. Shiel\nMatthew Phipps Shiell (21 July 1865 \u2013 17 February 1947) \u2013 known as M. P. Shiel \u2013 was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "How? (song)\n\"How?\" is a song from John Lennon's second solo album \"Imagine\", released in 1971. It is a contemplative song inspired by the Primal Therapy he was undergoing with his wife Yoko Ono, during which he faced many personal questions such as \"How can I go forward when I don't know which way I'm facing?\" This song also shows his thoughts about the world in general (such as \"And the World is so tough; Sometimes I feel I've had enough\").",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "Coast horned lizard\nThe coast horned lizard (\"Phrynosoma coronatum\") is a species of phrynosomatid lizard which can be found in Baja California Sur. The old classification included all three current species \"P. blainvillii\", \"P. cerroense\", and \"P. coronatum\" as a single species (\"P. coronatum\") ranging from Baja California north to California's Sacramento Valley. It was previously considered to be a widely divergent species with over 6 subspecies in their relatively small range but is now classified as three distinct species. As a defense the lizard can shoot high pressure streams of blood out of its eyes if threatened."
+        ],
+        "thoughts": [
+            "There is no information available about Helen Dunmore's descent in the provided text.",
+            "Based on the retrieved information, there is no indication or mention of Helen Dunmore's descent or heritage, including whether she is of West Indian descent. Therefore, it cannot be determined if Helen Dunmore is of West Indian descent based on the available information.",
+            "M. P. Shiel, also known as Matthew Phipps Shiell, was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "Based on the retrieved information, M. P. Shiel is indeed of West Indian descent. His legal surname \"Shiell\" indicates a connection to the West Indies, and it is confirmed that he was of West Indian descent.",
+            "Based on the combined results, it cannot be determined if Helen Dunmore is of West Indian descent, as there is no indication or mention of her heritage. However, M. P. Shiel is confirmed to be of West Indian descent based on his legal surname and available information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Helen Dunmore and M. P. Shiel of West Indian descent?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the ancestry or descent of Helen Dunmore.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the ancestry or descent of M. P. Shiel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Helen Dunmore is of West Indian descent based on her ancestry information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if M. P. Shiel is of West Indian descent based on his ancestry information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the information about Helen Dunmore's and M. P. Shiel's descent to assess if both are of West Indian descent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "This execution graph breaks down the task into separate steps to retrieve and reason about the ancestry information for Helen Dunmore and M. P. Shiel individually. The information is then analyzed to specifically determine if they have West Indian descent. Finally, the results for both are combined to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "M. P. Shiel\nMatthew Phipps Shiell (21 July 1865 \u2013 17 February 1947) \u2013 known as M. P. Shiel \u2013 was a prolific British writer of West Indian descent. His legal surname remained \"Shiell\" though he adopted the shorter version as a \"de facto\" pen name.",
+            "Helen Dunmore\nHelen Dunmore FRSL (12 December 1952 \u2013 5 June 2017) was a British poet, novelist and children's writer.",
+            "Mourning Ruby\nMourning Ruby is the eighth novel by Helen Dunmore.",
+            "The Siege (Dunmore novel)\nThe Siege is a historical novel by the English writer Helen Dunmore. It is set in Leningrad just before and during the Siege of Leningrad by German forces in World War II.",
+            "The Crossing of Ingo\nThe Crossing of Ingo is a children's fantasy novel by Helen Dunmore, first published in 2008. It is the fourth and final volume in the \"Ingo\" tetralogy.",
+            "Zennor in Darkness\nZennor in Darkness, was the debut novel from English author Helen Dunmore, published in 1993. It won the 1994 McKitterick Prize. which is awarded for debut novels for writers over 40. Until that point Dunmore was primarily a poet though had published short stories and books for children. As a result of winning the prize, Penguin offered her a two-book deal and fiction became her focus.",
+            "A Spell of Winter\nA Spell of Winter is a 1995 gothic novel by Helen Dunmore, set in England, around the time of World War I. The novel was the first recipient of the Orange Prize for Fiction, in 1996.",
+            "Ingo tetralogy\nThe Ingo tetralogy is a series of four children's novels, set in Cornwall, by British author Helen Dunmore. The four books are, in chronological order, \"Ingo\", \"The Tide Knot\", \"The Deep\" and \"The Crossing of Ingo\". The first book was nominated for the 2008 Booktrust Teenage Prize.",
+            "Rebecca Cobb\nRebecca Cobb is a British children's book illustrator. She grew up in Buckinghamshire and Somerset and now lives in Falmouth. Along with writing and illustrating her own books, she has also collaborated with other authors including Julia Donaldson, Richard Curtis and Helen Dunmore.",
+            "William Scott Home\nWilliam Scott Home (born January 2, 1940) is the pen name (and, later, legal name) of an American author, poet and biologist principally known for writing horror and dark fantasy. Best known for a short story that appeared in 1978 in \"The Year\u2019s Best Horror Stories\" (along with Stephen King\u2019s \u201cChildren of the Corn\u201d, which also made the cut that year), Home was most prolific during the 1970s and 80s when his poetry and fiction was published in a wide range of media. Part of a circle of Science Fiction, Fantasy and Horror writers that paid homage to M. P. Shiel and H. P. Lovecraft, Home is considered by many to be a unique talent in his own right. His range of styles and control of language and suspense is well-demonstrated in his published collection: \"Hollow Faces, Merciless Moons\". While he has not published much since the 1980s, Home is still writing and currently lives in the Dyea Valley, west of Skagway, Alaska.",
+            "Dickran Tevrizian\nDickran M. Tevrizian Jr. (born 1940) was a United States federal judge for the Central District of California. Confirmed in 1985, he is the first United States federal judge of Armenian ancestry.",
+            "Pittosporum kirkii\nPittosporum kirkii is a glabrous evergreen perennial shrub that reaches up to 5 m in height and possesses distinctive coriaceous, fleshy, thick leaves. It is one of four shrubs endemic to New Zealand that frequently displays an epiphytic lifestyle. \"P. kirkii\" is commonly epiphytic, perched amongst nest epiphytes in the canopies of emergent or canopy trees in old-growth forest; however, it can be observed occasionally growing on the ground or over rocks (in a rupestral lifestyle). The type locality of \"P. kirkii\" is Great Barrier Island. It was first described by Joseph Dalton Hooker from material collected by Thomas Kirk, published in 1869. The initial brief description titled \"Pittosporum n. sp.?\" by Thomas Kirk was published in his paper on Great Barrier Island in 1868. This description along with herbarium specimens were sent to Dr. J. D Hooker at Kew Gardens in 1868, and he collaborated to name it after T. Kirk, by giving it the specific epithet \"kirkii\" within the publication that was otherwise written by Kirk.",
+            "Blank family\nThe Blank family is a family of Jews, some of whom converted to Orthodox Christianity in the Russian Empire, mostly notable as the immediate ancestry of the maternal grandfather of Vladimir Lenin according to various published researchers who suggest that Lenin's maternal grandfather was a Jewish convert to Christianity (Alexander Blank). Whether or not Lenin, whose matrilineal \"Blank\" surname also traces to non-Jewish German roots, was actually partly descended from the Jewish Blank family remains contested.",
+            "James P. McCaffrey Trophy\nThe James P. McCaffrey Trophy is a Canadian Football League trophy, awarded to the outstanding defensive player in the East Division. Each team in the East division nominates a candidate, from which the winner is chosen. Either the winner of this trophy or the winner of the Norm Fieldgate Trophy will also win the Canadian Football League Most Outstanding Defensive Player award.",
+            "M-1 Global\nM-1 Global (Mixfight-1) or MMA-1 (Mixed martial arts-1) is a mixed martial arts promotion based in St. Petersburg, Russia which organizes between 10 and 20 competitions per year. The public faces of M-1 Global are President, Vadim Finkelstein and part-owner Fedor Emelianenko.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228)."
+        ],
+        "thoughts": [
+            "Helen Dunmore was a British writer, poet, and novelist. Based on the information provided, there is no specific mention of her ancestry or descent. Therefore, her specific ancestry or descent cannot be identified from the given information.",
+            "Based on the available information, it cannot be determined if Helen Dunmore is of West Indian descent as her specific ancestry or descent is not mentioned.",
+            "M. P. Shiel was of West Indian descent.",
+            "M. P. Shiel was of West Indian descent. His father was a planter in the West Indies, and his mother was of French descent from the West Indies. Therefore, based on his ancestry information, it can be determined that M. P. Shiel is of West Indian descent.",
+            "Based on the available information, it cannot be determined if Helen Dunmore is of West Indian descent as her specific ancestry or descent is not mentioned. However, M. P. Shiel was of West Indian descent, as his father was a planter in the West Indies, and his mother was of French descent from the West Indies. Therefore, it can be concluded that M. P. Shiel is of West Indian descent, but the same cannot be confirmed for Helen Dunmore."
+        ],
+        "is_best": false
+    }
+]

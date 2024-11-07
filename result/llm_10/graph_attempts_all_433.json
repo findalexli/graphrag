@@ -1,0 +1,526 @@
+[
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the subspecies name 'Florida black bear'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the scientific name of the Florida black bear, including its genus and species.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract the genus and species from the scientific name of the Florida black bear.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into manageable steps: first identifying the reference to 'Florida black bear', then determining its scientific classification by retrieving information on its formal nomenclature, and finally extracting the necessary genus and species components from this scientific name to answer the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Palerontobia\nPalerontobia is a monotypic genus of tiger moths in the \"Erebidae\" family. The genus includes only one species, Palerontobia kozlovi, which is found in north-eastern Tibet (China, Qinghai). The scientific name consists of two parts, \"Pale,\" is a part of the genus name \"Palearctia\", and \"rontobia,\" is a part of the genus name \"Orontobia\". The species is named after Pyotr Kozlov, a disciple of Nikolay Przhevalsky, who first collected the Holotype in 1900.",
+            "Black Bear Creek\nBlack Bear Creek is a 116 mi creek in northern Oklahoma. Black Bear Creek drains an area of 538 sqmi in Garfield County, Noble County and Pawnee County, Oklahoma. It takes on a red color from the red clay of this area. The creek gets its name from the black bear. Though the area is outside of the range of the black bear, sightings have been rumored.",
+            "Binomial nomenclature\nBinomial nomenclature (also called binominal nomenclature or binary nomenclature) is a formal system of naming species of living things by giving each a name composed of two parts, both of which use Latin grammatical forms, although they can be based on words from other languages. Such a name is called a binomial name (which may be shortened to just \"binomial\"), a binomen, binominal name or a scientific name; more informally it is also called a Latin name. The first part of the name identifies the genus to which the species belongs; the second part identifies the species within the genus. For example, humans belong to the genus \"Homo\" and within this genus to the species \"Homo sapiens\". The \"formal\" introduction of this system of naming species is credited to Carl Linnaeus, effectively beginning with his work \"Species Plantarum\" in 1753. But Gaspard Bauhin, in as early as 1623, had introduced in his book \"Pinax theatri botanici\" (English, \"Illustrated exposition of plants\") many names of genera that were later adopted by Linnaeus.",
+            "Black tern\nThe black tern (\"Chlidonias niger\") is a small tern generally found in or near inland water in Europe and North America. As its name suggests, it has predominantly dark plumage. In some lights it can appear blue in the breeding season, hence the old English name \"blue darr\".The genus name is from Ancient Greek \"khelidonios\", \"swallow-like\", from \"khelidon\", \"swallow\": another old English name for the black tern is \"carr (i.e. lake) swallow\". The species name is from Latin \"niger\" \"shining black\".",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long."
+        ],
+        "thoughts": [
+            "The subspecies name for the Florida black bear is Ursus americanus floridanus.",
+            "The scientific name of the Florida black bear is \"Ursus americanus floridanus.\" The genus is \"Ursus\" and the species is \"americanus floridanus.\"",
+            "Genus: Ursus\nSpecies: americanus floridanus"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the scientific name (genus and species) for the Florida black bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the genus and species of the main species to which the Florida black bear belongs.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph begins with retrieving the scientific name for the Florida black bear. This step is necessary to establish a base for further analysis. Upon retrieval of this information, we proceed to reason about the main species to which it belongs. The Florida black bear is a subspecies, so this involves understanding the hierarchical classification in biological taxonomy. The final step synthesizes this reasoning to provide the genus and species of the bear."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Did You Ever See a Lassie?\n\"Did You Ever See a Lassie?\" is a folk song, nursery rhyme, and singing game. It has a Roud Folk Song Index number of 5040.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Shall We Gather at the River (Falling Skies)\n\"Shall We Gather at the River\" is the second episode of the second season of the American television drama series \"Falling Skies\", and the 12th overall episode of the series. It originally aired on TNT in the United States on June 17, 2012 as a two-hour season premiere with the first episode of the season. It was written by Bradley Thompson & David Weddle and directed by Greg Beeman.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom."
+        ],
+        "thoughts": [
+            "The scientific name for the Florida black bear is Ursus americanus floridanus.",
+            "The genus of the Florida black bear is Ursus and the species is americanus floridanus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what a Florida black bear is a subspecies of.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the genus and species of the identified species from node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task requires finding the genus and species of the species to which the Florida black bear belongs as a subspecies. First, we need to identify what species consists of the Florida black bear as a subspecies (retrieval and reasoning). Next, using the species identified, we determine its genus and species (reasoning). This structured approach ensures we address the question systematically."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Baluchistan bear\nThe Baluchistan bear, also called the Pakistan black bear (\"Ursus thibetanus gedrosianus\") is a subspecies of the Asian black bear found in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains. It is also more frugivorous than the other subspecies, and it loves to eat figs and bananas.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub."
+        ],
+        "thoughts": [
+            "The Florida black bear is a subspecies of the American black bear.",
+            "The genus of the identified species from node 1 is Ursus and the species is americanus. Therefore, the full scientific name of the species is Ursus americanus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find out what the Florida black bear is.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which subspecies the Florida black bear belongs to.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the genus and species of the bear species that includes the Florida black bear as a subspecies.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes: \n1. The first node retrieves information about the Florida black bear itself.\n2. Using the information from the first node, the second node determines to which subspecies the Florida black bear belongs.\n3. The final node retrieves the genus and species for the bear species identified in node 2. The answer to the original question is synthesized at this stage."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Black Bear Creek\nBlack Bear Creek is a 116 mi creek in northern Oklahoma. Black Bear Creek drains an area of 538 sqmi in Garfield County, Noble County and Pawnee County, Oklahoma. It takes on a red color from the red clay of this area. The creek gets its name from the black bear. Though the area is outside of the range of the black bear, sightings have been rumored.",
+            "Baluchistan bear\nThe Baluchistan bear, also called the Pakistan black bear (\"Ursus thibetanus gedrosianus\") is a subspecies of the Asian black bear found in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains. It is also more frugivorous than the other subspecies, and it loves to eat figs and bananas."
+        ],
+        "thoughts": [
+            "The Florida black bear is a subspecies of the American black bear, known scientifically as \"Ursus americanus floridanus.\" It historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. These large black-furred bears mainly live in forested areas and have seen recent habitat reduction throughout the state.",
+            "The Florida black bear belongs to the subspecies \"Ursus americanus floridanus\" of the American black bear.",
+            "The genus and species of the Florida black bear, which is a subspecies of the American black bear, is \"Ursus americanus floridanus\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the Florida black bear, particularly its taxonomic classification.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the subspecies to which the Florida black bear belongs.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the genus and species of the subspecies identified as the one to which the Florida black bear belongs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Combine the genus and species information to provide the full taxonomic name of the Florida black bear subspecies.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task of identifying the genus and species of the bear in which the Florida black bear is a subspecies of into a series of steps. It starts by retrieving information about the Florida black bear to determine its subspecies. Once the subspecies is identified, it retrieves the genus and species associated with it and finally combines the information to present a complete answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas.",
+            "Southern giraffe\nThe southern giraffe (\"Giraffa giraffa\"), also known as two-horned giraffe, is a proposed species of giraffe native to Southern Africa. The southern giraffe is proposed as one of the four discovered members of the genus \"Giraffa\". The species was described and given its binomial name by German naturalist Johann Christian Daniel von Schreber in 1784. Two subspecies are recognized. However, the IUCN currently recognizes only one species of giraffe with nine subspecies.",
+            "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Black Bear Creek\nBlack Bear Creek is a 116 mi creek in northern Oklahoma. Black Bear Creek drains an area of 538 sqmi in Garfield County, Noble County and Pawnee County, Oklahoma. It takes on a red color from the red clay of this area. The creek gets its name from the black bear. Though the area is outside of the range of the black bear, sightings have been rumored.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Baluchistan bear\nThe Baluchistan bear, also called the Pakistan black bear (\"Ursus thibetanus gedrosianus\") is a subspecies of the Asian black bear found in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains. It is also more frugivorous than the other subspecies, and it loves to eat figs and bananas.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "The taxonomic classification of the Florida black bear is \"Ursus americanus floridanus,\" which is a subspecies of the American black bear (\"Ursus americanus\"). The American black bear is native to North America and the Florida black bear specifically has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi.",
+            "The Florida black bear belongs to the subspecies \"Ursus americanus floridanus\" of the American black bear (\"Ursus americanus\").",
+            "Genus: Ursus\nSpecies: americanus\nSubspecies: floridanus",
+            "Ursus americanus floridanus"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the Florida black bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the subspecies classification and associated genus and species for the Florida black bear.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the species classification under which the identified genus falls.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the official genus and species name of the Florida black bear based on the retrieved information about its subspecies.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine the genus and species of the bear where the Florida black bear is a subspecies, the process begins by retrieving details specifically about the Florida black bear. Subsequent reasoning identifies its subspecies classification. Given this classification, further information needs to be gathered about its parent genus to fully ensure that the genus and species names align correctly. A final reasoning step synthesizes all of the gathered information to produce the definitive genus and species name."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+            "Pimelea\nPimelea (often seen spelled \"Pimelia\", which is the name of a genus of beetles) is a genus of plants belonging to the family Thymelaeaceae. There are about 80 species in the genus, which is native to Australia and New Zealand. Many of the species are poisonous to cattle and horses.",
+            "Eryngium\nEryngium is a genus of flowering plants in the family Apiaceae. There are about 250 species. The genus has a cosmopolitan distribution, with the center of diversity in South America. Common names include eryngo and amethyst sea holly (though the genus is not related to the true hollies, \"Ilex\").",
+            "Deutzia\nDeutzia ( or ) is a genus of about 60 species of flowering plants in the family Hydrangeaceae, native to eastern and central Asia (from the Himalayas east to Japan and the Philippines), and Central America and also Europe. By far the highest species diversity is in China, where 50 species occur.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010."
+        ],
+        "thoughts": [
+            "The Florida black bear, also known as \"Ursus americanus floridanus,\" is a subspecies of the American black bear. Historically, it has ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. These large black-furred bears primarily inhabit forested areas but have seen recent habitat reduction throughout the state. They are a distinct subspecies of the American black bear and are native to North America.",
+            "The Florida black bear belongs to the subspecies \"Ursus americanus floridanus\" and is part of the genus Ursus and species americanus.",
+            "The genus \"Utricularia\" falls under the species classification of the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, with around 233 species. The classification of the genus \"Utricularia\" follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).\n\nThe genus \"Rhodostemonodaphne\" falls under the family Lauraceae and consists of approximately 41 species occurring in Central America and northern South America.\n\nThe genus \"Pimelea\" belongs to the family Thymelaeaceae and is native to Australia and New Zealand, with about 80 species.\n\nThe genus \"Eryngium\" falls under the family Apiaceae and has a cosmopolitan distribution, with about 250 species.\n\nThe genus \"Deutzia\" belongs to the family Hydrangeaceae and is native to eastern and central Asia, Central America, and Europe, with the highest species diversity in China.\n\nThe taxonomy of the Cactaceae family has been the subject of ongoing research and debate, with around 125\u2013130 genera and 1,400\u20131,500 species arranged in tribes and subfamilies. The internal classification of the family Cactaceae remains uncertain and subject to change, with a classification produced by Nyffeler and Eggli in 2010 incorporating insights from molecular studies.",
+            "The official genus and species name of the Florida black bear is Ursus americanus."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the scientific name or classification of the Florida black bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the taxonomic classification hierarchy of the Florida black bear, focusing on its subspecies position.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find out the genus in the taxonomic classification of the Florida black bear.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the species in the taxonomic classification of the Florida black bear.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the genus and species to provide the scientific name of the species to which the Florida black bear belongs.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by identifying the scientific classification of the Florida black bear. It then seeks the specific taxonomic hierarchy that includes the genus and species, as the Florida black bear is a subspecies. Two parallel reasoning nodes determine the genus and species separately. Finally, the final node combines this information to provide a full scientific name."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Black Bear Creek\nBlack Bear Creek is a 116 mi creek in northern Oklahoma. Black Bear Creek drains an area of 538 sqmi in Garfield County, Noble County and Pawnee County, Oklahoma. It takes on a red color from the red clay of this area. The creek gets its name from the black bear. Though the area is outside of the range of the black bear, sightings have been rumored."
+        ],
+        "thoughts": [
+            "The scientific name or classification of the Florida black bear is \"Ursus americanus floridanus.\" It is a subspecies of the American black bear.",
+            "Kingdom: Animalia\nPhylum: Chordata\nClass: Mammalia\nOrder: Carnivora\nFamily: Ursidae\nGenus: Ursus\nSpecies: Ursus americanus (American black bear)\nSubspecies:\n- Ursus americanus carlottae (Haida Gwaii black bear)\n- Ursus americanus floridanus (Florida black bear)\n- Ursus americanus hamiltoni (Newfoundland black bear)\n- Ursus americanus kermodei (Kermode bear)\n- Ursus americanus cinnamomum (Cinnamon bear)",
+            "The genus in the taxonomic classification of the Florida black bear is Ursus.",
+            "The species in the taxonomic classification of the Florida black bear is Ursus americanus floridanus.",
+            "The scientific name of the Florida black bear is Ursus americanus floridanus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what the Florida black bear is.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the scientific classification of the Florida black bear, specifically the genus and species of the bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to find the genus and species of the animal that the Florida black bear (a subspecies) belongs to. \n\n1. The first node retrieves and understands the concept of the Florida black bear.\n2. The second node uses this understanding to retrieve scientific classification information, focusing on identifying the genus and species of the broader bear category (e.g., American black bear) to which the Florida black bear belongs."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Black Bear Creek\nBlack Bear Creek is a 116 mi creek in northern Oklahoma. Black Bear Creek drains an area of 538 sqmi in Garfield County, Noble County and Pawnee County, Oklahoma. It takes on a red color from the red clay of this area. The creek gets its name from the black bear. Though the area is outside of the range of the black bear, sightings have been rumored.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+            "Baluchistan bear\nThe Baluchistan bear, also called the Pakistan black bear (\"Ursus thibetanus gedrosianus\") is a subspecies of the Asian black bear found in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains. It is also more frugivorous than the other subspecies, and it loves to eat figs and bananas.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas."
+        ],
+        "thoughts": [
+            "The Florida black bear is a subspecies of the American black bear, known scientifically as \"Ursus americanus floridanus.\" It historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi, and is known for its large black-furred appearance. These bears mainly inhabit forested areas but have seen recent habitat reduction throughout the state.",
+            "Genus: Ursus\nSpecies: americanus\n\nThe Florida black bear belongs to the genus Ursus and the species americanus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the subspecies of the Florida black bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the genus and species of the subspecies identified for the Florida black bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to find the genus and species of the bear category to which the Florida black bear belongs. We start by identifying the subspecies classification of the Florida black bear, which involves retrieval and synthesis of information. Once we have identified the subspecies, we can further retrieve the generic genus and species classification associated with this subspecies."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Ursus americanus carlottae\nThe Haida Gwaii black bear (\"Ursus americanus carlottae\") is a morphologically distinct subspecies of the American black bear. The most significant morphological differences are its large size, massive cranium, and large molars. This subspecies is endemic to the Haida Gwaii (Queen Charlotte Islands) and is considered a \"keystone species\" because of the bears transportation of salmon remains into surrounding forests of Haida Gwaii.",
+            "Baluchistan bear\nThe Baluchistan bear, also called the Pakistan black bear (\"Ursus thibetanus gedrosianus\") is a subspecies of the Asian black bear found in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains. It is also more frugivorous than the other subspecies, and it loves to eat figs and bananas.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Cinnamon bear\nThe cinnamon bear (\"Ursus americanus cinnamomum\") is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada. Established populations are found in Colorado, New Mexico, Utah, Idaho, Montana, Washington, Manitoba Minnesota, Wisconsin, Wyoming, California, Alberta, and British Columbia. They also have been seen in Pennsylvania and New York. The most striking difference between a cinnamon bear and any other black bear is its brown or red-brown fur, reminiscent of cinnamon. The subspecies was given the designation because the lighter color phase is more common there than in other areas.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Southern giraffe\nThe southern giraffe (\"Giraffa giraffa\"), also known as two-horned giraffe, is a proposed species of giraffe native to Southern Africa. The southern giraffe is proposed as one of the four discovered members of the genus \"Giraffa\". The species was described and given its binomial name by German naturalist Johann Christian Daniel von Schreber in 1784. Two subspecies are recognized. However, the IUCN currently recognizes only one species of giraffe with nine subspecies.",
+            "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America."
+        ],
+        "thoughts": [
+            "The subspecies of the Florida black bear is \"Ursus americanus floridanus\".",
+            "Genus: Ursus\nSpecies: americanus\nSubspecies: floridanus"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the genus and species of the bear in which the Florida black bear is a subspecies of?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the scientific name or classification hierarchy for the Florida black bear.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the taxonomy hierarchy of the Florida black bear to find its genus and species.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "To answer the question about the genus and species of the bear of which the Florida black bear is a subspecies, we start by retrieving information about the scientific classification or taxonomy of the Florida black bear. Once we have this information, we parse the taxonomy hierarchy to identify the genus and species. This requires first retrieving the necessary classification data (Node 1) and then reasoning to identify the relevant taxonomic ranks (Node 2)."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Florida black bear\nThe Florida black bear (\"Ursus americanus floridanus\") is a subspecies of the American black bear that has historically ranged throughout most of Florida and southern portions of Alabama, Georgia, and Mississippi. The large black-furred bears live mainly in forested areas and have seen recent habitat reduction throughout the state.",
+            "Black Bear Creek\nBlack Bear Creek is a 116 mi creek in northern Oklahoma. Black Bear Creek drains an area of 538 sqmi in Garfield County, Noble County and Pawnee County, Oklahoma. It takes on a red color from the red clay of this area. The creek gets its name from the black bear. Though the area is outside of the range of the black bear, sightings have been rumored.",
+            "Ussuri black bear\nThe Ussuri black bear (\"Ursus thibetanus ussuricus\"), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+            "American black bear\nThe American black bear (\"Ursus americanus\") is a medium-sized bear native to North America.",
+            "Newfoundland black bear\nThe Newfoundland black bear (\"Ursus americanus hamiltoni\") is a morphologically distinct subspecies of the American black bear which is endemic to the island of Newfoundland in Atlantic Canada. The Newfoundland black bear is generally larger than its mainland relatives, ranging in size from 90 to and averaging 135 kg . It also has one of the longest hibernation periods of any bear in North America.",
+            "Japanese black bear\nThe Japanese black bear (\"Ursus thibetanus japonicus\") is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu. There are said to be 10,000 black bears on Japan. The population of black bears on Shikoku and Kyushu may be endangered or extinct. There is a high price on bear parts in the black market, which threatens all bear populations in Japan. This particular species of bear are typically smaller with males only reaching 60-120 Kg and females only weighing about 40-100 Kg. Their body length is about 120\u2013140\u00a0cm long.",
+            "Baluchistan bear\nThe Baluchistan bear, also called the Pakistan black bear (\"Ursus thibetanus gedrosianus\") is a subspecies of the Asian black bear found in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains. It is also more frugivorous than the other subspecies, and it loves to eat figs and bananas.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "The scientific name for the Florida black bear is \"Ursus americanus floridanus.\" It is a subspecies of the American black bear, which falls under the classification hierarchy of:\n\n- Kingdom: Animalia\n- Phylum: Chordata\n- Class: Mammalia\n- Order: Carnivora\n- Family: Ursidae\n- Genus: Ursus\n- Species: Ursus americanus\n- Subspecies: Ursus americanus floridanus",
+            "The taxonomy hierarchy of the Florida black bear is as follows:\n- Kingdom: Animalia\n- Phylum: Chordata\n- Class: Mammalia\n- Order: Carnivora\n- Family: Ursidae\n- Genus: Ursus\n- Species: Ursus americanus\n- Subspecies: Ursus americanus floridanus"
+        ],
+        "is_best": false
+    }
+]

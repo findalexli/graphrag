@@ -1,0 +1,754 @@
+[
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current geographic location of Rossiya Airlines.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine what type of geographic or administrative region this location represents (e.g., city, country, continent).",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the largest type of region on Earth and its representative example.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the geographic or administrative region type of Rossiya Airlines' location with the largest type of region identified, and determine if it matches or is contained within it.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize information to answer whether Rossiya Airlines is located in the largest type of region on Earth and identify that region if true.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To answer the question about Rossiya Airlines, the execution graph first retrieves where Rossiya Airlines is geographically located. It then determines the type of region this location falls under, such as a city, a country, or a continent. Parallelly, the graph identifies the largest type of geographic region on Earth (e.g., continent - Asia). In the reasoning steps, it evaluates whether Rossiya Airlines is located in such a region and finally synthesizes this analysis to answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Rossiya Theatre\nThe Rossiya Theatre (Russian: \u0422\u0435\u0430\u0442\u0440 \u00ab\u0420\u043e\u0441\u0441\u0438\u044f\u00bb ), formerly known as the Pushkinsky Cinema (Russian: \u041a\u0438\u043d\u043e\u0442\u0435\u0430\u0442\u0440 \u00ab\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0438\u0439\u00bb ) is monument of architecture and currently the largest theatre in Moscow operated by Stage Entertainment. It is located in Pushkinskaya Square."
+        ],
+        "thoughts": [
+            "The current geographic location of Rossiya Airlines is in Saint Petersburg, Russia, with its hub at Pulkovo Airport. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport.",
+            "This location represents a country, specifically Russia.",
+            "The largest type of region on Earth is a continent. The representative example of a continent is Asia, which is the largest and most populous continent on Earth, covering about 30% of the Earth's land area and is home to over 60% of the world's population.",
+            "Rossiya Airlines' location, Russia, is a country, which is a smaller geographic or administrative region type compared to a continent. Therefore, Russia is contained within the larger region type of a continent, specifically Asia.",
+            "Yes, Rossiya Airlines is located in the largest type of region on Earth, which is the continent of Asia."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what 'Rossiya Airlines' is a part of or associated with geographically (e.g., its main base or hub location).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine what is the largest entity related to the location identified in step 1, considering categories like city, region, or administrative division.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the category (e.g., city, region) of the largest entity found in step 2 for clarification.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Synthesize the information from steps 2 and 3 to answer the question \"Rossiya Airlines is located in the largest what on earth?\" with a specific focus on the identified category of the largest entity.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question about Rossiya Airlines' association with the largest entity on earth, we need to first discover the geographical base or hub of the airline. Next, we identify the largest entity related to that location, considering different categories like cities or regions. Clarifying the category of this entity ensures accurate interpretation, which we then synthesize for the final answer."
+        },
+        "recall": 0.6666666666666666,
+        "retrieved_passages": [
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Grand Maket Rossiya\nGrand Maket Rossiya is a private museum in Saint Petersburg, Russia. It is a model layout designed on a scale of 1:87 and covers an area of . In this area, collective images of regions of the Russian Federation are represented. It is the largest model layout in Russia and the second largest in the world (after the Miniatur Wunderland in Hamburg, Germany). The model is located in a two story building built in 1953, in the style of Stalin's empire. The creator of the project is a Saint Petersburg businessman Sergey Morozov.",
+            "Ural (region)\nThe Urals (Russian: \u0423\u0440\u0430\u0301\u043b ) are a geographical region located around the Ural Mountains, between the East European and West Siberian plains. It extends approximately from north to south, from the Arctic Ocean to the bend of Ural River near Orsk city. The boundary between Europe and Asia runs along the eastern side of the Ural Mountains. Ural mostly lies within Russia but also includes a part of northwestern Kazakhstan. This is a historical, not an official entity, with the boundaries overlapping its western Volga and eastern Siberia neighbor regions. At points in time, parts of the Urals were considered a gateway to Siberia, if not Siberia itself, or were combined with the Volga administrative divisions. At present time, there are two official namesake entities, the Ural Federal District and the Ural economic region. While the latter follows the historical boundaries, the former is a political product; the District omits Western Urals and includes Western Siberia instead.",
+            "Hulunbuir\nHulunbuir or Hulun Buir (Mongolian: ; , \"H\u016bl\u00fanb\u00e8i'\u011br\") is a region that is governed as a prefecture-level city in northeastern Inner Mongolia, in China. Its administrative center is located at Hailar District, its largest urban area. Major scenic features are the high steppes of the Hulun Buir grasslands, the Hulun and Buir lakes (the latter partially in Mongolia), and the Khingan range. Hulun Buir borders Russia to the north and west, Mongolia to the south and west, Heilongjiang province to the east and Hinggan League to the direct south. Hulunbuir is a linguistically diverse area: next to Mandarin Chinese, Mongolian dialects such as Khorchin and Buryat, the Mongolic language Dagur and some Tungusic languages are spoken there.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "The Dying Swan\nThe Dying Swan (originally \"The Swan\") is a solo choreographed by Mikhail Fokine in 1905 to Camille Saint-Sa\u00ebns's \"Le Cygne\" from \"Le Carnaval des animaux\" as a \"pi\u00e8ce d'occasion\" for the ballerina Anna Pavlova, who performed it about 4,000 times. The short ballet (4 minutes) follows the last moments in the life of a swan, and was first presented in St. Petersburg, Russia in 1905. The ballet has since influenced modern interpretations of Odette in Tchaikovsky's \"Swan Lake\" and has inspired non-traditional interpretations and various adaptations.",
+            "Drangiana\nDrangiana or Zarangiana (Greek: \u0394\u03c1\u03b1\u03b3\u03b3\u03b9\u03b1\u03bd\u03ae , \"Drangian\u0113\"; also attested in Old Western Iranian as \"Zranka\" was a historical region and administrative division of the Achaemenid Empire. This region comprises territory around Hamun Lake, wetlands in endorheic Sistan Basin on the Iran-Afghan border, and its primary watershed Helmand river in what is nowadays southwestern region of Afghanistan.",
+            "History of Saint Paul, Minnesota\nSaint Paul is the second largest city in the state of Minnesota in the United States, the county seat of Ramsey County, and the state capital of Minnesota. The origin and growth of the city was spurred by the proximity of Fort Snelling, the first major United States military presence in the area, and by its location on the Upper Mississippi River, with the northernmost natural navigable port on the mighty river.",
+            "Hazeldean Mall\nHazeldean Mall is a shopping centre located in the Kanata district of Ottawa, Ontario, Canada. It is located at the intersection of Eagleson Road and Hazeldean Road, where Hazeldean Road turns into Robertson Road. It was the first enclosed shopping centre constructed in Kanata. The development of the mall was approved shortly before the incorporation of the (then) City of Kanata, and its approval lead to a legal battle between the constituent parts of the new municipality over the appropriate location of what would at that time be the new city's main commercial hub.",
+            "Singapore Airlines\nSingapore Airlines Limited (SIA; ) is the flag carrier of Singapore with its hub at Singapore Changi Airport. The airline uses the Singapore Girl as its central figure in its corporate branding.",
+            "Maputo International Airport\nMaputo International Airport (IATA: MPM,\u00a0ICAO: FQMA) , also known as Louren\u00e7o Marques Airport or Mavalane International Airport, is an airport located 3 km northwest of the center of Maputo, the largest city and capital of Mozambique. It is the largest airport in Mozambique, and hub for LAM Mozambique Airlines and Kaya Airlines. Most destinations served from the airport are in Africa but TAP Portugal operates a service to Lisbon, Portugal, Turkish Airlines operates flights to Istanbul, and Qatar Airways operates flights to Doha.",
+            "Air Nicaragua\nNicaragua Airways is the potential future national flag carrier of Nicaragua. Its main base is Augusto C. Sandino International Airport, Managua. It is the first time in 20 years that Nicaragua will have a national flag carrier, after Aeronica ceased operations in 1991. Since then, the flag carrier status was awarded to Nicarag\u00fcense de Aviaci\u00f3n also known as NICA Airlines. Several airlines had tried to become the Nicaraguan flag carrier like CAAL (Central American Airlines), SANSA (Servicios Aereos Nicaraguenses S.A.) but none of these survived a year. Today even NICA Airlines (6Y) is registered as the national airline of Nicaragua, the only international flight it operated once (Managua to Miami) and is done under the TACA code (TA) as a full TACA Airlines flight.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "U.S. state\nA U.S. state is a constituent political entity of the United States of America. There are currently 50 states, which are bound together in a union with each other. Each state holds governmental jurisdiction over a defined geographic territory, and shares its sovereignty with the United States federal government. Due to the shared sovereignty between each state and the federal government, Americans are citizens of both the federal republic and of the state in which they reside. State citizenship and residency are flexible, and no government approval is required to move between states, except for persons covered by certain types of court orders (e.g., paroled convicts and children of divorced spouses who are sharing custody)."
+        ],
+        "thoughts": [
+            "Rossiya Airlines is associated with Russia, with its main base and hub located at Pulkovo Airport in Saint Petersburg. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport. Additionally, Rossiya Airlines is a fully owned subsidiary of Aeroflot, a major Russian airline.",
+            "The largest entity related to Pulkovo Airport is the city of Saint Petersburg, Russia.",
+            "The largest entity found in step 2 is the U.S. state.",
+            "Rossiya Airlines is located in the largest city on earth, which is Saint Petersburg, Russia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what Rossiya Airlines is located in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine what is the 'largest' in the context of what Rossiya Airlines is located in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information to find out what Rossiya Airlines is located in that qualifies as the largest of its kind on Earth.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires understanding two aspects: what Rossiya Airlines is located in, and identifying the largest entity related to that context on Earth. We begin by retrieving information about Rossiya Airlines' location, followed by reasoning about 'largest' in this context. Finally, synthesis of information from these nodes answers the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Rossiya Theatre\nThe Rossiya Theatre (Russian: \u0422\u0435\u0430\u0442\u0440 \u00ab\u0420\u043e\u0441\u0441\u0438\u044f\u00bb ), formerly known as the Pushkinsky Cinema (Russian: \u041a\u0438\u043d\u043e\u0442\u0435\u0430\u0442\u0440 \u00ab\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0438\u0439\u00bb ) is monument of architecture and currently the largest theatre in Moscow operated by Stage Entertainment. It is located in Pushkinskaya Square.",
+            "SkyWest Airlines\nSkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in St. George, Utah, U.S.. According to the Airlines for America definitions, SkyWest is a North American major airline. SkyWest however, operates on a regional airline level and is a member of the Regional Airline Association. SkyWest Airlines flies to 238 cities, in 45 states; Washington, D.C., six Canadian provinces and five cities in Mexico. The airline serves as a feeder airline, operating under contract with various major carriers. It flies as SkyWest Airlines in a partnership with Alaska Airlines, as United Express on behalf of United Airlines, as American Eagle on behalf of American Airlines, and as Delta Connection on behalf of Delta Air Lines. SkyWest also provides ground handling services for airports across the United States.",
+            "China Airlines\nChina Airlines (CAL) () () is the flag carrier and largest airline of the Republic of China (Taiwan). It is headquartered in Taoyuan International Airport and has 12,607 regular employees. China Airlines operates over 1,400 flights weekly to 118 airports in 115 cities (including codeshare) across Asia, Europe, North America and Oceania. The cargo division operates 91 pure freighter flights weekly. The carrier was, in 2013, the 29th and 10th largest airline in the world in terms of passenger revenue per kilometer (RPK) and freight RPK, respectively. China Airlines has three airline subsidiaries: Mandarin Airlines operates flights to domestic and low-demand regional destinations; China Airlines Cargo, a member of Skyteam Cargo, operates a fleet of freighter aircraft and manages its parent airline's cargo-hold capacity; Tigerair Taiwan is a low-cost carrier established by China Airlines and Singaporean airline group Tigerair Holdings and is wholly owned by China Airlines Group.",
+            "North Pacific Airlines\nNorth Pacific Airlines was a small regional airline formed in 1987, flying for United Airlines under the United Express brand name from the Seattle\u2013Tacoma International Airport to three Eastern Washington destinations and Portland, Oregon. By 1991 the airline which was owned by WestAir Holdings had been merged with WestAir Commuter Airlines still under the United Express banner. WestAir Commuter Airlines was another member of the WestAir Holdings corporation."
+        ],
+        "thoughts": [
+            "Rossiya Airlines is located in Saint Petersburg, Russia, with its hub at Pulkovo Airport. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport.",
+            "The term \"largest\" in the context of Rossiya Airlines' location could refer to the largest airport where the airline is based or operates from. It could also refer to the largest city or region where the airline has a significant presence. Additionally, it could refer to the largest hub or operational base for the airline. To determine the specific meaning of \"largest\" in this context, further research into the airline's operations and headquarters would be necessary.",
+            "Based on the information provided, Rossiya Airlines is located in Saint Petersburg, Russia, with its hub at Pulkovo Airport. This qualifies as the largest of its kind on Earth in terms of the city and region where the airline has a significant presence."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Rossiya Airlines.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine where Rossiya Airlines is located (e.g., city or region).",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify St. Petersburg and gather information on what it is largest in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine what St. Petersburg is the largest of globally.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the question about Rossiya Airlines into steps focusing on identifying the location of Rossiya Airlines (St. Petersburg) and then determining what St. Petersburg is the largest of in a global context. The process involves both factual retrieval and reasoning steps to synthesize the answer."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Grand Maket Rossiya\nGrand Maket Rossiya is a private museum in Saint Petersburg, Russia. It is a model layout designed on a scale of 1:87 and covers an area of . In this area, collective images of regions of the Russian Federation are represented. It is the largest model layout in Russia and the second largest in the world (after the Miniatur Wunderland in Hamburg, Germany). The model is located in a two story building built in 1953, in the style of Stalin's empire. The creator of the project is a Saint Petersburg businessman Sergey Morozov.",
+            "Parkshore Plaza\nParkshore Plaza is a 29-story skyscraper located in downtown St. Petersburg, Florida. Before the Parkshore Plaza announcement, another tower called The Villas One was going to be constructed in the same lot. Original construction of the Villas was going to begin in 2002, however was cancelled in late 2002. After the cancellation of the first tower, the Parkshore Plaza was announced in early 2003. Construction of the tower began in 2004, and was completed by the summer of 2006. At 108.2 m , it was the tallest condominium tower in St. Petersburg until 2009, following the constriction of two new condominium towers Ovation and Signature Place. The Parkshore Plaza contains 117 total units, 96 of which are located in the tower itself and 21 are city-homes.",
+            "M-1 Global\nM-1 Global (Mixfight-1) or MMA-1 (Mixed martial arts-1) is a mixed martial arts promotion based in St. Petersburg, Russia which organizes between 10 and 20 competitions per year. The public faces of M-1 Global are President, Vadim Finkelstein and part-owner Fedor Emelianenko.",
+            "The Dying Swan\nThe Dying Swan (originally \"The Swan\") is a solo choreographed by Mikhail Fokine in 1905 to Camille Saint-Sa\u00ebns's \"Le Cygne\" from \"Le Carnaval des animaux\" as a \"pi\u00e8ce d'occasion\" for the ballerina Anna Pavlova, who performed it about 4,000 times. The short ballet (4 minutes) follows the last moments in the life of a swan, and was first presented in St. Petersburg, Russia in 1905. The ballet has since influenced modern interpretations of Odette in Tchaikovsky's \"Swan Lake\" and has inspired non-traditional interpretations and various adaptations.",
+            "Abbey Church of Saint Foy\nThe Abbey Church of Saint Foy St. in Conques, France, was a popular stop for pilgrims traveling the Way of St. James to Santiago de Compostela, in what is now Spain. The main draw for medieval pilgrims at Conques were the remains of St. Foy, a young woman martyred during the fourth century. The relics of St. Foy arrived in Conques through theft in 866. After unsuccessful attempts to acquire the relics of St. Vincent of Saragossa and then the relics of St. Vincent Pompejac in Agen, the abbey authorities set their sights on the relics of St. Foy at the ancient St. Faith's Church, S\u00e9lestat. The Conques abbey opened a priory next to the shrine in S\u00e9lestat. A monk from Conques posed as a loyal monk in Agen for nearly a decade in order to get close enough to the relics to steal them.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "WWGR\nWWGR, commonly called Gator Country 101.9 Music, is a country music radio station based in the Fort Myers, FL area. The station, which is owned by Renda Broadcasting, operates at 101.9 MHz with an ERP of 100 kW. This power gives it one of the best radio signals in all of Southwest Florida. Its transmitter is located off Corkscrew Road in Estero. This incredible signal also has its disadvantages, having exceptional interference with 101.9 \"AMP Radio\" WQMP, an CHR/Top 40 licensed to Daytona Beach, but serves Orlando. The Sebring, Tampa, St. Petersburg, and Avon Park areas are the most affected by this interference with powerful radios receiving those two stations almost as one."
+        ],
+        "thoughts": [
+            "St. Petersburg is the largest in terms of the Grand Maket Rossiya, which is the largest model layout in Russia and the second largest in the world. It covers an area of and represents collective images of regions of the Russian Federation. Additionally, St. Petersburg is also home to the headquarters of Rossiya Airlines, a Russian airline with branches in Moscow, Rostov-on-Don, and Orenburg.",
+            "St. Petersburg is the largest in terms of the Grand Maket Rossiya, which is the largest model layout in Russia and the second largest in the world."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what category 'Rossiya Airlines' belongs to (e.g., business, geographic entity, etc.).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the location of Rossiya Airlines.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify what is considered the largest for the category of Rossiya Airlines' location (e.g., city, building, etc.).",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve information about the geographical location identified in step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if the geographical location is the largest of its type on earth.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Combine information from steps 3 and 5 to determine what Rossiya Airlines is located in that is considered the largest on Earth.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "This execution graph breaks down the process of finding the answer into logical steps. We start by identifying what 'Rossiya Airlines' is (a business entity, specifically an airline), and where it is located. Once we've established its location, we determine what is categorically largest about that location (like the largest city in the world) and verify that the location holds such a distinction. Finally, we synthesize this information to answer the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Maputo International Airport\nMaputo International Airport (IATA: MPM,\u00a0ICAO: FQMA) , also known as Louren\u00e7o Marques Airport or Mavalane International Airport, is an airport located 3 km northwest of the center of Maputo, the largest city and capital of Mozambique. It is the largest airport in Mozambique, and hub for LAM Mozambique Airlines and Kaya Airlines. Most destinations served from the airport are in Africa but TAP Portugal operates a service to Lisbon, Portugal, Turkish Airlines operates flights to Istanbul, and Qatar Airways operates flights to Doha.",
+            "Singapore Airlines\nSingapore Airlines Limited (SIA; ) is the flag carrier of Singapore with its hub at Singapore Changi Airport. The airline uses the Singapore Girl as its central figure in its corporate branding.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Bishop International Airport\nBishop International Airport (IATA: FNT,\u00a0ICAO: KFNT,\u00a0FAA LID: FNT) is a commercial and general aviation airport located in Flint, Michigan. It is named after banker and General Motors board member Arthur Giles Bishop (April 12, 1851 \u2013 January 22, 1944), who donated 220 acres of his farmland for the airport in 1928. The third busiest airport in Michigan, it surpassed competitor MBS International Airport in terms of airline operations in 2002. In 2007, 1,071,238 passengers used Bishop International Airport; in 2011, 938,914 passengers used the airport. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017\u20132021, in which it is categorized as a small hub primary commercial service facility. The airport is currently served by several passenger airlines: Allegiant Air, Southwest Airlines and Delta Air Lines operate mainline service out of the airport, as well as affiliates of Delta Connection, United Express and American Eagle. Additionally, FedEx Express and a FedEx Feeder affiliate operate cargo services out of the airport. Accompanying the airlines is fixed-base operator Av Flight that handles both general aviation and airline operations and the flight school American Wings Aviation. Bishop International Airport is in southwestern Flint, and is surrounded by Flint Township to the north, east and west; and Mundy Township to the south.",
+            "Israir Airlines\nIsrair Airlines Ltd. (Hebrew: \u05d9\u05e9\u05e8\u05d0\u05d9\u05d9\u05e8\u200e \u200e ), usually referred to as Israir, is an Israeli airline headquartered in Tel Aviv. It operates domestic scheduled and air taxi flights from Sde Dov Airport, Haifa Airport, Ben Gurion International Airport, and Eilat Airport, as well as international charter services from Ben Gurion International Airport to Europe and Asia. It also operates VIP flights, and is Israel's third-largest airline after El Al and Arkia Israel Airlines, employing some 350 staff.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "Step Back (album)\nStep Back is an album by blues guitarist and singer Johnny Winter. It features performances by a number of guest musicians, including Eric Clapton, Dr. John, Billy Gibbons from ZZ Top, Joe Perry from Aerosmith, Leslie West from Mountain, and Brian Setzer from the Stray Cats. It was released by Megaforce Records on September 2, 2014.",
+            "Falkland Islands official football team\nThe Falkland Islands official football team is a representative football team of the Falkland Islands, organised by the Falkland Islands Football League. The Falkland Islands Football League does not belong to the CONMEBOL, as its member countries support Argentina in the sovereignty conflict, and therefore neither can be a member of FIFA. Thus, the team is not eligible to play in official competitions such as the World Cup and the Copa Am\u00e9rica. The team has played in the Island Games in 2001, 2005, 2009, 2011, 2013, 2015 and 2017. In 2013 the team enjoyed a record win and a 3rd place medal.",
+            "Rossiya Theatre\nThe Rossiya Theatre (Russian: \u0422\u0435\u0430\u0442\u0440 \u00ab\u0420\u043e\u0441\u0441\u0438\u044f\u00bb ), formerly known as the Pushkinsky Cinema (Russian: \u041a\u0438\u043d\u043e\u0442\u0435\u0430\u0442\u0440 \u00ab\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0438\u0439\u00bb ) is monument of architecture and currently the largest theatre in Moscow operated by Stage Entertainment. It is located in Pushkinskaya Square.",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "SkyWest Airlines\nSkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in St. George, Utah, U.S.. According to the Airlines for America definitions, SkyWest is a North American major airline. SkyWest however, operates on a regional airline level and is a member of the Regional Airline Association. SkyWest Airlines flies to 238 cities, in 45 states; Washington, D.C., six Canadian provinces and five cities in Mexico. The airline serves as a feeder airline, operating under contract with various major carriers. It flies as SkyWest Airlines in a partnership with Alaska Airlines, as United Express on behalf of United Airlines, as American Eagle on behalf of American Airlines, and as Delta Connection on behalf of Delta Air Lines. SkyWest also provides ground handling services for airports across the United States.",
+            "Asen's Fortress\nAsen's Fortress (Bulgarian: \u0410\u0441\u0435\u043d\u043e\u0432\u0430 \u043a\u0440\u0435\u043f\u043e\u0441\u0442 , \"Asenova krepost\"), identified by some researchers as Petrich (\u041f\u0435\u0442\u0440\u0438\u0447), is a medieval fortress in the Bulgarian Rhodope Mountains, 2 to south of the town of Asenovgrad, on a high rocky ridge on the left bank of the Asenitsa River. Asen's Fortress is 279 m above sea level.",
+            "Step by Step (Annie Lennox song)\n\"Step by Step\" is a song written and originally recorded by singer Annie Lennox, later a cross over pop hit by R&B/pop singer Whitney Houston. The song served as the second single from Houston's 1996 soundtrack album, \"The Preacher's Wife\". Lennox's recording originally appeared as the B-side to her 1992 single \"Precious\" Largely, Houston's version replaces Lennox's verses with new lyrics and omits portions from the bridge as well. Annie Lennox also provides background vocals in Houston's rendition.",
+            "Constantine Bay\nConstantine Bay (Cornish: Eglos Costentin , meaning \"church of St Constantine\") is a village and beach on the Atlantic coast of north Cornwall, England, United Kingdom. It is situated approximately three miles (5\u00a0km) west of Padstow and is in the parish of St Merryn. The beach is popular with surfers and has lifeguard patrols in the summer. Constantine Bay is named after Saint Constantine, a 6th-century Cornish saint possibly identified with a minor British king Constantine. St Constantine's Well, an historic site, is accessible by public right of way on Trevose Golf Club's golf course. The area was a favourite holiday location of Margaret Thatcher during her premiership and also of former Prime Minister David Cameron.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "Four Peaks Brewery\nFour Peaks Brewery is an Arizona brewery and restaurant. The original and main location is in an old creamery and warehouse on 8th Street in Tempe, Arizona, about 1/2 mile east of the campus of Arizona State University. Nearby Scottsdale, Arizona boasts an additional location, and, in response to high demand (nearly 40,000 barrels in 2012 alone), another Tempe brewing site opened in the summer of 2012. The Tempe site was selected following a review of 25 potential sites, including the famed Sunkist facility in Mesa, Arizona and numerous warehouses in downtown Phoenix.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin."
+        ],
+        "thoughts": [
+            "Rossiya Airlines belongs to the category of transportation, specifically as a Russian airline operating domestic and international flights. It is also involved in operating the Russian presidential aircraft and is headquartered in Saint Petersburg with its hub at Pulkovo Airport.",
+            "Rossiya Airlines is headquartered in Saint Petersburg, Russia, with its hub at Pulkovo Airport. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport.",
+            "The largest location for Rossiya Airlines would be its headquarters in Saint Petersburg, Russia, as it serves as the central administrative and operational center for the airline.",
+            "Asen's Fortress is a medieval fortress located in the Bulgarian Rhodope Mountains, 2 kilometers south of the town of Asenovgrad, on a high rocky ridge on the left bank of the Asenitsa River. It is 279 meters above sea level. The fortress is a historic site with a strategic geographical location.",
+            "Based on the information provided, Asen's Fortress is not the largest of its type on earth. While it may have a strategic geographical location, there are likely other fortresses around the world that are larger in size. Therefore, it cannot be considered the largest of its type on earth.",
+            "Combining the information from steps 3 and 5, we can determine that Rossiya Airlines is located in Saint Petersburg, Russia, which serves as the central administrative and operational center for the airline. Therefore, the largest location for Rossiya Airlines on Earth is its headquarters in Saint Petersburg, Russia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what 'Rossiya Airlines' refers to and its relevance.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the headquarters location of Rossiya Airlines.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine what 'the largest' commonly refers to on Earth in terms of geographic locations or regions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Use the headquarters location from step 2 and link it to any large geographic designation identified in step 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the question by first understanding what Rossiya Airlines is and then identifying its headquarters' location. Concurrently, it retrieves what 'largest' could refer to in a geographic sense on Earth. The final reasoning step synthesizes these results, linking the location of Rossiya Airlines to a potentially large geographic area, such as continent, country, or city."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Air Nicaragua\nNicaragua Airways is the potential future national flag carrier of Nicaragua. Its main base is Augusto C. Sandino International Airport, Managua. It is the first time in 20 years that Nicaragua will have a national flag carrier, after Aeronica ceased operations in 1991. Since then, the flag carrier status was awarded to Nicarag\u00fcense de Aviaci\u00f3n also known as NICA Airlines. Several airlines had tried to become the Nicaraguan flag carrier like CAAL (Central American Airlines), SANSA (Servicios Aereos Nicaraguenses S.A.) but none of these survived a year. Today even NICA Airlines (6Y) is registered as the national airline of Nicaragua, the only international flight it operated once (Managua to Miami) and is done under the TACA code (TA) as a full TACA Airlines flight.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Mankato, Minnesota\nMankato ( ) is a city in Blue Earth, Nicollet, and Le Sueur counties in the state of Minnesota. It is the 22nd biggest city in Minnesota. The population was 41,044 according to 2015 US census estimates, making it the fifth largest city in Minnesota outside of the Minneapolis\u2013Saint Paul metropolitan area. The county seat of Blue Earth County, it is located along a large bend of the Minnesota River at its confluence with the Blue Earth River. Mankato is across the Minnesota River from North Mankato. Mankato and North Mankato have a combined population of over 53,000, according to the 2010 census. It completely encompasses the town of Skyline. North of Mankato Regional Airport, a tiny non-contiguous part of the city is located within Le Sueur County. Most of the city of Mankato is located within Blue Earth County.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Siberian Shelf\nThe Siberian Shelf, one of the Arctic Ocean coastal shelves (such as the Milne Ice Shelf), is the largest continental shelf of the Earth, a part of the continental shelf of Russia. It extends from the continent of Eurasia in the general area of North Siberia (hence the name) into the Arctic Ocean. It stretches to 1500 km offshore. It is relatively shallow, with average depth of 100 m. A number of islands are within the shelf, including the Wrangel Island, Novaya Zemlya, and the New Siberian Islands.",
+            "Hawaii County, Hawaii\nHawai\u02bb i County is a county located in the U.S. state of Hawaii in the Hawaiian Islands. It is coterminous with the Island of Hawai\u02bb i, often called the \"Big Island\" to distinguish it from the state as a whole. As of the 2010 Census the population was 185,079. The county seat is Hilo. There are no incorporated cities in Hawai\u02bb i County (see Hawaii Counties). The Hilo Micropolitan Statistical Area includes all of Hawai\u02bb i County. Hawai\u02bb i County has a mayor-council form of government. Hawaii County is the largest county in the state, in terms of geography.",
+            "Rossiya Theatre\nThe Rossiya Theatre (Russian: \u0422\u0435\u0430\u0442\u0440 \u00ab\u0420\u043e\u0441\u0441\u0438\u044f\u00bb ), formerly known as the Pushkinsky Cinema (Russian: \u041a\u0438\u043d\u043e\u0442\u0435\u0430\u0442\u0440 \u00ab\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0438\u0439\u00bb ) is monument of architecture and currently the largest theatre in Moscow operated by Stage Entertainment. It is located in Pushkinskaya Square.",
+            "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong. It links Des Voeux Road Central to Queen's Road Central. It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+            "Al-Ahsa Governorate\nAl Ahsa (Arabic: \u0627\u0644\u0623\u062d\u0633\u0627\u0621\u200e \u200e \" al-A\u1e25s\u0101\u02be\", locally pronounced \"al-\u1e24as\u0101\u02be\") is the largest governorate in Saudi Arabia's Eastern Province, named after the Al-Ahsa oasis. The name Al-Ahsa is also given to the biggest city in the governorate, Hofuf. In Classical Arabic, Ahsa means the sound of water underground. It has one of the largest oases in the world with Date Palms known to be the best in the world, the oasis is located about 60\u00a0km inland from the Persian Gulf. All urban areas are located in the traditional oasis of Al-Hasa. In addition to the oasis, the county also includes the giant Empty Quarter desert, making it the largest governorate in Saudi Arabia in terms of area. The Empty Quarter has the world's largest oil fields and connects Saudi Arabia to Qatar, the UAE, and Oman. The Governorate's population is over 908,366 (2005 estimate ).In the past, Al-Ahsa belonged to the historical region known as Bahrain, along with Qatif and the present-day Bahrain islands.",
+            "Norwegian Air Shuttle\nNorwegian Air Shuttle ASA (), trading as Norwegian, is a Norwegian low-cost airline. It is the third largest low-cost carrier in Europe, the largest airline in Scandinavia, and the ninth-largest airline in Europe in terms of passenger numbers. It offers a high-frequency domestic flight schedule within Scandinavia and Finland, and to business destinations such as London, as well as to holiday destinations in the Mediterranean and the Canary Islands, transporting over 30 million people in 2016. The airline is known for its distinctive livery of white with a red nose, with portraits of distinguished Scandinavians on the tail fins of its aircraft.",
+            "Milwaukee\nMilwaukee ( , ) is the largest city in the state of Wisconsin and the fifth-largest city in the Midwestern United States. The county seat of Milwaukee County, it is on Lake Michigan's western shore. Ranked by estimated 2014 population, Milwaukee was the 31st largest city in the United States. The city's estimated population in 2015 was 600,155. Milwaukee is the main cultural and economic center of the Milwaukee metropolitan area. It is also part of the larger Milwaukee-Racine-Waukesha combined statistical area, which had an estimated population of 2,026,243 in the 2010 census.",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "SkyWest Airlines\nSkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in St. George, Utah, U.S.. According to the Airlines for America definitions, SkyWest is a North American major airline. SkyWest however, operates on a regional airline level and is a member of the Regional Airline Association. SkyWest Airlines flies to 238 cities, in 45 states; Washington, D.C., six Canadian provinces and five cities in Mexico. The airline serves as a feeder airline, operating under contract with various major carriers. It flies as SkyWest Airlines in a partnership with Alaska Airlines, as United Express on behalf of United Airlines, as American Eagle on behalf of American Airlines, and as Delta Connection on behalf of Delta Air Lines. SkyWest also provides ground handling services for airports across the United States.",
+            "China Airlines\nChina Airlines (CAL) () () is the flag carrier and largest airline of the Republic of China (Taiwan). It is headquartered in Taoyuan International Airport and has 12,607 regular employees. China Airlines operates over 1,400 flights weekly to 118 airports in 115 cities (including codeshare) across Asia, Europe, North America and Oceania. The cargo division operates 91 pure freighter flights weekly. The carrier was, in 2013, the 29th and 10th largest airline in the world in terms of passenger revenue per kilometer (RPK) and freight RPK, respectively. China Airlines has three airline subsidiaries: Mandarin Airlines operates flights to domestic and low-demand regional destinations; China Airlines Cargo, a member of Skyteam Cargo, operates a fleet of freighter aircraft and manages its parent airline's cargo-hold capacity; Tigerair Taiwan is a low-cost carrier established by China Airlines and Singaporean airline group Tigerair Holdings and is wholly owned by China Airlines Group."
+        ],
+        "thoughts": [
+            "Rossiya Airlines refers to a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is a fully owned subsidiary of Aeroflot and operates domestic and international flights. It also operates the Russian presidential fleet and serves as a hub for Pulkovo Airport. The airline is relevant in the context of air travel within Russia and internationally, as well as in the transportation of government officials, including the President of Russia.",
+            "The headquarters location of Rossiya Airlines is in Saint Petersburg, Russia, with its hub at Pulkovo Airport.",
+            "In terms of geographic locations or regions, 'the largest' commonly refers to the following:\n1. The largest country on Earth by land area: Russia\n2. The largest continental shelf of the Earth: Siberian Shelf\n3. The largest county in the state of Hawaii: Hawaii County\n4. The largest governorate in Saudi Arabia's Eastern Province: Al-Ahsa Governorate\n5. The largest low-cost carrier in Europe: Norwegian Air Shuttle\n6. The largest city in the state of Wisconsin: Milwaukee\n7. The largest city in the East Bay region of the San Francisco Bay Area: Oakland, California",
+            "The headquarters location of Rossiya Airlines in Saint Petersburg, Russia, is linked to the largest country on Earth by land area, which is Russia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Rossiya Airlines, including its main hub or location.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the main hub or location of Rossiya Airlines.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine what type of place or entity the location identified in Node 2 is (e.g., city, airport).",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find out what the largest entity of that type is on Earth (e.g., largest city, largest airport).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question about what the largest entity Rossiya Airlines is located in, the execution graph starts by gathering information about the airline itself. Nodes are set up to identify its main location (e.g., its hub airport or city), determine what category or type the location falls into, and finally, to identify and verify the largest entity of that type worldwide. The graph ensures all necessary steps are taken to provide a complete answer."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "TAROM\nCompania Na\u021bional\u0103 de Transporturi Aeriene Rom\u00e2ne TAROM S.A., doing business as TAROM, is the flag carrier and oldest currently operating airline of Romania, based in Otopeni near Bucharest. Its headquarters and its main hub are at Henri Coand\u0103 International Airport. It is currently the second largest airline operating in Romania based on international destinations, international flights and the third largest measured by fleet size and passengers carried.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Hazeldean Mall\nHazeldean Mall is a shopping centre located in the Kanata district of Ottawa, Ontario, Canada. It is located at the intersection of Eagleson Road and Hazeldean Road, where Hazeldean Road turns into Robertson Road. It was the first enclosed shopping centre constructed in Kanata. The development of the mall was approved shortly before the incorporation of the (then) City of Kanata, and its approval lead to a legal battle between the constituent parts of the new municipality over the appropriate location of what would at that time be the new city's main commercial hub.",
+            "Singapore Airlines\nSingapore Airlines Limited (SIA; ) is the flag carrier of Singapore with its hub at Singapore Changi Airport. The airline uses the Singapore Girl as its central figure in its corporate branding.",
+            "Maputo International Airport\nMaputo International Airport (IATA: MPM,\u00a0ICAO: FQMA) , also known as Louren\u00e7o Marques Airport or Mavalane International Airport, is an airport located 3 km northwest of the center of Maputo, the largest city and capital of Mozambique. It is the largest airport in Mozambique, and hub for LAM Mozambique Airlines and Kaya Airlines. Most destinations served from the airport are in Africa but TAP Portugal operates a service to Lisbon, Portugal, Turkish Airlines operates flights to Istanbul, and Qatar Airways operates flights to Doha.",
+            "Air Cortez\nAir Cortez was a United States FAR 121 and 135 commuter airline that operated from 1977 to 1986. Air Cortez served a number of cities in Southern California, Arizona, Nevada and Baja California. In 1981, Air Cortez was operating nonstop passenger service between Ontario Airport (ONT) and Yuma, Arizona (YUM) with a Beech 18 prop aircraft. In 1985, the airline was operating scheduled passenger service between Las Vegas (LAS) and Grand Canyon National Park Airport (GCN) with Fairchild F-27 turboprop and Cessna 402 prop aircraft. Air Cortez also operated scheduled international passenger service to Mexico with the Fairchild F-27 on a routing of Ontario-San Diego-Guaymas-Mulege-Loreto.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Plan de Guadalupe International Airport\nPlan de Guadalupe International Airport (Spanish: \"Aeropuerto Internacional Plan de Guadalupe\" ) (IATA: SLW,\u00a0ICAO: MMIO) is an airport located at Ramos Arizpe in the state of Coahuila in Mexico. It handles national and international air traffic from the metropolitan area of Saltillo and Ramos Arizpe.",
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "China Airlines\nChina Airlines (CAL) () () is the flag carrier and largest airline of the Republic of China (Taiwan). It is headquartered in Taoyuan International Airport and has 12,607 regular employees. China Airlines operates over 1,400 flights weekly to 118 airports in 115 cities (including codeshare) across Asia, Europe, North America and Oceania. The cargo division operates 91 pure freighter flights weekly. The carrier was, in 2013, the 29th and 10th largest airline in the world in terms of passenger revenue per kilometer (RPK) and freight RPK, respectively. China Airlines has three airline subsidiaries: Mandarin Airlines operates flights to domestic and low-demand regional destinations; China Airlines Cargo, a member of Skyteam Cargo, operates a fleet of freighter aircraft and manages its parent airline's cargo-hold capacity; Tigerair Taiwan is a low-cost carrier established by China Airlines and Singaporean airline group Tigerair Holdings and is wholly owned by China Airlines Group.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally."
+        ],
+        "thoughts": [
+            "Rossiya Airlines, also known as AO Aviakompaniya \"Rossiya\", is a Russian airline headquartered in Saint Petersburg with its main hub at Pulkovo Airport. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport. The airline is a fully owned subsidiary of Aeroflot. Rossiya Airlines operates domestic and international flights, serving various destinations.",
+            "The main hub or location of Rossiya Airlines is Pulkovo Airport in Saint Petersburg, Russia.",
+            "The location identified in Node 2 is an airport, specifically Pulkovo Airport in Saint Petersburg, Russia.",
+            "The largest airline in terms of international destinations, international flights, fleet size, and passengers carried in Romania is TAROM. The largest air traffic control center in terms of geographical coverage is the Salt Lake City Air Route Traffic Control Center in the United States. The largest airport in Mozambique is Maputo International Airport, serving as a hub for LAM Mozambique Airlines and Kaya Airlines."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what 'Rossiya Airlines' refers to and gather relevant information about it, including its headquarters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine what 'largest' refers to in different contexts such as city, country, continent.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find out the headquarters of Rossiya Airlines.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the largest city on Earth by population and area.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine the largest country on Earth by area.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine the largest continent on Earth by area.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Check if Rossiya Airlines is located in the largest city identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "8",
+                        "instruction": "Check if Rossiya Airlines is located in the largest country identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "5"
+                        ]
+                    },
+                    {
+                        "id": "9",
+                        "instruction": "Check if Rossiya Airlines is located in the largest continent identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "6"
+                        ]
+                    },
+                    {
+                        "id": "10",
+                        "instruction": "Synthesize all information to determine the largest entity Rossiya Airlines is located in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "7",
+                            "8",
+                            "9"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "10"
+            },
+            "explanation": "The execution graph starts by identifying Rossiya Airlines and retrieving any necessary information about its headquarters (Node 1). Then, it identifies the concept of 'largest' in various contexts such as city, country, and continent (Node 2), which allows for determination of the largest entities in each category (Nodes 4, 5, 6). Subsequently, the graph gathers information specifically about the headquarters of Rossiya Airlines (Node 3). With all this information, it then checks whether Rossiya Airlines is located in the largest identified city, country, or continent (Nodes 7, 8, and 9). Finally, Node 10 synthesizes these findings to conclude the largest entity that Rossiya Airlines is located in."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Siberian Shelf\nThe Siberian Shelf, one of the Arctic Ocean coastal shelves (such as the Milne Ice Shelf), is the largest continental shelf of the Earth, a part of the continental shelf of Russia. It extends from the continent of Eurasia in the general area of North Siberia (hence the name) into the Arctic Ocean. It stretches to 1500 km offshore. It is relatively shallow, with average depth of 100 m. A number of islands are within the shelf, including the Wrangel Island, Novaya Zemlya, and the New Siberian Islands.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Mankato, Minnesota\nMankato ( ) is a city in Blue Earth, Nicollet, and Le Sueur counties in the state of Minnesota. It is the 22nd biggest city in Minnesota. The population was 41,044 according to 2015 US census estimates, making it the fifth largest city in Minnesota outside of the Minneapolis\u2013Saint Paul metropolitan area. The county seat of Blue Earth County, it is located along a large bend of the Minnesota River at its confluence with the Blue Earth River. Mankato is across the Minnesota River from North Mankato. Mankato and North Mankato have a combined population of over 53,000, according to the 2010 census. It completely encompasses the town of Skyline. North of Mankato Regional Airport, a tiny non-contiguous part of the city is located within Le Sueur County. Most of the city of Mankato is located within Blue Earth County.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Jacksonville, Florida\nJacksonville is the largest city by population in the U.S. state of Florida, and the largest city by area in the contiguous United States. It is the county seat of Duval County, with which the city government consolidated in 1968. Consolidation gave Jacksonville its great size and placed most of its metropolitan population within the city limits; with an estimated population of 913,010 as of 2017, Jacksonville is the most populous city in the state of Florida and the southeastern United States. The Jacksonville metropolitan area has a population of 1,626,611. It is the 34th largest MSA in the United States and fourth largest in Florida.",
+            "Milwaukee\nMilwaukee ( , ) is the largest city in the state of Wisconsin and the fifth-largest city in the Midwestern United States. The county seat of Milwaukee County, it is on Lake Michigan's western shore. Ranked by estimated 2014 population, Milwaukee was the 31st largest city in the United States. The city's estimated population in 2015 was 600,155. Milwaukee is the main cultural and economic center of the Milwaukee metropolitan area. It is also part of the larger Milwaukee-Racine-Waukesha combined statistical area, which had an estimated population of 2,026,243 in the 2010 census.",
+            "Charleston, South Carolina\nCharleston is the oldest and largest city in the U.S. state of South Carolina, the county seat of Charleston County, and the principal city in the Charleston\u2013North Charleston\u2013Summerville Metropolitan Statistical Area. The city lies just south of the geographical midpoint of South Carolina's coastline and is located on Charleston Harbor, an inlet of the Atlantic Ocean formed by the confluence of the Ashley and Cooper rivers. Charleston had an estimated population of 134,385 in 2016. The estimated population of the Charleston metropolitan area, comprising Berkeley, Charleston, and Dorchester counties, was 761,155 residents in 2016, the third-largest in the state and the 78th-largest metropolitan statistical area in the United States.",
+            "Owensboro, Kentucky\nOwensboro is a home rule-class city in and the county seat of Daviess County, Kentucky, United States. It is the fourth-largest city in the state by population. Owensboro is located on U.S. Route 60 about 107 mi southwest of Louisville, and is the principal city of the Owensboro metropolitan area. The 2015 population was 59,042. The metropolitan population was estimated at 116,506.",
+            "Las Cruces, New Mexico\nLas Cruces, also known as \"The City of the Crosses\", is the seat of Do\u00f1a Ana County, New Mexico, United States. As of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque. Las Cruces is the largest city in both Do\u00f1a Ana County and southern New Mexico. The Las Cruces metropolitan area had an estimated population of 213,676 in 2014. It is the principal city of a metropolitan statistical area which encompasses all of Do\u00f1a Ana County and is part of the larger El Paso\u2013Las Cruces combined statistical area.",
+            "Mage Gauntlet\nMage Gauntlet is an iOS game developed by Rocketcat Games and released on October 20, 2011. In this game you follow the main character named Lexi, in an adventure around the continent in search of a way to defeat the demon Lord Hurgoroth, and prevent him from taking over the world.",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "Salt Lake City metropolitan area\nThe Salt Lake City metropolitan area is the metropolitan area centered on the city of Salt Lake City, Utah. The Office of Management and Budget and the United States Census Bureau currently define the Salt Lake City, Utah Metropolitan Statistical Area as comprising two counties: Salt Lake and Tooele. As of the 2010 census, the MSA had a population of 1,087,873. As of July 1, 2014 the U.S. Census Bureau's population estimates division placed the population at 1,153,340, an increase of 65,467 or 6.0 percent since April 2010; out of 381 total MSAs, the Census Bureau ranks it as the 48th largest MSA in the United States in 2014 and the 58th fastest growing since 2010. The Salt Lake City Metropolitan Area and the Ogden-Clearfield Metropolitan Area were a single metropolitan area known as the Salt Lake City-Ogden Metropolitan Area until being separated in 2005.",
+            "Tenerife\nTenerife ( ; ] ) is the largest and most populated island of the seven Canary Islands. It is also the most populated island of Spain, with a land area of 2034.38 km2 and 898,680 inhabitants, 43 percent of the total population of the Canary Islands. Tenerife is the largest and most populous island of Macaronesia.",
+            "Cairo\nCairo ( ; Arabic: \u0627\u0644\u0642\u0627\u0647\u0631\u0629\u200e \u200e \"al-Q\u0101hirah \", , Coptic: \"Kahire \") is the capital and largest city of Egypt. The city's metropolitan area is the largest in the Middle East and the Arab world, and the 15th-largest in the world, and is associated with ancient Egypt, as the famous Giza pyramid complex and the ancient city of Memphis are located in its geographical area. Located near the Nile Delta, modern Cairo was founded in 969 CE by the Fatimid dynasty, but the land composing the present-day city was the site of ancient national capitals whose remnants remain visible in parts of Old Cairo. Cairo has long been a center of the region's political and cultural life, and is titled \"the city of a thousand minarets\" for its preponderance of Islamic architecture. Cairo is considered a World City with a \"Beta +\" classification according to GaWC.",
+            "American airborne landings in Normandy\nThe American airborne landings in Normandy were the first American combat operations during Operation Overlord, the invasion of Normandy by the Western Allies on June 6, 1944, during World War II. Around 13,100 American paratroopers of the 82nd and 101st Airborne Divisions made night parachute drops early on D-Day, June 6, followed by 3,937 glider troops flown in by day. As the opening maneuver of Operation Neptune (the assault operation for Overlord) the two American airborne divisions were delivered to the continent in two parachute and six glider missions.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Better Than Home\nBetter Than Home is the seventh solo studio album by American singer-songwriter Beth Hart. Hart's husband and her manager convinced her to work with the production team of Rob Mathes and Michael Stevens, whom she had met when she performed at the Kennedy Center Honors in 2012. Hart had worked with Kevin Shirley for her last three albums, but she was persuaded to try a different team and go a different direction. The production team challenged Hart to leave behind the darker themes and to \"write more about my joy and what I believe in and what my love is.\" Hart was pushed to write songs that came from a different source, from when she was happy or having a good time. One song on the album, \"Tell Her You Belong to Me\", took her a year and a half to write.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Milliken Creek (California)\nMilliken Creek is an 11.9 mi stream in Napa County, California that is tributary to the Napa River. There are approximately 7300 acre in this watershed, of which 90 acre are developed as vineyards. Milliken Creek rises on the western slopes of the east side of the Napa Valley and flows through the Silverado Country Club property. Much of this watershed property had once been part of the Mexican land grant Rancho Yajome, which had been granted to General Mariano G. Vallejo. Most of this watershed was wilderness area to at least 1869, and thereafter the lower watershed was begun to be developed as pasture and grazing agricultural uses. In an 1989 stream survey by Earth Metrics, the steelhead fishery was found to be robust up to and including the Silverado Country Club.",
+            "Rossiya Theatre\nThe Rossiya Theatre (Russian: \u0422\u0435\u0430\u0442\u0440 \u00ab\u0420\u043e\u0441\u0441\u0438\u044f\u00bb ), formerly known as the Pushkinsky Cinema (Russian: \u041a\u0438\u043d\u043e\u0442\u0435\u0430\u0442\u0440 \u00ab\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0438\u0439\u00bb ) is monument of architecture and currently the largest theatre in Moscow operated by Stage Entertainment. It is located in Pushkinskaya Square.",
+            "North Shore Square\nNorth Shore Square is a 621192 sqft shopping mall in Slidell, Louisiana. The mall is the largest mall on the Northshore of Lake Pontchartrain, fifth largest in the New Orleans area and the 11th largest in Louisiana. The mall is home to two anchor stores, Dillard's, and At Home, as well as approximately 23 other stores. All the anchor stores are on one level. The mall did not flood during Hurricane Katrina and experienced no serious damage. The mall formerly had Mervyns as an anchor store, but closed shortly after the storm when Mervyn's pulled out of the Louisiana market. The store was eventually replaced by Burlington Coat Factory, which is now closed due to corporate downsizing. JCPenney closed on July 31, 2017. The mall has struggled partially due to increased internet-based sales as well as an open-air shopping center located on the opposite side of town, to which it lost some of its tenants. Following a nationwide trend, the mall's future is uncertain as many former mall-based stores have either closed completely or downsized nationally, and enclosed shopping malls across the country are challenged by new consumer trends and shifting paradigms.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "SkyWest Airlines\nSkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in St. George, Utah, U.S.. According to the Airlines for America definitions, SkyWest is a North American major airline. SkyWest however, operates on a regional airline level and is a member of the Regional Airline Association. SkyWest Airlines flies to 238 cities, in 45 states; Washington, D.C., six Canadian provinces and five cities in Mexico. The airline serves as a feeder airline, operating under contract with various major carriers. It flies as SkyWest Airlines in a partnership with Alaska Airlines, as United Express on behalf of United Airlines, as American Eagle on behalf of American Airlines, and as Delta Connection on behalf of Delta Air Lines. SkyWest also provides ground handling services for airports across the United States.",
+            "North Pacific Airlines\nNorth Pacific Airlines was a small regional airline formed in 1987, flying for United Airlines under the United Express brand name from the Seattle\u2013Tacoma International Airport to three Eastern Washington destinations and Portland, Oregon. By 1991 the airline which was owned by WestAir Holdings had been merged with WestAir Commuter Airlines still under the United Express banner. WestAir Commuter Airlines was another member of the WestAir Holdings corporation."
+        ],
+        "thoughts": [
+            "Rossiya Airlines is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is a fully owned subsidiary of Aeroflot and operates branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport. The airline serves both domestic and international destinations, and it also operates the Russian presidential fleet. Pulkovo Airport serves as a hub for Rossiya Airlines and is responsible for serving the citizens of Saint Petersburg and the Leningrad Oblast.",
+            "The headquarters of Rossiya Airlines is located in Saint Petersburg, Russia, with its hub at Pulkovo Airport. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport.",
+            "The term \"largest\" can refer to different things depending on the context. \n\n1. Largest City: In the context of cities, \"largest\" typically refers to the city with the highest population or the largest land area.\n\n2. Largest Country: When discussing countries, \"largest\" usually refers to the country with the largest land area.\n\n3. Largest Continent: In the context of continents, \"largest\" refers to the continent with the highest land area and population.",
+            "The largest city on Earth by population is Jacksonville, Florida, with an estimated population of 913,010 as of 2017. The largest city on Earth by area is the Salt Lake City metropolitan area, which comprises two counties: Salt Lake and Tooele, with a population of 1,153,340 as of July 1, 2014.",
+            "Rossiya Airlines is not located in the largest city identified. The headquarters of Rossiya Airlines is located in Saint Petersburg, Russia, which is not the largest city by population or area.",
+            "The largest country on Earth by land area is Russia.",
+            "Yes, Rossiya Airlines is located in the largest country identified, which is Russia.",
+            "The largest continent on Earth by area is Asia. With an area of approximately 44.58 million square kilometers, it is significantly larger than any other continent.",
+            "Yes, Rossiya Airlines is located in the largest continent, Asia. Its headquarters is in Saint Petersburg, Russia, which is located in the Asian part of Russia. Therefore, Rossiya Airlines is located in the largest continent, Asia.",
+            "Based on the synthesized information, Rossiya Airlines is located in the largest country, Russia, and the largest continent, Asia. Therefore, the largest entity Rossiya Airlines is located in is Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the entity referred to as 'Rossiya Airlines'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the headquarters or base location of Rossiya Airlines.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Search for the largest entities on Earth across various categories such as continents, countries, cities, or geographic features.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify which of these largest entities is associated with the location retrieved for Rossiya Airlines.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to first identify Rossiya Airlines and its location (likely its base or headquarters). Concurrently, the graph also entails searching for the largest entities on Earth, such as the largest country, city, or continent. Finally, it links the location of Rossiya Airlines to the largest category it fits in, synthesizing the information to answer the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "The Five Obstructions\nThe Five Obstructions is a 2003 Danish documentary film directed by Lars von Trier and J\u00f8rgen Leth. The film is conceived as a documentary, but incorporates lengthy sections of experimental films produced by the filmmakers. The premise is that von Trier has created a challenge for his friend and mentor, J\u00f8rgen Leth, another renowned filmmaker. von Trier's favorite film is Leth's \"The Perfect Human\" (1967), and von Trier gives Leth the task of remaking \"The Perfect Human\" five times, each time with a different \"obstruction\" (or obstacle) imposed by von Trier.",
+            "Air Nicaragua\nNicaragua Airways is the potential future national flag carrier of Nicaragua. Its main base is Augusto C. Sandino International Airport, Managua. It is the first time in 20 years that Nicaragua will have a national flag carrier, after Aeronica ceased operations in 1991. Since then, the flag carrier status was awarded to Nicarag\u00fcense de Aviaci\u00f3n also known as NICA Airlines. Several airlines had tried to become the Nicaraguan flag carrier like CAAL (Central American Airlines), SANSA (Servicios Aereos Nicaraguenses S.A.) but none of these survived a year. Today even NICA Airlines (6Y) is registered as the national airline of Nicaragua, the only international flight it operated once (Managua to Miami) and is done under the TACA code (TA) as a full TACA Airlines flight.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Camp Courtney\nCamp Courtney (Japanese: \u30ad\u30e3\u30f3\u30d7\u30fb\u30b3\u30fc\u30c8\u30cb\u30fc , Hepburn: Kyampu K\u014dton\u012b ) is a U.S. Marine Base located in Uruma City, Okinawa Prefecture, Japan. It is part of the larger Marine Corps Base Camp Smedley D. Butler and home to the III Marine Expeditionary Force, 3rd Marine Division, and 3d MEB Headquarters. It is named after Major Henry A. Courtney, Jr., who was killed in action in the Battle of Okinawa. Camp Courtney covers 1.339 km2 in the Konbu, Tengan, and Uken districts of Uruma.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong. It links Des Voeux Road Central to Queen's Road Central. It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities."
+        ],
+        "thoughts": [
+            "Rossiya Airlines is the entity referred to in the given information.",
+            "The headquarters of Rossiya Airlines is located in Saint Petersburg, Russia, with its main hub at Pulkovo Airport. It also has branches at Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport.",
+            "Largest entities on Earth across various categories:\n\nContinents: Asia is the largest continent on Earth, covering approximately 30% of the Earth's land area.\n\nCountries: Russia is the largest country in the world by land area, covering over 17 million square kilometers.\n\nCities: Tokyo, Japan is the largest city in the world by population, with over 37 million people in the metropolitan area.\n\nGeographic Features: The Pacific Ocean is the largest ocean on Earth, covering approximately 63 million square miles.\n\nOther entities:\n- The Syrian Emergency Task Force is a prominent organization advocating for the armed overthrow of the government of Syria.\n- Operation \"Barrel Roll\" was a covert U.S. Air Force and Navy campaign conducted in Laos during the Vietnam War.\n- Mursm\u00e4cka was a historical profession for women in Sweden, involving the task of hand-mixing mortar during construction work.\n- \"The Five Obstructions\" is a documentary film directed by Lars von Trier and J\u00f8rgen Leth, featuring a challenge to remake a film with different obstacles.\n- Total is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s.",
+            "The largest entity associated with the location retrieved for Rossiya Airlines is the country of Russia, as the airline is headquartered in Saint Petersburg, Russia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Rossiya Airlines in located in the largest what on earth?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location where Rossiya Airlines is based.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine what is considered the 'largest' in that location.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify what types of geographical or man-made entities can be categorized as the 'largest' on Earth (e.g., largest country, largest city, etc.).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the determined 'largest' entity from the location of Rossiya Airlines with the global list of 'largest' entities to see if they match.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph starts by finding the location of Rossiya Airlines, which is St. Petersburg, Russia. Then it identifies what is largest about this location (Russia, as the largest country). Separately, it gathers information on different 'largest' entities worldwide (largest city, country, etc.). Finally, it reasons whether the 'largest' entity related to Rossiya Airlines' location matches any of the global 'largest' categories. The expected conclusion is that Rossiya Airlines is in the largest country on Earth, which is Russia."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "TAROM\nCompania Na\u021bional\u0103 de Transporturi Aeriene Rom\u00e2ne TAROM S.A., doing business as TAROM, is the flag carrier and oldest currently operating airline of Romania, based in Otopeni near Bucharest. Its headquarters and its main hub are at Henri Coand\u0103 International Airport. It is currently the second largest airline operating in Romania based on international destinations, international flights and the third largest measured by fleet size and passengers carried.",
+            "Pulkovo Airport\nPulkovo Airport (Russian: \u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u041f\u0443\u043b\u043a\u043e\u0432\u043e ; ] ) (IATA: LED,\u00a0ICAO: ULLI) is an international airport serving Saint Petersburg, Russia. It consists of one terminal, \"Terminal 1\" which is located 23 km south of the city centre. The airport serves as a hub for Rossiya Airlines (formerly Pulkovo Aviation Enterprise), and as focus city for Nordavia. Pulkovo International Airport is responsible for serving the citizens of Saint Petersburg, as well as the Leningrad Oblast: a total of 6,120,000 people.",
+            "Rossiya Airlines\nRossiya Airlines OJSC (Russian: \u0410\u041e \u00ab\u0410\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u201e\u0420\u043e\u0441\u0441\u0438\u044f\u201c\u00bb , \"AO Aviakompaniya \"Rossiya\"\"), sometimes branded as \"Rossiya - Russian Airlines\" (Russian: \u00ab\u0420\u043e\u0441\u0441\u0438\u044f \u2014 \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u043d\u0438\u0438\u00bb , \"Rossiya \u2014 Rossiyskie avialinii\"), is a Russian airline headquartered in Saint Petersburg with its hub at Pulkovo Airport. It is based in Saint Petersburg, there are branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport and Orenburg Tsentralny Airport. Rossiya is a fully owned subsidiary of Aeroflot.",
+            "Grand Maket Rossiya\nGrand Maket Rossiya is a private museum in Saint Petersburg, Russia. It is a model layout designed on a scale of 1:87 and covers an area of . In this area, collective images of regions of the Russian Federation are represented. It is the largest model layout in Russia and the second largest in the world (after the Miniatur Wunderland in Hamburg, Germany). The model is located in a two story building built in 1953, in the style of Stalin's empire. The creator of the project is a Saint Petersburg businessman Sergey Morozov.",
+            "Scoot\nScoot Tigerair Pte Ltd. (operating as Scoot) is a Singaporean low-cost long-haul airline owned by Singapore Airlines through its subsidiary Budget Aviation Holdings. It launched flights in June 2012 on medium and long-haul routes from Singapore, predominantly to China and India. Initially, Scoot's fleet consisted of Boeing 777 aircraft obtained from Singapore Airlines. The airline began to transition its fleet to Boeing 787 Dreamliner aircraft from 2015. On 25 July 2017, Tigerair was officially merged into Scoot using Tigerair's air operator's certificate (AOC) but retaining the 'Scoot' brand. With the change of AOC, the airline's IATA code was changed from TZ to TR, previously used by Tigerair. Its head office is at Singapore Changi Airport.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Russian presidential aircraft\nThe Russian presidential aircraft are aircraft of the Russian presidential fleet used by the President of Russia and other government officials, the presidential fleet is operated by Rossiya Airlines. As Russia is the largest country on Earth by land area, distances within Russia can be very long, and air travel is frequently needed for the President to travel across the country as well as internationally.",
+            "Tigerair Australia\nTiger Airways Australia Pty Ltd, operating as Tigerair Australia, is an Australian low-cost airline. It commenced services in the Australian domestic airline market on 23 November 2007 as Tiger Airways Australia. It is a fully owned subsidiary of Virgin Australia Holdings. The airline is based in Melbourne, Victoria, with its main base at Melbourne Airport. The Civil Aviation Safety Authority of Australia (CASA) grounded the airline in 2011; as a result operating bases at Adelaide and Avalon were shut down and it initially only operated out of its Melbourne base after returning to the air. On 7 March 2012, Tigerair announced the reopening of a second base at Sydney Airport.",
+            "Rossiya destinations\nRossiya Airlines, a Russian airline, flies to the following destinations (as of July 2016):",
+            "Tax consolidation\nTax consolidation, or combined reporting, is a regime adopted in the tax or revenue legislation of a number of countries which treats a group of wholly owned or majority-owned companies and other entities (such as trusts and partnerships) as a single entity for tax purposes. This generally means that the head entity of the group is responsible for all or most of the group's tax obligations (such as paying tax and lodging tax returns). Consolidation is usually an all-or-nothing event: once the decision to consolidate has been made, companies are irrevocably bound. Only by having less than a 100% interest in a subsidiary can that subsidiary be left out of the consolidation.",
+            "Alopecurus aequalis\nAlopecurus aequalis is a common species of grass known as shortawn foxtail or orange foxtail. It is native to much of the temperate Northern Hemisphere from Eurasia to North America, where it can be found in many types of habitat.",
+            "Parkway Man\nThe Parkway Man also known as Iron Henry is a statue located on the outskirts of Bowden Housteads Woods in the Handsworth district of Sheffield, England. The statue is visible from the road, and can be seen by people driving on Sheffield Parkway. The statue can also be viewed using public footpaths in the woods.",
+            "Legacy of Che Guevara\nThe legacy of Argentine Marxist revolutionary Che Guevara (June 14, 1928 \u2013 October 9, 1967) is constantly evolving in the collective imagination. As a ubiquitous symbol of counterculture worldwide, Guevara is one of the most recognizable and influential revolutionary figures of the twentieth century. However, during his life, and even more since his death, Che has elicited controversy and wildly divergent opinions as to who he was and what he represented. Mostly revered and occasionally reviled, he is passionately characterized along the entire continuum as everything from a heroic defender of the poor, to a cold-hearted executioner. Admired, sanctified, romanticized and derided, his crystallized status as either a brilliant intellectual or a violent ideologue is usually dependent on where one falls along the left and right of the political spectrum. The debate around his legacy is further complicated by the fact that Guevara exists simultaneously as several different entities, both literal man and global emblem, leading to disputes between what people contend he did and what he now represents.",
+            "Plasma (physics)\nPlasma (from Ancient Greek \u03c0\u03bb\u03ac\u03c3\u03bc\u03b1 , meaning \"moldable substance\" or \"jelly\") can simply be considered as a gaseous mixture of negatively charged electrons and highly charged positive ions, however, true plasma production is from the distinct separation of these ions and electrons that produces an electric field, which in turn, produces electric currents and magnetic fields. Plasma is one of the four fundamental states of matter and was first introduced by chemist Irving Langmuir in the 1920s. Unlike, the other three states of solid, liquid, and gas, plasma does not freely exist on the Earth. Plasma can be generated by heating neutral gases or by subjecting gas to a strong electromagnetic field.",
+            "Retraction\nA retraction is a public statement made about an earlier statement that withdraws, cancels, refutes, or reverses the original statement or ceases and desists from publishing the original statement. The retraction may be initiated by the editors of a journal, or by the author(s) of the papers (or their institution). Retractions may or may not be accompanied by the author's further explanation as to how the original statement came to be made and/or what subsequent events, discoveries, or experiences led to the subsequent retraction. They are also in some cases accompanied by apologies for previous error and/or expressions of gratitude to persons who disclosed the error to the author.",
+            "Schorle\nSchorle is a German beverage made by diluting juice or wine with carbonated water or lemonade (lemon-lime soda). The most common variety is Apfelschorle (made from apple juice and sparkling mineral water). Large bottles of Schorle can be found at most grocers, stores, supermarkets and anywhere else where carbonated drinks are sold, next to the soda. Due to its dilution it is less sweet or alcoholic than the original beverage, making it better suited as a refreshment on hot summer days or as an alternative to beer at the biergarten or .",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong. It links Des Voeux Road Central to Queen's Road Central. It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+            "Rossiya Theatre\nThe Rossiya Theatre (Russian: \u0422\u0435\u0430\u0442\u0440 \u00ab\u0420\u043e\u0441\u0441\u0438\u044f\u00bb ), formerly known as the Pushkinsky Cinema (Russian: \u041a\u0438\u043d\u043e\u0442\u0435\u0430\u0442\u0440 \u00ab\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0438\u0439\u00bb ) is monument of architecture and currently the largest theatre in Moscow operated by Stage Entertainment. It is located in Pushkinskaya Square.",
+            "SkyWest Airlines\nSkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in St. George, Utah, U.S.. According to the Airlines for America definitions, SkyWest is a North American major airline. SkyWest however, operates on a regional airline level and is a member of the Regional Airline Association. SkyWest Airlines flies to 238 cities, in 45 states; Washington, D.C., six Canadian provinces and five cities in Mexico. The airline serves as a feeder airline, operating under contract with various major carriers. It flies as SkyWest Airlines in a partnership with Alaska Airlines, as United Express on behalf of United Airlines, as American Eagle on behalf of American Airlines, and as Delta Connection on behalf of Delta Air Lines. SkyWest also provides ground handling services for airports across the United States."
+        ],
+        "thoughts": [
+            "Rossiya Airlines is based in Saint Petersburg, Russia, with its hub at Pulkovo Airport. It also has branches in Moscow Vnukovo International Airport, Rostov-on-Don Airport, and Orenburg Tsentralny Airport.",
+            "The largest airline operating in Romania based on international destinations, international flights, fleet size, and passengers carried is TAROM. The largest airport serving Saint Petersburg, Russia is Pulkovo Airport. The largest model layout in Russia and the second largest in the world is Grand Maket Rossiya. The largest low-cost long-haul airline based in Singapore is Scoot. The largest airline based in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota is Sun Country Airlines. The largest low-cost airline in Australia is Tigerair Australia.",
+            "The largest country on Earth by land area is Russia. The largest city on Earth by population is Tokyo, Japan. The largest grass species is Alopecurus aequalis, also known as shortawn foxtail. The largest statue visible from the road is the Parkway Man in Sheffield, England. The largest symbol of counterculture worldwide is the legacy of Argentine Marxist revolutionary Che Guevara. The largest state of matter is plasma, which is one of the four fundamental states of matter. The largest German beverage made by diluting juice or wine with carbonated water or lemonade is Schorle, with the most common variety being Apfelschorle made from apple juice and sparkling mineral water.",
+            "Based on the information provided, the largest entity associated with Rossiya Airlines is Pulkovo Airport, which is the largest airport serving Saint Petersburg, Russia. When comparing this with the global list of largest entities, we find that the largest country on Earth by land area is Russia, which matches the location of Rossiya Airlines. Therefore, the determined 'largest' entity from the location of Rossiya Airlines matches with the global list of 'largest' entities in this case."
+        ],
+        "is_best": false
+    }
+]

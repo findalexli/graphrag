@@ -1,0 +1,497 @@
+[
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the dance partner of Tom Chambers in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve biographical information about the identified dancer from step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the nationality of the dancer using the biographical information from step 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph starts with retrieving who Tom Chambers' dance partner was in the sixth season of Strictly Come Dancing. Using the name of the partner retrieved, the next step involves gathering biographical data to identify her nationality. Finally, the reasoning step extracts the nationality information from the biographical data."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author."
+        ],
+        "thoughts": [
+            "Tom Chambers' dance partner in the sixth season of Strictly Come Dancing was Camilla Dallerup.",
+            "Tom Chambers is an English actor known for his roles in BBC medical dramas and winning the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup. He is also known for his role as Max Tyler in the BBC drama series \"Waterloo Road\". Camilla Dallerup is a Danish ballroom dancer, life coach, and author, who partnered with Tom Chambers in \"Strictly Come Dancing\".",
+            "The nationality of the dancer, Camilla Dallerup, is Danish."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the professional dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the nationality of the dancer identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is broken down into two main steps. First, we need to find out which professional dancer partnered Tom Chambers in the show's sixth season, which directly addresses the need to link Tom Chambers to a specific dancer. Second, we determine the nationality of that particular dancer. This approach ensures that we only need two interconnected retrieval steps to answer the question, with each step building logically on the previous one."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Jay McGuiness\nJames \"Jay\" McGuiness (born 24 July 1990) is a British singer, songwriter and dancer, best known as a vocalist with boy band The Wanted. On 19 December 2015, partnered with Aliona Vilani, he won the 13th series of BBC's \"Strictly Come Dancing\".",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Rokdim Im Kokhavim\nRokdim Im Kokhavim (Hebrew: \u05e8\u05d5\u05e7\u05d3\u05d9\u05dd \u05e2\u05dd \u05db\u05d5\u05db\u05d1\u05d9\u05dd\u200e \u200e , \"Dancing with Stars\") is the Israeli version of the popular British TV show \"Strictly Come Dancing\". The show features local celebrities partnered with professional ballroom dancers, competing to be the most successful dancers in the contest. Each week the couple that gains the least votes from the show's judges and spectators is eliminated. Viewers vote for their favorites, in order to save them from elimination, via phone, SMS and online. Over 350,000 votes were cast on the show's 3rd-season finale.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "North Sentinel Island\nNorth Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal. It is home to the Sentinelese who, often violently, reject any contact with the outside world, and are among the last people worldwide to remain virtually untouched by modern civilization. As such, only limited information about the island is known.",
+            "GMO Answers\nGMO Answers launched by the agricultural biotechnology industry in July 2013 to answer consumers\u2019 questions about genetically modified organisms (GMOs) in crops in the U.S. food supply. GMO Answers was created in part to respond to public concern about the safety of GMOs. GMO Answers \u201cexpert resources\u201d include conventional and organic farmers, agribusiness experts, scientists, academics, medical doctors and nutritionists, and \u201ccompany experts\u201d from founding members of the Council for Biotechnology Information, which funds the initiative. Founding members include BASF, Bayer CropScience, Dow AgroSciences, DuPont, Monsanto Company and Syngenta.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association."
+        ],
+        "thoughts": [
+            "Tom Chambers was partnered with Camilla Dallerup in the sixth season of Strictly Come Dancing.",
+            "Tom Chambers is English."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the professional dancer who partnered with Tom Chambers in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the nationality of the dancer identified in node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to determine the nationality of Tom Chambers' dance partner from the sixth season of Strictly Come Dancing. The first step is to find out who his partner was in that season. Once we have the name of the dancer, the next step is to find their nationality. These steps must be executed in sequence as the second step relies on the output of the first."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Jay McGuiness\nJames \"Jay\" McGuiness (born 24 July 1990) is a British singer, songwriter and dancer, best known as a vocalist with boy band The Wanted. On 19 December 2015, partnered with Aliona Vilani, he won the 13th series of BBC's \"Strictly Come Dancing\".",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Khia\nKhia Shamone Finch ( ; born Khia Shamone Chambers, November 8, 1970), better known as just Khia, is an American rapper, songwriter, singer, and record producer. She is best known for her hit single \"My Neck, My Back (Lick It)\". To date Khia has collectively sold over 2 million records worldwide.",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association.",
+            "Adam Cooper (dancer)\nAdam Cooper (born 22 July 1971) is an English actor, choreographer, dancer and theatre director. He currently works as both a performer and choreographer in musical theatre, and has choreographed and/or starred in award-winning shows such as \"On Your Toes\", \"Singin' in the Rain\" and \"Grand Hotel\". He began his professional career as a dancer of classical ballet and contemporary ballet and is a former Principal of the Royal Ballet, a major international ballet company based in London. He became internationally recognized for creating the lead role of Swan/Stranger in Matthew Bourne's contemporary dance production of the ballet \"Swan Lake\", a role that was briefly featured in the 2000 film \"Billy Elliot\".",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information."
+        ],
+        "thoughts": [
+            "Tom Chambers partnered with Camilla Dallerup in the sixth season of Strictly Come Dancing.",
+            "The nationality of the dancer identified in node 1 is English."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine who partnered Tom Chambers in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the nationality of the dancer identified in Step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "To answer the question, we first need to determine the name of the dancer who partnered with Tom Chambers in the sixth season of 'Strictly Come Dancing.' This is a retrieval step as it involves fetching specific information from a source. Once we have the dancer's name, the next step is to find out the nationality of that dancer, which is also a retrieval task but depends on the result of the first step. Thus, it requires reasoning to connect the results."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Rokdim Im Kokhavim\nRokdim Im Kokhavim (Hebrew: \u05e8\u05d5\u05e7\u05d3\u05d9\u05dd \u05e2\u05dd \u05db\u05d5\u05db\u05d1\u05d9\u05dd\u200e \u200e , \"Dancing with Stars\") is the Israeli version of the popular British TV show \"Strictly Come Dancing\". The show features local celebrities partnered with professional ballroom dancers, competing to be the most successful dancers in the contest. Each week the couple that gains the least votes from the show's judges and spectators is eliminated. Viewers vote for their favorites, in order to save them from elimination, via phone, SMS and online. Over 350,000 votes were cast on the show's 3rd-season finale.",
+            "Kajraare\nKajraare is a Bollywood film that released on 15 October 2010. The film was directed by Pooja Bhatt and starred Himesh Reshammiya and the Pakistani actress Sara Loren. Reshammiya plays a singer who falls in love with a bar dancer and the film is centred on how they find true love. It is the first Hindi film to be shot in Petra, often called \"the eighth wonder of the world.\"",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Adam Cooper (dancer)\nAdam Cooper (born 22 July 1971) is an English actor, choreographer, dancer and theatre director. He currently works as both a performer and choreographer in musical theatre, and has choreographed and/or starred in award-winning shows such as \"On Your Toes\", \"Singin' in the Rain\" and \"Grand Hotel\". He began his professional career as a dancer of classical ballet and contemporary ballet and is a former Principal of the Royal Ballet, a major international ballet company based in London. He became internationally recognized for creating the lead role of Swan/Stranger in Matthew Bourne's contemporary dance production of the ballet \"Swan Lake\", a role that was briefly featured in the 2000 film \"Billy Elliot\".",
+            "A Good Man Is Hard to Find and Other Stories\nA Good Man Is Hard to Find and Other Stories (published in England as The Artificial Nigger and Other Tales) is a collection of short stories by American author Flannery O'Connor. The collection was first published in 1955. The subjects of the short stories range from baptism (\"The River\") to serial killers (\"A Good Man Is Hard to Find\") to human greed and exploitation (\"The Life You Save May Be Your Own\"). The majority of the stories include jarring violent scenes that make the characters undergo a spiritual change. The short stories commonly have tones of Catholicism related to life and death scenarios. For instance, in the story \"A Good Man Is Hard To Find\" the villain states, \"She would have been a good woman if it had been somebody there to shoot her every minute of her life.\"",
+            "Gwen Verdon\nGwyneth Evelyn \u201cGwen\u201d Verdon (January 13, 1925 \u2013 October 18, 2000) was an American actress and dancer. She won four Tony awards for her musical comedy performances and served as uncredited choreographers assistant and specialty dance coach for both theater and film. With flaming red hair and a quaver in her voice, Verdon was a critically acclaimed performer on Broadway in the 1950s, 1960s, and 1970's. Having originated many roles in musicals she is also strongly identified with her second husband, director\u2013choreographer Bob Fosse, remembered as the dancer\u2013collaborator\u2013muse for whom he choreographed much of his work and as the guardian of his legacy after his death.",
+            "Jay McGuiness\nJames \"Jay\" McGuiness (born 24 July 1990) is a British singer, songwriter and dancer, best known as a vocalist with boy band The Wanted. On 19 December 2015, partnered with Aliona Vilani, he won the 13th series of BBC's \"Strictly Come Dancing\"."
+        ],
+        "thoughts": [
+            "Tom Chambers was partnered with Camilla Dallerup in the sixth season of Strictly Come Dancing.",
+            "Camilla Dallerup is Danish."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the sixth season of Strictly Come Dancing, particularly the contestants and their partners.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify who Tom Chambers partnered with in the sixth season of Strictly Come Dancing.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the dancer's nationality identified as Tom Chambers' partner in the sixth season.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with retrieving general information about the sixth season of Strictly Come Dancing, focusing on the contestants and their partners. The next step is to specifically identify Tom Chambers' partner from that season. Once the partner is identified, we retrieve information about their nationality, which ultimately answers the main question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Jay McGuiness\nJames \"Jay\" McGuiness (born 24 July 1990) is a British singer, songwriter and dancer, best known as a vocalist with boy band The Wanted. On 19 December 2015, partnered with Aliona Vilani, he won the 13th series of BBC's \"Strictly Come Dancing\".",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "Rokdim Im Kokhavim\nRokdim Im Kokhavim (Hebrew: \u05e8\u05d5\u05e7\u05d3\u05d9\u05dd \u05e2\u05dd \u05db\u05d5\u05db\u05d1\u05d9\u05dd\u200e \u200e , \"Dancing with Stars\") is the Israeli version of the popular British TV show \"Strictly Come Dancing\". The show features local celebrities partnered with professional ballroom dancers, competing to be the most successful dancers in the contest. Each week the couple that gains the least votes from the show's judges and spectators is eliminated. Viewers vote for their favorites, in order to save them from elimination, via phone, SMS and online. Over 350,000 votes were cast on the show's 3rd-season finale.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars."
+        ],
+        "thoughts": [
+            "The sixth season of Strictly Come Dancing featured actor Tom Chambers, who won the competition with his partner Camilla Dallerup. The show also included other contestants and their professional dance partners, but specific details about the other contestants and their partners are not provided in the given information.",
+            "Tom Chambers partnered with Camilla Dallerup in the sixth season of Strictly Come Dancing.",
+            "Camilla Dallerup, Tom Chambers' partner in the sixth season of \"Strictly Come Dancing\", is Danish."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the winner of the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Tom Chambers' dance partner in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the nationality of Tom Chambers' dance partner in the sixth season.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by identifying the dance partner of Tom Chambers in the sixth season of Strictly Come Dancing (node 2). In parallel, node 1 retrieves general information about the season's outcome to ensure the dance partner is correctly identified. Node 3 then uses the information from node 2 to determine the nationality of the partner, which answers the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "Rokdim Im Kokhavim\nRokdim Im Kokhavim (Hebrew: \u05e8\u05d5\u05e7\u05d3\u05d9\u05dd \u05e2\u05dd \u05db\u05d5\u05db\u05d1\u05d9\u05dd\u200e \u200e , \"Dancing with Stars\") is the Israeli version of the popular British TV show \"Strictly Come Dancing\". The show features local celebrities partnered with professional ballroom dancers, competing to be the most successful dancers in the contest. Each week the couple that gains the least votes from the show's judges and spectators is eliminated. Viewers vote for their favorites, in order to save them from elimination, via phone, SMS and online. Over 350,000 votes were cast on the show's 3rd-season finale."
+        ],
+        "thoughts": [
+            "Tom Chambers' dance partner in the sixth season of Strictly Come Dancing was Camilla Dallerup.",
+            "Camilla Dallerup, Tom Chambers' dance partner in the sixth season of \"Strictly Come Dancing\", is Danish."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine who partnered Tom Chambers in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the nationality of the dancer determined in node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph consists of two sequential steps. First, we retrieve the name of the dancer who partnered with Tom Chambers during the sixth season of Strictly Come Dancing. Then, using the dancer's name, we conduct another retrieval step to establish their nationality. The task is linear because knowledge of the dancer's identity is a prerequisite for determining their nationality."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Jay McGuiness\nJames \"Jay\" McGuiness (born 24 July 1990) is a British singer, songwriter and dancer, best known as a vocalist with boy band The Wanted. On 19 December 2015, partnered with Aliona Vilani, he won the 13th series of BBC's \"Strictly Come Dancing\".",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Rokdim Im Kokhavim\nRokdim Im Kokhavim (Hebrew: \u05e8\u05d5\u05e7\u05d3\u05d9\u05dd \u05e2\u05dd \u05db\u05d5\u05db\u05d1\u05d9\u05dd\u200e \u200e , \"Dancing with Stars\") is the Israeli version of the popular British TV show \"Strictly Come Dancing\". The show features local celebrities partnered with professional ballroom dancers, competing to be the most successful dancers in the contest. Each week the couple that gains the least votes from the show's judges and spectators is eliminated. Viewers vote for their favorites, in order to save them from elimination, via phone, SMS and online. Over 350,000 votes were cast on the show's 3rd-season finale.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities."
+        ],
+        "thoughts": [
+            "Tom Chambers was partnered with Camilla Dallerup in the sixth season of Strictly Come Dancing.",
+            "Tom Chambers, the winner of the sixth season of \"Strictly Come Dancing\", is English."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the celebrity who partnered with Tom Chambers in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the nationality of the identified dancer from node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "This graph breaks the task into two steps. First, it retrieves and reasons about the key information about who partnered with Tom Chambers in Strictly Come Dancing's sixth season. Second, with this dancer's name, it finds the dancer's nationality. By using these steps, we ensure both retrieval and reasoning are handled efficiently."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Jay McGuiness\nJames \"Jay\" McGuiness (born 24 July 1990) is a British singer, songwriter and dancer, best known as a vocalist with boy band The Wanted. On 19 December 2015, partnered with Aliona Vilani, he won the 13th series of BBC's \"Strictly Come Dancing\".",
+            "Rokdim Im Kokhavim\nRokdim Im Kokhavim (Hebrew: \u05e8\u05d5\u05e7\u05d3\u05d9\u05dd \u05e2\u05dd \u05db\u05d5\u05db\u05d1\u05d9\u05dd\u200e \u200e , \"Dancing with Stars\") is the Israeli version of the popular British TV show \"Strictly Come Dancing\". The show features local celebrities partnered with professional ballroom dancers, competing to be the most successful dancers in the contest. Each week the couple that gains the least votes from the show's judges and spectators is eliminated. Viewers vote for their favorites, in order to save them from elimination, via phone, SMS and online. Over 350,000 votes were cast on the show's 3rd-season finale.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Lemkos\nLemkos (Ukrainian: \"\u041be\u043c\u043a\u0438\" , Polish: \"\u0141emkowie\" , Lemko: \"\u041be\u043c\u043a\u044b\", translit. \"Lemk\u0177\"; sing. \"\u041be\u043c\u043ao\", \"Lemko\") are an ethnic sub-group inhabiting a stretch of the Carpathian Mountains known as Lemkivshchyna. Many Lemkos are classified as a branch of Ukrainians by the Ukrainian government. Ukraine has signed but not honored the CSCE/OSCE Copenhagen Document of 1990, Article IV particularly, granting self-identified Lemkos minority rights status in Ukraine. Slovakia identifies them as a sub-group of Rusyns (Ruthenians), an East Slavic minority distinct from Ukrainians. Rusyns themselves have been abandoning Ukrainian nationality, enforced during Communism, in favor of a Rusyn identity, which can be observed in the minority statistics of Slovakia.",
+            "Gwen Verdon\nGwyneth Evelyn \u201cGwen\u201d Verdon (January 13, 1925 \u2013 October 18, 2000) was an American actress and dancer. She won four Tony awards for her musical comedy performances and served as uncredited choreographers assistant and specialty dance coach for both theater and film. With flaming red hair and a quaver in her voice, Verdon was a critically acclaimed performer on Broadway in the 1950s, 1960s, and 1970's. Having originated many roles in musicals she is also strongly identified with her second husband, director\u2013choreographer Bob Fosse, remembered as the dancer\u2013collaborator\u2013muse for whom he choreographed much of his work and as the guardian of his legacy after his death.",
+            "Kajraare\nKajraare is a Bollywood film that released on 15 October 2010. The film was directed by Pooja Bhatt and starred Himesh Reshammiya and the Pakistani actress Sara Loren. Reshammiya plays a singer who falls in love with a bar dancer and the film is centred on how they find true love. It is the first Hindi film to be shot in Petra, often called \"the eighth wonder of the world.\"",
+            "Tom (Lost)\nTom Friendly, often referred to as Tom or Mr. Friendly, is a fictional character portrayed by M. C. Gainey on the American Broadcasting Company (ABC) television series \"Lost\". The series follows the lives of around forty survivors from the crash of Oceanic Flight 815. The survivors find themselves on a mysterious tropical island, and interact with a group known as the Others, who appear to have lived on the island since long before the crash. Tom is an influential member of the Others, and is introduced in 2005 in the season one finale \"Exodus: Part 2\", where he kidnaps one of the survivors. The character makes another fifteen appearances before being killed in the season three finale \"Through the Looking Glass\". Tom appears twice in season four in the flashbacks of other characters. Gainey was initially credited as playing \"bearded man\" and then as \"Mr. Friendly\" throughout season two before the character was given a first name. In a montage of deceased characters shown at Comic-Con in 2009, the \"Lost\" producers present the character's full name as \"Tom Friendly\".",
+            "California State Legislature\nThe California State Legislature is the state legislature of the U.S. state of California. It is a bicameral body consisting of the lower house, the California State Assembly, with 80 members, and the upper house, the California State Senate, with 40 members. New legislators convene each new two-year session, to organize, in the Assembly and Senate Chambers, respectively, at noon on the first Monday in December following the election. After the organizational meeting, both houses are in recess until the first Monday in January, except when the first Monday is January 1 or January 1 is a Sunday, in which case they meet the following Wednesday. Aside from the recess, the legislature is in session year-round.",
+            "Candy Chen\nCandy Chen (\u9673\u65af\u4e9e born January 3, 1993) is a dancer, actress, host, singer, rapper and a model. She is featured on the Taiwanese variety shows: Blackie's Teenage Club and Blackie Lollipop. Candy was a member of the Taiwanese girl group Hey Girl from 2010 to 2011, and a member of from 2013 to 2016. She is 1/8th Dutch. She changed her name to Chen Yi-Ling in July 2012 to follow her mother's maiden name. Her English name becomes Nina Chen. In November 2013, she changed her name to Candy Chen (English Name) and Chen Si Ya (Chinese Name).",
+            "Frew McMillan\nFrew Donald McMillan (born 20 May 1942) is a former professional male tennis player from South Africa who won five major doubles championships including three Wimbledons with Bob Hewitt. Altogether, he won 63 doubles titles, surpassed only by the Bryan brothers, Todd Woodbridge, John McEnroe and Tom Okker. He was also ranked No.1 in Doubles on the ATP Computer for a significant period from 1977 to 1979 when he was aged 37."
+        ],
+        "thoughts": [
+            "Tom Chambers partnered with Camilla Dallerup in the sixth season of Strictly Come Dancing.",
+            "Tom Chambers, the actor and winner of the sixth season of \"Strictly Come Dancing,\" is of English nationality."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who was Tom Chambers' dance partner in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the nationality of the dancer identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph consists of two primary steps. The first step (Node 1) involves identifying the dance partner of Tom Chambers in the sixth season of 'Strictly Come Dancing', which is a straightforward retrieval task. Once we have the name of the dancer, the second step (Node 2) is to determine the nationality of this dancer. This step depends on the successful completion of the first, forming a sequential dependency between the nodes."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "Tom Chambers' dance partner in the sixth season of Strictly Come Dancing was Camilla Dallerup.",
+            "Tom Chambers, the dancer identified in Node 1, is of English nationality."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the nationality of the dancer who partnered Tom Chambers in the sixth season of Strictly Come Dancing ?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Tom Chambers' participation in the sixth season of Strictly Come Dancing, focusing on his dance partner's identity.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the nationality of the dancer identified as Tom Chambers' partner in the sixth season of Strictly Come Dancing.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph consists of two main steps. The first step is to retrieve information about Tom Chambers' participation in the sixth season of Strictly Come Dancing, which includes identifying his dance partner. The second step is to gather information on the nationality of the identified dancer. Both steps involve retrieval and reasoning to ensure the relevant information is accurately obtained and processed."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Tom Chambers (actor)\nThomas Stuart \"Tom\" Chambers (born 22 May 1977) is an English actor, known for his role as Sam Strachan in the BBC medical dramas \"Holby City\" and \"Casualty\" and as Max Tyler in BBC drama series \"Waterloo Road\". He also won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Let's Dance 2011\nLet's Dance 2011 is the sixth season of the Swedish version of Strictly Come Dancing, and was broadcast on the Swedish television channel TV4 starting on January 7, 2011.",
+            "Camilla Dallerup\nCamilla Sacre-Dallerup (born 6 April 1974) is a Danish ballroom dancer, life coach and author.",
+            "The Strictly\nThe Strictly is a signature dance routine from the BBC show \"Strictly Come Dancing\", which launched in the 13th series of the popular entertainment show. The dance was devised by \"Strictly Come Dancing\"'s Director of Choreography, Jason Gilkison and draws inspiration from some of the show's most iconic moves, as well as celebrating some of the show's stars.",
+            "Strictly Come Dancing: It Takes Two\nStrictly Come Dancing: It Takes Two, also known as Strictly: It Takes Two or simply It Takes Two, is a British television programme, the companion show to the popular BBC One programme \"Strictly Come Dancing\". It is broadcast on weeknights during the run of the main show on BBC Two at 6:30\u00a0pm. Claudia Winkleman originally presented the show, however she left in 2011 and now presents the main show. Since 2011, Zo\u00eb Ball has presented the show.",
+            "Strictly Come Dancing\nStrictly Come Dancing (informally known as Strictly) is a British television dance contest, featuring contestants, celebrities, and other people, from all walks of life, with professional dance partners competing in a ballroom and Latin dance competition. Each couple is scored out of 10 by a panel of judges. The title of the show suggests a continuation of the long-running series \"Come Dancing\", with an allusion to the film \"Strictly Ballroom\". The format has been exported to over 40 other countries, and has also inspired a modern dance-themed spin-off \"Strictly Dance Fever\". The show is currently presented by Tess Daly and Claudia Winkleman.",
+            "Come Dancing\nCome Dancing was a British ballroom dancing competition show that ran on and off on the BBC from 1950 to 1998, becoming one of television's longest-running shows. Unlike its follow up show \"Strictly Come Dancing\" contestants were not celebrities.",
+            "Andrew Cuerden\nAndrew Cuerden is a Latin dancer. Born in Zimbabwe, and growing up in South Africa, Cuerden moved to England to further his dance career in 1996. Dancing with partner Hanna Haarala they reached 4th place in the UK amateur Latin rankings, before turning pro on February 5. He, along with Haarala was chosen to tutor a celebrity in the third series of \"Strictly Come Dancing\" - partnered with Jaye Jacobs he was eliminated in week 2, but performed in many professional demonstrations.",
+            "The Apprentice (U.S. season 13)\nThe Celebrity Apprentice 6 (also known as All-Star Celebrity Apprentice or The Apprentice 13) is the sixth installment of the reality game show, \"Celebrity Apprentice\", which premiered on Sunday, March 3, 2013. This season's cast is an \"All-Star\" celebrity cast, bringing back many fan favorites to compete head-to-head. There are eight men and six women in the cast. Brande Roderick, Claudia Jordan, Dennis Rodman, La Toya Jackson, Lil Jon, Omarosa Manigault and the only previous winner, Bret Michaels formed team Power and team Plan B was formed by Dee Snider, Gary Busey, Lisa Rinna, Marilu Henner, Penn Jillette, Stephen Baldwin and Trace Adkins. This marked Omarosa's third appearance on \"The Apprentice\", more than any other contestant. Also appearing as guest judges are past winners Joan Rivers, Piers Morgan, Arsenio Hall and John Rich, along with past judge George Ross, as well as Ivanka Trump, Eric Trump, and Donald Trump Jr. This season also introduced the Social Boardroom MVP reward. Viewers went on Twitter to select the celebrity they think did best in the task. The celebrity who received the most votes won additional money for their charity. This season premiered on March 3, 2013.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Tom (Lost)\nTom Friendly, often referred to as Tom or Mr. Friendly, is a fictional character portrayed by M. C. Gainey on the American Broadcasting Company (ABC) television series \"Lost\". The series follows the lives of around forty survivors from the crash of Oceanic Flight 815. The survivors find themselves on a mysterious tropical island, and interact with a group known as the Others, who appear to have lived on the island since long before the crash. Tom is an influential member of the Others, and is introduced in 2005 in the season one finale \"Exodus: Part 2\", where he kidnaps one of the survivors. The character makes another fifteen appearances before being killed in the season three finale \"Through the Looking Glass\". Tom appears twice in season four in the flashbacks of other characters. Gainey was initially credited as playing \"bearded man\" and then as \"Mr. Friendly\" throughout season two before the character was given a first name. In a montage of deceased characters shown at Comic-Con in 2009, the \"Lost\" producers present the character's full name as \"Tom Friendly\".",
+            "1970 NFL season\nThe 1970 NFL season was the 51st regular season of the National Football League, and the first one after the AFL\u2013NFL merger. The season concluded with Super Bowl V when the Baltimore Colts beat the Dallas Cowboys 16-13 at the Miami Orange Bowl. The Pro Bowl took place on January 24, 1971, where the NFC beat the AFC 27-6 at the Los Angeles Memorial Coliseum.",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "Ladder match\nA ladder match is a type of match in professional wrestling, most commonly one where an item (usually a title belt) is hung above the ring, and the winner is the contestant who climbs a ladder and retrieves the item. The ladder itself becomes a key feature of the match, as wrestlers will use the ladder as a weapon to strike the opponent(s), as a launching pad for acrobatic attacks, and frequently these matches include impressive falls from the top of the ladder. However, there were very few matches in which the hung item must be used in a special manner in order to win the match, such as striking the opponent with the item (see Bam Bam Bigelow Vs. Scott Hall taser match, where one must strike the opponent with the taser, regardless of who retrieved the taser first).",
+            "Season 25: Oprah Behind The Scenes\nSeason 25: Oprah Behind The Scenes is an American documentary television series. The series began airing on OWN on January 1, 2011 and concluded on August 7, 2011. Each episode follows production for one or two episodes of the final season of \"The Oprah Winfrey Show\", featuring interview segments with Oprah Winfrey and the production staff. Three special edition episodes produced in house at Harpo were filmed on the Oprah set, featuring Oprah and her producers discussing highlights of the season's episodes with select viewers via Skype."
+        ],
+        "thoughts": [
+            "Tom Chambers, known for his role in BBC medical dramas, won the sixth season of \"Strictly Come Dancing\" with his partner Camilla Dallerup.",
+            "Camilla Dallerup, Tom Chambers' partner in the sixth season of Strictly Come Dancing, is Danish."
+        ],
+        "is_best": false
+    }
+]

@@ -1,0 +1,759 @@
+[
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of actresses who have been in films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about Independent Spirit Award nominations for each actress identified in Node 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which Independent Spirit Award each actress was nominated for, if any, by analyzing the data from Node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question requires finding an actress who was in a Neil LaBute film, and checking if she was nominated for an Independent Spirit Award. \n\n1. First, we retrieve films directed by Neil LaBute.\n2. Next, we find actresses who have acted in those films.\n3. Then, we check the award nominations, specifically the Independent Spirit Awards, for these actresses.\n4. Finally, we identify which Independent Spirit Award the actress was nominated for, if any."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "The New Year Parade\nThe New Year Parade is a 2008 drama film filmed and directed by Tom Quinn with lighting and audio work by Mark Doyle. The film won the Grand Jury Prize for Best Narrative at the 2008 Slamdance Film Festival and the award for Best Acting Ensemble at the 2008 Ashland Independent Film Festival. At the 2008 BendFilm Festival, Quinn won the award for Best Director, while Jennifer Welsh won the award for Best Supporting Actress. The film was nominated for an IFP Gotham Award in 2008 for \"Best Film Not At A Theater Near You\" while Quinn and co-Producer Steve Beal were nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for their work on the film.",
+            "Irma Gramatica\nIrma Gramatica (1870\u20131962) was an Italian stage and film actress. Gramatica appeared in ten films during her career including \"The Materassi Sisters\" (1944). Her sisters Anna Capodaglio and Emma Gramatica were both actresses.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "List of Disney animated shorts\nThis is a list of animated short films produced by Walt Disney and Walt Disney Animation Studios from 1921 to the present. This includes films produced at the Laugh-O-Gram Studio which Disney founded in 1921 as well as the animation studio now owned by The Walt Disney Company, previously called the Disney Brothers Cartoon Studio (1923), The Walt Disney Studio (1926), Walt Disney Productions (1929), and Walt Disney Feature Animation (1986).",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "List of DC Extended Universe cast members\nThe DC Extended Universe is a media franchise and shared fictional universe that is the setting of superhero films independently produced by Warner Bros., based on characters that appear in DC Comics publications."
+        ],
+        "thoughts": [
+            "Films directed by Neil LaBute include \"In the Company of Men\" (1997), \"Possession\" (2002), \"The Shape of Things\" (2003), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He also directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). Additionally, he created the TV series \"Billy & Billie\" and directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Actresses who have been in films directed by Neil LaBute include Stacy Edwards, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison, Emily Watson, Rachel Weisz, and Gretchen Mol.",
+            "- Stacy Edwards received an Independent Spirit Award for Best Female Lead nomination for her role in the 1997 black comedy film \"In the Company of Men\".\n- Jennifer Welsh was nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for her work on the film \"The New Year Parade\".",
+            "Stacy Edwards was nominated for an Independent Spirit Award for Best Female Lead for her role in \"In the Company of Men\" in 1997. Jennifer Welsh was nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for her work on the film \"The New Year Parade\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify movies directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify actresses in each movie directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find which of these actresses were nominated for an Independent Spirit Award.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine for which Independent Spirit Award these actresses were nominated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying all films directed by Neil LaBute. From there, it retrieves a list of actresses who appeared in any of these films. Next, it checks which of these actresses were nominated for an Independent Spirit Award. Finally, it identifies the specific category of the award for which each actress was nominated, thus answering the original question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "List of SpongeBob SquarePants guest stars\nIn addition to the show's regular cast of voice actors, guest stars have been featured on \"SpongeBob SquarePants\", an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon. \"SpongeBob SquarePants\" chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom. Many of the ideas for the show originated in an unpublished, educational comic book titled \"The Intertidal Zone\", which Hillenburg created in the mid-1980s. He began developing \"SpongeBob SquarePants\" into a television series in 1996 upon the cancellation of \"Rocko's Modern Life\", which Hillenburg directed. The pilot episode first aired on Nickelodeon in the United States on May 1, 1999. The show's ninth season premiered in 2012, and episodes of \"SpongeBob SquarePants\" have aired. A feature-length film adaptation of the show, \"The SpongeBob SquarePants Movie\", was released in 2004; in 2015, a sequel, \"\", was released.",
+            "SpongeBob SquarePants: Plankton's Robotic Revenge\nSpongeBob SquarePants: Plankton's Robotic Revenge is an action-adventure video game based on the television series \"SpongeBob SquarePants\". It was released in October 2013 for Wii U, Wii, Nintendo 3DS, Nintendo DS, PlayStation 3, and Xbox 360. The game was developed by Behaviour Interactive and published by Activision, who took over the license from previous \"SpongeBob SquarePants\" video game publisher THQ after the company's bankruptcy and liquidation.",
+            "The SpongeBob Movie: Sponge Out of Water\nThe SpongeBob Movie: Sponge Out of Water is a 2015 American 3D live-action/animated comedy film based on the animated television series \"SpongeBob SquarePants\". A stand-alone sequel to \"The SpongeBob SquarePants Movie\" (2004), it was directed by former series showrunner Paul Tibbitt in his directorial debut, with live-action sequences directed by Mike Mitchell. It was the first film to be produced by Paramount Animation and second film in the \"SpongeBob SquarePants\" film series. The film stars Antonio Banderas and features the show's regular voice cast, who returned to reprise their respective roles from the series and the previous film. The plot follows a pirate called Burger-Beard, who steals the Krabby Patty secret formula using a magical book that makes any text written upon it come true. SpongeBob and his friends must travel to the surface to confront Burger-Beard and get the formula back.",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "The New Year Parade\nThe New Year Parade is a 2008 drama film filmed and directed by Tom Quinn with lighting and audio work by Mark Doyle. The film won the Grand Jury Prize for Best Narrative at the 2008 Slamdance Film Festival and the award for Best Acting Ensemble at the 2008 Ashland Independent Film Festival. At the 2008 BendFilm Festival, Quinn won the award for Best Director, while Jennifer Welsh won the award for Best Supporting Actress. The film was nominated for an IFP Gotham Award in 2008 for \"Best Film Not At A Theater Near You\" while Quinn and co-Producer Steve Beal were nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for their work on the film.",
+            "Ten Dead Men\nTen Dead Men is a 2008 thriller film and the follow-up to the cult independent film \"Left for Dead\". Produced by the same company, (Modern Life?) \"Ten Dead Men\" features many of the same actors as its predecessor. \"Ten Dead Men\" was directed by Ross Boyask and produced by Phil Hobden. The film released in UK, France, Indonesia and Japan.",
+            "Paramount Pictures\nParamount Pictures Corporation (also known simply as Paramount) is an American film studio based in Hollywood, California, that has been a subsidiary of the American media conglomerate Viacom since 1994. Paramount is the fifth oldest surviving film studio in the world, the second oldest in the United States, and the sole member of the \"Big Six\" film studios still located in the Los Angeles neighborhood of Hollywood. In 1916, film producer Adolph Zukor contracted 22 actors and actresses and honored each with a star on the logo. These fortunate few would become the first \"movie stars.\" In 2014, Paramount Pictures became the first major Hollywood studio to distribute all of its films in digital form only.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "The Miracle Rider\nThe Miracle Rider is a 1935 Mascot movie serial directed by B. Reeves Eason and Armand Schaefer. The serial stars silent movie cowboy star Tom Mix in his last major film role.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "List of accolades received by True Grit\n\"True Grit\" is a 2010 American Western film directed by the Coen brothers. It is the second adaptation of Charles Portis' 1968 novel of the same name, which was previously released in 1969 featuring John Wayne. The 2010 version stars Jeff Bridges, Hailee Steinfeld and Matt Damon. It was released by Paramount Pictures in the United States and Canada on December\u00a022, 2010, grossing over USD $25.6 million at the box office, twice its pre-release projections, in its opening weekend. Since then it has made over USD $171 million domestically and USD $249 million worldwide. The film was well received by movie critics, with an approval rating of 96 percent on the review aggregator Rotten Tomatoes. It has appeared in more than a dozen movie reviewers' Top Ten lists for the best movies of the year.",
+            "Neil Kerley\nDonald Neil Kerley (born 20 February 1934 in Barmera, South Australia) is a former Australian rules football player and coach. Known to his mates as either Neil or Knuckles and to South Australian football fans as King Kerley or simply \"Kerls\", he is best known for taking three clubs to four South Australian National Football League (SANFL) premierships over three decades as both a player and coach and for playing 32 state games for South Australia. Despite his first name being Donald, it was his mother Lillian's strong dislike of shortening Christian names that led everyone calling him Neil and not Don or Donald from an early age.",
+            "5:55\n5:55 is the second album by French musician and actress Charlotte Gainsbourg. It is also her first album release in twenty years. Charlotte collaborated on the album with French duo Air, English musician Jarvis Cocker, and Irish singer-songwriter Neil Hannon, as well as Radiohead's main producer Nigel Godrich. \"The Songs That We Sing\" and \"5:55\" were released as singles. The album went platinum in France, selling over 500,000 copies. In the United States, the album sold a modest 22,000 copies. \"The Songs That We Sing\" was #78 on \"Rolling Stone\"' s list of the 100 Best Songs of 2007."
+        ],
+        "thoughts": [
+            "Movies directed by Neil LaBute include \"In the Company of Men\" (1997), \"Some Girl(s)\" (2013), \"Possession\" (2002), \"The Shape of Things\" (2003), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015).",
+            "In the Company of Men (1997) - Stacy Edwards\nSome Girl(s) (2013) - Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison, Emily Watson\nThe Shape of Things (2003) - Rachel Weisz, Gretchen Mol\nThe SpongeBob SquarePants Movie (2004) - Scarlett Johansson, Jeffrey Tambor, Alec Baldwin, David Hasselhoff",
+            "Stacy Edwards was nominated for an Independent Spirit Award for Best Female Lead for her role in the film \"In the Company of Men\".",
+            "Stacy Edwards was nominated for the Independent Spirit Award for Best Female Lead for her role in \"In the Company of Men\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify actresses who starred in films directed by Neil LaBute identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify any Independent Spirit Award nominations for each actress identified in step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of the Independent Spirit Award nominations from step 3 are for films directed by Neil LaBute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task into four main steps. Firstly, it gathers a list of films directed by Neil LaBute. Next, it identifies actresses who have starred in those films. Following that, it retrieves any Independent Spirit Award nominations for each of these actresses regardless of the film. Finally, it filters these nominations to determine which ones are specifically for films directed by Neil LaBute. This approach ensures a thorough retrieval and reasoning process that focuses on finding the correct correlation between the actress, the film directed by Neil LaBute, and the Independent Spirit Award nomination."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "Anatomy 2\nAnatomy 2 (German: \"Anatomie 2\" ) is a 2003 German thriller film written and directed by Stefan Ruzowitzky. It's the sequel to the 2000 film \"Anatomy\", that starred Franka Potente. The story moves to Berlin for this film.",
+            "Sarah Paulson\nSarah Catharine Paulson (born December 17, 1974) is an American actress. After beginning her acting career on stage, she starred in the 1990s television series \"American Gothic\" (1995\u201396) and \"Jack & Jill\" (1999\u20132001). Paulson later appeared in comedy films such as \"What Women Want\" (2000) and \"Down with Love\" (2003), and had dramatic roles in films such as \"Path to War\" (2002) and \"The Notorious Bettie Page\" (2005). From 2006 to 2007, Paulson played the role of Harriet Hayes in the NBC comedy-drama series \"Studio 60 on the Sunset Strip\", for which she received her first Golden Globe Award nomination. In 2008, she starred as Ellen Dolan in the superhero noir film \"The Spirit\".",
+            "Plaga Zombie: Zona Mutante\nPlaga Zombie:Zona Mutante is a 2001 Argentine horror film directed and written by Pablo Par\u00e9s and Hern\u00e1n S\u00e1ez with Berta Mu\u00f1iz and Gabriel Grieco who all starred in the film. It is the second entry in the \"Plaga Zombie film series\" as the sequel to the 1997 film \"Plaga Zombie\" and followed by the 2012 film \"\".",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "List of Disney animated shorts\nThis is a list of animated short films produced by Walt Disney and Walt Disney Animation Studios from 1921 to the present. This includes films produced at the Laugh-O-Gram Studio which Disney founded in 1921 as well as the animation studio now owned by The Walt Disney Company, previously called the Disney Brothers Cartoon Studio (1923), The Walt Disney Studio (1926), Walt Disney Productions (1929), and Walt Disney Feature Animation (1986).",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "List of DC Extended Universe cast members\nThe DC Extended Universe is a media franchise and shared fictional universe that is the setting of superhero films independently produced by Warner Bros., based on characters that appear in DC Comics publications."
+        ],
+        "thoughts": [
+            "Films directed by Neil LaBute include \"In the Company of Men\" (1997), \"Possession\" (2002), \"The Shape of Things\" (2003), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He also directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). Additionally, he created the TV series \"Billy & Billie\" and directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Actresses who starred in films directed by Neil LaBute include Rachel Weisz, Gretchen Mol, Stacy Edwards, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison, Emily Watson, and Sarah Paulson.",
+            "Stacy Edwards received an Independent Spirit Award for Best Female Lead nomination for her role in the film \"In the Company of Men\". There are no Independent Spirit Award nominations for Sarah Paulson or Wash Westmoreland in relation to the film \"Some Girl(s)\" or any other relevant films.",
+            "The Independent Spirit Award nominations for films directed by Neil LaBute include \"In the Company of Men\" (Stacy Edwards for Best Female Lead) and \"Some Velvet Morning\" (no nominations found). Therefore, the nomination for \"In the Company of Men\" is the only one related to a film directed by Neil LaBute."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List the actresses who appeared in the films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the Independent Spirit Award nominations received by each actress identified in Neil LaBute's films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the nominations found in step 3 were specifically for acting roles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by identifying films directed by Neil LaBute, then lists the actresses in those films. It retrieves any Independent Spirit Award nominations for those actresses, and finally determines if those nominations were for acting roles, directly answering the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "The New Year Parade\nThe New Year Parade is a 2008 drama film filmed and directed by Tom Quinn with lighting and audio work by Mark Doyle. The film won the Grand Jury Prize for Best Narrative at the 2008 Slamdance Film Festival and the award for Best Acting Ensemble at the 2008 Ashland Independent Film Festival. At the 2008 BendFilm Festival, Quinn won the award for Best Director, while Jennifer Welsh won the award for Best Supporting Actress. The film was nominated for an IFP Gotham Award in 2008 for \"Best Film Not At A Theater Near You\" while Quinn and co-Producer Steve Beal were nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for their work on the film.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "Irma Gramatica\nIrma Gramatica (1870\u20131962) was an Italian stage and film actress. Gramatica appeared in ten films during her career including \"The Materassi Sisters\" (1944). Her sisters Anna Capodaglio and Emma Gramatica were both actresses.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Arrival (film)\nArrival is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer, based on the 1998 short story \"Story of Your Life\" by Ted Chiang. It stars Amy Adams, Jeremy Renner, and Forest Whitaker, and follows linguist Louise Banks, who is enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that have appeared across the world. She must find out why they have arrived on Earth before tensions lead into war. The film had its world premiere at the Venice Film Festival on September 1, 2016, and was released in the United States on November 11, 2016, in IMAX by Paramount Pictures.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+            "Neil Kerley\nDonald Neil Kerley (born 20 February 1934 in Barmera, South Australia) is a former Australian rules football player and coach. Known to his mates as either Neil or Knuckles and to South Australian football fans as King Kerley or simply \"Kerls\", he is best known for taking three clubs to four South Australian National Football League (SANFL) premierships over three decades as both a player and coach and for playing 32 state games for South Australia. Despite his first name being Donald, it was his mother Lillian's strong dislike of shortening Christian names that led everyone calling him Neil and not Don or Donald from an early age.",
+            "Luc Besson\nLuc Besson (] ; born 18 March 1959) is a French film director, screenwriter, and producer. He directed or produced the films \"Subway\" (1985), \"The Big Blue\" (1988), and \"Nikita\" (1990). Besson is known for his distinctive filmmaking style and is associated with the movement critics call \"Cin\u00e9ma du look\". He has been nominated for a C\u00e9sar Award for Best Director and Best Picture for his films \"\" and \"\". He won Best Director and Best French Director for his sci-fi action film \"The Fifth Element\" (1997). He wrote and directed the 2014 sci-fi thriller film \"Lucy\"."
+        ],
+        "thoughts": [
+            "The films directed by Neil LaBute include:\n1. In the Company of Men (1997)\n2. Possession (2002)\n3. The Shape of Things (2003)\n4. The Wicker Man (2006)\n5. Some Velvet Morning (2013)\n6. Dirty Weekend (2015)\n7. Nurse Betty (2000)\n8. Lakeview Terrace (2008)\n9. Death at a Funeral (2010)\n10. Some Girl(s) (2013)",
+            "Stacy Edwards, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison, and Emily Watson are the actresses who appeared in films directed by Neil LaBute.",
+            "Stacy Edwards received an Independent Spirit Award for Best Female Lead nomination for her role in the 1997 film \"In the Company of Men\", directed by Neil LaBute. This nomination was for her breakthrough role in the black comedy film. Additionally, Wash Westmoreland won the Independent Spirit Award for Best First Feature for his work on \"Still Alice\", which starred Julianne Moore, Kristen Stewart, and Alec Baldwin. This award was for his directorial debut.",
+            "The nominations found in step 3 were specifically for acting roles. Stacy Edwards received a nomination for Best Female Lead for her role in \"In the Company of Men\", and Wash Westmoreland won an award for his work on \"Still Alice\", which starred Julianne Moore, Kristen Stewart, and Alec Baldwin."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify actresses who starred in the films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List Independent Spirit Award nominations for each identified actress.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the Independent Spirit Award(s) given to actresses linked to Neil LaBute's films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task as follows:\n1. **Node 1** retrieves a list of films directed by Neil LaBute, establishing the base dataset of works to examine for connections to actresses.\n2. **Node 2** uses the film list to identify actresses who appeared in these movies, focusing only on relevant individuals who might have been nominated for the Independent Spirit Award.\n3. **Node 3** gathers nomination data for each actress identified in Node 2, potentially across multiple award years and categories, to compile a comprehensive list of nominations.\n4. **Node 4** synthesizes the information from Node 3 to directly answer the question, filtering for nominations specific to works associated with Neil LaBute."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "18th Independent Spirit Awards\nThe 2002 Independent Spirit Awards, honoring the best in independent filmmaking for 2002, were announced on March 22, 2003. It was hosted by John Waters.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship. Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style. Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them. The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Film laboratory\nA film laboratory is a commercial service enterprise and technical facility for the film industry where specialists develop, print, and conform film material for classical film production and distribution which is based on film material, such as negative and positive, black and white and color, on different film formats: 65-70mm, 35mm, 16mm, 9.5mm, 8mm. The film laboratory managers can charge by the footage or by time used while in lab.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "L (film)\nL (\"Learning\") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas. It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19\u201329 January 2012) where its international premiere will take place. The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January \u2013 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards. A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011. L is Makridis's first feature film. His short film \"The Last Fakir\" (2005) was awarded the \"Newcomer's Prize\" at the 2005 International Short Film Festival in Drama which takes place in Greece.",
+            "Life of Riley (2014 film)\nLife of Riley (French: Aimer, boire et chanter ) is a 2014 French comedy-drama film directed by Alain Resnais in his final feature film before his death. Adapted from the play \"Life of Riley\" by Alan Ayckbourn, the film had its premiere in the competition section of the 64th Berlin International Film Festival, just three weeks before Resnais died, where it won the Alfred Bauer Prize.",
+            "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Le Dernier Combat\nLe Dernier Combat (] , English: \"The Last Battle\" ) is a 1983 post-apocalyptic French film. It was the first feature-film to be directed by Luc Besson, and also features Jean Reno's first prominent role. Music for the film was composed by \u00c9ric Serra. The film was the first of many collaborations between Besson, Reno and Serra. A dark vision of post-apocalyptic survival, the film was shot in black and white and contains only two words of dialogue. It depicts a world where people have been rendered mute by some unknown incident."
+        ],
+        "thoughts": [
+            "The films directed by Neil LaBute are not included in the provided information.",
+            "Stacy Edwards, Zoe Kazan, and Emily Watson are actresses who starred in films directed by Neil LaBute. Stacy Edwards starred in \"In the Company of Men\", Zoe Kazan starred in \"Some Girl(s)\", and Emily Watson starred in \"The Shape of Things\".",
+            "Stacy Edwards:\n- Independent Spirit Award for Best Female Lead nomination for \"In the Company of Men\" (1997)\n\nJulianne Moore:\n- Won Independent Spirit Award for Best Female Lead for \"Still Alice\" (2014)",
+            "Julianne Moore won the Independent Spirit Award for Best Female Lead for her role in \"Still Alice\" (2014), a film directed by Neil LaBute."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find all films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify actresses who starred in films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve a list of Independent Spirit Award nominations for actresses.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the list of actresses in Neil LaBute's films with the list of Independent Spirit Award nominations to find any matches.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine which Independent Spirit Award the matched actress was nominated for.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by gathering all films directed by Neil LaBute to understand which actresses could potentially be related to his work. It then retrieves a list of actresses in those films (Node 1 -> Node 2). Independently, it collects information on which actresses have been nominated for an Independent Spirit Award (Node 3). The reasoning then identifies overlapping names between actresses in Neil LaBute's films and those nominated for an award (Node 4). Finally, the specific award nomination for the matching actress is determined (Node 5)."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Kajraare\nKajraare is a Bollywood film that released on 15 October 2010. The film was directed by Pooja Bhatt and starred Himesh Reshammiya and the Pakistani actress Sara Loren. Reshammiya plays a singer who falls in love with a bar dancer and the film is centred on how they find true love. It is the first Hindi film to be shot in Petra, often called \"the eighth wonder of the world.\"",
+            "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship. Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style. Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them. The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Juli\u00e1n Hern\u00e1ndez (filmmaker)\nJuli\u00e1n Hern\u00e1ndez (born 1972 in Mexico City, Mexico as Juli\u00e1n Hern\u00e1ndez P\u00e9rez) is a Mexican multi-awarded filmmaker. He won twice the Teddy Award at Berlin Film Festival with his movies\" Thousand Clouds of Peace Fence the Sky, Love, Your Being Love Will Never End \" (2003), and \"Raging Sun, Raging Sky (\"2009). He studied at the Centro Universitario de Estudios Cinematogr\u00e1ficos (CUEC), from where he was expelled due to his gay-themed films during a homophobic administration, and was not mentioned as a serious director until he started winning international recognition. He has credited his use of cinematographic language to influences from filmmakers such as Michelangelo Antonioni, Leonardo Favio, Robert Bresson, and Alain Resnais. Hern\u00e1ndez has directed more than 20 awarded short films (both documentaries and fictional), and became a gay-cinema icon for his feature films, including Broken Sky. Along with producer and director , he founded Cooperativa Cinematogr\u00e1fica Morelos. which later became the prestigious production company , producing 29 films over two decades.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities.",
+            "Neil Kerley\nDonald Neil Kerley (born 20 February 1934 in Barmera, South Australia) is a former Australian rules football player and coach. Known to his mates as either Neil or Knuckles and to South Australian football fans as King Kerley or simply \"Kerls\", he is best known for taking three clubs to four South Australian National Football League (SANFL) premierships over three decades as both a player and coach and for playing 32 state games for South Australia. Despite his first name being Donald, it was his mother Lillian's strong dislike of shortening Christian names that led everyone calling him Neil and not Don or Donald from an early age."
+        ],
+        "thoughts": [
+            "Films directed by Neil LaBute include:\n1. In the Company of Men (1997)\n2. Nurse Betty (2000)\n3. Possession (2002)\n4. The Shape of Things (2003)\n5. The Wicker Man (2006)\n6. Lakeview Terrace (2008)\n7. Death at a Funeral (2010)\n8. Some Velvet Morning (2013)\n9. Dirty Weekend (2015)",
+            "Stacy Edwards, Zoe Kazan, Jennifer Morrison, and Emily Watson are actresses who starred in films directed by Neil LaBute.",
+            "I'm sorry, but I couldn't find any Independent Spirit Award nominations for actresses in the provided information.",
+            "Based on the provided information, there are no matches between the list of actresses in Neil LaBute's films and the list of Independent Spirit Award nominations. None of the actresses mentioned (Stacy Edwards, Zoe Kazan, Jennifer Morrison, and Emily Watson) have been nominated for Independent Spirit Awards.",
+            "None of the actresses mentioned (Stacy Edwards, Zoe Kazan, Jennifer Morrison, and Emily Watson) have been nominated for Independent Spirit Awards."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify actresses who appeared in the films identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve a list of Independent Spirit Award nominations for actresses identified in step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which specific Independent Spirit Awards the actresses were nominated for.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task into a series of retrieval and reasoning steps. First, it focuses on identifying films directed by Neil LaBute and then finding actresses associated with those films. After obtaining the list of potential actresses, the graph moves on to retrieving their Independent Spirit Award nominations. Finally, it synthesizes this information to determine the specific awards for which these actresses were nominated."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "Susan Floyd\nSusan Floyd (born May 13, 1968) is an American actress who has appeared in many episodes of \"Law & Order\", as well as numerous other television series. She has also had featured roles in several motion pictures, including \"Domestic Disturbance\" and \"Forgiven\", and starred opposite Al Pacino and Jerry Orbach in \"Chinese Coffee\". Along with mainstream films, she has also appeared in a 2003 indie film \"Particles of Truth\".",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Irma Gramatica\nIrma Gramatica (1870\u20131962) was an Italian stage and film actress. Gramatica appeared in ten films during her career including \"The Materassi Sisters\" (1944). Her sisters Anna Capodaglio and Emma Gramatica were both actresses.",
+            "Jacinda Barrett\nJacinda Barrett (born August 2, 1972), an Australian-American actress and former model, first became known to audiences as a cast member on \"\" (1995) before appearing in films such as \"The Human Stain\" (2003), \"\" (2004), \"Ladder 49\" (2004), \"The Namesake\" (2006), \"Poseidon\" (2006), and \"The Last Kiss\" (2006). She appeared in the series \"The Following\" in 2013 and joined the main cast of the Netflix series \"Bloodline\", which launched in 2015.",
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "List of Disney animated shorts\nThis is a list of animated short films produced by Walt Disney and Walt Disney Animation Studios from 1921 to the present. This includes films produced at the Laugh-O-Gram Studio which Disney founded in 1921 as well as the animation studio now owned by The Walt Disney Company, previously called the Disney Brothers Cartoon Studio (1923), The Walt Disney Studio (1926), Walt Disney Productions (1929), and Walt Disney Feature Animation (1986).",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "List of DC Extended Universe cast members\nThe DC Extended Universe is a media franchise and shared fictional universe that is the setting of superhero films independently produced by Warner Bros., based on characters that appear in DC Comics publications."
+        ],
+        "thoughts": [
+            "Films directed by Neil LaBute include \"In the Company of Men\" (1997), \"Possession\" (2002), \"The Shape of Things\" (2003), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He also directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). Additionally, he created the TV series \"Billy & Billie\" and directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "- Rachel Weisz appeared in \"The Shape of Things\"\n- Gretchen Mol appeared in \"The Shape of Things\"\n- Stacy Edwards appeared in \"In the Company of Men\"\n- Susan Floyd appeared in \"Particles of Truth\"\n- Jacinda Barrett appeared in \"The Human Stain\", \"The Namesake\", \"Poseidon\", and \"The Last Kiss\"",
+            "- Stacy Edwards received an Independent Spirit Award for Best Female Lead nomination for her role in \"In the Company of Men\" in 1997.\n- Jacinda Barrett did not receive any Independent Spirit Award nominations.",
+            "Stacy Edwards was nominated for the Independent Spirit Award for Best Female Lead for her role in \"In the Company of Men\" in 1997. Jacinda Barrett did not receive any Independent Spirit Award nominations."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each film directed by Neil LaBute, list the actresses who were part of the cast.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the list of actresses who have been nominated for an Independent Spirit Award.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the actresses from Neil LaBute's films with the list of Independent Spirit Award nominees.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "For each actress identified, determine for which Independent Spirit Award category they were nominated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task requires identifying a film directed by Neil LaBute, then finding the actresses in those films, and cross-referencing them with actresses who were nominated for the Independent Spirit Awards. Finally, we must determine the specific award category each matching actress was nominated for. This requires both retrieval of data (films and award nominations) and reasoning (cross-referencing lists)."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Stacy Edwards\nStacy Edwards (born March 4, 1965) is an American actress. She appeared in a number of B movies before her breakthrough role in the 1997 black comedy film \"In the Company of Men\", for which she received Independent Spirit Award for Best Female Lead nomination. Edwards later had roles in films such as \"Primary Colors\" (1998), \"Black and White\" (1999) and \"Driven\" (2001), and was regular cast member in the CBS medical drama series, \"Chicago Hope\" (1997\u20131999).",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "The New Year Parade\nThe New Year Parade is a 2008 drama film filmed and directed by Tom Quinn with lighting and audio work by Mark Doyle. The film won the Grand Jury Prize for Best Narrative at the 2008 Slamdance Film Festival and the award for Best Acting Ensemble at the 2008 Ashland Independent Film Festival. At the 2008 BendFilm Festival, Quinn won the award for Best Director, while Jennifer Welsh won the award for Best Supporting Actress. The film was nominated for an IFP Gotham Award in 2008 for \"Best Film Not At A Theater Near You\" while Quinn and co-Producer Steve Beal were nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for their work on the film.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "List of awards and nominations received by Rekha\nRekha is an Indian film actress who primarily works in Hindi films. Hailed as one of India's finest actresses, she made her debut as a child artist in 1966 and went on to appear in lead roles in the early 1970s. Since her debut as a leading actress she has acted in over 180 films. Rekha has often portrayed strong female characters, while also acting in some arthouse films besides numerous mainstream cinema. She has won four Filmfare Awards; two Best Actress Awards\u2014resulting from seven nominations, one Best Supporting Actress Award\u2014resulting from six nominations, and a Lifetime Achievement Award. The first award came in 1981 for the Hrishikesh Mukherjee-directed \"Khubsoorat\" where she was cast in a comic role. Her portrayal of a classical courtesan in \"Umrao Jaan\" (1981) fetched her the National Film Award for Best Actress in 1982. Rekha received her second Filmfare award in 1989 for \"Khoon Bhari Maang\". She portrayed the role of a widow who sets out to take revenge on her lover. Her negative role in \"Khiladiyon Ka Khiladi\" was highly appreciated by the critics and earned her a Filmfare Award in the Best Supporting Actress category. In 2003, she was presented with the Lifetime Achievement Award. In 2010, Rekha was awarded the Padma Shri, the 4th highest civilian honour in India. Other awards won by her include International Indian Film Academy Awards, Bengal Film Journalists' Association Awards, Star Screen Awards, Zee Cine Awards, Stardust Awards and Bollywood Movie Awards.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "List of DC Extended Universe cast members\nThe DC Extended Universe is a media franchise and shared fictional universe that is the setting of superhero films independently produced by Warner Bros., based on characters that appear in DC Comics publications.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart.",
+            "Neil Kerley\nDonald Neil Kerley (born 20 February 1934 in Barmera, South Australia) is a former Australian rules football player and coach. Known to his mates as either Neil or Knuckles and to South Australian football fans as King Kerley or simply \"Kerls\", he is best known for taking three clubs to four South Australian National Football League (SANFL) premierships over three decades as both a player and coach and for playing 32 state games for South Australia. Despite his first name being Donald, it was his mother Lillian's strong dislike of shortening Christian names that led everyone calling him Neil and not Don or Donald from an early age.",
+            "Luc Besson\nLuc Besson (] ; born 18 March 1959) is a French film director, screenwriter, and producer. He directed or produced the films \"Subway\" (1985), \"The Big Blue\" (1988), and \"Nikita\" (1990). Besson is known for his distinctive filmmaking style and is associated with the movement critics call \"Cin\u00e9ma du look\". He has been nominated for a C\u00e9sar Award for Best Director and Best Picture for his films \"\" and \"\". He won Best Director and Best French Director for his sci-fi action film \"The Fifth Element\" (1997). He wrote and directed the 2014 sci-fi thriller film \"Lucy\"."
+        ],
+        "thoughts": [
+            "The films directed by Neil LaBute include:\n1. In the Company of Men (1997)\n2. Possession (2002)\n3. The Shape of Things (2003)\n4. The Wicker Man (2006)\n5. Some Velvet Morning (2013)\n6. Dirty Weekend (2015)\n7. Nurse Betty (2000)\n8. Lakeview Terrace (2008)\n9. Death at a Funeral (2010)\n10. Some Girl(s) (2013)",
+            "In the Company of Men (1997):\n- Stacy Edwards\n\nSome Girl(s) (2013):\n- Kristen Bell\n- Zoe Kazan\n- M\u00eda Maestro\n- Jennifer Morrison\n- Emily Watson\n\nThe Shape of Things (2003):\n- Rachel Weisz\n- Gretchen Mol",
+            "The list of actresses who have been nominated for an Independent Spirit Award is not provided in the given information.",
+            "Based on the provided information, we can cross-reference the actresses from Neil LaBute's films with the list of Independent Spirit Award nominees as follows:\n\nStacy Edwards - No information provided about Independent Spirit Award nominations.\nKristen Bell - Nominated for Best Female Lead at the Independent Spirit Awards for her role in \"The Lifeguard\" in 2014.\nZoe Kazan - Nominated for Best Female Lead at the Independent Spirit Awards for her role in \"Ruby Sparks\" in 2013.\nM\u00eda Maestro - No information provided about Independent Spirit Award nominations.\nJennifer Morrison - No information provided about Independent Spirit Award nominations.\nEmily Watson - Nominated for Best Female Lead at the Independent Spirit Awards for her role in \"Punch-Drunk Love\" in 2003.\nRachel Weisz - Nominated for Best Female Lead at the Independent Spirit Awards for her role in \"The Deep Blue Sea\" in 2012.\nGretchen Mol - Nominated for Best Female Lead at the Independent Spirit Awards for her role in \"The Notorious Bettie Page\" in 2006.\n\nBased on this cross-reference, several of the actresses from Neil LaBute's films have been nominated for Independent Spirit Awards for their performances in other films.",
+            "Stacy Edwards was nominated for the Independent Spirit Award for Best Female Lead for her role in the film \"In the Company of Men\"."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify actresses who have been in films directed by Neil LaBute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve a list of actresses who have been nominated for Independent Spirit Awards.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check the intersection of actresses from Neil LaBute's films and those nominated for Independent Spirit Awards to identify common actresses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "For each identified actress, determine which Independent Spirit Award they were nominated for.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is structured to systematically find the answer by first identifying the body of work relevant to Neil LaBute, then cross-referencing it with Independent Spirit Award nominees to find a common actress, and finally identifying the specific award for which she was nominated. Parallel retrieval of relevant films and award nominations optimizes the process."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "Independent Spirit Awards\nThe Film Independent Spirit Awards (abbreviated \"Spirit Awards\" and originally known as the FINDIE or Friends of Independents Awards), founded in 1984, are awards dedicated to independent filmmakers. Winners were typically presented with acrylic glass pyramids containing suspended shoestrings representing the paltry budgets of independent films. Since 2006, winners have received a trophy depicting a bird with its wings spread sitting atop of a pole with the shoestrings from the previous design wrapped around the pole.",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "18th Independent Spirit Awards\nThe 2002 Independent Spirit Awards, honoring the best in independent filmmaking for 2002, were announced on March 22, 2003. It was hosted by John Waters.",
+            "28th Independent Spirit Awards\nThe 2012 Independent Spirit Awards was the 28th annual occasion of the Film Independent Spirit Awards. It announced its nominees on November 27, 2012. The winners were announced on February 23, 2013 during an awards ceremony hosted by Andy Samberg.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Mihai M\u0103laimare Jr.\nMihai M\u0103laimare Jr. (born 1975) is a Romanian cinematographer. He is the son of the Romanian actor and former politician . He was a cinematographer on films directed by Francis Ford Coppola and Paul Thomas Anderson. He was nominated for Best Cinematography at the 24th Independent Spirit Awards for \"Youth Without Youth\" in 2008.",
+            "32nd Independent Spirit Awards\nThe 32nd Independent Spirit Awards (2017) nominees were announced by Film Independent, the nonprofit arts organization that produces them, on November 22, 2016. The ceremony, hosted by Nick Kroll and John Mulaney, took place on Saturday, February 25, 2017, and was broadcast live on IFC at 2:00 pm PT. Online streaming service Sundance Now live-streamed the Spirit Awards concurrently with the telecast, with an on-demand version available on Sundance Now.",
+            "List of awards and nominations received by Rekha\nRekha is an Indian film actress who primarily works in Hindi films. Hailed as one of India's finest actresses, she made her debut as a child artist in 1966 and went on to appear in lead roles in the early 1970s. Since her debut as a leading actress she has acted in over 180 films. Rekha has often portrayed strong female characters, while also acting in some arthouse films besides numerous mainstream cinema. She has won four Filmfare Awards; two Best Actress Awards\u2014resulting from seven nominations, one Best Supporting Actress Award\u2014resulting from six nominations, and a Lifetime Achievement Award. The first award came in 1981 for the Hrishikesh Mukherjee-directed \"Khubsoorat\" where she was cast in a comic role. Her portrayal of a classical courtesan in \"Umrao Jaan\" (1981) fetched her the National Film Award for Best Actress in 1982. Rekha received her second Filmfare award in 1989 for \"Khoon Bhari Maang\". She portrayed the role of a widow who sets out to take revenge on her lover. Her negative role in \"Khiladiyon Ka Khiladi\" was highly appreciated by the critics and earned her a Filmfare Award in the Best Supporting Actress category. In 2003, she was presented with the Lifetime Achievement Award. In 2010, Rekha was awarded the Padma Shri, the 4th highest civilian honour in India. Other awards won by her include International Indian Film Academy Awards, Bengal Film Journalists' Association Awards, Star Screen Awards, Zee Cine Awards, Stardust Awards and Bollywood Movie Awards.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "Film laboratory\nA film laboratory is a commercial service enterprise and technical facility for the film industry where specialists develop, print, and conform film material for classical film production and distribution which is based on film material, such as negative and positive, black and white and color, on different film formats: 65-70mm, 35mm, 16mm, 9.5mm, 8mm. The film laboratory managers can charge by the footage or by time used while in lab.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "L (film)\nL (\"Learning\") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas. It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19\u201329 January 2012) where its international premiere will take place. The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January \u2013 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards. A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011. L is Makridis's first feature film. His short film \"The Last Fakir\" (2005) was awarded the \"Newcomer's Prize\" at the 2005 International Short Film Festival in Drama which takes place in Greece.",
+            "Life of Riley (2014 film)\nLife of Riley (French: Aimer, boire et chanter ) is a 2014 French comedy-drama film directed by Alain Resnais in his final feature film before his death. Adapted from the play \"Life of Riley\" by Alan Ayckbourn, the film had its premiere in the competition section of the 64th Berlin International Film Festival, just three weeks before Resnais died, where it won the Alfred Bauer Prize.",
+            "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Le Dernier Combat\nLe Dernier Combat (] , English: \"The Last Battle\" ) is a 1983 post-apocalyptic French film. It was the first feature-film to be directed by Luc Besson, and also features Jean Reno's first prominent role. Music for the film was composed by \u00c9ric Serra. The film was the first of many collaborations between Besson, Reno and Serra. A dark vision of post-apocalyptic survival, the film was shot in black and white and contains only two words of dialogue. It depicts a world where people have been rendered mute by some unknown incident."
+        ],
+        "thoughts": [
+            "There are no films directed by Neil LaBute in the provided information.",
+            "Based on the provided information, there are no films directed by Neil LaBute, so we cannot identify any actresses who have been in his films.",
+            "1. Frances McDormand - Nominated for Best Female Lead at the 32nd Independent Spirit Awards for \"Three Billboards Outside Ebbing, Missouri\" in 2017.\n2. Saoirse Ronan - Nominated for Best Female Lead at the 32nd Independent Spirit Awards for \"Lady Bird\" in 2017.\n3. Margot Robbie - Nominated for Best Female Lead at the 32nd Independent Spirit Awards for \"I, Tonya\" in 2017.\n4. Salma Hayek - Nominated for Best Female Lead at the 18th Independent Spirit Awards for \"Frida\" in 2002.\n5. Julianne Moore - Nominated for Best Female Lead at the 18th Independent Spirit Awards for \"Far from Heaven\" in 2002.",
+            "Based on the information provided, there are no common actresses between Neil LaBute's films and those nominated for Independent Spirit Awards.",
+            "Stacy Edwards was not nominated for an Independent Spirit Award. Wash Westmoreland won the John Cassavetes Spirit Award for \"Quincea\u00f1era\" in 2006. Neil LaBute won the Independent Spirit Award for Best First Screenplay for \"In the Company of Men\" in 1997. Rekha was not nominated for an Independent Spirit Award."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which Independent Spirit Award was an actress, who was in a film directed by Neil LaBute, nominated for?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all films directed by Neil LaBute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each film directed by Neil LaBute, find the actresses who were part of the cast.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the actresses who have been nominated for an Independent Spirit Award.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the list of actresses from Neil LaBute's films with those who have been nominated for an Independent Spirit Award to find common names.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "For the actresses found, determine for which Independent Spirit Award they were nominated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into a series of steps that aim to identify a connection between Neil LaBute-directed films and Independent Spirit Award nominations for actresses. The process involves first identifying relevant films, then finding actresses connected to those films, and cross-referencing with a list of nominees to find the award for which they might have been nominated."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Independent Spirit Award for Best First Feature\nThe Independent Spirit Award for Best First Feature is one of the annual Independent Spirit Awards. It is usually given to the director (or directors) and producer (or producers). The \"first feature\" designation is applied to the director not the producer(s). Therefore, producers have been nominated multiple times.",
+            "Neil LaBute\nNeil N. LaBute (born March 19, 1963) is an American film director, screenwriter, playwright and actor. He is best-known for a play that he wrote and later turned into a film, \"In the Company of Men\" (1997), which won awards from the Sundance Film Festival, the Independent Spirit Awards, and the New York Film Critics Circle. He wrote and directed the films \"Possession\" (2002) (based on the A.S. Byatt novel), \"The Shape of Things\" (2003) (based on his play of the same name), \"The Wicker Man\" (2006), \"Some Velvet Morning\" (2013), and \"Dirty Weekend\" (2015). He directed the films \"Nurse Betty\" (2000), \"Lakeview Terrace\" (2008), and \"Death at a Funeral\" (2010). LaBute created the TV series \"Billy & Billie\", writing and directing all of the episodes and is also creator of \"Van Helsing\". He also directed several episodes for shows such as \"Hell on Wheels\" and \"Billions\".",
+            "Hush (1998 film)\nHush is a 1998 American thriller starring Gwyneth Paltrow, Johnathon Schaech, and Jessica Lange.",
+            "Independent Spirit Award for Best Cinematography\nThe Independent Spirit Award for Best Cinematography is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "Independent Spirit Award for Best Editing\nThe Independent Spirit Award for Best Editing is one of the annual awards given by Independent Spirit Awards, a non-profit organization dedicated to independent film and independent filmmakers.",
+            "The New Year Parade\nThe New Year Parade is a 2008 drama film filmed and directed by Tom Quinn with lighting and audio work by Mark Doyle. The film won the Grand Jury Prize for Best Narrative at the 2008 Slamdance Film Festival and the award for Best Acting Ensemble at the 2008 Ashland Independent Film Festival. At the 2008 BendFilm Festival, Quinn won the award for Best Director, while Jennifer Welsh won the award for Best Supporting Actress. The film was nominated for an IFP Gotham Award in 2008 for \"Best Film Not At A Theater Near You\" while Quinn and co-Producer Steve Beal were nominated for a 2010 Independent Spirit Award in the John Cassavetes Award section for their work on the film.",
+            "In the Company of Men\nIn the Company of Men is a 1997 Canadian/American black comedy written and directed by Neil LaBute and starring Aaron Eckhart, Matt Malloy, and Stacy Edwards. The film, which was adapted from a play written by LaBute, and served as his feature film debut, won him the Independent Spirit Award for Best First Screenplay.",
+            "Some Girl(s) (film)\nSome Girl(s) is a 2013 American comedy film directed by Daisy von Scherler Mayer and written by Neil LaBute. It is based on the play of the same name, also written by LaBute. The film stars Adam Brody, Kristen Bell, Zoe Kazan, M\u00eda Maestro, Jennifer Morrison and Emily Watson. The film was released on June 26, 2013, by Leeden Media.",
+            "Wash West\nWash Westmoreland, also called Wash West, (born 4 March 1966) is an independent film director who has worked in television, documentaries, and independent films. His 2006 release, \"Quincea\u00f1era\", had a double Sundance win (Audience Award and Grand Jury Prize), and it also picked up the Humanitas Prize and the John Cassavetes Spirit Award. In 2008, Westmoreland produced an MTV film \"Pedro\" about AIDS activist Pedro Zamora that was introduced on MTV by U.S. President Bill Clinton. Working with his partner Richard Glatzer, he directed \"The Last of Robin Hood\" in 2012 starring Kevin Kline, Susan Sarandon, and Dakota Fanning that was released in August 2014 by Goldwyn. The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin. It premiered at Toronto International Film Festival in 2014 and was immediately picked up for distribution by Sony Picture Classics. It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.",
+            "The Shape of Things\nThe Shape of Things is a 2001 play by American author and film director Neil LaBute and a 2003 American romantic drama film. It premi\u00e8red at the Almeida Theatre, London in 2001 with Paul Rudd as Adam, Rachel Weisz as Evelyn, Gretchen Mol as Jenny, and Fred Weller as Phillip. The play was directed by LaBute himself. According to the author's instructions, it is to be performed without an interval or a curtain call.",
+            "Independent Spirit Awards\nThe Film Independent Spirit Awards (abbreviated \"Spirit Awards\" and originally known as the FINDIE or Friends of Independents Awards), founded in 1984, are awards dedicated to independent filmmakers. Winners were typically presented with acrylic glass pyramids containing suspended shoestrings representing the paltry budgets of independent films. Since 2006, winners have received a trophy depicting a bird with its wings spread sitting atop of a pole with the shoestrings from the previous design wrapped around the pole.",
+            "Mihai M\u0103laimare Jr.\nMihai M\u0103laimare Jr. (born 1975) is a Romanian cinematographer. He is the son of the Romanian actor and former politician . He was a cinematographer on films directed by Francis Ford Coppola and Paul Thomas Anderson. He was nominated for Best Cinematography at the 24th Independent Spirit Awards for \"Youth Without Youth\" in 2008.",
+            "Diane Ladd\nDiane Ladd (born November 29, 1932) is an American actress, film director, producer and author. She has appeared in over 120 film and television roles. For the 1974 film \"Alice Doesn't Live Here Anymore\", she won the BAFTA Award for Best Actress in a Supporting Role and was nominated for the Academy Award for Best Supporting Actress. She went on to win the Golden Globe Award for Best Supporting Actress on Television for \"Alice\" (1980\u201381), and to receive Academy Award nominations for \"Wild at Heart\" (1990) and \"Rambling Rose\" (1991). Her other film appearances include \"Chinatown\" (1974), \"Ghosts of Mississippi\" (1996), \"Primary Colors\" (1998), \"28 Days\" (2000), and \"American Cowslip\" (2008). Ladd is the mother of actress Laura Dern, with her ex-husband, actor Bruce Dern.",
+            "Wiener-Dog (film)\nWiener-Dog is a 2016 American dark comedy-drama film directed and written by Todd Solondz. Starring an ensemble cast led by Ellen Burstyn, Kieran Culkin, Julie Delpy, Danny DeVito, Greta Gerwig, Tracy Letts, and Zosia Mamet, the film serves as a spin-off from Solondz's 1995 film \"Welcome to the Dollhouse\", which also features the character of Dawn Wiener.",
+            "28th Independent Spirit Awards\nThe 2012 Independent Spirit Awards was the 28th annual occasion of the Film Independent Spirit Awards. It announced its nominees on November 27, 2012. The winners were announced on February 23, 2013 during an awards ceremony hosted by Andy Samberg.",
+            "Bart Got a Room\nBart Got a Room is a 2008 comedy film written and directed by Brian Hecker, and stars Steven Kaplan, Alia Shawkat, William H. Macy, and Cheryl Hines. Also appearing in the film are Ashley Benson, Brandon Hardesty, Kate Micucci, Jennifer Tilly, Dinah Manoff (in her last film role as of 2017) and Chad Jamian Williams as Bart. The film premiered at the Tribeca Film Festival on April 25, 2008. It had a limited US release in select theaters on April 3, 2009 and was released on DVD on July 28, 2009.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Irma Gramatica\nIrma Gramatica (1870\u20131962) was an Italian stage and film actress. Gramatica appeared in ten films during her career including \"The Materassi Sisters\" (1944). Her sisters Anna Capodaglio and Emma Gramatica were both actresses.",
+            "List of awards and nominations received by Rekha\nRekha is an Indian film actress who primarily works in Hindi films. Hailed as one of India's finest actresses, she made her debut as a child artist in 1966 and went on to appear in lead roles in the early 1970s. Since her debut as a leading actress she has acted in over 180 films. Rekha has often portrayed strong female characters, while also acting in some arthouse films besides numerous mainstream cinema. She has won four Filmfare Awards; two Best Actress Awards\u2014resulting from seven nominations, one Best Supporting Actress Award\u2014resulting from six nominations, and a Lifetime Achievement Award. The first award came in 1981 for the Hrishikesh Mukherjee-directed \"Khubsoorat\" where she was cast in a comic role. Her portrayal of a classical courtesan in \"Umrao Jaan\" (1981) fetched her the National Film Award for Best Actress in 1982. Rekha received her second Filmfare award in 1989 for \"Khoon Bhari Maang\". She portrayed the role of a widow who sets out to take revenge on her lover. Her negative role in \"Khiladiyon Ka Khiladi\" was highly appreciated by the critics and earned her a Filmfare Award in the Best Supporting Actress category. In 2003, she was presented with the Lifetime Achievement Award. In 2010, Rekha was awarded the Padma Shri, the 4th highest civilian honour in India. Other awards won by her include International Indian Film Academy Awards, Bengal Film Journalists' Association Awards, Star Screen Awards, Zee Cine Awards, Stardust Awards and Bollywood Movie Awards.",
+            "Sexual Life\nSexual Life is a 2005 comedy-drama, independent film written and directed by Ken Kwapis, who would go on to chronicle modern romantic life in the better-known \"He's Just Not That Into You\" in 2009. Produced by Ken Aguado and distributed by Showtime Independent Films. Cast members include Azura Skye, Carla Gallo, Anne Heche, Elizabeth Banks, Tom Everett Scott, and Steven Weber.",
+            "Film laboratory\nA film laboratory is a commercial service enterprise and technical facility for the film industry where specialists develop, print, and conform film material for classical film production and distribution which is based on film material, such as negative and positive, black and white and color, on different film formats: 65-70mm, 35mm, 16mm, 9.5mm, 8mm. The film laboratory managers can charge by the footage or by time used while in lab.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "L (film)\nL (\"Learning\") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas. It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19\u201329 January 2012) where its international premiere will take place. The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January \u2013 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards. A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011. L is Makridis's first feature film. His short film \"The Last Fakir\" (2005) was awarded the \"Newcomer's Prize\" at the 2005 International Short Film Festival in Drama which takes place in Greece.",
+            "Life of Riley (2014 film)\nLife of Riley (French: Aimer, boire et chanter ) is a 2014 French comedy-drama film directed by Alain Resnais in his final feature film before his death. Adapted from the play \"Life of Riley\" by Alan Ayckbourn, the film had its premiere in the competition section of the 64th Berlin International Film Festival, just three weeks before Resnais died, where it won the Alfred Bauer Prize.",
+            "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office.",
+            "Le Dernier Combat\nLe Dernier Combat (] , English: \"The Last Battle\" ) is a 1983 post-apocalyptic French film. It was the first feature-film to be directed by Luc Besson, and also features Jean Reno's first prominent role. Music for the film was composed by \u00c9ric Serra. The film was the first of many collaborations between Besson, Reno and Serra. A dark vision of post-apocalyptic survival, the film was shot in black and white and contains only two words of dialogue. It depicts a world where people have been rendered mute by some unknown incident."
+        ],
+        "thoughts": [
+            "None of the films mentioned were directed by Neil LaBute.",
+            "In the Company of Men (1997):\n- Stacy Edwards\n\nSome Girl(s) (2013):\n- Kristen Bell\n- Zoe Kazan\n- M\u00eda Maestro\n- Jennifer Morrison\n- Emily Watson\n\nThe Shape of Things (2003):\n- Rachel Weisz\n- Gretchen Mol\n\nPossession (2002):\n- Gwyneth Paltrow\n- Aaron Eckhart\n\nThe Wicker Man (2006):\n- Ellen Burstyn\n- Kate Beahan\n\nSome Velvet Morning (2013):\n- Alice Eve\n- Stanley Tucci\n\nDirty Weekend (2015):\n- Alice Eve\n- Gia Crovatin\n\nNurse Betty (2000):\n- Ren\u00e9e Zellweger\n- Morgan Freeman\n\nLakeview Terrace (2008):\n- Kerry Washington\n- Jay Hernandez\n\nDeath at a Funeral (2010):\n- Zoe Saldana\n- Loretta Devine",
+            "- Jennifer Welsh was nominated for a 2010 Independent Spirit Award for Best Supporting Actress for her role in \"The New Year Parade\"\n- Mihai M\u0103laimare Jr. was nominated for Best Cinematography at the 24th Independent Spirit Awards for \"Youth Without Youth\" in 2008.",
+            "The common names between the list of actresses from Neil LaBute's films and those who have been nominated for an Independent Spirit Award are:\n\n- Zoe Kazan\n- Rachel Weisz\n- Gwyneth Paltrow\n- Ellen Burstyn\n- Alice Eve",
+            "Gwyneth Paltrow was nominated for the Independent Spirit Award for Best Female Lead for her role in the film \"Hush\" (1998)."
+        ],
+        "is_best": false
+    }
+]

@@ -991,3 +991,58 @@ if __name__ == '__main__':
     print(f'Saved results to {output_path}')
     for k in k_list:
         print(f'R@{k}: {total_recall[k] / len(data):.4f} ', end='')
+        
+        
+import asyncio
+from tqdm import tqdm
+
+async def async_process_sample(semaphore: asyncio.Semaphore, idx: int, sample: Dict[str, Any], args: argparse.Namespace, corpus: Dict[str, Any], retriever: DocumentRetriever, client: Any, processed_ids: set):
+    async with semaphore:
+        result = await loop.run_in_executor(None, process_sample, idx, sample, args, corpus, retriever, client, processed_ids)
+        return result, idx  # 返回处理结果和索引，以便更新 `results`
+
+async def main():
+    semaphore = asyncio.Semaphore(10)  # 同时处理的最大样本数
+    tasks = []
+    results = [None] * len(data)  # 创建一个与 `data` 大小相同的列表来存储结果
+
+    # 创建任务列表
+    for idx, sample in enumerate(data):
+        task = async_process_sample(semaphore, idx, sample, args, corpus, retriever, client, processed_ids)
+        tasks.append(task)
+
+    # 并行运行任务
+    for future in tqdm(asyncio.as_completed(tasks), total=len(tasks), desc='GraphRAG'):
+        result, idx = await future
+        if result is not None:
+            idx, recall, retrieved_passages, thoughts, it = result
+
+            # 更新 `results`
+            results[idx] = {
+                'retrieved': retrieved_passages,
+                'recall': recall,
+                'thoughts': thoughts
+            }
+
+            # 打印指标
+            for k in k_list:
+                total_recall[k] += recall[k]
+                print(f'R@{k}: {total_recall[k] / (idx + 1):.4f} ', end='')
+
+            if args.max_steps > 1:
+                print('[ITERATION]', it, '[PASSAGE]', len(retrieved_passages), '[THOUGHT]', thoughts)
+
+            # 每处理 50 个样本就保存一次结果
+            if idx % 50 == 0:
+                with open(output_path, 'w') as f:
+                    json.dump(results, f)
+
+    # 最后保存完整的结果
+    with open(output_path, 'w') as f:
+        json.dump(results, f)
+    print(f'Saved results to {output_path}')
+
+# 使用 asyncio 运行主函数
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())

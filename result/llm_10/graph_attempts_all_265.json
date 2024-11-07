@@ -1,0 +1,606 @@
+[
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who Drew Barry is and locate information on her siblings, focusing on her brothers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the names of Drew Barry's brothers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each of Drew Barry's brothers identified in node 2, gather information about their height.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the height of one of Drew Barry's brothers from the information gathered.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins with identifying who Drew Barry is and her family information (siblings). Once her siblings are identified, focus on extracting the names of her brothers to narrow down the search. After listing the brothers, the next step is to gather specific information about the height of each brother. Finally, the reasoning step involves selecting and presenting the height information for one of the brothers."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget.",
+            "The Cowsills\nThe Cowsills are an American singing group from Newport, Rhode Island. They specialized in harmonies and the ability to sing and play music at an early age. The band was formed in the spring of 1965 by brothers Bill, Bob, and Barry Cowsill; they shortly thereafter added their brother John. Originally Bill and Bob played guitar and Barry was on drums. When John learned how to play drums and joined the band, Barry went to bass. After their initial success, the brothers were joined by their siblings Susan and Paul and their mother Barbara. Bob's twin brother Richard was never the road manager, although this misinformation appears in several places on the internet. The band's road manager was Richard 'Biggie' Korn. When the group expanded to its full family membership by 1967, the six siblings ranged in age from 8 to 19. Joined by their mother, Barbara Cowsill (n\u00e9e Russell), the group was the inspiration for the 1970s television show \"The Partridge Family\".",
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Nat and Alex Wolff\nNat and Alex Wolff are an American pop music duo from New York, New York, consisting of brothers Nat and Alex Wolff. The siblings are known for their work on the Nickelodeon television series \"The Naked Brothers Band\", which was created and produced by their mother, actress Polly Draper. It was adapted from the mockumentary film that Draper wrote and directed. The duo's initial teen pop boy band called \"The Naked Brothers Band\" was depicted as part of its participation in their Nickelodeon series that aired from 2007 to 2009. They have released four full-length albums and have been nominated for several awards.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17.",
+            "Tall Brothers\nThe Tall Brothers were four brothers among the Egyptian monks of Nitria in the fifth century by the names of Ammonius, Dioscorus, Eusebius, and Euthymius. They were referred to as the \"Tall Brothers\" because they were tall in stature and demanding in appearance.",
+            "Swing with Scooter\nSwing with Scooter was a DC Comics teen-humor American comic book published from 1966 to 1972. It starred British teenage musician nicknamed Scooter who lived in the US.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Spuds MacKenzie\nSpuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s. The Spuds MacKenzie mascot and campaign were created by a 23-year-old art director, Jon Moore. At the time he was working at Needham, Harper & Steers, a Chicago, Illinois, advertising agency. The dog first showed up in a Bud Light Super Bowl XXI ad in 1987. During the height of his popularity, large amounts of Spuds merchandise was available, such as plush toys and t-shirts.",
+            "Scattergories\nScattergories is a creative-thinking category-based party game originally published by Parker Brothers in 1988. Parker Brothers was purchased by Hasbro a few years later, and they published the game internationally under their Milton Bradley brand. The objective of the 2-to-6-player game is to score points by uniquely naming objects within a set of categories, given an initial letter, within a time limit. The game is based on a traditional game known as Tutti Frutti, Jeu du Baccalaur\u00e9at, Stadt Land Fluss, and many other names.",
+            "The Walt Disney Company\nThe Walt Disney Company, commonly known as Disney, is an American diversified multinational mass media and entertainment conglomerate, headquartered at the Walt Disney Studios in Burbank, California. It is the world's second largest media conglomerate in terms of revenue, after Comcast. Disney was founded on October 16, 1923 \u2013 by brothers Walt Disney and Roy O. Disney \u2013 as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks. The company also operated under the names The Walt Disney Studio and then Walt Disney Productions. Taking on its current name in 1986, it expanded its existing operations and also started divisions focused upon theater, radio, music, publishing, and online media."
+        ],
+        "thoughts": [
+            "Drew Barry is an American retired professional basketball player, known for being the son of Basketball Hall of Famer Rick Barry. He has three brothers: Scooter, Jon, and Brent, who also share his profession. His grandfather, Bruce Hale, also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.\n\nIt is important to note that there is no information available on Drew Barry having any siblings named Drew Scott, Brendan Drew, or any other siblings mentioned in the provided text. Therefore, the information provided does not pertain to Drew Barry's siblings.",
+            "Drew Barry's brothers are Scooter, Jon, and Brent.",
+            "Unfortunately, there is no publicly available information about the height of Drew Barry's brothers, Scooter, Jon, and Brent.",
+            "The height of Drew Barry's brothers, Scooter, Jon, and Brent, is not publicly available."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine who Drew Barry's brothers are.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Choose one of Drew Barry's brothers for further information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the height of the chosen brother.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the process into three steps: identifying Drew Barry's brothers, selecting one of them, and finding out his height. The initial step involves retrieving and reasoning to identify her siblings, followed by a reasoning step to select one brother arbitrarily, and finally a retrieval step to find out his height."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Fratellis\nThe Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli (born John Lawler), bass guitarist Barry Fratelli (born Barry Wallace), and drummer and backing vocalist Mince Fratelli (born Gordon McRory). Their singles \"Chelsea Dagger\" and \"Whistle for the Choir\" were both top ten hits in the UK charts.",
+            "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman. Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\". It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore. The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery. Its working title was \"Planet Ice\". It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios. The film grossed $36.8 million on a $75\u2013$90 million budget, making a $100-million loss for the studio.",
+            "The Cowsills\nThe Cowsills are an American singing group from Newport, Rhode Island. They specialized in harmonies and the ability to sing and play music at an early age. The band was formed in the spring of 1965 by brothers Bill, Bob, and Barry Cowsill; they shortly thereafter added their brother John. Originally Bill and Bob played guitar and Barry was on drums. When John learned how to play drums and joined the band, Barry went to bass. After their initial success, the brothers were joined by their siblings Susan and Paul and their mother Barbara. Bob's twin brother Richard was never the road manager, although this misinformation appears in several places on the internet. The band's road manager was Richard 'Biggie' Korn. When the group expanded to its full family membership by 1967, the six siblings ranged in age from 8 to 19. Joined by their mother, Barbara Cowsill (n\u00e9e Russell), the group was the inspiration for the 1970s television show \"The Partridge Family\".",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17.",
+            "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930. It stars John Barrymore in his first full-length all-talking feature. The film would prove to be Crosland and Barrymore's last historical epic together.",
+            "List of The Naked Brothers Band episodes\n\"The Naked Brothers Band\" is an American musical comedy television series created by Polly Draper for Nickelodeon. The show depicts the daily lives of Draper's sons, who lead a fictional world-renowned rock band in New York City. As a mockumentary, the storyline is an embellishment of their real lives, and the fictional presence of a camera is often acknowledged. It stars Nat Wolff and Alex Wolff, the lead singer-songwriter, and drummer, respectively. Nat's fictional female admirer and real life preschool friends\u2014including the guitarist who had no prior acquaintance with the family\u2014feature as the other band members, with the siblings' father and Draper's husband as their accordion-playing dad and Draper's niece as the group's babysitter."
+        ],
+        "thoughts": [
+            "Drew Barry's brothers are Scooter, Jon, and Brent Barry.",
+            "I choose Jon Barry for further information.\n\nJon Barry is the second oldest brother of Drew Barrymore. He is a former professional basketball player who played in the NBA for several teams, including the Milwaukee Bucks, Atlanta Hawks, Golden State Warriors, and others. After retiring from basketball, Jon has worked as a basketball analyst for various sports networks, including ESPN and ABC. He is known for his insightful commentary and analysis of basketball games and has become a respected voice in the sports media industry. Jon Barry's career in basketball and sports media has made him a well-known figure in the sports world, and he continues to be involved in the industry through his work as an analyst and commentator.",
+            "The height of Barry Fratelli is not provided in the given information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Drew Barry's full name to ensure accurate retrieval of family information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List the siblings of Drew Barrymore (Drew Barry) and retrieve relevant information about them.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Search for the height of each of Drew Barrymore's siblings.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the height for one of Drew Barrymore's brothers from the gathered sibling information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to address the question through a series of interconnected steps. First, it ensures we have the correct individual's full name to accurately retrieve family information. Then, it identifies Drew Barrymore's siblings and gathers relevant information about them. In the next step, it specifically looks for height data for each sibling. Finally, it extracts and provides the height of one brother, in accordance with the question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17.",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget.",
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "James Lapslie\nRev James Lapslie (1750-1824) was Scottish minister and local historian serving Campsie. He played a role in the trial of Thomas Muir of Huntershill in 1793. Kay drew him and dubbed him the Pension Hunter at the trial.",
+            "William Harrison (priest)\nWilliam Harrison (18 April 1534 \u2013 24 April 1593) was an English clergyman, whose \"Description of England\" was produced as part of the publishing venture of a group of London stationers who produced Raphael Holinshed's \"Chronicles\" (London 1577). His contribution to Holinshed's work drew heavily on the earlier work of John Leland.",
+            "Murmur (album)\nMurmur is the debut studio album by the American alternative rock band R.E.M., released on April 12, 1983 by I.R.S. Records. \"Murmur\" drew critical acclaim upon its release for its unusual sound, defined by lead singer Michael Stipe's cryptic lyrics, guitarist Peter Buck's jangly guitar style, and bass guitarist Mike Mills' melodic basslines.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "The Holy Innocents (Adair novel)\nThe Holy Innocents (1988) is a novel by Gilbert Adair about incestuous siblings and the stranger who enters their world. Its themes were inspired by Jean Cocteau's novel \"Les Enfants Terribles\" (\"The Holy Terrors\") and by the film of the same name directed by Jean-Pierre Melville.",
+            "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930. It stars John Barrymore in his first full-length all-talking feature. The film would prove to be Crosland and Barrymore's last historical epic together.",
+            "North Sentinel Island\nNorth Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal. It is home to the Sentinelese who, often violently, reject any contact with the outside world, and are among the last people worldwide to remain virtually untouched by modern civilization. As such, only limited information about the island is known.",
+            "GMO Answers\nGMO Answers launched by the agricultural biotechnology industry in July 2013 to answer consumers\u2019 questions about genetically modified organisms (GMOs) in crops in the U.S. food supply. GMO Answers was created in part to respond to public concern about the safety of GMOs. GMO Answers \u201cexpert resources\u201d include conventional and organic farmers, agribusiness experts, scientists, academics, medical doctors and nutritionists, and \u201ccompany experts\u201d from founding members of the Council for Biotechnology Information, which funds the initiative. Founding members include BASF, Bayer CropScience, Dow AgroSciences, DuPont, Monsanto Company and Syngenta.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend."
+        ],
+        "thoughts": [
+            "Drew Barrymore's full name is Drew Blythe Barrymore.",
+            "Drew Barrymore has two siblings, both of whom have achieved success in their respective fields. Her brother, Homer Drew, is an American athletic administrator and former college basketball coach, known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament. His younger son, Bryce Drew, succeeded him as the head coach of the Valparaiso Crusaders men's basketball team, and his elder son, Scott Drew, is the head coach of Baylor University's men's basketball team. Drew's other sibling, Brendan Drew, is an Australian cricketer who played domestic cricket for the Tasmanian Tigers and later moved to Victoria to play premier cricket for Camberwell.",
+            "The height of Drew Barrymore's siblings is not provided in the given information.",
+            "The height of Drew Barrymore's brothers is not provided in the given information. Therefore, we are unable to select a specific height for one of her brothers."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who Drew Barry's brothers are.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the physical attributes, specifically height, of Drew Barry's brothers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the height of one of Drew Barry's brothers from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph is constructed to identify and provide the height of one of Drew Barry's brothers by first identifying who they are (Node 1), retrieving relevant height information (Node 2), and finally determining the height from the data collected (Node 3). Each node builds on the outcome of the previous, ensuring that all necessary steps are covered to answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Brent Barry\nBrent Robert Barry (born December 31, 1971) is an American retired professional basketball player. He is the son of former NBA player Rick Barry. The 6 ft , 210 lb shooting guard played professionally in the National Basketball Association, winning two championships with the San Antonio Spurs. He also won the 1996 NBA Slam Dunk Contest.",
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "The Cowsills\nThe Cowsills are an American singing group from Newport, Rhode Island. They specialized in harmonies and the ability to sing and play music at an early age. The band was formed in the spring of 1965 by brothers Bill, Bob, and Barry Cowsill; they shortly thereafter added their brother John. Originally Bill and Bob played guitar and Barry was on drums. When John learned how to play drums and joined the band, Barry went to bass. After their initial success, the brothers were joined by their siblings Susan and Paul and their mother Barbara. Bob's twin brother Richard was never the road manager, although this misinformation appears in several places on the internet. The band's road manager was Richard 'Biggie' Korn. When the group expanded to its full family membership by 1967, the six siblings ranged in age from 8 to 19. Joined by their mother, Barbara Cowsill (n\u00e9e Russell), the group was the inspiration for the 1970s television show \"The Partridge Family\".",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget.",
+            "Chuckle Brothers\nBarry David Elliott (born 24 December 1944) and Paul Harman Elliott (born 18 October 1947) are English children's entertainers, better known as Barry Chuckle and Paul Chuckle as the double-act the Chuckle Brothers. They are known for their work on their BBC show \"ChuckleVision\", which celebrated its 21st series in 2010 with a stage tour titled \"An Audience with the Chuckle Brothers.\" The comedy of the Chuckle Brothers usually derives from slapstick and other visual gags, and their catchphrases include \"To me, to you\" and \"Oh dear, oh dear\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Swing with Scooter\nSwing with Scooter was a DC Comics teen-humor American comic book published from 1966 to 1972. It starred British teenage musician nicknamed Scooter who lived in the US.",
+            "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman. Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\". It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore. The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery. Its working title was \"Planet Ice\". It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios. The film grossed $36.8 million on a $75\u2013$90 million budget, making a $100-million loss for the studio.",
+            "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930. It stars John Barrymore in his first full-length all-talking feature. The film would prove to be Crosland and Barrymore's last historical epic together.",
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17."
+        ],
+        "thoughts": [
+            "Drew Barrymore's brothers are John, Brent, and Scooter Barry.",
+            "The information provided does not include the specific height of Drew Barry's brothers, Scooter, Jon, and Brent. Therefore, the physical attributes, specifically height, of Drew Barry's brothers are not available in the provided information.",
+            "The height of one of Drew Barrymore's brothers is not available in the provided information."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the brothers of Drew Barry.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Select one brother of Drew Barry for which height information is available.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the height of the selected brother using reliable sources.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is structured to first identify Drew Barry's brothers. Once the brothers are identified, the task is to select one brother for whom height information can be found. Finally, the height of the selected brother is determined using reliable sources. This structured approach ensures efficient retrieval and reasoning about the pertinent information."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "The Fratellis\nThe Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli (born John Lawler), bass guitarist Barry Fratelli (born Barry Wallace), and drummer and backing vocalist Mince Fratelli (born Gordon McRory). Their singles \"Chelsea Dagger\" and \"Whistle for the Choir\" were both top ten hits in the UK charts.",
+            "The Cowsills\nThe Cowsills are an American singing group from Newport, Rhode Island. They specialized in harmonies and the ability to sing and play music at an early age. The band was formed in the spring of 1965 by brothers Bill, Bob, and Barry Cowsill; they shortly thereafter added their brother John. Originally Bill and Bob played guitar and Barry was on drums. When John learned how to play drums and joined the band, Barry went to bass. After their initial success, the brothers were joined by their siblings Susan and Paul and their mother Barbara. Bob's twin brother Richard was never the road manager, although this misinformation appears in several places on the internet. The band's road manager was Richard 'Biggie' Korn. When the group expanded to its full family membership by 1967, the six siblings ranged in age from 8 to 19. Joined by their mother, Barbara Cowsill (n\u00e9e Russell), the group was the inspiration for the 1970s television show \"The Partridge Family\".",
+            "Brent Barry\nBrent Robert Barry (born December 31, 1971) is an American retired professional basketball player. He is the son of former NBA player Rick Barry. The 6 ft , 210 lb shooting guard played professionally in the National Basketball Association, winning two championships with the San Antonio Spurs. He also won the 1996 NBA Slam Dunk Contest.",
+            "Barry Ackerley\nBarry Allen Ackerley (April 15, 1934 \u2013 March 21, 2011) was an American businessman. He was the former Chairman and CEO of the Ackerley Group media company. He was the owner of the Seattle SuperSonics basketball franchise from 1983 to 2001. Ackerley died on March 21, 2011, two days after suffering a stroke.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas."
+        ],
+        "thoughts": [
+            "The brothers of Drew Barry are Scooter, Jon, and Brent.",
+            "The brother of Drew Barry for which height information is available is Jon Barry.",
+            "Based on the information provided, the height of Barry Fratelli is not explicitly mentioned. Therefore, it is not possible to determine his height using reliable sources."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who Drew Barry is and confirm if she has any brothers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Drew Barry's brothers, including their names.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve height information for each of Drew Barry's brothers identified.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the height of one of Drew Barry's brothers and present it as the answer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to first confirm if Drew Barry has brothers, retrieve their information, then specifically gather height details about them, and finally select and present the height of one brother. Each step builds on the information obtained from the previous node to ensure accurate and contextual understanding of Drew Barry's family to appropriately answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Brent Barry\nBrent Robert Barry (born December 31, 1971) is an American retired professional basketball player. He is the son of former NBA player Rick Barry. The 6 ft , 210 lb shooting guard played professionally in the National Basketball Association, winning two championships with the San Antonio Spurs. He also won the 1996 NBA Slam Dunk Contest.",
+            "The Fratellis\nThe Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli (born John Lawler), bass guitarist Barry Fratelli (born Barry Wallace), and drummer and backing vocalist Mince Fratelli (born Gordon McRory). Their singles \"Chelsea Dagger\" and \"Whistle for the Choir\" were both top ten hits in the UK charts.",
+            "Gerald Barry (Irish journalist)\nGerald Barry (18 June 1947 \u2013 14 March 2011) was an Irish political journalist and broadcaster. He worked for public service broadcaster Raidi\u00f3 Teilif\u00eds \u00c9ireann (RT\u00c9) and the \"Sunday Tribune\" newspaper, during which time he became known for his \"highly probing\", \"highly intelligent\", \"quite rigorous\", \"clinical, even forensic but never discourteous\" interviewing style.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "Barry Ackerley\nBarry Allen Ackerley (April 15, 1934 \u2013 March 21, 2011) was an American businessman. He was the former Chairman and CEO of the Ackerley Group media company. He was the owner of the Seattle SuperSonics basketball franchise from 1983 to 2001. Ackerley died on March 21, 2011, two days after suffering a stroke.",
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Robyn Hod and the Shryff off Notyngham\nRobyn Hod and the Shryff off Notyngham is the manuscript fragment of a late medieval play about Robin Hood, the earliest known Robin Hood playscript and the only surviving medieval script of a Robin Hood play. The manuscript dates from c1475, that is it is approximately as old as the earliest copies of the ballads. In addition to being incomplete the script has no scene or stage directions, and does not identify speakers, so it offers uncertainties of interpretation. However it has been interpreted as telling essentially the same story as Robin Hood and Guy of Gisborne . If correct this would confirm the medieval origin of the Gisbourne story. The play is also important for containing the earliest reference to Friar Tuck,\"ffrere Tuke\", as a member of Robin Hood's band.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Ghost in Love\nGhost in Love (; aka Suicide Ghost Club) is a 1999 South Korean film written by Li Hong-zhou and directed by Lee Kwang-hoon. The film stars Kim Hee-sun in the title role as the girlfriend of a man she suspects of cheating on her. She throws herself underneath an oncoming train (with some help from nearby ghosts), and discovers that in the afterlife she can roam as a ghost and take revenge, if she wants to, on her former boyfriend, who has quickly moved on. Lee Sung-jae also stars as Kantorates, a ghost who befriends the protagonist. The film was released on August 14, 1999.",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Lucky Miles\nLucky Miles is a 2007 Australian drama feature film based on several true stories involving people entering Western Australia by boat in order to seek asylum (please note that seeking asylum is not and never has been illegal in Australia). Its director was Michael James Rowland and its producers were Jo Dyer and Lesley Dyer.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Tall Brothers\nThe Tall Brothers were four brothers among the Egyptian monks of Nitria in the fifth century by the names of Ammonius, Dioscorus, Eusebius, and Euthymius. They were referred to as the \"Tall Brothers\" because they were tall in stature and demanding in appearance.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Scattergories\nScattergories is a creative-thinking category-based party game originally published by Parker Brothers in 1988. Parker Brothers was purchased by Hasbro a few years later, and they published the game internationally under their Milton Bradley brand. The objective of the 2-to-6-player game is to score points by uniquely naming objects within a set of categories, given an initial letter, within a time limit. The game is based on a traditional game known as Tutti Frutti, Jeu du Baccalaur\u00e9at, Stadt Land Fluss, and many other names.",
+            "List of the Doobie Brothers band members\nThe American band The Doobie Brothers has had a plethora of members since its inception in 1970, including guitarist/singer Tom Johnston and keyboardist/singer Michael McDonald. The Doobie Brothers employ official members and a small group of touring musicians, usually with a core group shown in promotional material. Guitarist/singer Patrick Simmons is the only constant member of the group, and the only one who has appeared on all of their releases.",
+            "Joe Jonas\nJoseph Adam \"Joe\" Jonas (born August 15, 1989) is an American singer and actor. Jonas first rose to fame as a member of the pop-rock band Jonas Brothers, along with his brothers Kevin and Nick. The band's debut album, \"It's About Time\" (2006), was a commercial failure following a limited release. The group signed with Hollywood Records, and in 2007 released their eponymous second studio album. The album went on to be a commercial success for the group, selling over two million copies in the United States alone. The group became heavily involved with the Disney Channel and later made their film debut in the Disney Channel Original Movie \"Camp Rock\" (2008). The film and its soundtrack became a major hit for the network and helped propel the brothers into further commercial success. Their third studio album, \"A Little Bit Longer\" (2008), became their first to top the \"Billboard\" 200 and went on to become their highest selling album to date. The album's lead single became a top five hit in the United States. Their fourth studio album, \"Lines, Vines and Trying Times\" (2009) became their second to top the charts in the United States. The brothers also starred in two of their Disney Channel series from 2009 to 2010, being \"JONAS L.A.\" and \"\". In 2010, the group starred in \"\", reprising their roles from the original film."
+        ],
+        "thoughts": [
+            "Drew Barry is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon, and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Drew Barry has three brothers: Scooter, Jon, and Brent.",
+            "Drew Barry's brothers are Scooter, Jon, and Brent. The height information for Brent Barry is 6 ft. Unfortunately, there is no available height information for Scooter and Jon Barry.",
+            "6 ft"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Drew Barry's brothers and their corresponding full names.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Select one of Drew Barry's brothers from the identified list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the height of the selected brother using his full name.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task as follows:\n1. First, we need to identify Drew Barry's brothers by retrieving reliable family information (Node 1).\n2. From the list of brothers identified, choose one brother to focus on (Node 2). This is a reasoning step where a choice is made.\n3. Finally, retrieve the height information for the selected brother using his full name to ensure the right person is queried (Node 3). This node completes the task by providing the required information."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Tall Brothers\nThe Tall Brothers were four brothers among the Egyptian monks of Nitria in the fifth century by the names of Ammonius, Dioscorus, Eusebius, and Euthymius. They were referred to as the \"Tall Brothers\" because they were tall in stature and demanding in appearance.",
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930. It stars John Barrymore in his first full-length all-talking feature. The film would prove to be Crosland and Barrymore's last historical epic together.",
+            "Titan A.E.\nTitan A.E. is a 2000 American animated science fiction film directed by Don Bluth and Gary Goldman. Its title refers to the spacecraft central to the plot, with \"A.E.\" meaning \"After Earth\". It stars Matt Damon, Bill Pullman, John Leguizamo, Nathan Lane, Janeane Garofalo and Drew Barrymore. The film's animation technique combines traditional hand-drawn animation and extensive use of computer generated imagery. Its working title was \"Planet Ice\". It was theatrically released on June 16, 2000, by 20th Century Fox and was the final film for Fox Animation Studios. The film grossed $36.8 million on a $75\u2013$90 million budget, making a $100-million loss for the studio.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "City of Capitals\nThe City of Capitals (Russian: \u0413\u043e\u0440\u043e\u0434 \u0421\u0442\u043e\u043b\u0438\u0446 , \"Gorod Stolits\", literally \"\"a city of capital cities\"\", official English name: Capital City) is a multifunctional complex, including twin tower skyscrapers, located on plot 9 in the Moscow International Business Center in Moscow. The City of Capitals, symbolising Moscow and St. Petersburg, was completed in 2009. The \"Moscow Tower\" is taller than Naberezhnaya Tower and was the tallest in the Commonwealth of Independent States (CIS) and in Europe with a height of 301.6 metres, until the construction of The Shard in London, United Kingdom, exceeded this height on 17 January 2012. On 1 November 2012 the Mercury City Tower, another skyscraper in development for the Moscow International Business Center, overtook The Shard as Europe's tallest building.",
+            "Lara Croft and the Guardian of Light\nLara Croft and the Guardian of Light is an action-adventure game developed by Crystal Dynamics and published by Square Enix for Microsoft Windows, PlayStation 3, Xbox 360, Android and, iOS through digital distribution. It is part of the \"Tomb Raider\" series, but unlike previous games, the game does not carry the \"Tomb Raider\" brand and has a heavy emphasis on cooperative gameplay. In multiplayer, players take the role as either Lara Croft or a 2,000-year-old Mayan warrior named Totec. They must work together in order to stop the evil spirit Xolotl and retrieve the Mirror of Smoke. A single-player campaign mode is available that does not include the non-playable character AI following or helping Lara.",
+            "Torra di Sant'Amanza\nThe Tower of Sant'Amanza (Corsican: \"Torra di Sant'Amanza\" ) is a ruined Genoese tower located in the commune of Bonifacio on the south east coast of the Corsica. The tower sits at a height of 125 m on the Punta di u Capicciolu headland. Only the round base survives."
+        ],
+        "thoughts": [
+            "Drew Barrymore's brothers are John, Blyth, and Brent Barry.",
+            "I select John Barrymore as Drew Barrymore's brother.",
+            "The height of the selected brother is not provided in the given information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Drew Barry and determine who her brothers are.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Select one of Drew Barry's brothers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the height of the selected brother.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by identifying Drew Barry (which might be a reference to a real person, e.g., Drew Barrymore, but the task is to find explicit links). Then, we determine who her brothers are. After listing the brothers, we proceed to select one brother for further investigation. Finally, we retrieve the height information specific to the chosen brother to answer the original question about his height."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Fratellis\nThe Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli (born John Lawler), bass guitarist Barry Fratelli (born Barry Wallace), and drummer and backing vocalist Mince Fratelli (born Gordon McRory). Their singles \"Chelsea Dagger\" and \"Whistle for the Choir\" were both top ten hits in the UK charts.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Spuds MacKenzie\nSpuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s. The Spuds MacKenzie mascot and campaign were created by a 23-year-old art director, Jon Moore. At the time he was working at Needham, Harper & Steers, a Chicago, Illinois, advertising agency. The dog first showed up in a Bud Light Super Bowl XXI ad in 1987. During the height of his popularity, large amounts of Spuds merchandise was available, such as plush toys and t-shirts.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Barry Ackerley\nBarry Allen Ackerley (April 15, 1934 \u2013 March 21, 2011) was an American businessman. He was the former Chairman and CEO of the Ackerley Group media company. He was the owner of the Seattle SuperSonics basketball franchise from 1983 to 2001. Ackerley died on March 21, 2011, two days after suffering a stroke.",
+            "Chonan languages\nThe Chonan languages were spoken in Tierra del Fuego and Patagonia. Two Chon languages are well attested: Selk'nam, spoken by the people of the same name who occupied territory in the northeast of Tierra del Fuego; and Tehuelche spoken by the people of the same name who occupied territory north of Tierra del Fuego. The name 'Chon', or \"Tshon\", is a blend of 'Tehuelche' and 'Ona'.",
+            "Brent Barry\nBrent Robert Barry (born December 31, 1971) is an American retired professional basketball player. He is the son of former NBA player Rick Barry. The 6 ft , 210 lb shooting guard played professionally in the National Basketball Association, winning two championships with the San Antonio Spurs. He also won the 1996 NBA Slam Dunk Contest.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it."
+        ],
+        "thoughts": [
+            "Drew Barry is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon, and Brent, who also share his profession.",
+            "I select Jon Barry as Drew Barry's brother.",
+            "The height of Brent Barry is 6 ft."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Drew Barry's brothers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Select one of Drew Barry's brothers identified in Step 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve detailed information about the brother selected in Step 2, including his height.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph starts by identifying Drew Barry's brothers, which is a retrieval step. Once they are identified, we select one brother for further inquiry. Finally, we retrieve detailed information about the selected brother, including his height, to answer the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Conjuring (book)\nConjuring is an illustrated book by James Randi. Randi gives a detailed history of conjuring, more commonly known as magic, said to be the world's second oldest profession. It includes detailed portraits of conjurors, including the Harry Blackstone, Sr., Harry Blackstone, Jr., Harry Houdini and his entourage, Howard Thurston, Robert Heller, Joe Berg, and others.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Fratellis\nThe Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli (born John Lawler), bass guitarist Barry Fratelli (born Barry Wallace), and drummer and backing vocalist Mince Fratelli (born Gordon McRory). Their singles \"Chelsea Dagger\" and \"Whistle for the Choir\" were both top ten hits in the UK charts.",
+            "Timeline of the Holocaust\nA timeline of the Holocaust is detailed in the events listed below. Also referred to as the Shoah (in Hebrew), the Holocaust was a genocide in which some six million European Jews were killed by Nazi Germany and its World War II collaborators. About 1.5 million of the victims were children. Two-thirds of the nine million Jews who had resided in Europe were murdered. The following timeline has been compiled from a variety of sources including the United States Holocaust Memorial Museum.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John Swann (pirate)\nJohn Swann (active 1698-99, first name also Jon, possibly also referred to as \"Paul Swan\") was a minor pirate in the Indian Ocean, known almost entirely for speculation about his relationship with Robert Culliford.",
+            "Spuds MacKenzie\nSpuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s. The Spuds MacKenzie mascot and campaign were created by a 23-year-old art director, Jon Moore. At the time he was working at Needham, Harper & Steers, a Chicago, Illinois, advertising agency. The dog first showed up in a Bud Light Super Bowl XXI ad in 1987. During the height of his popularity, large amounts of Spuds merchandise was available, such as plush toys and t-shirts.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17.",
+            "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930. It stars John Barrymore in his first full-length all-talking feature. The film would prove to be Crosland and Barrymore's last historical epic together.",
+            "List of The Naked Brothers Band episodes\n\"The Naked Brothers Band\" is an American musical comedy television series created by Polly Draper for Nickelodeon. The show depicts the daily lives of Draper's sons, who lead a fictional world-renowned rock band in New York City. As a mockumentary, the storyline is an embellishment of their real lives, and the fictional presence of a camera is often acknowledged. It stars Nat Wolff and Alex Wolff, the lead singer-songwriter, and drummer, respectively. Nat's fictional female admirer and real life preschool friends\u2014including the guitarist who had no prior acquaintance with the family\u2014feature as the other band members, with the siblings' father and Draper's husband as their accordion-playing dad and Draper's niece as the group's babysitter.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget."
+        ],
+        "thoughts": [
+            "Drew Barry's brothers are Scooter, Jon, and Brent.",
+            "I select Jon Barry as Drew Barry's brother.",
+            "Barry Fratelli, also known as Barry Wallace, is the bass guitarist of the Scottish rock band The Fratellis. Unfortunately, his height is not provided in the available information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "How tall was one of Drew Barry's brothers? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Drew Barry's brothers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Select one of Drew Barry's brothers from the identified list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the height of the selected brother.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to answer the question by first identifying Drew Barry's brothers. Once identified, the next step is to select one brother. Finally, the selected brother's height is retrieved to provide a specific answer to the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Fratellis\nThe Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli (born John Lawler), bass guitarist Barry Fratelli (born Barry Wallace), and drummer and backing vocalist Mince Fratelli (born Gordon McRory). Their singles \"Chelsea Dagger\" and \"Whistle for the Choir\" were both top ten hits in the UK charts.",
+            "Spuds MacKenzie\nSpuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s. The Spuds MacKenzie mascot and campaign were created by a 23-year-old art director, Jon Moore. At the time he was working at Needham, Harper & Steers, a Chicago, Illinois, advertising agency. The dog first showed up in a Bud Light Super Bowl XXI ad in 1987. During the height of his popularity, large amounts of Spuds merchandise was available, such as plush toys and t-shirts.",
+            "Homer Drew\nHomer Walter Drew, Jr. (born September 29, 1944) is an American athletic administrator and former college basketball coach who is associate athletic director at Valparaiso University. Drew was the head coach of the Valparaiso Crusaders men's basketball team from 1988 to 2002 and 2003 to 2011. His younger son, Bryce Drew, succeeded him as the head coach in May 2011. His elder son Scott Drew is the head coach of Baylor University's men's basketball team after having served nine years assisting under Homer and one year as head coach of Valparaiso. Homer Drew is best known for leading Valparaiso's improbable run in the 1998 NCAA Men's Division I Basketball Tournament.",
+            "Brendan Drew\nBrendan Gerrard Drew (born 16 December 1983, Lismore, New South Wales) is an Australian cricketer, who played domestic cricket for the Tasmanian Tigers. When not on Tasmanian duty, Drew played Tasmanian club cricket for the Lindisfarne Cricket Club. A tall bowler who generates a lot of pace and bounce, Drew arrived in Tasmania mid-season in 2005 to fill in for a bowling attack struck by injury. He had a solid 2006 season, taking 20 Pura Cup wickets at 31.60 in six matches, and was 12th man in the Tasmania's historic first ever Pura Cup win in 2006/07. Drew later moved to Victoria and played premier cricket for Camberwell, and won the Jack Ryder Medal as Premier Cricket's best player in 2016/17.",
+            "General Crack\nGeneral Crack is a 1930 American Pre-Code part-talkie historical costume melodrama with Technicolor sequences which was directed by Alan Crosland and produced and distributed by Warner Bros. It was filmed and premiered in 1929, and released early in 1930. It stars John Barrymore in his first full-length all-talking feature. The film would prove to be Crosland and Barrymore's last historical epic together.",
+            "Brent Barry\nBrent Robert Barry (born December 31, 1971) is an American retired professional basketball player. He is the son of former NBA player Rick Barry. The 6 ft , 210 lb shooting guard played professionally in the National Basketball Association, winning two championships with the San Antonio Spurs. He also won the 1996 NBA Slam Dunk Contest.",
+            "List of The Naked Brothers Band episodes\n\"The Naked Brothers Band\" is an American musical comedy television series created by Polly Draper for Nickelodeon. The show depicts the daily lives of Draper's sons, who lead a fictional world-renowned rock band in New York City. As a mockumentary, the storyline is an embellishment of their real lives, and the fictional presence of a camera is often acknowledged. It stars Nat Wolff and Alex Wolff, the lead singer-songwriter, and drummer, respectively. Nat's fictional female admirer and real life preschool friends\u2014including the guitarist who had no prior acquaintance with the family\u2014feature as the other band members, with the siblings' father and Draper's husband as their accordion-playing dad and Draper's niece as the group's babysitter.",
+            "Drew Scott\nDrew Scott (born Andrew Alfred Scott; April 28, 1978) is a Canadian actor, realtor, and entrepreneur best known as the co-host (along with his identical twin brother Jonathan), on the TV series \"Property Brothers\". The home renovation program, which is produced by Cineflix Media, features Drew as the realtor and Jonathan as the contractor. The success of the show has led to several spinoffs, including \"Buying and Selling\", \"Brother vs. Brother\", and \"Property Brothers: at Home\". Scott (along with his two brothers) is also a co-founder of Scott Brothers Entertainment, which creates and produces TV shows, films, and digital content. Additionally, the twins have launched the lifestyle brand Scott Living and its subsidiary, Dream Homes.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "Property Brothers\nProperty Brothers is a Canadian reality television series produced by Cineflix, and is the original show in the \"Property Brothers\" franchise. It airs on W Network in Canada and HGTV in the United States. The series features identical twin brothers Jonathan and Drew Scott. Drew is a real estate expert who scouts neglected houses and negotiates their purchases. His brother, Jonathan, is a licensed contractor who renovates houses. Together, the Property Brothers help families find, buy, and transform fixer-uppers into dream homes on a strict timeline and budget."
+        ],
+        "thoughts": [
+            "Drew Barry's brothers are Scooter, Jon, and Brent.",
+            "I select Jon Barry as Drew Barry's brother.",
+            "The height of Brent Barry is 6 ft."
+        ],
+        "is_best": false
+    }
+]

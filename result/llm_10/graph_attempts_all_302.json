@@ -1,0 +1,512 @@
+[
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the single-engined training aircraft created by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "1"
+            },
+            "explanation": "The task is straightforward and involves retrieving a specific fact\u2014the name of the single-engined training aircraft created by North American Aviation. This can be addressed directly with a single retrieval and reasoning step that seeks out the necessary historical and manufacturing information about North American Aviation's aircraft creations."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "General Aircraft Cygnet\nThe General Aircraft GAL.42 Cygnet II was a 1930s British single-engined training or touring aircraft built by General Aircraft Limited at London Air Park, Hanworth.",
+            "Beagle Pup\nThe Beagle B.121 Pup is a 1960s British 2\u20134 seat single-engined training and touring aircraft built by Beagle Aircraft Limited at Shoreham Airport and Rearsby Aerodrome.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "CLW Curlew\nThe CLW Curlew was a two-seat, single-engined training aircraft built partly to demonstrate a new wing structure. It flew successfully in the UK in 1936, but the company went bankrupt and only one Curlew flew.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples."
+        ],
+        "thoughts": [
+            "The single-engined training aircraft created by North American Aviation is the North American T-6 Texan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify companies or manufacturers known for producing single-engined training aircraft.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the history and aircraft produced by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Examine the list of single-engined training aircraft and match any aircraft with North American Aviation as the manufacturer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the specific single-engined training aircraft created by North American Aviation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying general manufacturers of single-engined training aircraft to narrow down possibilities. Concurrently, it retrieves the history and product line of North American Aviation. The reasoning step then matches any single-engined training aircraft from the general list with those produced by North American Aviation to confirm a candidate. Finally, the last node pinpoints the exact aircraft created by North American Aviation based on the gathered data."
+        },
+        "recall": 0.2777777777777778,
+        "retrieved_passages": [
+            "General Aircraft Cygnet\nThe General Aircraft GAL.42 Cygnet II was a 1930s British single-engined training or touring aircraft built by General Aircraft Limited at London Air Park, Hanworth.",
+            "Beagle Pup\nThe Beagle B.121 Pup is a 1960s British 2\u20134 seat single-engined training and touring aircraft built by Beagle Aircraft Limited at Shoreham Airport and Rearsby Aerodrome.",
+            "CLW Curlew\nThe CLW Curlew was a two-seat, single-engined training aircraft built partly to demonstrate a new wing structure. It flew successfully in the UK in 1936, but the company went bankrupt and only one Curlew flew.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "VAQ-129\nElectronic Attack Squadron 129 (VAQ-129) is the United States Navy's only EA-18G Growler training squadron. Known as the \"Vikings\", they are a Fleet Replacement Squadron, or FRS, and are charged with training all EA-18G aviators and developing standard operating procedures for the maintenance and operation of the aircraft. The squadron is permanently stationed at Naval Air Station Whidbey Island, in Puget Sound, Washington.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "List of surviving Gloster Meteors\nThe Gloster Meteor is a twin-engined jet fighter, the first jet aircraft to serve with the RAF and the only Allied jet aircraft to reach combat in World War II. Almost 4,000 were produced, mostly in service with the RAF between 1944 and 1965. Meteors also served with the Royal Australian Air Force (RAAF), whose aircraft saw action in the Korean War; other users included the Argentinian, Brazilian, Belgian, Danish, Dutch, Ecuadorian, French and Israeli air forces. Many are preserved but only five are airworthy.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities.",
+            "Emergency shelter\nAn emergency shelter is a place for people to live temporarily when they cannot live in their previous residence, similar to homeless shelters. The main difference is that an emergency shelter typically specializes in people fleeing a specific type of situation, such as natural or man-made disasters, domestic violence, or victims of sexual abuse. A more minor difference is that people staying in emergency shelters are more likely to stay all day, except for work, school, or errands, while homeless shelters usually expect people to stay elsewhere during the day, returning only to sleep or eat. Emergency shelters sometimes facilitate support groups, and/or provide meals.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "Contra-rotating\nContra-rotating, also referred to as coaxial contra-rotating, is a technique whereby parts of a mechanism rotate in opposite directions about a common axis, usually to minimise the effect of torque. Examples include some aircraft propellers, resulting in the maximum power of a single piston or turboprop engine to drive two propellers in opposite rotation. Contra-rotating propellers are also common in some marine transmission systems, in particular for large speed boats with planing hulls. Two propellers are arranged one behind the other, and power is transferred from the engine via planetary gear transmission. The configuration can also be used in helicopter designs termed coaxial rotors, where similar issues and principles of torque apply."
+        ],
+        "thoughts": [
+            "1. General Aircraft Limited - known for producing the General Aircraft Cygnet\n2. Beagle Aircraft Limited - known for producing the Beagle B.121 Pup\n3. CLW (Company unknown) - known for producing the CLW Curlew\n4. National Aviation Academy - known for providing aviation training programs\n5. North American Aviation - known for producing the North American T-6 Texan",
+            "North American Aviation was a major American aerospace manufacturer, responsible for producing a number of iconic aircraft. The company was founded in 1928 and went on to produce aircraft such as the T-6 Texan, P-51 Mustang, and the F-86 Sabre. North American Aviation also played a significant role in the development of the Apollo spacecraft, which ultimately led to the first moon landing in 1969. The company's contributions to aviation and space exploration have left a lasting impact on the industry.",
+            "The single-engined training aircraft manufactured by North American Aviation is the North American T-6 Texan.",
+            "The specific single-engined training aircraft created by North American Aviation is the North American T-6 Texan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify notable aircraft models developed by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the list to only include single-engined training aircraft models.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the filtered aircraft is most commonly recognized as a training aircraft.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task into three main steps. First, it retrieves information about aircraft developed by North American Aviation. Next, it filters this information to focus only on single-engined training aircraft. Finally, it identifies which of these aircraft is most famously recognized as a training aircraft, providing the answer to the initial query."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "Curtiss-Wright XF-87 Blackhawk\nThe Curtiss-Wright XF-87 Blackhawk (previously designated the XP-87) was a prototype American all-weather jet fighter interceptor and the company's last aircraft project. Designed as a replacement for the World War II\u2013era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion. The loss of the contract was fatal to the company; the Curtiss-Wright Corporation closed down its aviation division, selling its assets to North American Aviation.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "US Airways\nUS Airways (formerly known as USAir) was a major American airline that ceased to operate independently when the Federal Aviation Administration granted a single operating certificate (SOC) for US Airways and American Airlines on April 8, 2015. Publicly, the two carriers appeared to merge when their reservations systems and booking processes were merged on October 17, 2015; however, other systems were still separate at that time. The airline had an extensive international and domestic network, with 193 destinations in 24 countries in North America, South America, Europe and the Middle East. The airline was a member of the Star Alliance, before becoming an affiliate member of Oneworld in March 2014. US Airways utilized a fleet of 343 mainline jet aircraft, as well as 278 regional jet and turbo-prop aircraft operated by contract and subsidiary airlines under the name US Airways Express via code sharing agreements."
+        ],
+        "thoughts": [
+            "Notable aircraft models developed by North American Aviation include the NA-16, NA-35, T-6 Texan, and the Ryan Navion. Additionally, North American Aviation was responsible for historic aircraft such as the P-51 Mustang, B-25 Mitchell, F-86 Sabre, and the X-15 rocket plane. The company also played a role in the development of the Apollo Command and Service Module, the Space Shuttle orbiter, and the B-1 Lancer.",
+            "The single-engined training aircraft models from the list are the NA-16 and the T-6 Texan.",
+            "The most commonly recognized training aircraft from the filtered list is the T-6 Texan. This aircraft is widely used for military pilot training and is a well-known and iconic training aircraft."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about North American Aviation and the aircraft it created.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the retrieved information to focus on single-engined training aircraft created by North American Aviation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the name of the single-engined training aircraft created by North American Aviation from the filtered information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph executes a series of steps to answer the question about the single-engined training aircraft created by North American Aviation. \n\n1. The first node is a retrieval step to gather general information about North American Aviation and its aircraft. \n2. The second node refines this information by focusing specifically on single-engined training aircraft produced by the company.\n3. Finally, the third reasoning step extracts the specific name of the aircraft from the filtered information.\n\nThe process begins with collecting broad information and narrows it down step-by-step to answer the question, ensuring that only relevant details are considered."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "Curtiss-Wright XF-87 Blackhawk\nThe Curtiss-Wright XF-87 Blackhawk (previously designated the XP-87) was a prototype American all-weather jet fighter interceptor and the company's last aircraft project. Designed as a replacement for the World War II\u2013era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion. The loss of the contract was fatal to the company; the Curtiss-Wright Corporation closed down its aviation division, selling its assets to North American Aviation.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "North American P-51 Mustang\nThe North American Aviation P-51 Mustang is an American long-range, single-seat fighter and fighter-bomber used during World War II and the Korean War, among other conflicts. The Mustang was designed in 1940 by North American Aviation (NAA) in response to a requirement of the British Purchasing Commission. The Purchasing Commission approached North American Aviation to build Curtiss P-40 fighters under license for the Royal Air Force (RAF). Rather than build an old design from another company, North American Aviation proposed the design and production of a more modern fighter. The prototype NA-73X airframe was rolled out on 9 September 1940, 102 days after the contract was signed, and first flew on 26 October."
+        ],
+        "thoughts": [
+            "North American Aviation was a major American aerospace manufacturer responsible for creating a number of historic aircraft. Some of the notable aircraft created by North American Aviation include the North American NA-16, the Ryan Navion, the North American NA-35, the North American T-6 Texan, and the North American P-51 Mustang. The company also played a significant role in the development of the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70. Additionally, North American Aviation was involved in the production of the Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter, and the B-1 Lancer.\n\nFurthermore, North American Aviation was involved in a series of mergers and sales, eventually becoming part of North American Rockwell, which later became Rockwell International and is now part of Boeing. The company's impact on aviation history is evident through its diverse range of aircraft and contributions to aerospace technology.",
+            "The single-engined training aircraft created by North American Aviation include the North American NA-16 and the North American T-6 Texan. These aircraft were designed for training purposes and played a significant role in the development of pilots during their time in service.",
+            "The name of the single-engined training aircraft created by North American Aviation is the North American T-6 Texan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the aircraft developed by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the results to find single-engined training aircraft among the models produced by North American Aviation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the specific single-engined training aircraft developed by North American Aviation from the filtered list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The process involves retrieving information about all aircraft developed by North American Aviation, then filtering out models that are not single-engined or not used for training, and finally identifying the specific aircraft that matches both criteria."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "Curtiss-Wright XF-87 Blackhawk\nThe Curtiss-Wright XF-87 Blackhawk (previously designated the XP-87) was a prototype American all-weather jet fighter interceptor and the company's last aircraft project. Designed as a replacement for the World War II\u2013era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion. The loss of the contract was fatal to the company; the Curtiss-Wright Corporation closed down its aviation division, selling its assets to North American Aviation.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "US Airways\nUS Airways (formerly known as USAir) was a major American airline that ceased to operate independently when the Federal Aviation Administration granted a single operating certificate (SOC) for US Airways and American Airlines on April 8, 2015. Publicly, the two carriers appeared to merge when their reservations systems and booking processes were merged on October 17, 2015; however, other systems were still separate at that time. The airline had an extensive international and domestic network, with 193 destinations in 24 countries in North America, South America, Europe and the Middle East. The airline was a member of the Star Alliance, before becoming an affiliate member of Oneworld in March 2014. US Airways utilized a fleet of 343 mainline jet aircraft, as well as 278 regional jet and turbo-prop aircraft operated by contract and subsidiary airlines under the name US Airways Express via code sharing agreements."
+        ],
+        "thoughts": [
+            "The aircraft developed by North American Aviation include the NA-16, T-6 Texan, and NA-35. These aircraft were used as trainer aircraft for various air forces during World War II and beyond. Additionally, North American Aviation was responsible for the development of historic aircraft such as the P-51 Mustang, B-25 Mitchell, and F-86 Sabre.",
+            "The single-engined training aircraft produced by North American Aviation include the NA-16 and T-6 Texan. These aircraft were used for training purposes by various air forces during World War II and beyond.",
+            "The specific single-engined training aircraft developed by North American Aviation is the T-6 Texan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify products developed by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the identified products to find single-engined training aircraft.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph starts by retrieving information about products developed by North American Aviation. This includes gathering data on various aircraft models developed by the company. The second step is to filter these products to specifically identify single-engined training aircraft. The answer to the question is the specific model obtained from the filtered list, completing the graph with minimal and efficient steps."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "North American P-51 Mustang\nThe North American Aviation P-51 Mustang is an American long-range, single-seat fighter and fighter-bomber used during World War II and the Korean War, among other conflicts. The Mustang was designed in 1940 by North American Aviation (NAA) in response to a requirement of the British Purchasing Commission. The Purchasing Commission approached North American Aviation to build Curtiss P-40 fighters under license for the Royal Air Force (RAF). Rather than build an old design from another company, North American Aviation proposed the design and production of a more modern fighter. The prototype NA-73X airframe was rolled out on 9 September 1940, 102 days after the contract was signed, and first flew on 26 October.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "China National Aviation Fuel\nChina National Aviation Fuel Group Corporation (CNAF) is a Chinese state-owned enterprise. The company owned 51% stake of China National Aviation Fuel Supply Co., Ltd. (), one of the largest jet fuel supplier of China. China National Aviation Fuel Group was ranked 484th in 2016 Fortune Global 500 list.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "Coty, Inc.\nCoty, Inc., is a North American beauty products manufacturer based in New York founded in Paris, France, by Fran\u00e7ois Coty in 1904. Its main products are fragrances, colour cosmetics and skin and body care products. It is known for its cooperation with designers and celebrities for the creation of fragrances. Its biggest brands, or \"power brands\" as it calls them, are: Calvin Klein (fragrance and cosmetics), Chloe (fragrance), Davidoff (fragrance), y (fragrance), Marc Jacobs (fragrance), Philosophy (beauty), Adidas (fragrance and beauty), Playboy (fragrance), OPI Products (beauty), Rimmel London (make-up), Max Factor (cosmetics) and Sally Hansen (beauty).",
+            "Concentrate Design\nConcentrate Design creates products developed to help pupils concentrate at school. Founded in 2004, the company came to public note when its products were pitched on BBC's \"Dragons' Den\", and won investment from entrepreneur Peter Jones. It is headquartered in London."
+        ],
+        "thoughts": [
+            "Products developed by North American Aviation include the NA-16 trainer aircraft, the P-51 Mustang fighter and fighter-bomber, the T-6 Texan trainer, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, the XB-70, as well as the Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter, and the B-1 Lancer. Additionally, the company also designed and built the Ryan Navion, a single-engine, retractable gear, four-seat aircraft.",
+            "The identified single-engined training aircraft from the list of products developed by North American Aviation is the T-6 Texan trainer."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which aircraft were created by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify which aircraft from the list are single-engined training aircraft.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select the aircraft that fits the criteria as a single-engined training aircraft created by North American Aviation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question by starting with retrieving a list of all aircraft created by North American Aviation (Node 1). It then filters this list to identify which are single-engined training aircraft (Node 2). Finally, it selects the suitable aircraft that matches both attributes (Node 3)."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "Curtiss-Wright XF-87 Blackhawk\nThe Curtiss-Wright XF-87 Blackhawk (previously designated the XP-87) was a prototype American all-weather jet fighter interceptor and the company's last aircraft project. Designed as a replacement for the World War II\u2013era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion. The loss of the contract was fatal to the company; the Curtiss-Wright Corporation closed down its aviation division, selling its assets to North American Aviation.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "Bede Aircraft\nBede Aircraft Corporation was founded by controversial aeronautical engineer Jim Bede in 1961 to produce the BD-1 kit aircraft, which eventually became the American Aviation Corporation's AA-1. The company also created and produced a number of advanced kit planes including the famous Bede BD-5 (pusher propeller driven) and BD-5J (turbojet driven). The BD-5J has held the Guinness record as the World's Smallest Jet Aircraft for more than a quarter century. Versions of it saw use in various Budweiser commercials (the Bud Light Jet, which was lost in an inflight fire and crash unrelated to airshow work). The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007."
+        ],
+        "thoughts": [
+            "The aircraft created by North American Aviation are:\n- North American NA-16\n- Ryan Navion\n- North American NA-35\n- North American T-6 Texan",
+            "The single-engined training aircraft from the list are:\n- North American NA-16\n- North American NA-35\n- North American T-6 Texan",
+            "The aircraft that fits the criteria as a single-engined training aircraft created by North American Aviation is the North American T-6 Texan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the products developed by North American Aviation, focusing on aircraft.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "From the list of aircraft developed by North American Aviation, identify which ones are single-engined training aircraft.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select the single-engined training aircraft from North American Aviation's list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph for this question starts by retrieving information about all products developed by North American Aviation. The next step filters these to identify which are aircraft, specifically focusing on those used for training with a single engine. The final node selects the specific aircraft that fits the description, providing the answer."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "Curtiss-Wright XF-87 Blackhawk\nThe Curtiss-Wright XF-87 Blackhawk (previously designated the XP-87) was a prototype American all-weather jet fighter interceptor and the company's last aircraft project. Designed as a replacement for the World War II\u2013era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion. The loss of the contract was fatal to the company; the Curtiss-Wright Corporation closed down its aviation division, selling its assets to North American Aviation.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "North American P-51 Mustang\nThe North American Aviation P-51 Mustang is an American long-range, single-seat fighter and fighter-bomber used during World War II and the Korean War, among other conflicts. The Mustang was designed in 1940 by North American Aviation (NAA) in response to a requirement of the British Purchasing Commission. The Purchasing Commission approached North American Aviation to build Curtiss P-40 fighters under license for the Royal Air Force (RAF). Rather than build an old design from another company, North American Aviation proposed the design and production of a more modern fighter. The prototype NA-73X airframe was rolled out on 9 September 1940, 102 days after the contract was signed, and first flew on 26 October."
+        ],
+        "thoughts": [
+            "The products developed by North American Aviation, focusing on aircraft, include the North American NA-16, Ryan Navion, North American NA-35, North American T-6 Texan, North American P-51 Mustang, and the Curtiss-Wright XF-87 Blackhawk. These aircraft range from trainer aircraft to long-range fighters and fighter-bombers, and were used in various conflicts such as World War II and the Korean War. Additionally, North American Aviation was also responsible for the development of the B-25 Mitchell bomber, the F-86 Sabre jet fighter, and the X-15 rocket plane, among others.",
+            "The single-engined training aircraft developed by North American Aviation are the North American NA-16 and the North American T-6 Texan.",
+            "The single-engined training aircraft from North American Aviation's list is the North American T-6 Texan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the specific aircraft developed by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about single-engined training aircraft produced by North American Aviation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Cross-reference the aircraft identified in the specific products of North American Aviation with their list of single-engined training aircraft models.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task requires identifying which single-engined training aircraft was created by North American Aviation. The first step involves retrieving general information about aircraft produced by the company. The second step focuses more specifically on retrieving data regarding single-engined training aircraft. The final reasoning step confirms which aircraft from North American Aviation fits the criteria of being a single-engined training aircraft."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "General Aircraft Cygnet\nThe General Aircraft GAL.42 Cygnet II was a 1930s British single-engined training or touring aircraft built by General Aircraft Limited at London Air Park, Hanworth.",
+            "Beagle Pup\nThe Beagle B.121 Pup is a 1960s British 2\u20134 seat single-engined training and touring aircraft built by Beagle Aircraft Limited at Shoreham Airport and Rearsby Aerodrome.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "CLW Curlew\nThe CLW Curlew was a two-seat, single-engined training aircraft built partly to demonstrate a new wing structure. It flew successfully in the UK in 1936, but the company went bankrupt and only one Curlew flew.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree.",
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "North American Aviation\nNorth American Aviation (NAA) was a major American aerospace manufacturer, responsible for a number of historic aircraft, including the T-6 Texan trainer, the P-51 Mustang fighter, the B-25 Mitchell bomber, the F-86 Sabre jet fighter, the X-15 rocket plane, and the XB-70, as well as Apollo Command and Service Module, the second stage of the Saturn V rocket, the Space Shuttle orbiter and the B-1 Lancer. Through a series of mergers and sales, North American Aviation became part of North American Rockwell, which later became Rockwell International and is now part of Boeing.",
+            "Curtiss-Wright XF-87 Blackhawk\nThe Curtiss-Wright XF-87 Blackhawk (previously designated the XP-87) was a prototype American all-weather jet fighter interceptor and the company's last aircraft project. Designed as a replacement for the World War II\u2013era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion. The loss of the contract was fatal to the company; the Curtiss-Wright Corporation closed down its aviation division, selling its assets to North American Aviation.",
+            "North American P-51 Mustang\nThe North American Aviation P-51 Mustang is an American long-range, single-seat fighter and fighter-bomber used during World War II and the Korean War, among other conflicts. The Mustang was designed in 1940 by North American Aviation (NAA) in response to a requirement of the British Purchasing Commission. The Purchasing Commission approached North American Aviation to build Curtiss P-40 fighters under license for the Royal Air Force (RAF). Rather than build an old design from another company, North American Aviation proposed the design and production of a more modern fighter. The prototype NA-73X airframe was rolled out on 9 September 1940, 102 days after the contract was signed, and first flew on 26 October."
+        ],
+        "thoughts": [
+            "The specific aircraft developed by North American Aviation include the North American NA-16, the Ryan Navion, the North American NA-35, the North American T-6 Texan, and the North American P-51 Mustang.",
+            "North American Aviation has produced several single-engined training aircraft, including the North American T-6 Texan, the Ryan Navion, the North American NA-35, and the North American NA-16. These aircraft were used for training pilots in various air forces and have also been popular for airshow demonstrations and static displays. Additionally, the company has been involved in the development and production of other aircraft, such as the General Aircraft Cygnet, the Beagle Pup, and the CLW Curlew. Furthermore, North American Aviation has contributed to aviation training through its involvement with the National Aviation Academy, which offers programs for aircraft mechanics and advanced aircraft systems.",
+            "The specific aircraft developed by North American Aviation, including the North American NA-16, the Ryan Navion, the North American NA-35, the North American T-6 Texan, and the North American P-51 Mustang, are cross-referenced with their list of single-engined training aircraft models, which include the North American T-6 Texan, the Ryan Navion, and the North American NA-16."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "North American Aviation was the company that created what single-engined training aircraft?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify key terms and entities in the question: 'North American Aviation' and 'single-engined training aircraft'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve historical data about North American Aviation, focusing on aircraft they have developed.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the list to identify which of the aircraft developed by North American Aviation are single-engined training aircraft.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Synthesize information to determine a specific single-engined training aircraft created by North American Aviation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to guide the retrieval and reasoning process to answer the question about a specific aircraft developed by North American Aviation. The approach starts with parsing the question to identify key topics, followed by retrieving relevant historical data about the company, and concluding with filtering and selecting the appropriate aircraft from the gathered information. This structured approach ensures a thorough exploration of the necessary historical context and technical specifications."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "General Aircraft Cygnet\nThe General Aircraft GAL.42 Cygnet II was a 1930s British single-engined training or touring aircraft built by General Aircraft Limited at London Air Park, Hanworth.",
+            "Beagle Pup\nThe Beagle B.121 Pup is a 1960s British 2\u20134 seat single-engined training and touring aircraft built by Beagle Aircraft Limited at Shoreham Airport and Rearsby Aerodrome.",
+            "North American NA-35\nThe North American NA-35 was a training aircraft designed by North American Aviation. It was first test-flown in January 1940 by Vance Breese. Although announced for trade the month after, the project was pushed aside by plant expansions and the development of the P-51 Mustang. Further test flights were conducted and construction began on a few more aircraft, but the project remained stagnant until Vega Aircraft Corporation bought the rights to the aircraft in October 1940 to develop into the Vega 35.",
+            "CLW Curlew\nThe CLW Curlew was a two-seat, single-engined training aircraft built partly to demonstrate a new wing structure. It flew successfully in the UK in 1936, but the company went bankrupt and only one Curlew flew.",
+            "North American T-6 Texan\nThe North American Aviation T-6 Texan is an American single-engined advanced trainer aircraft used to train pilots of the United States Army Air Forces (USAAF), United States Navy, Royal Air Force, and other air forces of the British Commonwealth during World War II and into the 1970s. Designed by North American Aviation, the T-6 is known by a variety of designations depending on the model and operating air force. The United States Army Air Corps (USAAC) and USAAF designated it as the AT-6, the United States Navy the SNJ, and British Commonwealth air forces the Harvard, the name by which it is best known outside of the US. Starting in 1948, the new United States Air Force (USAF) designated it the T-6, with the USN following in 1962. It remains a popular warbird aircraft used for airshow demonstrations and static displays. It has also been used many times to simulate various Japanese aircraft, including the Mitsubishi A6M Zero in movies depicting World War II in the Pacific.",
+            "Ryan Navion\nThe Ryan (originally North American) Navion is a United States single-engine, unpressurized, retractable gear, four-seat aircraft originally designed and built by North American Aviation in the 1940s. It was later built by Ryan Aeronautical Company and the Tubular Steel Corporation (TUSCO). The Navion was envisioned as an aircraft that would perfectly match the expected postwar boom in civilian aviation, since it was designed along the general lines of, and by the same company which produced the North American P-51 Mustang, generally regarded as one of the best Allied fighter aircraft.",
+            "North American NA-16\nThe North American Aviation NA-16 was the first trainer aircraft built by North American Aviation, and was the beginning of a line of closely related North American trainer aircraft that would eventually number more than 17,000 examples.",
+            "National Aviation Academy\nNational Aviation Academy (NAA) is a nationally recognized aviation training school located in Clearwater, Florida and Concord, Massachusetts. NAA began training Aircraft Mechanics in 1932. They currently offer 3 programs: an FAA certified combination Airframe and Powerplant (A&P) Certifications [Aviation Maintenance Technology (AMT) Program], a combined A&P and Advanced Aircraft Systems program known as an Aviation Maintenance Professional (AMP), and an Advanced Aircraft Systems (AAS) program that is accredited by the National Center for Aircraft Technician Training (NCATT). NAA has an articulation agreement with Middlesex Community College and Polk State College allowing students to obtain an Associate In Science Degree."
+        ],
+        "thoughts": [
+            "Key Terms:\n1. North American Aviation\n2. Single-engined training aircraft\n\nEntities:\n1. North American Aviation - a company or organization\n2. Single-engined training aircraft - a type of aircraft specifically designed for training purposes with a single engine",
+            "North American Aviation has a rich history of developing various aircraft, including training and touring planes. Some notable aircraft developed by North American Aviation include the North American NA-35, the North American T-6 Texan, the Ryan Navion, and the North American NA-16. These aircraft were used for training pilots in the United States Army Air Forces, United States Navy, and other air forces of the British Commonwealth during World War II and beyond.\n\nAdditionally, North American Aviation was involved in the development of the National Aviation Academy, a nationally recognized aviation training school that offers programs for Aircraft Mechanics, Aviation Maintenance Technology, and Advanced Aircraft Systems.\n\nOverall, North American Aviation has made significant contributions to the aviation industry through the development of various aircraft and the establishment of aviation training programs.",
+            "The single-engined training aircraft developed by North American Aviation are the North American T-6 Texan and the North American NA-16.",
+            "The specific single-engined training aircraft created by North American Aviation is the North American T-6 Texan. This aircraft was widely used by the United States and other air forces during World War II and beyond for training pilots. It was also used for various other roles, including as a light attack aircraft. The T-6 Texan was known for its reliability, ruggedness, and ease of maintenance, making it a popular choice for training purposes."
+        ],
+        "is_best": false
+    }
+]
