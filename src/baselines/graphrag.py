@@ -202,7 +202,8 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
 
             upstream_results = []
             for up_id in node.upstream_node_ids:
-                x
+                up_node = next(n for n in graph_response.graph.nodes if n.id == up_id)
+        
                 up_result = await execute_node(up_node)
                 upstream_results.append((up_node.id, up_result))
 
