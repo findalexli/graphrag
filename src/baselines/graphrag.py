@@ -56,7 +56,7 @@ class ExecutionNode(BaseModel):
 
 class ExecutionGraph(BaseModel):
     nodes: List[ExecutionNode]
-    root_node_id: int
+    # root_node_id: int
     final_node_id: int
 
 class GraphResponse(BaseModel):
@@ -203,7 +203,6 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
             upstream_results = []
             for up_id in node.upstream_node_ids:
                 up_node = next(n for n in graph_response.graph.nodes if n.id == up_id)
-        
                 up_result = await execute_node(up_node)
                 upstream_results.append((up_node.id, up_result))
 
@@ -238,9 +237,18 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
             print(f"Node {node.id} output: {result}")
             return result
 
-        final_node = next(n for n in graph_response.graph.nodes if n.id == graph_response.graph.final_node_id)
-        final_output = await execute_node(final_node)
-
+        # try except block to catch any errors that occur during execution
+        # check if the graph is dag
+        # final_node = next(n for n in graph_response.graph.nodes if n.id == graph_response.graph.final_node_id)
+        try:
+            final_node = next(n for n in graph_response.graph.nodes if n.id == graph_response.graph.final_node_id)
+        except StopIteration:
+            print(f"Error: Unable to find final_node for sample {idx}")
+            print(f"Graph content: {graph_response.graph}")
+            return None
+        # final_output = await execute_node(final_node)
+        await execute_node(final_node)
+        
         sorted_passages = sorted(retrieved_passages_dict.items(), key=lambda x: x[1], reverse=True)
         retrieved_passages, scores = zip(*sorted_passages) if sorted_passages else ([], [])
 
@@ -329,7 +337,8 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
                 "node_id": node.id,
                 "instruction": node.instruction,
                 "output": result,
-                "node_type": node.node_type.value
+                "node_type": node.node_type.value,
+                "upstream_node_ids": node.upstream_node_ids
             })
 
         sorted_passages = sorted(retrieved_passages_dict.items(), key=lambda x: x[1], reverse=True)
@@ -412,7 +421,7 @@ async def main():
     if read_existing_data:
         print(f'All samples have been already in the result file ({output_path}), exit.')
         exit(0)
-    sem = asyncio.Semaphore(200)   # could be larger?
+    sem = asyncio.Semaphore(100)   # could be larger?
     tasks = []
     import io
     sys.stdout = io.StringIO()
