@@ -101,6 +101,27 @@ async def construct_execution_graph(question: str, num_trials: int = 10) -> Tupl
 
     return all_graph_responses
 
+async def generate_instruction(node: ExecutionNode, client: Any) -> str:
+    """
+    generate instruction when just fix the graph structure
+    """
+    prompt = f"Rewrite the following instruction based on its context and upstream nodes:\n\n"
+    prompt += f"Original instruction: {node.instruction}\n"
+    if node.upstream_node_ids:
+        prompt += f"Upstream node IDs: {node.upstream_node_ids}\n"
+    prompt += "Rewrite Output:"
+
+    messages = ChatPromptTemplate.from_messages([
+        HumanMessage(prompt)
+    ]).format_prompt()
+
+    try:
+        instruction_response = await client.ainvoke(messages.to_messages())
+        return instruction_response.content.strip()
+    except Exception as e:
+        print(f"Error generating instruction: {e}")
+        return node.instruction  # 如果生成失败，返回原始指令
+
 async def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any], top_k: int, retriever: DocumentRetriever, dataset: str, client: Any, few_shot: List[Dict[str, Any]], upstream_results: List[Tuple[str, str]]) -> Tuple[str, List[str], List[float]]:
     # TODO think about how we can use the global query into line 101 
     # TODO Instruction should have explicit placeholder for the upstream results, please print the instruction
@@ -163,6 +184,80 @@ async def reason_step(instruction: str, client: Any, upstream_results: List[Tupl
     except Exception as e:
         print(f"Error in reason step: {e}")
         return ''
+
+async def execute_fixed_graph(graph_response,sample: Dict[str, Any], query, corpus, retriever, client, args, fixed_instruction=True):
+    retrieved_passages_dict = {}
+    thoughts = []
+    node_outputs = {}
+
+    for node in graph_response.graph.nodes:
+        upstream_results = [(up_node.id, node_outputs[up_node.id]) for up_node in graph_response.graph.nodes if up_node.id in node.upstream_node_ids]
+
+        if node.node_type == NodeType.retrievalandreasoning:
+            instruction = node.instruction if fixed_instruction else await generate_instruction(node, client)
+            result, passages, scores = await retrieve_and_reason_step(
+                query=query,
+                instruction=instruction,
+                corpus=corpus,
+                top_k=args.top_k,
+                retriever=retriever,
+                dataset=args.dataset,
+                client=client,
+                few_shot=few_shot_samples,
+                upstream_results=upstream_results
+            )
+            for passage, score in zip(passages, scores):
+                if passage in retrieved_passages_dict:
+                    retrieved_passages_dict[passage] = max(retrieved_passages_dict[passage], score)
+                else:
+                    retrieved_passages_dict[passage] = score
+        elif node.node_type == NodeType.reasoning:
+            instruction = node.instruction if fixed_instruction else await generate_instruction(node, client)
+            result = await reason_step(
+                instruction=instruction,
+                client=client,
+                upstream_results=upstream_results
+            )
+        else:
+            raise ValueError(f"Unknown node type: {node.node_type}")
+
+        thoughts.append(result)
+        node_outputs[node.id] = result
+
+    sorted_passages = sorted(retrieved_passages_dict.items(), key=lambda x: x[1], reverse=True)
+    retrieved_passages, scores = zip(*sorted_passages) if sorted_passages else ([], [])
+    
+    if args.dataset in ['hotpotqa']:
+            gold_passages = [item for item in sample['supporting_facts']]
+            gold_items = set([item[0] for item in gold_passages])
+            retrieved_items = [passage.split('\n')[0].strip() for passage in retrieved_passages]
+    elif args.dataset in ['musique']:
+        gold_passages = [item for item in sample['paragraphs'] if item['is_supporting']]
+        gold_items = set([item['title'] + '\n' + item['paragraph_text'] for item in gold_passages])
+        retrieved_items = list(retrieved_passages)
+    elif args.dataset in ['2wikimultihopqa']:
+        gold_passages = [item for item in sample['supporting_facts']]
+        gold_items = set([item[0] for item in gold_passages])
+        retrieved_items = [passage.split('\n')[0].strip() for passage in retrieved_passages]
+    else:
+        raise NotImplementedError(f'Dataset {args.dataset} not implemented')
+    
+    recall = {k: sum(1 for t in gold_items if t in retrieved_items[:k]) / len(gold_items) for k in k_list}
+
+    avg_recall = sum(recall.values()) / len(recall)
+
+    return {
+        "node_id": node.id,
+        "instruction": instruction,
+        # "nodes": [],
+        "output": result,
+        "node_type": node.node_type.value,
+        "retrieved_passages": list(retrieved_passages),
+        "recall": avg_recall,
+        "thoughts": thoughts,
+        "upstream_results": upstream_results
+    }
+
 
 async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, corpus: Dict[str, Any], retriever: DocumentRetriever, client: Any, processed_ids: set) -> Optional[Tuple[int, Dict[int, float], List[str], List[str], int]]:
     if args.dataset in ['hotpotqa', '2wikimultihopqa']:
@@ -288,9 +383,16 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
 
     if best_trial >= 0:
         all_results[best_trial]["is_best"] = True
+    
+    # additional_attempts_1 = []
+    # for i in range(10):
+    #     attempt_data = await execute_fixed_graph(best_graph,sample, query, corpus, retriever, client, args, fixed_instruction=False)
+    #     additional_attempts_1.append(attempt_data)
+    # with open(f'result/llm_20/fixed_graph_attempts_{idx}.json', 'w') as f:
+    #     json.dump(additional_attempts_1, f, indent=4)
 
-    # Use best graph to generate 10 more attempts and save results
-    additional_attempts = []
+    # # Use best graph to generate 10 more attempts and save results
+    additional_attempts_2 = []
     for i in range(10):
         attempt_data = {
             "attempt": i + 1,
@@ -364,11 +466,11 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
         avg_recall = sum(recall.values()) / len(recall)
         attempt_data["recall"] = avg_recall
 
-        additional_attempts.append(attempt_data)
+        additional_attempts_2.append(attempt_data)
 
     # Save best graph and additional attempts
     with open(f'result/llm_20/best_graph_additional_{idx}.json', 'w') as f:
-        json.dump(additional_attempts, f, indent=4)
+        json.dump(additional_attempts_2, f, indent=4)
 
     with open(f'result/llm_20/graph_attempts_all_{idx}.json', 'w') as f:
         json.dump(all_results, f, indent=4)
