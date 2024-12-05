@@ -531,7 +531,6 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
                     few_shot=few_shot_samples,
                     upstream_results=upstream_results
                 )
-                # scores = None  
                 for passage, score in zip(passages, scores):
                     if passage in retrieved_passages_dict:
                         retrieved_passages_dict[passage] = max(retrieved_passages_dict[passage], score)
@@ -584,7 +583,8 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
         
         all_results.append({
             "question": query,
-            "graph": graph_response.dict(),
+            # "graph_dict": graph_response.dict(),
+            "graph": graph_response,
             "recall": avg_recall,
             "retrieved_passages": list(retrieved_passages),
             "thoughts": thoughts,
@@ -599,10 +599,7 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
             
     if best_trial >= 0:
         all_results[best_trial]["is_best"] = True
-        
-    with open(f'result/llm_20/graph_attempts_all_{idx}.json', 'w') as f:
-        json.dump(all_results, f, indent=4)
-        
+    
     # find out the best, fifth and lowest recall
     recalls = [(result["recall"], result) for result in all_results]
     recalls.sort(key=lambda x: x[0], reverse=True)
@@ -615,6 +612,12 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
     best_graph = next((result["graph"] for result in all_results if result["is_best"]), None)
     fifth_graph = next((result["graph"] for result in all_results if result["recall"] == fifth_result), None)
     lowest_graph = next((result["graph"] for result in all_results if result["recall"] == lowest_result), None)
+       
+    with open(f'result/llm_20/graph_attempts_all_{idx}.json', 'w') as f:
+        # all_results = [result.dict() for result in all_results]
+        for result in all_results:
+            result["graph"] = result["graph"].dict()
+        json.dump(all_results, f, indent=4)
     
     # fix the instruction and structure of the best, do 10 more retrievals
     additional_attempts_best = []
