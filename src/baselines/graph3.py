@@ -520,7 +520,7 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
                 upstream_results.append((up_node.id, up_result))
                 
             if node.node_type == NodeType.retrievalandreasoning:
-                result, passages, scpres = await retrieve_and_reason_step(
+                result, passages, scores = await retrieve_and_reason_step(
                     query=query,
                     instruction=node.instruction,
                     corpus=corpus,
@@ -531,7 +531,7 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
                     few_shot=few_shot_samples,
                     upstream_results=upstream_results
                 )
-                scores = None  
+                # scores = None  
                 for passage, score in zip(passages, scores):
                     if passage in retrieved_passages_dict:
                         retrieved_passages_dict[passage] = max(retrieved_passages_dict[passage], score)
@@ -607,14 +607,14 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
     recalls = [(result["recall"], result) for result in all_results]
     recalls.sort(key=lambda x: x[0], reverse=True)
     
-    best_result = recalls[0][1]
-    fifth_result = recalls[4][1]
-    lowest_result = recalls[-1][1]
-    
+    best_result = recalls[0][0]
+    fifth_result = recalls[4][0]
+    lowest_result = recalls[-1][0]
+  
     # find out the graph of the best, fifth and lowest recall
     best_graph = next((result["graph"] for result in all_results if result["is_best"]), None)
-    fifth_graph = next((result["graph"] for result in all_results if result[1] == fifth_result), None)
-    lowest_graph = next((result["graph"] for result in all_results if result[1] == lowest_result), None)
+    fifth_graph = next((result["graph"] for result in all_results if result["recall"] == fifth_result), None)
+    lowest_graph = next((result["graph"] for result in all_results if result["recall"] == lowest_result), None)
     
     # fix the instruction and structure of the best, do 10 more retrievals
     additional_attempts_best = []
