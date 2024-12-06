@@ -612,7 +612,8 @@ async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namesp
     best_graph = next((result["graph"] for result in all_results if result["is_best"]), None)
     fifth_graph = next((result["graph"] for result in all_results if result["recall"] == fifth_result), None)
     lowest_graph = next((result["graph"] for result in all_results if result["recall"] == lowest_result), None)
-       
+    
+   
     with open(f'result/llm_20/graph_attempts_all_{idx}.json', 'w') as f:
         # all_results = [result.dict() for result in all_results]
         for result in all_results:
